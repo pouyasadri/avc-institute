@@ -2,82 +2,118 @@
 
 return [
     // SEO Meta
-    'title' => 'Paris 3 Sorbonne Nouvelle University France | Complete Guide to Paris 3 University',
-    'keywords' => 'Paris 3 University,Sorbonne Nouvelle University,top universities in France,French universities,Paris universities,study in France,study at Paris 3 University,best French universities,Paris 3 University ranking,Paris 3 University programs,Paris 3 University facilities',
-    'description' => 'Interested in studying languages and culture in a dynamic and international environment? Paris 3 - Sorbonne Nouvelle University with a brilliant history in language and literature education, arts, humanities and social sciences, opens a gateway to a new world of knowledge. With over 20,000 students, it provides a dynamic and multicultural environment for learning, research and exchange of new ideas.',
+    'title' => 'Your Guide to Paris 3 Sorbonne Nouvelle University | 2026 Programs',
+    'keywords' => 'Paris 3 Sorbonne Nouvelle, Sorbonne Nouvelle University, study in France 2026, cinema studies Paris, linguistic studies France, media studies Paris, best French universities 2026, Campus Nation Paris',
+    'description' => 'Ready to dive into the world of arts, media, and languages? Discover Paris 3 - Sorbonne Nouvelle University. From its iconic history to the modern Campus Nation, explore why it\'s a top choice for your 2026 studies in France.',
 
     // Page Title Area
-    'main_heading' => 'Paris 3 University',
+    'main_heading' => 'Welcome to Paris 3 - Sorbonne Nouvelle University',
     'breadcrumb_home' => 'Home',
-    'breadcrumb_universities' => 'Top French Universities',
-    'breadcrumb_current' => 'Paris 3 University',
+    'breadcrumb_universities' => 'Our Partner Universities',
+    'breadcrumb_current' => 'Paris 3 - Sorbonne Nouvelle',
 
     // Sidebar
-    'table_of_contents' => 'Table of Contents',
-    'contact_us' => 'Contact Us',
-    'consultation_request' => 'Request Educational Migration Consultation to France',
-    'useful_links' => 'Useful Links',
-    'official_website' => 'Official Website of Paris 3 Sorbonne University',
-    'wikipedia_link' => 'Paris 3 Sorbonne University on Wikipedia',
-    'paris_city_guide' => 'Paris City Guide',
+    'table_of_contents' => 'What You\'ll Find',
+    'contact_us' => 'Chat with Our Team',
+    'consultation_request' => 'Let\'s Plan Your 2026 Journey',
+    'useful_links' => 'Handy Resources',
+    'official_website' => 'Explore the Official Site',
+    'wikipedia_link' => 'Learn Our History',
+    'paris_city_guide' => 'Living in Paris: Student Guide',
 
     // Main Content
-    'page_title' => 'Paris 3 Sorbonne Nouvelle: A Pioneering Path in Higher Education',
-    'history_title' => 'Foundation and History of Paris 3 Sorbonne Nouvelle University',
-    'history_content' => 'Paris 3 University (Université Paris 3 - Sorbonne Nouvelle) is one of France\'s leading universities, established in 1970 from the merger of several universities in the Île-de-France region. With over 25,000 students across various academic levels, it is recognized as one of France\'s largest universities.
+    'page_title' => 'Paris 3 Sorbonne Nouvelle: Where Creativity Meets Culture',
 
-Paris 3 University holds a special position among world-renowned universities due to its high-quality education, global reputation, and long history in education. This university has a prominent position in various fields of linguistics, literature, humanities, and social sciences.',
+    'intro_content' => 'If you are passionate about cinema, theater, media, or languages, Paris 3 - Sorbonne Nouvelle University is your perfect match. Known globally for its excellence in the arts and humanities, it offers a vibrant, multicultural atmosphere to over 20,000 students. With its brand-new "Campus Nation" facility in the heart of Paris, it\'s more dynamic than ever.',
 
-    'ranking_title' => 'Global Ranking of Paris 3 University',
-    'ranking_content' => 'Paris 3 University has consistently maintained a strong presence in global university rankings. In the 2022 QS rankings, the university was ranked 236th among the world\'s top universities, and in the Times Higher Education 2023 rankings, it was positioned 201st among the world\'s top universities.',
+    'global_leader_title' => 'A Global Leader in Arts & Media',
+    'global_leader_content' => 'Sorbonne Nouvelle isn\'t just a university; it\'s a cultural hub. Heading into 2026, it remains a top destination for international talent:
+- **QS World Ranking**: Consistently ranked among the top 250 in the world for Arts and Humanities.
+- **Innovation Leader**: Home to the prestigious Institute of High Latin American Studies (IHEAL) and top-tier Media and Cinema research centers.
 
-    'facilities_title' => 'Educational and Research Facilities at Paris 3 University',
-    'facilities_paragraph_1' => 'Paris 3 University offers a wide range of academic programs at undergraduate, graduate, and doctoral levels. The university also has several faculties and specialized schools that provide higher education in specific fields such as French language, foreign languages, French literature, world literature, communication sciences, and political science.',
-    'facilities_paragraph_2' => 'In addition to quality education, Paris 3 University strongly focuses on scientific research. The university has several advanced research laboratories operating in various fields of linguistics, literature, humanities, and social sciences.',
+Your degree here means joining a legacy of thinkers, creators, and innovators.',
 
-    'cultural_diversity_title' => 'Cultural Diversity and International Influence',
-    'cultural_diversity_content' => 'Since Paris 3 University benefits from international influence, it implements policies for the admission and integration of international students. About 30% of the university\'s students join from various global communities.',
+    'programs_title' => 'Explore Your Creative Passion',
+    'programs_content' => 'Sorbonne Nouvelle offers an incredible array of programs designed for the modern world. Whether you’re interested in film production or international relations, you’ll find elite training in:',
+    'subjects' => [
+        'Arts & Media (Cinema, Theater, and Audiovisual studies)',
+        'Languages & Cultural Studies (Literature and Linguistics)',
+        'Human & Social Sciences (Communication and European Studies)',
+        'Teaching French as a Foreign Language (FLE)',
+    ],
 
-    'iranian_students_title' => 'Study Conditions for Iranian Students',
-    'iranian_students_content' => 'Iranian students must have a valid French language certificate to study at Paris 3 University. Additionally, applicants must translate and authenticate their academic documents when applying for admission to this university.
+    'research_title' => 'Pioneering Future Culture',
+    'research_content' => 'At Paris 3, research is an adventure. You\'ll work alongside leading experts in cinema, theater, and media. The university\'s libraries, including the iconic Library of Cinema and the modern facilities at Campus Nation, provide the perfect environment for deep academic exploration.',
 
-Iranian applicants must also obtain a student visa to study in France. To apply for a student visa, applicants must provide various documents, such as a university acceptance letter, proof of financial capability, and health insurance.',
+    'admission_title' => 'Getting Started: Your 2026 Roadmap',
+    'admission_content' => 'Moving to Paris for university is a big step, but we are here to support you. For the 2026 academic year, you\'ll typically need competitive academic records and a French language certificate (TCF or DELF, usually at B2 or C1 level). Start your "Études en France" application early to ensure a smooth transition.',
 
-    'career_opportunities_title' => 'Career Opportunities After Graduation',
-    'career_opportunities_content' => 'Graduates of Paris 3 University enjoy excellent career opportunities. The university has strong relationships with employers worldwide and assists its graduates in finding employment.
+    'career_title' => 'Launch Your International Career',
+    'career_content' => 'A degree from Sorbonne Nouvelle opens doors in the global arts, media, and education sectors. From international journalism to cultural management, our graduates are highly sought after by top organizations. The university\'s career center and alumni network provide continuous support to help you land your dream role.',
 
-Paris 3 University also helps its graduates in research fields. The university has several entrepreneurship centers that assist graduates in starting their own businesses.',
+    'environment_title' => 'Modern Student Life: Campus Nation',
+    'environment_content' => 'The brand-new Campus Nation in the 12th arrondissement offers state-of-the-art facilities for a modern student lifestyle. Here, you\'ll enjoy:',
+    'facilities' => [
+        'State-of-the-Art Cinema and Theater Studios',
+        'Dynamic Multi-media Libraries',
+        'Student Cafeterias and Relaxation Zones (CROUS)',
+        'Multicultural Clubs and Artistic Workshops',
+    ],
 
-    'multicultural_environment_title' => 'Multicultural Environment and Welfare Facilities',
-    'multicultural_environment_content' => 'Paris 3 University is a multicultural environment with students from over 100 countries. The university also has many welfare facilities for international students, such as study halls, cafeterias, cultural centers, and well-equipped libraries.',
-
-    'conclusion_title' => 'Conclusion',
-    'conclusion_content' => 'Paris 3 University is an excellent university for international students who want to study in France. This university offers high-quality education, excellent welfare facilities, numerous career opportunities for graduates, and a multicultural environment. If you are an Iranian student looking to study in France, Paris 3 University would be an excellent choice for you.',
+    'conclusion_title' => 'Your Journey Starts Here',
+    'conclusion_content' => 'Choosing Paris 3 - Sorbonne Nouvelle means choosing an education that celebrates diversity and creativity. Let us help you turn your dream of studying in France in 2026 into a reality!',
 
     // Features List
     'features' => [
-        '1. Prestigious History',
-        '2. Diverse Specializations',
-        '3. International Educational Environment',
-        '4. Modern Facilities and Equipment',
-        '5. Outstanding Research',
+        'World-Class Cinema and Media Programs',
+        'Brand New Modern "Campus Nation" Facility',
+        'Highly Diverse International Student Body',
+        'Iconic Location in the Heart of Paris',
+        'Strong Ties to the Global Cultural Industry',
     ],
 
     // Contact Form
-    'ask_question' => 'Ask a Question',
-    'name_placeholder' => 'Your Name',
-    'email_placeholder' => 'Your Email',
-    'phone_placeholder' => 'Your Phone',
-    'subject_placeholder' => 'Subject',
-    'message_placeholder' => 'Your Message',
-    'send_message' => 'Send Message',
-    'name_error' => 'Please enter your name',
-    'email_error' => 'Please enter your email',
-    'phone_error' => 'Please enter your phone number',
-    'subject_error' => 'Please enter a subject',
-    'message_error' => 'Please enter your message',
+    'ask_question' => 'Got Questions? Let\'s Talk!',
+    'name_placeholder' => 'What\'s your name?',
+    'email_placeholder' => 'Your best email address',
+    'phone_placeholder' => 'Best way to reach you',
+    'subject_placeholder' => 'What can we help you with?',
+    'message_placeholder' => 'Tell us about your dreams or questions...',
+    'send_message' => 'Send My Message',
+    'name_error' => 'Please let us know your name!',
+    'email_error' => 'We\'ll need a valid email to get back to you.',
+    'phone_error' => 'Please leave a number we can call.',
+    'subject_error' => 'Select a subject so we can find the right expert.',
+    'message_error' => 'Don\'t forget to write your message!',
 
     // JSON-LD Schema
-    'schema_headline' => 'Paris 3 University: A Pioneering Path in Higher Education',
-    'schema_author' => 'Education, Life, Investment: Your Dreams in France with A.V.C',
+    'schema_headline' => 'Paris 3 Sorbonne Nouvelle: Your 2026 Journey Begins Here',
+    'schema_description' => 'A student-centric guide to Paris 3 - Sorbonne Nouvelle University, a global leader in arts, media, and languages. Explore our programs and start your 2026 application today.',
+    'schema_author' => 'A.V.C - Your Personal Guide to Life in France',
+
+    // FAQ Section
+    'faq_title' => 'Your Questions, Answered',
+    'faq_subtitle' => 'Friendly Advice for Future Sorbonnards',
+    'faq_items' => [
+        [
+            'question' => 'Where is the university located now?',
+            'answer' => 'While the university used to be spread out, the majority of programs are now hosted at the stunning "Campus Nation" in the 12th arrondissement of Paris.',
+        ],
+        [
+            'question' => 'Is it hard to get into the Cinema program?',
+            'answer' => 'The cinema and media programs are highly prestigious and competitive. We recommend building a strong portfolio and applying as early as possible.',
+        ],
+        [
+            'question' => 'Do I need to speak French to apply?',
+            'answer' => 'Yes, most programs are taught in French. A B2 or C1 level is typically required, though some specialized English-taught modules may be available.',
+        ],
+        [
+            'question' => 'What are the tuition fees for 2026?',
+            'answer' => 'As a public university, tuition is heavily subsidized. For non-EU students in 2026, the national rates are approximately €2,770/year for Bachelor\'s and €3,770/year for Master\'s.',
+        ],
+        [
+            'question' => 'Can international students work while studying?',
+            'answer' => 'Yes! Your student visa allows you to work part-time (up to 964 hours per year), which is a great way to experience Parisian life.',
+        ],
+    ],
 ];

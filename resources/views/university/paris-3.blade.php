@@ -20,7 +20,9 @@
 
 @section('useful_links')
     <div class="sidebar-widget p-4 rounded-5 shadow-sm bg-white mb-4 border-0">
-        <h4 class="widget-title h5 fw-bold mb-3 border-bottom pb-2">{{ __('university/paris-3.useful_links') }}</h4>
+        <h4 class="widget-title h5 fw-bold mb-3 border-bottom pb-2">
+            {{ __('university/paris-3.useful_links') }}
+        </h4>
         <ul class="list-unstyled mb-0">
             <li class="mb-2">
                 <a href="https://www.univ-paris3.fr/" target="_blank"
@@ -52,13 +54,10 @@
 
     <div class="single-services-imgs mb-4">
         <img src="{{asset("assets/img/universities/Paris3/paris_3_university.webp")}}"
-            alt="{{ __('university/paris-3.main_heading') }}" class="rounded-4 shadow-sm w-100">
+            alt="{{ __('university/paris-3.page_title') }}" class="rounded-4 shadow-sm w-100">
     </div>
 
-    <section class="mb-5">
-        <h3 class="h4 fw-bold mb-3">{{ __('university/paris-3.history_title') }}</h3>
-        <p class="text-muted">{{ __('university/paris-3.history_content') }}</p>
-    </section>
+    <p class="lead text-muted mb-4">{{ __('university/paris-3.intro_content') }}</p>
 
     <div class="map-container mb-5 rounded-4 overflow-hidden shadow-sm">
         <iframe
@@ -68,60 +67,75 @@
     </div>
 
     <section class="mb-5">
-        <h3 class="h4 fw-bold mb-3">{{ __('university/paris-3.ranking_title') }}</h3>
-        <p class="text-muted">{{ __('university/paris-3.ranking_content') }}</p>
+        <h3 class="h4 fw-bold mb-3">{{ __('university/paris-3.global_leader_title') }}</h3>
+        <p class="text-muted">{{ __('university/paris-3.global_leader_content') }}</p>
     </section>
 
     <section class="mb-5">
-        <h3 class="h4 fw-bold mb-3">{{ __('university/paris-3.facilities_title') }}</h3>
-        <div class="row g-4">
-            <div class="col-md-6">
-                <div class="p-4 rounded-4 bg-light h-100">
-                    <p class="small text-muted mb-0">{{ __('university/paris-3.facilities_paragraph_1') }}</p>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="p-4 rounded-4 bg-light h-100">
-                    <p class="small text-muted mb-0">{{ __('university/paris-3.facilities_paragraph_2') }}</p>
-                </div>
-            </div>
-        </div>
+        <h3 class="h4 fw-bold mb-3">{{ __('university/paris-3.programs_title') }}</h3>
+        <p class="text-muted mb-3">{{ __('university/paris-3.programs_content') }}</p>
+        <ul class="list-group list-group-flush mb-4">
+            @foreach(__('university/paris-3.subjects') as $subject)
+                <li class="list-group-item bg-transparent px-0 py-2 border-0 d-flex align-items-center">
+                    <i class="bx bx-check-circle text-primary me-2"></i>
+                    <span>{{ $subject }}</span>
+                </li>
+            @endforeach
+        </ul>
     </section>
 
     <div class="rooms-details mb-5">
         <img src="{{asset("assets/img/universities/Paris3/paris_3_university_1.webp")}}"
-            alt="{{ __('university/paris-3.main_heading') }}" class="rounded-4 shadow-sm w-100">
+            alt="{{ __('university/paris-3.page_title') }}" class="rounded-4 shadow-sm w-100">
     </div>
 
-    <section class="mb-4">
-        <h3 class="h4 fw-bold mb-3">{{ __('university/paris-3.cultural_diversity_title') }}</h3>
-        <p class="text-muted mb-4">{{ __('university/paris-3.cultural_diversity_content') }}</p>
-
-        <h3 class="h4 fw-bold mb-3">{{ __('university/paris-3.iranian_students_title') }}</h3>
-        <p class="text-muted mb-4">{{ __('university/paris-3.iranian_students_content') }}</p>
-
-        <h3 class="h4 fw-bold mb-3">{{ __('university/paris-3.career_opportunities_title') }}</h3>
-        <p class="text-muted mb-4">{{ __('university/paris-3.career_opportunities_content') }}</p>
-
-        <h3 class="h4 fw-bold mb-3">{{ __('university/paris-3.multicultural_environment_title') }}</h3>
-        <p class="text-muted mb-4">{{ __('university/paris-3.multicultural_environment_content') }}</p>
-
-        <h3 class="h4 fw-bold mb-3">{{ __('university/paris-3.conclusion_title') }}</h3>
-        <p class="text-muted mb-5">{{ __('university/paris-3.conclusion_content') }}</p>
+    <section class="mb-5">
+        <h3 class="h4 fw-bold mb-3">{{ __('university/paris-3.research_title') }}</h3>
+        <p class="text-muted">{{ __('university/paris-3.research_content') }}</p>
     </section>
 
-    <div class="car-service-list-wrap p-4 rounded-5 bg-primary-subtle border-0">
+    <section class="mb-5">
+        <h3 class="h4 fw-bold mb-3">{{ __('university/paris-3.admission_title') }}</h3>
+        <p class="text-muted">{{ __('university/paris-3.admission_content') }}</p>
+    </section>
+
+    <section class="mb-5">
+        <h3 class="h4 fw-bold mb-3">{{ __('university/paris-3.career_title') }}</h3>
+        <p class="text-muted">{{ __('university/paris-3.career_content') }}</p>
+    </section>
+
+    <section class="mb-5">
+        <h3 class="h4 fw-bold mb-3">{{ __('university/paris-3.environment_title') }}</h3>
+        <p class="text-muted mb-3">{{ __('university/paris-3.environment_content') }}</p>
+        <div class="row g-3">
+            @foreach(__('university/paris-3.facilities') as $facility)
+                <div class="col-md-6">
+                    <div class="p-3 rounded-4 bg-light border-0 h-100 d-flex align-items-center">
+                        <i class="bx bx-buildings text-primary me-2 fs-5"></i>
+                        <span class="small fw-medium">{{ $facility }}</span>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    </section>
+
+    <section class="mb-5">
+        <h3 class="h4 fw-bold mb-3">{{ __('university/paris-3.conclusion_title') }}</h3>
+        <p class="text-muted">{{ __('university/paris-3.conclusion_content') }}</p>
+    </section>
+
+    <div class="car-service-list-wrap p-4 rounded-5 bg-primary-subtle border-0 mb-5">
         <div class="row align-items-center">
             <div class="col-lg-4 text-center mb-4 mb-lg-0">
                 <img src="{{asset("assets/img/universities/Paris3/paris_3_logo.webp")}}"
-                    alt="{{ __('university/paris-3.main_heading') }}" style="max-width: 150px;" class="img-fluid">
+                    alt="{{ __('university/paris-3.page_title') }}" style="max-width: 150px;" class="img-fluid">
             </div>
             <div class="col-lg-8">
                 <div class="row g-2">
-                    @foreach(__('university/paris-3.features') as $feature)
+                    @foreach(__('university/paris-3.features') as $index => $feature)
                         <div class="col-md-6">
-                            <div class="d-flex align-items-center small text-primary-emphasis">
-                                <i class='bx bx-check-double me-2'></i>
+                            <div class="d-flex align-items-start small text-primary-emphasis">
+                                <i class='bx bx-check-double me-2 mt-1'></i>
                                 <span>{{ $feature }}</span>
                             </div>
                         </div>
@@ -130,13 +144,15 @@
             </div>
         </div>
     </div>
+    <x-sections.faq :title="__('university/paris-3.faq_title')" :subtitle="__('university/paris-3.faq_subtitle')"
+        :items="__('university/paris-3.faq_items')" id="paris3-faq" />
 @endsection
 
 @push("json")
     @php
         $currentLocale = app()->getLocale();
-        $pageUrl = url($currentLocale.'/universities/paris-3');
-        $universityId = $pageUrl.'#university';
+        $pageUrl = url($currentLocale . '/universities/paris-3');
+        $universityId = $pageUrl . '#university';
         $officialUrl = 'https://www.univ-paris3.fr/';
 
         $webPage = new \App\Services\StructuredData\WebPageSchema(
@@ -150,9 +166,9 @@
 
         $university = new \App\Services\StructuredData\UniversitySchema(
             $universityId,
-            __('universities.paris_3_name'),
+            __('university/paris-3.breadcrumb_current'),
             $officialUrl,
-            __('university/paris-3.introduction_content'),
+            __('university/paris-3.schema_description'),
             asset('assets/img/universities/Paris3/paris_3_logo.webp'),
             [
                 $officialUrl,
@@ -161,8 +177,8 @@
         );
 
         $breadcrumb = \App\Services\StructuredData\BreadcrumbSchema::fromArray([
-            ['name' => __('layout.home') ?? 'Home', 'url' => url($currentLocale.'/')],
-            ['name' => __('universities.breadcrumb_universities'), 'url' => url($currentLocale.'/universities')],
+            ['name' => __('layout.home') ?? 'Home', 'url' => url($currentLocale . '/')],
+            ['name' => __('universities.breadcrumb_universities') ?? 'Universities', 'url' => url($currentLocale . '/universities')],
             ['name' => __('university/paris-3.breadcrumb_current'), 'url' => $pageUrl],
         ]);
     @endphp
