@@ -2,87 +2,119 @@
 
 return [
     // SEO Meta
-    'title' => 'Université Paris 2 Panthéon-Assas France | Guide Complet de l\'Université Paris 2',
-    'keywords' => 'Université Paris 2,Université Panthéon-Assas,meilleures universités de France,universités françaises,universités de Paris,étudier en France,étudier à l\'Université Paris 2,meilleures universités françaises,classement Université Paris 2,programmes Université Paris 2,installations Université Paris 2',
-    'description' => 'À la recherche d\'une université exceptionnelle en droit, sciences politiques et économie ? L\'Université Paris 2 - Panthéon-Assas avec une histoire brillante et plus de 130 ans d\'expérience se classe parmi les meilleures universités mondiales dans ces domaines. Avec plus de 23 000 étudiants, elle offre un environnement dynamique et international pour l\'apprentissage et l\'avancement professionnel.',
+    'title' => 'Étudier à l\'Université Paris 2 Panthéon-Assas | Guide Admissions 2026',
+    'keywords' => 'Paris 2 Panthéon-Assas, Université Assas, étudier le droit en France 2026, meilleures facultés de droit, licence économie Paris, science politique Paris, admission université française 2026, classement Panthéon-Assas',
+    'description' => 'Vous visez l\'excellence en Droit, Économie ou Sciences Sociales ? Découvrez Paris 2 Panthéon-Assas, souvent citée comme la meilleure école de droit de France. Explorez les programmes, les conditions d\'entrée 2026 et la vie étudiante unique au cœur de Paris.',
 
     // Page Title Area
-    'main_heading' => 'Université Paris 2 Panthéon-Assas',
+    'main_heading' => 'Bienvenue à l\'Université Paris 2 Panthéon-Assas',
     'breadcrumb_home' => 'Accueil',
-    'breadcrumb_universities' => 'Meilleures Universités Françaises',
-    'breadcrumb_current' => 'Université Paris 2 - Panthéon-Assas',
+    'breadcrumb_universities' => 'Nos Universités Partenaires',
+    'breadcrumb_current' => 'Paris 2 Panthéon-Assas',
 
     // Sidebar
-    'table_of_contents' => 'Table des Matières',
-    'contact_us' => 'Nous Contacter',
-    'consultation_request' => 'Demande de Consultation pour Migration Éducative vers la France',
-    'useful_links' => 'Liens Utiles',
-    'official_website' => 'Site Officiel de l\'Université Paris 2 - Panthéon-Assas',
-    'wikipedia_link' => 'Université Paris 2 - Panthéon-Assas sur Wikipédia',
-    'paris_city_guide' => 'Guide de la Ville de Paris',
+    'table_of_contents' => 'Ce que vous trouverez',
+    'contact_us' => 'Discutez avec notre Équipe',
+    'consultation_request' => 'Planifions votre carrière juridique 2026',
+    'useful_links' => 'Ressources Pratiques',
+    'official_website' => 'Explorer le Site Officiel',
+    'wikipedia_link' => 'Découvrir notre Histoire',
+    'paris_city_guide' => 'Vivre à Paris : Guide Étudiant',
 
     // Main Content
-    'page_title' => 'Université Paris 2 - Panthéon-Assas : Un Parcours Brillant pour Étudier au Cœur de la France',
-    'history_title' => 'Histoire et Fondation de l\'Université Paris 2 - Panthéon-Assas',
-    'history_content' => 'L\'Université Paris II Panthéon-Assas est l\'une des universités prestigieuses de France, établie en 1970 par la fusion de plusieurs universités de la région Île-de-France. Avec plus de 22 000 étudiants à différents niveaux académiques, elle est reconnue comme l\'une des plus grandes universités de France.
+    'page_title' => 'Panthéon-Assas : Le Sommet de l\'Excellence Juridique et Économique',
 
-L\'Université Paris 2 Panthéon occupe une position spéciale parmi les universités de renommée mondiale en raison de sa haute qualité d\'enseignement, de son patrimoine historique et de son brillant parcours. Cette université a une position proéminente dans divers domaines du droit, de l\'économie, des sciences de gestion et des sciences politiques.',
+    'intro_content' => 'Si vous aspirez aux standards les plus élevés en Droit, Économie ou Sciences Politiques, l\'Université Paris 2 Panthéon-Assas est votre destination. Reconnue comme la meilleure faculté de droit de France, elle allie un héritage prestigieux remontant au Moyen Âge à une recherche académique de pointe. Avec plus de 23 000 étudiants, elle offre un cadre d\'élite pour vos études en 2026.',
 
-    'ranking_title' => 'Classement Mondial de l\'Université Paris 2 Panthéon',
-    'ranking_content' => 'L\'Université Paris 2 Panthéon a constamment maintenu une forte présence dans les classements universitaires mondiaux. Dans le classement QS 2022, l\'université était classée 271e parmi les meilleures universités du monde, et dans le classement Times Higher Education 2023, elle était positionnée 197e parmi les meilleures universités du monde.',
+    'global_leader_title' => 'Un Leader Mondial de l\'Enseignement Juridique',
+    'global_leader_content' => 'Panthéon-Assas n’est pas seulement une université, c’est la référence absolue en droit et sciences sociales. En 2026, elle demeure le premier choix des futurs dirigeants :
+- **Classement National** : Systématiquement classée n°1 en France pour ses programmes de Droit et très prestigieuse en Économie.
+- **Prestige** : La majorité des admis à l\'École Nationale de la Magistrature (ENM) proviennent d\'Assas.
+- **Ouverture Internationale** : Partenariats solides avec des institutions mondiales comme Oxford, Yale et King\'s College London.
 
-    'facilities_title' => 'Installations Éducatives et de Recherche à l\'Université Paris 2 Panthéon',
-    'facilities_content' => 'L\'Université Paris 2 Panthéon offre une large gamme de programmes académiques aux niveaux licence, master et doctorat. L\'université dispose également de plusieurs facultés et écoles spécialisées qui offrent un enseignement supérieur dans des domaines spécifiques tels que le droit privé et public, le droit international, l\'économie, la gestion financière, la gestion des entreprises, les relations internationales et les sciences politiques.
+Choisir Assas, c\'est choisir un diplôme respecté dans le monde entier.',
 
-En plus d\'une éducation de qualité, l\'Université Paris 2 Panthéon se concentre fortement sur la recherche scientifique. L\'université dispose de plusieurs laboratoires de recherche avancés opérant dans divers domaines du droit, de l\'économie, des sciences de gestion et des sciences politiques.',
+    'programs_title' => 'Une Formation d\'Élite pour les Décideurs de Demain',
+    'programs_content' => 'Que vous soyez intéressé par le droit des affaires internationales ou l\'économie quantitative, Panthéon-Assas propose un cursus rigoureux conçu pour la réussite. Explorez nos départements spécialisés :',
+    'subjects' => [
+        'Droit Privé et Public (Civil, Pénal, Administratif)',
+        'Économie et Sciences de Gestion',
+        'Relations Internationales et Sciences Politiques',
+        'Sciences de l\'Information et de la Communication',
+    ],
 
-    'iranian_students_title' => 'Conditions d\'Études pour les Étudiants Iraniens à l\'Université Paris 2 - Panthéon-Assas',
-    'iranian_students_content' => 'Les étudiants iraniens doivent avoir un certificat de langue française valide pour étudier à l\'Université Paris 2 Panthéon. De plus, les candidats doivent traduire et authentifier leurs documents académiques lors de la demande d\'admission à cette université.
+    'research_title' => 'Forger la Jurisprudence de Demain',
+    'research_content' => 'À Paris 2, la recherche est intimement liée au système juridique français. Vous aurez accès à certaines des bibliothèques juridiques les plus complètes d\'Europe, notamment la bibliothèque Cujas. Nos centres de recherche influencent les politiques nationales et les cadres juridiques internationaux.',
 
-Les candidats iraniens doivent également obtenir un visa étudiant pour étudier en France. Pour demander un visa étudiant, les candidats doivent fournir divers documents, tels qu\'une lettre d\'acceptation universitaire, une preuve de capacité financière et une assurance maladie.',
+    'admission_title' => 'Débuter Votre Parcours : Entrée 2026',
+    'admission_content' => 'L\'admission à Panthéon-Assas est très sélective, reflet de son statut d\'élite. Pour l\'année 2026, les candidats internationaux ont généralement besoin d\'un dossier académique exceptionnel et d\'une maîtrise parfaite du français (niveau C1 pour le Droit, B2 pour les autres). Anticipez votre profil "Études en France" et soignez votre lettre de motivation.',
 
-    'career_opportunities_title' => 'Opportunités de Carrière Après l\'Obtention du Diplôme de l\'Université Paris 2 - Panthéon-Assas',
-    'career_opportunities_content' => 'Les diplômés de l\'Université Paris 2 Panthéon bénéficient d\'excellentes opportunités de carrière. L\'université entretient de solides relations avec les employeurs du monde entier et aide ses diplômés à trouver un emploi.
+    'career_title' => 'Ouvrir les Portes des Carrières Globales',
+    'career_content' => 'Les diplômés d\'Assas sont les plus recherchés par les grands cabinets d\'avocats, les organisations internationales et les multinationales. De la haute magistrature aux institutions européennes, le "Réseau Assas" offre un tremplin inégalé. Notre centre de carrière organise régulièrement des forums et des événements de networking.',
 
-L\'Université Paris 2 Panthéon aide également ses diplômés dans les domaines de recherche. L\'université dispose de plusieurs centres d\'entrepreneuriat qui aident les diplômés à créer leur propre entreprise.',
+    'environment_title' => 'Vivre au Cœur de Paris',
+    'environment_content' => 'Étudier ici, c\'est apprendre dans des lieux chargés d\'histoire. Du bâtiment historique du Panthéon au campus moderne d\'Assas, vous profiterez de :',
+    'facilities' => [
+        'Amphithéâtres Historiques au Quartier Latin',
+        'Bibliothèques Numériques et Centres de Recherche Modernes',
+        'Espaces de Restauration CROUS de pointe',
+        'Sociétés de Concours de Plaidoirie et Vie Associative Dynamique',
+    ],
 
-    'multicultural_environment_title' => 'Environnement Multiculturel et Installations de Bien-être à l\'Université Paris 2 - Panthéon-Assas',
-    'multicultural_environment_content' => 'L\'Université Paris 2 Panthéon est un environnement multiculturel avec des étudiants de plus de 100 pays. L\'université dispose également de nombreuses installations de bien-être pour les étudiants internationaux, telles que des salles d\'étude, des cafétérias, des centres culturels et des bibliothèques bien équipées.',
-
-    'university_achievements_title' => 'Réalisations de l\'Université Panthéon-Assas',
-    'university_achievements_content' => 'L\'Université Panthéon-Assas est souvent décrite comme "la meilleure école de droit en France". En fait, la plupart des étudiants acceptés à l\'École Nationale de la Magistrature de France viennent de Panthéon-Assas. Le programme de licence en économie de l\'université s\'est classé cinquième au monde en 2020.',
-
-    'application_deadline_title' => 'Date Limite de Candidature pour l\'Université Paris 2',
-    'application_deadline_paragraph_1' => 'En général, en France, vous devez soumettre vos documents à l\'université au moins avant la fin d\'octobre. L\'heure et la date d\'annonce des résultats sont également annoncées à l\'avance chaque avril, mais vous recevrez l\'email de l\'université vers cette période. Notez que la décision finale concernant les demandes d\'études des étudiants à l\'étranger relève entièrement de l\'institution d\'accueil.',
-    'application_deadline_paragraph_2' => 'Les étudiants doivent également satisfaire aux exigences académiques de leurs départements pour recevoir l\'approbation finale du département pour étudier à l\'étranger. Habituellement, la moyenne minimale est de 60% avant le départ, mais cela peut varier entre les départements. Si les étudiants ne sont pas sûrs de leurs conditions académiques, ils doivent consulter un tuteur privé pour étudier à l\'étranger.',
-
-    'conclusion_title' => 'Conclusion',
-    'conclusion_content' => 'L\'Université Paris 2 Panthéon est une excellente université pour les étudiants internationaux qui souhaitent étudier en France. Cette université offre un enseignement de haute qualité, d\'excellentes installations de bien-être, de nombreuses opportunités de carrière pour les diplômés et un environnement multiculturel. Si vous êtes un étudiant iranien cherchant à étudier en France, l\'Université Paris 2 Panthéon serait un excellent choix pour vous.',
+    'conclusion_title' => 'Votre Excellence Commence Ici',
+    'conclusion_content' => 'À Paris 2 Panthéon-Assas, nous ne nous contentons pas d\'enseigner le droit ; nous formons ceux qui gouverneront et dirigeront le monde. Laissez-nous vous accompagner dans votre candidature pour 2026 au sein de cette communauté d\'élite.',
 
     // Features List
     'features' => [
-        '1. Histoire Prestigieuse',
-        '2. Spécialisations Diverses',
-        '3. Environnement Éducatif International',
-        '4. Installations et Équipements Modernes',
-        '5. Recherche Exceptionnelle',
+        'Classée n°1 des Facultés de Droit en France',
+        'Succès Inégalé dans les Carrières Judiciaires',
+        'Partenariats avec les plus grandes Universités Mondiales',
+        'Emplacements Iconiques au Quartier Latin',
+        'Lien Direct avec l\'État et les Politiques Publiques',
     ],
 
     // Contact Form
-    'ask_question' => 'Poser une Question',
-    'name_placeholder' => 'Votre Nom',
-    'email_placeholder' => 'Votre Email',
-    'phone_placeholder' => 'Votre Téléphone',
-    'subject_placeholder' => 'Sujet',
-    'message_placeholder' => 'Votre Message',
-    'send_message' => 'Envoyer le Message',
-    'name_error' => 'Veuillez entrer votre nom',
-    'email_error' => 'Veuillez entrer votre email',
-    'phone_error' => 'Veuillez entrer votre numéro de téléphone',
-    'subject_error' => 'Veuillez entrer un sujet',
-    'message_error' => 'Veuillez entrer votre message',
+    'ask_question' => 'Des Questions Juridiques ? Discutons-en !',
+    'name_placeholder' => 'Quel est votre nom ?',
+    'email_placeholder' => 'Votre meilleure adresse email',
+    'phone_placeholder' => 'Le meilleur moyen de vous joindre',
+    'subject_placeholder' => 'Comment pouvons-nous vous aider ?',
+    'message_placeholder' => 'Parlez-nous de vos objectifs de carrière ou de vos questions...',
+    'send_message' => 'Envoyer Mon Message',
+    'name_error' => 'S\'il vous plaît, indiquez-nous votre nom !',
+    'email_error' => 'Nous aurons besoin d\'une adresse email valide pour vous répondre.',
+    'phone_error' => 'Veuillez laisser un numéro où nous pouvons vous appeler.',
+    'subject_error' => 'Indiquez-nous le sujet afin de trouver le bon expert.',
+    'message_error' => 'N\'oubliez pas de rédiger votre message !',
 
     // JSON-LD Schema
-    'schema_headline' => 'Université Paris 2 Panthéon : Un Parcours Brillant pour Étudier au Cœur de la France',
-    'schema_author' => 'Éducation, Vie, Investissement : Vos Rêves en France avec A.V.C',
+    'schema_headline' => 'Paris 2 Panthéon-Assas : Votre Parcours 2026 Commence Ici',
+    'schema_description' => 'Un guide centré sur l\'étudiant pour l\'Université Paris 2 Panthéon-Assas, leader français en Droit, Économie et Sciences Sociales. Débutez votre candidature pour 2026 dès aujourd\'hui.',
+    'schema_author' => 'A.V.C - Votre Guide Personnel pour la Vie en France',
+
+    // FAQ Section
+    'faq_title' => 'Vos Questions, Nos Réponses',
+    'faq_subtitle' => 'Conseils Pratiques pour les Futurs Étudiants d\'Assas',
+    'faq_items' => [
+        [
+            'question' => 'Panthéon-Assas ne propose-t-elle que du Droit ?',
+            'answer' => 'Bien que célèbre pour le Droit, Assas est aussi leader en Économie, Gestion et Sciences Politiques, figurant parmi les meilleures de France dans ces matières également.',
+        ],
+        [
+            'question' => 'Quel niveau de français faut-il pour le Droit ?',
+            'answer' => 'En raison de la rigueur linguistique du droit français, un niveau C1 (avancé) est fortement recommandé et souvent exigé pour l\'admission en Licence et Master.',
+        ],
+        [
+            'question' => 'Où se déroulent principalement les cours ?',
+            'answer' => 'Les cours ont lieu sur plusieurs sites prestigieux, notamment le centre Panthéon (Licence 1/2) et le campus principal m Assas près du Jardin du Luxembourg.',
+        ],
+        [
+            'question' => 'Existe-t-il des programmes en anglais ?',
+            'answer' => 'Oui, il existe plusieurs "LL.M." et Masters spécialisés en droit des affaires internationales enseignés entièrement en anglais pour les étudiants internationaux.',
+        ],
+        [
+            'question' => 'Peut-on travailler tout en étudiant le droit ?',
+            'answer' => 'Oui, le visa étudiant autorise le travail à temps partiel. Cependant, les études de droit à Assas sont très exigeantes ; une bonne gestion du temps est donc primordiale !',
+        ],
+    ],
 ];

@@ -2,87 +2,119 @@
 
 return [
     // SEO Meta
-    'title' => 'Paris 2 Panthéon-Assas University France | Complete Guide to Paris 2 University',
-    'keywords' => 'Paris 2 University,Panthéon-Assas University,top universities in France,French universities,Paris universities,study in France,study at Paris 2 University,best French universities,Paris 2 University ranking,Paris 2 University programs,Paris 2 University facilities',
-    'description' => 'Looking for an outstanding university in law, political science, and economics? Paris 2 - Panthéon-Assas University with a brilliant history and over 130 years of experience ranks among the world\'s top universities in these fields. With over 23,000 students, it provides a dynamic and international environment for learning and career advancement.',
+    'title' => 'Study at Paris 2 Panthéon-Assas University | 2026 Admissions Guide',
+    'keywords' => 'Paris 2 Panthéon-Assas, Assas University, study law in France 2026, best law schools in France, economics degree Paris, political science Paris, French university admissions 2026, Panthéon-Assas ranking',
+    'description' => 'Aspiring for excellence in Law, Economics, or Social Sciences? Discover Paris 2 Panthéon-Assas, often called France\'s top law school. Explore programs, 2026 entry requirements, and the unique student life in the heart of Paris.',
 
     // Page Title Area
-    'main_heading' => 'Paris 2 Panthéon-Assas University',
+    'main_heading' => 'Welcome to Paris 2 Panthéon-Assas University',
     'breadcrumb_home' => 'Home',
-    'breadcrumb_universities' => 'Top French Universities',
-    'breadcrumb_current' => 'Paris 2 - Panthéon-Assas University',
+    'breadcrumb_universities' => 'Our Partner Universities',
+    'breadcrumb_current' => 'Paris 2 Panthéon-Assas',
 
     // Sidebar
-    'table_of_contents' => 'Table of Contents',
-    'contact_us' => 'Contact Us',
-    'consultation_request' => 'Request Educational Migration Consultation to France',
-    'useful_links' => 'Useful Links',
-    'official_website' => 'Official Website of Paris 2 - Panthéon-Assas University',
-    'wikipedia_link' => 'Paris 2 - Panthéon-Assas University on Wikipedia',
-    'paris_city_guide' => 'Paris City Guide',
+    'table_of_contents' => 'What You\'ll Find',
+    'contact_us' => 'Chat with Our Team',
+    'consultation_request' => 'Let\'s Plan Your 2026 Legal Career',
+    'useful_links' => 'Handy Resources',
+    'official_website' => 'Explore the Official Site',
+    'wikipedia_link' => 'Learn Our History',
+    'paris_city_guide' => 'Living in Paris: Student Guide',
 
     // Main Content
-    'page_title' => 'Paris 2 - Panthéon-Assas University: A Brilliant Path to Study in the Heart of France',
-    'history_title' => 'History and Foundation of Paris 2 - Panthéon-Assas University',
-    'history_content' => 'Université Paris II Panthéon-Assas is one of France\'s prestigious universities, established in 1970 from the merger of several universities in the Île-de-France region. With over 22,000 students across various academic levels, it is recognized as one of France\'s largest universities.
+    'page_title' => 'Panthéon-Assas: The Pinnacle of Legal and Economic Excellence',
 
-Paris 2 Panthéon University holds a special position among world-renowned universities due to its high-quality education, historical heritage, and brilliant record. This university has a prominent position in various fields of law, economics, management sciences, and political science.',
+    'intro_content' => 'If you aim for the highest standards in Law, Economics, or Political Science, Paris 2 Panthéon-Assas University is your destination. Widely regarded as the best law school in France, it combines a prestigious heritage dating back to the Middle Ages with cutting-edge academic research. With over 23,000 students, it offers an elite yet vibrant environment for your 2026 studies.',
 
-    'ranking_title' => 'Global Ranking of Paris 2 Panthéon University',
-    'ranking_content' => 'Paris 2 Panthéon University has consistently maintained a strong presence in global university rankings. In the 2022 QS rankings, the university was ranked 271st among the world\'s top universities, and in the Times Higher Education 2023 rankings, it was positioned 197th among the world\'s top universities.',
+    'global_leader_title' => 'A Global Leader in Legal Education',
+    'global_leader_content' => 'Panthéon-Assas isn\'t just a university; it\'s the gold standard for legal and social sciences in France. Heading into 2026, it remains the top choice for future leaders:
+- **National Ranking**: Consistently ranked #1 in France for Law programs and highly prestigious in Economics.
+- **Prestige**: A majority of students accepted to the French National School for the Judiciary (ENM) come from Assas.
+- **International Reach**: Strong partnerships with global institutions like Oxford, Yale, and King\'s College London.
 
-    'facilities_title' => 'Educational and Research Facilities at Paris 2 Panthéon University',
-    'facilities_content' => 'Paris 2 Panthéon University offers a wide range of academic programs at undergraduate, graduate, and doctoral levels. The university also has several faculties and specialized schools that provide higher education in specific fields such as private and public law, international law, economics, financial management, business management, international relations, and political science.
+Choosing Assas means choosing a degree that commands respect worldwide.',
 
-In addition to quality education, Paris 2 Panthéon University strongly focuses on scientific research. The university has several advanced research laboratories operating in various fields of law, economics, management sciences, and political science.',
+    'programs_title' => 'Elite Training for Future Leaders',
+    'programs_content' => 'Whether you’re interested in international business law or quantitative economics, Panthéon-Assas provides a rigorous curriculum designed for success. Explore our specialized departments:',
+    'subjects' => [
+        'Private and Public Law (Civil, Criminal, Administrative)',
+        'Economics and Management Sciences',
+        'International Relations and Political Science',
+        'Information and Communication Sciences',
+    ],
 
-    'iranian_students_title' => 'Study Conditions for Iranian Students at Paris 2 - Panthéon-Assas University',
-    'iranian_students_content' => 'Iranian students must have a valid French language certificate to study at Paris 2 Panthéon University. Additionally, applicants must translate and authenticate their academic documents when applying for admission to this university.
+    'research_title' => 'Shaping Modern Jurisprudence',
+    'research_content' => 'Research at Paris 2 is deeply integrated with the French legal system. You\'ll have access to some of the most comprehensive legal libraries in Europe, including the Cujas Library in the Latin Quarter. Our research centers influence national policy and international legal frameworks.',
 
-Iranian applicants must also obtain a student visa to study in France. To apply for a student visa, applicants must provide various documents, such as a university acceptance letter, proof of financial capability, and health insurance.',
+    'admission_title' => 'Starting Your Journey: 2026 Entry',
+    'admission_content' => 'Admission to Panthéon-Assas is highly competitive, reflecting its elite status. For the 2026 academic year, international applicants usually need exceptional academic records and a French language proficiency (usually C1 level for Law, B2 for others). We recommend starting your "Études en France" profile early and preparing a strong statement of purpose.',
 
-    'career_opportunities_title' => 'Career Opportunities After Graduation from Paris 2 - Panthéon-Assas University',
-    'career_opportunities_content' => 'Graduates of Paris 2 Panthéon University enjoy excellent career opportunities. The university has strong relationships with employers worldwide and assists its graduates in finding employment.
+    'career_title' => 'Unlocking World-Class Careers',
+    'career_content' => 'Assas graduates are the most sought-after by top law firms, international organizations, and multinational corporations. From high-level judiciary roles to roles in European institutions, the "Assas Network" provides an unparalleled career boost. Our dedicated career center hosts regular job fairs and networking events.',
 
-Paris 2 Panthéon University also helps its graduates in research fields. The university has several entrepreneurship centers that assist graduates in starting their own businesses.',
+    'environment_title' => 'Experience the Heart of Paris',
+    'environment_content' => 'Studying here means learning in historical landmarks. From the iconic Panthéon building to the modern Assas campus, you\'ll enjoy:',
+    'facilities' => [
+        'Historic Lecture Halls in the Latin Quarter',
+        'Modern Digital Libraries and Research Hubs',
+        'State-of-the-Art Student Cafeterias (Assas Campus)',
+        'Dynamic Moot Court and Legal Societies',
+    ],
 
-    'multicultural_environment_title' => 'Multicultural Environment and Welfare Facilities at Paris 2 - Panthéon-Assas University',
-    'multicultural_environment_content' => 'Paris 2 Panthéon University is a multicultural environment with students from over 100 countries. The university also has many welfare facilities for international students, such as study halls, cafeterias, cultural centers, and well-equipped libraries.',
-
-    'university_achievements_title' => 'Achievements of Panthéon-Assas University',
-    'university_achievements_content' => 'Panthéon-Assas University is often described as "the best law school in France." In fact, most students accepted to France\'s National School for the Judiciary are from Panthéon-Assas. The university\'s undergraduate economics program ranked fifth in the world in 2020.',
-
-    'application_deadline_title' => 'Application Deadline for Paris 2 University',
-    'application_deadline_paragraph_1' => 'Generally, in France, you must submit your documents to the university at least before the end of October. The time and date for announcing results are also announced in advance every April, but you will receive the university email around this time. Note that the final decision regarding students\' study applications abroad is entirely up to the host institution.',
-    'application_deadline_paragraph_2' => 'Students must also meet the academic requirements of their departments to receive final departmental approval for studying abroad. Usually, the minimum average is 60% before departure, but this can vary between departments. If students are unsure about their academic conditions, they should consult with a private tutor for studying abroad.',
-
-    'conclusion_title' => 'Conclusion',
-    'conclusion_content' => 'Paris 2 Panthéon University is an excellent university for international students who want to study in France. This university offers high-quality education, excellent welfare facilities, numerous career opportunities for graduates, and a multicultural environment. If you are an Iranian student looking to study in France, Paris 2 Panthéon University would be an excellent choice for you.',
+    'conclusion_title' => 'Your Excellence Starts Here',
+    'conclusion_content' => 'At Paris 2 Panthéon-Assas, we don\'t just teach law and social sciences; we shape the people who will govern and lead the world. Let us help you navigate your application for 2026 and join this elite community.',
 
     // Features List
     'features' => [
-        '1. Prestigious History',
-        '2. Diverse Specializations',
-        '3. International Educational Environment',
-        '4. Modern Facilities and Equipment',
-        '5. Outstanding Research',
+        'Ranked #1 Law School in France',
+        'Unparalleled Success in Judicial Careers',
+        'Global Partnerships with Ivy League Schools',
+        'Iconic Locations in the Latin Quarter',
+        'Deeply Connected to the French State and Policy',
     ],
 
     // Contact Form
-    'ask_question' => 'Ask a Question',
-    'name_placeholder' => 'Your Name',
-    'email_placeholder' => 'Your Email',
-    'phone_placeholder' => 'Your Phone',
-    'subject_placeholder' => 'Subject',
-    'message_placeholder' => 'Your Message',
-    'send_message' => 'Send Message',
-    'name_error' => 'Please enter your name',
-    'email_error' => 'Please enter your email',
-    'phone_error' => 'Please enter your phone number',
-    'subject_error' => 'Please enter a subject',
-    'message_error' => 'Please enter your message',
+    'ask_question' => 'Got Legal Questions? Let\'s Talk!',
+    'name_placeholder' => 'What\'s your name?',
+    'email_placeholder' => 'Your best email address',
+    'phone_placeholder' => 'Best way to reach you',
+    'subject_placeholder' => 'What can we help you with?',
+    'message_placeholder' => 'Tell us about your career goals or questions...',
+    'send_message' => 'Send My Message',
+    'name_error' => 'Please let us know your name!',
+    'email_error' => 'We\'ll need a valid email to get back to you.',
+    'phone_error' => 'Please leave a number we can call.',
+    'subject_error' => 'Select a subject so we can find the right expert.',
+    'message_error' => 'Don\'t forget to write your message!',
 
     // JSON-LD Schema
-    'schema_headline' => 'Paris 2 Panthéon University: A Brilliant Path to Study in the Heart of France',
-    'schema_author' => 'Education, Life, Investment: Your Dreams in France with A.V.C',
+    'schema_headline' => 'Paris 2 Panthéon-Assas: Your 2026 Journey Starts Here',
+    'schema_description' => 'A student-centric guide to Paris 2 Panthéon-Assas University, France\'s leading institution for Law, Economics, and Social Sciences. Start your 2026 application today.',
+    'schema_author' => 'A.V.C - Your Personal Guide to Life in France',
+
+    // FAQ Section
+    'faq_title' => 'Your Questions, Answered',
+    'faq_subtitle' => 'Friendly Advice for Future Assas Students',
+    'faq_items' => [
+        [
+            'question' => 'Is Panthéon-Assas only for Law?',
+            'answer' => 'While it is famous for Law, Assas is also a leader in Economics, Management, and Political Science, ranking among the best in France for these subjects too.',
+        ],
+        [
+            'question' => 'What French level do I need for Law?',
+            'answer' => 'Due to the linguistic rigor of French law, a C1 (advanced) level is strongly recommended and often required for admission into Bachelor and Master programs.',
+        ],
+        [
+            'question' => 'Where are the classes mostly held?',
+            'answer' => 'Classes are held across several prestigious sites, including the Panthéon building (Licence 1/2), and the main Assas campus near the Luxembourg Garden.',
+        ],
+        [
+            'question' => 'Are there English-taught programs?',
+            'answer' => 'Yes, there are several specialized "LL.M." and Master programs in international business law taught entirely in English for international students.',
+        ],
+        [
+            'question' => 'Can I work while studying law?',
+            'answer' => 'Yes, your student visa allows part-time work. However, law studies at Assas are very demanding, so good time management is essential!',
+        ],
+    ],
 ];
