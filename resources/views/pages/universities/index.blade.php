@@ -37,16 +37,10 @@
         <header class="page-title-area" role="banner">
             <div class="container">
                 <div class="page-title-content">
-                    <nav aria-label="breadcrumb">
-                        <ul>
-                            <li>
-                                <a href="{{ url($currentLocale . '/') }}">
-                                    {{ __('universities.breadcrumb_home') }}
-                                </a>
-                            </li>
-                            <li aria-current="page">{{ __('universities.breadcrumb_universities') }}</li>
-                        </ul>
-                    </nav>
+                    <x-premium-breadcrumb :items="[
+            ['url' => url($currentLocale . '/'), 'label' => __('universities.breadcrumb_home')],
+            ['label' => __('universities.breadcrumb_universities')]
+        ]" />
                     <h1>{{ __('universities.main_heading') }}</h1>
                 </div>
             </div>
@@ -127,14 +121,23 @@
                     @endphp
 
                     <style>
-                        .benefit-card:hover .benefit-icon svg { color: #ff5d22 !important; }
-                        .benefit-card:hover h3 { color: #ff5d22 !important; }
-                        .benefit-card:hover p { color: #6c757d !important; }
+                        .benefit-card:hover .benefit-icon svg {
+                            color: #ff5d22 !important;
+                        }
+
+                        .benefit-card:hover h3 {
+                            color: #ff5d22 !important;
+                        }
+
+                        .benefit-card:hover p {
+                            color: #6c757d !important;
+                        }
                     </style>
 
                     @foreach($benefits as $benefit)
                         <div class="col-lg-4 col-md-6">
-                            <div class="benefit-card text-center p-5 rounded-5 shadow-sm bg-white h-100 border-0 transition-all hover-lift">
+                            <div
+                                class="benefit-card text-center p-5 rounded-5 shadow-sm bg-white h-100 border-0 transition-all hover-lift">
                                 <div class="benefit-icon mb-4 text-primary transition-colors">
                                     @if($benefit['icon'] == 'cap')
                                         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor"
@@ -209,8 +212,8 @@
 @push("json")
     @php
         $breadcrumb = \App\Services\StructuredData\BreadcrumbSchema::fromArray([
-            ['name' => __('universities.breadcrumb_home'), 'url' => url($currentLocale.'/')],
-            ['name' => __('universities.breadcrumb_universities'), 'url' => url($currentLocale.'/universities')],
+            ['name' => __('universities.breadcrumb_home'), 'url' => url($currentLocale . '/')],
+            ['name' => __('universities.breadcrumb_universities'), 'url' => url($currentLocale . '/universities')],
         ]);
 
         $collectionPage = new \App\Services\StructuredData\CollectionPageSchema(
@@ -225,8 +228,8 @@
         foreach ($universities as $uni) {
             $list->addItem(
                 $position,
-                url($currentLocale.'/universities/'.$uni['slug']),
-                __('universities.'.$uni['name'].'_name')
+                url($currentLocale . '/universities/' . $uni['slug']),
+                __('universities.' . $uni['name'] . '_name')
             );
             $position++;
         }
