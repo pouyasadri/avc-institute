@@ -59,16 +59,10 @@
         <header class="page-title-area" role="banner">
             <div class="container">
                 <div class="page-title-content">
-                    <nav aria-label="breadcrumb">
-                        <ul>
-                            <li>
-                                <a href="{{ url($currentLocale . '/') }}">
-                                    {{ __('cities.breadcrumb_home') }}
-                                </a>
-                            </li>
-                            <li aria-current="page">{{ __('cities.breadcrumb_cities') }}</li>
-                        </ul>
-                    </nav>
+                    <x-premium-breadcrumb :items="[
+            ['url' => url($currentLocale . '/'), 'label' => __('cities.breadcrumb_home')],
+            ['label' => __('cities.breadcrumb_cities')]
+        ]" />
                     <h1>{{ __('cities.main_heading') }}</h1>
                 </div>
             </div>
@@ -123,8 +117,8 @@
 @push('json')
     @php
         $breadcrumb = \App\Services\StructuredData\BreadcrumbSchema::fromArray([
-            ['name' => __('cities.breadcrumb_home'), 'url' => url($currentLocale.'/')],
-            ['name' => __('cities.breadcrumb_cities'), 'url' => url($currentLocale.'/cities')],
+            ['name' => __('cities.breadcrumb_home'), 'url' => url($currentLocale . '/')],
+            ['name' => __('cities.breadcrumb_cities'), 'url' => url($currentLocale . '/cities')],
         ]);
 
         $collectionPage = new \App\Services\StructuredData\CollectionPageSchema(
@@ -139,8 +133,8 @@
         foreach ($cities as $city) {
             $list->addItem(
                 $position,
-                url($currentLocale.'/cities/'.$city['slug']),
-                __('cities.'.$city['title_key']),
+                url($currentLocale . '/cities/' . $city['slug']),
+                __('cities.' . $city['title_key']),
                 asset($city['img'])
             );
             $position++;

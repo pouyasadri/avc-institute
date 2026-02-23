@@ -21,16 +21,10 @@
         <header class="page-title-area" role="banner">
             <div class="container">
                 <div class="page-title-content">
-                    <nav aria-label="breadcrumb">
-                        <ul>
-                            <li>
-                                <a href="{{ url($currentLocale . '/') }}">
-                                    {{ __('consult.breadcrumb_home') }}
-                                </a>
-                            </li>
-                            <li aria-current="page">{{ __('consult.breadcrumb_consult') }}</li>
-                        </ul>
-                    </nav>
+                    <x-premium-breadcrumb :items="[
+            ['url' => url($currentLocale . '/'), 'label' => __('consult.breadcrumb_home')],
+            ['label' => __('consult.breadcrumb_consult')]
+        ]" />
                     <h1>{{ __('consult.main_heading') }}</h1>
                 </div>
             </div>

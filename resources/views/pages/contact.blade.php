@@ -21,16 +21,10 @@
         <header class="page-title-area" role="banner">
             <div class="container">
                 <div class="page-title-content">
-                    <nav aria-label="breadcrumb">
-                        <ul>
-                            <li>
-                                <a href="{{ url($currentLocale . '/') }}">
-                                    {{ __('contact.breadcrumb.home') }}
-                                </a>
-                            </li>
-                            <li aria-current="page">{{ __('contact.breadcrumb.contact') }}</li>
-                        </ul>
-                    </nav>
+                    <x-premium-breadcrumb :items="[
+            ['url' => url($currentLocale . '/'), 'label' => __('contact.breadcrumb.home')],
+            ['label' => __('contact.breadcrumb.contact')]
+        ]" />
                     <h1>{{ __('contact.page_title') }}</h1>
                 </div>
             </div>
@@ -220,8 +214,8 @@
 @push('json')
     @php
         $breadcrumb = \App\Services\StructuredData\BreadcrumbSchema::fromArray([
-            ['name' => __('contact.breadcrumb.home'), 'url' => url($currentLocale.'/')],
-            ['name' => __('contact.breadcrumb.contact'), 'url' => url($currentLocale.'/contactUs')],
+            ['name' => __('contact.breadcrumb.home'), 'url' => url($currentLocale . '/')],
+            ['name' => __('contact.breadcrumb.contact'), 'url' => url($currentLocale . '/contactUs')],
         ]);
 
         $contactPageSchema = new \App\Services\StructuredData\WebPageSchema(
@@ -234,7 +228,7 @@
         $contactPageArray['@type'] = 'ContactPage';
         $contactPageArray['mainEntity'] = [
             '@type' => 'Organization',
-            '@id' => rtrim(config('app.url'), '/').'/' . '#organization',
+            '@id' => rtrim(config('app.url'), '/') . '/' . '#organization',
             'contactPoint' => [
                 [
                     '@type' => 'ContactPoint',

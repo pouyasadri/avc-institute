@@ -28,20 +28,10 @@
     <header class="page-title-area" role="banner">
         <div class="container">
             <div class="page-title-content">
-                <nav aria-label="breadcrumb">
-                    <ul>
-                        <li>
-                            <a href="{{ route('index', ['locale' => $currentLocale]) }}">
-                                {{ __('blog/show.breadcrumb_home') }}
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{ route('blog.index', ['locale' => $currentLocale]) }}">
-                                {{ __('blog/show.breadcrumb_blogs') }}
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
+                <x-premium-breadcrumb :items="[
+            ['url' => route('index', ['locale' => $currentLocale]), 'label' => __('blog/show.breadcrumb_home')],
+            ['url' => route('blog.index', ['locale' => $currentLocale]), 'label' => __('blog/show.breadcrumb_blogs')]
+        ]" />
                 <h1 class="h2">{{$translation->title}}</h1>
             </div>
         </div>

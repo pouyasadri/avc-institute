@@ -10,21 +10,11 @@
     <header class="page-title-area @yield('header_class')" role="banner">
         <div class="container">
             <div class="page-title-content">
-                <nav aria-label="breadcrumb">
-                    <ul>
-                        <li>
-                            <a href="{{ url($currentLocale . '/') }}">
-                                {{ __('layout.home') ?? 'Home' }}
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{ url($currentLocale . '/cities') }}">
-                                {{ __('cities.breadcrumb_cities') }}
-                            </a>
-                        </li>
-                        <li aria-current="page">@yield('breadcrumb_current')</li>
-                    </ul>
-                </nav>
+                <x-premium-breadcrumb :items="[
+            ['url' => url($currentLocale . '/'), 'label' => __('layout.home') ?? 'Home'],
+            ['url' => url($currentLocale . '/cities'), 'label' => __('cities.breadcrumb_cities')],
+            ['label' => trim($__env->yieldContent('breadcrumb_current'))]
+        ]" />
                 <h1>@yield('page_title_heading')</h1>
             </div>
         </div>

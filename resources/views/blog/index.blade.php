@@ -4,21 +4,17 @@
 @section("description", __('blog/index.description'))
 @section('content')
     <!-- Start Page Title Area -->
-    <div class="page-title-area">
+    <header class="page-title-area" role="banner">
         <div class="container">
             <div class="page-title-content">
-                <h2>{{ __('blog/index.main_heading') }}</h2>
-                <ul>
-                    <li>
-                        <a href="/">
-                            {{ __('blog/index.breadcrumb_home') }}
-                        </a>
-                    </li>
-                    <li>{{ __('blog/index.breadcrumb_blogs') }}</li>
-                </ul>
+                <x-premium-breadcrumb :items="[
+            ['url' => url(app()->getLocale() . '/'), 'label' => __('blog/index.breadcrumb_home')],
+            ['label' => __('blog/index.breadcrumb_blogs')]
+        ]" />
+                <h1>{{ __('blog/index.main_heading') }}</h1>
             </div>
         </div>
-    </div>
+    </header>
     <!-- End Page Title Area -->
 
     <!-- Start News Area -->
