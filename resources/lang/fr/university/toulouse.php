@@ -2,128 +2,122 @@
 
 return [
     // SEO Meta
-    'title' => 'Présentation des Meilleures Universités Françaises | Université de Toulouse',
-    'keywords' => 'Université de Toulouse,Université Paul Sabatier,meilleures universités françaises,universités françaises,universités de Toulouse,étudier en France,étudier à l\'Université de Toulouse,meilleures universités françaises,classement Université de Toulouse,programmes Université de Toulouse,installations Université de Toulouse',
-    'description' => 'Dans cet article, nous présentons l\'Université de Toulouse, l\'une des meilleures universités de France. L\'Université de Toulouse a été fondée en 1229 et compte actuellement plus de 45 000 étudiants. Cette université a des classements de premier plan au niveau mondial dans les domaines des sciences, de l\'ingénierie, de la médecine, des arts et des sciences humaines.',
+    'title' => 'Étudier à l’Université de Toulouse | Guide Étudiant 2026',
+    'keywords' => 'Université de Toulouse, Université Paul Sabatier, Aerospace Valley, étudier à Toulouse 2026, Toulouse School of Economics, ingénierie France, études aéronautiques, vie étudiante ville rose, meilleures universités françaises',
+    'description' => 'Lancez votre carrière dans la capitale européenne de l’aéronautique. Découvrez l’Université de Toulouse. Explorez les programmes 2026, l’économie mondiale (TSE) et la vie dans la "Ville Rose".',
 
     // Page Title Area
-    'main_heading' => 'Présentation de l\'Université de Toulouse',
+    'main_heading' => 'Université de Toulouse',
     'breadcrumb_home' => 'Accueil',
-    'breadcrumb_universities' => 'Meilleures Universités Françaises',
+    'breadcrumb_universities' => 'Nos Universités Partenaires',
     'breadcrumb_current' => 'Université de Toulouse',
 
     // Sidebar
-    'table_of_contents' => 'Table des Matières',
-    'contact_us' => 'Nous Contacter',
-    'consultation_request' => 'Demande de Consultation pour Migration Éducative vers la France',
-    'useful_links' => 'Liens Utiles',
-    'official_website' => 'Site Officiel de l\'Université de Toulouse 1',
-    'wikipedia_link' => 'Université de Toulouse 1 sur Wikipédia',
+    'table_of_contents' => 'Explorer la Page',
+    'contact_us' => 'Discuter avec notre Équipe',
+    'consultation_request' => 'Préparez votre Rentrée 2026 à Toulouse',
+    'useful_links' => 'Centre de Ressources',
+    'official_website' => 'Portail Officiel de l’Université',
+    'wikipedia_link' => 'Toulouse sur Wikipédia',
     'toulouse_city_guide' => 'Guide de la Ville de Toulouse',
 
     // Main Content
-    'page_title' => 'Université de Toulouse 1 : Pôle Scientifique et Éducatif de France',
+    'page_title' => 'Université de Toulouse : La Capitale Européenne de l’Aéronautique et des Sciences',
 
-    'history_title' => 'Histoire et Fondation de l\'Université de Toulouse 1',
-    'history_content' => 'L\'Université de Toulouse 1 (Université de Toulouse I) est l\'une des universités prestigieuses et de premier plan en France, formée en 1229 par la fusion de plusieurs universités de la région du sud de la France. Cette université avec plus de 46 000 étudiants à divers niveaux académiques est reconnue comme l\'une des plus grandes universités de France.',
-    'history_details' => 'L\'Université de Toulouse 1 occupe une position spéciale parmi les universités prestigieuses du monde en raison de son enseignement de haute qualité, de sa recherche pionnière et de sa réputation historique. Cette université a une position proéminente dans divers domaines des sciences fondamentales, des sciences et technologies, de la médecine, de l\'ingénierie, des sciences humaines et sociales.',
+    'intro_content' => 'L’Université de Toulouse est un puissant collectif académique situé dans la vibrante "Ville Rose". Remontant à 1229, elle est l’un des centres académiques les plus anciens et les plus prestigieux d’Europe. Aujourd’hui, elle fonctionne comme un réseau unifié—regroupant des institutions telles que Toulouse Capitole (TSE), Jean Jaurès et Paul Sabatier (Toulouse III)—pour offrir une éducation multidisciplinaire inégalée. Pour l’année académique 2026, elle demeure la destination ultime pour les étudiants passionnés d’aéronautique, d’ingénierie, d’IA et d’économie.',
 
-    'ranking_title' => 'Classement Mondial de l\'Université de Toulouse 1',
-    'ranking_content' => 'L\'Université de Toulouse 1 a toujours eu une forte présence dans les classements universitaires mondiaux. Dans le classement QS 2022, cette université s\'est classée 201-250 parmi les meilleures universités du monde, et dans le classement Times Higher Education 2023, cette université s\'est classée 171-200 parmi les meilleures universités du monde.',
+    'global_leader_title' => 'Où l’Histoire rencontre l’Avenir de l’Aviation',
+    'global_leader_content' => 'Toulouse est unique par son intégration aux industries mondiales. Points clés pour votre candidature 2026 :
+- **Aerospace Valley** : Siège d’Airbus et de l’industrie spatiale européenne, offrant une synergie inégalée entre l’université et le secteur aéronautique (ISAE-SUPAERO).
+- **Excellence Économique** : Accueille la mondialement reconnue Toulouse School of Economics (TSE), classée parmi les meilleures facultés d’économie au niveau mondial.
+- **Pôle IA et Tech** : Un leader reconnu en Intelligence Artificielle à travers l’institut ANITI.
 
-    'facilities_title' => 'Installations Éducatives et de Recherche à l\'Université de Toulouse 1',
-    'facilities_content' => 'L\'Université de Toulouse 1 offre une large gamme de programmes académiques aux niveaux licence, master et doctorat. Cette université dispose également de plusieurs facultés et écoles spécialisées qui offrent un enseignement supérieur dans des domaines spécifiques tels que les sciences naturelles, les sciences de la vie, les sciences médicales, les sciences de l\'ingénieur, les sciences de l\'information, les sciences du sport, le droit, l\'économie, la gestion, les sciences politiques, la philosophie, les langues, la littérature et les communications.',
-    'facilities_research' => 'En plus d\'un enseignement de qualité, l\'Université de Toulouse 1 se concentre fortement sur la recherche scientifique. Cette université dispose de plusieurs laboratoires de recherche avancés opérant dans divers domaines des sciences fondamentales, des sciences et technologies, des sciences humaines et sociales.',
+À Toulouse, vous n’apprenez pas seulement à connaître l’avenir ; vous aidez à le construire.',
 
-    'iranian_students_title' => 'Conditions d\'Études pour les Étudiants Iraniens à l\'Université de Toulouse 1',
-    'iranian_students_content' => 'Les étudiants iraniens doivent avoir des certificats de langue française valides pour étudier à l\'Université de Toulouse 1. De plus, les candidats doivent traduire et valider officiellement leurs documents académiques pour l\'admission à cette université.',
-    'iranian_students_visa' => 'Les candidats iraniens doivent également obtenir un visa étudiant pour étudier en France. Pour les demandes de visa étudiant, les candidats doivent fournir divers documents tels que la lettre d\'acceptation universitaire, le certificat de capacité financière et l\'assurance santé.',
-
-    'career_title' => 'Opportunités de Carrière Après Graduation de l\'Université de Toulouse 1',
-    'career_content' => 'Les diplômés de l\'Université de Toulouse 1 jouissent d\'excellentes opportunités de carrière. Cette université entretient de solides relations avec les employeurs du monde entier et aide ses diplômés à trouver un emploi.',
-    'career_research' => 'L\'Université de Toulouse 1 aide également ses diplômés dans les domaines de recherche. Cette université dispose de plusieurs centres d\'entrepreneuriat qui aident les diplômés à créer des entreprises.',
-
-    'environment_title' => 'Environnement Multiculturel et Installations de Bien-être',
-    'environment_content' => 'L\'Université de Toulouse 1 est un environnement multiculturel avec des étudiants de plus de 100 pays présents dans cette université. Cette université dispose également de nombreuses installations de bien-être pour les étudiants internationaux, telles que des salles d\'étude, des cafétérias, des centres culturels, des bibliothèques bien équipées et des installations sportives.',
-
-    'academic_programs_title' => 'Programmes Académiques et Spécialisations à l\'Université de Toulouse 1',
-    'academic_programs_content' => 'L\'Université de Toulouse offre des programmes académiques diversifiés à différents niveaux. L\'accent de l\'université est mis sur les programmes de doctorat, gérés par "L\'École des Docteurs" avec 15 écoles doctorales. Cette université compte plus de 9 100 personnels de recherche, dont 5 100 employés universitaires et 4 300 doctorants. De plus, 40% des doctorants sont des étudiants internationaux, et annuellement, environ 900 doctorants étudient dans divers domaines scientifiques.',
-
-    'science_programs_intro' => 'Dans le domaine des sciences expérimentales et des sciences et technologies, les programmes principaux sont les suivants :',
-    'science_programs' => [
-        'Biologie, Santé et Biotechnologie ;',
-        'Sciences Écologiques, Médecine Vétérinaire, Agriculture et Bio-ingénierie ;',
-        'Sciences de la Terre, Astrophysique et Sciences Spatiales ;',
-        'Mathématiques, Informatique et Télécommunications ;',
-        'Génie Électrique, Électronique et Télécommunications ;',
-        'Systèmes ;',
-        'Physique, Chimie et Sciences des Matériaux ;',
-        'Mécanique, Énergie, Génie Civil et Procédés ;',
-        'Aéronautique et Astronautique.',
+    'programs_title' => 'Des Programmes de Pointe pour les Métiers de Demain',
+    'programs_content' => 'L’écosystème de l’Université de Toulouse propose des formations spécialisées dans un large éventail de domaines, synchronisées avec les besoins du marché du travail du 21e siècle :',
+    'subjects' => [
+        'Aéronautique, Espace et Génie Mécanique',
+        'Économie et Management (Toulouse School of Economics)',
+        'Intelligence Artificielle et Informatique',
+        'Biologie, Santé et Biotechnologie',
+        'Droit et Science Politique',
+        'Sciences Humaines, Arts et Sciences du Langage',
     ],
 
-    'humanities_programs_intro' => 'Dans le domaine des sciences humaines et sociales :',
-    'humanities_programs' => [
-        'Psychologie, Langue, Éducation, Socialisation, Cognition Philosophique ;',
-        'Arts, Littérature, Langue, Philosophie, Information et Communications ;',
-        'Histoire, Géographie, Anthropologie ;',
-        'Droit et Sciences Politiques ;',
-        'Gestion ;',
-        'Économie.',
+    'research_title' => 'Une Recherche qui Vise les Étoiles',
+    'research_content' => 'Avec plus de 9 000 chercheurs et 15 écoles doctorales d’élite, Toulouse est un moteur de la recherche. Les laboratoires travaillent en direct avec des géants industriels comme Airbus, Thales et le CNES (Agence Spatiale Française). Les étudiants ont l’opportunité unique de s’engager dans des recherches appliquées qui ont un impact direct sur l’aviation mondiale, la santé et la politique économique.',
+
+    'admission_title' => 'Votre Voie vers la Ville Rose en 2026',
+    'admission_content' => 'Les processus d’admission varient légèrement selon l’institution du réseau universitaire toulousain à laquelle vous postulez. Pour 2026, les étudiants internationaux ont généralement besoin d’un niveau B2/C1 en français pour de nombreux programmes, bien que des institutions comme TSE et les écoles d’ingénieurs proposent des Masters entièrement en anglais. Une candidature précoce via la plateforme "Études en France" est vivement conseillée.',
+
+    'career_title' => 'Un Tremplin vers l’Industrie Mondiale',
+    'career_content' => 'Diplômer de Toulouse est une marque d’excellence reconnue, particulièrement en STIM et en Économie. Les liens forts de l’université avec la Aerospace Valley et les entreprises technologiques de premier plan signifient que les diplômés bénéficient de taux de placement exceptionnellement élevés, obtenant souvent des postes avant même la remise de leur diplôme.',
+
+    'environment_title' => 'Explorer les Campus en Réseau',
+    'environment_content' => 'L’écosystème toulousain comprend plusieurs campus spécialisés, chacun offrant une identité académique distincte :',
+    'campuses' => [
+        'Paul Sabatier (Toulouse III - Sciences, Santé et Ingénierie)',
+        'Toulouse Capitole (Droit, Économie et Management)',
+        'Jean Jaurès (Arts, Lettres et Sciences Humaines)',
+        'ISAE-SUPAERO (L’Élite de l’Ingénierie Aéronautique)',
+        'INSA Toulouse (Sciences Appliquées et Technologie)',
     ],
 
-    'achievements_title' => 'Réalisations et Excellence de l\'Université de Toulouse 1',
-    'achievements_content' => 'L\'École d\'Économie de Toulouse se classe constamment parmi les meilleures en Europe basée sur les publications de qualité. Le site web Econphd classe l\'Économie de l\'Information de Toulouse parmi les meilleures en Europe et la Gestion Industrielle de Toulouse deuxième au niveau mondial.',
-
-    'language_title' => 'Langue d\'Enseignement à l\'Université de Toulouse 1',
-    'language_intro' => 'La langue académique officielle à l\'Université de Toulouse est le français. Bien que certains cours, en particulier en économie et aéronautique, soient enseignés en anglais. Les autres langues enseignées dans cette université comprennent :',
-    'languages' => [
-        'Anglais ;',
-        'Portugais ;',
-        'Espagnol ;',
-        'Chinois ;',
-        'Italien ;',
-        'Allemand.',
-    ],
-
-    'alumni_title' => 'Anciens Étudiants Célèbres',
-    'alumni_intro' => 'L\'Université de Toulouse a une histoire de diplômés distingués comprenant :',
-    'alumni' => [
-        'Mustafa Kamil Pasha (1874–1908), avocat, journaliste et leader nationaliste égyptien ;',
-        'François Hussenot (1912-1951), qui a obtenu son diplôme de l\'École d\'Ingénierie Aéronautique ISAE en 1935 et est connu pour avoir inventé l\'une des premières formes d\'enregistreur de données de vol ;',
-        'Thomas Pesquet (né en 1978), qui a obtenu son diplôme de l\'Université ISAE en 2001 et travaille comme astronaute à l\'Agence Spatiale Européenne ;',
-        'Armand Praviel (1875–1944), écrivain et journaliste français ;',
-        'Henri de Puyjalon (1841–1905), chercheur en biologie et écologie ;',
-        'Salman Reza, linguiste et homme politique.',
-    ],
-
-    'conclusion_title' => 'Conclusion',
-    'conclusion_content' => 'L\'Université de Toulouse 1 est une excellente université pour les étudiants internationaux qui souhaitent étudier en France. Cette université offre un enseignement de haute qualité, d\'excellentes installations de bien-être, de nombreuses opportunités de carrière pour les diplômés et un environnement multiculturel. Si vous êtes un étudiant iranien cherchant à étudier en France, l\'Université de Toulouse 1 serait un excellent choix pour vous.',
+    'conclusion_title' => 'Prenez votre Envol à Toulouse',
+    'conclusion_content' => 'L’Université de Toulouse offre plus qu’une éducation ; elle offre une connexion directe avec les industries qui façonnent notre monde. Rejoignez-nous en 2026 pour faire partie d’une communauté dynamique qui allie prestige historique et opportunités inégalées au cœur du sud de la France.',
 
     // Features List
     'features' => [
-        'Histoire Précieuse',
-        'Diversité des Spécialisations',
-        'Environnement Éducatif Mondial',
-        'Installations et Équipements Avancés',
-        'Recherche Exceptionnelle',
+        'Cœur de l’Industrie Aérospatiale Européenne',
+        'Foyer de la Toulouse School of Economics (Prix Nobel)',
+        'Vaste Choix de Masters enseignés en Anglais',
+        'Élue #1 Meilleure Ville Étudiante en France à de nombreuses reprises',
+        'Infrastructures de Recherche Massives et Écoles Doctorales',
     ],
 
     // Contact Form
-    'ask_question' => 'Poser une Question',
-    'name_placeholder' => 'Votre Nom',
-    'email_placeholder' => 'Votre Email',
-    'phone_placeholder' => 'Votre Téléphone',
-    'subject_placeholder' => 'Sujet',
-    'message_placeholder' => 'Votre Message',
-    'send_message' => 'Envoyer le Message',
-    'name_error' => 'Veuillez entrer votre nom',
-    'email_error' => 'Veuillez entrer votre email',
-    'phone_error' => 'Veuillez entrer votre numéro de téléphone',
-    'subject_error' => 'Veuillez entrer le sujet',
-    'message_error' => 'Veuillez entrer votre message',
+    'ask_question' => 'Des questions sur Toulouse ? Demandez à nos Conseillers !',
+    'name_placeholder' => 'Entrez votre nom complet',
+    'email_placeholder' => 'Votre email de contact',
+    'phone_placeholder' => 'Numéro de téléphone (avec code pays)',
+    'subject_placeholder' => 'Sélectionnez votre domaine d\'intérêt',
+    'message_placeholder' => 'Posez-nous vos questions sur l’ingénierie aérospatiale, l\'admission à TSE ou vos démarches 2026...',
+    'send_message' => 'Envoyer ma Demande',
+    'name_error' => 'Veuillez indiquer votre nom.',
+    'email_error' => 'Un email valide est requis.',
+    'phone_error' => 'Veuillez fournir un numéro de téléphone valide.',
+    'subject_error' => 'Veuillez choisir un sujet.',
+    'message_error' => 'Votre message ne peut être vide.',
 
     // JSON-LD Schema
-    'schema_headline' => 'Université de Toulouse 1 : Pôle Scientifique et Éducatif de France',
-    'schema_author' => 'Études, Vie, Investissement : Vos Rêves en France avec A.V.C',
+    'schema_headline' => 'Étudier à l’Université de Toulouse : Guide 2026',
+    'schema_description' => 'Un guide international pour l’Université de Toulouse. Explorez les programmes 2026 en Aéronautique, Économie et Ingénierie.',
+    'schema_author' => 'A.V.C - Votre Partenaire pour vos Études en France',
+
+    // FAQ Section
+    'faq_title' => 'Questions sur la Ville Rose',
+    'faq_subtitle' => 'Réponses pour les Futurs Étudiants Toulousains',
+    'faq_items' => [
+        [
+            'question' => 'Comment fonctionne le système de l’Université de Toulouse ?',
+            'answer' => 'Contrairement à une université traditionnelle unique, Toulouse est un regroupement (ComUE). Vous candidatez auprès d\'institutions spécifiques en son sein : Toulouse Capitole (pour le Droit/Éco), Jean Jaurès (Sciences Humaines), Paul Sabatier (Sciences), ou des écoles d’ingénieurs spécialisées comme l\'INSA ou l\'ISAE-SUPAERO.',
+        ],
+        [
+            'question' => 'Toulouse est-elle une bonne ville pour les étudiants internationaux ?',
+            'answer' => 'Absolument. Toulouse est régulièrement élue meilleure ville étudiante de France. La "Ville Rose" est jeune, plus abordable que Paris, riche culturellement et incroyablement accueillante pour les étudiants internationaux, qui représentent plus de 15% des effectifs.',
+        ],
+        [
+            'question' => 'Puis-je étudier l’Aéronautique sans parler français ?',
+            'answer' => 'Oui. De nombreux programmes de Master et d’Ingénierie de haut niveau dans des écoles comme l\'ISAE-SUPAERO sont enseignés entièrement en anglais, conçus spécifiquement pour alimenter l’industrie mondiale de l’aviation.',
+        ],
+        [
+            'question' => 'Quelle est la sélectivité de la Toulouse School of Economics (TSE) ?',
+            'answer' => 'Très compétitive. TSE est mondialement reconnue et n’accepte que les meilleurs profils basés sur de solides compétences quantitatives. Ses programmes de Master sont exigeants et très internationaux.',
+        ],
+        [
+            'question' => 'Quel est le coût de la vie étudiante à Toulouse ?',
+            'answer' => 'Toulouse est généralement plus abordable que Paris ou Lyon. Les étudiants devraient prévoir un budget d’environ 700 à 900 € par mois pour le logement, la nourriture et les transports, bien que l’aide au logement de l’État (CAF) puisse aider à réduire considérablement les coûts.',
+        ],
+    ],
 ];

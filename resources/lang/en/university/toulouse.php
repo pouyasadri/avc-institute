@@ -2,128 +2,122 @@
 
 return [
     // SEO Meta
-    'title' => 'Introduction to Top French Universities | University of Toulouse',
-    'keywords' => 'University of Toulouse,Paul Sabatier University,top French universities,French universities,Toulouse universities,studying in France,studying at University of Toulouse,best French universities,University of Toulouse ranking,University of Toulouse programs,University of Toulouse facilities',
-    'description' => 'In this article, we introduce the University of Toulouse, one of the best universities in France. The University of Toulouse was founded in 1229 and currently has more than 45,000 students. This university has top rankings worldwide in the fields of science, engineering, medicine, arts and humanities.',
+    'title' => 'Study at University of Toulouse | 2026 Student Guide',
+    'keywords' => 'University of Toulouse, Paul Sabatier University, Aerospace Valley, study in Toulouse 2026, Toulouse School of Economics, engineering France, aviation studies, pink city student life, best French universities',
+    'description' => 'Launch your career in the European capital of aerospace. Discover the University of Toulouse. Explore 2026 programs, world-class economics (TSE), and student life in the vibrant "Pink City".',
 
     // Page Title Area
-    'main_heading' => 'Introduction to University of Toulouse',
+    'main_heading' => 'University of Toulouse',
     'breadcrumb_home' => 'Home',
     'breadcrumb_universities' => 'Top French Universities',
     'breadcrumb_current' => 'University of Toulouse',
 
     // Sidebar
-    'table_of_contents' => 'Table of Contents',
-    'contact_us' => 'Contact Us',
-    'consultation_request' => 'Request Educational Migration Consultation to France',
-    'useful_links' => 'Useful Links',
-    'official_website' => 'Official Website of University of Toulouse 1',
-    'wikipedia_link' => 'University of Toulouse 1 on Wikipedia',
+    'table_of_contents' => 'Explore This Page',
+    'contact_us' => 'Speak with Our Team',
+    'consultation_request' => 'Launch Your 2026 Journey to Toulouse',
+    'useful_links' => 'Resource Center',
+    'official_website' => 'Official University Portal',
+    'wikipedia_link' => 'Toulouse on Wikipedia',
     'toulouse_city_guide' => 'Toulouse City Guide',
 
     // Main Content
-    'page_title' => 'University of Toulouse 1: Scientific and Educational Hub of France',
+    'page_title' => 'University of Toulouse: The Aerospace and Science Capital of Europe',
 
-    'history_title' => 'History and Foundation of University of Toulouse 1',
-    'history_content' => 'The University of Toulouse 1 (Université de Toulouse I) is one of the prestigious and leading universities in France, formed in 1229 from the merger of several universities in the southern France region. This university with more than 46,000 students at various academic levels is recognized as one of the largest universities in France.',
-    'history_details' => 'The University of Toulouse 1 holds a special position among prestigious world universities due to its high-quality education, pioneering research, and historical reputation. This university has a prominent position in various fields of basic sciences, science and technology, medicine, engineering, humanities and social sciences.',
+    'intro_content' => 'The University of Toulouse is a powerful academic collective located in the vibrant "Pink City" (La Ville Rose). Tracing its origins back to 1229, it is one of the oldest and most prestigious academic centers in Europe. Today, it operates as a unified network—grouping together institutions like Toulouse Capitole (TSE), Jean Jaurès, and Paul Sabatier (Toulouse III)—to offer an unparalleled, multidisciplinary education. For the 2026 academic year, it remains the ultimate destination for students passionate about aeronautics, engineering, AI, and economics.',
 
-    'ranking_title' => 'Global Ranking of University of Toulouse 1',
-    'ranking_content' => 'The University of Toulouse 1 has always had a strong presence in global university rankings. In the QS 2022 ranking, this university was ranked 201-250 among the world\'s top universities, and in the Times Higher Education 2023 ranking, this university was ranked 171-200 among the world\'s top universities.',
+    'global_leader_title' => 'Where History Meets the Future of Flight',
+    'global_leader_content' => 'Toulouse is unique in its integration with global industries. Key highlights for your 2026 application:
+- **Aerospace Valley**: Home to Airbus and the European space industry, offering unmatched synergy between the university and the aeronautics sector (ISAE-SUPAERO).
+- **Economic Excellence**: Hosts the world-renowned Toulouse School of Economics (TSE), consistently ranked among the top global economics faculties.
+- **AI and Tech Hub**: A recognized leader in Artificial Intelligence through the ANITI institute.
 
-    'facilities_title' => 'Educational and Research Facilities at University of Toulouse 1',
-    'facilities_content' => 'The University of Toulouse 1 offers a wide range of academic programs at bachelor\'s, master\'s and doctoral levels. This university also has several faculties and specialized schools that provide higher education in specific fields such as natural sciences, life sciences, medical sciences, engineering sciences, information sciences, sports sciences, law, economics, management, political science, philosophy, languages, literature and communications.',
-    'facilities_research' => 'In addition to quality education, the University of Toulouse 1 strongly focuses on scientific research. This university has several advanced research laboratories operating in various fields of basic sciences, science and technology, humanities and social sciences.',
+At Toulouse, you don\'t just learn about the future; you help build it.',
 
-    'iranian_students_title' => 'Study Conditions for Iranian Students at University of Toulouse 1',
-    'iranian_students_content' => 'Iranian students must have valid French language certificates to study at the University of Toulouse 1. Additionally, applicants must translate and officially validate their academic documents for admission to this university.',
-    'iranian_students_visa' => 'Iranian applicants must also obtain a student visa to study in France. For student visa applications, applicants must provide various documents such as university acceptance letter, financial capacity certificate and health insurance.',
-
-    'career_title' => 'Career Opportunities After Graduation from University of Toulouse 1',
-    'career_content' => 'Graduates of the University of Toulouse 1 enjoy excellent career opportunities. This university has strong relationships with employers worldwide and helps its graduates find employment.',
-    'career_research' => 'The University of Toulouse 1 also helps its graduates in research fields. This university has several entrepreneurship centers that help graduates start businesses.',
-
-    'environment_title' => 'Multicultural Environment and Welfare Facilities',
-    'environment_content' => 'The University of Toulouse 1 is a multicultural environment with students from more than 100 countries present at this university. This university also has many welfare facilities for international students, such as study halls, cafeterias, cultural centers, well-equipped libraries and sports facilities.',
-
-    'academic_programs_title' => 'Academic Programs and Majors at University of Toulouse 1',
-    'academic_programs_content' => 'The University of Toulouse offers diverse academic programs at various levels. The university\'s focus is on doctoral programs, managed by "L\'École des Docteurs" with 15 doctoral schools. This university has more than 9,100 research staff, including 5,100 university employees and 4,300 doctoral students. Additionally, 40% of doctoral students are international students, and annually, about 900 doctoral students study in various scientific fields.',
-
-    'science_programs_intro' => 'In the field of experimental sciences and science and technology, the main programs are as follows:',
-    'science_programs' => [
-        'Biology, Health and Biotechnology;',
-        'Ecological Sciences, Veterinary Medicine, Agriculture and Bioengineering;',
-        'Earth Sciences, Astrophysics and Space Sciences;',
-        'Mathematics, Informatics and Telecommunications;',
-        'Electrical Engineering, Electronics and Telecommunications;',
-        'Systems;',
-        'Physics, Chemistry and Materials Science;',
-        'Mechanics, Energy, Civil Engineering and Process;',
-        'Aeronautics and Astronautics.',
+    'programs_title' => 'Cutting-Edge Programs for Tomorrow Workers',
+    'programs_content' => 'The University of Toulouse ecosystem offers specialized training across a vast range of fields, synchronized with the needs of the 21st-century job market:',
+    'subjects' => [
+        'Aeronautics, Space, and Mechanical Engineering',
+        'Economics and Management (Toulouse School of Economics)',
+        'Artificial Intelligence and Computer Science',
+        'Biology, Health, and Biotechnology',
+        'Law and Political Science',
+        'Humanities, Arts, and Language Sciences',
     ],
 
-    'humanities_programs_intro' => 'In the field of humanities and social sciences:',
-    'humanities_programs' => [
-        'Psychology, Language, Education, Socialization, Philosophical Cognition;',
-        'Arts, Literature, Language, Philosophy, Information and Communications;',
-        'History, Geography, Anthropology;',
-        'Law and Political Science;',
-        'Management;',
-        'Economics.',
+    'research_title' => 'Research That Reaches the Stars',
+    'research_content' => 'With over 9,000 research staff and 15 elite doctoral schools, Toulouse is a research powerhouse. Labs work directly with industry giants like Airbus, Thales, and the CNES (French Space Agency). Students have the unique opportunity to engage in applied research that directly impacts global aviation, healthcare, and economic policy.',
+
+    'admission_title' => 'Your 2026 Path to the Pink City',
+    'admission_content' => 'Admission processes vary slightly depending on which institution within the Toulouse network you apply to. For 2026, international students typically need a B2/C1 level in French for many programs, though institutions like TSE and the engineering schools offer extensive Master\'s programs entirely in English. Early application via the "Études en France" platform is critical.',
+
+    'career_title' => 'A Launchpad to Global Industry',
+    'career_content' => 'Graduating from Toulouse is a recognized mark of excellence, particularly in STEM and Economics. The university’s strong ties to the Aerospace Valley and leading tech firms mean graduates enjoy exceptionally high placement rates, often securing positions before graduation.',
+
+    'environment_title' => 'Exploring the Networked Campuses',
+    'environment_content' => 'The Toulouse ecosystem comprises several specialized campuses, each offering a distinct academic flavor:',
+    'campuses' => [
+        'Paul Sabatier (Toulouse III - Science, Health, and Engineering)',
+        'Toulouse Capitole (Law, Economics, and Management)',
+        'Jean Jaurès (Arts, Literature, and Humanities)',
+        'ISAE-SUPAERO (The Pinnacle of Aerospace Engineering)',
+        'INSA Toulouse (Applied Sciences and Tech)',
     ],
 
-    'achievements_title' => 'Achievements and Excellence of University of Toulouse 1',
-    'achievements_content' => 'The Toulouse School of Economics consistently ranks among the best in Europe based on quality publications. The Econphd website ranks Toulouse Information Economics among the best in Europe and Toulouse Industrial Management second worldwide.',
-
-    'language_title' => 'Language of Instruction at University of Toulouse 1',
-    'language_intro' => 'The official academic language at the University of Toulouse is French. Although some courses, especially in economics and aeronautics, are taught in English. Other languages taught at this university include:',
-    'languages' => [
-        'English;',
-        'Portuguese;',
-        'Spanish;',
-        'Chinese;',
-        'Italian;',
-        'German.',
-    ],
-
-    'alumni_title' => 'Famous Alumni',
-    'alumni_intro' => 'The University of Toulouse has a history of distinguished graduates including:',
-    'alumni' => [
-        'Mustafa Kamil Pasha (1874–1908), lawyer, journalist, and Egyptian nationalist leader;',
-        'François Hussenot (1912-1951), who graduated from ISAE Aeronautical Engineering School in 1935 and is known for inventing one of the early forms of flight data recorder;',
-        'Thomas Pesquet (born 1978), who graduated from ISAE University in 2001 and works as an astronaut at the European Space Agency;',
-        'Armand Praviel (1875–1944), French writer and journalist;',
-        'Henri de Puyjalon (1841–1905), researcher in biology and ecology;',
-        'Salman Reza, linguist and politician.',
-    ],
-
-    'conclusion_title' => 'Conclusion',
-    'conclusion_content' => 'The University of Toulouse 1 is an excellent university for international students who want to study in France. This university has high-quality education, excellent welfare facilities, many career opportunities for graduates and a multicultural environment. If you are an Iranian student looking to study in France, the University of Toulouse 1 would be an excellent choice for you.',
+    'conclusion_title' => 'Take Flight in Toulouse',
+    'conclusion_content' => 'The University of Toulouse offers more than an education; it offers a direct connection to the industries shaping our world. Join us in 2026 to be part of a dynamic community that combines historic prestige with unparalleled opportunities in the heart of southern France.',
 
     // Features List
     'features' => [
-        'Valuable History',
-        'Diversity of Specializations',
-        'Global Educational Environment',
-        'Advanced Facilities and Equipment',
-        'Outstanding Research',
+        'Heart of the European Aerospace Industry',
+        'Home to the Nobel-Winning Toulouse School of Economics',
+        'Extensive English-Taught Master’s Programs',
+        'Voted #1 Best Student City in France Multiple Times',
+        'Massive Research Infrastructure and Doctoral Schools',
     ],
 
     // Contact Form
-    'ask_question' => 'Ask a Question',
-    'name_placeholder' => 'Your Name',
-    'email_placeholder' => 'Your Email',
-    'phone_placeholder' => 'Your Phone',
-    'subject_placeholder' => 'Subject',
-    'message_placeholder' => 'Your Message',
-    'send_message' => 'Send Message',
-    'name_error' => 'Please enter your name',
-    'email_error' => 'Please enter your email',
-    'phone_error' => 'Please enter your phone number',
-    'subject_error' => 'Please enter the subject',
-    'message_error' => 'Please enter your message',
+    'ask_question' => 'Questions about Toulouse? Ask Our Counselors!',
+    'name_placeholder' => 'What is your name?',
+    'email_placeholder' => 'Your contact email',
+    'phone_placeholder' => 'Phone number (+country code)',
+    'subject_placeholder' => 'Subject of inquiry',
+    'message_placeholder' => 'Ask us about Aerospace engineering, TSE admission, or your 2026 application steps...',
+    'send_message' => 'Send My Inquiry',
+    'name_error' => 'Please enter your name.',
+    'email_error' => 'A valid email is required.',
+    'phone_error' => 'Please provide a valid phone number.',
+    'subject_error' => 'Please select a subject.',
+    'message_error' => 'Your message cannot be empty.',
 
     // JSON-LD Schema
-    'schema_headline' => 'University of Toulouse 1: Scientific and Educational Hub of France',
-    'schema_author' => 'Study, Life, Investment: Your Dreams in France with A.V.C',
+    'schema_headline' => 'Study at the University of Toulouse: Your 2026 Guide',
+    'schema_description' => 'An international student guide for the University of Toulouse. Explore 2026 programs in Aerospace, Economics, and Engineering.',
+    'schema_author' => 'A.V.C - Your Expert Bridge to Education in France',
+
+    // FAQ Section
+    'faq_title' => 'Toulouse Inquiries',
+    'faq_subtitle' => 'Answers for Future Toulouse Students',
+    'faq_items' => [
+        [
+            'question' => 'How does the University of Toulouse system work?',
+            'answer' => 'Unlike a single traditional university, Toulouse is a collective ("ComUE"). You apply to specific institutions within it: Toulouse Capitole (for Law/Economics), Jean Jaurès (Humanities), or Paul Sabatier (Sciences), or specialized engineering schools like INSA or ISAE-SUPAERO.',
+        ],
+        [
+            'question' => 'Is Toulouse good for international students?',
+            'answer' => 'Absolutely. Toulouse is regularly voted the best student city in France. The "Pink City" is youthful, affordable compared to Paris, culturally rich, and incredibly welcoming to international students, who make up over 15% of the student body.',
+        ],
+        [
+            'question' => 'Can I study Aerospace without speaking French?',
+            'answer' => 'Yes. Many top-tier Master\'s and Engineering programs at schools like ISAE-SUPAERO are taught entirely in English, designed specifically to feed into the global aviation industry.',
+        ],
+        [
+            'question' => 'How competitive is the Toulouse School of Economics (TSE)?',
+            'answer' => 'Highly competitive. TSE is globally renowned and accepts top-tier students based on strong quantitative and analytical skills. Its Master\'s programs are rigorous and highly international.',
+        ],
+        [
+            'question' => 'What is the cost of living for a student in Toulouse?',
+            'answer' => 'Toulouse is generally more affordable than Paris or Lyon. Students should budget around €700 to €900 per month for accommodation, food, and transport, though state housing aid (CAF) can significantly help reduce costs.',
+        ],
+    ],
 ];

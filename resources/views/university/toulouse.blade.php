@@ -20,10 +20,12 @@
 
 @section('useful_links')
     <div class="sidebar-widget p-4 rounded-5 shadow-sm bg-white mb-4 border-0">
-        <h4 class="widget-title h5 fw-bold mb-3 border-bottom pb-2">{{ __('university/toulouse.useful_links') }}</h4>
+        <h4 class="widget-title h5 fw-bold mb-3 border-bottom pb-2">
+            {{ __('university/toulouse.useful_links') }}
+        </h4>
         <ul class="list-unstyled mb-0">
             <li class="mb-2">
-                <a href="https://www.ut-capitole.fr/" target="_blank"
+                <a href="https://www.univ-toulouse.fr/" target="_blank"
                     class="d-flex align-items-center text-decoration-none">
                     <i class='bx bx-globe me-2 fs-5 text-primary'></i>
                     <span>{{ __('university/toulouse.official_website') }}</span>
@@ -40,7 +42,7 @@
                 <a href="{{ url(app()->getLocale() . '/cities/toulouse') }}" target="_blank"
                     class="d-flex align-items-center text-decoration-none">
                     <i class='bx bx-map-alt me-2 fs-5 text-primary'></i>
-                    <span>{{ __('university/toulouse.university/toulouse_city_guide') }}</span>
+                    <span>{{ __('university/toulouse.toulouse_city_guide') }}</span>
                 </a>
             </li>
         </ul>
@@ -52,119 +54,88 @@
 
     <div class="single-services-imgs mb-4">
         <img src="{{asset("assets/img/universities/Toulouse/toulouse_university.webp")}}"
-            alt="{{ __('university/toulouse.main_heading') }}" class="rounded-4 shadow-sm w-100">
+            alt="{{ __('university/toulouse.page_title') }}" class="rounded-4 shadow-sm w-100">
     </div>
 
-    <section class="mb-5">
-        <h3 class="h4 fw-bold mb-3">{{ __('university/toulouse.history_title') }}</h3>
-        <p class="text-muted lead">{{ __('university/toulouse.history_content') }}</p>
-        <p class="text-muted">{{ __('university/toulouse.history_details') }}</p>
-    </section>
+    <p class="lead text-muted mb-4">{{ __('university/toulouse.intro_content') }}</p>
 
     <div class="map-container mb-5 rounded-4 overflow-hidden shadow-sm">
         <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d184924.66022423725!2d1.4668153!3d43.5972167!3m2!i1024!2i768!4f13.1!3m3!1m2!1s0x12aebb61a0b5834d%3A0xedaa16152a9f760b!2sUniversit%C3%A9%20de%20university/toulouse!5e0!3m2!1sfr!2sfr!4v1691012269184!5m2!1sfr!2sfr"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d184924.66022423725!2d1.4668153!3d43.5972167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12aebb61a0b5834d%3A0xedaa16152a9f760b!2sUniversit%C3%A9%20de%20Toulouse!5e0!3m2!1sfr!2sfr!4v1700000000000!5m2!1sfr!2sfr"
             width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 
     <section class="mb-5">
-        <h3 class="h4 fw-bold mb-3">{{ __('university/toulouse.ranking_title') }}</h3>
-        <p class="text-muted">{{ __('university/toulouse.ranking_content') }}</p>
+        <h3 class="h4 fw-bold mb-3">{{ __('university/toulouse.global_leader_title') }}</h3>
+        <p class="text-muted">{{ __('university/toulouse.global_leader_content') }}</p>
     </section>
 
     <section class="mb-5">
-        <h3 class="h4 fw-bold mb-3">{{ __('university/toulouse.academic_programs_title') }}</h3>
-        <p class="text-muted mb-3">{{ __('university/toulouse.academic_programs_content') }}</p>
-        <div class="row g-4">
-            <div class="col-md-6">
-                <div class="p-4 rounded-4 bg-light h-100">
-                    <h5 class="fw-bold text-primary mb-3">{{ __('university/toulouse.science_programs_intro') }}</h5>
-                    <ul class="list-unstyled mb-0">
-                        @foreach(__('university/toulouse.science_programs') as $program)
-                            <li class="mb-2 d-flex align-items-center">
-                                <i class="bx bx-check text-primary me-2"></i>
-                                <span class="small">{{ $program }}</span>
-                            </li>
-                        @endforeach
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="p-4 rounded-4 bg-light h-100">
-                    <h5 class="fw-bold text-primary mb-3">{{ __('university/toulouse.humanities_programs_intro') }}</h5>
-                    <ul class="list-unstyled mb-0">
-                        @foreach(__('university/toulouse.humanities_programs') as $program)
-                            <li class="mb-2 d-flex align-items-center">
-                                <i class="bx bx-check text-primary me-2"></i>
-                                <span class="small">{{ $program }}</span>
-                            </li>
-                        @endforeach
-                    </ul>
-                </div>
-            </div>
-        </div>
+        <h3 class="h4 fw-bold mb-3">{{ __('university/toulouse.programs_title') }}</h3>
+        <p class="text-muted mb-3">{{ __('university/toulouse.programs_content') }}</p>
+        <ul class="list-group list-group-flush mb-4">
+            @foreach(__('university/toulouse.subjects') as $subject)
+                <li class="list-group-item bg-transparent px-0 py-2 border-0 d-flex align-items-center">
+                    <i class="bx bx-badge-check text-primary me-2"></i>
+                    <span>{{ $subject }}</span>
+                </li>
+            @endforeach
+        </ul>
     </section>
 
     <div class="rooms-details mb-5">
         <img src="{{asset("assets/img/universities/Toulouse/toulouse_university_1.webp")}}"
-            alt="{{ __('university/toulouse.main_heading') }}" class="rounded-4 shadow-sm w-100">
+            alt="{{ __('university/toulouse.page_title') }}" class="rounded-4 shadow-sm w-100">
     </div>
 
-    <section class="mb-4">
-        <h3 class="h4 fw-bold mb-3">{{ __('university/toulouse.facilities_title') }}</h3>
-        <p class="text-muted mb-2">{{ __('university/toulouse.facilities_content') }}</p>
-        <p class="text-muted mb-4">{{ __('university/toulouse.facilities_research') }}</p>
-
-        <h3 class="h4 fw-bold mb-3">{{ __('university/toulouse.iranian_students_title') }}</h3>
-        <p class="text-muted mb-2">{{ __('university/toulouse.iranian_students_content') }}</p>
-        <p class="text-muted mb-4">{{ __('university/toulouse.iranian_students_visa') }}</p>
-
-        <h3 class="h4 fw-bold mb-3">{{ __('university/toulouse.career_title') }}</h3>
-        <p class="text-muted mb-2">{{ __('university/toulouse.career_content') }}</p>
-        <p class="text-muted mb-4">{{ __('university/toulouse.career_research') }}</p>
-
-        <h3 class="h4 fw-bold mb-3">{{ __('university/toulouse.environment_title') }}</h3>
-        <p class="text-muted mb-4">{{ __('university/toulouse.environment_content') }}</p>
-
-        <div class="row g-4 mb-5">
-            <div class="col-md-6">
-                <div class="p-4 rounded-4 bg-primary-subtle border-0 h-100">
-                    <h5 class="fw-bold text-primary-emphasis mb-3">{{ __('university/toulouse.achievements_title') }}</h5>
-                    <p class="small text-muted mb-0">{{ __('university/toulouse.achievements_content') }}</p>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="p-4 rounded-4 bg-light border-0 h-100">
-                    <h5 class="fw-bold mb-3">{{ __('university/toulouse.alumni_title') }}</h5>
-                    <ul class="list-unstyled mb-0">
-                        @foreach(__('university/toulouse.alumni') as $alumnus)
-                            <li class="mb-1 d-flex align-items-center small">
-                                <i class="bx bx-user-circle text-primary me-2"></i>
-                                <span>{{ $alumnus }}</span>
-                            </li>
-                        @endforeach
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <h3 class="h4 fw-bold mb-3">{{ __('university/toulouse.conclusion_title') }}</h3>
-        <p class="text-muted mb-5">{{ __('university/toulouse.conclusion_content') }}</p>
+    <section class="mb-5">
+        <h3 class="h4 fw-bold mb-3">{{ __('university/toulouse.research_title') }}</h3>
+        <p class="text-muted">{{ __('university/toulouse.research_content') }}</p>
     </section>
 
-    <div class="car-service-list-wrap p-4 rounded-5 bg-light border-0">
+    <section class="mb-5">
+        <h3 class="h4 fw-bold mb-3">{{ __('university/toulouse.admission_title') }}</h3>
+        <p class="text-muted">{{ __('university/toulouse.admission_content') }}</p>
+    </section>
+
+    <section class="mb-5">
+        <h3 class="h4 fw-bold mb-3">{{ __('university/toulouse.career_title') }}</h3>
+        <p class="text-muted">{{ __('university/toulouse.career_content') }}</p>
+    </section>
+
+    <section class="mb-5">
+        <h3 class="h4 fw-bold mb-3">{{ __('university/toulouse.environment_title') }}</h3>
+        <p class="text-muted mb-3">{{ __('university/toulouse.environment_content') }}</p>
+        <div class="row g-3">
+            @foreach(__('university/toulouse.campuses') as $campus)
+                <div class="col-md-6">
+                    <div class="p-3 rounded-4 bg-light border-0 h-100 d-flex align-items-center">
+                        <i class="bx bx-map-pin text-primary me-2 fs-5"></i>
+                        <span class="small fw-medium">{{ $campus }}</span>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    </section>
+
+    <section class="mb-5">
+        <h3 class="h4 fw-bold mb-3">{{ __('university/toulouse.conclusion_title') }}</h3>
+        <p class="text-muted">{{ __('university/toulouse.conclusion_content') }}</p>
+    </section>
+
+    <div class="car-service-list-wrap p-4 rounded-5 bg-primary-subtle border-0 mb-5">
         <div class="row align-items-center">
             <div class="col-lg-4 text-center mb-4 mb-lg-0">
                 <img src="{{asset("assets/img/universities/Toulouse/toulouse_logo.webp")}}"
-                    alt="{{ __('university/toulouse.main_heading') }}" style="max-width: 150px;" class="img-fluid">
+                    alt="{{ __('university/toulouse.page_title') }}" style="max-width: 150px;" class="img-fluid">
             </div>
             <div class="col-lg-8">
                 <div class="row g-2">
                     @foreach(__('university/toulouse.features') as $feature)
                         <div class="col-md-6">
-                            <div class="d-flex align-items-start small text-muted">
-                                <i class='bx bx-check-circle text-primary me-2 mt-1'></i>
+                            <div class="d-flex align-items-start small text-primary-emphasis">
+                                <i class='bx bx-check-double me-2 mt-1'></i>
                                 <span>{{ $feature }}</span>
                             </div>
                         </div>
@@ -173,14 +144,16 @@
             </div>
         </div>
     </div>
+    <x-sections.faq :title="__('university/toulouse.faq_title')" :subtitle="__('university/toulouse.faq_subtitle')"
+        :items="__('university/toulouse.faq_items')" id="toulouse-faq" />
 @endsection
 
 @push("json")
     @php
         $currentLocale = app()->getLocale();
-        $pageUrl = url($currentLocale.'/universities/toulouse');
-        $universityId = $pageUrl.'#university';
-        $officialUrl = 'https://www.ut-capitole.fr/';
+        $pageUrl = url($currentLocale . '/universities/toulouse');
+        $universityId = $pageUrl . '#university';
+        $officialUrl = 'https://www.univ-toulouse.fr/';
 
         $webPage = new \App\Services\StructuredData\WebPageSchema(
             $pageUrl,
@@ -193,9 +166,9 @@
 
         $university = new \App\Services\StructuredData\UniversitySchema(
             $universityId,
-            __('universities.toulouse_name'),
+            __('university/toulouse.breadcrumb_current'),
             $officialUrl,
-            __('university/toulouse.introduction_content'),
+            __('university/toulouse.schema_description'),
             asset('assets/img/universities/Toulouse/toulouse_logo.webp'),
             [
                 $officialUrl,
@@ -204,8 +177,8 @@
         );
 
         $breadcrumb = \App\Services\StructuredData\BreadcrumbSchema::fromArray([
-            ['name' => __('layout.home') ?? 'Home', 'url' => url($currentLocale.'/')],
-            ['name' => __('universities.breadcrumb_universities'), 'url' => url($currentLocale.'/universities')],
+            ['name' => __('layout.home') ?? 'Home', 'url' => url($currentLocale . '/')],
+            ['name' => __('universities.breadcrumb_universities') ?? 'Universities', 'url' => url($currentLocale . '/universities')],
             ['name' => __('university/toulouse.breadcrumb_current'), 'url' => $pageUrl],
         ]);
     @endphp
