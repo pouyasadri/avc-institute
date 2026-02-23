@@ -2,89 +2,119 @@
 
 return [
     // SEO Meta
-    'title' => 'Université Paris 4 Sorbonne France | Guide Complet de l\'Université Paris 4 Sorbonne',
-    'keywords' => 'Université Paris 4,Université Sorbonne,meilleures universités de France,universités françaises,universités de Paris,étudier en France,étudier à l\'Université Paris 4,meilleures universités françaises,classement Université Paris 4,programmes Université Paris 4,installations Université Paris 4',
-    'description' => 'À la recherche d\'une université prestigieuse avec un héritage historique et une approche pionnière de l\'enseignement supérieur ? L\'Université Paris 4 - Sorbonne, avec une histoire longue et brillante, vous offre une combinaison unique de tradition et d\'innovation. Avec plus de 20 000 étudiants, elle offre un environnement dynamique et international pour l\'apprentissage, la recherche et le développement des talents dans divers domaines des sciences humaines et du droit.',
+    'title' => 'Votre Guide pour l\'Université Paris 4 - Sorbonne | Programmes 2026',
+    'keywords' => 'Université Paris 4 Sorbonne, Université Sorbonne, étudier en France 2026, sciences humaines Paris, étudier la littérature en France, universités françaises 2026, étudier à Paris',
+    'description' => 'Prêt à étudier dans une institution historique de l\'enseignement supérieur ? Découvrez l\'Université Paris 4 - Sorbonne. Avec son riche patrimoine et ses programmes innovants, elle offre un environnement accueillant pour vos études de 2026 en sciences humaines, langues et arts.',
 
     // Page Title Area
-    'main_heading' => 'Université Paris 4 Sorbonne',
+    'main_heading' => 'Bienvenue à l\'Université Paris 4 - Sorbonne',
     'breadcrumb_home' => 'Accueil',
-    'breadcrumb_universities' => 'Meilleures Universités Françaises',
-    'breadcrumb_current' => 'Université Paris 4 Sorbonne',
+    'breadcrumb_universities' => 'Nos Universités Partenaires',
+    'breadcrumb_current' => 'Université Paris 4 - Sorbonne',
 
     // Sidebar
-    'table_of_contents' => 'Table des Matières',
-    'contact_us' => 'Nous Contacter',
-    'consultation_request' => 'Demande de Consultation pour Migration Éducative vers la France',
-    'useful_links' => 'Liens Utiles',
-    'official_website' => 'Site Officiel de l\'Université Paris 4 Sorbonne',
-    'wikipedia_link' => 'Université Paris 4 Sorbonne sur Wikipédia',
-    'paris_city_guide' => 'Guide de la Ville de Paris',
+    'table_of_contents' => 'Ce que vous trouverez',
+    'contact_us' => 'Discutez avec notre Équipe',
+    'consultation_request' => 'Planifions ensemble votre projet 2026',
+    'useful_links' => 'Ressources Pratiques',
+    'official_website' => 'Explorer le Site Officiel',
+    'wikipedia_link' => 'Découvrir notre Histoire',
+    'paris_city_guide' => 'Vivre à Paris : Guide Étudiant',
 
     // Main Content
-    'page_title' => 'Université Paris 4 Sorbonne : Un Parcours Brillant pour Étudier en France',
-    'foundation_title' => 'Fondation',
-    'foundation_content' => 'L\'Université Paris IV Sorbonne (Université Paris IV-Sorbonne) est l\'une des universités prestigieuses de France, établie en 1970 par la fusion de plusieurs universités de la région Île-de-France. Avec plus de 40 000 étudiants à différents niveaux académiques, elle est reconnue comme l\'une des plus grandes universités de France.
+    'page_title' => 'Université Paris 4 - Sorbonne : Héritage et Innovation Réunis',
 
-L\'Université Paris IV Sorbonne occupe une position spéciale parmi les universités de renommée mondiale en raison de sa haute qualité d\'enseignement, de sa longue histoire et de sa réputation mondiale. Cette université a une position proéminente dans divers domaines des sciences humaines et sociales.',
+    'intro_content' => 'Si vous rêvez d\'étudier la littérature, les langues ou les sciences humaines dans un lieu où l\'histoire rencontre l\'excellence académique moderne, l\'Université Paris 4 - Sorbonne (Université Paris-Sorbonne) est la maison idéale pour vous. Plongeant ses racines dans l\'historique Sorbonne, elle offre un environnement dynamique et multiculturel à plus de 40 000 étudiants au cœur de Paris.',
 
-    'location_title' => 'Emplacement de l\'Université Paris 4 - Sorbonne',
-    'location_content' => 'L\'Université Sorbonne Paris - Paris 4 est située au cœur du Quartier Latin de Paris. De plus, l\'université a des antennes dans 12 emplacements différents à Paris et dispose de six bibliothèques dans toute la ville. La Bibliothèque de la Sorbonne (ancienne bibliothèque de l\'Université de Paris) possède plus de 2,5 millions de livres et est partagée par plusieurs universités.',
+    'global_leader_title' => 'Une Tradition Académique de Renommée Mondiale',
+    'global_leader_content' => 'En choisissant la Sorbonne, vous rejoignez l\'une des institutions académiques les plus respectées au monde. Alors que nous nous tournons vers 2026, l\'université reste extrêmement bien classée :
+- **Classement mondial QS** : Constamment classée parmi les 230 meilleures universités mondiales.
+- **Times Higher Education** : Chef de file dans le domaine des arts et des sciences humaines à l\'échelle mondiale.
 
-    'ranking_title' => 'Classement Mondial de l\'Université Paris IV Sorbonne',
-    'ranking_content' => 'L\'Université Paris IV Sorbonne a constamment maintenu une forte présence dans les classements universitaires mondiaux. Dans le classement QS 2022, l\'université était classée 229e parmi les meilleures universités du monde, et dans le classement Times Higher Education 2023, elle était positionnée 170e parmi les meilleures universités du monde.',
+Ces réalisations reflètent un engagement envers un enseignement exceptionnel et une recherche approfondie et percutante.',
 
-    'facilities_title' => 'Installations Éducatives et de Recherche à l\'Université Paris IV Sorbonne',
-    'facilities_content' => 'L\'Université Paris IV Sorbonne offre une large gamme de programmes académiques aux niveaux licence, master et doctorat. L\'université dispose également de plusieurs facultés et écoles spécialisées qui offrent un enseignement supérieur dans des domaines spécifiques tels que la linguistique, la littérature, l\'histoire, la philosophie et les sciences politiques.
+    'programs_title' => 'Vivez Votre Passion pour les Sciences Humaines',
+    'programs_content' => 'Quel que soit le domaine des sciences humaines ou des arts qui vous passionne, vous trouverez ici des programmes de premier plan. De la licence à la recherche doctorale, Paris 4 se spécialise dans :',
+    'subjects' => [
+        'Lettres et Études Classiques (Découvrez les plus grands écrits)',
+        'Linguistique et Langues Étrangères (Connectez-vous avec le monde)',
+        'Histoire et Géographie (Comprenez notre passé et notre planète)',
+        'Philosophie et Sociologie (Façonnez de nouvelles façons de penser)',
+        'Musicologie et Histoire de l\'Art (Maîtrisez les beaux-arts)',
+    ],
 
-En plus d\'une éducation de qualité, l\'Université Paris IV Sorbonne se concentre fortement sur la recherche scientifique. L\'université dispose de plusieurs laboratoires de recherche avancés opérant dans divers domaines des sciences humaines et sociales.',
+    'research_title' => 'Participez à la Recherche de Pointe',
+    'research_content' => 'À Paris 4 - Sorbonne, la recherche est un voyage passionnant dans la culture humaine, l\'histoire et la société. Vous apprendrez aux côtés d\'éminents chercheurs dans des centres de recherche de pointe et des bibliothèques emblématiques, dont la magnifique Bibliothèque de la Sorbonne et ses millions de volumes.',
 
-    'iranian_students_title' => 'Conditions d\'Études pour les Étudiants Iraniens',
-    'iranian_students_content' => 'Les étudiants iraniens doivent avoir un certificat de langue française valide pour étudier à l\'Université Paris IV Sorbonne. De plus, les candidats doivent traduire et authentifier leurs documents académiques lors de la demande d\'admission à cette université.
+    'admission_title' => 'Nous Rejoindre : Votre Feuille de Route 2026',
+    'admission_content' => 'S\'installer à Paris est une grande étape, mais nous sommes là pour vous aider à vous préparer. Pour l\'année universitaire 2026, vous aurez besoin de solides relevés de notes et d\'une attestation de langue française de bon niveau (généralement C1), car la plupart des programmes sont dispensés en français. Commencez tôt, suivez nos conseils et nous vous accompagnerons dans vos démarches de candidature et de visa.',
 
-Les candidats iraniens doivent également obtenir un visa étudiant pour étudier en France. Pour demander un visa étudiant, les candidats doivent fournir divers documents, tels qu\'une lettre d\'acceptation universitaire, une preuve de capacité financière et une assurance maladie.',
+    'career_title' => 'Construisez Votre Carrière Internationale',
+    'career_content' => 'Un diplôme de la Sorbonne a du poids dans le monde entier. Nous préparons nos diplômés à réussir dans l\'édition, l\'éducation, les relations internationales, le journalisme et la gestion culturelle. Les liens étroits de l\'université avec les employeurs et les centres d\'entrepreneuriat actifs vous garantissent le soutien dont vous avez besoin pour lancer votre carrière.',
 
-    'tuition_fees_title' => 'Frais de Scolarité à l\'Université Paris 4',
-    'tuition_fees_content' => 'Dans les universités publiques françaises, il n\'y a pas de frais de scolarité, mais vous devez payer les frais d\'inscription. Cela signifie en fait que le gouvernement couvre de nombreux coûts des programmes éducatifs des universités publiques. Peu importe que l\'étudiant soit local ou d\'un autre pays. En fait, le coût réel de l\'éducation est d\'environ 10 000 € par an, mais le gouvernement couvre une partie importante de ce montant. Pour les programmes de licence et de master, des frais de scolarité de 2 770 € et 3 770 € respectivement doivent être payés.',
+    'environment_title' => 'Une Vie Étudiante Vibrante à Paris',
+    'environment_content' => 'Imaginez étudier dans le Quartier Latin et y rencontrer des étudiants de plus de 100 pays ! La Sorbonne offre un environnement culturel et multiculturel incroyablement riche. Sur nos campus et en dehors, vous profiterez :',
+    'facilities' => [
+        'Des Salles d\'Étude Historiques et Magnifiques',
+        'De Riches Centres Culturels et Théâtres',
+        'Des Cafés et Options de Restauration Conviviales (CROUS)',
+        'Des Bureaux d\'Accueil Dédiés aux Étudiants Internationaux',
+    ],
 
-    'language_of_instruction_title' => 'Langue d\'Enseignement à l\'Université Paris 4',
-    'language_of_instruction_content' => 'La plupart des programmes à l\'Université Sorbonne Paris - Paris 4 sont enseignés en français. Si vous avez l\'intention de participer à des cours complets ou des classes régulières, vous devez avoir un niveau approprié de français. Cependant, l\'université propose également des cours en anglais pour les étudiants étrangers qui n\'ont pas une maîtrise suffisante du français.',
-
-    'career_opportunities_title' => 'Opportunités de Carrière Après l\'Obtention du Diplôme',
-    'career_opportunities_content' => 'Les diplômés de l\'Université Paris IV Sorbonne bénéficient d\'excellentes opportunités de carrière. L\'université entretient de solides relations avec les employeurs du monde entier et aide ses diplômés à trouver un emploi.
-
-L\'Université Paris IV Sorbonne aide également ses diplômés dans les domaines de recherche. L\'université dispose de plusieurs centres d\'entrepreneuriat qui aident les diplômés à créer leur propre entreprise.',
-
-    'multicultural_environment_title' => 'Environnement Multiculturel et Installations de Bien-être',
-    'multicultural_environment_content' => 'L\'Université Paris IV Sorbonne est un environnement multiculturel avec des étudiants de plus de 100 pays. L\'université dispose également de nombreuses installations de bien-être pour les étudiants internationaux, telles que des salles d\'étude, des cafétérias, des centres culturels et des bibliothèques bien équipées.',
-
-    'conclusion_title' => 'Conclusion',
-    'conclusion_content' => 'L\'Université Paris IV Sorbonne est une excellente université pour les étudiants internationaux qui souhaitent étudier en France. Cette université offre un enseignement de haute qualité, d\'excellentes installations de bien-être, de nombreuses opportunités de carrière pour les diplômés et un environnement multiculturel. Si vous êtes un étudiant iranien cherchant à étudier en France, l\'Université Paris IV Sorbonne serait un excellent choix pour vous.',
+    'conclusion_title' => 'Votre Aventure Commence Ici',
+    'conclusion_content' => 'Choisir l\'Université Paris 4 - Sorbonne, c\'est choisir une formation à la fois profondément ancrée dans l\'histoire et pleinement engagée dans le monde moderne. Laissez-nous vous aider à transformer en réalité votre rêve d\'étudier en France en 2026 !',
 
     // Features List
     'features' => [
-        'Histoire Prestigieuse',
-        'Spécialisations Diverses',
-        'Environnement Éducatif International',
-        'Installations et Équipements Modernes',
-        'Recherche Exceptionnelle',
+        'Un Prestige Historique Inégalé',
+        'L\'Excellence en Sciences Humaines et Arts',
+        'Une Communauté Internationale Chaleureuse',
+        'Située en plein Cœur de Paris',
+        'Des Bibliothèques et Ressources Exceptionnelles',
     ],
 
     // Contact Form
-    'ask_question' => 'Poser une Question',
-    'name_placeholder' => 'Votre Nom',
-    'email_placeholder' => 'Votre Email',
-    'phone_placeholder' => 'Votre Téléphone',
-    'subject_placeholder' => 'Sujet',
-    'message_placeholder' => 'Votre Message',
-    'send_message' => 'Envoyer le Message',
-    'name_error' => 'Veuillez entrer votre nom',
-    'email_error' => 'Veuillez entrer votre email',
-    'phone_error' => 'Veuillez entrer votre numéro de téléphone',
-    'subject_error' => 'Veuillez entrer un sujet',
-    'message_error' => 'Veuillez entrer votre message',
+    'ask_question' => 'Des Questions ? Discutons-en !',
+    'name_placeholder' => 'Quel est votre nom ?',
+    'email_placeholder' => 'Votre meilleure adresse email',
+    'phone_placeholder' => 'Le meilleur moyen de vous joindre',
+    'subject_placeholder' => 'Comment pouvons-nous vous aider ?',
+    'message_placeholder' => 'Parlez-nous de vos rêves ou de vos questions...',
+    'send_message' => 'Envoyer Mon Message',
+    'name_error' => 'S\'il vous plaît, indiquez-nous votre nom !',
+    'email_error' => 'Nous aurons besoin d\'une adresse email valide pour vous répondre.',
+    'phone_error' => 'Veuillez laisser un numéro où nous pouvons vous appeler.',
+    'subject_error' => 'Indiquez-nous le sujet afin de trouver le bon expert.',
+    'message_error' => 'N\'oubliez pas de rédiger votre message !',
 
     // JSON-LD Schema
-    'schema_headline' => 'Université Paris IV Sorbonne : Un Parcours Brillant pour Étudier en France',
-    'schema_author' => 'Éducation, Vie, Investissement : Vos Rêves en France avec A.V.C',
+    'schema_headline' => 'Université Paris 4 - Sorbonne : Votre Parcours 2026 Commence Ici',
+    'schema_description' => 'Un guide centré sur l\'étudiant pour l\'Université Paris 4 - Sorbonne, un leader mondial des sciences humaines. Explorez nos programmes et commencez votre candidature pour 2026 dès aujourd\'hui.',
+    'schema_author' => 'A.V.C - Votre Guide Personnel pour la Vie en France',
+
+    // FAQ Section
+    'faq_title' => 'Vos Questions, Nos Réponses',
+    'faq_subtitle' => 'Conseils Pratiques pour les Futurs Étudiants',
+    'faq_items' => [
+        [
+            'question' => 'Est-ce la "vraie" Sorbonne ?',
+            'answer' => 'Oui ! Paris 4 (Université Paris-Sorbonne) représente le cœur historique des facultés des arts et des sciences humaines de l\'ancienne Université de Paris.',
+        ],
+        [
+            'question' => 'Dois-je parler couramment français ?',
+            'answer' => 'Oui, car une grande majorité des cours en sciences humaines et en littérature sont dispensés en français, un niveau élevé de maîtrise (souvent C1) est généralement exigé.',
+        ],
+        [
+            'question' => 'Quand dois-je postuler pour 2026 ?',
+            'answer' => 'Nous vous recommandons de commencer votre dossier Études en France vers la fin de 2025 pour vous donner amplement le temps pour les tests de langue et les démarches de visa.',
+        ],
+        [
+            'question' => 'À combien s\'élèvent les frais de scolarité ?',
+            'answer' => 'En tant qu\'université publique, les frais de scolarité sont fortement subventionnés par le gouvernement français. Vous ne paierez que les frais d\'inscription nationaux (environ 2 770 € pour une Licence et 3 770 € pour un Master pour les étudiants hors UE).',
+        ],
+        [
+            'question' => 'Où se trouvent exactement les campus ?',
+            'answer' => 'Le campus historique principal est situé dans le Quartier Latin (5e arrondissement), mais nous avons également plusieurs autres sites dédiés à travers Paris, chacun à proximité de bibliothèques et de cafés.',
+        ],
+    ],
 ];

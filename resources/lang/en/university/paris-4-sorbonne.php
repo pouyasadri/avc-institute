@@ -2,89 +2,119 @@
 
 return [
     // SEO Meta
-    'title' => 'Paris 4 Sorbonne University France | Complete Guide to Paris 4 Sorbonne',
-    'keywords' => 'Paris 4 University,Sorbonne University,top universities in France,French universities,Paris universities,study in France,study at Paris 4 University,best French universities,Paris 4 University ranking,Paris 4 University programs,Paris 4 University facilities',
-    'description' => 'Looking for a prestigious university with historical heritage and a pioneering approach to higher education? Paris 4 - Sorbonne University, with a long and brilliant history, offers you a unique combination of tradition and innovation. With over 20,000 students, it provides a dynamic and international environment for learning, research and talent development in various fields of humanities and law.',
+    'title' => 'Your Guide to Paris 4 - Sorbonne University | 2026 Academic Programs',
+    'keywords' => 'Paris 4 Sorbonne University, Sorbonne University, study in France 2026, Humanities Paris, study literature in France, French universities 2026, study in Paris',
+    'description' => 'Ready to study at a historical icon of higher education? Discover Paris 4 - Sorbonne University. With a rich heritage and innovative programs, it offers a welcoming environment for your 2026 studies in humanities, language, and arts.',
 
     // Page Title Area
-    'main_heading' => 'Paris 4 Sorbonne University',
+    'main_heading' => 'Welcome to Paris 4 - Sorbonne University',
     'breadcrumb_home' => 'Home',
-    'breadcrumb_universities' => 'Top French Universities',
-    'breadcrumb_current' => 'Paris 4 Sorbonne University',
+    'breadcrumb_universities' => 'Our Partner Universities',
+    'breadcrumb_current' => 'Paris 4 - Sorbonne University',
 
     // Sidebar
-    'table_of_contents' => 'Table of Contents',
-    'contact_us' => 'Contact Us',
-    'consultation_request' => 'Request Educational Migration Consultation to France',
-    'useful_links' => 'Useful Links',
-    'official_website' => 'Official Website of Paris 4 Sorbonne University',
-    'wikipedia_link' => 'Paris 4 Sorbonne University on Wikipedia',
-    'paris_city_guide' => 'Paris City Guide',
+    'table_of_contents' => 'What\'s Inside',
+    'contact_us' => 'Chat with our Team',
+    'consultation_request' => 'Let\'s Plan Your 2026 Journey Together',
+    'useful_links' => 'Helpful Resources',
+    'official_website' => 'Explore the Official Site',
+    'wikipedia_link' => 'Learn About Our History',
+    'paris_city_guide' => 'Living in Paris: Student Edition',
 
     // Main Content
-    'page_title' => 'Paris 4 Sorbonne University: A Brilliant Path to Study in France',
-    'foundation_title' => 'Foundation',
-    'foundation_content' => 'Paris IV Sorbonne University (Université Paris IV-Sorbonne) is one of France\'s prestigious universities, established in 1970 from the merger of several universities in the Île-de-France region. With over 40,000 students across various academic levels, it is recognized as one of France\'s largest universities.
+    'page_title' => 'Paris 4 - Sorbonne University: Heritage and Innovation Combined',
 
-Paris IV Sorbonne University holds a special position among world-renowned universities due to its high-quality education, long history, and global reputation. This university has a prominent position in various fields of humanities and social sciences.',
+    'intro_content' => 'If you dream of studying literature, languages, or humanities in a place where history meets modern academic excellence, Paris 4 - Sorbonne University (Université Paris-Sorbonne) is the perfect home for you. With its roots in the historic Sorbonne, it offers a dynamic, multicultural environment for over 40,000 students in the heart of Paris.',
 
-    'location_title' => 'Location of Paris 4 - Sorbonne University',
-    'location_content' => 'Sorbonne University Paris - Paris 4 is located in the heart of the Latin Quarter of Paris. Additionally, the university has branches in 12 different locations in Paris and has six libraries throughout the city. The Sorbonne Library (former University of Paris library) has over 2.5 million books and is shared by several universities.',
+    'global_leader_title' => 'A World-Renowned Academic Tradition',
+    'global_leader_content' => 'By choosing Sorbonne, you’re joining one of the most respected academic institutions in the world. As we look ahead to 2026, the university remains extremely highly regarded:
+- **QS World Rankings**: Consistently ranked among the top 230 universities globally.
+- **Times Higher Education**: Leading the way in Arts and Humanities worldwide.
 
-    'ranking_title' => 'Global Ranking of Paris IV Sorbonne University',
-    'ranking_content' => 'Paris IV Sorbonne University has consistently maintained a strong presence in global university rankings. In the 2022 QS rankings, the university was ranked 229th among the world\'s top universities, and in the Times Higher Education 2023 rankings, it was positioned 170th among the world\'s top universities.',
+These achievements reflect a commitment to outstanding teaching and deep, impactful research.',
 
-    'facilities_title' => 'Educational and Research Facilities at Paris IV Sorbonne University',
-    'facilities_content' => 'Paris IV Sorbonne University offers a wide range of academic programs at undergraduate, graduate, and doctoral levels. The university also has several faculties and specialized schools that provide higher education in specific fields such as linguistics, literature, history, philosophy, and political science.
+    'programs_title' => 'Find Your Passion in Humanities',
+    'programs_content' => 'Whatever area of humanities or arts you are passionate about, you will find top-tier programs here. From bachelor’s to doctoral research, Paris 4 specializes in:',
+    'subjects' => [
+        'Literature & Classical Studies (Uncover the greatest writings)',
+        'Linguistics & Foreign Languages (Connect with the world)',
+        'History & Geography (Understand our past and our planet)',
+        'Philosophy & Sociology (Shape new ways of thinking)',
+        'Musicology & Art History (Master the fine arts)',
+    ],
 
-In addition to quality education, Paris IV Sorbonne University strongly focuses on scientific research. The university has several advanced research laboratories operating in various fields of humanities and social sciences.',
+    'research_title' => 'Engage in Pioneering Research',
+    'research_content' => 'At Paris 4 - Sorbonne, research is an exciting journey into human culture, history, and society. You will learn alongside renowned scholars in advanced research centers and iconic libraries, including the stunning Sorbonne Library with its millions of volumes.',
 
-    'iranian_students_title' => 'Study Conditions for Iranian Students',
-    'iranian_students_content' => 'Iranian students must have a valid French language certificate to study at Paris IV Sorbonne University. Additionally, applicants must translate and authenticate their academic documents when applying for admission to this university.
+    'admission_title' => 'Joining Us: Your 2026 Roadmap',
+    'admission_content' => 'Moving to Paris is a big step, but we’re here to help you get ready. For the 2026 academic year, you will need strong academic transcripts and a solid French language certificate (typically C1), as most programs are taught in French. Start early, follow our guidance, and we\'ll assist you with the application and visa processes.',
 
-Iranian applicants must also obtain a student visa to study in France. To apply for a student visa, applicants must provide various documents, such as a university acceptance letter, proof of financial capability, and health insurance.',
+    'career_title' => 'Building Your Global Career',
+    'career_content' => 'A degree from Sorbonne carries weight worldwide. We equip our graduates for success in publishing, education, international relations, journalism, and cultural management. The university’s strong connections with employers and active entrepreneurship centers ensure you have the support you need to launch your career.',
 
-    'tuition_fees_title' => 'Tuition Fees at Paris 4 University',
-    'tuition_fees_content' => 'In French public universities, there are no tuition fees, but you must pay registration fees. This actually means that the government covers many of the costs of public university educational programs. It doesn\'t matter whether the student is local or from another country. In fact, the actual cost of education is approximately €10,000 per year, but the government covers a significant portion of this amount. For bachelor\'s and master\'s programs, tuition fees of €2,770 and €3,770 respectively must be paid.',
+    'environment_title' => 'A Vibrant Student Life in Paris',
+    'environment_content' => 'Imagine studying in the Latin Quarter and meeting students from over 100 countries! The Sorbonne offers an incredibly rich cultural and multicultural environment. On and off our campuses, you will enjoy:',
+    'facilities' => [
+        'Historic & Magnificent Study Halls',
+        'Rich Cultural Centers and Theaters',
+        'Cozy Cafes and Dining options (CROUS)',
+        'Dedicated International Welcome Desks',
+    ],
 
-    'language_of_instruction_title' => 'Language of Instruction at Paris 4 University',
-    'language_of_instruction_content' => 'Most programs at Sorbonne University Paris - Paris 4 are taught in French. If you intend to participate in full courses or regular classes, you must have an appropriate level of French. However, the university also offers English language courses for foreign students who do not have sufficient proficiency in French.',
-
-    'career_opportunities_title' => 'Career Opportunities After Graduation',
-    'career_opportunities_content' => 'Graduates of Paris IV Sorbonne University enjoy excellent career opportunities. The university has strong relationships with employers worldwide and assists its graduates in finding employment.
-
-Paris IV Sorbonne University also helps its graduates in research fields. The university has several entrepreneurship centers that assist graduates in starting their own businesses.',
-
-    'multicultural_environment_title' => 'Multicultural Environment and Welfare Facilities',
-    'multicultural_environment_content' => 'Paris IV Sorbonne University is a multicultural environment with students from over 100 countries. The university also has many welfare facilities for international students, such as study halls, cafeterias, cultural centers, and well-equipped libraries.',
-
-    'conclusion_title' => 'Conclusion',
-    'conclusion_content' => 'Paris IV Sorbonne University is an excellent university for international students who want to study in France. This university offers high-quality education, excellent welfare facilities, numerous career opportunities for graduates, and a multicultural environment. If you are an Iranian student looking to study in France, Paris IV Sorbonne University would be an excellent choice for you.',
+    'conclusion_title' => 'Your Journey Starts Here',
+    'conclusion_content' => 'Choosing Paris 4 - Sorbonne University means choosing an education that is both deeply rooted in history and fully engaged with the modern world. Let us help you make your 2026 study abroad dreams in France a reality!',
 
     // Features List
     'features' => [
-        'Prestigious History',
-        'Diverse Specializations',
-        'International Educational Environment',
-        'Modern Facilities and Equipment',
-        'Outstanding Research',
+        'Unmatched Historical Prestige',
+        'Excellence in Humanities & Arts',
+        'A Friendly International Community',
+        'Located in the Heart of Paris',
+        'Outstanding Libraries and Resources',
     ],
 
     // Contact Form
-    'ask_question' => 'Ask a Question',
-    'name_placeholder' => 'Your Name',
-    'email_placeholder' => 'Your Email',
-    'phone_placeholder' => 'Your Phone',
-    'subject_placeholder' => 'Subject',
-    'message_placeholder' => 'Your Message',
-    'send_message' => 'Send Message',
-    'name_error' => 'Please enter your name',
-    'email_error' => 'Please enter your email',
-    'phone_error' => 'Please enter your phone number',
-    'subject_error' => 'Please enter a subject',
-    'message_error' => 'Please enter your message',
+    'ask_question' => 'Got Questions? Let’s Talk!',
+    'name_placeholder' => 'What’s your name?',
+    'email_placeholder' => 'Your best email address',
+    'phone_placeholder' => 'The best way to reach you',
+    'subject_placeholder' => 'What can we help you with?',
+    'message_placeholder' => 'Tell us about your dreams or questions...',
+    'send_message' => 'Send My Message',
+    'name_error' => 'Please tell us your name!',
+    'email_error' => 'We’ll need a valid email to reply.',
+    'phone_error' => 'Please leave a number for us to call.',
+    'subject_error' => 'Let us know the topic so we can find the right expert.',
+    'message_error' => 'Don’t forget to write your message!',
 
     // JSON-LD Schema
-    'schema_headline' => 'Paris IV Sorbonne University: A Brilliant Path to Study in France',
-    'schema_author' => 'Education, Life, Investment: Your Dreams in France with A.V.C',
+    'schema_headline' => 'Paris 4 - Sorbonne University: Your 2026 Journey Starts Here',
+    'schema_description' => 'A student-centric guide to Paris 4 - Sorbonne University, a world leader in humanities. Explore our programs and start your 2026 application today.',
+    'schema_author' => 'A.V.C - Your Personal Guide to Life in France',
+
+    // FAQ Section
+    'faq_title' => 'Your Questions, Answered',
+    'faq_subtitle' => 'Friendly Advice for Future Students',
+    'faq_items' => [
+        [
+            'question' => 'Is this the "real" Sorbonne?',
+            'answer' => 'Yes! Paris 4 (Université Paris-Sorbonne) represents the historic core of the arts and humanities faculties of the original University of Paris.',
+        ],
+        [
+            'question' => 'Do I need to speak fluent French?',
+            'answer' => 'Yes, because the majority of humanities and literature courses are taught in French, a high level of proficiency (often C1) is typically required.',
+        ],
+        [
+            'question' => 'When should I apply for 2026?',
+            'answer' => 'We recommend starting your Études en France application by late 2025 to give yourself plenty of time for language testing and visa arrangements.',
+        ],
+        [
+            'question' => 'What are the tuition fees like?',
+            'answer' => 'As a public university, tuition is heavily subsidized by the French government. You will only pay the standard national registration fees (around €2,770 for Bachelor\'s and €3,770 for Master\'s for non-EU students).',
+        ],
+        [
+            'question' => 'Where exactly are the campuses?',
+            'answer' => 'The main historic campus is in the Latin Quarter (5th arrondissement), but we also have several other dedicated locations throughout Paris, each near libraries and cafes.',
+        ],
+    ],
 ];
