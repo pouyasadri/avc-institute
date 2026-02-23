@@ -2,113 +2,120 @@
 
 return [
     // SEO Meta
-    'title' => 'Université Panthéon-Sorbonne Paris France | Guide Complet de l\'Université Sorbonne',
-    'keywords' => 'Université Panthéon-Sorbonne,Université Sorbonne,meilleures universités de France,universités françaises,universités de Paris,étudier en France,étudier à l\'Université Panthéon-Sorbonne,meilleures universités françaises,classement Université Panthéon-Sorbonne,programmes Université Panthéon-Sorbonne,installations Université Panthéon-Sorbonne',
-    'description' => 'Vous cherchez à étudier dans l\'une des meilleures universités de France ? L\'Université Panthéon-Sorbonne avec plus de 760 ans d\'histoire se classe parmi les meilleures universités mondiales en sciences, ingénierie, médecine, arts et sciences humaines. Avec plus de 140 000 étudiants, elle offre un environnement dynamique et vibrant pour l\'apprentissage et l\'avancement.',
+    'title' => 'Étudier à l’Université Paris 1 Panthéon-Sorbonne | Admission 2026',
+    'keywords' => 'Université Paris 1 Panthéon-Sorbonne, Paris 1, étudier à Paris 2026, sciences sociales France, faculté de droit Paris, économie Sorbonne, vie étudiante Paris, classement université Sorbonne, candidature Paris 1',
+    'description' => 'Vous souhaitez étudier le Droit, l’Économie ou les Sciences Humaines au cœur de Paris ? Découvrez l’Université Paris 1 Panthéon-Sorbonne. Explorez les programmes 2026, la vie de campus et les conditions d’admission.',
 
     // Page Title Area
-    'main_heading' => 'Université Panthéon-Sorbonne Paris',
+    'main_heading' => 'Université Paris 1 Panthéon-Sorbonne',
     'breadcrumb_home' => 'Accueil',
-    'breadcrumb_universities' => 'Meilleures Universités Françaises',
-    'breadcrumb_current' => 'Université Panthéon-Sorbonne Paris',
+    'breadcrumb_universities' => 'Nos Universités Partenaires',
+    'breadcrumb_current' => 'Panthéon-Sorbonne (Paris 1)',
 
     // Sidebar
-    'table_of_contents' => 'Table des Matières',
-    'contact_us' => 'Nous Contacter',
-    'consultation_request' => 'Demande de Consultation pour Migration Éducative vers la France',
-    'useful_links' => 'Liens Utiles',
-    'official_website' => 'Site Officiel de l\'Université Panthéon-Sorbonne',
-    'wikipedia_link' => 'Université Panthéon-Sorbonne sur Wikipédia',
+    'table_of_contents' => 'Sommaire Étendu',
+    'contact_us' => 'Conseils Personnalisés',
+    'consultation_request' => 'Préparez votre parcours à la Sorbonne en 2026',
+    'useful_links' => 'Ressources Utiles',
+    'official_website' => 'Portail Officiel de l’Université',
+    'wikipedia_link' => 'Histoire de la Sorbonne sur Wikipédia',
     'paris_city_guide' => 'Guide de la Ville de Paris',
 
     // Main Content
-    'page_title' => 'Université Panthéon-Sorbonne : Symbole de l\'Excellence Scientifique Française',
-    'history_title' => 'Histoire et Fondation de l\'Université Panthéon-Sorbonne Paris',
-    'history_paragraph_1' => 'L\'Université Panthéon-Sorbonne (Université Panthéon-Sorbonne) est l\'une des universités prestigieuses et leaders de France, établie en 1971 par la fusion de plusieurs universités de la région Île-de-France. Avec plus de 50 000 étudiants à différents niveaux académiques, elle est reconnue comme l\'une des plus grandes universités de France.',
-    'history_paragraph_2' => 'L\'Université Panthéon-Sorbonne occupe une position spéciale parmi les universités de renommée mondiale en raison de sa haute qualité d\'enseignement, de sa recherche pionnière et de sa longue histoire. Cette université a une position proéminente dans divers domaines des sciences humaines et sociales.',
+    'page_title' => 'Panthéon-Sorbonne : Un Phare d’Excellence au Cœur de Paris',
 
-    'ranking_title' => 'Classement Mondial de l\'Université Panthéon-Sorbonne',
-    'ranking_content' => 'L\'Université Panthéon-Sorbonne a constamment maintenu une forte présence dans les classements universitaires mondiaux. Dans le classement QS 2022, l\'université était classée 109e parmi les meilleures universités du monde, et dans le classement Times Higher Education 2023, elle était positionnée 101e parmi les meilleures universités du monde.',
+    'intro_content' => 'L’Université Paris 1 Panthéon-Sorbonne est l’une des institutions les plus prestigieuses au monde pour les Sciences Humaines et Sociales, le Droit et l’Économie. Héritière de l’illustre Sorbonne et tournée vers la modernité, elle forme les esprits critiques de demain. En 2026, Paris 1 continue d’attirer les meilleurs talents sur ses campus historiques du Quartier Latin.',
 
-    'facilities_title' => 'Installations Éducatives et de Recherche à l\'Université Panthéon-Sorbonne',
-    'facilities_paragraph_1' => 'L\'Université Panthéon-Sorbonne offre une large gamme de programmes académiques aux niveaux licence, master et doctorat. L\'université dispose également de plusieurs facultés et écoles spécialisées qui offrent un enseignement supérieur dans des domaines spécifiques tels que le droit, les sciences politiques, la philosophie, les langues, la littérature, l\'histoire, la géographie-aménagement, et l\'information et communication.',
-    'facilities_paragraph_2' => 'En plus d\'une éducation de qualité, l\'Université Panthéon-Sorbonne se concentre fortement sur la recherche scientifique. L\'université dispose de plusieurs laboratoires de recherche avancés opérant dans divers domaines des sciences humaines et sociales.',
+    'global_leader_title' => 'Entre Héritage et Innovation',
+    'global_leader_content' => 'Paris 1 est mondialement reconnue pour l’impact de sa recherche et son engagement envers l’excellence académique. Voici pourquoi choisir Panthéon-Sorbonne en 2026 :
+- **Prestige Académique** : Classée parmi les meilleures universités mondiales en Philosophie, Archéologie et Droit.
+- **Emplacement Historique** : Située dans le Quartier Latin, à deux pas du Panthéon et du Jardin du Luxembourg.
+- **Réseau Mondial** : Des partenariats internationaux offrant des opportunités uniques de mobilité et de carrière.
 
-    'iranian_students_title' => 'Conditions d\'Études pour les Étudiants Iraniens à l\'Université Panthéon-Sorbonne Paris',
-    'iranian_students_paragraph_1' => 'Les étudiants iraniens doivent avoir un certificat de langue française valide pour étudier à l\'Université Panthéon-Sorbonne. De plus, les candidats doivent traduire et authentifier leurs documents académiques lors de la demande d\'admission à cette université.',
-    'iranian_students_paragraph_2' => 'Les candidats iraniens doivent également obtenir un visa étudiant pour étudier en France. Pour demander un visa étudiant, les candidats doivent fournir divers documents, tels qu\'une lettre d\'acceptation universitaire, une preuve de capacité financière et une assurance maladie.',
+À Paris 1, vos études s’inscrivent dans plus de 800 ans d’histoire intellectuelle.',
 
-    'multicultural_environment_title' => 'Environnement Multiculturel et Installations de Bien-être à l\'Université Panthéon-Sorbonne Paris',
-    'multicultural_environment_content' => 'L\'Université Panthéon-Sorbonne est un environnement multiculturel avec des étudiants de plus de 100 pays. L\'université dispose également de nombreuses installations de bien-être pour les étudiants internationaux, telles que des salles d\'étude, des cafétérias, des centres culturels et des bibliothèques bien équipées.',
-
-    'tuition_fees_title' => 'Frais de Scolarité à l\'Université Sorbonne Paris',
-    'tuition_fees_content' => 'Dans les universités publiques françaises, les frais de scolarité ne sont généralement pas facturés, mais des frais d\'inscription peuvent s\'appliquer. Le gouvernement couvre de nombreux coûts éducatifs, et typiquement le coût réel de l\'éducation s\'élève à environ 10 000 € par an, dont une partie importante est subventionnée par le gouvernement.',
-
-    'language_of_instruction_title' => 'Langue d\'Enseignement à l\'Université Sorbonne Paris',
-    'language_of_instruction_content' => 'L\'Université Panthéon-Sorbonne Paris utilise principalement le français dans les programmes de licence. Cependant, certains programmes de master qui sont entièrement dispensés en anglais sont de haute qualité.',
-
-    'university_achievements_title' => 'Réalisations de l\'Université Sorbonne Paris',
-    'university_achievements_content' => 'En 2021, l\'Université Sorbonne Paris a atteint des classements de premier plan dans divers domaines. Par exemple :',
-    'achievements_list' => [
-        'Archéologie : 25e mondiale (1re en France)',
-        'Philosophie : 27e mondiale (2e en France)',
-        'Histoire : 33e mondiale (1re en France)',
-        'Géographie : 35e mondiale (1re en France)',
-        'Langues Modernes : 67e mondiale (3e en France)',
-        'Art et Design : 101-150 mondiale (4e en France)',
-        'Architecture et Environnement Bâti : 151-200 mondiale (1re en France)',
-        'Études du Développement : 37e mondiale (1re en France)',
-        'Politique et Études Internationales : 51-100 mondiale (2e en France)',
-        'Anthropologie : 51-100 mondiale (1re en France)',
-        'Politique Sociale et Administration : 101-120 mondiale (2e en France)',
-        'Comptabilité et Finance : 101-150 mondiale (5e en France)',
-        'Études Commerciales et de Gestion : 101-150 mondiale (7e en France)',
+    'programs_title' => 'Des Formations de Rang Mondial en Sciences Sociales',
+    'programs_content' => 'Nos départements proposent des formations spécialisées pour les décideurs de demain. Explorez nos piliers d’excellence :',
+    'subjects' => [
+        'Droit et Science Politique',
+        'Économie et Gestion',
+        'Sciences Humaines (Histoire, Philosophie, Archéologie)',
+        'Sciences Sociales (Géographie, Sociologie, Cinéma)',
+        'Arts Plastiques et Histoire de l’Art',
     ],
 
-    'career_opportunities_title' => 'Opportunités de Carrière Après l\'Obtention du Diplôme de l\'Université Panthéon-Sorbonne Paris',
-    'career_opportunities_paragraph_1' => 'Les diplômés de l\'Université Panthéon-Sorbonne bénéficient d\'excellentes opportunités de carrière. L\'université entretient de solides relations avec les employeurs du monde entier et aide ses diplômés à trouver un emploi.',
-    'career_opportunities_paragraph_2' => 'L\'Université Panthéon-Sorbonne aide également ses diplômés dans les domaines de recherche. L\'université dispose de plusieurs centres d\'entrepreneuriat qui aident les diplômés à créer leur propre entreprise.',
+    'research_title' => 'Une Recherche au Cœur des Enjeux de Société',
+    'research_content' => 'La recherche à Paris 1 est profondément ancrée dans les réalités sociales et politiques. Nos laboratoires collaborent sur des défis mondiaux tels que le développement durable, l’éthique numérique et le droit international. Vous côtoierez des enseignants-chercheurs de renommée mondiale tout au long de votre parcours.',
 
-    'admission_requirements_title' => 'Documents Requis pour l\'Admission à l\'Université Panthéon-Sorbonne Paris',
-    'admission_requirements_content' => 'Pour s\'inscrire à l\'Université Panthéon-Sorbonne, vous avez besoin des documents suivants :',
-    'admission_requirements_list' => [
-        'Candidature en ligne',
-        'Lettre de Motivation (SOP)',
-        'Relevés de notes académiques avec traduction',
-        'Diplôme ou certificat de fin d\'études secondaires avec traduction',
-        'Lettre de Recommandation (LOR)',
-        'Curriculum Vitae (CV)',
-        'Certificat de compétence en français',
-        'Certificat de compétence en anglais',
+    'admission_title' => 'Rejoindre Paris 1 en 2026',
+    'admission_content' => 'L’admission à Paris 1 est sélective et repose sur l’excellence académique. Pour 2026, un niveau C1 en français est généralement requis pour les filières Droit et Lettres, et B2 pour de nombreux parcours en Économie. Nous vous conseillons de finaliser votre dossier "Études en France" dès le début du cycle de candidature 2026.',
+
+    'career_title' => 'Lier Tradition et Réussite Professionnelle',
+    'career_content' => 'Les diplômés de Panthéon-Sorbonne sont très recherchés par les cabinets d’avocats internationaux, les institutions publiques, la finance mondiale et les secteurs créatifs. L’université offre un accompagnement carrière solide pour faire le pont entre le Quartier Latin et le marché du travail global.',
+
+    'environment_title' => 'Vivre le Rêve Académique Parisien',
+    'environment_content' => 'Étudier à Paris 1, c’est vivre au cœur battant de la vie intellectuelle française. Les campus sont de véritables joyaux architecturaux :',
+    'campuses' => [
+        'Le Bâtiment Historique de la Sorbonne',
+        'Le Campus de la Place du Panthéon',
+        'Le Centre Tolbiac (Innovation et Modernité)',
+        'Bibliothèques Spécialisées et Espaces Étudiants du Quartier Latin',
     ],
 
-    'conclusion_title' => 'Conclusion',
-    'conclusion_content' => 'L\'Université Panthéon-Sorbonne est une excellente université pour les étudiants internationaux qui souhaitent étudier en France. Cette université offre un enseignement de haute qualité, d\'excellentes installations de bien-être, de nombreuses opportunités de carrière pour les diplômés et un environnement multiculturel. Si vous êtes un étudiant iranien cherchant à étudier en France, l\'Université Panthéon-Sorbonne serait un excellent choix pour vous.',
+    'conclusion_title' => 'Votre Avenir à la Sorbonne commence ici',
+    'conclusion_content' => 'L’Université Panthéon-Sorbonne offre bien plus qu’un diplôme : elle offre une place dans l’Histoire. Laissez-nous vous guider dans votre admission pour 2026 et rejoignez cette communauté académique légendaire.',
 
     // Features List
     'features' => [
-        'Histoire Prestigieuse',
-        'Spécialisations Diverses',
-        'Environnement Éducatif International',
-        'Installations et Équipements Modernes',
-        'Recherche Exceptionnelle',
+        'Centre Mondial pour les Sciences Humaines et Sociales',
+        'Réputation Internationale Inégalée en Droit et Philosophie',
+        'Campus Historiques dans le Cœur de Paris',
+        'Réseau d’Alumni d’Élite à travers le monde',
+        'Accès Direct au Riche Patrimoine Culturel Parisien',
     ],
 
     // Contact Form
-    'ask_question' => 'Poser une Question',
-    'name_placeholder' => 'Votre Nom',
-    'email_placeholder' => 'Votre Email',
-    'phone_placeholder' => 'Votre Téléphone',
-    'subject_placeholder' => 'Sujet',
-    'message_placeholder' => 'Votre Message',
-    'send_message' => 'Envoyer le Message',
-    'name_error' => 'Veuillez entrer votre nom',
-    'email_error' => 'Veuillez entrer votre email',
-    'phone_error' => 'Veuillez entrer votre numéro de téléphone',
-    'subject_error' => 'Veuillez entrer un sujet',
-    'message_error' => 'Veuillez entrer votre message',
+    'ask_question' => 'Des Questions sur Paris 1 ? Nos Experts vous répondent !',
+    'name_placeholder' => 'Quel est votre nom ?',
+    'email_placeholder' => 'Votre adresse email préférée',
+    'phone_placeholder' => 'Numéro de téléphone (avec code pays)',
+    'subject_placeholder' => 'Objet de votre demande',
+    'message_placeholder' => 'Parlez-nous de vos intérêts, des programmes visés ou de vos questions sur l’admission 2026...',
+    'send_message' => 'Envoyer ma Demande',
+    'name_error' => 'Veuillez saisir votre nom.',
+    'email_error' => 'Une adresse email valide est requise.',
+    'phone_error' => 'Veuillez fournir un numéro de téléphone valide.',
+    'subject_error' => 'Merci de choisir un sujet.',
+    'message_error' => 'Votre message ne peut pas être vide.',
 
     // JSON-LD Schema
-    'schema_headline' => 'Université Panthéon-Sorbonne : Symbole de l\'Excellence Scientifique Française',
-    'schema_author' => 'Éducation, Vie, Investissement : Vos Rêves en France avec A.V.C',
+    'schema_headline' => 'Université Paris 1 Panthéon-Sorbonne : Votre Guide 2026',
+    'schema_description' => 'Un guide pour les étudiants internationaux sur l’Université Panthéon-Sorbonne. Explorez les programmes 2026 en Droit, Économie et Sciences Sociales à la Sorbonne.',
+    'schema_author' => 'A.V.C - Votre Partenaire pour vos Études en France',
+
+    // FAQ Section
+    'faq_title' => 'Questions Fréquentes',
+    'faq_subtitle' => 'Réponses pour les Futurs Étudiants de Paris 1',
+    'faq_items' => [
+        [
+            'question' => 'Paris 1 est-elle la "vraie" Sorbonne ?',
+            'answer' => 'Paris 1 est l’un des héritiers principaux de l’ancienne Université de Paris (La Sorbonne) et partage ses locaux historiques. Elle est souvent considérée comme la référence en Droit et Sciences Humaines parmi les universités Sorbonne.',
+        ],
+        [
+            'question' => 'Le cursus de Droit est-il difficile d’accès ?',
+            'answer' => 'Oui, il est extrêmement sélectif. Paris 1 est régulièrement classée numéro 1 en France pour le Droit. Il faut un excellent dossier et un très bon niveau de français (généralement C1).',
+        ],
+        [
+            'question' => 'Où se situent les campus ?',
+            'answer' => 'Ils sont principalement répartis dans le 5ème et le 13ème arrondissements. Les sites les plus célèbres sont au cœur du Quartier Latin, juste à côté du Panthéon.',
+        ],
+        [
+            'question' => 'Y a-t-il des programmes en anglais ?',
+            'answer' => 'La majorité des Licences sont en français. Cependant, plusieurs Masters, notamment en Économie Internationale ou en Histoire de l’Art, proposent des modules ou des parcours complets en anglais.',
+        ],
+        [
+            'question' => 'À quoi ressemble la vie étudiante dans le Quartier Latin ?',
+            'answer' => 'C’est l’expérience étudiante par excellence. Étudier dans le 5ème, c’est être entouré de bibliothèques historiques, de cafés étudiants, de cinémas d’art et de librairies emblématiques.',
+        ],
+    ],
 ];

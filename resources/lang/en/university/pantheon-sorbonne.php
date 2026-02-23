@@ -2,113 +2,120 @@
 
 return [
     // SEO Meta
-    'title' => 'Panthéon-Sorbonne University Paris France | Complete Guide to Sorbonne University',
-    'keywords' => 'Panthéon-Sorbonne University,Sorbonne University,top universities in France,French universities,Paris universities,study in France,study at Panthéon-Sorbonne University,best French universities,Panthéon-Sorbonne University ranking,Panthéon-Sorbonne University programs,Panthéon-Sorbonne University facilities',
-    'description' => 'Looking to study at one of France\'s best universities? Panthéon-Sorbonne University with over 760 years of history ranks among the world\'s top universities in sciences, engineering, medicine, arts, and humanities. With over 140,000 students, it offers a dynamic and vibrant environment for learning and advancement.',
+    'title' => 'Study at Panthéon-Sorbonne University Paris 1 | 2026 Admissions',
+    'keywords' => 'Panthéon-Sorbonne University, Paris 1, study in Paris 2026, social sciences France, law school Paris, economics Sorbonne, international student Life Paris, Sorbonne university ranking, apply to Paris 1',
+    'description' => 'Dreaming of studying Law, Economics, or Humanities at the heart of Paris? Discover Panthéon-Sorbonne University (Paris 1). Explore 2026 programs, historic campus life, and admission requirements.',
 
     // Page Title Area
-    'main_heading' => 'Panthéon-Sorbonne University Paris',
+    'main_heading' => 'Panthéon-Sorbonne University (Paris 1)',
     'breadcrumb_home' => 'Home',
     'breadcrumb_universities' => 'Top French Universities',
-    'breadcrumb_current' => 'Panthéon-Sorbonne University Paris',
+    'breadcrumb_current' => 'Panthéon-Sorbonne (Paris 1)',
 
     // Sidebar
-    'table_of_contents' => 'Table of Contents',
-    'contact_us' => 'Contact Us',
-    'consultation_request' => 'Request Educational Migration Consultation to France',
-    'useful_links' => 'Useful Links',
-    'official_website' => 'Official Website of Panthéon-Sorbonne University',
-    'wikipedia_link' => 'Panthéon-Sorbonne University on Wikipedia',
+    'table_of_contents' => 'Quick Navigation',
+    'contact_us' => 'Get Specialist Advice',
+    'consultation_request' => 'Launch Your 2026 Sorbonne Journey',
+    'useful_links' => 'Useful Resources',
+    'official_website' => 'Visit Official University Portal',
+    'wikipedia_link' => 'Sorbonne History on Wikipedia',
     'paris_city_guide' => 'Paris City Guide',
 
     // Main Content
-    'page_title' => 'Panthéon-Sorbonne University: Symbol of Scientific Excellence in France',
-    'history_title' => 'History and Foundation of Panthéon-Sorbonne University Paris',
-    'history_paragraph_1' => 'Panthéon-Sorbonne University (Université Panthéon-Sorbonne) is one of France\'s prestigious and leading universities, established in 1971 from the merger of several universities in the Île-de-France region. With over 50,000 students across various academic levels, it is recognized as one of France\'s largest universities.',
-    'history_paragraph_2' => 'Panthéon-Sorbonne University holds a special position among world-renowned universities due to its high-quality education, pioneering research, and long history. This university has a prominent position in various fields of humanities and social sciences.',
+    'page_title' => 'Panthéon-Sorbonne: A Beacon of Excellence in the Heart of Paris',
 
-    'ranking_title' => 'Global Ranking of Panthéon-Sorbonne University',
-    'ranking_content' => 'Panthéon-Sorbonne University has consistently maintained a strong presence in global university rankings. In the 2022 QS rankings, the university was ranked 109th among the world\'s top universities, and in the Times Higher Education 2023 rankings, it was positioned 101st among the world\'s top universities.',
+    'intro_content' => 'Panthéon-Sorbonne University, also known as Paris 1, is one of the most prestigious institutions for Social Sciences, Law, and Economics in the world. Merging the historic legacy of the Sorbonne with modern academic rigor, it stands as a global leader in Humanities. For the 2026 academic year, Paris 1 continues to attract the brightest minds to its historic campuses in the Latin Quarter.',
 
-    'facilities_title' => 'Educational and Research Facilities at Panthéon-Sorbonne University',
-    'facilities_paragraph_1' => 'Panthéon-Sorbonne University offers a wide range of academic programs at undergraduate, graduate, and doctoral levels. The university also has several faculties and specialized schools that provide higher education in specific fields such as law, political science, philosophy, languages, literature, history, geography-planning, and information and communication.',
-    'facilities_paragraph_2' => 'In addition to quality education, Panthéon-Sorbonne University strongly focuses on scientific research. The university has several advanced research laboratories operating in various fields of humanities and social sciences.',
+    'global_leader_title' => 'Legacy Meets Modern Innovation',
+    'global_leader_content' => 'Paris 1 is world-renowned for its high-impact research and its commitment to critical thinking. Key reasons to choose Panthéon-Sorbonne for 2026:
+- **Academic Prestige**: Consistently ranked among the top universities worldwide for Philosophy, Archaeology, and Law.
+- **Historic Location**: Located in the vibrant Latin Quarter, steps away from the Panthéon and Luxembourg Gardens.
+- **Global Network**: Extensive international partnerships offering students unique mobility and career opportunities.
 
-    'iranian_students_title' => 'Study Conditions for Iranian Students at Panthéon-Sorbonne University Paris',
-    'iranian_students_paragraph_1' => 'Iranian students must have a valid French language certificate to study at Panthéon-Sorbonne University. Additionally, applicants must translate and authenticate their academic documents when applying for admission to this university.',
-    'iranian_students_paragraph_2' => 'Iranian applicants must also obtain a student visa to study in France. To apply for a student visa, applicants must provide various documents, such as a university acceptance letter, proof of financial capability, and health insurance.',
+At Paris 1, your studies are connected to over 800 years of intellectual history.',
 
-    'multicultural_environment_title' => 'Multicultural Environment and Welfare Facilities at Panthéon-Sorbonne University Paris',
-    'multicultural_environment_content' => 'Panthéon-Sorbonne University is a multicultural environment with students from over 100 countries. The university also has many welfare facilities for international students, such as study halls, cafeterias, cultural centers, and well-equipped libraries.',
-
-    'tuition_fees_title' => 'Tuition Fees at Sorbonne University Paris',
-    'tuition_fees_content' => 'In French public universities, tuition fees are generally not charged, but registration fees may apply. The government covers many educational costs, and typically the actual cost of education amounts to approximately €10,000 per year, a significant portion of which is subsidized by the government.',
-
-    'language_of_instruction_title' => 'Language of Instruction at Sorbonne University Paris',
-    'language_of_instruction_content' => 'Panthéon-Sorbonne University Paris primarily uses French in undergraduate programs. However, some graduate programs that are conducted entirely in English are of high quality.',
-
-    'university_achievements_title' => 'Achievements of Sorbonne University Paris',
-    'university_achievements_content' => 'In 2021, Sorbonne University Paris achieved top rankings in various fields. For example:',
-    'achievements_list' => [
-        'Archaeology: 25th worldwide (1st in France)',
-        'Philosophy: 27th worldwide (2nd in France)',
-        'History: 33rd worldwide (1st in France)',
-        'Geography: 35th worldwide (1st in France)',
-        'Modern Languages: 67th worldwide (3rd in France)',
-        'Art and Design: 101-150 worldwide (4th in France)',
-        'Architecture and Built Environment: 151-200 worldwide (1st in France)',
-        'Development Studies: 37th worldwide (1st in France)',
-        'Politics and International Studies: 51-100 worldwide (2nd in France)',
-        'Anthropology: 51-100 worldwide (1st in France)',
-        'Social Policy and Administration: 101-120 worldwide (2nd in France)',
-        'Accounting and Finance: 101-150 worldwide (5th in France)',
-        'Business and Management Studies: 101-150 worldwide (7th in France)',
+    'programs_title' => 'World-Class Programs in Social Sciences',
+    'programs_content' => 'Our departments offer specialized training designed for the global leaders of tomorrow. Explore our pillars of excellence:',
+    'subjects' => [
+        'Law and Political Science',
+        'Economics and Management',
+        'Humanities (History, Philosophy, Archaeology)',
+        'Social Sciences (Geography, Sociology, Cinema)',
+        'Fine Arts and Art History',
     ],
 
-    'career_opportunities_title' => 'Career Opportunities After Graduation from Panthéon-Sorbonne University Paris',
-    'career_opportunities_paragraph_1' => 'Graduates of Panthéon-Sorbonne University enjoy excellent career opportunities. The university has strong relationships with employers worldwide and assists its graduates in finding employment.',
-    'career_opportunities_paragraph_2' => 'Panthéon-Sorbonne University also helps its graduates in research fields. The university has several entrepreneurship centers that assist graduates in starting their own businesses.',
+    'research_title' => 'Pioneering Research with Impact',
+    'research_content' => 'Research at Paris 1 is deeply rooted in social and political reality. Our laboratories collaborate on global challenges such as sustainable development, digital ethics, and international law. Students are encouraged to engage with world-class faculty throughout their academic journey.',
 
-    'admission_requirements_title' => 'Required Documents for Admission to Panthéon-Sorbonne University Paris',
-    'admission_requirements_content' => 'To register at Panthéon-Sorbonne University, you need the following documents:',
-    'admission_requirements_list' => [
-        'Online application',
-        'Statement of Purpose (SOP)',
-        'Academic transcripts with translation',
-        'Diploma or high school certificate with translation',
-        'Letter of Recommendation (LOR)',
-        'Curriculum Vitae (CV)',
-        'French language proficiency certificate',
-        'English language proficiency certificate',
+    'admission_title' => 'Starting Your 2026 Path to Paris 1',
+    'admission_content' => 'Admission into Paris 1 is highly competitive and based on academic excellence. For 2026, international candidates generally require a C1 level in French for Humanities and Law programs, and B2 for many Economics modules. We recommend finalizing your "Études en France" application early in the 2026 cycle.',
+
+    'career_title' => 'Connecting Tradition to Career Success',
+    'career_content' => 'Graduates of Panthéon-Sorbonne are highly sought after by international law firms, government agencies, global financial institutions, and the creative sectors. The university provides robust career support, bridging the gap between Latin Quarter studies and global job markets.',
+
+    'environment_title' => 'Living the Parisian Academic Dream',
+    'environment_content' => 'To study at Paris 1 is to live in the intellectual heart of France. Its campuses are architectural and cultural gems:',
+    'campuses' => [
+        'The Historic Sorbonne Building',
+        'Place du Panthéon Campus',
+        'Tolbiac Center (Modern Innovation)',
+        'Specialized Libraries & Latin Quarter Student Spaces',
     ],
 
-    'conclusion_title' => 'Conclusion',
-    'conclusion_content' => 'Panthéon-Sorbonne University is an excellent university for international students who want to study in France. This university offers high-quality education, excellent welfare facilities, numerous career opportunities for graduates, and a multicultural environment. If you are an Iranian student looking to study in France, Panthéon-Sorbonne University would be an excellent choice for you.',
+    'conclusion_title' => 'Your Sorbonne Future Starts Here',
+    'conclusion_content' => 'Panthéon-Sorbonne University offers more than a degree; it offers a place in history. Let us guide you through the 2026 admission process to join this legendary academic community.',
 
     // Features List
     'features' => [
-        'Prestigious History',
-        'Diverse Specializations',
-        'International Educational Environment',
-        'Modern Facilities and Equipment',
-        'Outstanding Research',
+        'World-Center for Social Sciences and Humanities',
+        'Unmatched Global Reputation in Law and Philosophy',
+        'Historic Campuses in the Heart of Paris',
+        'Elite Network of International Alumni',
+        'Direct Access to Paris’ Rich Cultural Heritage',
     ],
 
     // Contact Form
-    'ask_question' => 'Ask a Question',
-    'name_placeholder' => 'Your Name',
-    'email_placeholder' => 'Your Email',
-    'phone_placeholder' => 'Your Phone',
-    'subject_placeholder' => 'Subject',
-    'message_placeholder' => 'Your Message',
-    'send_message' => 'Send Message',
-    'name_error' => 'Please enter your name',
-    'email_error' => 'Please enter your email',
-    'phone_error' => 'Please enter your phone number',
-    'subject_error' => 'Please enter a subject',
-    'message_error' => 'Please enter your message',
+    'ask_question' => 'Questions about Paris 1? Ask Our Experts!',
+    'name_placeholder' => 'What is your name?',
+    'email_placeholder' => 'Your preferred email',
+    'phone_placeholder' => 'Contact number (+country code)',
+    'subject_placeholder' => 'Subject of inquiry',
+    'message_placeholder' => 'Tell us about your interests, chosen programs, or 2026 application questions...',
+    'send_message' => 'Send My Inquiry',
+    'name_error' => 'Please enter your name.',
+    'email_error' => 'A valid email is required.',
+    'phone_error' => 'Please provide a valid phone number.',
+    'subject_error' => 'Please select a subject.',
+    'message_error' => 'Your message cannot be empty.',
 
     // JSON-LD Schema
-    'schema_headline' => 'Panthéon-Sorbonne University: Symbol of Scientific Excellence in France',
-    'schema_author' => 'Education, Life, Investment: Your Dreams in France with A.V.C',
+    'schema_headline' => 'University of Paris 1 Panthéon-Sorbonne: Your 2026 Guide',
+    'schema_description' => 'A guide to Panthéon-Sorbonne University for international students. Explore 2026 Law, Economics, and Social Sciences programs at the Sorbonne.',
+    'schema_author' => 'A.V.C - Your Expert Guide to Education in France',
+
+    // FAQ Section
+    'faq_title' => 'Sorbonne Inquiries',
+    'faq_subtitle' => 'Answers for Future Paris 1 Students',
+    'faq_items' => [
+        [
+            'question' => 'Is Paris 1 "The" Sorbonne?',
+            'answer' => 'Paris 1 is one of the main successors of the historic University of Paris (Sorbonne) and shares the historic campus. It is widely regarded as the leader in Law and Social Sciences among the Sorbonne universities.',
+        ],
+        [
+            'question' => 'How competitive is the Law program?',
+            'answer' => 'It is exceptionally competitive. Paris 1 is often ranked #1 in France for Law. Applicants need excellent grades and a high level of French proficiency (usually C1).',
+        ],
+        [
+            'question' => 'Where are the campuses located?',
+            'answer' => 'They are primarily in the 5th and 13th arrondissements of Paris. The main historic buildings are in the Latin Quarter, right next to the Panthéon.',
+        ],
+        [
+            'question' => 'Are there any programs in English?',
+            'answer' => 'Most undergraduate programs are in French. However, several Masters, particularly in International Economics and Art History, offer modules or full tracks in English.',
+        ],
+        [
+            'question' => 'What is the student life like in the Latin Quarter?',
+            'answer' => 'It is the quintessential student experience. Living and studying in the 5th arrondissement means being surrounded by historic libraries, student cafés, bookshops, and cinemas.',
+        ],
+    ],
 ];

@@ -20,7 +20,8 @@
 
 @section('useful_links')
     <div class="sidebar-widget p-4 rounded-5 shadow-sm bg-white mb-4 border-0">
-        <h4 class="widget-title h5 fw-bold mb-3 border-bottom pb-2">{{ __('university/pantheon-sorbonne.useful_links') }}
+        <h4 class="widget-title h5 fw-bold mb-3 border-bottom pb-2">
+            {{ __('university/pantheon-sorbonne.useful_links') }}
         </h4>
         <ul class="list-unstyled mb-0">
             <li class="mb-2">
@@ -53,14 +54,10 @@
 
     <div class="single-services-imgs mb-4">
         <img src="{{asset("assets/img/universities/Sorbonne/pantheon_university.webp")}}"
-            alt="{{ __('university/pantheon-sorbonne.main_heading') }}" class="rounded-4 shadow-sm w-100">
+            alt="{{ __('university/pantheon-sorbonne.page_title') }}" class="rounded-4 shadow-sm w-100">
     </div>
 
-    <section class="mb-5">
-        <h3 class="h4 fw-bold mb-3">{{ __('university/pantheon-sorbonne.history_title') }}</h3>
-        <p class="text-muted">{{ __('university/pantheon-sorbonne.history_paragraph_1') }}</p>
-        <p class="text-muted">{{ __('university/pantheon-sorbonne.history_paragraph_2') }}</p>
-    </section>
+    <p class="lead text-muted mb-4">{{ __('university/pantheon-sorbonne.intro_content') }}</p>
 
     <div class="map-container mb-5 rounded-4 overflow-hidden shadow-sm">
         <iframe
@@ -70,85 +67,75 @@
     </div>
 
     <section class="mb-5">
-        <h3 class="h4 fw-bold mb-3">{{ __('university/pantheon-sorbonne.ranking_title') }}</h3>
-        <p class="text-muted">{{ __('university/pantheon-sorbonne.ranking_content') }}</p>
+        <h3 class="h4 fw-bold mb-3">{{ __('university/pantheon-sorbonne.global_leader_title') }}</h3>
+        <p class="text-muted">{{ __('university/pantheon-sorbonne.global_leader_content') }}</p>
     </section>
 
     <section class="mb-5">
-        <h3 class="h4 fw-bold mb-3">{{ __('university/pantheon-sorbonne.facilities_title') }}</h3>
-        <p class="text-muted">{{ __('university/pantheon-sorbonne.facilities_paragraph_1') }}</p>
-        <p class="text-muted">{{ __('university/pantheon-sorbonne.facilities_paragraph_2') }}</p>
+        <h3 class="h4 fw-bold mb-3">{{ __('university/pantheon-sorbonne.programs_title') }}</h3>
+        <p class="text-muted mb-3">{{ __('university/pantheon-sorbonne.programs_content') }}</p>
+        <ul class="list-group list-group-flush mb-4">
+            @foreach(__('university/pantheon-sorbonne.subjects') as $subject)
+                <li class="list-group-item bg-transparent px-0 py-2 border-0 d-flex align-items-center">
+                    <i class="bx bx-check-circle text-primary me-2"></i>
+                    <span>{{ $subject }}</span>
+                </li>
+            @endforeach
+        </ul>
     </section>
 
     <div class="rooms-details mb-5">
         <img src="{{asset("assets/img/universities/Sorbonne/pantheon_university_1.webp")}}"
-            alt="{{ __('university/pantheon-sorbonne.main_heading') }}" class="rounded-4 shadow-sm w-100">
+            alt="{{ __('university/pantheon-sorbonne.page_title') }}" class="rounded-4 shadow-sm w-100">
     </div>
 
-    <section class="mb-4">
-        <h3 class="h4 fw-bold mb-3">{{ __('university/pantheon-sorbonne.iranian_students_title') }}</h3>
-        <p class="text-muted mb-4">{{ __('university/pantheon-sorbonne.iranian_students_paragraph_1') }}</p>
-        <p class="text-muted mb-4">{{ __('university/pantheon-sorbonne.iranian_students_paragraph_2') }}</p>
-
-        <h3 class="h4 fw-bold mb-3">{{ __('university/pantheon-sorbonne.multicultural_environment_title') }}</h3>
-        <p class="text-muted mb-4">{{ __('university/pantheon-sorbonne.multicultural_environment_content') }}</p>
-
-        <h3 class="h4 fw-bold mb-3">{{ __('university/pantheon-sorbonne.tuition_fees_title') }}</h3>
-        <p class="text-muted mb-4">{{ __('university/pantheon-sorbonne.tuition_fees_content') }}</p>
-
-        <div class="p-4 rounded-4 bg-light mb-4 border-start border-primary border-4">
-            <h5 class="fw-bold mb-3">{{ __('university/pantheon-sorbonne.university_achievements_title') }}</h5>
-            <p class="small text-muted mb-3">{{ __('university/pantheon-sorbonne.university_achievements_content') }}</p>
-            <div class="row g-2">
-                @foreach(__('university/pantheon-sorbonne.achievements_list') as $achievement)
-                    <div class="col-md-6">
-                        <div class="d-flex align-items-center small">
-                            <i class="bx bx-check text-primary me-2"></i>
-                            <span>{{ $achievement }}</span>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
-        </div>
-
-        <h3 class="h4 fw-bold mb-3">{{ __('university/pantheon-sorbonne.career_opportunities_title') }}</h3>
-        <p class="text-muted mb-4">{{ __('university/pantheon-sorbonne.career_opportunities_paragraph_1') }}</p>
-        <p class="text-muted mb-4">{{ __('university/pantheon-sorbonne.career_opportunities_paragraph_2') }}</p>
-
-        <h3 class="h4 fw-bold mb-3">{{ __('university/pantheon-sorbonne.admission_requirements_title') }}</h3>
-        <div class="p-4 rounded-4 bg-primary-subtle border-0 mb-4">
-            <p class="fw-bold text-primary-emphasis mb-3">
-                {{ __('university/pantheon-sorbonne.admission_requirements_content') }}
-            </p>
-            <ul class="list-unstyled mb-0">
-                @foreach(__('university/pantheon-sorbonne.admission_requirements_list') as $requirement)
-                    <li class="mb-2 d-flex align-items-center">
-                        <i class="bx bx-check-double text-primary me-2"></i>
-                        <span class="small">{{ $requirement }}</span>
-                    </li>
-                @endforeach
-            </ul>
-        </div>
-
-        <h3 class="h4 fw-bold mb-3">{{ __('university/pantheon-sorbonne.language_of_instruction_title') }}</h3>
-        <p class="text-muted mb-4">{{ __('university/pantheon-sorbonne.language_of_instruction_content') }}</p>
-
-        <h3 class="h4 fw-bold mb-3">{{ __('university/pantheon-sorbonne.conclusion_title') }}</h3>
-        <p class="text-muted mb-5">{{ __('university/pantheon-sorbonne.conclusion_content') }}</p>
+    <section class="mb-5">
+        <h3 class="h4 fw-bold mb-3">{{ __('university/pantheon-sorbonne.research_title') }}</h3>
+        <p class="text-muted">{{ __('university/pantheon-sorbonne.research_content') }}</p>
     </section>
 
-    <div class="car-service-list-wrap p-4 rounded-5 bg-light border-0">
+    <section class="mb-5">
+        <h3 class="h4 fw-bold mb-3">{{ __('university/pantheon-sorbonne.admission_title') }}</h3>
+        <p class="text-muted">{{ __('university/pantheon-sorbonne.admission_content') }}</p>
+    </section>
+
+    <section class="mb-5">
+        <h3 class="h4 fw-bold mb-3">{{ __('university/pantheon-sorbonne.career_title') }}</h3>
+        <p class="text-muted">{{ __('university/pantheon-sorbonne.career_content') }}</p>
+    </section>
+
+    <section class="mb-5">
+        <h3 class="h4 fw-bold mb-3">{{ __('university/pantheon-sorbonne.environment_title') }}</h3>
+        <p class="text-muted mb-3">{{ __('university/pantheon-sorbonne.environment_content') }}</p>
+        <div class="row g-3">
+            @foreach(__('university/pantheon-sorbonne.campuses') as $campus)
+                <div class="col-md-6">
+                    <div class="p-3 rounded-4 bg-light border-0 h-100 d-flex align-items-center">
+                        <i class="bx bx-buildings text-primary me-2 fs-5"></i>
+                        <span class="small fw-medium">{{ $campus }}</span>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    </section>
+
+    <section class="mb-5">
+        <h3 class="h4 fw-bold mb-3">{{ __('university/pantheon-sorbonne.conclusion_title') }}</h3>
+        <p class="text-muted">{{ __('university/pantheon-sorbonne.conclusion_content') }}</p>
+    </section>
+
+    <div class="car-service-list-wrap p-4 rounded-5 bg-primary-subtle border-0 mb-5">
         <div class="row align-items-center">
             <div class="col-lg-4 text-center mb-4 mb-lg-0">
                 <img src="{{asset("assets/img/universities/Sorbonne/pantheon_logo.webp")}}"
-                    alt="{{ __('university/pantheon-sorbonne.main_heading') }}" style="max-width: 150px;" class="img-fluid">
+                    alt="{{ __('university/pantheon-sorbonne.page_title') }}" style="max-width: 150px;" class="img-fluid">
             </div>
             <div class="col-lg-8">
                 <div class="row g-2">
                     @foreach(__('university/pantheon-sorbonne.features') as $feature)
                         <div class="col-md-6">
-                            <div class="d-flex align-items-center small text-muted">
-                                <i class='bx bx-check text-primary me-2'></i>
+                            <div class="d-flex align-items-start small text-primary-emphasis">
+                                <i class='bx bx-check-double me-2 mt-1'></i>
                                 <span>{{ $feature }}</span>
                             </div>
                         </div>
@@ -157,13 +144,16 @@
             </div>
         </div>
     </div>
+    <x-sections.faq :title="__('university/pantheon-sorbonne.faq_title')"
+        :subtitle="__('university/pantheon-sorbonne.faq_subtitle')" :items="__('university/pantheon-sorbonne.faq_items')"
+        id="paris1-faq" />
 @endsection
 
 @push("json")
     @php
         $currentLocale = app()->getLocale();
-        $pageUrl = url($currentLocale.'/universities/pantheon-sorbonne');
-        $universityId = $pageUrl.'#university';
+        $pageUrl = url($currentLocale . '/universities/pantheon-sorbonne');
+        $universityId = $pageUrl . '#university';
         $officialUrl = 'https://www.pantheonsorbonne.fr/';
 
         $webPage = new \App\Services\StructuredData\WebPageSchema(
@@ -177,9 +167,9 @@
 
         $university = new \App\Services\StructuredData\UniversitySchema(
             $universityId,
-            __('universities.pantheon_sorbonne_name'),
+            __('university/pantheon-sorbonne.breadcrumb_current'),
             $officialUrl,
-            __('university/pantheon-sorbonne.introduction_content'),
+            __('university/pantheon-sorbonne.schema_description'),
             asset('assets/img/universities/Sorbonne/pantheon_logo.webp'),
             [
                 $officialUrl,
@@ -188,8 +178,8 @@
         );
 
         $breadcrumb = \App\Services\StructuredData\BreadcrumbSchema::fromArray([
-            ['name' => __('layout.home') ?? 'Home', 'url' => url($currentLocale.'/')],
-            ['name' => __('universities.breadcrumb_universities'), 'url' => url($currentLocale.'/universities')],
+            ['name' => __('layout.home') ?? 'Home', 'url' => url($currentLocale . '/')],
+            ['name' => __('universities.breadcrumb_universities') ?? 'Universities', 'url' => url($currentLocale . '/universities')],
             ['name' => __('university/pantheon-sorbonne.breadcrumb_current'), 'url' => $pageUrl],
         ]);
     @endphp
