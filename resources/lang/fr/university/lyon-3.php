@@ -2,104 +2,120 @@
 
 return [
     // SEO Meta
-    'title' => 'Université Jean Moulin Lyon 3 France | Guide Complet de l\'Université Lyon 3',
-    'keywords' => 'Université Lyon 3,Université Jean Moulin Lyon 3,meilleures universités de France,universités françaises,universités de Lyon,étudier en France,étudier à l\'Université Lyon 3,meilleures universités françaises,classement Université Lyon 3,programmes Université Lyon 3,installations Université Lyon 3',
-    'description' => 'À la recherche d\'une université exceptionnelle en sciences humaines, sciences sociales, droit et sciences politiques ? L\'Université Lyon 3 avec plus de 48 ans d\'histoire brillante se classe parmi les meilleures universités mondiales dans ces domaines. Avec plus de 20 000 étudiants, elle offre un environnement dynamique et international pour l\'apprentissage et l\'avancement.',
+    'title' => 'Guide Complet de l’Université Jean Moulin Lyon 3 | Programmes 2026',
+    'keywords' => 'Jean Moulin Lyon 3, Université Lyon 3, étudier à Lyon 2026, Licence Humanités France, Faculté de Droit Lyon, IAE Lyon management, étudiants internationaux Lyon, admission université française 2026',
+    'description' => 'Vous prévoyez d’étudier à Lyon ? Découvrez l’Université Jean Moulin Lyon 3. Explorez ses programmes d\'élite en Humanités, Droit et Gestion (IAE), les conditions d\'entrée 2026 et la vie étudiante.',
 
     // Page Title Area
     'main_heading' => 'Université Jean Moulin Lyon 3',
     'breadcrumb_home' => 'Accueil',
-    'breadcrumb_universities' => 'Meilleures Universités Françaises',
-    'breadcrumb_current' => 'Université Lyon 3',
+    'breadcrumb_universities' => 'Découvrir nos Universités',
+    'breadcrumb_current' => 'Jean Moulin Lyon 3',
 
     // Sidebar
-    'table_of_contents' => 'Table des Matières',
-    'contact_us' => 'Nous Contacter',
-    'consultation_request' => 'Demande de Consultation pour Migration Éducative vers la France',
-    'useful_links' => 'Liens Utiles',
-    'official_website' => 'Site Officiel de l\'Université Jean Moulin Lyon 3',
-    'wikipedia_link' => 'Université Jean Moulin Lyon 3 sur Wikipédia',
-    'lyon_city_guide' => 'Guide de la Ville de Lyon',
+    'table_of_contents' => 'Navigation Rapide',
+    'contact_us' => 'Discuter avec un Conseiller',
+    'consultation_request' => 'Préparez votre rentrée 2026 à Lyon',
+    'useful_links' => 'Ressources Utiles',
+    'official_website' => 'Portail Officiel de l’Université',
+    'wikipedia_link' => 'Aperçu Wikipédia',
+    'lyon_city_guide' => 'Découvrir la Ville de Lyon',
 
     // Main Content
-    'page_title' => 'Université Jean Moulin Lyon 3 : Une Université Leader en France',
-    'history_title' => 'Histoire et Fondation',
-    'history_content' => 'L\'Université Jean Moulin Lyon 3 est l\'une des universités prestigieuses de France, établie en 1970 par la fusion de plusieurs universités de la région Île-de-France. Avec plus de 27 000 étudiants à différents niveaux académiques, elle est reconnue comme l\'une des plus grandes universités de France.
+    'page_title' => 'Jean Moulin Lyon 3 : L\'Excellence des Humanités au Cœur de Lyon',
 
-L\'Université Jean Moulin Lyon 3 occupe une position spéciale parmi les universités de renommée mondiale en raison de sa haute qualité d\'enseignement, de sa longue histoire et de sa réputation mondiale. Cette université a une position proéminente dans divers domaines des sciences humaines et sociales.',
+    'intro_content' => 'L’Université Jean Moulin Lyon 3 est un pilier de l’enseignement supérieur français, réputée pour son expertise en Sciences Humaines et Sociales. Située au centre de la deuxième ville étudiante de France, elle offre un cadre accueillant et stimulant à plus de 27 000 étudiants. Pour 2026, Lyon 3 continue de briller en Relations Internationales, Droit et Management.',
 
-    'ranking_title' => 'Classement Mondial de l\'Université Jean Moulin Lyon 3',
-    'ranking_content' => 'L\'Université Jean Moulin Lyon 3 a constamment maintenu une forte présence dans les classements universitaires mondiaux. Dans le classement QS 2022, l\'université était classée 251e parmi les meilleures universités du monde, et dans le classement Times Higher Education 2023, elle était positionnée 194e parmi les meilleures universités du monde.',
+    'global_leader_title' => 'Un Leader Moderne à Taille Humaine',
+    'global_leader_content' => 'Lyon 3 ne se résume pas à ses classements prestigieux ; c’est une institution qui prépare ses étudiants à un monde globalisé. En 2026, elle se distingue par :
+- **Excellence Professionnelle** : Elle abrite l’IAE Lyon, l’une des écoles de management universitaires les plus prisées de France.
+- **Ouverture Internationale** : Avec plus de 400 universités partenaires, c’est un véritable hub mondial.
+- **Impact de la Recherche** : Des pôles de recherche forts en Études Urbaines, Éthique et Droit International.
 
-    'faculties_title' => 'Facultés et Programmes de l\'Université Lyon 3',
-    'faculties_content' => 'L\'Université Lyon 3 comprend de nombreuses facultés et programmes dans divers domaines, notamment :',
+À Jean Moulin Lyon 3, vous bénéficiez du prestige d’une grande université avec un accompagnement centré sur la réussite individuelle.',
+
+    'faculties_title' => 'UFR et Départements d\'Élite',
+    'faculties_content' => 'Que vous visiez l\'expertise juridique ou le management global, nos facultés proposent des formations spécialisées :',
     'faculties_list' => [
-        'Faculté de Droit',
-        'Faculté de Philosophie',
-        'Faculté de Gestion des Entreprises (IAE, Institut d\'Administration des Entreprises)',
-        'Faculté des Arts',
-        'Faculté des Langues',
-    ],
-    'faculties_additional' => 'L\'Université Lyon 3 collabore également avec 400 cadres dirigeants d\'entreprises privées et internationales au sein de la Faculté de Gestion (IAE) pour améliorer l\'éducation.',
-
-    'admission_requirements_title' => 'Documents Requis pour l\'Admission à l\'Université Lyon 3',
-    'admission_requirements_content' => 'Pour s\'inscrire à l\'Université Lyon 3, les documents suivants sont requis :',
-    'admission_requirements_list' => [
-        'Candidature en ligne',
-        'Lettre de Motivation (SOP)',
-        'Relevés de notes académiques avec traduction',
-        'Diplôme ou certificat de fin d\'études secondaires avec traduction',
-        'Lettre de Recommandation (LOR)',
-        'Curriculum Vitae (CV)',
-        'Certificat de compétence en français',
-        'Certificat de compétence en anglais',
+        'Faculté de Droit (Réputée en Droit Public et Privé)',
+        'IAE Lyon - École de Management',
+        'Faculté des Langues et Études Internationales',
+        'Faculté de Philosophie et Sciences Humaines',
+        'Faculté des Lettres et Civilisations',
     ],
 
-    'facilities_title' => 'Installations Éducatives et de Recherche à l\'Université Jean Moulin Lyon 3',
-    'facilities_content' => 'L\'Université Jean Moulin Lyon 3 offre une large gamme de programmes académiques aux niveaux licence, master et doctorat. L\'université dispose également de plusieurs facultés et écoles spécialisées qui offrent un enseignement supérieur dans des domaines spécifiques tels que le droit, les sciences politiques, la philosophie, les langues, la littérature, l\'histoire, la géographie-aménagement, et l\'information et communication.
+    'research_title' => 'Innovation Interdisciplinaire',
+    'research_content' => 'Nos centres de recherche sont connectés aux défis du 21e siècle. En tant qu’étudiant, vous profiterez d’une culture de l’esprit critique qui ponte le Droit, la Gestion et les Humanités, offrant des opportunités uniques d’études croisées.',
 
-En plus d\'une éducation de qualité, l\'Université Jean Moulin Lyon 3 se concentre fortement sur la recherche scientifique. L\'université dispose de plusieurs laboratoires de recherche avancés opérant dans divers domaines des sciences humaines et sociales.',
+    'admission_title' => 'Nous Rejoindre en 2026',
+    'admission_content' => 'Candidater à Lyon 3 pour la rentrée 2026 est un processus structuré mais sélectif. Les étudiants internationaux ont généralement besoin d’un niveau B2 ou C1 en français. Nous vous conseillons de soumettre votre dossier "Études en France" dès le début de l’année 2026 pour optimiser vos chances.',
 
-    'iranian_students_title' => 'Conditions d\'Études pour les Étudiants Iraniens',
-    'iranian_students_content' => 'Les étudiants iraniens doivent avoir un certificat de langue française valide pour étudier à l\'Université Jean Moulin Lyon 3. De plus, les candidats doivent traduire et authentifier leurs documents académiques lors de la demande d\'admission à cette université.
+    'career_title' => 'Votre Voie vers des Opportunités Mondiales',
+    'career_content' => 'L’IAE Lyon et la Faculté de Droit affichent des taux d’insertion professionnelle exceptionnels. Nos diplômés sont recherchés par les ONG, les organisations internationales et les grandes entreprises européennes. Le bureau d’aide à l’insertion professionnelle (BAIP) offre un soutien dédié aux stages et à l’emploi.',
 
-Les candidats iraniens doivent également obtenir un visa étudiant pour étudier en France. Pour demander un visa étudiant, les candidats doivent fournir divers documents, tels qu\'une lettre d\'acceptation universitaire, une preuve de capacité financière et une assurance maladie.',
+    'environment_title' => 'Une Vie Étudiante Dynamique à Lyon',
+    'environment_content' => 'Étudier à Lyon 3, c’est vivre dans une ville classée au patrimoine mondial de l’UNESCO. Du campus ultra-moderne de la "Manufacture des Tabacs" aux bâtiments historiques des quais, vous profiterez de :',
+    'env_highlights' => [
+        'Campus de la Manufacture des Tabacs (Moderne & Central)',
+        'Bibliothèques de Recherche Numériques et Physiques',
+        'Espaces de Vie Étudiante et Hubs Interactifs',
+        'Vie Associative et Événements Culturels Riches',
+    ],
 
-    'career_opportunities_title' => 'Opportunités de Carrière Après l\'Obtention du Diplôme de l\'Université Jean Moulin Lyon 3',
-    'career_opportunities_content' => 'Les diplômés de l\'Université Jean Moulin Lyon 3 bénéficient d\'excellentes opportunités de carrière. L\'université entretient de solides relations avec les employeurs du monde entier et aide ses diplômés à trouver un emploi.
-
-L\'Université Jean Moulin Lyon 3 aide également ses diplômés dans les domaines de recherche. L\'université dispose de plusieurs centres d\'entrepreneuriat qui aident les diplômés à créer leur propre entreprise.',
-
-    'multicultural_environment_title' => 'Environnement Multiculturel et Installations de Bien-être à l\'Université Jean Moulin Lyon 3',
-    'multicultural_environment_content' => 'L\'Université Jean Moulin Lyon 3 est un environnement multiculturel avec des étudiants de plus de 100 pays. L\'université dispose également de nombreuses installations de bien-être pour les étudiants internationaux, telles que des salles d\'étude, des cafétérias, des centres culturels et des bibliothèques bien équipées.',
-
-    'conclusion_title' => 'Conclusion',
-    'conclusion_content' => 'L\'Université Jean Moulin Lyon 3 est une excellente université pour les étudiants internationaux qui souhaitent étudier en France. Cette université offre un enseignement de haute qualité, d\'excellentes installations de bien-être, de nombreuses opportunités de carrière pour les diplômés et un environnement multiculturel. Si vous êtes un étudiant iranien cherchant à étudier en France, l\'Université Jean Moulin Lyon 3 serait un excellent choix pour vous.',
+    'conclusion_title' => 'Lyon 3 : Là où l\'Histoire Rencontre votre Futur',
+    'conclusion_content' => 'Choisir l’Université Jean Moulin Lyon 3, c’est rejoindre un héritage d’excellence tout en se préparant à une carrière moderne. Laissez-nous vous guider dans votre candidature pour 2026 et bienvenue dans la magnifique ville de Lyon.',
 
     // Features List
     'features' => [
-        'Histoire Prestigieuse',
-        'Spécialisations Diverses',
-        'Environnement Éducatif International',
-        'Installations et Équipements Modernes',
-        'Recherche Exceptionnelle',
+        'Hôte de l\'IAE Lyon, École de Management de renom',
+        'Parmi les meilleures Universités en Relations Internationales',
+        'Plus de 400 Partenariats Universitaires Mondiaux',
+        'Campus Urbain Moderne (Manufacture des Tabacs)',
+        'Lien Fort avec le Tissu Professionnel Lyonnais',
     ],
 
     // Contact Form
-    'ask_question' => 'Poser une Question',
-    'name_placeholder' => 'Votre Nom',
-    'email_placeholder' => 'Votre Email',
-    'phone_placeholder' => 'Votre Téléphone',
-    'subject_placeholder' => 'Sujet',
-    'message_placeholder' => 'Votre Message',
-    'send_message' => 'Envoyer le Message',
-    'name_error' => 'Veuillez entrer votre nom',
-    'email_error' => 'Veuillez entrer votre email',
-    'phone_error' => 'Veuillez entrer votre numéro de téléphone',
-    'subject_error' => 'Veuillez entrer un sujet',
-    'message_error' => 'Veuillez entrer votre message',
+    'ask_question' => 'Des Questions sur Lyon 3 ? On vous aide !',
+    'name_placeholder' => 'Votre nom',
+    'email_placeholder' => 'Votre adresse email',
+    'phone_placeholder' => 'Comment vous joindre par téléphone ?',
+    'subject_placeholder' => 'Quel est l\'objet de votre demande ?',
+    'message_placeholder' => 'Posez-nous vos questions sur les programmes, la vie à Lyon ou l’admission 2026...',
+    'send_message' => 'Envoyer à nos Conseillers',
+    'name_error' => 'Veuillez indiquer votre nom !',
+    'email_error' => 'Un email valide est requis pour la réponse.',
+    'phone_error' => 'Veuillez laisser un numéro de téléphone.',
+    'subject_error' => 'Merci de choisir un sujet.',
+    'message_error' => 'Votre message est vide !',
 
     // JSON-LD Schema
-    'schema_headline' => 'Université Jean Moulin Lyon 3 : Une Université Leader en France',
-    'schema_author' => 'Éducation, Vie, Investissement : Vos Rêves en France avec A.V.C',
+    'schema_headline' => 'Étudier à Jean Moulin Lyon 3 : Votre Guide de Réussite 2026',
+    'schema_description' => 'Un guide centré sur l’étudiant pour l’Université Jean Moulin Lyon 3. Découvrez les meilleurs programmes et candidatez pour 2026.',
+    'schema_author' => 'A.V.C - Votre Partenaire pour vos Études en France',
+
+    // FAQ Section
+    'faq_title' => 'Questions Fréquentes',
+    'faq_subtitle' => 'Tout savoir sur l’Université Lyon 3',
+    'faq_items' => [
+        [
+            'question' => 'Lyon 3 est-elle réputée pour le business et la gestion ?',
+            'answer' => 'Absolument. Son école de management, l’IAE Lyon, est l’une des plus grandes et respectées de France, avec des partenariats entreprises massifs.',
+        ],
+        [
+            'question' => 'Quel niveau de langue faut-il pour les Humanités ?',
+            'answer' => 'Pour la plupart des Licences et Masters en Humanités et Droit, un niveau B2 en français est requis, bien que certains Masters préfèrent le C1.',
+        ],
+        [
+            'question' => 'Où se situe le campus principal ?',
+            'answer' => 'Le campus principal de la "Manufacture des Tabacs" se situe dans le 8ème arrondissement de Lyon. C’est un site industriel rénové, moderne et très accessible par métro.',
+        ],
+        [
+            'question' => 'Y a-t-il des cours enseignés en anglais ?',
+            'answer' => 'Oui, notamment au sein de l’IAE Lyon et de la Faculté de Droit, il existe plusieurs programmes internationaux et modules d’échange entièrement en anglais.',
+        ],
+        [
+            'question' => 'Est-il facile de se loger en tant qu’étudiant à Lyon ?',
+            'answer' => 'Lyon est une ville prisée, donc la concurrence est forte ! Nous vous conseillons de demander un logement CROUS tôt ou de faire appel à notre équipe pour trouver une résidence privée.',
+        ],
+    ],
 ];

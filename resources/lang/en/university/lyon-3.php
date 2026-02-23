@@ -2,104 +2,120 @@
 
 return [
     // SEO Meta
-    'title' => 'Jean Moulin Lyon 3 University France | Complete Guide to Lyon 3 University',
-    'keywords' => 'Lyon 3 University,Jean Moulin Lyon 3 University,top universities in France,French universities,Lyon universities,study in France,study at Lyon 3 University,best French universities,Lyon 3 University ranking,Lyon 3 University programs,Lyon 3 University facilities',
-    'description' => 'Looking for an outstanding university in humanities, social sciences, law, and political science? Lyon 3 University with over 48 years of brilliant history ranks among the world\'s top universities in these fields. With over 20,000 students, it offers a dynamic and international environment for learning and advancement.',
+    'title' => 'Your Guide to Jean Moulin Lyon 3 University | 2026 Programs',
+    'keywords' => 'Jean Moulin Lyon 3, Lyon 3 University, study in Lyon 2026, Humanities degree France, Law school Lyon, IAE Lyon management, international students Lyon, French university admission 2026',
+    'description' => 'Planning to study in Lyon? Discover Jean Moulin Lyon 3 University. Explore top-tier programs in Humanities, Law, and Management (IAE), 2026 entry requirements, and vibrant campus life.',
 
     // Page Title Area
     'main_heading' => 'Jean Moulin Lyon 3 University',
     'breadcrumb_home' => 'Home',
-    'breadcrumb_universities' => 'Top French Universities',
-    'breadcrumb_current' => 'Lyon 3 University',
+    'breadcrumb_universities' => 'Explore Partner Universities',
+    'breadcrumb_current' => 'Jean Moulin Lyon 3',
 
     // Sidebar
-    'table_of_contents' => 'Table of Contents',
-    'contact_us' => 'Contact Us',
-    'consultation_request' => 'Request Educational Migration Consultation to France',
-    'useful_links' => 'Useful Links',
-    'official_website' => 'Official Website of Jean Moulin Lyon 3 University',
-    'wikipedia_link' => 'Jean Moulin Lyon 3 University on Wikipedia',
-    'lyon_city_guide' => 'Lyon City Guide',
+    'table_of_contents' => 'Quick Navigation',
+    'contact_us' => 'Speak to an Advisor',
+    'consultation_request' => 'Plan Your Journey to Lyon for 2026',
+    'useful_links' => 'Useful Resources',
+    'official_website' => 'Official University Portal',
+    'wikipedia_link' => 'Wikipedia Overview',
+    'lyon_city_guide' => 'Discover Lyon City',
 
     // Main Content
-    'page_title' => 'Jean Moulin Lyon 3 University: A Leading University in France',
-    'history_title' => 'History and Foundation',
-    'history_content' => 'Jean Moulin Lyon 3 University is one of France\'s prestigious universities, established in 1970 from the merger of several universities in the Île-de-France region. With over 27,000 students across various academic levels, it is recognized as one of France\'s largest universities.
+    'page_title' => 'Jean Moulin Lyon 3: Humanities and Management Excellence in the Heart of Lyon',
 
-Jean Moulin Lyon 3 University holds a special position among world-renowned universities due to its high-quality education, long history, and global reputation. This university has a prominent position in various fields of humanities and social sciences.',
+    'intro_content' => 'Jean Moulin Lyon 3 University is a cornerstone of French higher education, renowned for its strong focus on the Humanities and Social Sciences. Located in the heart of France\'s second-largest student city, it offers a welcoming and intellectually stimulating environment for over 27,000 students. For the 2026 academic year, Lyon 3 continues to lead in International Relations, Law, and Management.',
 
-    'ranking_title' => 'Global Ranking of Jean Moulin Lyon 3 University',
-    'ranking_content' => 'Jean Moulin Lyon 3 University has consistently maintained a strong presence in global university rankings. In the 2022 QS rankings, the university was ranked 251st among the world\'s top universities, and in the Times Higher Education 2023 rankings, it was positioned 194th among the world\'s top universities.',
+    'global_leader_title' => 'A Modern Leader with a Human Touch',
+    'global_leader_content' => 'Lyon 3 isn\'t just about prestigious rankings; it\'s about preparing students for a globalized world. Here\'s why it stands out for 2026:
+- **Professional Excellence**: The university is home to the IAE Lyon School of Management, one of France\'s top-rated university business schools.
+- **International Outlook**: With over 400 partner universities worldwide, it is a truly global hub.
+- **Research Impact**: Strong research clusters in Urban Studies, Ethics, and International Law.
 
-    'faculties_title' => 'Faculties and Programs at Lyon 3 University',
-    'faculties_content' => 'Lyon 3 University encompasses numerous faculties and programs in various fields, including:',
+At Jean Moulin Lyon 3, you get the prestige of a major French university with a focus on individual student success.',
+
+    'faculties_title' => 'Top-Tier Departments and Programs',
+    'faculties_content' => 'Whether you aim to be a legal expert or a global manager, our faculties provide specialized training:',
     'faculties_list' => [
-        'Faculty of Law',
-        'Faculty of Philosophy',
-        'Faculty of Business Management (IAE, Institut d\'Administration des Entreprises)',
-        'Faculty of Arts',
-        'Faculty of Languages',
-    ],
-    'faculties_additional' => 'Lyon 3 University also collaborates with 400 executive managers from private and international companies in the Management Faculty (IAE) to enhance education.',
-
-    'admission_requirements_title' => 'Required Documents for Admission to Lyon 3 University',
-    'admission_requirements_content' => 'To register at Lyon 3 University, the following documents are required:',
-    'admission_requirements_list' => [
-        'Online application',
-        'Statement of Purpose (SOP)',
-        'Academic transcripts with translation',
-        'Diploma or high school certificate with translation',
-        'Letter of Recommendation (LOR)',
-        'Curriculum Vitae (CV)',
-        'French language proficiency certificate',
-        'English language proficiency certificate',
+        'Faculty of Law (Renowned for Public and Private Law)',
+        'IAE Lyon - School of Management',
+        'Faculty of Languages and International Studies',
+        'Faculty of Philosophy and Humanities',
+        'Faculty of Arts and Literature',
     ],
 
-    'facilities_title' => 'Educational and Research Facilities at Jean Moulin Lyon 3 University',
-    'facilities_content' => 'Jean Moulin Lyon 3 University offers a wide range of academic programs at undergraduate, graduate, and doctoral levels. The university also has several faculties and specialized schools that provide higher education in specific fields such as law, political science, philosophy, languages, literature, history, geography-planning, and information and communication.
+    'research_title' => 'Interdisciplinary Innovation',
+    'research_content' => 'Our research centers are deeply connected to the challenges of the 21st century. As a student, you\'ll benefit from a culture of critical thinking that bridges Law, Management, and the Humanities, creating unique opportunities for interdisciplinary study.',
 
-In addition to quality education, Jean Moulin Lyon 3 University strongly focuses on scientific research. The university has several advanced research laboratories operating in various fields of humanities and social sciences.',
+    'admission_title' => 'Join Us in 2026',
+    'admission_content' => 'Applying to Lyon 3 for the 2026 intake is straightforward but competitive. International students generally need a B2 or C1 level in French, depending on the program. We recommend submitting your "Études en France" application by early 2026 to ensure the best chance of securing your spot.',
 
-    'iranian_students_title' => 'Study Conditions for Iranian Students',
-    'iranian_students_content' => 'Iranian students must have a valid French language certificate to study at Jean Moulin Lyon 3 University. Additionally, applicants must translate and authenticate their academic documents when applying for admission to this university.
+    'career_title' => 'Your Path to Global Opportunities',
+    'career_content' => 'IAE Lyon and the Law Faculty have exceptionally high employability rates. Graduates are sought after by NGOs, international organizations, and major corporations across Europe and beyond. The university\'s "Professional Integration" office provides dedicated support for internships and job placement.',
 
-Iranian applicants must also obtain a student visa to study in France. To apply for a student visa, applicants must provide various documents, such as a university acceptance letter, proof of financial capability, and health insurance.',
+    'environment_title' => 'Vibrant Student Life in Lyon',
+    'environment_content' => 'Studying at Lyon 3 means living in a UNESCO World Heritage city. From the modern "Manufacture des Tabacs" campus to the historic riverside buildings, you\'ll enjoy:',
+    'env_highlights' => [
+        'State-of-the-Art Manufacture des Tabacs Campus',
+        'Extensive Digital Research Libraries',
+        'Interactive Student Hubs and Lounges',
+        'Rich Cultural Events and Student Associations',
+    ],
 
-    'career_opportunities_title' => 'Career Opportunities After Graduation from Jean Moulin Lyon 3 University',
-    'career_opportunities_content' => 'Graduates of Jean Moulin Lyon 3 University enjoy excellent career opportunities. The university has strong relationships with employers worldwide and assists its graduates in finding employment.
-
-Jean Moulin Lyon 3 University also helps its graduates in research fields. The university has several entrepreneurship centers that assist graduates in starting their own businesses.',
-
-    'multicultural_environment_title' => 'Multicultural Environment and Welfare Facilities at Jean Moulin Lyon 3 University',
-    'multicultural_environment_content' => 'Jean Moulin Lyon 3 University is a multicultural environment with students from over 100 countries. The university also has many welfare facilities for international students, such as study halls, cafeterias, cultural centers, and well-equipped libraries.',
-
-    'conclusion_title' => 'Conclusion',
-    'conclusion_content' => 'Jean Moulin Lyon 3 University is an excellent university for international students who want to study in France. This university offers high-quality education, excellent welfare facilities, numerous career opportunities for graduates, and a multicultural environment. If you are an Iranian student looking to study in France, Jean Moulin Lyon 3 University would be an excellent choice for you.',
+    'conclusion_title' => 'Lyon 3: Where History Meets Your Future',
+    'conclusion_content' => 'Choosing Jean Moulin Lyon 3 means joining a legacy of academic excellence while preparing for a modern career. Let us help you navigate the 2026 application process and welcome you to the beautiful city of Lyon.',
 
     // Features List
     'features' => [
-        'Prestigious History',
-        'Diverse Specializations',
-        'International Educational Environment',
-        'Modern Facilities and Equipment',
-        'Outstanding Research',
+        'Home to the Prestigious IAE Lyon Management School',
+        'Ranked among France\'s TOP Universities for International Relations',
+        'Over 400 Global University Partnerships',
+        'Modern Urban Campus (Manufacture des Tabacs)',
+        'Strong Connection to Lyon\'s Thriving Professional Network',
     ],
 
     // Contact Form
-    'ask_question' => 'Ask a Question',
-    'name_placeholder' => 'Your Name',
-    'email_placeholder' => 'Your Email',
-    'phone_placeholder' => 'Your Phone',
-    'subject_placeholder' => 'Subject',
-    'message_placeholder' => 'Your Message',
-    'send_message' => 'Send Message',
-    'name_error' => 'Please enter your name',
-    'email_error' => 'Please enter your email',
-    'phone_error' => 'Please enter your phone number',
-    'subject_error' => 'Please enter a subject',
-    'message_error' => 'Please enter your message',
+    'ask_question' => 'Questions about Lyon 3? We\'re Here!',
+    'name_placeholder' => 'Tell us your name',
+    'email_placeholder' => 'Your email address',
+    'phone_placeholder' => 'How can we call you?',
+    'subject_placeholder' => 'What\'s on your mind?',
+    'message_placeholder' => 'Ask us anything about programs, life in Lyon, or the 2026 application...',
+    'send_message' => 'Message Our Advisors',
+    'name_error' => 'Please provide your name!',
+    'email_error' => 'A valid email is required for our reply.',
+    'phone_error' => 'Please leave a contact number.',
+    'subject_error' => 'Please select a topic.',
+    'message_error' => 'Your message is missing!',
 
     // JSON-LD Schema
-    'schema_headline' => 'Jean Moulin Lyon 3 University: A Leading University in France',
-    'schema_author' => 'Education, Life, Investment: Your Dreams in France with A.V.C',
+    'schema_headline' => 'Study at Jean Moulin Lyon 3: Your 2026 Success Guide',
+    'schema_description' => 'A student-focused guide to Jean Moulin Lyon 3 University. Discover top programs in Humanities, Law, and Management. Apply now for 2026.',
+    'schema_author' => 'A.V.C - Navigating Your Academic Future in France',
+
+    // FAQ Section
+    'faq_title' => 'Common Questions',
+    'faq_subtitle' => 'Everything You Need to Know About Lyon 3',
+    'faq_items' => [
+        [
+            'question' => 'Is Lyon 3 famous for business and management?',
+            'answer' => 'Absolutely. Its management school, IAE Lyon, is one of the largest and most respected university-based business schools in France, with huge corporate partnerships.',
+        ],
+        [
+            'question' => 'What language level is needed for Humanities?',
+            'answer' => 'For most Bachelor and Master programs in Humanities and Law, a B2 level of French is typically required, though some Masters prefer C1.',
+        ],
+        [
+            'question' => 'Where is the main campus located?',
+            'answer' => 'The main campus, "Manufacture des Tabacs," is located in Lyon\'s 8th arrondissement. It\'s a beautifully renovated industrial site with modern facilities and easy metro access.',
+        ],
+        [
+            'question' => 'Are there programs taught in English?',
+            'answer' => 'Yes, especially within IAE Lyon and the Faculty of Law, there are several international programs and exchange modules taught entirely in English.',
+        ],
+        [
+            'question' => 'Is housing easy to find for students in Lyon?',
+            'answer' => 'Lyon is popular, so it\'s competitive! We recommend applying for CROUS housing early or letting our team help you find private student residences near the campus.',
+        ],
+    ],
 ];
