@@ -2,73 +2,120 @@
 
 return [
     // SEO Meta
-    'title' => 'Claude Bernard Lyon 1 University France | Complete Guide to Studying at Lyon 1 University',
-    'keywords' => 'Lyon 1 University, Claude Bernard Lyon 1 University, top French universities, French universities, Lyon universities, study in France, study at Lyon 1 University, best French universities, Lyon 1 University ranking, Lyon 1 University programs, Lyon 1 University facilities, Lyon 1 University admission, Lyon 1 University tuition, student life Lyon',
-    'description' => 'Looking to study at one of Europe\'s leading universities in life sciences and medicine? Claude Bernard Lyon 1 University offers exceptional opportunities with its brilliant track record and innovative approach to scientific research. With over 47,000 students, this university provides a dynamic and international environment for learning, research, and advancement in various fields of life sciences, medicine, dentistry, and pharmacy.',
+    'title' => 'Guide to Claude Bernard Lyon 1 University | Science & Health 2026',
+    'keywords' => 'Claude Bernard Lyon 1, Lyon 1 University, study science France 2026, medical school Lyon, engineering degrees Lyon, international student Life Lyon 1, STEM education France, Lyon 1 admission 2026',
+    'description' => 'Aspiring to study Science or Medicine in France? Explore Claude Bernard Lyon 1 University. Get the 2026 guide on programs, research impact, and life on the La Doua campus.',
 
-    // Page Content
+    // Page Title Area
     'main_heading' => 'Claude Bernard Lyon 1 University',
     'breadcrumb_home' => 'Home',
-    'breadcrumb_universities' => 'Top French Universities',
-    'breadcrumb_current' => 'Claude Bernard Lyon 1 University',
+    'breadcrumb_universities' => 'French Partner Universities',
+    'breadcrumb_current' => 'Claude Bernard Lyon 1',
 
-    // Sidebar Content
-    'table_of_contents' => 'Table of Contents',
-    'contact_us' => 'Contact Us',
-    'useful_links' => 'Useful Links',
-    'consultation_request' => 'Request Educational Immigration Consultation to France',
-    'official_website' => 'Official Claude Bernard Lyon 1 University Website',
-    'wikipedia_link' => 'Claude Bernard Lyon 1 University on Wikipedia',
+    // Sidebar
+    'table_of_contents' => 'Explore This Page',
+    'contact_us' => 'Chat with our Team',
+    'consultation_request' => 'Launch Your 2026 Scientific Career',
+    'useful_links' => 'Resource Center',
+    'official_website' => 'Official University Portal',
+    'wikipedia_link' => 'Wikipedia Information',
     'lyon_city_guide' => 'Lyon City Guide',
 
     // Main Content
-    'page_title' => 'Claude Bernard Lyon 1 University: Hub of Innovation and Higher Education',
-    'history_title' => 'History and Foundation of Claude Bernard Lyon 1 University',
-    'history_paragraph_1' => 'Lyon 1 University (Université Claude Bernard Lyon 1) is one of France\'s most prestigious and leading universities, formed in 1971 through the merger of several universities in the Lyon region. With over 47,000 students across various academic levels, it is recognized as one of France\'s largest universities.',
-    'history_paragraph_2' => 'Lyon 1 University takes its name from the distinguished French physiologist Claude Bernard, who specialized in scientific and technological fields, medicine, and sports sciences. Since 2009, this university operates independently and in 2020 managed an annual budget of over 420 million euros and employed more than 2,857 faculty members.',
+    'page_title' => 'Claude Bernard Lyon 1: A Powerhouse of Science and Health in Lyon',
 
-    'ranking_title' => 'Global Ranking of Lyon 1 University',
-    'ranking_paragraph' => 'Lyon 1 University has consistently maintained a strong presence in global university rankings. In the QS 2022 ranking, the university was placed 175th among the world\'s top universities, and in the Times Higher Education 2023 ranking, it was ranked 155th among the world\'s top universities.',
+    'intro_content' => 'Claude Bernard Lyon 1 University stands as a premier European institution dedicated to Science, Technology, and Health. Named after the legendary physiologist, it is the home to over 47,000 students and a driving force behind major scientific breakthroughs. For the 2026 intake, Lyon 1 continues to offer world-class laboratory access and a dynamic academic environment.',
 
-    'facilities_title' => 'Educational and Research Facilities at Claude Bernard Lyon 1 University',
-    'facilities_paragraph_1' => 'Lyon 1 University offers a wide range of academic programs at undergraduate, master\'s, and doctoral levels. The university also has several faculties and specialized schools that provide higher education in specific fields such as natural sciences, life sciences, medical sciences, engineering sciences, information sciences, sports sciences, law, economics, management, and political science.',
-    'facilities_paragraph_2' => 'In addition to quality education, Lyon 1 University strongly focuses on scientific research. The university has several advanced research laboratories operating in various fields of basic sciences, science and technology, and sports sciences.',
+    'global_leader_title' => 'Innovation at the Heart of Education',
+    'global_leader_content' => 'Lyon 1 is widely recognized for its high-impact research and its commitment to technological advancement. Here’s why it’s a global leader for 2026:
+- **STEM Excellence**: Ranked among the top universities in France for Life Sciences and Chemistry.
+- **Medical Hub**: Home to prestigious programs in Medicine, Pharmacy, and Odontology.
+- **Corporate Synergy**: Deep ties with major industries, providing students with unique internship and research projects.
 
-    'iranian_students_title' => 'Study Conditions for Iranian Students at Claude Bernard Lyon 1 University',
-    'iranian_students_paragraph_1' => 'Iranian students must have a valid French language certificate to study at Lyon 1 University. Additionally, applicants must translate and certify their academic documents when applying for admission to this university.',
-    'iranian_students_paragraph_2' => 'Iranian applicants must also obtain a student visa to study in France. To apply for a student visa, applicants must provide various documents, such as a university acceptance letter, proof of financial capability, and health insurance.',
+At Lyon 1, your education is built on the latest scientific discoveries.',
 
-    'tuition_title' => 'Tuition and Study Costs at Claude Bernard Lyon 1 University',
-    'tuition_paragraph' => 'Tuition fees for international students at Lyon 1 University are equal to those for French citizens. The total cost of education (direct and indirect costs) for four-year programs in the new academic year is set at approximately $45,144.',
+    'programs_title' => 'Leading-Edge Scientific Programs',
+    'programs_content' => 'Our departments offer specialized training designed for the scientists and healthcare professionals of tomorrow:',
+    'subjects' => [
+        'Medicine, Dentistry, and Pharmacy',
+        'Biology and Life Sciences',
+        'Chemistry, Physics, and Earth Sciences',
+        'Mathematics, Computer Science, and Engineering',
+        'Sports Sciences (STAPS)',
+    ],
 
-    'career_opportunities_title' => 'Career Opportunities After Graduating from Claude Bernard Lyon 1 University',
-    'career_opportunities_paragraph_1' => 'Lyon 1 University graduates enjoy excellent career opportunities. The university has strong relationships with employers worldwide and helps its graduates find employment.',
-    'career_opportunities_paragraph_2' => 'Lyon 1 University also assists its graduates in research fields. The university has several entrepreneurship centers that help graduates start their own businesses.',
+    'research_title' => 'Research That Shapes the Future',
+    'research_content' => 'Research is the lifeblood of Lyon 1. With over 60 research units, our scientists are tackling global issues from cancer treatment and neurosciences to biodiversity and quantum physics. Students are encouraged to participate in research projects from the early stages of their academic journey.',
 
-    'multicultural_environment_title' => 'Multicultural Environment and Welfare Facilities',
-    'multicultural_environment_paragraph' => 'Lyon 1 University is a multicultural environment with students from over 100 countries. The university also has many welfare facilities for international students, such as study halls, cafeterias, cultural centers, and well-equipped libraries.',
+    'admission_title' => 'Join the 2026 Scientific Intake',
+    'admission_content' => 'Admission into Lyon 1 programs is merit-based. For 2026, international candidates should demonstrate strong academic backgrounds in their chosen field. A B2 level in French is generally required, though some specialized Master and PhD programs offer English-taught modules. Early application through "Études en France" is highly recommended.',
 
-    'conclusion_title' => 'Final Words',
-    'conclusion_paragraph' => 'Lyon 1 University is an excellent university for international students who want to study in France. The university offers high-quality education, excellent welfare facilities, numerous career opportunities for graduates, and a multicultural environment. If you are an Iranian student looking to study in France, Lyon 1 University would be an excellent choice for you.',
+    'career_title' => 'Your Bridge to the Global STEM Market',
+    'career_content' => 'Lyon 1 graduates are highly sought after by global research institutes, pharmaceutical giants, and tech companies. The university’s strong ecosystem of innovation ensures that you are prepared for a high-impact professional career anywhere in the world.',
+
+    'environment_title' => 'The Vibrant La Doua Science Campus',
+    'environment_content' => 'Experience one of Europe\'s most innovative science hubs. Lyon 1 offers an incredible campus life across several locations:',
+    'campuses' => [
+        'The La Doua Science & Technology Campus (Villeurbanne)',
+        'Rockefeller Medical Campus (East Lyon)',
+        'Lyon Sud Medical Campus (Innovation in Health)',
+        'Extensive Sports Complexes and Research Libraries',
+    ],
+
+    'conclusion_title' => 'Catalyze Your Future at Lyon 1',
+    'conclusion_content' => 'Choosing Claude Bernard Lyon 1 means choosing a future at the forefront of science and health. We are ready to help you navigate the 2026 admission process and welcome you to the innovative heart of Lyon.',
 
     // Features List
-    'prestigious_history' => 'Prestigious History',
-    'diverse_specializations' => 'Diverse Specializations',
-    'international_environment' => 'International Educational Environment',
-    'modern_facilities' => 'Modern Facilities and Equipment',
-    'cutting_edge_research' => 'Cutting-edge Research',
+    'features' => [
+        'Top-Ranked University for Science and Technology in France',
+        'Leading Medical and Pharmaceutical Faculty in the Region',
+        'Direct Access to 60+ Elite Research Units',
+        'Innovative "La Doua" Science Hub Environment',
+        'Strong Partnerships with Global Tech & Bio-Health Leaders',
+    ],
 
     // Contact Form
-    'ask_question' => 'Ask a Question',
-    'name_placeholder' => 'Your Name',
-    'email_placeholder' => 'Your Email',
-    'phone_placeholder' => 'Your Phone',
-    'subject_placeholder' => 'Subject',
-    'message_placeholder' => 'Your Message',
-    'send_message' => 'Send Message',
-    'name_error' => 'Please enter your name',
-    'email_error' => 'Please enter your email',
-    'phone_error' => 'Please enter your phone',
-    'subject_error' => 'Please enter your subject',
-    'message_error' => 'Please enter your message',
+    'ask_question' => 'Got Questions for our Science Advisors?',
+    'name_placeholder' => 'Enter your full name',
+    'email_placeholder' => 'Your contact email',
+    'phone_placeholder' => 'Phone number (inc. country code)',
+    'subject_placeholder' => 'Select your area of interest',
+    'message_placeholder' => 'Ask us about STEM programs, medical admission, or the 2026 application steps...',
+    'send_message' => 'Connect with an Advisor',
+    'name_error' => 'Please provide your name.',
+    'email_error' => 'A valid email is required.',
+    'phone_error' => 'Please provide a valid phone number.',
+    'subject_error' => 'Please pick a subject.',
+    'message_error' => 'Please type your message.',
+
+    // JSON-LD Schema
+    'schema_headline' => 'Study at Claude Bernard Lyon 1: Your 2026 Science Guide',
+    'schema_description' => 'A student-centric guide to Claude Bernard Lyon 1 University. Explore 2026 programs in Science, Health, and Engineering. Start your application today.',
+    'schema_author' => 'A.V.C - Navigating Your Academic Future in France',
+
+    // FAQ Section
+    'faq_title' => 'Global Inquiries',
+    'faq_subtitle' => 'Answers for Future Lyon 1 Scientists',
+    'faq_items' => [
+        [
+            'question' => 'Is Lyon 1 prestige in Medicine?',
+            'answer' => 'Yes, it is one of the most respected medical schools in France. It has deep connections with the Hospices Civils de Lyon, providing exceptional clinical training.',
+        ],
+        [
+            'question' => 'Where is the main science campus located?',
+            'answer' => 'The primary Science and Technology campus is located at "La Doua" in Villeurbanne, which is just a short tram ride from Lyon city center.',
+        ],
+        [
+            'question' => 'What level of French is needed for science programs?',
+            'answer' => 'For most Bachelor programs, a B2 level is required. Some Master programs may accept B2, but competitive STEM and Health programs often prefer a C1 level.',
+        ],
+        [
+            'question' => 'Are there research opportunities for international students?',
+            'answer' => 'Absolutely. Lyon 1 is a research-intensive university. International students are often integrated into research labs for their internships or PhD projects.',
+        ],
+        [
+            'question' => 'How is the student life at the La Doua campus?',
+            'answer' => 'La Doua is a vibrant city-within-a-city. It features hundreds of student associations, modern libraries, several sports complexes, and a high concentration of student housing.',
+        ],
+    ],
 ];

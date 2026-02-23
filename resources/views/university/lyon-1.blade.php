@@ -20,7 +20,9 @@
 
 @section('useful_links')
     <div class="sidebar-widget p-4 rounded-5 shadow-sm bg-white mb-4 border-0">
-        <h4 class="widget-title h5 fw-bold mb-3 border-bottom pb-2">{{ __('university/lyon-1.useful_links') }}</h4>
+        <h4 class="widget-title h5 fw-bold mb-3 border-bottom pb-2">
+            {{ __('university/lyon-1.useful_links') }}
+        </h4>
         <ul class="list-unstyled mb-0">
             <li class="mb-2">
                 <a href="https://www.univ-lyon1.fr/" target="_blank" class="d-flex align-items-center text-decoration-none">
@@ -51,14 +53,10 @@
 
     <div class="single-services-imgs mb-4">
         <img src="{{asset("assets/img/universities/Lyon1/lyon_1_university.webp")}}"
-            alt="{{ __('university/lyon-1.title') }}" class="rounded-4 shadow-sm w-100">
+            alt="{{ __('university/lyon-1.page_title') }}" class="rounded-4 shadow-sm w-100">
     </div>
 
-    <section class="mb-5">
-        <h3 class="h4 fw-bold mb-3">{{ __('university/lyon-1.history_title') }}</h3>
-        <p class="text-muted">{{ __('university/lyon-1.history_paragraph_1') }}</p>
-        <p class="text-muted">{{ __('university/lyon-1.history_paragraph_2') }}</p>
-    </section>
+    <p class="lead text-muted mb-4">{{ __('university/lyon-1.intro_content') }}</p>
 
     <div class="map-container mb-5 rounded-4 overflow-hidden shadow-sm">
         <iframe
@@ -68,89 +66,92 @@
     </div>
 
     <section class="mb-5">
-        <h3 class="h4 fw-bold mb-3">{{ __('university/lyon-1.ranking_title') }}</h3>
-        <p class="text-muted">{{ __('university/lyon-1.ranking_paragraph') }}</p>
+        <h3 class="h4 fw-bold mb-3">{{ __('university/lyon-1.global_leader_title') }}</h3>
+        <p class="text-muted">{{ __('university/lyon-1.global_leader_content') }}</p>
     </section>
 
     <section class="mb-5">
-        <h3 class="h4 fw-bold mb-3">{{ __('university/lyon-1.facilities_title') }}</h3>
-        <p class="text-muted">{{ __('university/lyon-1.facilities_paragraph_1') }}</p>
-        <p class="text-muted">{{ __('university/lyon-1.facilities_paragraph_2') }}</p>
+        <h3 class="h4 fw-bold mb-3">{{ __('university/lyon-1.programs_title') }}</h3>
+        <p class="text-muted mb-3">{{ __('university/lyon-1.programs_content') }}</p>
+        <ul class="list-group list-group-flush mb-4">
+            @foreach(__('university/lyon-1.subjects') as $subject)
+                <li class="list-group-item bg-transparent px-0 py-2 border-0 d-flex align-items-center">
+                    <i class="bx bx-check-circle text-primary me-2"></i>
+                    <span>{{ $subject }}</span>
+                </li>
+            @endforeach
+        </ul>
     </section>
 
     <div class="rooms-details mb-5">
         <img src="{{asset("assets/img/universities/Lyon1/lyon_1_university_1.webp")}}"
-            alt="{{ __('university/lyon-1.title') }}" class="rounded-4 shadow-sm w-100">
+            alt="{{ __('university/lyon-1.page_title') }}" class="rounded-4 shadow-sm w-100">
     </div>
 
-    <section class="mb-4">
-        <h3 class="h4 fw-bold mb-3">{{ __('university/lyon-1.iranian_students_title') }}</h3>
-        <p class="text-muted mb-4">{{ __('university/lyon-1.iranian_students_paragraph_1') }}</p>
-        <p class="text-muted mb-4">{{ __('university/lyon-1.iranian_students_paragraph_2') }}</p>
-
-        <h3 class="h4 fw-bold mb-3">{{ __('university/lyon-1.tuition_title') }}</h3>
-        <p class="text-muted mb-4">{{ __('university/lyon-1.tuition_paragraph') }}</p>
-
-        <h3 class="h4 fw-bold mb-3">{{ __('university/lyon-1.career_opportunities_title') }}</h3>
-        <p class="text-muted mb-4">{{ __('university/lyon-1.career_opportunities_paragraph_1') }}</p>
-        <p class="text-muted mb-4">{{ __('university/lyon-1.career_opportunities_paragraph_2') }}</p>
-
-        <h3 class="h4 fw-bold mb-3">{{ __('university/lyon-1.multicultural_environment_title') }}</h3>
-        <p class="text-muted mb-4">{{ __('university/lyon-1.multicultural_environment_paragraph') }}</p>
-
-        <h3 class="h4 fw-bold mb-3">{{ __('university/lyon-1.conclusion_title') }}</h3>
-        <p class="text-muted mb-5">{{ __('university/lyon-1.conclusion_paragraph') }}</p>
+    <section class="mb-5">
+        <h3 class="h4 fw-bold mb-3">{{ __('university/lyon-1.research_title') }}</h3>
+        <p class="text-muted">{{ __('university/lyon-1.research_content') }}</p>
     </section>
 
-    <div class="car-service-list-wrap p-4 rounded-5 bg-light border-0">
+    <section class="mb-5">
+        <h3 class="h4 fw-bold mb-3">{{ __('university/lyon-1.admission_title') }}</h3>
+        <p class="text-muted">{{ __('university/lyon-1.admission_content') }}</p>
+    </section>
+
+    <section class="mb-5">
+        <h3 class="h4 fw-bold mb-3">{{ __('university/lyon-1.career_title') }}</h3>
+        <p class="text-muted">{{ __('university/lyon-1.career_content') }}</p>
+    </section>
+
+    <section class="mb-5">
+        <h3 class="h4 fw-bold mb-3">{{ __('university/lyon-1.environment_title') }}</h3>
+        <p class="text-muted mb-3">{{ __('university/lyon-1.environment_content') }}</p>
+        <div class="row g-3">
+            @foreach(__('university/lyon-1.campuses') as $campus)
+                <div class="col-md-6">
+                    <div class="p-3 rounded-4 bg-light border-0 h-100 d-flex align-items-center">
+                        <i class="bx bx-buildings text-primary me-2 fs-5"></i>
+                        <span class="small fw-medium">{{ $campus }}</span>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    </section>
+
+    <section class="mb-5">
+        <h3 class="h4 fw-bold mb-3">{{ __('university/lyon-1.conclusion_title') }}</h3>
+        <p class="text-muted">{{ __('university/lyon-1.conclusion_content') }}</p>
+    </section>
+
+    <div class="car-service-list-wrap p-4 rounded-5 bg-primary-subtle border-0 mb-5">
         <div class="row align-items-center">
             <div class="col-lg-4 text-center mb-4 mb-lg-0">
                 <img src="{{asset("assets/img/universities/Lyon1/lyon_1_logo.webp")}}"
-                    alt="{{ __('university/lyon-1.title') }}" style="max-width: 150px;" class="img-fluid">
+                    alt="{{ __('university/lyon-1.page_title') }}" style="max-width: 150px;" class="img-fluid">
             </div>
             <div class="col-lg-8">
                 <div class="row g-2">
-                    <div class="col-md-6">
-                        <div class="d-flex align-items-center small text-muted mb-2">
-                            <i class='bx bx-check text-primary me-2'></i>
-                            <span>{{ __('university/lyon-1.prestigious_history') }}</span>
+                    @foreach(__('university/lyon-1.features') as $feature)
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-start small text-primary-emphasis">
+                                <i class='bx bx-check-double me-2 mt-1'></i>
+                                <span>{{ $feature }}</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="d-flex align-items-center small text-muted mb-2">
-                            <i class='bx bx-check text-primary me-2'></i>
-                            <span>{{ __('university/lyon-1.diverse_specializations') }}</span>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="d-flex align-items-center small text-muted mb-2">
-                            <i class='bx bx-check text-primary me-2'></i>
-                            <span>{{ __('university/lyon-1.international_environment') }}</span>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="d-flex align-items-center small text-muted mb-2">
-                            <i class='bx bx-check text-primary me-2'></i>
-                            <span>{{ __('university/lyon-1.modern_facilities') }}</span>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="d-flex align-items-center small text-muted mb-2">
-                            <i class='bx bx-check text-primary me-2'></i>
-                            <span>{{ __('university/lyon-1.cutting_edge_research') }}</span>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
     </div>
+    <x-sections.faq :title="__('university/lyon-1.faq_title')" :subtitle="__('university/lyon-1.faq_subtitle')"
+        :items="__('university/lyon-1.faq_items')" id="lyon1-faq" />
 @endsection
 
 @push("json")
     @php
         $currentLocale = app()->getLocale();
-        $pageUrl = url($currentLocale.'/universities/lyon-1');
-        $universityId = $pageUrl.'#university';
+        $pageUrl = url($currentLocale . '/universities/lyon-1');
+        $universityId = $pageUrl . '#university';
         $officialUrl = 'https://www.univ-lyon1.fr/';
 
         $webPage = new \App\Services\StructuredData\WebPageSchema(
@@ -164,9 +165,9 @@
 
         $university = new \App\Services\StructuredData\UniversitySchema(
             $universityId,
-            __('universities.lyon_1_name'),
+            __('university/lyon-1.breadcrumb_current'),
             $officialUrl,
-            __('university/lyon-1.introduction_content'),
+            __('university/lyon-1.schema_description'),
             asset('assets/img/universities/Lyon1/lyon_1_logo.webp'),
             [
                 $officialUrl,
@@ -175,8 +176,8 @@
         );
 
         $breadcrumb = \App\Services\StructuredData\BreadcrumbSchema::fromArray([
-            ['name' => __('layout.home') ?? 'Home', 'url' => url($currentLocale.'/')],
-            ['name' => __('universities.breadcrumb_universities'), 'url' => url($currentLocale.'/universities')],
+            ['name' => __('layout.home') ?? 'Home', 'url' => url($currentLocale . '/')],
+            ['name' => __('universities.breadcrumb_universities') ?? 'Universities', 'url' => url($currentLocale . '/universities')],
             ['name' => __('university/lyon-1.breadcrumb_current'), 'url' => $pageUrl],
         ]);
     @endphp
