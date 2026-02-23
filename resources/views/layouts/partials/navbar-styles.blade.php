@@ -6,12 +6,33 @@
         --secondary-teal: #5EC7D3;
         --text-dark: #0F3A80;
         --text-white: #ffffff;
-        --glass-bg: rgba(255, 255, 255, 0.85);
-        --glass-border: rgba(255, 255, 255, 0.6);
-        --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+        --glass-bg: rgba(255, 255, 255, 0.75);
+        --glass-border: rgba(255, 255, 255, 0.5);
+        --glass-shadow: 0 8px 32px 0 rgba(15, 58, 128, 0.15);
     }
 
-    /* Navbar Layout & Glassmorphism */
+    /* Force transparent backgrounds on all nav wrappers and states with high specificity to override !important rules in style-ltr.css */
+    body .eorik-nav-style,
+    body .eorik-nav-style-four,
+    body .eorik-nav-style .navbar,
+    body .eorik-nav-style-four .navbar,
+    body .eorik-nav-style .main-nav,
+    body .eorik-nav-style-four .main-nav,
+    body .eorik-nav-style .navbar-area .main-nav,
+    body .eorik-nav-style-four .navbar-area .main-nav,
+    body .eorik-nav-style.is-sticky,
+    body .eorik-nav-style-four.is-sticky,
+    body .navbar-area.is-sticky .main-nav,
+    body .eorik-nav-style .navbar-area.is-sticky .main-nav,
+    body .eorik-nav-style-four .navbar-area.is-sticky .main-nav {
+        background: transparent !important;
+        background-color: transparent !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        box-shadow: none !important;
+        border: none !important;
+    }
+
     .eorik-nav-style-four {
         transition: all 0.4s ease;
         position: fixed;
@@ -22,8 +43,9 @@
     }
 
     .navbar-area {
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
+        background: var(--glass-bg);
+        backdrop-filter: blur(16px) saturate(180%);
+        -webkit-backdrop-filter: blur(16px) saturate(180%);
         border: 1px solid var(--glass-border);
         box-shadow: var(--glass-shadow);
         transition: all 0.4s ease;
@@ -40,7 +62,12 @@
     }
 
     .eorik-nav-style-four.is-sticky .navbar-area {
+        background: rgba(255, 255, 255, 0.9) !important;
+        backdrop-filter: blur(20px) saturate(200%);
+        -webkit-backdrop-filter: blur(20px) saturate(200%);
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        border-radius: 50px;
     }
 
     /* Navbar Links */
