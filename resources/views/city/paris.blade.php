@@ -51,7 +51,16 @@
     </div>
 
     <section class="mb-5">
-        <h3 class="h4 fw-bold mb-3">{{ __('city/paris.history_heading') }}</h3>
+        <h3 class="h4 fw-bold mb-3">{{ __('city/paris.student_life_heading') }}</h3>
+        <p>{{ __('city/paris.student_life_paragraph') }}</p>
+
+        <h3 class="h4 fw-bold mt-4 mb-3">{{ __('city/paris.family_life_heading') }}</h3>
+        <p>{{ __('city/paris.family_life_paragraph') }}</p>
+
+        <h3 class="h4 fw-bold mt-4 mb-3">{{ __('city/paris.lifestyle_heading') }}</h3>
+        <p>{{ __('city/paris.lifestyle_paragraph') }}</p>
+
+        <h3 class="h4 fw-bold mt-4 mb-3">{{ __('city/paris.history_heading') }}</h3>
         <p>{{ __('city/paris.history_paragraph') }}</p>
 
         <h3 class="h4 fw-bold mt-4 mb-3">{{ __('city/paris.climate_heading') }}</h3>
@@ -147,25 +156,25 @@
                     <div class="col-md-6">
                         <div class="d-flex align-items-start small text-muted">
                             <i class='bx bx-check-circle text-primary me-2 mt-1'></i>
-                            <span>{{ __('city/paris.intro_heading') }}</span>
+                            <span>{{ __('city/paris.student_life_heading') }}</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-start small text-muted">
+                            <i class='bx bx-check-circle text-primary me-2 mt-1'></i>
+                            <span>{{ __('city/paris.family_life_heading') }}</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-start small text-muted">
+                            <i class='bx bx-check-circle text-primary me-2 mt-1'></i>
+                            <span>{{ __('city/paris.lifestyle_heading') }}</span>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="d-flex align-items-start small text-muted">
                             <i class='bx bx-check-circle text-primary me-2 mt-1'></i>
                             <span>{{ __('city/paris.study_heading') }}</span>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="d-flex align-items-start small text-muted">
-                            <i class='bx bx-check-circle text-primary me-2 mt-1'></i>
-                            <span>{{ __('city/paris.living_costs_heading') }}</span>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="d-flex align-items-start small text-muted">
-                            <i class='bx bx-check-circle text-primary me-2 mt-1'></i>
-                            <span>{{ __('city/paris.tourism_heading') }}</span>
                         </div>
                     </div>
                 </div>
