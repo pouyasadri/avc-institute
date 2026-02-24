@@ -86,7 +86,16 @@
     </div>
 
     <section class="mb-5">
-        <h3 class="h4 fw-bold mb-3">{{ __('city/lyon.history_heading') }}</h3>
+        <h3 class="h4 fw-bold mb-3">{{ __('city/lyon.student_life_heading') }}</h3>
+        <p>{{ __('city/lyon.student_life_paragraph') }}</p>
+
+        <h3 class="h4 fw-bold mt-4 mb-3">{{ __('city/lyon.family_life_heading') }}</h3>
+        <p>{{ __('city/lyon.family_life_paragraph') }}</p>
+
+        <h3 class="h4 fw-bold mt-4 mb-3">{{ __('city/lyon.lifestyle_heading') }}</h3>
+        <p>{{ __('city/lyon.lifestyle_paragraph') }}</p>
+
+        <h3 class="h4 fw-bold mt-4 mb-3">{{ __('city/lyon.history_heading') }}</h3>
         <p>{{ __('city/lyon.history_paragraph') }}</p>
 
         <h3 class="h4 fw-bold mt-4 mb-3">{{ __('city/lyon.climate_heading') }}</h3>
@@ -183,25 +192,25 @@
                     <div class="col-md-6">
                         <div class="d-flex align-items-start small text-muted">
                             <i class='bx bx-check-circle text-primary me-2 mt-1'></i>
-                            <span>{{ __('city/lyon.intro_heading') }}</span>
+                            <span>{{ __('city/lyon.student_life_heading') }}</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-start small text-muted">
+                            <i class='bx bx-check-circle text-primary me-2 mt-1'></i>
+                            <span>{{ __('city/lyon.family_life_heading') }}</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-start small text-muted">
+                            <i class='bx bx-check-circle text-primary me-2 mt-1'></i>
+                            <span>{{ __('city/lyon.lifestyle_heading') }}</span>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="d-flex align-items-start small text-muted">
                             <i class='bx bx-check-circle text-primary me-2 mt-1'></i>
                             <span>{{ __('city/lyon.study_heading') }}</span>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="d-flex align-items-start small text-muted">
-                            <i class='bx bx-check-circle text-primary me-2 mt-1'></i>
-                            <span>{{ __('city/lyon.living_costs_heading') }}</span>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="d-flex align-items-start small text-muted">
-                            <i class='bx bx-check-circle text-primary me-2 mt-1'></i>
-                            <span>{{ __('city/lyon.tourism_heading') }}</span>
                         </div>
                     </div>
                 </div>
