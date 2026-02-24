@@ -2,177 +2,120 @@
 
 return [
     // SEO Meta
-    'title' => 'Strasbourg: Crossroads of Europe | Guide to Beautiful and Most Visited French Cities',
-    'keywords' => 'Strasbourg, Strasbourg city, Strasbourg tourist attractions, Strasbourg history, Strasbourg culture, Strasbourg historical, Strasbourg cultural, Strasbourg international, immigration to Strasbourg, study in Strasbourg, study in France, real estate in Strasbourg',
-    'description' => 'Discover Strasbourg in 2026 - the vibrant "Capital of Europe" where French charm meets international opportunity. Explore world-class universities, affordable student living, and a multicultural lifestyle in this historic Alsatian city. Your gateway to European education and career success starts here.',
+    'title' => 'Life in Strasbourg 2026: Student, Family, and European Career Guide | A.V.C',
+    'keywords' => 'Strasbourg city guide 2026, study in Strasbourg, student life Strasbourg, family life Strasbourg, cost of living Strasbourg, job opportunities Strasbourg, immigration France, European Parliament jobs',
+    'description' => 'Discover Strasbourg in 2026 – the vibrant "Capital of Europe" where French charm meets international career opportunities. Explore our humanized guide to student life, multicultural family growth, and professional success in the heart of Alsace.',
 
     // Page Content
-    'main_heading' => 'Introduction to Strasbourg',
+    'main_heading' => 'Strasbourg: Your European Gateway in 2026',
     'breadcrumb_home' => 'Home',
-    'breadcrumb_cities' => 'Most Beautiful and Most Visited French Cities',
+    'breadcrumb_cities' => 'French Cities',
     'breadcrumb_strasbourg' => 'Strasbourg',
 
     // Sidebar Content
-    'table_of_contents' => 'Table of Contents',
-    'contact_us' => 'Contact Us',
-    'consultation_request' => 'Request consultation for study immigration to France',
-    'useful_links' => 'Useful Links',
+    'table_of_contents' => 'What’s Inside',
+    'contact_us' => 'Let’s Talk Strasbourg',
+    'ask_question' => 'Ask a Question',
+    'consultation_request' => 'Start your European journey with our experts',
+    'email' => 'Email',
+    'useful_links' => 'The Strasbourg Toolkit',
     'strasbourg_wikipedia' => 'Strasbourg - Wikipedia',
 
     // Main Content
-    'intro_heading' => 'Strasbourg, Capital of Europe: A City with French Authenticity and International Spirit',
-    'intro_paragraph' => 'Welcome to Strasbourg - where European dreams come to life! Nestled in eastern France, this captivating city isn\'t just another French destination; it\'s where cultures blend, opportunities flourish, and international students thrive. Imagine studying in a city that hosts the European Parliament, cycling through medieval streets, and enjoying a quality of life that won\'t break the bank. Whether you\'re planning to study, work, or simply explore, Strasbourg offers the perfect blend of French authenticity and international spirit. Ready to start your journey? Let\'s explore what makes this city so special!',
+    'intro_heading' => 'Welcome to Your European Chapter',
+    'intro_paragraph' => 'Strasbourg in 2026 is much more than a historic French city; it is a living symbol of a united Europe. Nestled on the border with Germany, it offers a unique "Franco-German" soul where canals, half-timbered houses, and futuristic European institutions coexist in perfect harmony. Whether you are coming to master European Law, launch a career in international diplomacy, or raise a family in a multicultural, bike-friendly environment, Strasbourg welcomes you with open arms and a global spirit. It is the city where you can have breakfast in France and be in Germany by lunchtime—a true crossroads of opportunity.',
 
-    // Section: Language
-    'language_heading' => 'Language in Strasbourg',
-    'language_paragraph' => 'This large border city is actually an international European area where people are engaged in commerce and tourism, and members of the European Parliament as well as journalists from across Europe have a permanent presence here. So you should not have any problem speaking English, although it will be very beneficial if you know a few words of French to win their hearts and show respect for their customs.',
+    // Section: Student Life
+    'student_life_heading' => 'A Multicultural Student Hub',
+    'student_life_paragraph' => 'Life as a student in Strasbourg is an international adventure. With over 60,000 students and a campus that flows into the heart of the city, you are never far from the action. Imagine studying in the historic "Palais Universitaire" and spending your afternoons cycling through the "Petite France" district. The city is famous for being incredibly bike-friendly and affordable. From the "Pass Campus" discounts to the vibrant nightlife on boat-bars along the Ill river, Strasbourg offers a rich social fabric that helps international students integrate and build lifelong European networks almost instantly.',
 
-    // Section: Study
-    'study_heading' => 'Study in Strasbourg',
-    'study_paragraph' => 'Strasbourg hosts prestigious universities including Université de Strasbourg and École Nationale Supérieure d\'Ingénieurs de Strasbourg (ENSI Strasbourg). These universities offer educational programs in diverse fields including political science, law, engineering, basic sciences, business, and humanities. In addition to universities, Strasbourg has several higher educational institutions in the fields of business, management, and international relations. These institutions, with an international approach, provide appropriate opportunities for acquiring the skills needed in the global job market. To study in Strasbourg, having a French language certificate (such as TCF or TEF) is essential. Also, depending on the level of study, you may need to provide academic records, recommendation letters, and participate in entrance exams.',
+    // Section: Family Life
+    'family_life_heading' => 'Safe, Green, and Globally Minded',
+    'family_life_paragraph' => 'For families, Strasbourg is a dream realized. It is a city that prioritizes people over cars, boasting the largest bicycle network in France. Your children will grow up in a safe, nurturing environment with access to prestigious international schools and vast parks like the "Parc de l\'Orangerie," where storks—the city’s symbol of luck—nest in the treetops. The multicultural atmosphere ensures that your family will feel at home, while the high quality of public services and healthcare provides the peace of mind you need to focus on what matters most.',
+
+    // Section: Lifestyle
+    'lifestyle_heading' => 'The Alsace Harmony',
+    'lifestyle_paragraph' => 'Life in Strasbourg is about "L\'Art de Vivre" with an international twist. It is about the cozy "Winstubs"—traditional Alsatian taverns where world-class white wines meet hearty local cuisine. It is about the magical transformation of the city into the "Capital of Christmas" every December. But beyond the traditions, Strasbourg offers a modern, high-tech lifestyle. It is a place where you work on global issues in the European district during the day and disconnect in the quiet beauty of the Vosges mountains just a short train ride away. It is balance at its very best.',
+
+    // Section: History
+    'history_heading' => 'A Bridge Between Nations',
+    'history_paragraph' => 'From its Roman foundations as Argentoratum to its modern role as the seat of the European Parliament, Strasbourg has always been a bridge. Its history is written in the stones of its pink sandstone Cathedral and the "Traboules" of its medieval center. Having twice changed nationality between France and Germany, the city has emerged as a beacon of reconciliation and progress. To live in Strasbourg is to live inside a history book that is still being written by the leaders of today.',
+
+    // Section: Study in Strasbourg
+    'study_heading' => 'Educational Excellence for 2026',
+    'study_paragraph' => 'The University of Strasbourg is a world-class research powerhouse, home to multiple Nobel Prize winners and offering an incredibly diverse range of programs. In 2026, the focus is on multidisciplinary research, particularly in Biotechnology, European Law, and International Relations. Beyond the main university, the city hosts top-tier engineering and business schools, many offering English-taught programs designed for a global student body.',
 
     // Section: Universities
-    'universities_heading' => 'Universities of Strasbourg',
-    'universities_paragraph' => 'Strasbourg is home to one of the largest and most multidisciplinary universities in France, the University of Strasbourg, which attracts thousands of international students every year.',
-    'university_strasbourg' => 'University of Strasbourg',
-    'student_life' => 'Student life in Strasbourg is vibrant and multicultural, with numerous events, associations, and a very bicycle-friendly environment.',
-    'programs_heading' => 'Popular Study Programs',
-    'program_1' => 'Political Science and International Relations',
-    'program_2' => 'European Law',
-    'program_3' => 'Biotechnology and Life Sciences',
-    'program_4' => 'Medicine and Pharmacy',
-    'program_5' => 'Business and Management',
-    'program_6' => 'Engineering and Physics',
-    'program_7' => 'Architecture and Design',
-    'program_8' => 'Humanities and Social Sciences',
-    'program_9' => 'Languages and Intercultural Communication',
+    'universities_heading' => 'Elite Academic Institutions',
+    'universities_intro' => 'Strasbourg’s education system is integrated, innovative, and deeply connected to European institutions. Key destinations for 2026 include:',
+    'university_strasbourg' => 'University of Strasbourg (Unistra)',
+    'university_ensi' => 'ENSI Strasbourg (Engineering)',
+    'university_science_po' => 'Sciences Po Strasbourg',
 
-    // Section: Living Costs
-    // Section: Student Living Costs
-    'living_costs_heading' => 'Student Living Costs in Strasbourg',
-    'living_costs_paragraph' => 'Here\'s the good news: Strasbourg is genuinely affordable for students in 2026! Student housing ranges from €400-600 per month, and here\'s the best part - CAF (French housing assistance) covers up to 30-40% of your rent. Your monthly food budget? Around €150-200 if you shop smart at local markets and student-friendly supermarkets. Overall, expect to budget €800-1,100 monthly for a comfortable student lifestyle - significantly less than Paris or Lyon. Yes, some items cost a bit more due to proximity to Germany and Switzerland, but the quality of life you get in return is absolutely worth it. Want to know how to maximize your budget? <a href=":consult_url">Schedule a free consultation</a> with our experts who\'ve helped hundreds of students settle in Strasbourg!',
-
-    // Section: Housing
-    'housing_heading' => 'Housing in Strasbourg',
-    'housing_paragraph' => 'Finding accommodation in Strasbourg is easier than in Paris, but it is still advisable to start searching early. Many students opt for university dormitories or shared apartments (colocation) to reduce costs.',
-
-    // Section: Daily Life
-    'daily_life_heading' => 'Daily Life and Amenities',
-    'daily_life_paragraph' => 'Daily life in Strasbourg is characterized by a high quality of life, efficient public transport, and easy access to both nature and urban amenities. The city is very walkable and has the largest bicycle network in France.',
-
-    // Section: Climate
-    'climate_heading' => 'Climate in Strasbourg',
-    'climate_paragraph' => 'Since Strasbourg\'s climate is semi-continental with cold and dry winters accompanied by rain, and very hot summers and cool autumns and springs accompanied by rain, we can say the best time to visit Strasbourg is early summer. July with temperatures between 12 to 25 degrees Celsius will bring warm and sunny days for you and provides an excellent opportunity for walking around the city and open spaces.',
-
-    // Section: Transportation
-    'transportation_heading' => 'Transportation in Strasbourg',
-    'transportation_paragraph' => 'Public transportation in Strasbourg is mainly by tram, which with its futuristic appearance was inaugurated in 1994 and was very advanced for its time. A comprehensive bus network connecting this structure to the city is also supported. Also, we can say that this city is one of the most bicycle-oriented cities in the world, so it is definitely an ideal way to see the city by bike. If you are continuing your vacation in the Alsace area, renting a car is better, especially when you want to leave Strasbourg for surrounding cities. The city center with walking paths and trams has also become a popular tourist destination. A regional airport is located 15 kilometers southwest of the city.',
+    // Section: Strasbourg Climate
+    'climate_heading' => 'The Beauty of Continental Seasons',
+    'climate_paragraph' => 'Strasbourg features a continental climate that makes every season distinct. Winters are crisp and magical, perfectly setting the stage for the world-famous Christmas market. Summers are warm and sunny, ideal for boat trips on the canals and outdoor festivals. Autumn transforms the surrounding vineyards into a sea of gold, while Spring brings the city’s many parks into a vibrant floral life.',
 
     // Section: Tourism
-    'tourism_heading' => 'Tourism Attractions in Strasbourg',
-    'tourism_paragraph' => 'Strasbourg is the second most touristy city in France after Paris. This city has three main attractions. First, the Cathedral, second the French Cathedral which is the most famous after Notre-Dame in Paris. And the third attraction is the Old Town, which is a historic and beautiful area with half-timbered medieval houses and waterfront promenades overlooking the Rhine, as well as the Maison Kammerzell, and covered bridges that are as valuable as the Eiffel Tower for tourism in Paris. To visit the city and its main historic buildings, you should plan a two-day stay. If you intend to spend 3 days or more in this beautiful city, you will have enough time to explore the surrounding area. Since 2020, according to the official announcement of the local government, the city of Strasbourg has eleven municipal museums (including Aubette), eleven university museums, and at least two private museums (the Voodoo Museum and the Bar Museum). Five municipalities in urban areas also operate their own museums, three of which are dedicated to military history and France\'s wars with Prussia.',
-    'tourism_paragraph_2' => 'The European district, where institutions like the European Parliament are located, is also a major point of interest for visitors interested in politics and modern history.',
-
-    // Section: Christmas Attractions
-    'christmas_heading' => 'Christmas Attractions in Strasbourg',
-    'christmas_paragraph' => 'The Christmas Market or Christkindelsmärik, the Christ Child\'s Market, is the oldest and largest historical Christmas market in Europe and throughout December fills the old squares and streets around the Cathedral.',
-    'christmas_activities' => 'Below are some of the most important activities you can do:',
-    'christmas_activity_1' => 'Visit Strasbourg Cathedral',
-    'christmas_activity_2' => 'Stay in Little France',
-    'christmas_activity_3' => 'Walk in Golden Square',
-    'christmas_activity_4' => 'Visit Breuglé',
-    'christmas_activity_5' => 'Walk in Coulbourn Square',
-    'christmas_activity_6' => 'Visit Cathedral Square',
-    'christmas_activity_7' => 'Visit Miller Square',
-    'christmas_food_intro' => 'The best foods that we recommend you try in this city are:',
-    'christmas_food_1' => 'Pretzel',
-    'christmas_food_2' => 'Spaetzle',
-    'christmas_food_3' => 'Flammekuche',
-    'christmas_food_4' => 'Munster',
-    'christmas_food_5' => 'Sauerkraut',
-    'christmas_food_6' => 'Kugelhopf',
-    'christmas_food_7' => 'Traditional Wine',
-    'christmas_food_8' => 'Traditional Strasbourg Beer',
-    'christmas_food_conclusion' => 'Overall, Alsatians are people who love delicious food in the cozy atmosphere of modern and Alsatian restaurants with beautiful decorations and it is part of their lifestyle.',
-
-    // Section: Nightlife
-    'nightlife_heading' => 'Nightlife in Strasbourg',
-    'nightlife_paragraph' => 'Strasbourg is lively and memorable in terms of nightlife. If you were in Strasbourg, do not return to your hotel room after dinner. There are many things still to discover that are worth waking up a little late the next morning.',
-    'nightlife_activity_1' => 'Night boat rides',
-    'nightlife_activity_2' => 'Street theaters',
-    'nightlife_activity_3' => 'Evening opera performances',
-
-    // Section: Storks
-    'storks_heading' => 'Storks: Symbol of Fertility in Strasbourg as a Tourist Attraction',
-    'storks_paragraph' => 'It is not an everyday occurrence to see a stork\'s nest; you may have never seen several nests in a row where storks protect their eggs unless you are in Strasbourg. Storks are a symbol of Alsace and are said to bring luck and fertility. In fact, the legend of storks bringing babies originates from here. Overall, storks add a legendary feel to the trip to Strasbourg. To see these amazing views in the upper Strasbourg area near Parc de l\'Orangerie, take a walk to see many storks nesting among the leaves and branches of trees, on top of chimneys, and on rooftops.',
-
-    // Section: Traditional Industries
-    'industries_heading' => 'Traditional Industries',
-    'industry_1' => 'Tanning industries',
-    'industry_2' => 'Flour mill',
-    'industry_3' => 'Metalworking',
-    'industry_4' => 'Beer brewing',
-
-    // Section: Souvenirs
-    'souvenirs_heading' => 'Strasbourg Souvenirs',
-    'souvenirs_paragraph' => 'Strasbourg is large and has many shops and restaurants to explore, while at the same time small enough to maintain a pleasant rustic feeling. So, be sure to bring souvenirs from your stay in this unique Alsatian city. Alsatian symbols, stork dolls, and local Alsatian clothing are among the most authentic souvenirs of this region.',
+    'tourism_heading' => 'The Capital of Wonders',
+    'tourism_paragraph' => 'Strasbourg is a city that rewards the curious. From the towering spire of Notre-Dame Cathedral to the charming half-timbered houses of Petite France, the city is a visual masterpiece. In 2026, tourism in Strasbourg is focusing on sustainable "Slow Travel," encouraging visitors and residents alike to discover the city on foot or by bike.',
+    'tourism_items' => [
+        'Notre-Dame Cathedral: A Gothic masterpiece in pink sandstone.',
+        'Petite France: The most picturesque historic district on the water.',
+        'European Quarter: The architectural symbol of European democracy.',
+        'Maison Kammerzell: A stunning 15th-century carved wooden house.',
+        'Barrage Vauban: Offering panoramic views of the "Ponts Couverts".',
+        'Parc de l\'Orangerie: The city’s oldest and most beloved green lung.',
+    ],
+    'tourism_paragraph_2' => 'Beyond the city limits, the "Route des Vins d\'Alsace" (Wine Route) starts right at Strasbourg’s doorstep, offering endless opportunities for weekend escapes to fairytale villages and rolling vineyards.',
 
     // Section: Economy
-    'economy_heading' => 'Economy of Strasbourg',
-    'economy_paragraph' => 'This city plays a major role as a commercial, business, and cultural center on the border between France and Germany. In addition to its traditional role as the capital of Alsace, this city is the seat of several European institutions and bodies including the European Parliament, the Council of Europe, and the European Court of Human Rights.',
-    'economy_activities' => 'Current economic activities in Strasbourg include:',
-    'economy_activity_1' => 'Food processing',
-    'economy_activity_2' => 'Mechanical and electrical engineering center',
-    'economy_activity_3' => 'Pharmaceuticals',
-    'economy_activity_4' => 'Development of electronic processors',
-    'economy_activity_5' => 'Plastics',
-    'economy_conclusion' => 'There is also a large car assembly plant in the city\'s industrial port area. This port itself is one of the largest Rhine ports and oil, agricultural products, and building materials are transported through this route.',
+    'economy_heading' => 'The Heart of European Diplomacy & Tech',
+    'economy_paragraph_1' => 'Strasbourg’s economy is unique, blending high-level administrative functions with a booming high-tech sector. As the seat of the European Parliament, it is a global hub for diplomacy and law. Key sectors for 2026 include:',
+    'economy_companies' => [
+        'European Institutions & International Law',
+        'Medical Technologies & Bio-Health (Biovalley)',
+        'Sustainable Transport & Logistics (Rhine Port)',
+        'Creative Industries & Digital Arts',
+    ],
+    'economy_paragraph_2' => 'The city is a leader in cross-border cooperation, with thousands of people commuting between France and Germany daily. This creates a highly resilient and diverse economic ecosystem that is welcoming to international professionals.',
+
+    // Section: Living Costs
+    'living_costs_heading' => 'Smart Budgeting for 2026',
+    'living_costs_paragraph' => 'Strasbourg offers a high standard of living at a fraction of the cost found in other major European capitals. For students, a monthly budget of €850 to €1,150 is typically sufficient. Housing is accessible, with studios ranging from €450 to €700. Remember, international students are fully eligible for **CAF housing benefits**, often covering up to 40% of their rent. <a href=":consult_url"><strong>Request a free financial roadmap</strong></a> to plan your Strasbourg life.',
 
     // Section: Job Opportunities
-    'jobs_heading' => 'Job Opportunities in Strasbourg',
-    'jobs_paragraph' => 'Strasbourg is an important center for diplomacy and international affairs due to the presence of European institutions and international organizations. Also, the pharmaceutical, information technology, and tourism industries are thriving in this city. These factors provide suitable job opportunities for specialists with skills related to these fields. To work in France, having a work permit is mandatory. The conditions for obtaining a work permit vary depending on the type of position and the nationality of the individual.',
+    'job_heading' => 'Career Frontiers',
+    'job_paragraph_1' => 'Strasbourg is the ideal location for those aiming for careers in international organizations, pharmaceuticals, and environmental tech. The city’s dual-culture nature means that being bilingual (English/French) is a massive asset. With the "APS" post-study work permit, graduates from Strasbourg are highly sought after across the entire European market.',
+    'job_paragraph_2' => 'Our local experts help you navigate the Strasbourg job market, identifying opportunities within the European district and the growing "MedTech" clusters, while optimizing your profile for the French-German business environment.',
+
+    // Section: Visa
+    'visa_heading' => 'Your Path to the Heart of Europe',
+    'visa_paragraph' => 'Getting your visa is the key that unlocks your European future. Whether you need a student visa for the University of Strasbourg or a Talent Passport for a position at the Council of Europe, our team is here to ensure your application is flawless and fast.',
 
     // Section: Conclusion
-    'conclusion_heading' => 'Conclusion',
-    'conclusion_paragraph' => 'Strasbourg isn\'t just a city - it\'s your launchpad to European success! With its perfect blend of academic excellence, affordable living, rich culture, and international career opportunities, this "Capital of Europe" offers everything you need to thrive. From world-renowned universities to vibrant student life, from medieval charm to modern innovation, Strasbourg has it all. Thousands of international students have already discovered what makes this city special. Now it\'s your turn! Ready to make Strasbourg your new home? <strong><a href=":consult_url">Book your personalized consultation today</a></strong> and let our immigration experts guide you through every step - from university applications to visa processing and settling in. Your European adventure starts with one click!',
-
-    // Form Labels
-    'ask_question' => 'Ask a Question',
-    'form_name' => 'Your Name',
-    'form_email' => 'Your Email',
-    'form_phone' => 'Your Phone',
-    'form_subject' => 'Subject',
-    'form_message' => 'Your Message',
-    'form_send' => 'Send Message',
-    'form_error_name' => 'Please enter your name',
-    'form_error_email' => 'Please enter your email',
-    'form_error_phone' => 'Please enter your phone number',
-    'form_error_subject' => 'Please enter your subject',
-    'form_error_message' => 'Please enter your message',
+    'conclusion_heading' => 'Start Your European Success Story',
+    'conclusion_paragraph' => 'Strasbourg is waiting to become the backdrop of your greatest achievements. In 2026, the "Capital of Europe" is more open, more sustainable, and more full of potential than ever. <strong><a href=":consult_url">Contact our consultants today</a></strong> and let’s plan your journey to the heart of Alsace. From application to arrival, we are with you every step of the way.',
 
     // FAQ Section
     'faq_title' => 'Frequently Asked Questions About Strasbourg',
-    'faq_subtitle' => 'Everything You Need to Know',
+    'faq_subtitle' => 'Everything You Need to Know for 2026',
     'faq_items' => [
         [
-            'question' => 'Why is Strasbourg called the "Capital of Europe"?',
-            'answer' => 'Strasbourg hosts several key European institutions, including the European Parliament, the Council of Europe, and the European Court of Human Rights. This makes it uniquely positioned at the heart of European democracy and politics. For students in international relations, law, or political science, Strasbourg offers unrivaled access to these institutions for internships, events, and networking.',
+            'question' => 'Is Strasbourg a good choice for someone who only speaks English?',
+            'answer' => 'Strasbourg is an international crossroads where English is widely spoken, especially in the European district and within the University. However, learning basic French will greatly enhance your daily life and integration into local Alsatian culture. We offer resources to help you bridge that gap.',
         ],
         [
-            'question' => 'How much does it cost to live in Strasbourg as a student in 2026?',
-            'answer' => 'Strasbourg is one of the most affordable major cities in France. In 2026, expect a monthly student budget of €800–€1,100. Student housing ranges from €400–€600/month, reduced by up to 40% with CAF housing assistance. Monthly food costs around €150–€200 if you shop at local markets and discount supermarkets. A monthly tram pass costs around €25 for students. Overall, it\'s excellent value for a world-class European city.',
+            'question' => 'How easy is it to travel from Strasbourg to other European cities?',
+            'answer' => 'Extraordinarily easy. Strasbourg is on the TGV high-speed rail line, putting Paris just 1h45 away. You can reach Frankfurt, Zurich, or Luxembourg in under 2 hours. It is truly the best-connected city for someone who wants to explore all of Europe.',
         ],
         [
-            'question' => 'What can I study at the University of Strasbourg?',
-            'answer' => 'The University of Strasbourg is one of the largest and most multidisciplinary universities in France, offering programs in Political Science, European Law, Biotechnology, Medicine, Pharmacy, Business, Engineering, Architecture, Humanities, and Languages. It hosts thousands of international students and offers many programs with English-language options. It has also produced several Nobel Prize winners.',
+            'question' => 'What is the student housing market like in 2026?',
+            'answer' => 'While more stable than Paris, the Strasbourg housing market is popular. We recommend starting your search 3-4 months before arrival. Our team provides direct assistance in securing both public university housing and private rentals.',
         ],
         [
-            'question' => 'Is Strasbourg a good place to live for a family?',
-            'answer' => 'Strasbourg is consistently ranked among France\'s most livable cities for families. The city is extremely bicycle-friendly (it has the largest bicycle network in France), has excellent public schools, safe neighborhoods, and is rich in green spaces. Its proximity to Germany, Switzerland, and the Black Forest region makes weekend trips easy and affordable. The multicultural environment ensures a warm welcome for international families.',
-        ],
-        [
-            'question' => 'Can I find work in Strasbourg as an international graduate?',
-            'answer' => 'Yes. Strasbourg\'s economy is driven by European institutions (diplomacy, administration), pharmaceuticals, information technology, food processing, and tourism. After graduating, France\'s 12-month APS post-study work permit allows you to job-search freely. Many graduates find opportunities in Strasbourg\'s international organizations, tech companies, or cross-border employers in Germany and Switzerland.',
+            'question' => 'What makes Strasbourg unique compared to other French cities?',
+            'answer' => 'It is the only city where you feel two great European cultures—French and German—simultaneously. This "border-less" feel, combined with its status as a diplomatic capital and its world-famous Christmas heritage, makes it unlike any other place in the world.',
         ],
     ],
 ];
