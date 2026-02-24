@@ -9,44 +9,44 @@ return [
     'map_toulouse' => 'Toulouse',
 
     // SEO Meta Tags
-    'title' => 'Most Beautiful and Popular Cities in France | Study & Live in France',
-    'keywords' => 'French cities, popular cities in France, Paris, Lyon, Nice, Toulouse, Strasbourg, immigration to France, best cities to live in France, immigration to Europe, study immigration, French residency, student life in Europe',
-    'description' => 'Discover the most beautiful and popular cities in France in 2026. From the lights of Paris to the tech hubs of Nice and Toulouse, explore the perfect destinations for study, life, and investment.',
+    'title' => 'Discover France 2026: The Best Cities to Live, Study & Invest | A.V.C',
+    'keywords' => 'French cities, Paris 2026, Lyon, Nice, Toulouse, Strasbourg, study in France, live in France, business in France, international students France, French lifestyle',
+    'description' => 'Explore the most vibrant French cities in 2026. From the historic streets of Paris to the tech hubs of the Silicon Coast, find your perfect French destination for education and career growth.',
 
     // Page Title & Breadcrumb
-    'main_heading' => 'Introducing the Most Beautiful and Popular Cities in France',
+    'main_heading' => 'Your Gateway to France\'s Most Iconic Cities',
     'breadcrumb_home' => 'Home',
-    'breadcrumb_cities' => 'Most Beautiful and Popular Cities in France',
+    'breadcrumb_cities' => 'Cities of France',
 
     // Section Content
-    'section_title' => 'France: The Cradle of Culture and Art',
-    'section_heading' => 'Introducing Popular Cities of France',
-    'section_paragraph' => 'French cities are known for their unique character and culture. Paris, the capital, with the Eiffel Tower and Versailles Palace, is one of the world\'s top attractions. Other cities like Nice, Lyon, Strasbourg, Toulouse, and Bordeaux are famous for their historical sites, incredible streets, art museums and architecture, luxury shops, renowned restaurants, and beautiful natural scenery. In addition, French cities are recognized as desirable places to live for residents and visitors due to their safe and friendly environment, good public transportation, and beautiful public parks.',
+    'section_title' => 'Beyond the Icons',
+    'section_heading' => 'Modern France: A Tapestry of Opportunity',
+    'section_paragraph' => 'France in 2026 is a dynamic fusion of heritage and high-tech ambition. While Paris remains the eternal heart of global prestige, cities like Lyon, Nice, and Toulouse are leading the way in innovation, sustainability, and quality of life. Whether you are seeking world-class research at UCA, an aerospace career in the Ville Rose, or the culinary soul of Lyon, your French chapter begins here.',
 
     // City Cards
-    'paris_alt' => 'Most Beautiful Cities in France | Introduction to Paris',
-    'paris_title' => 'Introduction to Paris',
-    'paris_description' => 'Experience the magic of Paris 2026: The global capital of art, fashion, and luxury awaits.',
+    'paris_alt' => 'Paris 2026: The Eternal Capital of France',
+    'paris_title' => 'Paris: The Eternal Capital',
+    'paris_description' => 'The global heartbeat of culture, fashion, and prestige. Your 2026 journey to excellence starts in the radiant City of Light.',
 
-    'lyon_alt' => 'Most Beautiful Cities in France | Introduction to Lyon',
-    'lyon_title' => 'Introduction to Lyon',
-    'lyon_description' => 'Lyon 2026: France\'s culinary heart combining biotech innovation with a high quality of life.',
+    'lyon_alt' => 'Lyon 2026: France\'s Culinary & Tech Hub',
+    'lyon_title' => 'Lyon: The Culinary & Tech Soul',
+    'lyon_description' => 'Where world-class gastronomy meets the future of biotechnology. Experience the perfect balance of historic heritage and modern innovation.',
 
-    'strasbourg_alt' => 'Most Beautiful Cities in France | Introduction to Strasbourg',
-    'strasbourg_title' => 'Introduction to Strasbourg',
-    'strasbourg_description' => 'Strasbourg 2026: The diplomatic crossroads of Europe, famous for its history and green innovation.',
+    'strasbourg_alt' => 'Strasbourg 2026: The Crossroads of Europe',
+    'strasbourg_title' => 'Strasbourg: The Heart of Europe',
+    'strasbourg_description' => 'A multicultural safe haven where Franco-German charm meets international diplomacy and sustainable green urban living.',
 
-    'nice_alt' => 'Most Beautiful Cities in France | Introduction to Nice',
-    'nice_title' => 'Introduction to Nice',
-    'nice_description' => 'Nice 2026: Where Mediterranean luxury meets Europe\'s "Silicon Valley" tech boom.',
+    'nice_alt' => 'Nice 2026: Capital of the Silicon Coast',
+    'nice_title' => 'Nice: The Silicon Coast',
+    'nice_description' => 'Sun-drenched Mediterranean luxury paired with Europe\'s fastest-growing tech ecosystem. The ultimate lifestyle destination.',
 
-    'toulouse_alt' => 'Most Beautiful Cities in France | Introduction to Toulouse',
-    'toulouse_title' => 'Introduction to Toulouse',
-    'toulouse_description' => 'Toulouse 2026: Reach for the stars in Europe\'s premier aerospace and student capital.',
+    'toulouse_alt' => 'Toulouse 2026: Aerospace & Innovation Capital',
+    'toulouse_title' => 'Toulouse: The Aerospace Frontier',
+    'toulouse_description' => 'Reach new heights in Europe\'s aerospace capital. A young, innovative hub where deep-rooted tradition meets the absolute edge of the sky.',
 
-    'read_more' => 'Read more',
+    'read_more' => 'Explore City',
 
     // Schema.org
-    'schema_headline' => 'Introducing the Most Beautiful and Popular Cities in France',
+    'schema_headline' => 'Discover the Most Popular Cities in France for 2026',
     'schema_author_name' => 'Education, Life, Investment: Your Dreams in France with A.V.C',
 ];

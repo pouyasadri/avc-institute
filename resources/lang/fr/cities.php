@@ -9,44 +9,44 @@ return [
     'map_toulouse' => 'Toulouse',
 
     // SEO Meta Tags
-    'title' => 'Les plus belles et populaires villes de France | Étudier et Vivre en France',
-    'keywords' => 'villes françaises, villes populaires en France, Paris, Lyon, Nice, Toulouse, Strasbourg, immigration en France, meilleures villes pour vivre en France, immigration en Europe, immigration étudiante, résidence française, vie étudiante en Europe',
-    'description' => 'Découvrez les plus belles et populaires villes de France en 2026. Des lumières de Paris aux pôles technologiques de Nice et Toulouse, explorez les destinations idéales pour les études, la vie et l\'investissement.',
+    'title' => 'Découvrez la France 2026 : Les Meilleures Villes pour Vivre, Étudier & Investir | A.V.C',
+    'keywords' => 'villes françaises, Paris 2026, Lyon, Nice, Toulouse, Strasbourg, étudier en France, vivre en France, affaires en France, étudiants internationaux France, style de vie français',
+    'description' => 'Explorez les villes françaises les plus vibrantes en 2026. Des rues historiques de Paris aux pôles technologiques de la Silicon Coast, trouvez votre destination idéale pour l\'éducation et la carrière.',
 
     // Page Title & Breadcrumb
-    'main_heading' => 'Présentation des plus belles et populaires villes de France',
+    'main_heading' => 'Votre Porte d\'Entrée vers les Villes Iconiques de France',
     'breadcrumb_home' => 'Accueil',
-    'breadcrumb_cities' => 'Les plus belles et populaires villes de France',
+    'breadcrumb_cities' => 'Villes de France',
 
     // Section Content
-    'section_title' => 'La France, berceau de la culture et de l\'art',
-    'section_heading' => 'Présentation des villes populaires de France',
-    'section_paragraph' => 'Les villes françaises sont connues pour leur caractère et leur culture uniques. Paris, la capitale, avec la tour Eiffel et le château de Versailles, est l\'une des principales attractions mondiales. D\'autres villes comme Nice, Lyon, Strasbourg, Toulouse et Bordeaux sont célèbres pour leurs sites historiques, leurs rues incroyables, leurs musées d\'art et leur architecture, leurs boutiques de luxe, leurs restaurants renommés et leurs paysages naturels magnifiques. De plus, les villes françaises sont reconnues comme des lieux de vie souhaitables pour les résidents et les visiteurs grâce à leur environnement sûr et convivial, leur bon réseau de transports publics et leurs beaux parcs publics.',
+    'section_title' => 'Au-delà des Icônes',
+    'section_heading' => 'La France Moderne : Un Territoire d\'Opportunités',
+    'section_paragraph' => 'La France en 2026 est une fusion dynamique de patrimoine et d\'ambition technologique. Si Paris demeure le cœur éternel du prestige mondial, des villes comme Lyon, Nice et Toulouse ouvrent la voie en termes d\'innovation, de durabilité et de qualité de vie. Que vous recherchiez une recherche de classe mondiale à l\'UCA, une carrière dans l\'aéronautique dans la Ville Rose ou l\'âme culinaire de Lyon, votre chapitre français commence ici.',
 
     // City Cards
-    'paris_alt' => 'Les plus belles villes de France | Présentation de Paris',
-    'paris_title' => 'Présentation de Paris',
-    'paris_description' => 'Découvrez la magie de Paris 2026 : La capitale mondiale de l\'art, de la mode et du luxe vous attend.',
+    'paris_alt' => 'Paris 2026 : L\'Éternelle Capitale de la France',
+    'paris_title' => 'Paris : L\'Éternelle Capitale',
+    'paris_description' => 'Le battement de cœur mondial de la culture, de la mode et du prestige. Votre voyage vers l\'excellence commence dans la Ville Lumière.',
 
-    'lyon_alt' => 'Les plus belles villes de France | Présentation de Lyon',
-    'lyon_title' => 'Présentation de Lyon',
-    'lyon_description' => 'Lyon 2026 : Le cœur culinaire de la France alliant innovation biotech et qualité de vie élevée.',
+    'lyon_alt' => 'Lyon 2026 : Hub Culinaire et Tech de la France',
+    'lyon_title' => 'Lyon : L\'Âme Culinaire et Tech',
+    'lyon_description' => 'Là où la gastronomie mondiale rencontre le futur de la biotechnologie. Découvrez l\'équilibre parfait entre patrimoine historique et innovation.',
 
-    'strasbourg_alt' => 'Les plus belles villes de France | Présentation de Strasbourg',
-    'strasbourg_title' => 'Présentation de Strasbourg',
-    'strasbourg_description' => 'Strasbourg 2026 : Le carrefour diplomatique de l\'Europe, célèbre pour son histoire et son innovation verte.',
+    'strasbourg_alt' => 'Strasbourg 2026 : Le Carrefour de l\'Europe',
+    'strasbourg_title' => 'Strasbourg : Le Cœur de l\'Europe',
+    'strasbourg_description' => 'Un havre multiculturel où le charme franco-allemand rencontre la diplomatie internationale et une vie urbaine durable.',
 
-    'nice_alt' => 'Les plus belles villes de France | Présentation de Nice',
-    'nice_title' => 'Présentation de Nice',
-    'nice_description' => 'Nice 2026 : Quand le luxe méditerranéen rencontre le boom technologique de la "Silicon Valley" européenne.',
+    'nice_alt' => 'Nice 2026 : Capitale de la Silicon Coast',
+    'nice_title' => 'Nice : La Silicon Coast',
+    'nice_description' => 'Le luxe méditerranéen ensoleillé associé à l\'écosystème technologique à la croissance la plus rapide d\'Europe. La destination de vie ultime.',
 
-    'toulouse_alt' => 'Les plus belles villes de France | Présentation de Toulouse',
-    'toulouse_title' => 'Présentation de Toulouse',
-    'toulouse_description' => 'Toulouse 2026 : Visez les étoiles dans la première capitale européenne de l\'aéronautique et des étudiants.',
+    'toulouse_alt' => 'Toulouse 2026 : Capitale de l\'Aéronautique et de l\'Innovation',
+    'toulouse_title' => 'Toulouse : La Frontière Aérospatiale',
+    'toulouse_description' => 'Visez les étoiles dans la capitale européenne de l\'aéronautique. Un hub jeune et innovant où la tradition rencontre le futur de l\'aviation.',
 
-    'read_more' => 'En savoir plus',
+    'read_more' => 'Explorer la Ville',
 
     // Schema.org
-    'schema_headline' => 'Présentation des plus belles et populaires villes de France',
+    'schema_headline' => 'Découvrez les Villes les plus Populaires de France en 2026',
     'schema_author_name' => 'Éducation, Vie, Investissement: Vos Rêves en France avec A.V.C',
 ];

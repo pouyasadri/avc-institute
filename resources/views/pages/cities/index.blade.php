@@ -84,24 +84,28 @@
                         <div class="col-lg-6">
                             <article
                                 class="exclusive-wrap rounded-5 shadow-sm overflow-hidden h-100 bg-white border-0 transition-all hover-lift">
-                                <div class="row g-0 align-items-center h-100">
-                                    <div class="col-md-5 p-3">
-                                        <div class="exclusive-img h-100 rounded-4 overflow-hidden" style="min-height: 250px;">
+                                <div class="row g-0 align-items-stretch h-100">
+                                    <div class="col-md-5">
+                                        <div class="exclusive-img h-100 overflow-hidden position-relative">
                                             <img src="{{ asset($city['img']) }}" alt="{{ __('cities.' . $city['alt_key']) }}"
-                                                class="w-100 h-100" style="object-fit: cover;">
+                                                class="w-100 h-100 transition-all img-zoom"
+                                                style="object-fit: cover; min-height: 280px;">
+                                            <div class="image-overlay"></div>
                                         </div>
                                     </div>
-                                    <div class="col-md-7">
-                                        <div class="exclusive-content p-4 p-md-5">
-                                            <h3 class="h4 fw-bold mb-3">{{ __('cities.' . $city['title_key']) }}</h3>
-                                            <p class="text-muted small mb-4">
+                                    <div class="col-md-7 d-flex align-items-center">
+                                        <div class="exclusive-content p-4 p-md-4 w-100">
+                                            <h3 class="h4 fw-bold mb-2 text-dark">{{ __('cities.' . $city['title_key']) }}</h3>
+                                            <p class="text-muted mb-4 lead-sm" style="font-size: 0.95rem; line-height: 1.6;">
                                                 {{ __('cities.' . $city['desc_key']) }}
                                             </p>
-                                            <a href="{{ url($currentLocale . '/cities/' . $city['slug']) }}"
-                                                class="default-btn rounded-pill px-4 transition-all">
-                                                {{ __('cities.read_more') }}
-                                                <i class="{{ $arrowClass }}"></i>
-                                            </a>
+                                            <div class="mt-auto">
+                                                <a href="{{ url($currentLocale . '/cities/' . $city['slug']) }}"
+                                                    class="btn btn-primary rounded-pill px-4 py-2 transition-all d-inline-flex align-items-center gap-2 shadow-sm">
+                                                    <span>{{ __('cities.read_more') }}</span>
+                                                    <i class="{{ $arrowClass }} fs-5"></i>
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -109,6 +113,42 @@
                         </div>
                     @endforeach
                 </div>
+
+                <style>
+                    .hover-lift {
+                        transition: transform 0.3s ease, box-shadow 0.3s ease;
+                    }
+
+                    .hover-lift:hover {
+                        transform: translateY(-8px);
+                        box-shadow: 0 1rem 3rem rgba(0, 0, 0, .1) !important;
+                    }
+
+                    .exclusive-img .img-zoom {
+                        transition: transform 0.5s ease;
+                    }
+
+                    .exclusive-wrap:hover .img-zoom {
+                        transform: scale(1.1);
+                    }
+
+                    .image-overlay {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: linear-gradient(to right, rgba(0, 0, 0, 0.1), transparent);
+                        pointer-events: none;
+                    }
+
+                    .lead-sm {
+                        display: -webkit-box;
+                        -webkit-line-clamp: 3;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                    }
+                </style>
             </div>
         </section>
     </div>
