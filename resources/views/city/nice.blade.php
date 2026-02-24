@@ -81,6 +81,20 @@
         <p class="lead">{!! __('city/nice.intro_paragraph') !!}</p>
     </section>
 
+    <section class="mb-5">
+        <h3 class="h4 fw-bold mb-3">{{ __('city/nice.student_life_heading') }}</h3>
+        <p>{{ __('city/nice.student_life_paragraph') }}</p>
+
+        <h3 class="h4 fw-bold mt-4 mb-3">{{ __('city/nice.family_life_heading') }}</h3>
+        <p>{{ __('city/nice.family_life_paragraph') }}</p>
+
+        <h3 class="h4 fw-bold mt-4 mb-3">{{ __('city/nice.lifestyle_heading') }}</h3>
+        <p>{{ __('city/nice.lifestyle_paragraph') }}</p>
+
+        <h3 class="h4 fw-bold mt-4 mb-3">{{ __('city/nice.history_heading') }}</h3>
+        <p>{{ __('city/nice.history_paragraph') }}</p>
+    </section>
+
     <div class="rounded-4 overflow-hidden shadow-sm mb-5">
         <iframe
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11534.613317424905!2d7.2619532!3d43.7032932!3m2!i1024!2i768!4f13.1!3m3!1m2!1s0x12cdd0106a852d31%3A0x40819a5fd979a70!2sNice!5e0!3m2!1sfr!2sfr!4v1691147427806!5m2!1sfr!2sfr"
@@ -89,22 +103,24 @@
     </div>
 
     <section class="mb-5">
-        <h3 class="h4 fw-bold mb-3">{{ __('city/nice.history_heading') }}</h3>
-        <p>{{ __('city/nice.history_paragraph') }}</p>
-
-        <h3 class="h4 fw-bold mt-4 mb-3">{{ __('city/nice.climate_heading') }}</h3>
-        <p>{{ __('city/nice.climate_paragraph') }}</p>
-
-        <h3 class="h4 fw-bold mt-4 mb-3">{{ __('city/nice.study_heading') }}</h3>
+        <h3 class="h4 fw-bold mb-3">{{ __('city/nice.study_heading') }}</h3>
         <p>{{ __('city/nice.study_paragraph') }}</p>
 
         <h3 class="h4 fw-bold mt-4 mb-3">{{ __('city/nice.universities_heading') }}</h3>
-        <p>{{ __('city/nice.universities_paragraph') }}</p>
+        <p>{{ __('city/nice.universities_intro') }}</p>
         <ul class="list-group list-group-flush mb-4">
             <li class="list-group-item bg-transparent border-0 ps-0">
                 <i class="bx bx-right-arrow-alt text-primary me-2"></i>
                 <a href="{{ url($currentLocale . '/universities/cote-d-azure') }}"
                     target="_blank">{{ __('city/nice.university_nice') }}</a>
+            </li>
+            <li class="list-group-item bg-transparent border-0 ps-0">
+                <i class="bx bx-right-arrow-alt text-primary me-2"></i>
+                <span>{{ __('city/nice.university_skema') }}</span>
+            </li>
+            <li class="list-group-item bg-transparent border-0 ps-0">
+                <i class="bx bx-right-arrow-alt text-primary me-2"></i>
+                <span>{{ __('city/nice.university_edhec') }}</span>
             </li>
         </ul>
     </section>
@@ -118,20 +134,36 @@
         <h3 class="h4 fw-bold mb-3">{{ __('city/nice.living_costs_heading') }}</h3>
         <p>{!! __('city/nice.living_costs_paragraph', ['consult_url' => url($currentLocale . '/consult')]) !!}</p>
 
-        <h3 class="h4 fw-bold mt-4 mb-3">{{ __('city/nice.daily_life_heading') }}</h3>
-        <p>{{ __('city/nice.daily_life_paragraph') }}</p>
-
-        <h3 class="h4 fw-bold mt-4 mb-3">{{ __('city/nice.transportation_heading') }}</h3>
-        <p>{{ __('city/nice.transportation_paragraph') }}</p>
+        <h3 class="h4 fw-bold mt-4 mb-3">{{ __('city/nice.climate_heading') }}</h3>
+        <p>{{ __('city/nice.climate_paragraph') }}</p>
 
         <h3 class="h4 fw-bold mt-4 mb-3">{{ __('city/nice.tourism_heading') }}</h3>
         <p>{{ __('city/nice.tourism_paragraph') }}</p>
+        <ul class="list-group list-group-flush mb-4">
+            @foreach (__('city/nice.tourism_items') as $item)
+                <li class="list-group-item bg-transparent border-0 ps-0">
+                    <i class="bx bx-check-circle text-primary me-2"></i>
+                    {{ $item }}
+                </li>
+            @endforeach
+        </ul>
+        <p>{{ __('city/nice.tourism_paragraph_2') }}</p>
 
         <h3 class="h4 fw-bold mt-4 mb-3">{{ __('city/nice.economy_heading') }}</h3>
-        <p>{{ __('city/nice.economy_paragraph') }}</p>
+        <p>{{ __('city/nice.economy_paragraph_1') }}</p>
+        <ul class="list-group list-group-flush mb-4">
+            @foreach (__('city/nice.economy_companies') as $company)
+                <li class="list-group-item bg-transparent border-0 ps-0">
+                    <i class="bx bx-buildings text-primary me-2"></i>
+                    {{ $company }}
+                </li>
+            @endforeach
+        </ul>
+        <p>{{ __('city/nice.economy_paragraph_2') }}</p>
 
-        <h3 class="h4 fw-bold mt-4 mb-3">{{ __('city/nice.jobs_heading') }}</h3>
-        <p>{{ __('city/nice.jobs_paragraph') }}</p>
+        <h3 class="h4 fw-bold mt-4 mb-3">{{ __('city/nice.job_heading') }}</h3>
+        <p>{{ __('city/nice.job_paragraph_1') }}</p>
+        <p>{{ __('city/nice.job_paragraph_2') }}</p>
 
         <h3 class="h4 fw-bold mt-4 mb-3">{{ __('city/nice.conclusion_heading') }}</h3>
         <p>{!! __('city/nice.conclusion_paragraph', ['consult_url' => url($currentLocale . '/consult')]) !!}</p>
@@ -148,25 +180,25 @@
                     <div class="col-md-6">
                         <div class="d-flex align-items-start small text-muted">
                             <i class='bx bx-check-circle text-primary me-2 mt-1'></i>
-                            <span>{{ __('city/nice.intro_heading') }}</span>
+                            <span>{{ __('city/nice.student_life_heading') }}</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-start small text-muted">
+                            <i class='bx bx-check-circle text-primary me-2 mt-1'></i>
+                            <span>{{ __('city/nice.family_life_heading') }}</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-start small text-muted">
+                            <i class='bx bx-check-circle text-primary me-2 mt-1'></i>
+                            <span>{{ __('city/nice.lifestyle_heading') }}</span>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="d-flex align-items-start small text-muted">
                             <i class='bx bx-check-circle text-primary me-2 mt-1'></i>
                             <span>{{ __('city/nice.study_heading') }}</span>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="d-flex align-items-start small text-muted">
-                            <i class='bx bx-check-circle text-primary me-2 mt-1'></i>
-                            <span>{{ __('city/nice.living_costs_heading') }}</span>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="d-flex align-items-start small text-muted">
-                            <i class='bx bx-check-circle text-primary me-2 mt-1'></i>
-                            <span>{{ __('city/nice.tourism_heading') }}</span>
                         </div>
                     </div>
                 </div>
