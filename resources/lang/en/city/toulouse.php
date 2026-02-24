@@ -2,132 +2,120 @@
 
 return [
     // SEO Meta
-    'title' => 'Toulouse: The Pink City of Southern France | Guide to Beautiful and Most Visited French Cities',
-    'keywords' => 'Toulouse, Toulouse city, Toulouse tourist attractions, Toulouse history, Toulouse culture, Pink Toulouse, Toulouse southern France, study in Toulouse, life in Toulouse, investment in Toulouse',
-    'description' => 'Discover Toulouse in 2026: Europe\'s aerospace capital and a vibrant student hub. Explore why the "Pink City" is the top choice for engineers, students, and families seeking a dynamic yet affordable French lifestyle.',
+    'title' => 'Life in Toulouse 2026: The Aerospace Hub for Students & Families | A.V.C',
+    'keywords' => 'Toulouse city guide 2026, study in Toulouse, life in Toulouse, Airbus jobs, student life Toulouse, family life Toulouse, Pink City France, aerospace careers, Toulouse investment',
+    'description' => 'Discover Toulouse in 2026: Europe\'s aerospace capital and a vibrant student hub. Your humanized guide to the "Pink City" – from engineering careers at Airbus to the warm southern lifestyle.',
 
     // Page Content
-    'main_heading' => 'Introduction to Toulouse',
+    'main_heading' => 'Toulouse: Where History Meets the Future of the Skies',
     'breadcrumb_home' => 'Home',
-    'breadcrumb_cities' => 'Most Beautiful and Most Visited French Cities',
+    'breadcrumb_cities' => 'French Cities',
     'breadcrumb_toulouse' => 'Toulouse',
 
     // Sidebar Content
-    'table_of_contents' => 'Table of Contents',
-    'contact_us' => 'Contact Us',
-    'consultation_request' => 'Request consultation for study immigration to France',
-    'useful_links' => 'Useful Links',
+    'table_of_contents' => 'What’s Inside',
+    'contact_us' => 'Your Toulouse Chapter',
+    'ask_question' => 'Ask a Question',
+    'consultation_request' => 'Start your flight to the Pink City',
+    'email' => 'Email',
+    'useful_links' => 'Toulouse Resources',
     'toulouse_wikipedia' => 'Toulouse - Wikipedia',
 
     // Main Content
-    'intro_heading' => 'Toulouse, Technology and Aerospace Hub: An Ideal Option for Specialists',
-    'intro_paragraph' => 'Welcome to Toulouse 2026 - where history is painted in pink and the future is built in the sky. As the undisputed aerospace capital of Europe, the "Ville Rose" offers a unique energy that blends southern French warmth with cutting-edge innovation. Imagine working on the next generation of sustainable aviation by day and enjoying a sunset apéro by the Garonne river by night. With a massive student population and a booming tech sector, Toulouse is young, brainy, and incredibly welcoming. It\'s not just a place to study or work; it\'s a place to launch your future. Ready for takeoff?',
+    'intro_heading' => 'Welcome to the Ville Rose',
+    'intro_paragraph' => 'Toulouse in 2026 is a masterpiece of pink brick, southern warmth, and futuristic ambition. Known as the "Ville Rose" (Pink City) due to its unique terracotta architecture, Toulouse is the undisputed aerospace capital of Europe. It is a city that feels both grand and intimate – where you can work on global aerospace projects by day and enjoy a rustic cassoulet by the Garonne river by night. With a massive, brainy student population and an economy that is literally reaching for the stars, Toulouse is the perfect launchpad for specialists and students seeking a high-quality, dynamic life in France.',
 
-    // Section: Language
-    'language_heading' => 'Spoken Language',
-    'language_paragraph' => 'French is the common language of the people of this city both in writing and speaking; although the historical language of Occitania is also favored by a small minority. However, an increasing number of local people active in the tourism industry and immigration discussions can speak some English, and this ability is getting better and better. One Iranian resident in Toulouse said "When I came to this city ten years ago, few people had the ability to communicate effectively in English, but today young people are all fluent and good at English."',
+    // Section: Student Life
+    'student_life_heading' => 'A Hub for 130,000 Bright Minds',
+    'student_life_paragraph' => 'Being a student in Toulouse is an adventure in every sense. With over 130,000 students, the city pulses with youthful energy. Whether you are studying at the historic Capitole campus or the high-tech scientific hubs of Rangueil, you’ll find an environment that is both intellectually rigorous and incredibly fun. The "Tisseo" network makes the city effortless to navigate, and the social life – centered around the lively bars of Place Saint-Pierre and the sunset steps by the river – is second to none. It’s a city where you don\'t just earn a degree; you build a lifelong network in the heart of Europe’s engineering elite.',
 
-    // Section: Climate
-    'climate_heading' => 'Weather Conditions in Toulouse',
-    'climate_paragraph' => 'January to March on one hand, and November to December on the other hand are the cold and snowy months of this city and its Christmases are not far behind Nantes and Strasbourg. In fact, Toulouse is a place for anyone looking for a sunny and vibrant city.',
+    // Section: Family Life
+    'family_life_heading' => 'Safe, Friendly, and Perfectly Sized',
+    'family_life_paragraph' => 'For families, Toulouse offers a welcoming "small-town" feel within a major European city. It is consistently rated as one of the most family-friendly cities in France, thanks to its safety, excellent public schools, and abundance of green spaces like the "Jardin des Plantes" and the "Canal du Midi." Life here is outdoor-oriented, with the Pyrenees mountains just a short drive away for winter skiing or summer hiking. The southern French culture is naturally family-centric, ensuring your children grow up in a warm, multicultural, and stimulating environment.',
 
-    // Section: Study
-    'study_heading' => 'Study in Toulouse',
-    'study_paragraph' => 'Toulouse hosts several prestigious universities including Université de Toulouse III – Paul Sabatier (basic sciences, engineering, humanities), Université Toulouse I Capitole (law, economics, management), and Institut National des Sciences Appliquées (INSA Toulouse) (engineering). In addition, numerous higher schools exist in the fields of aerospace, information technology, and biotechnology in this city. To study in Toulouse, having a French language certificate (such as TCF or TEF) is essential. Also, depending on the level of study, you may need to provide academic records, recommendation letters, and participate in entrance exams.',
+    // Section: Lifestyle
+    'lifestyle_heading' => 'The Southern "Art de Vivre"',
+    'lifestyle_paragraph' => 'Lifestyle in Toulouse is all about balance. It’s the "Art de Vivre" with a Spanish touch – slower, sunnier, and focused on community. It’s a city of rugby fans, foodies, and dreamers. Whether you are browsing the Victor Hugo market for local cheeses or attending a high-tech conference at Cité de l’Espace, the vibe is always relaxed and unpretentious. Living in Toulouse means trading the stress of the capital for a life where you have time for what matters, without sacrificing professional growth.',
+
+    // Section: History
+    'history_heading' => 'From Roman Origins to the Airbus Era',
+    'history_paragraph' => 'Toulouse’s history is a story of continuous reinvention. From its Roman foundations to its medieval golden age of "pastel" trade (which built its pink palaces), the city has always been a center of commerce and intellect. Today, that legacy lives on in its aerospace dominance. Walking through Toulouse is like traveling through time – from the UNESCO-listed Basilica of Saint-Sernin to the futuristic assembly lines of the Airbus A350.',
+
+    // Section: Study in Toulouse
+    'study_heading' => 'Engineering the Future for 2026',
+    'study_paragraph' => 'Toulouse is the academic anchor of Southern France. It is a world leader in STEM education, particularly in Aeronautics, Space Sciences, and AI. In 2026, the local universities have further integrated with the industrial giants like Airbus and CNES, offering students unprecedented access to internships and real-world research projects. Beyond engineering, Toulouse is home to a top-tier Law and Economics faculty at Capitole.',
 
     // Section: Universities
-    'universities_heading' => 'University of Toulouse',
-    'universities_paragraph' => 'Founded in 1229, it is now divided into three separate faculties.',
-    'university_1' => 'Toulouse 1 Capitole University ranks 801 in the QS World University Rankings conducted by TopUniversities and according to student reviews on Studyportals, its overall score is 4.0. 15 doctoral departments represented by "L\'École des Docteurs" which represents a total of 9100 research staff including 5100 university employees and 4300 doctoral researchers, awarding 900 doctorates per year. This amount of research work covers all fields of science while 40% of its students are international.',
-    'university_2' => 'The second university Jean Jaurès (in French: Université Toulouse-Jean Jaurès, formerly known as the University of Mirail, is today known by the name Toulouse Two and is a state university.',
-    'student_life' => 'In terms of student life, Toulouse is a very popular city among students from around the world. The student space is maintained throughout the year and is suitable for studying. Moreover, although this city is not very large, it has everything you want and is also known as a very safe city.',
-    'programs_heading' => 'Some of the most important disciplines taught at Toulouse University',
-    'program_1' => 'Telecommunications Engineering — Rank 10',
-    'program_2' => 'Aeronautical Science — Rank 6',
-    'program_3' => 'Management — Rank 9',
-    'program_4' => 'Art — Rank 6',
-    'program_5' => 'Literature — Rank 5',
-    'program_6' => 'Linguistics — Rank 6',
-    'program_7' => 'Law — Rank 4',
-    'program_8' => 'Philosophy — Rank 6',
-    'program_9' => 'History — Rank 3',
+    'universities_heading' => 'Premier Academic Institutions',
+    'universities_intro' => 'Toulouse offers an elite educational ecosystem, deeply connected to its industrial roots:',
+    'university_capitole' => 'Université Toulouse 1 Capitole (Law, Economics, Management)',
+    'university_jaures' => 'Université Toulouse - Jean Jaurès (Arts, Humanities)',
+    'university_sabatier' => 'Université Toulouse III - Paul Sabatier (Science, Engineering, Health)',
 
-    // Section: Living Costs
-    'living_costs_heading' => 'Living Costs in Toulouse',
-    'living_costs_paragraph' => 'Toulouse offers a high quality of life without the Parisian price tag. In 2026, it remains one of the most affordable major cities in France. A single professional can live comfortably on €1,100 - €1,450 per month. Student studios are widely available between €450 and €650, often fully eligible for CAF housing assistance. Factor in the excellent public transport and student discounts, and your budget goes much further here. Want to know exactly how much you need to move here? <a href=":consult_url"><strong>Book a free financial planning consultation</strong></a> to get a detailed cost breakdown tailored to your situation.',
-
-    // Section: Housing
-    'housing_heading' => 'Housing',
-    'housing_paragraph' => 'Economically, Toulouse is an affordable city, especially for students. Housing rental outside campus is around €450 depending on where you live. However, transportation costs for people under 26 are relatively affordable.',
-
-    // Section: Daily Life
-    'daily_life_heading' => 'Daily Life',
-    'daily_life_paragraph' => 'If you want to enjoy both unique roots of traditional French culture and modern urban facilities, Toulouse is definitely one of the best cities to live in France. In other words, you will experience real modernity in the French way here. Its economic growth in France is very high, and it offers many excellent employment opportunities.',
-
-    // Section: Transportation
-    'transportation_heading' => 'Transportation',
-    'transportation_paragraph' => 'The distance from Paris to Toulouse by high-speed train is 588 kilometers. The highway distance to Paris is also 674.2 kilometers. So with a rough estimate, there is approximately three and a half hours between the capital and this city. The nearest airport to this city is Toulouse Airport (TLS) which is 6.2 kilometers away from you. Other nearby airports are: Carcassonne, Lourdes / Tarbes, Perpignan and Pau. Non-stop flight time to Paris is usually 1 hour and 20 minutes.',
+    // Section: Toulouse Climate
+    'climate_heading' => 'Sun-Drenched and Vibrant',
+    'climate_paragraph' => 'The climate in Toulouse reflects the warmth of its people. With long, sunny summers and mild, bright winters, it is one of the sunniest major cities in France. The autumn is particularly beautiful, turning the tree-lined Canal du Midi into a tunnel of gold. It’s a climate that supports an active, outdoor lifestyle throughout the year.',
 
     // Section: Tourism
-    'tourism_heading' => 'Tourist Attractions in Toulouse',
-    'tourism_paragraph' => 'Walk through the markets or even linger in the cafe terraces; wandering through the city is truly uplifting and full of discovery and intuition and has many historic and unique places for unique wanderings you cannot help but fall in love with its irresistible beauty. Most buildings, known as La Ville Rose or The Pink City, have a beautiful pinkish brick facade and this is in some ways the identity of Toulouse buildings.',
-
-    // Section: Jewelry
-    'jewelry_heading' => 'Jewelry City',
-    'jewelry_paragraph' => 'Every year, many brides from the Middle East come to Toulouse to buy their wedding jewelry from this city. Apart from this, jewelry designers always allocate a share of the city\'s tourists to themselves; they come here to be inspired by the latest jewelry trends. A list of some of the best jewelry stores is listed below:',
-    'jewelry_1' => 'Faur Jean-Jacques',
-    'jewelry_2' => 'Mademoiselle Nuage',
-    'jewelry_3' => 'Saraswati',
+    'tourism_heading' => 'Cultures of the Pink City',
+    'tourism_paragraph' => 'Tourism in Toulouse is a journey of discovery. It’s a city that rewards the wanderer – from its grand squares to its hidden courtyards.',
+    'tourism_items' => [
+        'Place du Capitole: The majestic soul of the city with its historic town hall.',
+        'Basilica of Saint-Sernin: One of the greatest Romanesque churches in Europe.',
+        'The Banks of the Garonne: For the best sunset views and social vibes.',
+        'Cité de l’Espace: An out-of-this-world space theme park and museum.',
+        'The Canal du Midi: A UNESCO heritage site perfect for walking or cycling.',
+        'Musée des Augustins: A stunning fine arts museum in a Gothic cloister.',
+    ],
+    'tourism_paragraph_2' => 'The surrounding Occitanie region offers endless road trips – from the medieval fortress of Carcassonne to the dramatic peaks of the Pyrenees.',
 
     // Section: Economy
-    'economy_heading' => 'Industry and Economy',
-    'economy_paragraph' => 'Economically, aviation, aerospace and jewelry industry are the main sources of revenue for Toulouse. From Caravelle 1955 to Concorde 1969 through the creation of a European consortium, aviation successes made the city famous by establishing Airbus, creating an enviable place in conquering European airspace. A place that is now considered a global headquarters. Since 2003, with the growth of influential industries in this city, its per capita gross production has also experienced rapid growth, causing this city to distinguish itself with its economic dynamism and rank second right after Nantes and ahead of Lyon. This city is also the third city in France in terms of quality of infrastructure. Beyond that, Toulouse, the capital of the Languedoc-Roussillon-Midi-Pyrénées region, is ahead of Montpellier with a population of nearly 850,000.',
+    'economy_heading' => 'A Dynamic Global Headquarters',
+    'economy_paragraph_1' => 'Toulouse’s economy is a powerhouse of high-tech exports. As the home of Airbus and a major space agency hub, it enjoys economic stability and continuous growth. Key sectors for 2026 include:',
+    'economy_companies' => [
+        'Aerospace & Defense (Airbus, Thales, ATR)',
+        'Space Innovation (CNES, Thales Alenia Space)',
+        'Biotechnology & Health (Oncopole)',
+        'Digital Tech & AI Research',
+    ],
+    'economy_paragraph_2' => 'This industrial concentration creates a robust ecosystem where engineers, data scientists, and managers from all over the world come to collaborate on projects that define the next century of transport and defense.',
+
+    // Section: Living Costs
+    'living_costs_heading' => 'High Quality, Low Cost: Budgeting for 2026',
+    'living_costs_paragraph' => 'Toulouse is famous for offering a "Parisian lifestyle" at a fraction of the cost. For an international professional, a monthly budget of €1,150 to €1,500 is very comfortable. Student studios range from €450 to €650, and you are almost always eligible for **CAF housing assistance**, which can cover up to 40% of your rent. <a href=":consult_url"><strong>Request your free cost-of-living roadmap</strong></a> to see how far your budget goes in the Ville Rose.',
 
     // Section: Job Opportunities
-    'jobs_heading' => 'Job Opportunities in Toulouse',
-    'jobs_paragraph' => 'Toulouse provides suitable job opportunities for specialists in these fields due to its focus on aerospace, information technology, biotechnology, and life sciences industries. Also, many large international companies have branches in Toulouse, which has led to a diversity of job opportunities. To work in France, having a work permit is mandatory. The conditions for obtaining a work permit vary depending on the type of position and the nationality of the individual.',
+    'job_heading' => 'Sky-High Career Horizons',
+    'job_paragraph_1' => 'With the aerospace sector booming in 2026, Toulouse is hungry for international talent. Engineers, developers, and project managers find a fertile ground for career growth here. Most large companies operate in English, but basic French is your ticket to full integration in the local community.',
+    'job_paragraph_2' => 'Our local experts help you navigate the "Toulousain" job market, connecting you with opportunities at Airbus and its vast network of suppliers, while optimizing your visa path for long-term success.',
+
+    // Section: Visa
+    'visa_heading' => 'Your Clearance for Takeoff',
+    'visa_paragraph' => 'Navigating the French visa system shouldn\'t be rocket science. Whether you need a student visa for Rangueil or a Talent Passport for a senior role at Airbus, our team makes the process seamless, ensuring you land in the Pink City with peace of mind.',
 
     // Section: Conclusion
-    'conclusion_heading' => 'Final Word',
-    'conclusion_paragraph' => 'Toulouse is where ambition meets quality of life. Whether you are an engineer looking to work at Airbus, a student aiming for top-tier universities, or a family seeking a warm, friendly environment, the Pink City welcomes you with open arms. The opportunities in 2026 are vast, but navigating the move requires a solid plan. Don\'t leave your future to chance. <strong><a href=":consult_url">Schedule your personalized immigration roadmap session today</a></strong>. Let\'s turn your French dream into a concrete plan.',
-
-    // Form Labels
-    'ask_question' => 'Ask a Question',
-    'form_name' => 'Your Name',
-    'form_email' => 'Your Email',
-    'form_phone' => 'Your Phone',
-    'form_subject' => 'Subject',
-    'form_message' => 'Your Message',
-    'form_send' => 'Send Message',
-    'form_error_name' => 'Please enter your name',
-    'form_error_email' => 'Please enter your email',
-    'form_error_phone' => 'Please enter your phone number',
-    'form_error_subject' => 'Please enter your subject',
-    'form_error_message' => 'Please enter your message',
+    'conclusion_heading' => 'Begin Your Future in the Pink City',
+    'conclusion_paragraph' => 'Toulouse is more than a city; it’s a lifestyle, an industrial giant, and a historical treasure. In 2026, there is no better place to merge your professional ambitions with a high quality of life. <strong><a href=":consult_url">Contact our consultants today</a></strong> and let’s plan your journey to the heart of the Southwest. From application to arrival, we are your co-pilots.',
 
     // FAQ Section
     'faq_title' => 'Frequently Asked Questions About Toulouse',
-    'faq_subtitle' => 'Everything You Need to Know',
+    'faq_subtitle' => 'Preparing for Your Move in 2026',
     'faq_items' => [
         [
-            'question' => 'Why is Toulouse called the "Aerospace Capital of Europe"?',
-            'answer' => 'Toulouse is the headquarters of Airbus, the world\'s largest aircraft manufacturer, as well as major space agencies including CNES (French Space Agency) and Thales Alenia Space. The city also hosts ATR, Safran, and dozens of aerospace suppliers. This cluster of companies makes Toulouse the undisputed hub of European aerospace engineering, creating thousands of high-skilled jobs every year in engineering, data science, and project management.',
+            'question' => 'Is it easy to find a job in Toulouse without speaking perfect French?',
+            'answer' => 'In the aerospace and tech sectors, English is often the working language, particularly at companies like Airbus. However, for daily life and long-term career growth, learning French is highly recommended. The city is very international, and you’ll find many language schools and expat communities to help you.',
         ],
         [
-            'question' => 'How much does it cost to live in Toulouse as a student in 2026?',
-            'answer' => 'Toulouse is one of the most affordable major cities in France for students. In 2026, expect a monthly budget of €1,100–€1,450 for a professional, or €800–€1,100 for a student. Student studios are widely available between €450 and €650, often reduced by 30-40% with CAF housing assistance. Public transport is excellent and very cheap for under-26s. Overall, Toulouse offers great value for a dynamic, young European city.',
+            'question' => 'How affordable is student housing in 2026?',
+            'answer' => 'Toulouse remains one of the more affordable major cities in France. While the market is competitive, particularly in late August, there is a good supply of student residences and private rentals. With CAF aid, a student can often live comfortably in the city center or near the campuses for a very reasonable price.',
         ],
         [
-            'question' => 'What are the best engineering programs in Toulouse?',
-            'answer' => 'Toulouse offers world-class engineering education. Top institutions include INSA Toulouse (engineering, IT, and environmental science), Université Paul Sabatier - Toulouse III (science, engineering, health), and ISAE-SUPAERO (ranked #1 aerospace engineering school in the world). For business, Toulouse Business School (TBS) has an excellent reputation. The city consistently ranks among the top French cities for STEM graduates.',
+            'question' => 'What makes Toulouse different from other French cities for families?',
+            'answer' => 'It’s the warmth and the size. Toulouse is big enough to have everything you need (international schools, museums, high-tech hospitals) but small enough that people are friendly and you don’t feel overwhelmed. The access to the mountains and the sea also makes it a paradise for active families.',
         ],
         [
-            'question' => 'What is student life like in Toulouse?',
-            'answer' => 'With over 130,000 students, Toulouse is France\'s 4th largest student city, creating a vibrant, youthful atmosphere. The city center, Capitole square, and the banks of the Garonne river are buzzing with cafes, bars, concerts, and cultural events. The southern French climate means outdoor socializing almost year-round. Rugby is a local passion, and the city has a strong sports culture. It\'s consistently rated one of the best cities in France to be a student.',
-        ],
-        [
-            'question' => 'What job opportunities are available in Toulouse after graduation?',
-            'answer' => 'The job market in Toulouse is exceptional, particularly for STEM graduates. Airbus, Thales, ATR, Safran, and CNES regularly recruit from local universities. The city also has a growing digital and health-tech sector. After graduation, France\'s 12-month APS post-study work permit lets you search for employment freely. Many international graduates find that they receive a job offer from their internship company, making the transition from student to professional very smooth.',
+            'question' => 'Is a car necessary in Toulouse?',
+            'answer' => 'In the city center, definitely not. The metro and tram network (Tisseo) is excellent. However, if you plan on exploring the Pyrenees or working at some of the aerospace sites further out (like Blagnac), having a car or using a car-sharing service can be very helpful.',
         ],
     ],
 ];

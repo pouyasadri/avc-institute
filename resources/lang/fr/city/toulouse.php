@@ -2,132 +2,120 @@
 
 return [
     // SEO Meta
-    'title' => 'Toulouse : La Ville Rose du Sud de la France | Guide des Plus Belles et Plus Visitées Villes de France',
-    'keywords' => 'Toulouse, ville de Toulouse, attractions touristiques à Toulouse, histoire de Toulouse, culture de Toulouse, Toulouse rose, Toulouse sud France, études à Toulouse, vie à Toulouse, investissement à Toulouse',
-    'description' => 'Découvrez Toulouse en 2026 : Capitale européenne de l\'aéronautique et pôle étudiant dynamique. Découvrez pourquoi la "Ville Rose" est le premier choix des ingénieurs, des étudiants et des familles à la recherche d\'un mode de vie français dynamique mais abordable.',
+    'title' => 'Vivre à Toulouse 2026 : Le Hub de l\'Aéronautique pour Étudiants & Familles | A.V.C',
+    'keywords' => 'guide ville Toulouse 2026, étudier à Toulouse, vivre à Toulouse, emplois Airbus, vie étudiante Toulouse, vie de famille Toulouse, Ville Rose France, carrières aéronautiques, investissement Toulouse',
+    'description' => 'Découvrez Toulouse en 2026 : la capitale européenne de l\'aéronautique et un hub étudiant dynamique. Votre guide humanisé de la "Ville Rose" – des carrières chez Airbus au style de vie chaleureux du Sud.',
 
     // Page Content
-    'main_heading' => 'Introduction à Toulouse',
+    'main_heading' => 'Toulouse : Là où l\'Histoire rencontre le Futur de l\'Espace',
     'breadcrumb_home' => 'Accueil',
-    'breadcrumb_cities' => 'Les Plus Belles et Plus Visitées Villes de France',
+    'breadcrumb_cities' => 'Villes de France',
     'breadcrumb_toulouse' => 'Toulouse',
 
     // Sidebar Content
-    'table_of_contents' => 'Table des Matières',
-    'contact_us' => 'Contactez-nous',
-    'consultation_request' => 'Demander une consultation pour l\'immigration à Toulouse',
-    'useful_links' => 'Liens Utiles',
+    'table_of_contents' => 'Au Sommaire',
+    'contact_us' => 'Votre Chapitre Toulousain',
+    'ask_question' => 'Poser une Question',
+    'consultation_request' => 'Préparez votre envol pour la Ville Rose',
+    'email' => 'Email',
+    'useful_links' => 'Ressources Toulouse',
     'toulouse_wikipedia' => 'Toulouse - Wikipédia',
 
     // Main Content
-    'intro_heading' => 'Toulouse, Pôle Technologique et Aérospatial : Une Option Idéale pour les Spécialistes',
-    'intro_paragraph' => 'Bienvenue à Toulouse 2026 - où l\'histoire se peint en rose et l\'avenir se construit dans le ciel. En tant que capitale incontestée de l\'aéronautique européenne, la "Ville Rose" offre une énergie unique qui mêle la chaleur du sud de la France à l\'innovation de pointe. Imaginez travailler sur la prochaine génération d\'aviation durable le jour et profiter d\'un apéro au coucher du soleil au bord de la Garonne le soir. Avec une population étudiante massive et un secteur technologique en plein essor, Toulouse est jeune, intelligente et incroyablement accueillante. Ce n\'est pas juste un endroit pour étudier ou travailler ; c\'est un endroit pour lancer votre avenir. Prêt pour le décollage ?',
+    'intro_heading' => 'Bienvenue dans la Ville Rose',
+    'intro_paragraph' => 'Toulouse en 2026 est un chef-d\'œuvre de briques roses, de chaleur méridionale et d\'ambition futuriste. Surnommée la "Ville Rose" en raison de son architecture unique en terre cuite, Toulouse est la capitale incontestée de l\'aéronautique en Europe. C\'est une ville à la fois grandiose et intimiste – où vous pouvez travailler sur des projets spatiaux mondiaux le jour et savourer un cassoulet au bord de la Garonne le soir. Avec une immense population étudiante et une économie qui vise les étoiles, Toulouse est le tremplin idéal pour les spécialistes et les étudiants.',
 
-    // Section: Language
-    'language_heading' => 'Langue Parlée',
-    'language_paragraph' => 'Le français est la langue commune des habitants de cette ville à la fois à l\'écrit et à l\'oral ; bien que la langue historique de l\'Occitanie soit également favorisée par une petite minorité. Cependant, un nombre croissant de personnes locales actives dans les secteurs du tourisme et de l\'immigration peuvent parler un peu l\'anglais, et cette capacité s\'améliore de plus en plus. Un résident iranien à Toulouse a dit "Quand je suis venu dans cette ville il y a dix ans, peu de gens avaient la capacité de communiquer efficacement en anglais, mais aujourd\'hui les jeunes parlent tous anglais couramment et bien."',
+    // Section: Student Life
+    'student_life_heading' => 'Un Hub pour 130 000 Esprits Brillants',
+    'student_life_paragraph' => 'Être étudiant à Toulouse est une aventure au quotidien. Avec plus de 130 000 étudiants, la ville pulse d\'une énergie incroyable. Que vous étudiiez sur le campus historique du Capitole ou dans les hubs scientifiques de Rangueil, vous trouverez un environnement à la fois exigeant et festif. Le réseau "Tisséo" facilite les déplacements, et la vie sociale – centrée sur les bars de la Place Saint-Pierre et les quais de la Garonne – est inégalée. C\'est une ville où l\'on ne se contente pas d\'obtenir un diplôme ; on se construit un réseau au cœur de l\'élite de l\'ingénierie européenne.',
 
-    // Section: Climate
-    'climate_heading' => 'Conditions Météorologiques à Toulouse',
-    'climate_paragraph' => 'Janvier à mars d\'un côté, et novembre à décembre de l\'autre côté sont les mois froids et enneigés de cette ville et ses Noëls ne sont pas loin derrière Nantes et Strasbourg. En fait, Toulouse est un endroit pour quiconque cherche une ville ensoleillée et dynamique.',
+    // Section: Family Life
+    'family_life_heading' => 'Sûre, Accueillante et à Taille Humaine',
+    'family_life_paragraph' => 'Pour les familles, Toulouse offre la chaleur d\'une ville à taille humaine au sein d\'une métropole européenne. Régulièrement classée parmi les villes les plus agréables de France pour les familles, elle offre sécurité, d\'excellentes écoles publiques et de nombreux espaces verts comme le Jardin des Plantes. La culture du Sud-Ouest est naturellement centrée sur la famille, garantissant à vos enfants un environnement stimulant et multiculturel.',
 
-    // Section: Study
-    'study_heading' => 'Études à Toulouse',
-    'study_paragraph' => 'Toulouse accueille plusieurs universités prestigieuses dont l\'Université de Toulouse III – Paul Sabatier (sciences fondamentales, ingénierie, sciences humaines), Université Toulouse I Capitole (droit, économie, gestion) et Institut National des Sciences Appliquées (INSA Toulouse) (ingénierie). De plus, de nombreuses grandes écoles existent dans les domaines de l\'aérospatiale, de l\'informatique et de la biotechnologie dans cette ville. Pour étudier à Toulouse, il est essentiel d\'avoir un certificat de langue française (tel que TCF ou TEF). De plus, selon le niveau d\'études, vous pouvez avoir besoin de fournir des dossiers académiques, des lettres de recommandation et de participer à des examens d\'admission.',
+    // Section: Lifestyle
+    'lifestyle_heading' => 'L\'Art de Vivre Méridional',
+    'lifestyle_paragraph' => 'Le style de vie à Toulouse est une question d\'équilibre. C\'est l\'Art de Vivre avec une touche de Sud – plus lent, plus ensoleillé et tourné vers la communauté. C\'est une ville de passionnés de rugby, de gastronomie et de rêveurs. Que vous parcouriez le marché Victor Hugo ou que vous assistiez à une conférence à la Cité de l\'Espace, l\'ambiance est toujours détendue. Vivre à Toulouse, c\'est choisir une vie où l\'on a du temps pour l\'essentiel sans sacrifier ses ambitions professionnelles.',
+
+    // Section: History
+    'history_heading' => 'Des Origines Romaines à l\'Ère Airbus',
+    'history_paragraph' => 'L\'histoire de Toulouse est une réinvention constante. De ses fondations romaines à son âge d\'or médiéval du commerce du pastel (qui a bâti ses palais roses), la ville a toujours été un centre d\'intellect et de commerce. Aujourd\'hui, cet héritage perdure dans sa domination aéronautique. Marcher dans Toulouse, c\'est voyager dans le temps – de la basilique Saint-Sernin aux lignes d\'assemblage futuristes de l\'Airbus A350.',
+
+    // Section: Study in Toulouse
+    'study_heading' => 'Ingénierie du Futur pour 2026',
+    'study_paragraph' => 'Toulouse est l\'ancrage académique du Sud de la France. C\'est un leader mondial dans l\'éducation STEM, particulièrement en aéronautique, sciences spatiales et IA. En 2026, les universités locales sont encore plus intégrées aux géants industriels comme Airbus et le CNES, offrant aux étudiants un accès privilégié à des stages et des projets de recherche concrets.',
 
     // Section: Universities
-    'universities_heading' => 'Université de Toulouse',
-    'universities_paragraph' => 'Fondée en 1229, elle est maintenant divisée en trois facultés séparées.',
-    'university_1' => 'L\'Université Toulouse 1 Capitole se classe 801 dans le classement mondial des universités QS effectué par TopUniversities et selon les avis des étudiants sur Studyportals, sa note globale est de 4.0. 15 départements doctoraux représentés par "L\'École des Docteurs" qui représente un total de 9100 personnels de recherche comprenant 5100 employés universitaires et 4300 étudiants chercheurs doctoraux, décernant 900 doctorats par an. Cette quantité de travaux de recherche couvre tous les domaines de la science tandis que 40% de ses étudiants sont internationaux.',
-    'university_2' => 'La deuxième université Jean Jaurès (en français : Université Toulouse-Jean Jaurès, anciennement connue sous le nom d\'Université de Mirail, est aujourd\'hui connue sous le nom de Toulouse Deux et est une université d\'État.',
-    'student_life' => 'En termes de vie étudiante, Toulouse est une ville très populaire auprès des étudiants du monde entier. L\'espace étudiant est maintenu toute l\'année et convient à l\'étude. De plus, bien que cette ville ne soit pas très grande, elle a tout ce que vous voulez et est également connue comme une ville très sûre.',
-    'programs_heading' => 'Certaines des disciplines les plus importantes enseignées à l\'Université de Toulouse',
-    'program_1' => 'Génie des Télécommunications — Classement 10',
-    'program_2' => 'Science Aéronautique — Classement 6',
-    'program_3' => 'Gestion — Classement 9',
-    'program_4' => 'Art — Classement 6',
-    'program_5' => 'Littérature — Classement 5',
-    'program_6' => 'Linguistique — Classement 6',
-    'program_7' => 'Droit — Classement 4',
-    'program_8' => 'Philosophie — Classement 6',
-    'program_9' => 'Histoire — Classement 3',
+    'universities_heading' => 'Institutions Académiques de Premier Plan',
+    'universities_intro' => 'Toulouse propose un écosystème éducatif d\'élite, profondément lié à ses racines industrielles :',
+    'university_capitole' => 'Université Toulouse 1 Capitole (Droit, Économie, Gestion)',
+    'university_jaures' => 'Université Toulouse - Jean Jaurès (Arts, Lettres, Langues)',
+    'university_sabatier' => 'Université Toulouse III - Paul Sabatier (Sciences, Santé, Ingénierie)',
 
-    // Section: Living Costs
-    'living_costs_heading' => 'Coûts de la Vie à Toulouse',
-    'living_costs_paragraph' => 'Toulouse offre une qualité de vie élevée sans le prix parisien. En 2026, elle reste l\'une des grandes villes les plus abordables de France. Un professionnel célibataire peut vivre confortablement avec 1 100 € à 1 450 € par mois. Les studios étudiants sont largement disponibles entre 450 € et 650 €, souvent entièrement éligibles à l\'aide au logement CAF. Ajoutez à cela les excellents transports en commun et les réductions pour étudiants, et votre budget va beaucoup plus loin ici. Vous voulez savoir exactement combien il vous faut pour emménager ici ? <a href=":consult_url"><strong>Réservez une consultation gratuite de planification financière</strong></a> pour obtenir une ventilation détaillée des coûts adaptée à votre situation.',
-
-    // Section: Housing
-    'housing_heading' => 'Logement',
-    'housing_paragraph' => 'Économiquement, Toulouse est une ville abordable, en particulier pour les étudiants. La location de logements hors campus est d\'environ 450 € selon l\'endroit où vous vivez. Cependant, les frais de transport pour les personnes de moins de 26 ans sont relativement abordables.',
-
-    // Section: Daily Life
-    'daily_life_heading' => 'Vie Quotidienne',
-    'daily_life_paragraph' => 'Si vous voulez profiter à la fois des racines uniques de la culture française traditionnelle et des installations urbaines modernes, Toulouse est certainement l\'une des meilleures villes pour vivre en France. En d\'autres termes, vous vivrez ici une véritable modernité à la française. Sa croissance économique en France est très élevée et elle offre de nombreuses excellentes opportunités d\'emploi.',
-
-    // Section: Transportation
-    'transportation_heading' => 'Transports',
-    'transportation_paragraph' => 'La distance de Paris à Toulouse en train à grande vitesse est de 588 kilomètres. La distance autoroutière à Paris est également de 674,2 kilomètres. Donc, avec une estimation approximative, il y a environ trois heures et demie entre la capitale et cette ville. L\'aéroport le plus proche de cette ville est l\'aéroport de Toulouse (TLS) qui se trouve à 6,2 kilomètres de vous. Les autres aéroports proches sont : Carcassonne, Lourdes / Tarbes, Perpignan et Pau. Le temps de vol sans escale vers Paris dure généralement 1 heure et 20 minutes.',
+    // Section: Toulouse Climate
+    'climate_heading' => 'Ensoleillée et Vibrante',
+    'climate_paragraph' => 'Le climat de Toulouse reflète la chaleur de ses habitants. Avec des étés longs et ensoleillés et des hivers doux, c\'est l\'une des villes les plus agréables de France. L\'automne est particulièrement magnifique, transformant le Canal du Midi en un tunnel d\'or.',
 
     // Section: Tourism
-    'tourism_heading' => 'Attractions Touristiques à Toulouse',
-    'tourism_paragraph' => 'Promenez-vous dans les marchés ou attardez-vous même dans les terrasses des cafés ; errer dans la ville est vraiment vivifiant et plein de découvertes et d\'intuition et dispose de nombreux endroits historiques et uniques pour des promenades uniques vous ne pouvez pas aider mais tomber amoureux de sa beauté irrésistible. La plupart des bâtiments, connus sous le nom de La Ville Rose ou The Pink City, ont une belle façade en briques rose pâle et c\'est en quelque sorte l\'identité des bâtiments de Toulouse.',
-
-    // Section: Jewelry
-    'jewelry_heading' => 'Cité du Bijoux',
-    'jewelry_paragraph' => 'Chaque année, de nombreuses mariées du Moyen-Orient viennent à Toulouse acheter leurs bijoux de mariage dans cette ville. En dehors de cela, les joailliers allouent toujours une part des touristes de la ville à eux-mêmes ; ils viennent ici pour s\'inspirer des dernières tendances en matière de bijoux. Une liste de certains des meilleurs bijoutiers est listée ci-dessous:',
-    'jewelry_1' => 'Faur Jean-Jacques',
-    'jewelry_2' => 'Mademoiselle Nuage',
-    'jewelry_3' => 'Saraswati',
+    'tourism_heading' => 'Les Merveilles de la Ville Rose',
+    'tourism_paragraph' => 'Le tourisme à Toulouse est une invitation à la découverte. C\'est une ville qui récompense les curieux – de ses grandes places à ses cours cachées.',
+    'tourism_items' => [
+        'Place du Capitole : L\'âme majestueuse de la ville avec son hôtel de ville historique.',
+        'Basilique Saint-Sernin : L\'une des plus grandes églises romanes d\'Europe.',
+        'Les Quais de la Garonne : Pour les couchers de soleil et les moments de convivialité.',
+        'Cité de l\'Espace : Un voyage inoubliable dans le monde de l\'espace et de l\'astronomie.',
+        'Le Canal du Midi : Site classé à l\'UNESCO, idéal pour la marche ou le vélo.',
+        'Musée des Augustins : Des chefs-d\'œuvre dans un monastère gothique unique.',
+    ],
+    'tourism_paragraph_2' => 'La région Occitanie offre également des escapades infinies – de la cité médiévale de Carcassonne aux sommets des Pyrénées.',
 
     // Section: Economy
-    'economy_heading' => 'Industrie et Économie',
-    'economy_paragraph' => 'Économiquement, l\'aviation, l\'aérospatiale et l\'industrie du bijou sont les principales sources de revenus de Toulouse. De la Caravelle 1955 à Concorde 1969 par la création d\'un consortium européen, les succès aéronautiques ont rendu la ville célèbre en établissant Airbus, créant une place enviable dans la conquête de l\'espace aérien européen. Une place qui est maintenant considérée comme un siège mondial. Depuis 2003, avec la croissance des industries influentes dans cette ville, sa production brute par habitant a également connu une croissance rapide, ce qui a fait que cette ville se distingue par son dynamisme économique et se classe au deuxième rang juste après Nantes et avant Lyon. Cette ville est également la troisième ville de France en termes de qualité des infrastructures. Au-delà de cela, Toulouse, capitale de la région Languedoc-Roussillon-Midi-Pyrénées, est avant Montpellier avec une population de près de 850 000 habitants.',
+    'economy_heading' => 'Un Siège Social Mondial Dynamique',
+    'economy_paragraph_1' => 'L\'économie de Toulouse est un moteur d\'exportations de haute technologie. En tant que siège d\'Airbus et hub spatial majeur, elle jouit d\'une stabilité économique incroyable. Les secteurs clés pour 2026 incluent :',
+    'economy_companies' => [
+        'Aéronautique & Défense (Airbus, Thales, ATR)',
+        'Innovation Spatiale (CNES, Thales Alenia Space)',
+        'Biotechnologie & Santé (Oncopole)',
+        'Technologies Numériques & IA',
+    ],
+    'economy_paragraph_2' => 'Cette concentration industrielle crée un écosystème robuste où se croisent ingénieurs, data scientists et managers du monde entier.',
+
+    // Section: Living Costs
+    'living_costs_heading' => 'Haute Qualité, Coût Modéré : Budget 2026',
+    'living_costs_paragraph' => 'Toulouse est réputée pour offrir un style de vie métropolitain à un coût bien inférieur à celui de Paris. Pour un professionnel international, un budget mensuel de 1 150 € à 1 500 € est très confortable. Les studios étudiants se situent entre 450 € et 650 €, et vous êtes presque toujours éligible aux **aides au logement CAF**, pouvant couvrir jusqu\'à 40 % du loyer. <a href=":consult_url"><strong>Demandez votre feuille de route budgétaire gratuite</strong></a>.',
 
     // Section: Job Opportunities
-    'jobs_heading' => 'Opportunités d\'Emploi à Toulouse',
-    'jobs_paragraph' => 'Toulouse offre des opportunités d\'emploi appropriées pour les spécialistes dans ces domaines en raison de son accent sur l\'aérospatiale, les technologies de l\'information, la biotechnologie et les industries des sciences de la vie. De plus, de nombreuses grandes entreprises internationales ont des succursales à Toulouse, ce qui a conduit à une diversité des opportunités d\'emploi. Pour travailler en France, avoir un permis de travail est obligatoire. Les conditions pour obtenir un permis de travail varient selon le type de position et la nationalité de la personne.',
+    'job_heading' => 'Des Horizons de Carrière au Plus Haut',
+    'job_paragraph_1' => 'Avec l\'industrie aéronautique en pleine expansion en 2026, Toulouse est en quête de talents internationaux. Les ingénieurs, développeurs et chefs de projet y trouvent un terrain fertile. La plupart des grandes entreprises travaillent en anglais, mais le français est la clé d\'une intégration locale réussie.',
+    'job_paragraph_2' => 'Nos experts locaux vous aident à naviguer sur le marché du travail toulousain, en vous connectant aux opportunités chez Airbus et son réseau de fournisseurs.',
+
+    // Section: Visa
+    'visa_heading' => 'Votre Autorisation de Décollage',
+    'visa_paragraph' => 'Naviguer dans le système de visa français ne devrait pas être compliqué. Que vous ayez besoin d\'un visa étudiant ou d\'un Passeport Talent pour un poste chez Airbus, notre équipe rend le processus fluide.',
 
     // Section: Conclusion
-    'conclusion_heading' => 'Dernière Parole',
-    'conclusion_paragraph' => 'Toulouse est là où l\'ambition rencontre la qualité de vie. Que vous soyez un ingénieur cherchant à travailler chez Airbus, un étudiant visant les meilleures universités ou une famille cherchant un environnement chaleureux et convivial, la Ville Rose vous accueille à bras ouverts. Les opportunités en 2026 sont vastes, mais naviguer dans le déménagement nécessite un plan solide. Ne laissez pas votre avenir au hasard. <strong><a href=":consult_url">Planifiez votre session personnalisée de feuille de route d\'immigration aujourd\'hui</a></strong>. Transformons votre rêve français en un plan concret.',
-
-    // Form Labels
-    'ask_question' => 'Poser une Question',
-    'form_name' => 'Votre Nom',
-    'form_email' => 'Votre Email',
-    'form_phone' => 'Votre Téléphone',
-    'form_subject' => 'Sujet',
-    'form_message' => 'Votre Message',
-    'form_send' => 'Envoyer le Message',
-    'form_error_name' => 'Veuillez entrer votre nom',
-    'form_error_email' => 'Veuillez entrer votre email',
-    'form_error_phone' => 'Veuillez entrer votre numéro de téléphone',
-    'form_error_subject' => 'Veuillez entrer votre sujet',
-    'form_error_message' => 'Veuillez entrer votre message',
+    'conclusion_heading' => 'Commencez Votre Futur dans la Ville Rose',
+    'conclusion_paragraph' => 'Toulouse est plus qu\'une ville ; c\'est un style de vie, un géant industriel et un trésor historique. En 2026, il n\'y a pas de meilleur endroit pour fusionner vos ambitions professionnelles avec une qualité de vie élevée. <strong><a href=":consult_url">Contactez nos consultants aujourd\'hui</a></strong> et planifions votre voyage au cœur du Sud-Ouest. De la candidature à l\'arrivée, nous sommes vos co-pilotes.',
 
     // FAQ Section
-    'faq_title' => 'Questions Fr\u00e9quentes sur Toulouse',
-    'faq_subtitle' => 'Tout Ce Que Vous Devez Savoir',
+    'faq_title' => 'Questions Fréquentes sur Toulouse',
+    'faq_subtitle' => 'Préparez votre arrivée pour 2026',
     'faq_items' => [
         [
-            'question' => 'Pourquoi Toulouse est-elle appel\u00e9e la \u00ab Capitale a\u00e9rospatiale de l\'Europe \u00bb ?',
-            'answer' => 'Toulouse est le si\u00e8ge d\'Airbus, le plus grand fabricant d\'avions au monde, ainsi que d\'agences spatiales majeures comme le CNES (Centre national d\'\u00e9tudes spatiales) et Thales Alenia Space. La ville accueille \u00e9galement ATR, Safran et des dizaines de sous-traitants a\u00e9ronautiques. Ce cluster fait de Toulouse le hub incontesté de l\'ing\u00e9nierie a\u00e9rospatiale europ\u00e9enne, cr\u00e9ant chaque ann\u00e9e des milliers d\'emplois hautement qualifi\u00e9s.',
+            'question' => 'Est-il facile de trouver un emploi à Toulouse sans parler un français parfait ?',
+            'answer' => 'Dans les secteurs de l\'aérospatiale et de la tech, l\'anglais est souvent la langue de travail, surtout chez Airbus. Cependant, pour la vie quotidienne, apprendre le français est fortement recommandé. La ville est très internationale.',
         ],
         [
-            'question' => 'Quel est le co\u00fbt de la vie \u00e0 Toulouse pour un \u00e9tudiant en 2026 ?',
-            'answer' => 'Toulouse est l\'une des grandes villes les plus abordables de France pour les \u00e9tudiants. En 2026, pr\u00e9voyez un budget mensuel de 1 100 \u20ac \u00e0 1 450 \u20ac pour un professionnel, ou de 800 \u20ac \u00e0 1 100 \u20ac pour un \u00e9tudiant. Des studios \u00e9tudiants sont largement disponibles entre 450 \u20ac et 650 \u20ac, souvent \u00e9ligibles \u00e0 l\'aide CAF \u00e0 hauteur de 30\u201340 %. Les transports en commun sont excellents et tr\u00e8s avantageux pour les moins de 26 ans.',
+            'question' => 'Le logement étudiant est-il abordable en 2026 ?',
+            'answer' => 'Toulouse reste l\'une des grandes villes les plus abordables de France. Le marché est compétitif en août, mais l\'offre de résidences est bonne. Avec les aides de la CAF, un étudiant peut vivre confortablement pour un prix raisonnable.',
         ],
         [
-            'question' => 'Quels sont les meilleurs programmes d\'ing\u00e9nierie \u00e0 Toulouse ?',
-            'answer' => 'Toulouse propose une \u00e9ducation en ing\u00e9nierie de haut niveau. Parmi les \u00e9tablissements incontournables : l\'INSA Toulouse (ing\u00e9nierie, informatique, environnement), l\'Universit\u00e9 Paul Sabatier - Toulouse III (sciences, ing\u00e9nierie, sant\u00e9), et l\'ISAE-SUPAERO (class\u00e9e num\u00e9ro 1 mondial en a\u00e9rospatiale). Pour le management, Toulouse Business School (TBS) jouit d\'une excellente r\u00e9putation internationale.',
+            'question' => 'Qu\'est-ce qui rend Toulouse différente pour les familles ?',
+            'answer' => 'C\'est la chaleur humaine et la taille de la ville. Elle a tout d\'une grande métropole (écoles internationales, musées) mais les gens y sont restés amicaux. La proximité des Pyrénées et de la mer est aussi un grand atout.',
         ],
         [
-            'question' => 'Comment est la vie \u00e9tudiante \u00e0 Toulouse ?',
-            'answer' => 'Avec plus de 130 000 \u00e9tudiants, Toulouse est la 4e ville \u00e9tudiante de France, ce qui cr\u00e9e une atmosph\u00e8re jeune et dynamique. Le centre-ville, la place du Capitole et les bords de la Garonne sont anim\u00e9s de caf\u00e9s, bars, concerts et \u00e9v\u00e9nements culturels. Le climat du sud de la France favorise la convivialit\u00e9 en ext\u00e9rieur presque toute l\'ann\u00e9e. Toulouse est r\u00e9guli\u00e8rement \u00e9lue l\'une des meilleures villes \u00e9tudiantes de France.',
-        ],
-        [
-            'question' => 'Quelles sont les opportunit\u00e9s d\'emploi \u00e0 Toulouse apr\u00e8s les \u00e9tudes ?',
-            'answer' => 'Le march\u00e9 du travail \u00e0 Toulouse est exceptionnel, notamment pour les dipl\u00f4m\u00e9s en STEM. Airbus, Thales, ATR, Safran et le CNES recrutent r\u00e9guli\u00e8rement dans les universit\u00e9s locales. La ville dispose \u00e9galement d\'un secteur num\u00e9rique et de m\u00e9decine de pr\u00e9cision en plein essor. Apr\u00e8s l\'obtention du dipl\u00f4me, le permis APS (12 mois) vous permet de rechercher librement un emploi. Beaucoup de nos clients internationaux ont re\u00e7u une offre directement depuis leur entreprise de stage.',
+            'question' => 'Une voiture est-elle nécessaire à Toulouse ?',
+            'answer' => 'En centre-ville, absolument pas. Le réseau de métro et tram (Tisséo) est excellent. Pour explorer les Pyrénées ou travailler sur certains sites aéronautiques périphériques (Blagnac), une voiture peut être utile.',
         ],
     ],
 ];

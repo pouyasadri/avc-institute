@@ -78,6 +78,20 @@
         <p class="lead">{!! __('city/toulouse.intro_paragraph') !!}</p>
     </section>
 
+    <section class="mb-5">
+        <h3 class="h4 fw-bold mb-3">{{ __('city/toulouse.student_life_heading') }}</h3>
+        <p>{{ __('city/toulouse.student_life_paragraph') }}</p>
+
+        <h3 class="h4 fw-bold mt-4 mb-3">{{ __('city/toulouse.family_life_heading') }}</h3>
+        <p>{{ __('city/toulouse.family_life_paragraph') }}</p>
+
+        <h3 class="h4 fw-bold mt-4 mb-3">{{ __('city/toulouse.lifestyle_heading') }}</h3>
+        <p>{{ __('city/toulouse.lifestyle_paragraph') }}</p>
+
+        <h3 class="h4 fw-bold mt-4 mb-3">{{ __('city/toulouse.history_heading') }}</h3>
+        <p>{{ __('city/toulouse.history_paragraph') }}</p>
+    </section>
+
     <div class="rounded-4 overflow-hidden shadow-sm mb-5">
         <iframe
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d184889.5585011091!2d1.4451994!3d43.6086372!3m2!i1024!2i768!4f13.1!3m3!1m2!1s0x12aebb6fec7552ff%3A0x406f69c2f411030!2sToulouse!5e0!3m2!1sfr!2sfr!4v1691147641647!5m2!1sfr!2sfr"
@@ -86,37 +100,24 @@
     </div>
 
     <section class="mb-5">
-        <h3 class="h4 fw-bold mb-3">{{ __('city/toulouse.language_heading') }}</h3>
-        <p>{{ __('city/toulouse.language_paragraph') }}</p>
-
-        <h3 class="h4 fw-bold mt-4 mb-3">{{ __('city/toulouse.climate_heading') }}</h3>
-        <p>{{ __('city/toulouse.climate_paragraph') }}</p>
-
-        <h3 class="h4 fw-bold mt-4 mb-3">{{ __('city/toulouse.study_heading') }}</h3>
+        <h3 class="h4 fw-bold mb-3">{{ __('city/toulouse.study_heading') }}</h3>
         <p>{{ __('city/toulouse.study_paragraph') }}</p>
 
         <h3 class="h4 fw-bold mt-4 mb-3">{{ __('city/toulouse.universities_heading') }}</h3>
-        <p>{{ __('city/toulouse.universities_paragraph') }}</p>
+        <p>{{ __('city/toulouse.universities_intro') }}</p>
         <ul class="list-group list-group-flush mb-4">
             <li class="list-group-item bg-transparent border-0 ps-0">
                 <i class="bx bx-right-arrow-alt text-primary me-2"></i>
-                {{ __('city/toulouse.university_1') }}
+                <span>{{ __('city/toulouse.university_capitole') }}</span>
             </li>
             <li class="list-group-item bg-transparent border-0 ps-0">
                 <i class="bx bx-right-arrow-alt text-primary me-2"></i>
-                {{ __('city/toulouse.university_2') }}
+                <span>{{ __('city/toulouse.university_jaures') }}</span>
             </li>
-        </ul>
-        <p>{{ __('city/toulouse.student_life') }}</p>
-
-        <h4 class="h5 fw-bold mt-4 mb-3">{{ __('city/toulouse.programs_heading') }}</h4>
-        <ul class="list-group list-group-flush mb-4">
-            @for ($i = 1; $i <= 9; $i++)
-                <li class="list-group-item bg-transparent border-0 ps-0">
-                    <i class="bx bx-check-circle text-primary me-2"></i>
-                    {{ __('city/toulouse.program_' . $i) }}
-                </li>
-            @endfor
+            <li class="list-group-item bg-transparent border-0 ps-0">
+                <i class="bx bx-right-arrow-alt text-primary me-2"></i>
+                <span>{{ __('city/toulouse.university_sabatier') }}</span>
+            </li>
         </ul>
     </section>
 
@@ -129,41 +130,36 @@
         <h3 class="h4 fw-bold mb-3">{{ __('city/toulouse.living_costs_heading') }}</h3>
         <p>{!! __('city/toulouse.living_costs_paragraph', ['consult_url' => url($currentLocale . '/consult')]) !!}</p>
 
-        <h3 class="h4 fw-bold mt-4 mb-3">{{ __('city/toulouse.housing_heading') }}</h3>
-        <p>{{ __('city/toulouse.housing_paragraph') }}</p>
-
-        <h3 class="h4 fw-bold mt-4 mb-3">{{ __('city/toulouse.daily_life_heading') }}</h3>
-        <p>{{ __('city/toulouse.daily_life_paragraph') }}</p>
-
-        <h3 class="h4 fw-bold mt-4 mb-3">{{ __('city/toulouse.transportation_heading') }}</h3>
-        <p>{{ __('city/toulouse.transportation_paragraph') }}</p>
+        <h3 class="h4 fw-bold mt-4 mb-3">{{ __('city/toulouse.climate_heading') }}</h3>
+        <p>{{ __('city/toulouse.climate_paragraph') }}</p>
 
         <h3 class="h4 fw-bold mt-4 mb-3">{{ __('city/toulouse.tourism_heading') }}</h3>
         <p>{{ __('city/toulouse.tourism_paragraph') }}</p>
-
-        <h3 class="h4 fw-bold mt-4 mb-3">{{ __('city/toulouse.jewelry_heading') }}</h3>
-        <p>{{ __('city/toulouse.jewelry_paragraph') }}</p>
         <ul class="list-group list-group-flush mb-4">
-            @for ($i = 1; $i <= 3; $i++)
+            @foreach (__('city/toulouse.tourism_items') as $item)
                 <li class="list-group-item bg-transparent border-0 ps-0">
-                    <i class="bx bx-map-pin text-primary me-2"></i>
-                    {{ __('city/toulouse.jewelry_' . $i) }}
+                    <i class="bx bx-check-circle text-primary me-2"></i>
+                    {{ $item }}
                 </li>
-            @endfor
+            @endforeach
         </ul>
-    </section>
+        <p>{{ __('city/toulouse.tourism_paragraph_2') }}</p>
 
-    <div class="mb-5">
-        <img src="{{ asset('assets/img/cities/Toulouse/toulouse.webp') }}"
-            alt="{{ __('city/toulouse.breadcrumb_toulouse') }}" class="img-fluid rounded-4 shadow-sm w-100">
-    </div>
+        <h3 class="h4 fw-bold mt-4 mb-3">{{ __('city/toulouse.economy_heading') }}</h3>
+        <p>{{ __('city/toulouse.economy_paragraph_1') }}</p>
+        <ul class="list-group list-group-flush mb-4">
+            @foreach (__('city/toulouse.economy_companies') as $company)
+                <li class="list-group-item bg-transparent border-0 ps-0">
+                    <i class="bx bx-buildings text-primary me-2"></i>
+                    {{ $company }}
+                </li>
+            @endforeach
+        </ul>
+        <p>{{ __('city/toulouse.economy_paragraph_2') }}</p>
 
-    <section class="mb-5">
-        <h3 class="h4 fw-bold mb-3">{{ __('city/toulouse.economy_heading') }}</h3>
-        <p>{{ __('city/toulouse.economy_paragraph') }}</p>
-
-        <h3 class="h4 fw-bold mt-4 mb-3">{{ __('city/toulouse.jobs_heading') }}</h3>
-        <p>{{ __('city/toulouse.jobs_paragraph') }}</p>
+        <h3 class="h4 fw-bold mt-4 mb-3">{{ __('city/toulouse.job_heading') }}</h3>
+        <p>{{ __('city/toulouse.job_paragraph_1') }}</p>
+        <p>{{ __('city/toulouse.job_paragraph_2') }}</p>
 
         <h3 class="h4 fw-bold mt-4 mb-3">{{ __('city/toulouse.conclusion_heading') }}</h3>
         <p>{!! __('city/toulouse.conclusion_paragraph', ['consult_url' => url($currentLocale . '/consult')]) !!}</p>
@@ -180,25 +176,25 @@
                     <div class="col-md-6">
                         <div class="d-flex align-items-start small text-muted">
                             <i class='bx bx-check-circle text-primary me-2 mt-1'></i>
-                            <span>{{ __('city/toulouse.intro_heading') }}</span>
+                            <span>{{ __('city/toulouse.student_life_heading') }}</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-start small text-muted">
+                            <i class='bx bx-check-circle text-primary me-2 mt-1'></i>
+                            <span>{{ __('city/toulouse.family_life_heading') }}</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-start small text-muted">
+                            <i class='bx bx-check-circle text-primary me-2 mt-1'></i>
+                            <span>{{ __('city/toulouse.lifestyle_heading') }}</span>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="d-flex align-items-start small text-muted">
                             <i class='bx bx-check-circle text-primary me-2 mt-1'></i>
                             <span>{{ __('city/toulouse.study_heading') }}</span>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="d-flex align-items-start small text-muted">
-                            <i class='bx bx-check-circle text-primary me-2 mt-1'></i>
-                            <span>{{ __('city/toulouse.living_costs_heading') }}</span>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="d-flex align-items-start small text-muted">
-                            <i class='bx bx-check-circle text-primary me-2 mt-1'></i>
-                            <span>{{ __('city/toulouse.tourism_heading') }}</span>
                         </div>
                     </div>
                 </div>
