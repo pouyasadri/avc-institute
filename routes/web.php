@@ -58,6 +58,8 @@ Route::prefix('{locale}')
                 'cote-d-azure',
                 'toulouse',
                 'strasbourg',
+                'universite-psl',
+                'ip-paris',
             ];
             foreach ($universities as $university) {
                 Route::view("/$university", "university.$university");
@@ -178,7 +180,7 @@ Route::prefix('{locale}')
         Route::post('/questions/submit', [QuestionController::class, 'submit'])->name('questions.submit');
 
         // Auth routes localized
-
+    
         // Debug route for locale detection (only in non-production)
         if (app()->environment('local', 'development')) {
             Route::get('/locale-debug', function (Request $request) {
@@ -219,5 +221,5 @@ Route::get('/{locale}/admin', function () {
 })->whereIn('locale', ['en', 'fr', 'fa']);
 
 Route::get('/{locale}/admin/{any?}', function ($locale, $any = null) {
-    return redirect('/admin/'.$any);
+    return redirect('/admin/' . $any);
 })->whereIn('locale', ['en', 'fr', 'fa'])->where('any', '.*');

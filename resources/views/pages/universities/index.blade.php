@@ -24,6 +24,8 @@
         ['slug' => 'cote-d-azure', 'bg' => 'bg-13', 'name' => 'nice'],
         ['slug' => 'toulouse', 'bg' => 'bg-14', 'name' => 'toulouse'],
         ['slug' => 'strasbourg', 'bg' => 'bg-15', 'name' => 'strasbourg'],
+        ['slug' => 'universite-psl', 'bg' => 'bg-16', 'name' => 'psl'],
+        ['slug' => 'ip-paris', 'bg' => 'bg-17', 'name' => 'ip_paris'],
     ];
 @endphp
 

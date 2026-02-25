@@ -73,6 +73,14 @@ return [
     'strasbourg_rank' => 'Home to 3 Nobel Laureates',
     'strasbourg_description' => 'A European powerhouse in chemistry and life sciences. Benefit from its multicultural identity and location in the heart of the European Capital.',
 
+    'psl_name' => 'Université PSL (Paris Sciences & Lettres)',
+    'psl_rank' => 'Top 25 Worldwide',
+    'psl_description' => 'A collegiate university in the heart of Paris, leading in science, arts, engineering, and humanities, offering an exceptional research-driven education.',
+
+    'ip_paris_name' => 'Institut Polytechnique de Paris',
+    'ip_paris_rank' => 'Top 50 Worldwide',
+    'ip_paris_description' => 'A world-class institute focusing on science and engineering, gathering five prestigious French engineering schools to cultivate the innovators of tomorrow.',
+
     // France Education Benefits Section
     'benefits_section_title' => 'The French Advantage',
     'benefits_section_heading' => 'Why Study in France in 2026?',

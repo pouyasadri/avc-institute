@@ -73,6 +73,14 @@ return [
     'strasbourg_rank' => '3 Prix Nobel actifs',
     'strasbourg_description' => 'Une puissance européenne en chimie et sciences de la vie. Bénéficiez d\'une identité multiculturelle au cœur de la capitale européenne.',
 
+    'psl_name' => 'Université PSL (Paris Sciences & Lettres)',
+    'psl_rank' => 'Top 25 Mondial',
+    'psl_description' => 'Une université collégiale au cœur de Paris, leader en sciences, arts, ingénierie et lettres, offrant une formation exceptionnelle par la recherche.',
+
+    'ip_paris_name' => 'Institut Polytechnique de Paris',
+    'ip_paris_rank' => 'Top 50 Mondial',
+    'ip_paris_description' => 'Un institut de classe mondiale axé sur les sciences et l\'ingénierie, regroupant cinq écoles d\'ingénieurs françaises prestigieuses pour former les innovateurs de demain.',
+
     // France Education Benefits Section
     'benefits_section_title' => 'L\'Avantage Français',
     'benefits_section_heading' => 'Pourquoi choisir la France en 2026 ?',
