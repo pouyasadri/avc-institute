@@ -2767,6 +2767,15 @@ Exclusive View Area Style
     background-size: contain;
 }
 
+.exclusive-img.bg-16 {
+    background-image: url(../img/universities/PSL/psl_logo.webp);
+    background-size: contain;
+}
+
+.exclusive-img.bg-17 {
+    background-image: url(../img/universities/IP_Paris/ip_paris_logo.webp);
+    background-size: contain;
+}
 
 .exclusive-content .title {
     text-transform: uppercase;
@@ -3965,6 +3974,16 @@ Page Title Area Style
 .bg-strasbourg {
     background-image: url(../img/universities/Strasbourg/strasbourg_logo.webp);
     background-size: auto;
+}
+
+.bg-psl {
+    background-image: url(../img/universities/PSL/psl_logo.webp);
+    background-size: contain;
+}
+
+.bg-ip-paris {
+    background-image: url(../img/universities/IP_Paris/ip_paris_logo.webp);
+    background-size: contain;
 }
 
 .bg-paris-city {
