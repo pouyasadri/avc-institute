@@ -41,6 +41,8 @@ class SitemapController extends Controller
             'cote-d-azure',
             'toulouse',
             'strasbourg',
+            'universite-psl',
+            'ip-paris',
         ];
 
         // Build URLs with hreflang alternates
