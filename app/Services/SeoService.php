@@ -22,7 +22,7 @@ class SeoService
     public function setTitle(string $title, bool $appendSuffix = true): self
     {
         $suffix = $appendSuffix ? config('seo.defaults.title_suffix', '') : '';
-        $this->meta['title'] = $title.$suffix;
+        $this->meta['title'] = $title . $suffix;
         $this->openGraph['og:title'] = $title;
         $this->twitter['twitter:title'] = $title;
 
@@ -56,7 +56,7 @@ class SeoService
      */
     public function setCanonical(?string $url = null): self
     {
-        $this->canonical = $url ?? URL::current();
+        $this->canonical = $this->enforcePrimaryDomain($url ?? URL::current());
         $this->openGraph['og:url'] = $this->canonical;
 
         return $this;
@@ -117,7 +117,7 @@ class SeoService
             }
         }
 
-        if (! empty($alternates)) {
+        if (!empty($alternates)) {
             $this->openGraph['og:locale:alternate'] = $alternates;
         }
 
@@ -252,7 +252,7 @@ class SeoService
      */
     public function getCanonical(): string
     {
-        return $this->canonical ?: URL::current();
+        return $this->canonical ?: $this->enforcePrimaryDomain(URL::current());
     }
 
     /**
@@ -262,7 +262,7 @@ class SeoService
     {
         $translation = $blog->getTranslation($locale);
 
-        if (! $translation) {
+        if (!$translation) {
             return $this;
         }
 
@@ -275,7 +275,7 @@ class SeoService
 
         if ($blog->main_image) {
             $this->setImage(
-                asset('storage/'.$blog->main_image),
+                asset('storage/' . $blog->main_image),
                 $translation->title
             );
         }
@@ -297,13 +297,13 @@ class SeoService
     {
         $translation = $property->getTranslation($locale);
 
-        if (! $translation) {
+        if (!$translation) {
             return $this;
         }
 
         $title = $translation->name ?? 'Property';
         $description = strip_tags($translation->description ?? '') ?:
-            "Property in {$property->city}, {$property->country}. {$property->rooms} rooms, €".number_format($property->price, 0);
+            "Property in {$property->city}, {$property->country}. {$property->rooms} rooms, €" . number_format($property->price, 0);
 
         $this->setTitle($title)
             ->setDescription($description)
@@ -313,7 +313,7 @@ class SeoService
 
         if ($property->main_image) {
             $this->setImage(
-                asset('storage/'.$property->main_image),
+                asset('storage/' . $property->main_image),
                 $title
             );
         }
@@ -408,7 +408,7 @@ class SeoService
             return $text;
         }
 
-        return mb_substr($text, 0, $length - 3).'...';
+        return mb_substr($text, 0, $length - 3) . '...';
     }
 
     /**
@@ -421,5 +421,24 @@ class SeoService
         }
 
         return url($url);
+    }
+    /**
+     * Enforce the primary domain from config('app.url') on a given URL
+     */
+    protected function enforcePrimaryDomain(string $url): string
+    {
+        $appUrl = config('app.url');
+        if (!$appUrl) {
+            return $url;
+        }
+
+        $parsedUrl = parse_url($url);
+        $parsedAppUrl = parse_url($appUrl);
+
+        $scheme = $parsedAppUrl['scheme'] ?? ($parsedUrl['scheme'] ?? 'https');
+        $host = $parsedAppUrl['host'] ?? ($parsedUrl['host'] ?? '');
+        $path = $parsedUrl['path'] ?? '';
+
+        return "{$scheme}://{$host}{$path}";
     }
 }

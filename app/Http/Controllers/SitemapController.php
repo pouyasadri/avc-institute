@@ -43,6 +43,18 @@ class SitemapController extends Controller
             'strasbourg',
             'universite-psl',
             'ip-paris',
+            'universite-grenoble-alpes',
+        ];
+        $services = [
+            'residence-permit',
+            'resume-lettre-motivation',
+            'arrival-support',
+            'certified-translation',
+            'educational-counseling',
+            'housing-assistance',
+            'university-application',
+            'administrative-advocacy',
+            'legal-support',
         ];
 
         // Build URLs with hreflang alternates
@@ -180,6 +192,29 @@ class SitemapController extends Controller
                     'changefreq' => config('seo.sitemap.changefreq.university', 'monthly'),
                     'priority' => config('seo.sitemap.priorities.university', 0.75),
                     'alternates' => $generateAlternates("/universities/{$university}"),
+                ];
+            }
+        }
+
+        // Services for each locale
+        foreach ($locales as $locale) {
+            // Services index
+            $urls[] = [
+                'loc' => "{$baseUrl}/{$locale}/services",
+                'lastmod' => now()->toAtomString(),
+                'changefreq' => 'monthly',
+                'priority' => 0.9,
+                'alternates' => $generateAlternates('/services'),
+            ];
+
+            // Individual services
+            foreach ($services as $service) {
+                $urls[] = [
+                    'loc' => "{$baseUrl}/{$locale}/services/{$service}",
+                    'lastmod' => now()->toAtomString(),
+                    'changefreq' => 'monthly',
+                    'priority' => 0.85,
+                    'alternates' => $generateAlternates("/services/{$service}"),
                 ];
             }
         }

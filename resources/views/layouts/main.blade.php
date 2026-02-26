@@ -9,8 +9,10 @@
         $currentLocale = app()->getLocale();
         $seoService = app(\App\Services\SeoService::class);
 
-        // Canonical should be stable per-page; avoid query strings unless you intentionally want them.
-        $canonicalUrl = url()->current();
+        // Enforce the primary domain for canonical URLs to avoid duplicate content issues
+        $appUrl = config('app.url');
+        $canonicalUrl = $appUrl ? rtrim($appUrl, '/') . '/' . ltrim(request()->path(), '/') : url()->current();
+
         $currentRoute = request()->route();
         if ($currentRoute) {
             $routeName = $currentRoute->getName();
@@ -18,13 +20,28 @@
                 try {
                     $params = $currentRoute->parameters();
                     $paramNames = method_exists($currentRoute, 'parameterNames') ? $currentRoute->parameterNames() : [];
-                    if (! empty($paramNames)) {
+                    if (!empty($paramNames)) {
                         $params = array_intersect_key($params, array_flip($paramNames));
                     }
 
+                    // For the route helper, we should also ensure it uses the correct base URL
                     $canonicalUrl = route($routeName, $params);
+
+                    if ($appUrl) {
+                        $parsedAppUrl = parse_url($appUrl);
+                        $parsedCanonical = parse_url($canonicalUrl);
+
+                        $canonicalUrl = ($parsedAppUrl['scheme'] ?? 'https') . '://' .
+                            ($parsedAppUrl['host'] ?? $parsedCanonical['host']) .
+                            ($parsedCanonical['path'] ?? '');
+
+                        if (!empty($parsedCanonical['query'])) {
+                            // Generally we strip query params for canonicals as per existing logic,
+                            // but if they are needed they would be here. Existing test implies stripping.
+                        }
+                    }
                 } catch (\Throwable $e) {
-                    // Fallback to current URL
+                    // Fallback to primary domain + path
                 }
             }
         }
@@ -215,10 +232,10 @@
         <x-layout.mobile-menu :isRtl="$isRtl" />
     </header>
 
-     <!-- Main Content -->
-     <main id="main-content" role="main">
-         @yield('content')
-     </main>
+    <!-- Main Content -->
+    <main id="main-content" role="main">
+        @yield('content')
+    </main>
 
     <!-- Footer -->
     <x-layout.footer :isRtl="$isRtl" :chevronsDir="$chevronsDir" />
