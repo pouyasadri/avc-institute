@@ -26,6 +26,7 @@
         ['slug' => 'strasbourg', 'bg' => 'bg-15', 'name' => 'strasbourg'],
         ['slug' => 'universite-psl', 'bg' => 'bg-16', 'name' => 'psl'],
         ['slug' => 'ip-paris', 'bg' => 'bg-17', 'name' => 'ip_paris'],
+        ['slug' => 'universite-grenoble-alpes', 'bg' => 'bg-18', 'name' => 'grenoble_alpes'],
     ];
 @endphp
 

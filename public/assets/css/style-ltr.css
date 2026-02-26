@@ -2777,6 +2777,11 @@ Exclusive View Area Style
     background-size: contain;
 }
 
+.exclusive-img.bg-18 {
+    background-image: url(../img/universities/Grenoble_Alpes/grenoble_alpes_logo.webp);
+    background-size: contain;
+}
+
 .exclusive-content .title {
     text-transform: uppercase;
     color: #0F3A80;
@@ -3983,6 +3988,11 @@ Page Title Area Style
 
 .bg-ip-paris {
     background-image: url(../img/universities/IP_Paris/ip_paris_logo.webp);
+    background-size: contain;
+}
+
+.bg-grenoble-alpes {
+    background-image: url(../img/universities/Grenoble_Alpes/grenoble_alpes_logo.webp);
     background-size: contain;
 }
 

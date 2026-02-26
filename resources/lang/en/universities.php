@@ -81,6 +81,10 @@ return [
     'ip_paris_rank' => 'Top 50 Worldwide',
     'ip_paris_description' => 'A world-class institute focusing on science and engineering, gathering five prestigious French engineering schools to cultivate the innovators of tomorrow.',
 
+    'grenoble_alpes_name' => 'Université Grenoble Alpes',
+    'grenoble_alpes_rank' => 'Top 100 Worldwide',
+    'grenoble_alpes_description' => 'Nestled in the French Alps, a leading comprehensive university renowned for innovation, research excellence, and a breathtaking study environment.',
+
     // France Education Benefits Section
     'benefits_section_title' => 'The French Advantage',
     'benefits_section_heading' => 'Why Study in France in 2026?',

@@ -81,6 +81,10 @@ return [
     'ip_paris_rank' => 'Top 50 Mondial',
     'ip_paris_description' => 'Un institut de classe mondiale axé sur les sciences et l\'ingénierie, regroupant cinq écoles d\'ingénieurs françaises prestigieuses pour former les innovateurs de demain.',
 
+    'grenoble_alpes_name' => 'Université Grenoble Alpes',
+    'grenoble_alpes_rank' => 'Top 100 Mondial',
+    'grenoble_alpes_description' => 'Nichée au cœur des Alpes, une université pluridisciplinaire de premier plan, réputée pour l\'innovation, l\'excellence de sa recherche et son cadre d\'études exceptionnel.',
+
     // France Education Benefits Section
     'benefits_section_title' => 'L\'Avantage Français',
     'benefits_section_heading' => 'Pourquoi choisir la France en 2026 ?',
