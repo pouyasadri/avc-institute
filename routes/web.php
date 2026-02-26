@@ -7,6 +7,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\PropertyController;
 use App\Http\Controllers\QuestionController;
+use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SitemapController;
 use App\Http\Middleware\SetLocale;
 use App\Services\LocaleDetector;
@@ -60,6 +61,7 @@ Route::prefix('{locale}')
                 'strasbourg',
                 'universite-psl',
                 'ip-paris',
+                'universite-grenoble-alpes',
             ];
             foreach ($universities as $university) {
                 Route::view("/$university", "university.$university");
@@ -169,6 +171,10 @@ Route::prefix('{locale}')
             Route::get('/{id}/delete', $propertiesComingSoon)->name('property.delete');
             Route::get('/{id}', $propertiesComingSoon)->name('property.show');
         });
+
+        // Service Routes
+        Route::get('/services', [ServiceController::class, 'index'])->name('services.index');
+        Route::get('/services/{slug}', [ServiceController::class, 'show'])->name('services.show');
 
         // Other Routes
         Route::view('/consult', 'pages.consult')->name('consult');
