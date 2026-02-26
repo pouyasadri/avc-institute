@@ -36,8 +36,10 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{ url(app()->getLocale() . '#services') }}"
-                                    class="nav-link">{{ __('layout.nav.services') }}
+                                <a href="{{ route('services.index', ['locale' => app()->getLocale()]) }}"
+                                    class="nav-link {{ request()->routeIs('services.*') ? 'active' : '' }}"
+                                    {{ request()->routeIs('services.*') ? 'aria-current="page"' : '' }}>
+                                    {{ __('layout.nav.services') }}
                                 </a>
                             </li>
                             <li class="nav-item">
