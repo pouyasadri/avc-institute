@@ -100,38 +100,47 @@ return [
         'title' => 'Notre Expertise Clé',
         'items' => [
             [
+                'slug' => 'residence-permit',
                 'title' => 'Assistance Titre de Séjour',
                 'description' => 'Support complet pour l\'obtention et le renouvellement de votre Titre de Séjour. Nous gérons la bureaucratie pour que vous restiez en règle sans souci.',
             ],
             [
+                'slug' => 'resume-lettre-motivation',
                 'title' => 'Rédaction CV & Lettre de Motivation',
                 'description' => 'Services de rédaction professionnelle pour faire ressortir votre dossier auprès des universités et employeurs français.',
             ],
             [
+                'slug' => 'arrival-support',
                 'title' => 'Support Administratif à l\'Arrivée',
                 'description' => 'Nous gérons les essentiels de la première semaine : Compte bancaire, carte SIM, CAF (APL) et inscription à la sécurité sociale.',
             ],
             [
+                'slug' => 'certified-translation',
                 'title' => 'Traduction Assermentée',
                 'description' => 'Traduction officielle de vos documents académiques et juridiques par des traducteurs assermentés, acceptés par toutes les autorités françaises.',
             ],
             [
+                'slug' => 'educational-counseling',
                 'title' => 'Conseil Éducatif',
                 'description' => 'Feuilles de route personnalisées pour votre carrière académique en France, correspondant à votre profil avec les meilleurs programmes.',
             ],
             [
+                'slug' => 'housing-assistance',
                 'title' => 'Aide au Logement & CAF',
                 'description' => 'Nous vous trouvons un logement et vous aidons à demander les aides financières au logement (CAF/APL).',
             ],
             [
+                'slug' => 'university-application',
                 'title' => 'Gestion Candidatures Universitaires',
                 'description' => 'Nous gérons votre soumission sur les plateformes comme Études en France, Parcoursup et e-Candidat.',
             ],
             [
+                'slug' => 'administrative-advocacy',
                 'title' => 'Représentation Administrative',
                 'description' => 'Nous agissons comme votre représentant face à l\'administration française, résolvant efficacement les problèmes complexes.',
             ],
             [
+                'slug' => 'legal-support',
                 'title' => 'Support Juridique & Contentieux',
                 'description' => 'Accès à des avocats spécialisés pour les refus de visa, recours et cas d\'immigration complexes en France et dans votre pays d\'origine.',
             ],

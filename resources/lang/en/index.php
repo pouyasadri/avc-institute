@@ -100,38 +100,47 @@ return [
         'title' => 'Our Core Expertise',
         'items' => [
             [
+                'slug' => 'residence-permit',
                 'title' => 'Residence Permit Assistance',
                 'description' => 'Full support for obtaining and renewing your Titre de Séjour. We handle the bureaucracy so you stay legal and worry-free.',
             ],
             [
+                'slug' => 'resume-lettre-motivation',
                 'title' => 'CV & Motivation Letter (Lettre de Motivation)',
                 'description' => 'Professional writing services to make your application stand out to French universities and employers.',
             ],
             [
+                'slug' => 'arrival-support',
                 'title' => 'Arrival Administrative Support',
                 'description' => 'We handle the first-week essentials: Bank account, SIM card, CAF (housing aid), and social security registration.',
             ],
             [
+                'slug' => 'certified-translation',
                 'title' => 'Certified Translation',
                 'description' => 'Official translation of your academic and legal documents by sworn translators, accepted by all French authorities.',
             ],
             [
+                'slug' => 'educational-counseling',
                 'title' => 'Educational Counseling',
                 'description' => 'Personalized roadmaps for your academic career in France, matching your profile with the best programs.',
             ],
             [
+                'slug' => 'housing-assistance',
                 'title' => 'Housing & CAF Assistance',
                 'description' => 'We find you a place to live and help you apply for government housing financial aid (CAF).',
             ],
             [
+                'slug' => 'university-application',
                 'title' => 'University Application Management',
                 'description' => 'We manage your submission on platforms like Études en France, Parcoursup, and e-Candidat.',
             ],
             [
+                'slug' => 'administrative-advocacy',
                 'title' => 'Administrative Advocacy',
                 'description' => 'We act as your representative in dealing with French administration, resolving complex issues efficiently.',
             ],
             [
+                'slug' => 'legal-support',
                 'title' => 'Legal & Litigation Support',
                 'description' => 'Access to specialized lawyers for visa refusals, appeals, and complex immigration cases in both France and your home country.',
             ],

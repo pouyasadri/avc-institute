@@ -34,7 +34,10 @@
             @foreach($items as $index => $item)
                 <div class="booking-col-2">
                     <div class="single-booking h-100 rounded-5 transition-all hover-lift">
-                        <a href="{{ url($currentLocale . "/consult") }}" class="text-decoration-none h-100 d-block p-4 group">
+                        @php
+                            $serviceUrl = isset($item['slug']) ? route('services.show', ['locale' => $currentLocale, 'slug' => $item['slug']]) : url($currentLocale . '/consult');
+                        @endphp
+                        <a href="{{ $serviceUrl }}" class="text-decoration-none h-100 d-block p-4 group">
                             <div class="service-icon mb-3 text-primary text-center transition-colors group-hover:text-orange">
                                 @if($index == 0) {{-- Residence/Migration --}}
                                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
