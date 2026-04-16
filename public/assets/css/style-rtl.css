@@ -2780,7 +2780,11 @@ Exclusive View Area Style
 .exclusive-img.bg-12,
 .exclusive-img.bg-13,
 .exclusive-img.bg-14,
-.exclusive-img.bg-15 {
+.exclusive-img.bg-15,
+.exclusive-img.bg-16,
+.exclusive-img.bg-17,
+.exclusive-img.bg-18,
+.exclusive-img.bg-19 {
     min-height: 300px;
 }
 
