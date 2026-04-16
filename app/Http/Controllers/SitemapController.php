@@ -44,6 +44,7 @@ class SitemapController extends Controller
             'universite-psl',
             'ip-paris',
             'universite-grenoble-alpes',
+            'aix-marseille-university',
         ];
         $services = [
             'residence-permit',

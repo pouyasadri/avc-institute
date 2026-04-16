@@ -85,6 +85,10 @@ return [
     'grenoble_alpes_rank' => 'در میان ۱۰۰ دانشگاه برتر جهان',
     'grenoble_alpes_description' => 'دانشگاهی جامع و پیشرو در دل کوه‌های آلپ فرانسه، با شهرت جهانی در نوآوری، پژوهش‌های سطح بالا و محیط دانشجویی بی‌نظیر.',
 
+    'aix_marseille_name' => 'دانشگاه اکس-مارسی (AMU)',
+    'aix_marseille_rank' => 'در میان ۱۵۰ دانشگاه برتر جهان',
+    'aix_marseille_description' => 'بزرگترین دانشگاه چندرشته‌ای در دنیای فرانسوی‌زبان، واقع در قلب مدیترانه، با شهرت جهانی در پژوهش‌های علمی و نوآوری.',
+
     // France Education Benefits Section
     'benefits_section_title' => 'مزیت تحصیل در فرانسه',
     'benefits_section_heading' => 'چرا تحصیل در فرانسه برای سال ۲۰۲۶؟',

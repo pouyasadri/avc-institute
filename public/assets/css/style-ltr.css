@@ -2782,6 +2782,11 @@ Exclusive View Area Style
     background-size: contain;
 }
 
+.exclusive-img.bg-19 {
+    background-image: url(../img/universities/Aix_Marseille/aix_marseille_logo.webp);
+    background-size: contain;
+}
+
 .exclusive-content .title {
     text-transform: uppercase;
     color: #0F3A80;
@@ -3993,6 +3998,11 @@ Page Title Area Style
 
 .bg-grenoble-alpes {
     background-image: url(../img/universities/Grenoble_Alpes/grenoble_alpes_logo.webp);
+    background-size: contain;
+}
+
+.bg-aix-marseille {
+    background-image: url(../img/universities/Aix_Marseille/aix_marseille_logo.webp);
     background-size: contain;
 }
 

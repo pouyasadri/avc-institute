@@ -62,6 +62,7 @@ Route::prefix('{locale}')
                 'universite-psl',
                 'ip-paris',
                 'universite-grenoble-alpes',
+                'aix-marseille-university',
             ];
             foreach ($universities as $university) {
                 Route::view("/$university", "university.$university");

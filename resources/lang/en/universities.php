@@ -85,6 +85,10 @@ return [
     'grenoble_alpes_rank' => 'Top 100 Worldwide',
     'grenoble_alpes_description' => 'Nestled in the French Alps, a leading comprehensive university renowned for innovation, research excellence, and a breathtaking study environment.',
 
+    'aix_marseille_name' => 'Aix-Marseille University',
+    'aix_marseille_rank' => 'Top 150 Globally',
+    'aix_marseille_description' => 'A Mediterranean powerhouse and the largest multidisciplinary university in the French-speaking world, excelling in research across all fields.',
+
     // France Education Benefits Section
     'benefits_section_title' => 'The French Advantage',
     'benefits_section_heading' => 'Why Study in France in 2026?',

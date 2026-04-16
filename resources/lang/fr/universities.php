@@ -85,6 +85,10 @@ return [
     'grenoble_alpes_rank' => 'Top 100 Mondial',
     'grenoble_alpes_description' => 'Nichée au cœur des Alpes, une université pluridisciplinaire de premier plan, réputée pour l\'innovation, l\'excellence de sa recherche et son cadre d\'études exceptionnel.',
 
+    'aix_marseille_name' => 'Aix-Marseille Université',
+    'aix_marseille_rank' => 'Top 150 Mondial',
+    'aix_marseille_description' => 'Une puissance méditerranéenne et la plus grande université francophone pluridisciplinaire, excellant dans la recherche dans tous les domaines.',
+
     // France Education Benefits Section
     'benefits_section_title' => 'L\'Avantage Français',
     'benefits_section_heading' => 'Pourquoi choisir la France en 2026 ?',
