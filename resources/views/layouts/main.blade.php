@@ -47,6 +47,9 @@
         }
 
         // Set default SEO for layout
+        // Always enforce HTTPS on canonical URLs — safety net in case APP_URL scheme is wrong
+        $canonicalUrl = preg_replace('/^http:\/\//', 'https://', $canonicalUrl);
+
         $seoService->setLocale($currentLocale)
             ->setCanonical($canonicalUrl)
             ->setTwitterCard('summary_large_image');
@@ -192,7 +195,7 @@
             $baseUrl,
             config('seo.organization.name'),
             $baseUrl . '/' . $currentLocale . '/blog?search={search_term_string}',
-            $currentLocale
+            array_keys(config('seo.locales', ['en' => [], 'fr' => [], 'fa' => []]))
         );
     @endphp
     <x-seo.structured-data :schema="$webSiteSchema" />

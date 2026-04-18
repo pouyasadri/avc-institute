@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Blog;
 use App\Models\Property;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Log;
 
 class SitemapController extends Controller
 {
@@ -15,9 +17,16 @@ class SitemapController extends Controller
     {
         $locales = array_keys(config('seo.locales', ['en', 'fr', 'fa']));
         $baseUrl = rtrim(config('app.url', 'https://applyvipconseil.com'), '/');
+        $defaultLocale = config('seo.default_locale', 'fa');
 
-        // Get all published blogs
-        $blogs = Blog::published()->with('translations')->get();
+        // Cache blog queries for 1 hour — sitemap is crawled frequently by Googlebot
+        $blogs = Cache::remember('sitemap:blogs', 3600, function () {
+            return Blog::published()->with('translations')->get();
+        });
+
+        // Static content last-modified date — use a fixed date; avoid now() which
+        // makes every crawl think content changed and wastes crawl budget.
+        $staticLastmod = '2025-01-01T00:00:00+00:00';
 
         // PROPERTIES FEATURE DISABLED - COMING SOON
         // Original: $properties = Property::published()->with('translations')->get();
@@ -83,11 +92,16 @@ class SitemapController extends Controller
 
         // Homepage for each locale
         foreach ($locales as $locale) {
+            // Only the default locale homepage gets priority 1.0
+            $homePriority = ($locale === $defaultLocale)
+                ? config('seo.sitemap.priorities.homepage', 1.0)
+                : 0.9;
+
             $urls[] = [
-                'loc' => "{$baseUrl}/{$locale}",
-                'lastmod' => now()->toAtomString(),
+                'loc'        => "{$baseUrl}/{$locale}",
+                'lastmod'    => $staticLastmod,
                 'changefreq' => config('seo.sitemap.changefreq.homepage', 'daily'),
-                'priority' => config('seo.sitemap.priorities.homepage', 1.0),
+                'priority'   => $homePriority,
                 'alternates' => $generateAlternates(''),
             ];
         }
@@ -155,20 +169,20 @@ class SitemapController extends Controller
         foreach ($locales as $locale) {
             // Cities index
             $urls[] = [
-                'loc' => "{$baseUrl}/{$locale}/cities",
-                'lastmod' => now()->toAtomString(),
+                'loc'        => "{$baseUrl}/{$locale}/cities",
+                'lastmod'    => $staticLastmod,
                 'changefreq' => 'monthly',
-                'priority' => 0.8,
+                'priority'   => 0.8,
                 'alternates' => $generateAlternates('/cities'),
             ];
 
             // Individual cities
             foreach ($cities as $city) {
                 $urls[] = [
-                    'loc' => "{$baseUrl}/{$locale}/cities/{$city}",
-                    'lastmod' => now()->toAtomString(),
+                    'loc'        => "{$baseUrl}/{$locale}/cities/{$city}",
+                    'lastmod'    => $staticLastmod,
                     'changefreq' => config('seo.sitemap.changefreq.city', 'monthly'),
-                    'priority' => config('seo.sitemap.priorities.city', 0.8),
+                    'priority'   => config('seo.sitemap.priorities.city', 0.8),
                     'alternates' => $generateAlternates("/cities/{$city}"),
                 ];
             }
@@ -178,20 +192,20 @@ class SitemapController extends Controller
         foreach ($locales as $locale) {
             // Universities index
             $urls[] = [
-                'loc' => "{$baseUrl}/{$locale}/universities",
-                'lastmod' => now()->toAtomString(),
+                'loc'        => "{$baseUrl}/{$locale}/universities",
+                'lastmod'    => $staticLastmod,
                 'changefreq' => 'monthly',
-                'priority' => 0.8,
+                'priority'   => 0.8,
                 'alternates' => $generateAlternates('/universities'),
             ];
 
             // Individual universities
             foreach ($universities as $university) {
                 $urls[] = [
-                    'loc' => "{$baseUrl}/{$locale}/universities/{$university}",
-                    'lastmod' => now()->toAtomString(),
+                    'loc'        => "{$baseUrl}/{$locale}/universities/{$university}",
+                    'lastmod'    => $staticLastmod,
                     'changefreq' => config('seo.sitemap.changefreq.university', 'monthly'),
-                    'priority' => config('seo.sitemap.priorities.university', 0.75),
+                    'priority'   => config('seo.sitemap.priorities.university', 0.75),
                     'alternates' => $generateAlternates("/universities/{$university}"),
                 ];
             }
@@ -201,20 +215,20 @@ class SitemapController extends Controller
         foreach ($locales as $locale) {
             // Services index
             $urls[] = [
-                'loc' => "{$baseUrl}/{$locale}/services",
-                'lastmod' => now()->toAtomString(),
+                'loc'        => "{$baseUrl}/{$locale}/services",
+                'lastmod'    => $staticLastmod,
                 'changefreq' => 'monthly',
-                'priority' => 0.9,
+                'priority'   => 0.9,
                 'alternates' => $generateAlternates('/services'),
             ];
 
             // Individual services
             foreach ($services as $service) {
                 $urls[] = [
-                    'loc' => "{$baseUrl}/{$locale}/services/{$service}",
-                    'lastmod' => now()->toAtomString(),
+                    'loc'        => "{$baseUrl}/{$locale}/services/{$service}",
+                    'lastmod'    => $staticLastmod,
                     'changefreq' => 'monthly',
-                    'priority' => 0.85,
+                    'priority'   => 0.85,
                     'alternates' => $generateAlternates("/services/{$service}"),
                 ];
             }
@@ -225,17 +239,28 @@ class SitemapController extends Controller
         foreach ($locales as $locale) {
             foreach ($staticPages as $page) {
                 $urls[] = [
-                    'loc' => "{$baseUrl}/{$locale}/{$page}",
-                    'lastmod' => now()->toAtomString(),
+                    'loc'        => "{$baseUrl}/{$locale}/{$page}",
+                    'lastmod'    => $staticLastmod,
                     'changefreq' => config('seo.sitemap.changefreq.static_page', 'monthly'),
-                    'priority' => config('seo.sitemap.priorities.static_page', 0.6),
+                    'priority'   => config('seo.sitemap.priorities.static_page', 0.6),
                     'alternates' => $generateAlternates("/{$page}"),
                 ];
             }
         }
 
+        // Determine cache freshness from the newest blog post
+        $latestBlogDate = $blogs->max('updated_at');
+        $lastModified   = $latestBlogDate
+            ? $latestBlogDate->format('D, d M Y H:i:s') . ' GMT'
+            : gmdate('D, d M Y H:i:s') . ' GMT';
+
+        $etag = md5($lastModified . count($urls));
+
         return response()
             ->view('sitemap', ['urls' => $urls])
-            ->header('Content-Type', 'text/xml');
+            ->header('Content-Type', 'application/xml; charset=UTF-8')
+            ->header('Cache-Control', 'public, max-age=3600, s-maxage=3600')
+            ->header('Last-Modified', $lastModified)
+            ->header('ETag', $etag);
     }
 }

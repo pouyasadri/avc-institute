@@ -35,16 +35,16 @@ Route::prefix('{locale}')
 
         // Cities Routes
         Route::prefix('cities')->group(function () {
-            Route::view('/', 'pages.cities.index');
+            Route::view('/', 'pages.cities.index')->name('cities.index');
             $cities = ['paris', 'strasbourg', 'nice', 'toulouse', 'lyon'];
             foreach ($cities as $city) {
-                Route::view("/$city", "city.$city");
+                Route::view("/$city", "city.$city")->name("cities.$city");
             }
         });
 
         // Universities Routes
         Route::prefix('universities')->group(function () {
-            Route::view('/', 'pages.universities.index');
+            Route::view('/', 'pages.universities.index')->name('universities.index');
             $universities = [
                 'paris-saclay-university',
                 'sorbonne-paris-nord',
@@ -65,7 +65,7 @@ Route::prefix('{locale}')
                 'aix-marseille-university',
             ];
             foreach ($universities as $university) {
-                Route::view("/$university", "university.$university");
+                Route::view("/$university", "university.$university")->name("universities.$university");
             }
         });
         // Blog Routes

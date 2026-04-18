@@ -21,22 +21,30 @@ class CheckRedirects
         $path = $request->getPathInfo();
 
         // Check for legacy subdomain structure and redirect before locale detection
-        // en.applyvipconseil.com -> applyvipconseil.com/en
-        // fr.applyvipconseil.com -> applyvipconseil.com/fr
-        if (str_starts_with($host, 'en.') || str_starts_with($host, 'fr.')) {
-            $locale = str_starts_with($host, 'en.') ? 'en' : 'fr';
-            $newHost = str_replace(['en.', 'fr.'], '', $host);
+        // Handles all variants:
+        //   en.applyvipconseil.com     -> https://applyvipconseil.com/en/...
+        //   fr.applyvipconseil.com     -> https://applyvipconseil.com/fr/...
+        //   www.en.applyvipconseil.com -> https://applyvipconseil.com/en/...
+        //   www.fr.applyvipconseil.com -> https://applyvipconseil.com/fr/...
+        if (preg_match('/^(?:www\.)?(en|fr)\./', $host, $matches)) {
+            $locale = $matches[1];
 
-            // Build the new URL with locale prefix
-            // If path is /, redirect to /locale
-            // If path already has a locale prefix (like /fa), replace it
-            $newPath = $path === '/' ? "/{$locale}" : "/{$locale}".$path;
+            // Strip the locale subdomain (and optional www.) to get the bare canonical host
+            $newHost = preg_replace('/^(?:www\.)?(en|fr)\./', '', $host);
+            // Ensure no stray www remains on the canonical host
+            $newHost = preg_replace('/^www\./', '', $newHost);
 
-            $newUrl = $request->getScheme().'://'.$newHost.$newPath;
+            // Strip any existing leading locale segment from the path to avoid double-prefixing
+            // e.g. /fa/cities/nice stays as /fa/cities/nice (we keep original locale in path)
+            // e.g. /en/blog stays as /blog (locale subdomain takes precedence)
+            $pathWithoutLeadingLocale = preg_replace('/^\/(en|fr|fa)(?=\/|$)/', '', $path);
+            $newPath = '/' . $locale . ($pathWithoutLeadingLocale ?: '');
+
+            $newUrl = 'https://' . $newHost . $newPath;
 
             // Preserve query string if present
             if ($request->getQueryString()) {
-                $newUrl .= '?'.$request->getQueryString();
+                $newUrl .= '?' . $request->getQueryString();
             }
 
             return redirect($newUrl, 301);

@@ -71,8 +71,9 @@ class OrganizationSchema extends SchemaBuilder
     protected function buildContactPoint(array $org): array
     {
         $contactPoint = [
-            '@type' => 'ContactPoint',
-            'contactType' => 'Customer Service',
+            '@type'             => 'ContactPoint',
+            'contactType'       => 'customer service',
+            'availableLanguage' => ['French', 'Persian', 'English'],
         ];
 
         if (! empty($org['telephone'])) {

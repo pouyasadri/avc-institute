@@ -1,6 +1,19 @@
 User-agent: *
-Disallow:
+Disallow: /admin
+Disallow: /login
+Disallow: /register
+Disallow: /password
 Disallow: /*?view=*
 Disallow: /*?status=*
+
+# Throttle aggressive bots (Google ignores Crawl-delay so this is safe)
+User-agent: Bingbot
+Crawl-delay: 10
+
+User-agent: YandexBot
+Crawl-delay: 10
+
+User-agent: Baiduspider
+Crawl-delay: 20
 
 Sitemap: https://applyvipconseil.com/sitemap.xml

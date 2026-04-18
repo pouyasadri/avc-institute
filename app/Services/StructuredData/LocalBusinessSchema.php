@@ -16,9 +16,9 @@ class LocalBusinessSchema extends SchemaBuilder
     {
         $org = config('seo.organization');
 
-        $baseUrl = rtrim(config('app.url'), '/');
-        $orgId = $baseUrl.'/#organization';
-        $businessId = $baseUrl.'/#localbusiness';
+        $baseUrl    = rtrim(config('app.url'), '/');
+        $orgId      = $baseUrl . '/#organization';
+        $businessId = $baseUrl . '/#localbusiness';
 
         $this->add('@id', $businessId)
             ->add('name', $org['name'])
@@ -28,10 +28,26 @@ class LocalBusinessSchema extends SchemaBuilder
             ->add('email', $org['email'])
             ->add('address', $this->buildAddress($org['address']))
             ->add('priceRange', '€€')
+            ->add('currenciesAccepted', $org['currencies_accepted'] ?? 'EUR')
+            ->add('paymentAccepted', $org['payment_accepted'] ?? 'Cash, Credit Card')
             ->add('sameAs', $org['same_as'])
             ->add('parentOrganization', ['@id' => $orgId]);
 
-        // Add opening hours (you can make this configurable)
+        // Geo coordinates (improves Google Maps association)
+        if (! empty($org['geo'])) {
+            $this->add('geo', [
+                '@type'     => 'GeoCoordinates',
+                'latitude'  => $org['geo']['latitude'],
+                'longitude' => $org['geo']['longitude'],
+            ]);
+        }
+
+        // Google Maps link
+        if (! empty($org['has_map'])) {
+            $this->add('hasMap', $org['has_map']);
+        }
+
+        // Add opening hours
         $this->add('openingHoursSpecification', $this->buildOpeningHours());
 
         // Add services offered

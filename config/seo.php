@@ -47,8 +47,19 @@ return [
             'https://www.instagram.com/apply_vip_conseil/',
             // Add other social media profiles
         ],
-        'founder' => 'Apply Vip Conseil',
-        'founding_date' => '2010',
+        'founder'      => 'Apply Vip Conseil',
+        'founding_date' => '2023',
+        // // Geo coordinates for LocalBusiness schema (Paris, France — update with exact location)
+        // 'geo' => [
+        //     'latitude'  => 48.8723,
+        //     'longitude' => 2.3029,
+        // ],
+        // // Google Maps link for hasMap property
+        // 'has_map'           => 'https://maps.app.goo.gl/applyvipconseil',
+        // // Currencies accepted
+        // 'currencies_accepted' => 'EUR',
+        // // Payment methods accepted
+        // 'payment_accepted'    => 'Cash, Credit Card, Bank Transfer',
     ],
 
     /*

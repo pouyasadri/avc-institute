@@ -65,16 +65,20 @@ class SeoService
     /**
      * Set image for social sharing
      */
-    public function setImage(string $imageUrl, string $alt = ''): self
+    public function setImage(string $imageUrl, string $alt = '', string $mimeType = 'image/webp'): self
     {
         $fullImageUrl = $this->makeAbsoluteUrl($imageUrl);
+        // Always serve canonical HTTPS URL for social scrapers
+        $secureUrl   = preg_replace('/^http:\/\//', 'https://', $fullImageUrl);
 
-        $this->openGraph['og:image'] = $fullImageUrl;
-        $this->openGraph['og:image:alt'] = $alt;
-        $this->openGraph['og:image:width'] = config('seo.images.sizes.og.width', 1200);
-        $this->openGraph['og:image:height'] = config('seo.images.sizes.og.height', 630);
+        $this->openGraph['og:image']            = $secureUrl;
+        $this->openGraph['og:image:secure_url'] = $secureUrl;
+        $this->openGraph['og:image:alt']        = $alt;
+        $this->openGraph['og:image:type']       = $mimeType;
+        $this->openGraph['og:image:width']      = config('seo.images.sizes.og.width', 1200);
+        $this->openGraph['og:image:height']     = config('seo.images.sizes.og.height', 630);
 
-        $this->twitter['twitter:image'] = $fullImageUrl;
+        $this->twitter['twitter:image']     = $secureUrl;
         $this->twitter['twitter:image:alt'] = $alt;
 
         return $this;
@@ -399,16 +403,28 @@ class SeoService
     }
 
     /**
-     * Truncate text to specified length
+     * Truncate text to specified length, breaking at word boundary.
+     * Avoids cutting mid-word which looks unprofessional in search snippets.
      */
     protected function truncate(string $text, int $length): string
     {
         $text = strip_tags($text);
+        // Collapse whitespace (tabs, newlines) to single spaces
+        $text = preg_replace('/\s+/', ' ', trim($text));
+
         if (mb_strlen($text) <= $length) {
             return $text;
         }
 
-        return mb_substr($text, 0, $length - 3) . '...';
+        // Find the last space within the allowed length, then trim
+        $truncated = mb_substr($text, 0, $length - 1);
+        $lastSpace = mb_strrpos($truncated, ' ');
+
+        if ($lastSpace !== false) {
+            $truncated = mb_substr($truncated, 0, $lastSpace);
+        }
+
+        return rtrim($truncated, '.,;:') . '…';
     }
 
     /**
