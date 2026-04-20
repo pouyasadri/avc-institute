@@ -89,6 +89,10 @@ return [
     'aix_marseille_rank' => 'Top 150 Mondial',
     'aix_marseille_description' => 'Une puissance méditerranéenne et la plus grande université francophone pluridisciplinaire, excellant dans la recherche dans tous les domaines.',
 
+    'bordeaux_name' => 'Université de Bordeaux',
+    'bordeaux_rank' => 'Campus Européen de Premier Plan',
+    'bordeaux_description' => 'Un pôle pluridisciplinaire de renommée mondiale, célèbre pour la science du vin, les neurosciences et la recherche sur les matériaux, offrant une vie étudiante exceptionnelle dans un cadre historique.',
+
     // France Education Benefits Section
     'benefits_section_title' => 'L\'Avantage Français',
     'benefits_section_heading' => 'Pourquoi choisir la France en 2026 ?',

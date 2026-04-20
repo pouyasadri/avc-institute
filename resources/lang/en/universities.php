@@ -89,6 +89,10 @@ return [
     'aix_marseille_rank' => 'Top 150 Globally',
     'aix_marseille_description' => 'A Mediterranean powerhouse and the largest multidisciplinary university in the French-speaking world, excelling in research across all fields.',
 
+    'bordeaux_name' => 'University of Bordeaux',
+    'bordeaux_rank' => 'Leading European Campus',
+    'bordeaux_description' => 'A world-renowned multidisciplinary hub famous for its wine science, neurosciences, and materials research, offering an exceptional student life in a historic setting.',
+
     // France Education Benefits Section
     'benefits_section_title' => 'The French Advantage',
     'benefits_section_heading' => 'Why Study in France in 2026?',
