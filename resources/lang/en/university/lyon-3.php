@@ -28,9 +28,9 @@ return [
 
     'global_leader_title' => 'A Modern Leader with a Human Touch',
     'global_leader_content' => 'Lyon 3 isn\'t just about prestigious rankings; it\'s about preparing students for a globalized world. Here\'s why it stands out for 2026:
-- **Professional Excellence**: The university is home to the IAE Lyon School of Management, one of France\'s top-rated university business schools.
-- **International Outlook**: With over 400 partner universities worldwide, it is a truly global hub.
-- **Research Impact**: Strong research clusters in Urban Studies, Ethics, and International Law.
+- Professional Excellence: The university is home to the IAE Lyon School of Management, one of France\'s top-rated university business schools.
+- International Outlook: With over 400 partner universities worldwide, it is a truly global hub.
+- Research Impact: Strong research clusters in Urban Studies, Ethics, and International Law.
 
 At Jean Moulin Lyon 3, you get the prestige of a major French university with a focus on individual student success.',
 

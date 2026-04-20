@@ -28,9 +28,9 @@ return [
 
     'global_leader_title' => 'Where Science and Lifestyle Converge',
     'global_leader_content' => 'The university is distinguished by its experimental status and its commitment to shaping the futur. Key highlights for your 2026 application:
-- **AI Hub**: Home to the 3IA Côte d’Azur Institute, one of France\'s four elite national AI research centers.
-- **Ocean & Space Prestige**: Leading global research in Marine Biology and Astrophysics.
-- **Interdisciplinary Excellence**: Graduate schools that break traditional silos to solve complex global challenges.
+- AI Hub: Home to the 3IA Côte d’Azur Institute, one of France\'s four elite national AI research centers.
+- Ocean & Space Prestige: Leading global research in Marine Biology and Astrophysics.
+- Interdisciplinary Excellence: Graduate schools that break traditional silos to solve complex global challenges.
 
 At Côte d’Azur, your education is powered by the region\'s unique "Idex" (Initiative of Excellence) status.',
 

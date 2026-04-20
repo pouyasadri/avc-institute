@@ -28,9 +28,9 @@ return [
 
     'global_leader_title' => 'Where History Meets the Future of Flight',
     'global_leader_content' => 'Toulouse is unique in its integration with global industries. Key highlights for your 2026 application:
-- **Aerospace Valley**: Home to Airbus and the European space industry, offering unmatched synergy between the university and the aeronautics sector (ISAE-SUPAERO).
-- **Economic Excellence**: Hosts the world-renowned Toulouse School of Economics (TSE), consistently ranked among the top global economics faculties.
-- **AI and Tech Hub**: A recognized leader in Artificial Intelligence through the ANITI institute.
+- Aerospace Valley: Home to Airbus and the European space industry, offering unmatched synergy between the university and the aeronautics sector (ISAE-SUPAERO).
+- Economic Excellence: Hosts the world-renowned Toulouse School of Economics (TSE), consistently ranked among the top global economics faculties.
+- AI and Tech Hub: A recognized leader in Artificial Intelligence through the ANITI institute.
 
 At Toulouse, you don\'t just learn about the future; you help build it.',
 

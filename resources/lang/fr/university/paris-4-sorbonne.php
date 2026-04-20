@@ -28,8 +28,8 @@ return [
 
     'global_leader_title' => 'Une Tradition Académique de Renommée Mondiale',
     'global_leader_content' => 'En choisissant la Sorbonne, vous rejoignez l\'une des institutions académiques les plus respectées au monde. Alors que nous nous tournons vers 2026, l\'université reste extrêmement bien classée :
-- **Classement mondial QS** : Constamment classée parmi les 230 meilleures universités mondiales.
-- **Times Higher Education** : Chef de file dans le domaine des arts et des sciences humaines à l\'échelle mondiale.
+- Classement mondial QS : Constamment classée parmi les 230 meilleures universités mondiales.
+- Times Higher Education : Chef de file dans le domaine des arts et des sciences humaines à l\'échelle mondiale.
 
 Ces réalisations reflètent un engagement envers un enseignement exceptionnel et une recherche approfondie et percutante.',
 

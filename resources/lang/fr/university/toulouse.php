@@ -28,9 +28,9 @@ return [
 
     'global_leader_title' => 'Où l’Histoire rencontre l’Avenir de l’Aviation',
     'global_leader_content' => 'Toulouse est unique par son intégration aux industries mondiales. Points clés pour votre candidature 2026 :
-- **Aerospace Valley** : Siège d’Airbus et de l’industrie spatiale européenne, offrant une synergie inégalée entre l’université et le secteur aéronautique (ISAE-SUPAERO).
-- **Excellence Économique** : Accueille la mondialement reconnue Toulouse School of Economics (TSE), classée parmi les meilleures facultés d’économie au niveau mondial.
-- **Pôle IA et Tech** : Un leader reconnu en Intelligence Artificielle à travers l’institut ANITI.
+- Aerospace Valley : Siège d’Airbus et de l’industrie spatiale européenne, offrant une synergie inégalée entre l’université et le secteur aéronautique (ISAE-SUPAERO).
+- Excellence Économique : Accueille la mondialement reconnue Toulouse School of Economics (TSE), classée parmi les meilleures facultés d’économie au niveau mondial.
+- Pôle IA et Tech : Un leader reconnu en Intelligence Artificielle à travers l’institut ANITI.
 
 À Toulouse, vous n’apprenez pas seulement à connaître l’avenir ; vous aidez à le construire.',
 

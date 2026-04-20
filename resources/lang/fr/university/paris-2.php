@@ -28,9 +28,9 @@ return [
 
     'global_leader_title' => 'Un Leader Mondial de l\'Enseignement Juridique',
     'global_leader_content' => 'Panthéon-Assas n’est pas seulement une université, c’est la référence absolue en droit et sciences sociales. En 2026, elle demeure le premier choix des futurs dirigeants :
-- **Classement National** : Systématiquement classée n°1 en France pour ses programmes de Droit et très prestigieuse en Économie.
-- **Prestige** : La majorité des admis à l\'École Nationale de la Magistrature (ENM) proviennent d\'Assas.
-- **Ouverture Internationale** : Partenariats solides avec des institutions mondiales comme Oxford, Yale et King\'s College London.
+- Classement National : Systématiquement classée n°1 en France pour ses programmes de Droit et très prestigieuse en Économie.
+- Prestige : La majorité des admis à l\'École Nationale de la Magistrature (ENM) proviennent d\'Assas.
+- Ouverture Internationale : Partenariats solides avec des institutions mondiales comme Oxford, Yale et King\'s College London.
 
 Choisir Assas, c\'est choisir un diplôme respecté dans le monde entier.',
 

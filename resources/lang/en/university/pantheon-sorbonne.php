@@ -28,9 +28,9 @@ return [
 
     'global_leader_title' => 'Legacy Meets Modern Innovation',
     'global_leader_content' => 'Paris 1 is world-renowned for its high-impact research and its commitment to critical thinking. Key reasons to choose Panthéon-Sorbonne for 2026:
-- **Academic Prestige**: Consistently ranked among the top universities worldwide for Philosophy, Archaeology, and Law.
-- **Historic Location**: Located in the vibrant Latin Quarter, steps away from the Panthéon and Luxembourg Gardens.
-- **Global Network**: Extensive international partnerships offering students unique mobility and career opportunities.
+- Academic Prestige: Consistently ranked among the top universities worldwide for Philosophy, Archaeology, and Law.
+- Historic Location: Located in the vibrant Latin Quarter, steps away from the Panthéon and Luxembourg Gardens.
+- Global Network: Extensive international partnerships offering students unique mobility and career opportunities.
 
 At Paris 1, your studies are connected to over 800 years of intellectual history.',
 

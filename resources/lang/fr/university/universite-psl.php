@@ -27,8 +27,8 @@ return [
 
     'global_leader_title' => 'Une Formation de Classe Mondiale',
     'global_leader_content' => 'En choisissant l\'Université PSL, vous intégrez une institution régulièrement classée parmi les meilleures de la planète. En vue de 2026, la réputation de notre université brille :
-- **QS World University Rankings 2026** : Constamment dans le Top 25 mondial.
-- **Times Higher Education (THE)** : Parmi les 50 meilleures universités mondiales, souvent classée N°1 en France.
+- QS World University Rankings 2026 : Constamment dans le Top 25 mondial.
+- Times Higher Education (THE) : Parmi les 50 meilleures universités mondiales, souvent classée N°1 en France.
 
 Ces classements prestigieux reflètent notre engagement profond envers la recherche, un faible ratio étudiants-professeurs et une expérience éducative véritablement exceptionnelle.',
 

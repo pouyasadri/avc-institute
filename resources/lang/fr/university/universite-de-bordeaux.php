@@ -27,8 +27,8 @@ return [
 
     'global_leader_title' => 'Un Titan de la Recherche de Renommée Mondiale',
     'global_leader_content' => 'L\'Université de Bordeaux est mondialement reconnue pour repousser les limites dans des domaines vitaux. Elle est certifiée "Campus d\'Excellence" en France, formant la prochaine génération de leaders mondiaux.
-- **Points Forts** : Domination mondiale inégalée en Sciences de la Vigne et du Vin (ISVV), et pôles novateurs en Neurosciences et Sciences des Matériaux.
-- **Réseau Mondial** : Partenariats actifs avec plus de 500 universités à travers le monde.',
+- Points Forts : Domination mondiale inégalée en Sciences de la Vigne et du Vin (ISVV), et pôles novateurs en Neurosciences et Sciences des Matériaux.
+- Réseau Mondial : Partenariats actifs avec plus de 500 universités à travers le monde.',
 
     'programs_title' => 'Définissez votre Voie vers le Succès',
     'programs_content' => 'L\'université propose un large éventail de programmes très respectés, conçus pour favoriser le développement intellectuel et la préparation à la vie active :',

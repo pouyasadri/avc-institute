@@ -27,8 +27,8 @@ return [
 
     'global_leader_title' => 'A World-Class Education, Just for You',
     'global_leader_content' => 'By choosing Université PSL, you are joining an institution consistently recognized among the finest on the planet. As we look ahead to 2026, our university\'s reputation shines:
-- **QS World University Rankings 2026**: Consistently ranked in the Global Top 25.
-- **Times Higher Education (THE)**: Among the top 50 worldwide, often ranked #1 in France.
+- QS World University Rankings 2026: Consistently ranked in the Global Top 25.
+- Times Higher Education (THE): Among the top 50 worldwide, often ranked #1 in France.
 
 These prestigious rankings reflect our deep commitment to research, low student-to-faculty ratios, and a genuinely exceptional educational experience.',
 

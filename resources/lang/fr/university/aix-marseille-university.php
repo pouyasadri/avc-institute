@@ -27,8 +27,8 @@ return [
 
     'global_leader_title' => 'Un Géant Méditerranéen sur la Scène Mondiale',
     'global_leader_content' => 'L\'AMU est régulièrement reconnue comme l\'une des meilleures universités de recherche au monde. Pour 2026, elle continue de dominer dans l\'innovation interdisciplinaire, notamment en sciences de la vie, en physique et en environnement.
-- **Classements Mondiaux** : Classée régulièrement parmi les 150 meilleures universités mondiales au classement de Shanghai (ARWU).
-- **Impact Recherche** : Abrite plus de 110 unités de recherche et 12 écoles doctorales, en partenariat étroit avec des organismes tels que le CNRS, l\'INSERM et le CEA.',
+- Classements Mondiaux : Classée régulièrement parmi les 150 meilleures universités mondiales au classement de Shanghai (ARWU).
+- Impact Recherche : Abrite plus de 110 unités de recherche et 12 écoles doctorales, en partenariat étroit avec des organismes tels que le CNRS, l\'INSERM et le CEA.',
 
     'programs_title' => 'Des Possibilités Infinies pour votre Avenir',
     'programs_content' => 'Avec cinq grands secteurs disciplinaires, l\'AMU propose l\'une des offres de formation les plus complètes d\'Europe. Que vous soyez intéressé par les arts, les sciences ou la médecine, vous trouverez votre voie :',

@@ -27,8 +27,8 @@ return [
 
     'global_leader_title' => 'A Mediterranean Giant on the Global Stage',
     'global_leader_content' => 'AMU is consistently recognized as one of the world\'s top research universities. For 2026, it continues to lead in interdisciplinary innovation, particularly in life sciences, physics, and environmental studies.
-- **Global Rankings**: Consistently ranked among the Top 150 universities worldwide in the Shanghai Ranking (ARWU).
-- **Research Impact**: Home to over 110 research units and 12 doctoral schools, deeply integrated with major organizations like CNRS, INSERM, and CEA.',
+- Global Rankings: Consistently ranked among the Top 150 universities worldwide in the Shanghai Ranking (ARWU).
+- Research Impact: Home to over 110 research units and 12 doctoral schools, deeply integrated with major organizations like CNRS, INSERM, and CEA.',
 
     'programs_title' => 'Infinite Possibilities for Your Future',
     'programs_content' => 'With five major disciplinary sectors, AMU provides one of the most comprehensive educational offerings in Europe. Whether you are interested in the arts, sciences, or medicine, you can find your perfect path:',

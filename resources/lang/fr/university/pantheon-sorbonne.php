@@ -28,9 +28,9 @@ return [
 
     'global_leader_title' => 'Entre Héritage et Innovation',
     'global_leader_content' => 'Paris 1 est mondialement reconnue pour l’impact de sa recherche et son engagement envers l’excellence académique. Voici pourquoi choisir Panthéon-Sorbonne en 2026 :
-- **Prestige Académique** : Classée parmi les meilleures universités mondiales en Philosophie, Archéologie et Droit.
-- **Emplacement Historique** : Située dans le Quartier Latin, à deux pas du Panthéon et du Jardin du Luxembourg.
-- **Réseau Mondial** : Des partenariats internationaux offrant des opportunités uniques de mobilité et de carrière.
+- Prestige Académique : Classée parmi les meilleures universités mondiales en Philosophie, Archéologie et Droit.
+- Emplacement Historique : Située dans le Quartier Latin, à deux pas du Panthéon et du Jardin du Luxembourg.
+- Réseau Mondial : Des partenariats internationaux offrant des opportunités uniques de mobilité et de carrière.
 
 À Paris 1, vos études s’inscrivent dans plus de 800 ans d’histoire intellectuelle.',
 

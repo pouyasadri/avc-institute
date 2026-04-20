@@ -28,9 +28,9 @@ return [
 
     'global_leader_title' => 'Un Leader Moderne à Taille Humaine',
     'global_leader_content' => 'Lyon 3 ne se résume pas à ses classements prestigieux ; c’est une institution qui prépare ses étudiants à un monde globalisé. En 2026, elle se distingue par :
-- **Excellence Professionnelle** : Elle abrite l’IAE Lyon, l’une des écoles de management universitaires les plus prisées de France.
-- **Ouverture Internationale** : Avec plus de 400 universités partenaires, c’est un véritable hub mondial.
-- **Impact de la Recherche** : Des pôles de recherche forts en Études Urbaines, Éthique et Droit International.
+- Excellence Professionnelle : Elle abrite l’IAE Lyon, l’une des écoles de management universitaires les plus prisées de France.
+- Ouverture Internationale : Avec plus de 400 universités partenaires, c’est un véritable hub mondial.
+- Impact de la Recherche : Des pôles de recherche forts en Études Urbaines, Éthique et Droit International.
 
 À Jean Moulin Lyon 3, vous bénéficiez du prestige d’une grande université avec un accompagnement centré sur la réussite individuelle.',
 

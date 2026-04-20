@@ -28,9 +28,9 @@ return [
 
     'global_leader_title' => 'L\'Innovation au Cœur de l\'Éducation',
     'global_leader_content' => 'Lyon 1 est largement reconnue pour sa recherche à fort impact et son engagement envers le progrès technologique. Voici pourquoi elle est un leader mondial pour 2026 :
-- **Excellence STEM** : Classée parmi les meilleures universités de France en Sciences de la Vie et en Chimie.
-- **Pôle Médical** : Siège de programmes prestigieux en Médecine, Pharmacie et Odontologie.
-- **Synergie Entreprise** : Des liens profonds avec les industries majeures, offrant aux étudiants des projets de recherche et des stages uniques.
+- Excellence STEM : Classée parmi les meilleures universités de France en Sciences de la Vie et en Chimie.
+- Pôle Médical : Siège de programmes prestigieux en Médecine, Pharmacie et Odontologie.
+- Synergie Entreprise : Des liens profonds avec les industries majeures, offrant aux étudiants des projets de recherche et des stages uniques.
 
 À Lyon 1, votre formation s’appuie sur les dernières découvertes scientifiques.',
 

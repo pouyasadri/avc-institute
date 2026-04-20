@@ -28,9 +28,9 @@ return [
 
     'global_leader_title' => 'Leading the Way in Social Sciences',
     'global_leader_content' => 'Lumière Lyon 2 is recognized globally for its diverse and inclusive academic environment. Key reasons to choose Lyon 2 for 2026:
-- **Academic Diversity**: Offers a vast range of programs from Psychology and Sociology to Digital Arts and Cinema.
-- **Societal Impact**: A research powerhouse in urban sociology, gender studies, and cultural management.
-- **Engagement**: Known for a vibrant student culture and a strong commitment to social justice and sustainability.
+- Academic Diversity: Offers a vast range of programs from Psychology and Sociology to Digital Arts and Cinema.
+- Societal Impact: A research powerhouse in urban sociology, gender studies, and cultural management.
+- Engagement: Known for a vibrant student culture and a strong commitment to social justice and sustainability.
 
 At Lyon 2, you\'re not just a student; you\'re part of a community shaping the future of social thought.',
 

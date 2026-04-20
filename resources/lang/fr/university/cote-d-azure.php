@@ -28,9 +28,9 @@ return [
 
     'global_leader_title' => 'Là où la Science et l’Art de Vivre se Rencontrent',
     'global_leader_content' => 'L’université se distingue par son statut expérimental et son engagement à façonner le futur. Points clés pour votre candidature 2026 :
-- **Pôle IA** : Siège du 3IA Côte d’Azur, l’un des quatre instituts nationaux d’élite dédiés à la recherche en Intelligence Artificielle.
-- **Prestige Océan et Espace** : Recherche mondiale de pointe en Biologie Marine et Astrophysique.
-- **Excellence Interdisciplinaire** : Des Écoles Universitaires de Recherche qui brisent les silos pour résoudre les défis mondiaux complexes.
+- Pôle IA : Siège du 3IA Côte d’Azur, l’un des quatre instituts nationaux d’élite dédiés à la recherche en Intelligence Artificielle.
+- Prestige Océan et Espace : Recherche mondiale de pointe en Biologie Marine et Astrophysique.
+- Excellence Interdisciplinaire : Des Écoles Universitaires de Recherche qui brisent les silos pour résoudre les défis mondiaux complexes.
 
 À Côte d’Azur, votre formation bénéficie du label d’excellence "Idex".',
 

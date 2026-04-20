@@ -36,9 +36,9 @@ As a student here, you’ll be walking in the footsteps of centuries of medical 
 
     'global_excellence_title' => 'A World-Class Reputation, Built for You',
     'global_excellence_content' => 'When you choose UPC, you’re choosing one of the world’s best. For your 2026 studies, you’ll be part of an institution that is:
-- **Shanghai Ranking (ARWU) 2025**: #60 in the world.
-- **Times Higher Education (THE) 2026**: #190 globally.
-- **QS World University Rankings 2026**: #300 globally.
+- Shanghai Ranking (ARWU) 2025: #60 in the world.
+- Times Higher Education (THE) 2026: #190 globally.
+- QS World University Rankings 2026: #300 globally.
 
 These rankings are a testament to the quality of research and the supportive academic environment we offer to all our students.',
 

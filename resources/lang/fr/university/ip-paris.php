@@ -27,8 +27,8 @@ return [
 
     'global_leader_title' => 'Une Formation de Classe Mondiale en Sciences et Technologies',
     'global_leader_content' => 'En choisissant IP Paris, vous intégrez une institution d\'élite mondiale. À l\'approche de 2026, la position globale de l\'Institut est redoutable :
-- **QS World University Rankings 2026** : Classé dans le Top 50 mondial avec une croissance rapide.
-- **Réputation auprès des Employeurs** : Un prestige inégalé parmi les recruteurs mondiaux en technologies et ingénierie.
+- QS World University Rankings 2026 : Classé dans le Top 50 mondial avec une croissance rapide.
+- Réputation auprès des Employeurs : Un prestige inégalé parmi les recruteurs mondiaux en technologies et ingénierie.
 
 Ces indicateurs reflètent un engagement sans faille à repousser les frontières de la science fondamentale et de l\'ingénierie appliquée.',
 

@@ -28,9 +28,9 @@ return [
 
     'global_leader_title' => 'Un Héritage de Prix Nobel et d’Innovation Scientifique',
     'global_leader_content' => 'Strasbourg est un moteur mondial de la recherche et de l’innovation. Points clés pour votre candidature 2026 :
-- **Excellence Scientifique** : Strasbourg est mondialement reconnue pour sa Chimie, comptant plusieurs lauréats du prix Nobel, dont Jean-Marie Lehn et Jean-Pierre Sauvage.
-- **Carrefour Européen** : Siège du Parlement européen et du Conseil de l’Europe, l’université offre une proximité unique avec le cœur de la politique et du droit européens.
-- **Eucor - Le Campus Européen** : Un réseau unique permettant d’étudier de l’autre côté des frontières, en Allemagne (Fribourg, Karlsruhe) et en Suisse (Bâle).
+- Excellence Scientifique : Strasbourg est mondialement reconnue pour sa Chimie, comptant plusieurs lauréats du prix Nobel, dont Jean-Marie Lehn et Jean-Pierre Sauvage.
+- Carrefour Européen : Siège du Parlement européen et du Conseil de l’Europe, l’université offre une proximité unique avec le cœur de la politique et du droit européens.
+- Eucor - Le Campus Européen : Un réseau unique permettant d’étudier de l’autre côté des frontières, en Allemagne (Fribourg, Karlsruhe) et en Suisse (Bâle).
 
 À Strasbourg, votre éducation est définie par une perspective mondiale et un engagement pour une recherche à fort impact.',
 

@@ -28,9 +28,9 @@ return [
 
     'global_leader_title' => 'A Global Leader in Legal Education',
     'global_leader_content' => 'Panthéon-Assas isn\'t just a university; it\'s the gold standard for legal and social sciences in France. Heading into 2026, it remains the top choice for future leaders:
-- **National Ranking**: Consistently ranked #1 in France for Law programs and highly prestigious in Economics.
-- **Prestige**: A majority of students accepted to the French National School for the Judiciary (ENM) come from Assas.
-- **International Reach**: Strong partnerships with global institutions like Oxford, Yale, and King\'s College London.
+- National Ranking: Consistently ranked #1 in France for Law programs and highly prestigious in Economics.
+- Prestige: A majority of students accepted to the French National School for the Judiciary (ENM) come from Assas.
+- International Reach: Strong partnerships with global institutions like Oxford, Yale, and King\'s College London.
 
 Choosing Assas means choosing a degree that commands respect worldwide.',
 

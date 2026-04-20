@@ -27,9 +27,9 @@ return [
 
     'global_leader_title' => 'Une Éducation de Rang Mondial, pensée pour Vous',
     'global_leader_content' => 'En choisissant Paris-Saclay, vous rejoignez l\'élite académique mondiale. Pour 2026, notre université confirme son excellence :
-- **Classement de Shanghai 2025** : 13e mondiale (et fièrement n°1 en Europe continentale !).
-- **Classement QS 2026** : 70e mondiale.
-- **Times Higher Education 2025** : 64e mondiale.
+- Classement de Shanghai 2025 : 13e mondiale (et fièrement n°1 en Europe continentale !).
+- Classement QS 2026 : 70e mondiale.
+- Times Higher Education 2025 : 64e mondiale.
 
 Ces chiffres témoignent de la qualité de l\'accompagnement et des opportunités exceptionnelles qui vous attendent en tant qu\'étudiant ici.',
 

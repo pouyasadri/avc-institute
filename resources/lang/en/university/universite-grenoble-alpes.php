@@ -27,8 +27,8 @@ return [
 
     'global_leader_title' => 'A World-Class Education in a Spectacular Setting',
     'global_leader_content' => 'UGA stands proudly among the top global institutions. In 2026, the university continues to climb the international rankings, reflecting its intense focus on interdisciplinary research and global collaboration.
-- **Shanghai Ranking (ARWU)**: Consistently ranked among the Top 150 globally and frequently Top 50 in key scientific fields.
-- **Innovation Hub**: Recognized as one of Europe’s most innovative ecosystems, deeply connected with major international research centers (like the ESRF and ILL).',
+- Shanghai Ranking (ARWU): Consistently ranked among the Top 150 globally and frequently Top 50 in key scientific fields.
+- Innovation Hub: Recognized as one of Europe’s most innovative ecosystems, deeply connected with major international research centers (like the ESRF and ILL).',
 
     'programs_title' => 'Find the Perfect Path for Your Ambitions',
     'programs_content' => 'UGA offers a vast array of programs across all disciplines. Whether you aim to explore the mysteries of the universe or develop sustainable technologies, you can specialize in:',

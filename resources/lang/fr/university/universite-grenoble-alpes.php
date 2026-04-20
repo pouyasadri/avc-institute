@@ -27,8 +27,8 @@ return [
 
     'global_leader_title' => 'Une Formation de Classe Mondiale dans un Cadre Spectaculaire',
     'global_leader_content' => 'L\'UGA figure fièrement parmi les meilleures institutions mondiales. En 2026, l\'université continue de gravir les échelons des classements internationaux, reflétant son engagement intense dans la recherche interdisciplinaire et la collaboration mondiale.
-- **Classement de Shanghai (ARWU)** : Régulièrement classée dans le Top 150 mondial et fréquemment dans le Top 50 dans des domaines scientifiques clés.
-- **Pôle d\'Innovation** : Reconnue comme l\'un des écosystèmes les plus innovants d\'Europe, profondément connectée aux grands centres de recherche internationaux (comme l\'ESRF et l\'ILL).',
+- Classement de Shanghai (ARWU) : Régulièrement classée dans le Top 150 mondial et fréquemment dans le Top 50 dans des domaines scientifiques clés.
+- Pôle d\'Innovation : Reconnue comme l\'un des écosystèmes les plus innovants d\'Europe, profondément connectée aux grands centres de recherche internationaux (comme l\'ESRF et l\'ILL).',
 
     'programs_title' => 'Trouvez la Voie Parfaite pour vos Ambitions',
     'programs_content' => 'L\'UGA propose une vaste gamme de programmes dans toutes les disciplines. Que vous souhaitiez explorer les mystères de l\'univers ou développer des technologies durables, vous pouvez vous spécialiser en :',

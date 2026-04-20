@@ -28,9 +28,9 @@ return [
 
     'global_leader_title' => 'Aux Avant-gardes des Sciences Sociales',
     'global_leader_content' => 'L’Université Lyon 2 est reconnue mondialement pour la diversité et l’inclusivité de son environnement académique. Voici pourquoi choisir Lyon 2 en 2026 :
-- **Diversité Académique** : Une offre de formation vaste allant de la Psychologie et la Sociologie aux Arts Numériques et au Cinéma.
-- **Impact Sociétal** : Un pôle de recherche majeur en sociologie urbaine, études de genre et management culturel.
-- **Engagement** : Connue pour sa culture étudiante vibrante et son engagement fort pour la justice sociale et le développement durable.
+- Diversité Académique : Une offre de formation vaste allant de la Psychologie et la Sociologie aux Arts Numériques et au Cinéma.
+- Impact Sociétal : Un pôle de recherche majeur en sociologie urbaine, études de genre et management culturel.
+- Engagement : Connue pour sa culture étudiante vibrante et son engagement fort pour la justice sociale et le développement durable.
 
 À Lyon 2, vous n’êtes pas juste un étudiant ; vous faites partie d’une communauté qui pense le futur de la société.',
 

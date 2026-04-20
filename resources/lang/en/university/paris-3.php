@@ -28,8 +28,8 @@ return [
 
     'global_leader_title' => 'A Global Leader in Arts & Media',
     'global_leader_content' => 'Sorbonne Nouvelle isn\'t just a university; it\'s a cultural hub. Heading into 2026, it remains a top destination for international talent:
-- **QS World Ranking**: Consistently ranked among the top 250 in the world for Arts and Humanities.
-- **Innovation Leader**: Home to the prestigious Institute of High Latin American Studies (IHEAL) and top-tier Media and Cinema research centers.
+- QS World Ranking: Consistently ranked among the top 250 in the world for Arts and Humanities.
+- Innovation Leader: Home to the prestigious Institute of High Latin American Studies (IHEAL) and top-tier Media and Cinema research centers.
 
 Your degree here means joining a legacy of thinkers, creators, and innovators.',
 

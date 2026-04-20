@@ -28,9 +28,9 @@ return [
 
     'global_leader_title' => 'A Legacy of Nobel Prizes and Scientific Innovation',
     'global_leader_content' => 'Strasbourg is a global powerhouse of research and innovation. Key highlights for your 2026 application:
-- **Scientific Excellence**: Strasbourg is internationally renowned for Chemistry, boasting multiple Nobel Prize winners, including Jean-Marie Lehn and Jean-Pierre Sauvage.
-- **European Crossroads**: As the seat of the European Parliament and the Council of Europe, the university offers students a unique proximity to the heart of European politics and law.
-- **Eucor - The European Campus**: A unique network allowing students to study across borders in Germany (Freiburg, Karlsruhe) and Switzerland (Basel).
+- Scientific Excellence: Strasbourg is internationally renowned for Chemistry, boasting multiple Nobel Prize winners, including Jean-Marie Lehn and Jean-Pierre Sauvage.
+- European Crossroads: As the seat of the European Parliament and the Council of Europe, the university offers students a unique proximity to the heart of European politics and law.
+- Eucor - The European Campus: A unique network allowing students to study across borders in Germany (Freiburg, Karlsruhe) and Switzerland (Basel).
 
 At Strasbourg, your education is defined by a global perspective and a commitment to high-impact research.',
 

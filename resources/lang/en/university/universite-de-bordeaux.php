@@ -27,8 +27,8 @@ return [
 
     'global_leader_title' => 'A World-Renowned Research Titan',
     'global_leader_content' => 'The University of Bordeaux is celebrated worldwide for pushing boundaries in distinct, highly critical fields. It is a certified "Campus of Excellence" in France, equipped to develop the next generation of global leaders.
-- **Standout Strengths**: Unrivaled global dominance in Vine and Wine Science (ISVV), alongside groundbreaking hubs in Neurosciences and Materials Science.
-- **Global Network**: Active partnerships with over 500 universities worldwide, ensuring a rich, diverse, and robust academic network.',
+- Standout Strengths: Unrivaled global dominance in Vine and Wine Science (ISVV), alongside groundbreaking hubs in Neurosciences and Materials Science.
+- Global Network: Active partnerships with over 500 universities worldwide, ensuring a rich, diverse, and robust academic network.',
 
     'programs_title' => 'Define Your Pathway to Success',
     'programs_content' => 'The university provides a broad spectrum of highly respected programs designed to foster intellectual growth and career readiness:',

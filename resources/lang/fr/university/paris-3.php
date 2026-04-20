@@ -28,8 +28,8 @@ return [
 
     'global_leader_title' => 'Un Leader Mondial en Arts & Médias',
     'global_leader_content' => 'La Sorbonne Nouvelle n’est pas seulement une université, c’est un foyer culturel. En 2026, elle reste une destination privilégiée pour les talents internationaux :
-- **Classement mondial QS** : Constamment classée parmi les 250 meilleures mondiales en Arts et Sciences Humaines.
-- **Réputation d\'Innovation** : Siège du prestigieux Institut des Hautes Études de l\'Amérique Latine (IHEAL) et de centres de recherche de pointe en Médias et Cinéma.
+- Classement mondial QS : Constamment classée parmi les 250 meilleures mondiales en Arts et Sciences Humaines.
+- Réputation d\'Innovation : Siège du prestigieux Institut des Hautes Études de l\'Amérique Latine (IHEAL) et de centres de recherche de pointe en Médias et Cinéma.
 
 Votre diplôme ici signifie rejoindre un héritage de penseurs, de créateurs et d\'innovateurs.',
 

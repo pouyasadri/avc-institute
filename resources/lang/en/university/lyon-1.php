@@ -28,9 +28,9 @@ return [
 
     'global_leader_title' => 'Innovation at the Heart of Education',
     'global_leader_content' => 'Lyon 1 is widely recognized for its high-impact research and its commitment to technological advancement. Here’s why it’s a global leader for 2026:
-- **STEM Excellence**: Ranked among the top universities in France for Life Sciences and Chemistry.
-- **Medical Hub**: Home to prestigious programs in Medicine, Pharmacy, and Odontology.
-- **Corporate Synergy**: Deep ties with major industries, providing students with unique internship and research projects.
+- STEM Excellence: Ranked among the top universities in France for Life Sciences and Chemistry.
+- Medical Hub: Home to prestigious programs in Medicine, Pharmacy, and Odontology.
+- Corporate Synergy: Deep ties with major industries, providing students with unique internship and research projects.
 
 At Lyon 1, your education is built on the latest scientific discoveries.',
 

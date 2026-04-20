@@ -27,9 +27,9 @@ return [
 
     'global_leader_title' => 'A World-Class Education, Just for You',
     'global_leader_content' => 'By choosing Paris-Saclay, you’re joining one of the top universities on the planet. As we step into 2026, our university continues to lead:
-- **Shanghai Ranking 2025**: #13 in the world (we’re proud to be #1 in Continental Europe!).
-- **QS World Rankings 2026**: #70 globally.
-- **Times Higher Education 2025**: #64 globally.
+- Shanghai Ranking 2025: #13 in the world (we’re proud to be #1 in Continental Europe!).
+- QS World Rankings 2026: #70 globally.
+- Times Higher Education 2025: #64 globally.
 
 These aren’t just numbers—they represent the quality of support, research, and opportunities you’ll have as a student here.',
 

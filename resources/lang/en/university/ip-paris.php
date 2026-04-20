@@ -27,8 +27,8 @@ return [
 
     'global_leader_title' => 'A World-Class Education in Science and Technology',
     'global_leader_content' => 'By choosing IP Paris, you’re stepping into an elite global institution. As we approach 2026, the Institute’s global standing is formidable:
-- **QS World University Rankings 2026**: Ranked among the global Top 50 and rising fast.
-- **Employer Reputation**: Unparalleled prestige among global tech and engineering recruiters.
+- QS World University Rankings 2026: Ranked among the global Top 50 and rising fast.
+- Employer Reputation: Unparalleled prestige among global tech and engineering recruiters.
 
 These metrics reflect a relentless commitment to pushing the boundaries of fundamental science and applied engineering.',
 
