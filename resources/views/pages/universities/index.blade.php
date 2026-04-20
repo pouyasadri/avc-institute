@@ -28,6 +28,7 @@
         ['slug' => 'ip-paris', 'bg' => 'bg-17', 'name' => 'ip_paris'],
         ['slug' => 'universite-grenoble-alpes', 'bg' => 'bg-18', 'name' => 'grenoble_alpes'],
         ['slug' => 'aix-marseille-university', 'bg' => 'bg-19', 'name' => 'aix_marseille'],
+        ['slug' => 'universite-de-bordeaux', 'bg' => 'bg-20', 'name' => 'bordeaux'],
     ];
 @endphp
 
