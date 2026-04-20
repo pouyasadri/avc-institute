@@ -11,9 +11,9 @@
         "php": "^8.4",
         "guzzlehttp/guzzle": "^7.8",
         "intervention/image": "^3.11",
-        "laravel/framework": "^12.0",
+        "laravel/framework": "^13.0",
         "laravel/sanctum": "^4.0",
-        "laravel/tinker": "^2.9",
+        "laravel/tinker": "^2.10",
         "laravel/ui": "^4.5",
         "mews/purifier": "^3.4",
         "stevebauman/location": "^7.6"
