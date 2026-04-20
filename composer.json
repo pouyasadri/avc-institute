@@ -13,7 +13,7 @@
         "intervention/image": "^3.11",
         "laravel/framework": "^13.0",
         "laravel/sanctum": "^4.0",
-        "laravel/tinker": "^2.10",
+        "laravel/tinker": "^3.0",
         "laravel/ui": "^4.5",
         "mews/purifier": "^3.4",
         "stevebauman/location": "^7.6"
