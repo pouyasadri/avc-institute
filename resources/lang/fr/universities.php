@@ -93,6 +93,10 @@ return [
     'bordeaux_rank' => 'Campus Européen de Premier Plan',
     'bordeaux_description' => 'Un pôle pluridisciplinaire de renommée mondiale, célèbre pour la science du vin, les neurosciences et la recherche sur les matériaux, offrant une vie étudiante exceptionnelle dans un cadre historique.',
 
+    'lille_name' => 'Université de Lille',
+    'lille_rank' => 'Plus Grande Université Française',
+    'lille_description' => 'Un pôle d\'innovation et d\'intégration européenne. Située au carrefour de Paris, Londres et Bruxelles, réputée pour les sciences numériques, la santé et l\'ingénierie.',
+
     // France Education Benefits Section
     'benefits_section_title' => 'L\'Avantage Français',
     'benefits_section_heading' => 'Pourquoi choisir la France en 2026 ?',

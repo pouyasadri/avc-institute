@@ -93,6 +93,10 @@ return [
     'bordeaux_rank' => 'Leading European Campus',
     'bordeaux_description' => 'A world-renowned multidisciplinary hub famous for its wine science, neurosciences, and materials research, offering an exceptional student life in a historic setting.',
 
+    'lille_name' => 'University of Lille',
+    'lille_rank' => 'Largest French University',
+    'lille_description' => 'A powerhouse of innovation and European integration. Located at the crossroads of Paris, London, and Brussels, renowned for digital sciences, health, and engineering.',
+
     // France Education Benefits Section
     'benefits_section_title' => 'The French Advantage',
     'benefits_section_heading' => 'Why Study in France in 2026?',

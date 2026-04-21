@@ -2785,7 +2785,8 @@ Exclusive View Area Style
 .exclusive-img.bg-17,
 .exclusive-img.bg-18,
 .exclusive-img.bg-19,
-.exclusive-img.bg-20 {
+.exclusive-img.bg-20,
+.exclusive-img.bg-21 {
     min-height: 300px;
 }
 
@@ -2876,6 +2877,11 @@ Exclusive View Area Style
 
 .exclusive-img.bg-20 {
     background-image: url(../img/universities/Bordeaux/bordeaux_logo.webp);
+    background-size: contain;
+}
+
+.exclusive-img.bg-21 {
+    background-image: url(../img/universities/Lille/lille_logo.webp);
     background-size: contain;
 }
 
@@ -4207,6 +4213,11 @@ Page Title Area Style
 
 .bg-bordeaux {
     background-image: url(../img/universities/Bordeaux/bordeaux_logo.webp);
+    background-size: contain;
+}
+
+.bg-lille {
+    background-image: url(../img/universities/Lille/lille_logo.webp);
     background-size: contain;
 }
 

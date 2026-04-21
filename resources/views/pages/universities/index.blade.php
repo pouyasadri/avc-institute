@@ -29,6 +29,7 @@
         ['slug' => 'universite-grenoble-alpes', 'bg' => 'bg-18', 'name' => 'grenoble_alpes'],
         ['slug' => 'aix-marseille-university', 'bg' => 'bg-19', 'name' => 'aix_marseille'],
         ['slug' => 'universite-de-bordeaux', 'bg' => 'bg-20', 'name' => 'bordeaux'],
+        ['slug' => 'universite-de-lille', 'bg' => 'bg-21', 'name' => 'lille'],
     ];
 @endphp
 
