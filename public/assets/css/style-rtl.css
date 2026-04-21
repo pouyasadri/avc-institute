@@ -2881,8 +2881,10 @@ Exclusive View Area Style
 }
 
 .exclusive-img.bg-21 {
-    background-image: url(../img/universities/Lille/lille_logo.webp);
+    background-image: url("../img/universities/Lille/lille_logo.webp");
     background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 
@@ -4217,8 +4219,10 @@ Page Title Area Style
 }
 
 .bg-lille {
-    background-image: url(../img/universities/Lille/lille_logo.webp);
+    background-image: url("../img/universities/Lille/lille_logo.webp");
     background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .bg-paris-city {
