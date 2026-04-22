@@ -97,6 +97,10 @@ return [
     'lille_rank' => 'Plus Grande Université Française',
     'lille_description' => 'Un pôle d\'innovation et d\'intégration européenne. Située au carrefour de Paris, Londres et Bruxelles, réputée pour les sciences numériques, la santé et l\'ingénierie.',
 
+    'sciences_po_name' => 'Sciences Po',
+    'sciences_po_rank' => 'Top 3 Mondial en Politique',
+    'sciences_po_description' => 'Une institution d’élite formant les futurs leaders mondiaux. Extrêmement prestigieuse en relations internationales, droit et sciences politiques.',
+
     // France Education Benefits Section
     'benefits_section_title' => 'L\'Avantage Français',
     'benefits_section_heading' => 'Pourquoi choisir la France en 2026 ?',

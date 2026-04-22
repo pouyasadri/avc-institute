@@ -2704,7 +2704,8 @@ Exclusive View Area Style
 .exclusive-img.bg-18,
 .exclusive-img.bg-19,
 .exclusive-img.bg-20,
-.exclusive-img.bg-21 {
+.exclusive-img.bg-21,
+.exclusive-img.bg-22 {
     min-height: 300px;
 }
 
@@ -2800,6 +2801,13 @@ Exclusive View Area Style
 
 .exclusive-img.bg-21 {
     background-image: url("../img/universities/Lille/lille_logo.webp");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.exclusive-img.bg-22 {
+    background-image: url("../img/universities/Sciences_Po/sciences_po_logo.webp");
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -4031,6 +4039,13 @@ Page Title Area Style
 
 .bg-lille {
     background-image: url("../img/universities/Lille/lille_logo.webp");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bg-sciences-po {
+    background-image: url("../img/universities/Sciences_Po/sciences_po_logo.webp");
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;

@@ -97,6 +97,10 @@ return [
     'lille_rank' => 'بزرگترین دانشگاه فرانسه',
     'lille_description' => 'نیروی محرکه نوآوری در اروپا. واقع در تقاطع پاریس، لندن و بروکسل، با شهرت فراوان در علوم دیجیتال، بهداشت و مهندسی.',
 
+    'sciences_po_name' => 'سیانس پو (Sciences Po)',
+    'sciences_po_rank' => 'رتبه ۳ جهان در علوم سیاسی',
+    'sciences_po_description' => 'موسسه‌ای نخبه‌پرور که رهبران آینده جهان را می‌سازد. دارای اعتبار جهانی بسیار بالا در روابط بین‌الملل، حقوق و علوم سیاسی.',
+
     // France Education Benefits Section
     'benefits_section_title' => 'مزیت تحصیل در فرانسه',
     'benefits_section_heading' => 'چرا تحصیل در فرانسه برای سال ۲۰۲۶؟',
