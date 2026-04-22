@@ -2807,7 +2807,7 @@ Exclusive View Area Style
 }
 
 .exclusive-img.bg-22 {
-    background-image: url("../img/universities/Sciences_Po/sciences_po_logo.webp");
+    background-image: url(../img/universities/Sciences_Po/sciences_po_logo.webp);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -4045,7 +4045,7 @@ Page Title Area Style
 }
 
 .bg-sciences-po {
-    background-image: url("../img/universities/Sciences_Po/sciences_po_logo.webp");
+    background-image: url(../img/universities/Sciences_Po/sciences_po_logo.webp);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
