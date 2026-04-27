@@ -101,6 +101,10 @@ return [
     'sciences_po_rank' => 'Top 3 Globally in Politics',
     'sciences_po_description' => 'An elite institution shaping the world’s future leaders. Highly prestigious in international relations, law, and political science.',
 
+    'montpellier_name' => 'University of Montpellier',
+    'montpellier_rank' => '#1 Globally in Ecology',
+    'montpellier_description' => 'One of the oldest universities in the world, blending historic prestige with modern excellence in health sciences, law, and environmental research.',
+
     // France Education Benefits Section
     'benefits_section_title' => 'The French Advantage',
     'benefits_section_heading' => 'Why Study in France in 2026?',

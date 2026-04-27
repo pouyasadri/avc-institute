@@ -66,6 +66,7 @@ Route::prefix('{locale}')
                 'universite-de-bordeaux',
                 'universite-de-lille',
                 'sciences-po',
+                'universite-de-montpellier',
             ];
             foreach ($universities as $university) {
                 Route::view("/$university", "university.$university")->name("universities.$university");

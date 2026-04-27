@@ -31,6 +31,7 @@
         ['slug' => 'universite-de-bordeaux', 'bg' => 'bg-20', 'name' => 'bordeaux'],
         ['slug' => 'universite-de-lille', 'bg' => 'bg-21', 'name' => 'lille'],
         ['slug' => 'sciences-po', 'bg' => 'bg-22', 'name' => 'sciences_po'],
+        ['slug' => 'universite-de-montpellier', 'bg' => 'bg-23', 'name' => 'montpellier'],
     ];
 @endphp
 

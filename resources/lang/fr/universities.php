@@ -101,6 +101,10 @@ return [
     'sciences_po_rank' => 'Top 3 Mondial en Politique',
     'sciences_po_description' => 'Une institution d’élite formant les futurs leaders mondiaux. Extrêmement prestigieuse en relations internationales, droit et sciences politiques.',
 
+    'montpellier_name' => 'Université de Montpellier',
+    'montpellier_rank' => '#1 Mondial en Écologie',
+    'montpellier_description' => 'L\'une des plus anciennes universités au monde, alliant prestige historique et excellence moderne en sciences de la santé, droit et recherche environnementale.',
+
     // France Education Benefits Section
     'benefits_section_title' => 'L\'Avantage Français',
     'benefits_section_heading' => 'Pourquoi choisir la France en 2026 ?',
