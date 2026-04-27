@@ -191,10 +191,13 @@
     {{-- WebSite Structured Data --}}
     @php
         $baseUrl = rtrim(config('app.url'), '/');
+        // Do not include SearchAction template until search is implemented.
+        // Including a search target in structured data when the search endpoint
+        // is not usable may cause Google to treat pages as soft 404s.
         $webSiteSchema = new \App\Services\StructuredData\WebSiteSchema(
             $baseUrl,
             config('seo.organization.name'),
-            $baseUrl . '/' . $currentLocale . '/blog?search={search_term_string}',
+            null,
             array_keys(config('seo.locales', ['en' => [], 'fr' => [], 'fa' => []]))
         );
     @endphp

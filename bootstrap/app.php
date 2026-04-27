@@ -15,8 +15,11 @@ return Application::configure(basePath: dirname(__DIR__))
     )
     ->withMiddleware(function (Middleware $middleware) {
         // Global middleware stack
+        // Force canonical host early in the stack to ensure redirects happen
+        // before other middleware (like locale detection) runs.
         $middleware->use([
             // \App\Http\Middleware\TrustHosts::class,
+            \App\Http\Middleware\ForceCanonicalHost::class,
             \App\Http\Middleware\TrustProxies::class,
             \Illuminate\Http\Middleware\HandleCors::class,
             \App\Http\Middleware\PreventRequestsDuringMaintenance::class,
@@ -57,6 +60,7 @@ return Application::configure(basePath: dirname(__DIR__))
             'locale' => \App\Http\Middleware\SetLocale::class,
             'admin' => \App\Http\Middleware\AdminMiddleware::class,
             'admin.locale' => \App\Http\Middleware\ForceAdminLocale::class,
+            'force.canonical' => \App\Http\Middleware\ForceCanonicalHost::class,
         ]);
 
         // API throttling
