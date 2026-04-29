@@ -32,13 +32,14 @@ class AdminUserController extends Controller
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
 
-        User::create([
+        $user = new User([
             'name' => $validated['name'],
             'email' => $validated['email'],
             'password' => Hash::make($validated['password']),
-            'is_admin' => true,
-            'email_verified_at' => now(), // Auto-verify admin emails
         ]);
+        $user->is_admin = true;
+        $user->email_verified_at = now();
+        $user->save();
 
         return redirect()->route('admin.admins.index')->with('success', 'Administrateur ajouté avec succès.');
     }
