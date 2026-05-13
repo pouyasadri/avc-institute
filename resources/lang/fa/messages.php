@@ -30,4 +30,7 @@ return [
     // Question form messages
     'question_success' => 'سوال شما با موفقیت ثبت شد! به زودی پاسخ خواهیم داد.',
     'question_error' => 'خطایی در ثبت سوال شما رخ داد. لطفاً دوباره تلاش کنید.',
+
+    // Rate limiting messages
+    'throttle' => 'تعداد درخواست‌های شما بیش از حد مجاز است. لطفاً کمی صبر کنید.',
 ];

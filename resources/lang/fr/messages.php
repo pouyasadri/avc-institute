@@ -30,4 +30,7 @@ return [
     // Question form messages
     'question_success' => 'Votre question a été soumise avec succès ! Nous vous répondrons bientôt.',
     'question_error' => 'Une erreur s\'est produite lors de la soumission de votre question. Veuillez réessayer.',
+
+    // Rate limiting messages
+    'throttle' => 'Trop de tentatives. Veuillez patienter un moment avant de réessayer.',
 ];

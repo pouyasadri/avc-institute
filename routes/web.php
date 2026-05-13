@@ -84,7 +84,9 @@ Route::prefix('{locale}')
             Route::delete('/{blog}', [BlogController::class, 'destroy'])->name('blog.delete')->middleware('auth');
 
             // Comments
-            Route::post('/{blog}/comments', [\App\Http\Controllers\CommentController::class, 'store'])->name('comments.store');
+            Route::post('/{blog}/comments', [\App\Http\Controllers\CommentController::class, 'store'])
+                ->name('comments.store')
+                ->middleware('throttle:comment-form');
 
             // Category CRUD
             Route::prefix('/categories')->group(function () {
@@ -183,12 +185,18 @@ Route::prefix('{locale}')
 
         // Other Routes
         Route::view('/consult', 'pages.consult')->name('consult');
-        Route::post('/consult/submit', [ConsultController::class, 'submit'])->name('consult.submit');
+        Route::post('/consult/submit', [ConsultController::class, 'submit'])
+            ->name('consult.submit')
+            ->middleware('throttle:consult-form');
 
         Route::view('/contactUs', 'pages.contact')->name('contact');
-        Route::post('/contact/submit', [ContactController::class, 'submit'])->name('contact.submit');
+        Route::post('/contact/submit', [ContactController::class, 'submit'])
+            ->name('contact.submit')
+            ->middleware('throttle:contact-form');
 
-        Route::post('/questions/submit', [QuestionController::class, 'submit'])->name('questions.submit');
+        Route::post('/questions/submit', [QuestionController::class, 'submit'])
+            ->name('questions.submit')
+            ->middleware('throttle:question-form');
 
         // Auth routes localized
     

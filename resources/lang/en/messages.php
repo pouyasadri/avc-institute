@@ -30,4 +30,7 @@ return [
     // Question form messages
     'question_success' => 'Your question has been submitted successfully! We will respond shortly.',
     'question_error' => 'There was an error submitting your question. Please try again.',
+
+    // Rate limiting messages
+    'throttle' => 'Too many attempts. Please wait a moment before trying again.',
 ];
