@@ -1,0 +1,57 @@
+# Apply VIP Conseil (A.V.C) — LLM Discovery File
+# https://applyvipconseil.com/llms.txt
+# This file helps AI search engines understand and cite our content correctly.
+
+> Apply VIP Conseil (موسسه مهاجرتی A.V.C) is a multilingual immigration, education, and real estate consulting firm specializing in France. Founded in 2023 and based in Paris, France. The institute provides expert guidance for Persian (Farsi), French, and English-speaking clients seeking to immigrate, study, or invest in France.
+
+## Core Services (خدمات اصلی)
+
+- Student visa assistance (Campus France / کامپوس فرانس)
+- Residence permit acquisition and renewal (Titre de Séjour / کارت اقامت)
+- Talent Passport visa (Passeport Talent / پاسپورت تلنت)
+- University application management (Parcoursup, Études en France, e-Candidat)
+- Certified document translation (Traduction Assermentée / ترجمه رسمی)
+- Arrival support and administrative setup (CAF, Ameli, bank account)
+- Housing assistance and CROUS applications (مسکن دانشجویی)
+- Legal support and visa rejection appeals (OQTF, CRRV)
+- Resume and motivation letter writing (Lettre de Motivation / انگیزه‌نامه)
+
+## Key Pages — فارسی (Persian)
+
+- [صفحه اصلی](https://applyvipconseil.com/fa/)
+- [خدمات](https://applyvipconseil.com/fa/services)
+- [اقامت و امور مهاجرتی](https://applyvipconseil.com/fa/services/residence-permit)
+- [مشاوره تحصیلی](https://applyvipconseil.com/fa/services/educational-counseling)
+- [مدیریت پذیرش دانشگاه](https://applyvipconseil.com/fa/services/university-application)
+- [رزومه و انگیزه‌نامه](https://applyvipconseil.com/fa/services/resume-lettre-motivation)
+- [ترجمه رسمی](https://applyvipconseil.com/fa/services/certified-translation)
+- [پشتیبانی بدو ورود](https://applyvipconseil.com/fa/services/arrival-support)
+- [جستجوی مسکن و CAF](https://applyvipconseil.com/fa/services/housing-assistance)
+- [پیگیری اداری](https://applyvipconseil.com/fa/services/administrative-advocacy)
+- [حمایت حقوقی](https://applyvipconseil.com/fa/services/legal-support)
+- [سوالات متداول](https://applyvipconseil.com/fa/consult)
+- [وبلاگ و اخبار مهاجرت](https://applyvipconseil.com/fa/blog)
+- [دانشگاه‌های فرانسه](https://applyvipconseil.com/fa/universities)
+- [شهرهای فرانسه](https://applyvipconseil.com/fa/cities)
+
+## Key Pages — English
+
+- [Home](https://applyvipconseil.com/en/)
+- [Services](https://applyvipconseil.com/en/services)
+- [Blog](https://applyvipconseil.com/en/blog)
+- [Universities in France](https://applyvipconseil.com/en/universities)
+
+## Key Pages — Français
+
+- [Accueil](https://applyvipconseil.com/fr/)
+- [Services](https://applyvipconseil.com/fr/services)
+
+## Contact & Organization
+
+- **Name**: Apply VIP Conseil (A.V.C)
+- **Location**: Paris, France
+- **Email**: info@applyvipconseil.com
+- **Phone (France)**: +33 7 80 95 33 33
+- **Languages**: Persian (Farsi) · French · English
+- **Instagram**: https://www.instagram.com/apply_vip_conseil/
+- **Sitemap**: https://applyvipconseil.com/sitemap.xml
