@@ -40,17 +40,26 @@ class BlogPostingSchema extends SchemaBuilder
                 '@id' => $this->url(route('blog.show', ['locale' => $this->locale, 'blog' => $this->blog->id])),
             ]);
 
-        // Add article body excerpt for LLMs
+        // Add article body excerpt for LLMs — use mb_substr to preserve Persian codepoints
         if ($this->translation->body) {
             $bodyText = strip_tags($this->translation->body);
-            $this->add('articleBody', substr($bodyText, 0, 500).'...');
+            $bodyText = preg_replace('/\s+/', ' ', trim($bodyText));
+            $this->add('articleBody', mb_substr($bodyText, 0, 1500));
         }
 
-        // Add word count
+        // Add word count — for RTL/Persian text use mb_str_split for accuracy
         if ($this->translation->body) {
-            $wordCount = str_word_count(strip_tags($this->translation->body));
+            $plainText = strip_tags($this->translation->body);
+            // str_word_count is unreliable for Persian; count whitespace-delimited tokens instead
+            $wordCount = count(preg_split('/\s+/', trim($plainText), -1, PREG_SPLIT_NO_EMPTY));
             $this->add('wordCount', $wordCount);
         }
+
+        // Add speakable specification for AI assistants and Google voice search
+        $this->add('speakable', [
+            '@type' => 'SpeakableSpecification',
+            'cssSelector' => ['.blog-details-desc h1', '.blog-details-desc h2', '.blog-details-desc p'],
+        ]);
 
         // Add category/section
         if ($this->blog->category) {
@@ -60,7 +69,7 @@ class BlogPostingSchema extends SchemaBuilder
             }
         }
 
-        // Add language
+        // Add language — critical for LLM/search engine locale matching
         $this->add('inLanguage', $this->locale);
 
         return $this->data;
