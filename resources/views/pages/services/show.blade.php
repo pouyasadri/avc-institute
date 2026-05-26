@@ -98,4 +98,9 @@
         <x-seo.structured-data :schema="$schema" />
     @endif
     <x-seo.structured-data :schema="$breadcrumb" />
+
+    {{-- FAQ rich results: unlocks expandable Q&A in Google SERPs for Persian service queries --}}
+    @if(isset($faqSchema) && $faqSchema)
+        <x-seo.structured-data :schema="$faqSchema" />
+    @endif
 @endpush
