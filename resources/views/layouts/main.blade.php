@@ -93,17 +93,22 @@
         }
     @endphp
 
-    <title>@yield('title', config('seo.defaults.title'))</title>
+    <title>@yield('title', $metaTags['title'] ?? config('seo.defaults.title'))</title>
 
     <!-- Required meta tags -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="keywords" content="@yield('keywords', config('seo.defaults.keywords'))">
-    <meta name="description" content="@yield('description', config('seo.defaults.description'))">
+    <meta name="keywords" content="@yield('keywords', $metaTags['keywords'] ?? config('seo.defaults.keywords'))">
+    {{-- Description: prefer SeoService $metaTags, then @section override, then config default --}}
+    <meta name="description" content="@hasSection('description')@yield('description')@else{{ $metaTags['description'] ?? config('seo.defaults.description') }}@endif">
     <meta name="author" content="{{ config('seo.defaults.author') }}">
-    <meta name="robots" content="{{ config('seo.robots.default') }}">
+    <meta name="robots" content="{{ $metaTags['robots'] ?? config('seo.robots.default') }}">
 
-    {{-- Language Meta --}}
-    <meta name="language" content="{{ $currentLocale }}">
+    {{-- Language Meta (Bing requires content-language with BCP-47 tag e.g. fa-IR, not just fa) --}}
+    @php
+        $bcp47Map = ['fa' => 'fa-IR', 'fr' => 'fr-FR', 'en' => 'en-US'];
+        $contentLanguage = $bcp47Map[$currentLocale] ?? $currentLocale;
+    @endphp
+    <meta http-equiv="content-language" content="{{ $contentLanguage }}">
 
     {{-- Canonical URL --}}
     <link rel="canonical" href="{{ $canonicalUrl }}" />
@@ -167,6 +172,10 @@
         href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 
     @stack('styles')
+
+    <!-- Preconnect for CDN resources to improve LCP / Core Web Vitals -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/img/favicon/apple-touch-icon.png') }}">
