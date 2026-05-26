@@ -18,18 +18,26 @@ class OrganizationSchema extends SchemaBuilder
 
         $orgId = rtrim(config('app.url'), '/').'/'.'#organization';
 
+        // Use locale-aware description so LLMs see Persian text for Persian pages
+        $description = __('index.schema.description');
+        if ($description === 'index.schema.description' || empty($description)) {
+            $description = $org['description'];
+        }
+
         $this->add('@id', $orgId)
             ->add('name', $org['name'])
             ->add('legalName', $org['legal_name'])
             ->add('url', $org['url'])
             ->add('logo', $this->buildLogo($org['logo']))
-            ->add('description', $org['description'])
+            ->add('description', $description)
             ->add('email', $org['email'])
             ->add('telephone', $org['telephone'])
             ->add('address', $this->buildAddress($org['address']))
             ->add('sameAs', $org['same_as'])
             ->add('founder', $org['founder'])
-            ->add('foundingDate', $org['founding_date']);
+            ->add('foundingDate', $org['founding_date'])
+            ->add('areaServed', ['France', 'Iran'])
+            ->add('availableLanguage', ['French', 'Persian', 'English']);
 
         // Add contact point
         if (! empty($org['telephone']) || ! empty($org['email'])) {
@@ -71,8 +79,8 @@ class OrganizationSchema extends SchemaBuilder
     protected function buildContactPoint(array $org): array
     {
         $contactPoint = [
-            '@type'             => 'ContactPoint',
-            'contactType'       => 'customer service',
+            '@type' => 'ContactPoint',
+            'contactType' => 'customer service',
             'availableLanguage' => ['French', 'Persian', 'English'],
         ];
 

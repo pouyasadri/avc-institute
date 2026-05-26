@@ -11,8 +11,7 @@ class ServiceSchema extends SchemaBuilder
         protected string $providerName = 'A.V.C Institute',
         protected string $areaServed = 'France',
         protected string $serviceType = 'Immigration and Education Consulting'
-    ) {
-    }
+    ) {}
 
     public function build(): array
     {
@@ -22,6 +21,7 @@ class ServiceSchema extends SchemaBuilder
             ->add('url', $this->url)
             ->add('description', $this->description)
             ->add('serviceType', $this->serviceType)
+            ->add('inLanguage', app()->getLocale())
             ->add('provider', [
                 '@type' => 'Organization',
                 'name' => $this->providerName,

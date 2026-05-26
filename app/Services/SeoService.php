@@ -22,7 +22,7 @@ class SeoService
     public function setTitle(string $title, bool $appendSuffix = true): self
     {
         $suffix = $appendSuffix ? config('seo.defaults.title_suffix', '') : '';
-        $this->meta['title'] = $title . $suffix;
+        $this->meta['title'] = $title.$suffix;
         $this->openGraph['og:title'] = $title;
         $this->twitter['twitter:title'] = $title;
 
@@ -31,12 +31,17 @@ class SeoService
 
     /**
      * Set meta description
+     * Note: Persian/Arabic chars are wider in pixels, so we use a shorter limit.
      */
     public function setDescription(string $description): self
     {
-        $this->meta['description'] = $this->truncate($description, 160);
-        $this->openGraph['og:description'] = $this->truncate($description, 200);
-        $this->twitter['twitter:description'] = $this->truncate($description, 200);
+        $locale = app()->getLocale();
+        $descLimit = in_array($locale, ['fa', 'ar']) ? 130 : 155;
+        $ogLimit = in_array($locale, ['fa', 'ar']) ? 170 : 200;
+
+        $this->meta['description'] = $this->truncate($description, $descLimit);
+        $this->openGraph['og:description'] = $this->truncate($description, $ogLimit);
+        $this->twitter['twitter:description'] = $this->truncate($description, $ogLimit);
 
         return $this;
     }
@@ -69,16 +74,16 @@ class SeoService
     {
         $fullImageUrl = $this->makeAbsoluteUrl($imageUrl);
         // Always serve canonical HTTPS URL for social scrapers
-        $secureUrl   = preg_replace('/^http:\/\//', 'https://', $fullImageUrl);
+        $secureUrl = preg_replace('/^http:\/\//', 'https://', $fullImageUrl);
 
-        $this->openGraph['og:image']            = $secureUrl;
+        $this->openGraph['og:image'] = $secureUrl;
         $this->openGraph['og:image:secure_url'] = $secureUrl;
-        $this->openGraph['og:image:alt']        = $alt;
-        $this->openGraph['og:image:type']       = $mimeType;
-        $this->openGraph['og:image:width']      = config('seo.images.sizes.og.width', 1200);
-        $this->openGraph['og:image:height']     = config('seo.images.sizes.og.height', 630);
+        $this->openGraph['og:image:alt'] = $alt;
+        $this->openGraph['og:image:type'] = $mimeType;
+        $this->openGraph['og:image:width'] = config('seo.images.sizes.og.width', 1200);
+        $this->openGraph['og:image:height'] = config('seo.images.sizes.og.height', 630);
 
-        $this->twitter['twitter:image']     = $secureUrl;
+        $this->twitter['twitter:image'] = $secureUrl;
         $this->twitter['twitter:image:alt'] = $alt;
 
         return $this;
@@ -121,7 +126,7 @@ class SeoService
             }
         }
 
-        if (!empty($alternates)) {
+        if (! empty($alternates)) {
             $this->openGraph['og:locale:alternate'] = $alternates;
         }
 
@@ -266,7 +271,7 @@ class SeoService
     {
         $translation = $blog->getTranslation($locale);
 
-        if (!$translation) {
+        if (! $translation) {
             return $this;
         }
 
@@ -279,7 +284,7 @@ class SeoService
 
         if ($blog->main_image) {
             $this->setImage(
-                asset('storage/' . $blog->main_image),
+                asset('storage/'.$blog->main_image),
                 $translation->title
             );
         }
@@ -301,13 +306,26 @@ class SeoService
     {
         $translation = $property->getTranslation($locale);
 
-        if (!$translation) {
+        if (! $translation) {
             return $this;
         }
 
         $title = $translation->name ?? 'Property';
-        $description = strip_tags($translation->description ?? '') ?:
-            "Property in {$property->city}, {$property->country}. {$property->rooms} rooms, €" . number_format($property->price, 0);
+
+        // Locale-aware fallback — avoids English text on Persian/French pages
+        if (! empty(strip_tags($translation->description ?? ''))) {
+            $description = strip_tags($translation->description);
+        } else {
+            $description = __('properties.fallback_description', [
+                'city' => $property->city ?? '',
+                'rooms' => $property->rooms ?? '',
+                'price' => number_format($property->price ?? 0, 0),
+            ]);
+            // Final safety fallback if translation key missing
+            if ($description === 'properties.fallback_description') {
+                $description = "Property in {$property->city}. {$property->rooms} rooms, \u20ac".number_format($property->price, 0);
+            }
+        }
 
         $this->setTitle($title)
             ->setDescription($description)
@@ -317,7 +335,7 @@ class SeoService
 
         if ($property->main_image) {
             $this->setImage(
-                asset('storage/' . $property->main_image),
+                asset('storage/'.$property->main_image),
                 $title
             );
         }
@@ -424,7 +442,7 @@ class SeoService
             $truncated = mb_substr($truncated, 0, $lastSpace);
         }
 
-        return rtrim($truncated, '.,;:') . '…';
+        return rtrim($truncated, '.,;:').'…';
     }
 
     /**
@@ -438,13 +456,14 @@ class SeoService
 
         return url($url);
     }
+
     /**
      * Enforce the primary domain from config('app.url') on a given URL
      */
     protected function enforcePrimaryDomain(string $url): string
     {
         $appUrl = config('app.url');
-        if (!$appUrl) {
+        if (! $appUrl) {
             return $url;
         }
 

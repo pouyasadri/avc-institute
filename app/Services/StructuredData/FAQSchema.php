@@ -45,7 +45,8 @@ class FAQSchema extends SchemaBuilder
      */
     public function build(): array
     {
-        $this->add('mainEntity', $this->questions);
+        $this->add('mainEntity', $this->questions)
+            ->add('inLanguage', app()->getLocale());
 
         return $this->data;
     }

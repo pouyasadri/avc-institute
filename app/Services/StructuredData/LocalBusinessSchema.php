@@ -16,9 +16,9 @@ class LocalBusinessSchema extends SchemaBuilder
     {
         $org = config('seo.organization');
 
-        $baseUrl    = rtrim(config('app.url'), '/');
-        $orgId      = $baseUrl . '/#organization';
-        $businessId = $baseUrl . '/#localbusiness';
+        $baseUrl = rtrim(config('app.url'), '/');
+        $orgId = $baseUrl.'/#organization';
+        $businessId = $baseUrl.'/#localbusiness';
 
         $this->add('@id', $businessId)
             ->add('name', $org['name'])
@@ -36,8 +36,8 @@ class LocalBusinessSchema extends SchemaBuilder
         // Geo coordinates (improves Google Maps association)
         if (! empty($org['geo'])) {
             $this->add('geo', [
-                '@type'     => 'GeoCoordinates',
-                'latitude'  => $org['geo']['latitude'],
+                '@type' => 'GeoCoordinates',
+                'latitude' => $org['geo']['latitude'],
                 'longitude' => $org['geo']['longitude'],
             ]);
         }
@@ -92,35 +92,50 @@ class LocalBusinessSchema extends SchemaBuilder
     }
 
     /**
-     * Build services offered
+     * Build services offered — locale-aware so LLMs see Persian text on Persian pages
      */
     protected function buildServices(): array
     {
-        return [
-            [
-                '@type' => 'Offer',
-                'itemOffered' => [
-                    '@type' => 'Service',
-                    'name' => 'Immigration Consulting',
-                    'description' => 'Expert immigration consulting services for France',
+        // Pull from the same translation keys used in the UI
+        $translatedServices = __('index.services.items');
+
+        // Fallback to hardcoded English if translations are unavailable
+        if (! is_array($translatedServices) || empty($translatedServices)) {
+            return [
+                [
+                    '@type' => 'Offer',
+                    'itemOffered' => [
+                        '@type' => 'Service',
+                        'name' => 'Immigration Consulting',
+                        'description' => 'Expert immigration consulting services for France',
+                    ],
                 ],
-            ],
-            [
-                '@type' => 'Offer',
-                'itemOffered' => [
-                    '@type' => 'Service',
-                    'name' => 'Student Visa Assistance',
-                    'description' => 'Complete support for student visa applications',
+                [
+                    '@type' => 'Offer',
+                    'itemOffered' => [
+                        '@type' => 'Service',
+                        'name' => 'Student Visa Assistance',
+                        'description' => 'Complete support for student visa applications',
+                    ],
                 ],
-            ],
-            [
-                '@type' => 'Offer',
-                'itemOffered' => [
-                    '@type' => 'Service',
-                    'name' => 'Real Estate Services',
-                    'description' => 'Property acquisition and rental services in France',
+                [
+                    '@type' => 'Offer',
+                    'itemOffered' => [
+                        '@type' => 'Service',
+                        'name' => 'Real Estate Services',
+                        'description' => 'Property acquisition and rental services in France',
+                    ],
                 ],
+            ];
+        }
+
+        return collect($translatedServices)->map(fn ($s) => [
+            '@type' => 'Offer',
+            'itemOffered' => [
+                '@type' => 'Service',
+                'name' => $s['title'] ?? '',
+                'description' => $s['description'] ?? '',
             ],
-        ];
+        ])->all();
     }
 }
