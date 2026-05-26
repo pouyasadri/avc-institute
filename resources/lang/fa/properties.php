@@ -2,6 +2,8 @@
 
 return [
     'name' => 'املاک',
+    // Fallback description used in meta tags when no translated description is available
+    'fallback_description' => 'ملک در :city. :rooms اتاق - قیمت: €:price',
     'coming_soon' => [
         'title' => 'املاک - به زودی',
         'heading' => 'بخش املاک به زودی در دسترس خواهد بود',
@@ -16,3 +18,4 @@ return [
         'stay_tuned' => 'منتظر به‌روزرسانی‌ها باشید!',
     ],
 ];
+
