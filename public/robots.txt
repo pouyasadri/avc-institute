@@ -6,6 +6,35 @@ Disallow: /password
 Disallow: /*?view=*
 Disallow: /*?status=*
 
+# AI/LLM crawlers — allow indexing to appear in AI-generated answers
+# (Perplexity, ChatGPT Search, Bing Copilot, Claude, Apple Intelligence)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
 # Throttle aggressive bots (Google ignores Crawl-delay so this is safe)
 User-agent: Bingbot
 Crawl-delay: 10
