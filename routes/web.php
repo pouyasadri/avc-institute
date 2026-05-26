@@ -25,6 +25,17 @@ Route::get('/', function () {
 // Keep sitemap at root (not locale-specific)
 Route::get('/sitemap.xml', [SitemapController::class, 'index'])->name('sitemap');
 
+// LLM discovery file — helps AI search engines (Perplexity, ChatGPT, Bing Copilot) understand
+// the site's structure and cite it correctly in Persian/French/English AI search responses.
+Route::get('/llms.txt', function () {
+    return response()
+        ->file(public_path('llms.txt'), [
+            'Content-Type'  => 'text/plain; charset=utf-8',
+            // Tell Cloudflare not to cache this aggressively — we may update it
+            'Cache-Control' => 'public, max-age=86400',
+        ]);
+})->name('llms');
+
 // Locale-prefixed routes
 Route::prefix('{locale}')
     ->whereIn('locale', ['en', 'fr', 'fa'])
