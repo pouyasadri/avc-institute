@@ -66,6 +66,26 @@
                                 <i class="{{ $arrowIcon }}"></i>
                             </a>
                         </div>
+
+                        {{-- Other Services Widget --}}
+                        <div class="service-sidebar-widget rounded-4 p-4 bg-white shadow-sm">
+                            <h3 class="h5 fw-bold mb-3">{{ __('services.other_services') ?? 'Other Services' }}</h3>
+                            <ul class="list-unstyled mb-0">
+                                @php
+                                    $allServices = __('index.services.items');
+                                    $otherServices = collect($allServices)->reject(fn($s) => ($s['slug'] ?? '') === $slug)->take(5);
+                                @endphp
+                                @foreach($otherServices as $s)
+                                    <li class="mb-2">
+                                        <a href="{{ route('services.show', ['locale' => $currentLocale, 'slug' => $s['slug']]) }}" 
+                                           class="text-decoration-none text-dark d-flex align-items-center">
+                                            <i class="bx bx-chevron-left me-2 text-primary"></i>
+                                            <span>{{ $s['title'] }}</span>
+                                        </a>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
