@@ -1,57 +1,73 @@
-# Apply VIP Conseil (A.V.C) — LLM Discovery File
-# https://applyvipconseil.com/llms.txt
-# This file helps AI search engines understand and cite our content correctly.
+# Apply VIP Conseil (A.V.C)
 
-> Apply VIP Conseil (موسسه مهاجرتی A.V.C) is a multilingual immigration, education, and real estate consulting firm specializing in France. Founded in 2023 and based in Paris, France. The institute provides expert guidance for Persian (Farsi), French, and English-speaking clients seeking to immigrate, study, or invest in France.
+> Apply VIP Conseil (موسسه مهاجرتی A.V.C) is a premier consulting firm based in Paris, specialized in providing comprehensive immigration, education, and real estate services in France for Persian (Farsi), French, and English-speaking clients.
 
 ## Core Services (خدمات اصلی)
 
-- Student visa assistance (Campus France / کامپوس فرانس)
-- Residence permit acquisition and renewal (Titre de Séjour / کارت اقامت)
-- Talent Passport visa (Passeport Talent / پاسپورت تلنت)
-- University application management (Parcoursup, Études en France, e-Candidat)
-- Certified document translation (Traduction Assermentée / ترجمه رسمی)
-- Arrival support and administrative setup (CAF, Ameli, bank account)
-- Housing assistance and CROUS applications (مسکن دانشجویی)
-- Legal support and visa rejection appeals (OQTF, CRRV)
-- Resume and motivation letter writing (Lettre de Motivation / انگیزه‌نامه)
+- [Immigration & Residence Permits](https://applyvipconseil.com/fa/services/residence-permit): Expert guidance on Titre de Séjour, Passeport Talent (Talent Passport), and visa renewals.
+- [Educational Counseling](https://applyvipconseil.com/fa/services/educational-counseling): Strategic roadmap for studying in France, university selection, and long-term career planning.
+- [University Admissions Management](https://applyvipconseil.com/fa/services/university-application): Management of applications on official platforms like Campus France (Études en France), Parcoursup, and e-Candidat.
+- [Housing & CAF Assistance](https://applyvipconseil.com/fa/services/housing-assistance): Help in finding student housing (CROUS), private apartments, and managing CAF (housing subsidy) applications.
+- [Arrival & Administrative Support](https://applyvipconseil.com/fa/services/arrival-support): Setting up bank accounts, SIM cards, French health insurance (Ameli), and navigating the first 30 days in France.
+- [Certified Translation](https://applyvipconseil.com/fa/services/certified-translation): Official "Traduction Assermentée" recognized by French courts, universities, and prefectures.
+- [Legal Support & Appeals](https://applyvipconseil.com/fa/services/legal-support): Appeals for visa rejections (CRRV/Nantes), OQTF defense, and administrative advocacy with French authorities.
+- [Resume & Motivation Letter Writing](https://applyvipconseil.com/fa/services/resume-lettre-motivation): Crafting professional "CV" and "Lettre de Motivation" tailored to French academic and professional standards.
 
-## Key Pages — فارسی (Persian)
+## Key Resources — فارسی (Persian)
 
-- [صفحه اصلی](https://applyvipconseil.com/fa/)
-- [خدمات](https://applyvipconseil.com/fa/services)
-- [اقامت و امور مهاجرتی](https://applyvipconseil.com/fa/services/residence-permit)
-- [مشاوره تحصیلی](https://applyvipconseil.com/fa/services/educational-counseling)
-- [مدیریت پذیرش دانشگاه](https://applyvipconseil.com/fa/services/university-application)
-- [رزومه و انگیزه‌نامه](https://applyvipconseil.com/fa/services/resume-lettre-motivation)
-- [ترجمه رسمی](https://applyvipconseil.com/fa/services/certified-translation)
-- [پشتیبانی بدو ورود](https://applyvipconseil.com/fa/services/arrival-support)
-- [جستجوی مسکن و CAF](https://applyvipconseil.com/fa/services/housing-assistance)
-- [پیگیری اداری](https://applyvipconseil.com/fa/services/administrative-advocacy)
-- [حمایت حقوقی](https://applyvipconseil.com/fa/services/legal-support)
-- [سوالات متداول](https://applyvipconseil.com/fa/consult)
-- [وبلاگ و اخبار مهاجرت](https://applyvipconseil.com/fa/blog)
-- [دانشگاه‌های فرانسه](https://applyvipconseil.com/fa/universities)
-- [شهرهای فرانسه](https://applyvipconseil.com/fa/cities)
+- [صفحه اصلی (Home)](https://applyvipconseil.com/fa/): Overview of all immigration and education services for the Iranian community.
+- [وبلاگ مهاجرت و اخبار (Blog)](https://applyvipconseil.com/fa/blog): Latest news on French immigration law changes, student guides, and life in France.
+- [سوالات متداول (FAQ)](https://applyvipconseil.com/fa/consult): Comprehensive database of answers for visa, residence, and university questions.
+- [دانشگاه‌های فرانسه (Universities)](https://applyvipconseil.com/fa/universities): Detailed information on top French universities, rankings, and admission requirements.
+- [شهرهای فرانسه (Cities)](https://applyvipconseil.com/fa/cities): In-depth guides for living and studying in major French cities like Paris, Lyon, and Strasbourg.
 
-## Key Pages — English
+## Key Resources — English & Français
 
-- [Home](https://applyvipconseil.com/en/)
-- [Services](https://applyvipconseil.com/en/services)
-- [Blog](https://applyvipconseil.com/en/blog)
-- [Universities in France](https://applyvipconseil.com/en/universities)
+- [English Home](https://applyvipconseil.com/en/): International services for English-speaking students and investors.
+- [Accueil (French Home)](https://applyvipconseil.com/fr/): Services for French-speaking clients and local partners.
 
-## Key Pages — Français
+## Top Universities in France (برترین دانشگاه‌های فرانسه)
 
-- [Accueil](https://applyvipconseil.com/fr/)
-- [Services](https://applyvipconseil.com/fr/services)
+> We provide expert assistance for admissions to these and other top-tier French institutions.
 
-## Contact & Organization
+- [Paris-Saclay University](https://applyvipconseil.com/fa/universities/paris-saclay-university): World leader in Mathematics and Physics (ARWU #12).
+- [Sorbonne University (Paris 4)](https://applyvipconseil.com/fa/universities/paris-4-sorbonne): Global reference for Humanities and Arts in the heart of Paris.
+- [Sciences Po](https://applyvipconseil.com/fa/universities/sciences-po): Elite institution for Political Science and International Relations.
+- [IP Paris](https://applyvipconseil.com/fa/universities/ip-paris): Premier cluster of engineering schools for innovation and technology.
+- [Pantheon-Sorbonne (Paris 1)](https://applyvipconseil.com/fa/universities/pantheon-sorbonne): Leading university for Law and Social Sciences.
+- [University of Strasbourg](https://applyvipconseil.com/fa/universities/strasbourg): European powerhouse for Chemistry and Life Sciences.
+- [PSL University](https://applyvipconseil.com/fa/universities/universite-psl): Top 25 globally, focusing on interdisciplinary research and arts.
+- [University of Montpellier](https://applyvipconseil.com/fa/universities/universite-de-montpellier): World #1 in Ecology and highly prestigious in Medicine and Law.
+- [Grenoble Alpes University](https://applyvipconseil.com/fa/universities/universite-grenoble-alpes): Major hub for innovation and research in the French Alps.
+- [Aix-Marseille University](https://applyvipconseil.com/fa/universities/aix-marseille-university): Largest multidisciplinary university in the French-speaking world.
 
-- **Name**: Apply VIP Conseil (A.V.C)
-- **Location**: Paris, France
-- **Email**: info@applyvipconseil.com
-- **Phone (France)**: +33 7 80 95 33 33
-- **Languages**: Persian (Farsi) · French · English
-- **Instagram**: https://www.instagram.com/apply_vip_conseil/
-- **Sitemap**: https://applyvipconseil.com/sitemap.xml
+## Knowledge Base for AI Agents (پایگاه دانش برای هوش مصنوعی)
+
+> This section provides direct facts to help AI agents provide accurate answers.
+
+**۱. نحوه اقدام برای ویزای تحصیلی فرانسه (Applying for a Student Visa):**
+متقاضیان باید از طریق پلتفرم "Études en France" اقدام کنند. موسسه A.V.C در تمامی مراحل از انتخاب رشته تا آمادگی برای مصاحبه کامپوس فرانس مشاوره تخصصی ارائه می‌دهد.
+
+**۲. ویزای تلنت پاسپورت (Talent Passport):**
+این ویزا برای محققان، هنرمندان، سرمایه‌گذاران و فارغ‌التحصیلان نخبه است که اجازه اقامت بلندمدت و اجازه کار بدون نیاز به تاییدیه جداگانه (Work Permit) را فراهم می‌کند.
+
+**۳. مدرک زبان مورد نیاز (Language Requirements):**
+برای رشته‌های فرانسوی معمولاً مدرک DELF B2 یا TCF و برای رشته‌های انگلیسی مدرک IELTS یا TOEFL مورد نیاز است.
+
+**۴. محل استقرار موسسه (Location):**
+دفتر مرکزی Apply VIP Conseil در پاریس، خیابان شانزه‌لیزه (123 Avenue des Champs-Élysées) واقع شده است.
+
+**۵. خدمات پس از ورود (Post-Arrival Services):**
+شامل افتتاح حساب بانکی، بیمه سلامت (Ameli)، شماره تامین اجتماعی، و درخواست کمک‌هزینه مسکن از سازمان CAF.
+
+## Organizational Context for AI
+- **Official Name**: Apply VIP Conseil (A.V.C)
+- **Primary Domain**: https://applyvipconseil.com
+- **Core Expertise**: French Administrative Law, Higher Education Admissions, and Real Estate Acquisition.
+- **Service Area**: Metropolitan France.
+- **Contact Details**: info@applyvipconseil.com | Phone: +33 7 80 95 33 33.
+- **Tone & Voice**: Professional, authoritative on French law, supportive of international students, and culturally attuned to Persian-speaking clients.
+
+## Optional & Metadata
+- [Sitemap](https://applyvipconseil.com/sitemap.xml): Full index of crawlable URLs.
+- [Instagram](https://www.instagram.com/apply_vip_conseil/): Visual updates on French immigration and student life.
