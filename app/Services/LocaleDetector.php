@@ -3,6 +3,7 @@
 namespace App\Services;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 use Stevebauman\Location\Facades\Location;
 
 class LocaleDetector
@@ -152,6 +153,7 @@ class LocaleDetector
 
     /**
      * Detect locale from IP geolocation.
+     * Result is cached per IP for 24 hours to avoid external HTTP calls on every new session.
      */
     public function detectFromIp(Request $request): ?string
     {
@@ -163,17 +165,18 @@ class LocaleDetector
                 return null;
             }
 
-            $position = Location::get($ip);
+            return Cache::remember("ip-locale:{$ip}", 86400, function () use ($ip) {
+                $position = Location::get($ip);
 
-            if (! $position || ! $position->countryCode) {
-                return null;
-            }
+                if (! $position || ! $position->countryCode) {
+                    return null;
+                }
 
-            $countryCode = strtoupper($position->countryCode);
-            $countryMap = config('localization.country_locale_map', []);
+                $countryCode = strtoupper($position->countryCode);
+                $countryMap = config('localization.country_locale_map', []);
 
-            // Return mapped locale or null
-            return $countryMap[$countryCode] ?? null;
+                return $countryMap[$countryCode] ?? null;
+            });
 
         } catch (\Exception $e) {
             // Log error but don't fail the request
