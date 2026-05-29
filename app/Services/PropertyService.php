@@ -13,11 +13,19 @@ use Intervention\Image\ImageManager;
 
 class PropertyService
 {
-    protected ImageManager $imageManager;
+    protected ?ImageManager $imageManager = null;
 
-    public function __construct()
+    /**
+     * Lazy-instantiate ImageManager only when needed for uploads.
+     * This avoids the overhead on read-only requests.
+     */
+    protected function imageManager(): ImageManager
     {
-        $this->imageManager = new ImageManager(new Driver);
+        if ($this->imageManager === null) {
+            $this->imageManager = new ImageManager(new Driver);
+        }
+
+        return $this->imageManager;
     }
 
     public function getAllProperties(bool $includeTrashed = false): Collection
@@ -231,7 +239,7 @@ class PropertyService
         $fullPath = $path.$filename;
 
         // Process and optimize image
-        $image = $this->imageManager->read($file);
+        $image = $this->imageManager()->read($file);
 
         // Resize if larger than max width
         if ($image->width() > 1920) {
@@ -250,10 +258,26 @@ class PropertyService
     protected function generateUniqueSlug(string $name, string $locale, ?string $excludeId = null): string
     {
         $slug = Str::slug($name);
+        if (empty($slug)) {
+            $slug = Str::random(8);
+        }
         $originalSlug = $slug;
-        $counter = 1;
 
-        while ($this->slugExists($slug, $locale, $excludeId)) {
+        // Fetch all existing slugs that start with the base slug in one query
+        $query = Property::whereHas('translations', function ($q) use ($originalSlug, $locale) {
+            $q->where('locale', $locale)->where('slug', 'like', $originalSlug.'%');
+        });
+
+        if ($excludeId) {
+            $query->where('id', '!=', $excludeId);
+        }
+
+        $existingSlugs = $query->with(['translations' => function ($q) use ($locale) {
+            $q->where('locale', $locale)->select('slug');
+        }])->get()->flatMap(fn ($p) => $p->translations->pluck('slug'))->all();
+
+        $counter = 1;
+        while (in_array($slug, $existingSlugs, true)) {
             $slug = $originalSlug.'-'.$counter;
             $counter++;
         }
