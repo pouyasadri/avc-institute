@@ -60,10 +60,17 @@ class Blog extends Model
 
     public function getTranslation(string $locale, bool $fallback = true): ?BlogPostTranslation
     {
-        $translation = $this->translations()->where('locale', $locale)->first();
+        // Use the already eager-loaded in-memory collection when available
+        // to avoid firing extra DB queries (N+1 prevention)
+        $collection = $this->relationLoaded('translations')
+            ? $this->translations
+            : $this->translations()->get();
+
+        $translation = $collection->firstWhere('locale', $locale);
 
         if (! $translation && $fallback) {
-            $translation = $this->translations()->where('locale', config('app.fallback_locale', 'en'))->first();
+            $fallbackLocale = config('app.fallback_locale', 'en');
+            $translation = $collection->firstWhere('locale', $fallbackLocale);
         }
 
         return $translation;

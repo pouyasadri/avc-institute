@@ -3,6 +3,7 @@
 namespace App\Services;
 
 use App\Models\Blog;
+use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
@@ -12,11 +13,19 @@ use Intervention\Image\ImageManager;
 
 class BlogService
 {
-    protected ImageManager $imageManager;
+    protected ?ImageManager $imageManager = null;
 
-    public function __construct()
+    /**
+     * Lazy-instantiate ImageManager only when needed for uploads.
+     * This avoids the overhead on read-only requests (blog index, show).
+     */
+    protected function imageManager(): ImageManager
     {
-        $this->imageManager = new ImageManager(new Driver);
+        if ($this->imageManager === null) {
+            $this->imageManager = new ImageManager(new Driver);
+        }
+
+        return $this->imageManager;
     }
 
     public function getAllBlogs(bool $includeTrashed = false, ?string $locale = null): Collection
@@ -52,7 +61,7 @@ class BlogService
         return $query->get();
     }
 
-    public function getPaginatedBlogs(int $perPage = 9, ?string $locale = null, bool $includeTrashed = false): \Illuminate\Contracts\Pagination\LengthAwarePaginator
+    public function getPaginatedBlogs(int $perPage = 9, ?string $locale = null, bool $includeTrashed = false): LengthAwarePaginator
     {
         $query = Blog::with(['translations', 'category', 'category.translations', 'author'])
             ->orderBy('published_at', 'desc');
@@ -72,14 +81,44 @@ class BlogService
         return $query->paginate($perPage);
     }
 
+    /**
+     * Fetch a limited number of recent published blogs at the SQL level.
+     * Prefer this over getPublishedBlogs() + PHP Collection filtering.
+     */
+    public function getRecentPublishedBlogs(string $locale, int $limit = 3, ?string $excludeId = null): Collection
+    {
+        $query = Blog::published()
+            ->with(['translations', 'category', 'category.translations', 'author'])
+            ->orderBy('published_at', 'desc')
+            ->limit($limit);
+
+        if ($locale) {
+            $query->whereHas('translations', function ($q) use ($locale) {
+                $q->where('locale', $locale);
+            });
+        }
+
+        if ($excludeId) {
+            $query->where('id', '!=', $excludeId);
+        }
+
+        return $query->get();
+    }
+
     public function getNextBlog(Blog $blog): ?Blog
     {
-        return Blog::where('id', '>', $blog->id)->orderBy('id', 'asc')->first();
+        return Blog::published()
+            ->where('published_at', '>', $blog->published_at)
+            ->orderBy('published_at', 'asc')
+            ->first();
     }
 
     public function getPreviousBlog(Blog $blog): ?Blog
     {
-        return Blog::where('id', '<', $blog->id)->orderBy('id', 'desc')->first();
+        return Blog::published()
+            ->where('published_at', '<', $blog->published_at)
+            ->orderBy('published_at', 'desc')
+            ->first();
     }
 
     public function storeBlog(array $validatedData): Blog
@@ -219,7 +258,7 @@ class BlogService
         $filename = time().'_'.Str::random(10).'.'.$file->getClientOriginalExtension();
         $fullPath = $path.$filename;
 
-        $image = $this->imageManager->read($file);
+        $image = $this->imageManager()->read($file);
 
         if ($image->width() > 1920) {
             $image->scale(width: 1920);
@@ -235,10 +274,26 @@ class BlogService
     protected function generateUniqueSlug(string $title, string $locale, ?string $excludeId = null): string
     {
         $slug = Str::slug($title);
+        if (empty($slug)) {
+            $slug = Str::random(8);
+        }
         $originalSlug = $slug;
-        $counter = 1;
 
-        while ($this->slugExists($slug, $locale, $excludeId)) {
+        // Fetch all existing slugs that start with the base slug in one query
+        $query = Blog::whereHas('translations', function ($q) use ($originalSlug, $locale) {
+            $q->where('locale', $locale)->where('slug', 'like', $originalSlug.'%');
+        });
+
+        if ($excludeId) {
+            $query->where('id', '!=', $excludeId);
+        }
+
+        $existingSlugs = $query->with(['translations' => function ($q) use ($locale) {
+            $q->where('locale', $locale)->select('slug');
+        }])->get()->flatMap(fn ($b) => $b->translations->pluck('slug'))->all();
+
+        $counter = 1;
+        while (in_array($slug, $existingSlugs, true)) {
             $slug = $originalSlug.'-'.$counter;
             $counter++;
         }

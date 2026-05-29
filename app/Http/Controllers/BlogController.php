@@ -46,8 +46,8 @@ class BlogController extends Controller
         $nextBlog = $this->blogService->getNextBlog($blog);
         $prevBlog = $this->blogService->getPreviousBlog($blog);
 
-        // Fetch 3 most recent published blogs (localized) for the sidebar
-        $recentBlogs = $this->blogService->getPublishedBlogs($locale)->where('id', '!=', $blog->id)->take(3);
+        // Fetch 3 most recent published blogs (localized) for the sidebar via SQL LIMIT
+        $recentBlogs = $this->blogService->getRecentPublishedBlogs($locale, 3, $blog->id);
 
         return view('blog.show', compact('blog', 'translation', 'locale', 'nextBlog', 'prevBlog', 'recentBlogs'));
     }
