@@ -5,12 +5,14 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreConsultingRequest;
 use App\Mail\ConsultationConfirmation;
 use App\Mail\ConsultationSubmitted;
+use App\Models\ConsultingSubmission;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
 
 class ConsultController extends Controller
 {
-    public function submit(StoreConsultingRequest $request): \Illuminate\Http\RedirectResponse
+    public function submit(StoreConsultingRequest $request): RedirectResponse
     {
         $validatedData = $request->validated();
 
@@ -22,7 +24,7 @@ class ConsultController extends Controller
             $userPhoneNumber = $validatedData['user_phone_number'];
 
             // Save to database
-            $submission = \App\Models\ConsultingSubmission::create([
+            $submission = ConsultingSubmission::create([
                 'name' => $userName,
                 'email' => $userEmail,
                 'phone_number' => $userPhoneNumber,

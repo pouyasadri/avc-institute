@@ -7,6 +7,7 @@ use App\Http\Requests\UpdatePropertyRequest;
 use App\Models\Property;
 use App\Models\PropertyImage;
 use App\Services\PropertyService;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
@@ -222,7 +223,7 @@ class PropertyController extends Controller
     }
 
     // AJAX filter endpoint for front-end property search
-    public function filter(Request $request): \Illuminate\Http\JsonResponse
+    public function filter(Request $request): JsonResponse
     {
         try {
             $locale = app()->getLocale();

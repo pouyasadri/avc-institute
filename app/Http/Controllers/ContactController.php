@@ -6,12 +6,13 @@ use App\Http\Requests\StoreContactRequest;
 use App\Mail\ContactFormConfirmation;
 use App\Mail\ContactFormSubmitted;
 use App\Models\ContactSubmission;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
 {
-    public function submit(StoreContactRequest $request): \Illuminate\Http\RedirectResponse
+    public function submit(StoreContactRequest $request): RedirectResponse
     {
         $validatedData = $request->validated();
 

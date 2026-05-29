@@ -47,7 +47,7 @@ return [
             'https://www.instagram.com/apply_vip_conseil/',
             // Add other social media profiles
         ],
-        'founder'      => 'Apply Vip Conseil',
+        'founder' => 'Apply Vip Conseil',
         'founding_date' => '2023',
         // // Geo coordinates for LocalBusiness schema (Paris, France — update with exact location)
         // 'geo' => [

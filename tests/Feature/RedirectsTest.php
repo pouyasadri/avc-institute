@@ -19,8 +19,8 @@ class RedirectsTest extends TestCase
         $toUrl = 'https://applyvipconseil.com/en/new-page';
 
         Redirect::create([
-            'from_url'  => $fromPath,
-            'to_url'    => $toUrl,
+            'from_url' => $fromPath,
+            'to_url' => $toUrl,
             'http_code' => 301,
         ]);
 

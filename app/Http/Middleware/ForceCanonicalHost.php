@@ -31,7 +31,7 @@ class ForceCanonicalHost
         $newHost = preg_replace('/^(?:www\.)?(?:en|fr)\./i', '', $host);
         $newHost = preg_replace('/^www\./i', '', $newHost);
 
-        $newUrl = 'https://' . $newHost . $request->getRequestUri();
+        $newUrl = 'https://'.$newHost.$request->getRequestUri();
 
         return redirect()->to($newUrl, 301);
     }

@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\BlogCategory;
+use App\Models\BlogCategoryTranslation;
 use Illuminate\Database\Seeder;
 
 class BlogCategorySeeder extends Seeder
@@ -57,7 +58,7 @@ class BlogCategorySeeder extends Seeder
 
             // Strategy: Check if a category with the English slug exists.
             $englishSlug = $catData['en']['slug'];
-            $existing = \App\Models\BlogCategoryTranslation::where('slug', $englishSlug)->where('locale', 'en')->first();
+            $existing = BlogCategoryTranslation::where('slug', $englishSlug)->where('locale', 'en')->first();
 
             if ($existing) {
                 $category = $existing->category;

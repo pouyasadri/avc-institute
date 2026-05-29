@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Blog;
 use App\Models\Redirect;
 use Illuminate\Database\Seeder;
 
@@ -73,7 +74,7 @@ class RedirectsTableSeeder extends Seeder
         // If the old app used slugs: old_domain/blog/{slug} -> new_domain/en/blog/{id}
         // If the old app used IDs:   old_domain/blog/{id}   -> new_domain/en/blog/{id}
 
-        $blogs = \App\Models\Blog::with('translations')->get();
+        $blogs = Blog::with('translations')->get();
 
         foreach ($blogs as $blog) {
             foreach ($domains as $oldDomain => $newLocale) {

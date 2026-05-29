@@ -16,10 +16,10 @@ class WebSiteSchema extends SchemaBuilder
     public function __construct(string $url, string $name, ?string $searchUrlTemplate = null, string|array|null $inLanguage = null)
     {
         $this->setContext()->setType('WebSite');
-        $this->url                = $url;
-        $this->name               = $name;
-        $this->searchUrlTemplate  = $searchUrlTemplate;
-        $this->inLanguage         = $inLanguage;
+        $this->url = $url;
+        $this->name = $name;
+        $this->searchUrlTemplate = $searchUrlTemplate;
+        $this->inLanguage = $inLanguage;
     }
 
     public function build(): array

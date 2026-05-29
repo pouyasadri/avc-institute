@@ -1,7 +1,11 @@
 <?php
 
+use App\Http\Controllers\Admin\AdminUserController;
+use App\Http\Controllers\Admin\ConsultingController;
+use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\BlogCategoryController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\CommentController;
 use App\Http\Controllers\ConsultController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\IndexController;
@@ -30,7 +34,7 @@ Route::get('/sitemap.xml', [SitemapController::class, 'index'])->name('sitemap')
 Route::get('/llms.txt', function () {
     return response()
         ->file(public_path('llms.txt'), [
-            'Content-Type'  => 'text/plain; charset=utf-8',
+            'Content-Type' => 'text/plain; charset=utf-8',
             // Tell Cloudflare not to cache this aggressively — we may update it
             'Cache-Control' => 'public, max-age=86400',
         ]);
@@ -95,7 +99,7 @@ Route::prefix('{locale}')
             Route::delete('/{blog}', [BlogController::class, 'destroy'])->name('blog.delete')->middleware('auth');
 
             // Comments
-            Route::post('/{blog}/comments', [\App\Http\Controllers\CommentController::class, 'store'])
+            Route::post('/{blog}/comments', [CommentController::class, 'store'])
                 ->name('comments.store')
                 ->middleware('throttle:comment-form');
 
@@ -210,7 +214,7 @@ Route::prefix('{locale}')
             ->middleware('throttle:question-form');
 
         // Auth routes localized
-    
+
         // Debug route for locale detection (only in non-production)
         if (app()->environment('local', 'development')) {
             Route::get('/locale-debug', function (Request $request) {
@@ -230,14 +234,14 @@ Route::middleware(['admin.locale'])->group(function () {
 
     // Admin Routes
     Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(function () {
-        Route::get('/', [\App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('dashboard');
+        Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
 
         // Blog Routes
-        Route::resource('blogs', \App\Http\Controllers\Admin\BlogController::class)->names('blog');
-        Route::resource('questions', \App\Http\Controllers\Admin\QuestionController::class)->only(['index', 'show', 'destroy']);
-        Route::resource('comments', \App\Http\Controllers\Admin\CommentController::class)->only(['index', 'update', 'destroy']);
-        Route::resource('consulting', \App\Http\Controllers\Admin\ConsultingController::class)->only(['index', 'show', 'destroy']);
-        Route::resource('admins', \App\Http\Controllers\Admin\AdminUserController::class)->only(['index', 'create', 'store', 'destroy']);
+        Route::resource('blogs', App\Http\Controllers\Admin\BlogController::class)->names('blog');
+        Route::resource('questions', App\Http\Controllers\Admin\QuestionController::class)->only(['index', 'show', 'destroy']);
+        Route::resource('comments', App\Http\Controllers\Admin\CommentController::class)->only(['index', 'update', 'destroy']);
+        Route::resource('consulting', ConsultingController::class)->only(['index', 'show', 'destroy']);
+        Route::resource('admins', AdminUserController::class)->only(['index', 'create', 'store', 'destroy']);
     });
 });
 
@@ -251,5 +255,5 @@ Route::get('/{locale}/admin', function () {
 })->whereIn('locale', ['en', 'fr', 'fa']);
 
 Route::get('/{locale}/admin/{any?}', function ($locale, $any = null) {
-    return redirect('/admin/' . $any);
+    return redirect('/admin/'.$any);
 })->whereIn('locale', ['en', 'fr', 'fa'])->where('any', '.*');

@@ -6,12 +6,13 @@ use App\Http\Requests\StoreQuestionRequest;
 use App\Mail\QuestionConfirmation;
 use App\Mail\QuestionSubmitted;
 use App\Models\QuestionSubmission;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
 
 class QuestionController extends Controller
 {
-    public function submit(StoreQuestionRequest $request): \Illuminate\Http\RedirectResponse
+    public function submit(StoreQuestionRequest $request): RedirectResponse
     {
         $validatedData = $request->validated();
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreHouseRequest;
 use App\Models\House;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -73,7 +74,7 @@ class HouseController extends Controller
         return redirect('/home')->with('success', 'House saved');
     }
 
-    public function filter(Request $request): \Illuminate\Http\JsonResponse
+    public function filter(Request $request): JsonResponse
     {
         $query = House::query();
 

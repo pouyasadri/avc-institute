@@ -119,4 +119,3 @@ Ces classements prestigieux reflètent notre engagement profond envers la recher
         ],
     ],
 ];
-
