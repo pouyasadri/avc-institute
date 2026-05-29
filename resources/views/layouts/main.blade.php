@@ -152,15 +152,15 @@
     <link rel="stylesheet" href="{{asset("assets/css/magnific-popup.min.css")}}">
 
     @if($isRtl)
-        <link rel="stylesheet" href="{{asset("assets/css/style-rtl.css")}}">
+        <link rel="stylesheet" href="{{ asset('assets/css/style-rtl.css') }}?v={{ filemtime(public_path('assets/css/style-rtl.css')) }}">
     @else
-        <link rel="stylesheet" href="{{asset("assets/css/style-ltr.css")}}">
+        <link rel="stylesheet" href="{{ asset('assets/css/style-ltr.css') }}?v={{ filemtime(public_path('assets/css/style-ltr.css')) }}">
     @endif
-    <link rel="stylesheet" href="{{asset("assets/css/responsive.css")}}">
+    <link class="responsive-style" rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}?v={{ filemtime(public_path('assets/css/responsive.css')) }}">
 
     {{-- Load rtl.css only for RTL locales (contains overrides for RTL layout) --}}
     @if($isRtl)
-        <link rel="stylesheet" href="{{asset("assets/css/rtl.css")}}">
+        <link rel="stylesheet" href="{{ asset('assets/css/rtl.css') }}?v={{ filemtime(public_path('assets/css/rtl.css')) }}">
     @endif
 
     {{-- Include navbar styles from external file or inline --}}
