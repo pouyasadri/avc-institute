@@ -2793,7 +2793,8 @@ Exclusive View Area Style
 }
 
 .exclusive-img.bg-3 {
-    background-image: url(../img/universities/Paris_Saclay/Paris_saclay_university_logo.webp);
+
+    background-image: url(../img/universities/paris_saclay/paris_saclay_university_logo.webp);
     background-size: contain;
 }
 
@@ -2853,7 +2854,7 @@ Exclusive View Area Style
 }
 
 .exclusive-img.bg-15 {
-    background-image: url(../img/universities/Strasbourg/strasbourg_logo.webp);
+    background-image: url(../img/universities/strasbourg/strasbourg_logo.webp);
     background-size: contain;
 }
 
@@ -4144,7 +4145,7 @@ Page Title Area Style
 }
 
 .bg-paris-sud {
-    background-image: url(../img/universities/Paris_Saclay/Paris_saclay_university_logo.webp);
+    background-image: url(../img/universities/paris_saclay/paris_saclay_university_logo.webp);
     background-size: contain;
     height: 60%;
 }
@@ -4205,7 +4206,7 @@ Page Title Area Style
 }
 
 .bg-strasbourg {
-    background-image: url(../img/universities/Strasbourg/strasbourg_logo.webp);
+    background-image: url(../img/universities/strasbourg/strasbourg_logo.webp);
     background-size: auto;
 }
 
