@@ -140,16 +140,35 @@
         <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
     @endif
 
-    <link rel="stylesheet" href="{{asset("assets/css/owl.theme.default.min.css")}}">
-    <link rel="stylesheet" href="{{asset("assets/css/owl.carousel.min.css")}}">
-    <link rel="stylesheet" href="{{asset("assets/css/boxicons.min.css")}}">
-    <link rel="stylesheet" href="{{asset("assets/css/flaticon.css")}}">
-    <link rel="stylesheet" href="{{asset("assets/css/meanmenu.min.css")}}">
-    <link rel="stylesheet" href="{{asset("assets/css/animate.min.css")}}">
-    <link rel="stylesheet" href="{{asset("assets/css/nice-select.min.css")}}">
-    <link rel="stylesheet" href="{{asset("assets/css/odometer.min.css")}}">
-    <link rel="stylesheet" href="{{asset("assets/css/date-picker.min.css")}}">
-    <link rel="stylesheet" href="{{asset("assets/css/magnific-popup.min.css")}}">
+    <link rel="preload" href="{{asset("assets/css/owl.theme.default.min.css")}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{asset("assets/css/owl.theme.default.min.css")}}"></noscript>
+
+    <link rel="preload" href="{{asset("assets/css/owl.carousel.min.css")}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{asset("assets/css/owl.carousel.min.css")}}"></noscript>
+
+    <link rel="preload" href="{{asset("assets/css/boxicons.min.css")}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{asset("assets/css/boxicons.min.css")}}"></noscript>
+
+    <link rel="preload" href="{{asset("assets/css/flaticon.css")}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{asset("assets/css/flaticon.css")}}"></noscript>
+
+    <link rel="preload" href="{{asset("assets/css/meanmenu.min.css")}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{asset("assets/css/meanmenu.min.css")}}"></noscript>
+
+    <link rel="preload" href="{{asset("assets/css/animate.min.css")}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{asset("assets/css/animate.min.css")}}"></noscript>
+
+    <link rel="preload" href="{{asset("assets/css/nice-select.min.css")}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{asset("assets/css/nice-select.min.css")}}"></noscript>
+
+    <link class="responsive-style" rel="preload" href="{{asset("assets/css/odometer.min.css")}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{asset("assets/css/odometer.min.css")}}"></noscript>
+
+    <link rel="preload" href="{{asset("assets/css/date-picker.min.css")}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{asset("assets/css/date-picker.min.css")}}"></noscript>
+
+    <link rel="preload" href="{{asset("assets/css/magnific-popup.min.css")}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{asset("assets/css/magnific-popup.min.css")}}"></noscript>
 
     @if($isRtl)
         <link rel="stylesheet" href="{{ asset('assets/css/style-rtl.css') }}?v={{ filemtime(public_path('assets/css/style-rtl.css')) }}">
@@ -171,9 +190,11 @@
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
 
     <!-- Slick Slider CSS -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <link rel="stylesheet" type="text/css"
-        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"></noscript>
+
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"></noscript>
 
     @stack('styles')
 

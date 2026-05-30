@@ -10,25 +10,35 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
     <link rel="stylesheet" href="{{asset("assets/css/bootstrap.rtl.min.css")}}">
 
-    <link rel="stylesheet" href="{{asset("assets/css/owl.theme.default.min.css")}}">
+    <link rel="preload" href="{{asset("assets/css/owl.theme.default.min.css")}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{asset("assets/css/owl.theme.default.min.css")}}"></noscript>
 
-    <link rel="stylesheet" href="{{asset("assets/css/owl.carousel.min.css")}}">
+    <link rel="preload" href="{{asset("assets/css/owl.carousel.min.css")}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{asset("assets/css/owl.carousel.min.css")}}"></noscript>
 
-    <link rel="stylesheet" href="{{asset("assets/css/boxicons.min.css")}}">
+    <link rel="preload" href="{{asset("assets/css/boxicons.min.css")}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{asset("assets/css/boxicons.min.css")}}"></noscript>
 
-    <link rel="stylesheet" href="{{asset("assets/css/flaticon.css")}}">
+    <link rel="preload" href="{{asset("assets/css/flaticon.css")}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{asset("assets/css/flaticon.css")}}"></noscript>
 
-    <link rel="stylesheet" href="{{asset("assets/css/meanmenu.min.css")}}">
+    <link rel="preload" href="{{asset("assets/css/meanmenu.min.css")}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{asset("assets/css/meanmenu.min.css")}}"></noscript>
 
-    <link rel="stylesheet" href="{{asset("assets/css/animate.min.css")}}">
+    <link rel="preload" href="{{asset("assets/css/animate.min.css")}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{asset("assets/css/animate.min.css")}}"></noscript>
 
-    <link rel="stylesheet" href="{{asset("assets/css/nice-select.min.css")}}">
+    <link rel="preload" href="{{asset("assets/css/nice-select.min.css")}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{asset("assets/css/nice-select.min.css")}}"></noscript>
 
-    <link rel="stylesheet" href="{{asset("assets/css/odometer.min.css")}}">
+    <link rel="preload" href="{{asset("assets/css/odometer.min.css")}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{asset("assets/css/odometer.min.css")}}"></noscript>
 
-    <link rel="stylesheet" href="{{asset("assets/css/date-picker.min.css")}}">
+    <link rel="preload" href="{{asset("assets/css/date-picker.min.css")}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{asset("assets/css/date-picker.min.css")}}"></noscript>
 
-    <link rel="stylesheet" href="{{asset("assets/css/magnific-popup.min.css")}}">
+    <link rel="preload" href="{{asset("assets/css/magnific-popup.min.css")}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{asset("assets/css/magnific-popup.min.css")}}"></noscript>
 
     <link rel="stylesheet" href="{{asset("assets/css/beautiful-fonts.css")}}">
 
@@ -45,7 +55,6 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css" integrity="sha384-gXt9imSW0VcJVHezoNQsP+TNrjYXoGcrqBZJpry9zJt8PCQjobwmhMGaDHTASo9N" crossorigin="anonymous">
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
