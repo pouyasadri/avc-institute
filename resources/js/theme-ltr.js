@@ -38,10 +38,15 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel';
 
-// ─── Plugins without npm packages (remain as static files) ───────────────────
-// meanmenu, nice-select, ofi (objectFitImages), ajaxchimp, appear, form-validator,
-// contact-form-script, mixitup, createScrollLinks are loaded via @stack('scripts')
-// or will remain as static assets until npm equivalents are available.
+// ─── Plugins without npm packages (now bundled locally) ────────────────────────
+import './vendor/meanmenu.min.js';
+import './vendor/nice-select.min.js';
+import './vendor/ofi.min.js';
+import './vendor/ajaxchimp.min.js';
+import './vendor/appear.min.js';
+import './vendor/jquery.mixitup.min.js';
+import './vendor/form-validator.min.js';
+import './vendor/contact-form-script.js';
 
 // ─── Custom LTR theme logic ───────────────────────────────────────────────────
 import './custom-ltr.js';

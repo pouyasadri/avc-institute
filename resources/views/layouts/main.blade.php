@@ -257,19 +257,7 @@
         <i class="bx bx-chevrons-up"></i>
     </div>
 
-    {{-- ═══════════════════════════════════════════════════════════════════
-         STATIC VENDOR JS (plugins without npm packages)
-         These are not yet bundled by Vite. Once npm equivalents are adopted
-         they can be moved into theme-ltr.js / theme-rtl.js.
-    ═══════════════════════════════════════════════════════════════════ --}}
-    <script src="{{asset('assets/js/meanmenu.min.js')}}" defer></script>
-    <script src="{{asset('assets/js/nice-select.min.js')}}" defer></script>
-    <script src="{{asset('assets/js/ofi.min.js')}}" defer></script>
-    <script src="{{asset('assets/js/ajaxchimp.min.js')}}" defer></script>
-    <script src="{{asset('assets/js/appear.min.js')}}" defer></script>
-    <script src="{{asset('assets/js/jquery.mixitup.min.js')}}" defer></script>
-    <script src="{{asset('assets/js/form-validator.min.js')}}" defer></script>
-    <script src="{{asset('assets/js/contact-form-script.js')}}" defer></script>
+    {{-- Static vendor JS files have been moved into resources/js/vendor and are now bundled by Vite in theme-ltr.js / theme-rtl.js --}}
 
     @stack('scripts')
 

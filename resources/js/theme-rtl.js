@@ -38,5 +38,15 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel';
 
+// ─── Plugins without npm packages (now bundled locally) ────────────────────────
+import './vendor/meanmenu.min.js';
+import './vendor/nice-select.min.js';
+import './vendor/ofi.min.js';
+import './vendor/ajaxchimp.min.js';
+import './vendor/appear.min.js';
+import './vendor/jquery.mixitup.min.js';
+import './vendor/form-validator.min.js';
+import './vendor/contact-form-script.js';
+
 // ─── Custom RTL theme logic ───────────────────────────────────────────────────
 import './custom-rtl.js';
