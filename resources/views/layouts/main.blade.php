@@ -262,14 +262,14 @@
          These are not yet bundled by Vite. Once npm equivalents are adopted
          they can be moved into theme-ltr.js / theme-rtl.js.
     ═══════════════════════════════════════════════════════════════════ --}}
-    <script src="{{asset('assets/js/meanmenu.min.js')}}"></script>
-    <script src="{{asset('assets/js/nice-select.min.js')}}"></script>
-    <script src="{{asset('assets/js/ofi.min.js')}}"></script>
-    <script src="{{asset('assets/js/ajaxchimp.min.js')}}"></script>
-    <script src="{{asset('assets/js/appear.min.js')}}"></script>
-    <script src="{{asset('assets/js/jquery.mixitup.min.js')}}"></script>
-    <script src="{{asset('assets/js/form-validator.min.js')}}"></script>
-    <script src="{{asset('assets/js/contact-form-script.js')}}"></script>
+    <script src="{{asset('assets/js/meanmenu.min.js')}}" defer></script>
+    <script src="{{asset('assets/js/nice-select.min.js')}}" defer></script>
+    <script src="{{asset('assets/js/ofi.min.js')}}" defer></script>
+    <script src="{{asset('assets/js/ajaxchimp.min.js')}}" defer></script>
+    <script src="{{asset('assets/js/appear.min.js')}}" defer></script>
+    <script src="{{asset('assets/js/jquery.mixitup.min.js')}}" defer></script>
+    <script src="{{asset('assets/js/form-validator.min.js')}}" defer></script>
+    <script src="{{asset('assets/js/contact-form-script.js')}}" defer></script>
 
     @stack('scripts')
 

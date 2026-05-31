@@ -6,10 +6,7 @@
  */
 
 // ─── Global jQuery ────────────────────────────────────────────────────────────
-import $ from 'jquery';
-import jQuery from 'jquery';
-window.$ = $;
-window.jQuery = jQuery;
+import './jquery-global.js';
 
 // ─── Bootstrap JS ────────────────────────────────────────────────────────────
 import 'bootstrap';

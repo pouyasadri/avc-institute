@@ -6,10 +6,7 @@
  */
 
 // ─── Global jQuery (required by all plugins below) ───────────────────────────
-import $ from 'jquery';
-import jQuery from 'jquery';
-window.$ = $;
-window.jQuery = jQuery;
+import './jquery-global.js';
 
 // ─── Bootstrap JS (uses Popper via bundled build) ────────────────────────────
 import 'bootstrap';
