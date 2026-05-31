@@ -1,0 +1,44 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// app-rtl.scss — RTL theme entry point (fa/Persian locale)
+//
+// Bootstrap RTL is served via the pre-compiled bootstrap.rtl.min.css from
+// public/assets (which cannot be re-compiled via SCSS without a separate build
+// pipeline). Vendor plugin CSS shared with LTR is bundled here; RTL-specific
+// overrides (style-rtl.css, rtl.css, bootstrap.rtl.min.css) remain as static
+// <link> tags in the Blade layout.
+// ─────────────────────────────────────────────────────────────────────────────
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Owl Carousel (from npm)
+// ─────────────────────────────────────────────────────────────────────────────
+@import 'owl.carousel/dist/assets/owl.carousel.min.css';
+@import 'owl.carousel/dist/assets/owl.theme.default.min.css';
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Animate.css (from npm) — used by WOW.js
+// ─────────────────────────────────────────────────────────────────────────────
+@import 'animate.css';
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Magnific Popup (from npm)
+// ─────────────────────────────────────────────────────────────────────────────
+@import 'magnific-popup/dist/magnific-popup.css';
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Odometer — default theme (from npm)
+// ─────────────────────────────────────────────────────────────────────────────
+@import 'odometer/themes/odometer-theme-default.css';
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Slick Carousel CSS is imported in theme-rtl.js to avoid the
+// postcss-import @charset conflict with slick-carousel's single-quoted charset.
+// ─────────────────────────────────────────────────────────────────────────────
+
+// ─────────────────────────────────────────────────────────────────────────────
+// NOTE: The following remain as static <link> tags in the Blade layout:
+//   - bootstrap.rtl.min.css  (pre-compiled Bootstrap RTL)
+//   - boxicons.min.css, flaticon.css  (icon fonts with relative font paths)
+//   - meanmenu.min.css, nice-select.min.css, date-picker.min.css
+//   - beautiful-fonts.css, Vazirmatn-RD-FD-font-face.css
+//   - style-rtl.css, responsive.css, rtl.css
+// ─────────────────────────────────────────────────────────────────────────────

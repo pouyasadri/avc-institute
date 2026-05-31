@@ -1,0 +1,46 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// Bootstrap Variables (overrides must come before the Bootstrap import)
+// ─────────────────────────────────────────────────────────────────────────────
+@import 'variables';
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Bootstrap 5 — LTR build
+// ─────────────────────────────────────────────────────────────────────────────
+@import 'bootstrap/scss/bootstrap';
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Owl Carousel (from npm)
+// ─────────────────────────────────────────────────────────────────────────────
+@import 'owl.carousel/dist/assets/owl.carousel.min.css';
+@import 'owl.carousel/dist/assets/owl.theme.default.min.css';
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Animate.css (from npm) — used by WOW.js
+// ─────────────────────────────────────────────────────────────────────────────
+@import 'animate.css';
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Magnific Popup (from npm)
+// ─────────────────────────────────────────────────────────────────────────────
+@import 'magnific-popup/dist/magnific-popup.css';
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Odometer — default theme (from npm)
+// ─────────────────────────────────────────────────────────────────────────────
+@import 'odometer/themes/odometer-theme-default.css';
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Slick Carousel CSS is imported in theme-ltr.js / theme-rtl.js to avoid the
+// postcss-import @charset conflict with slick-carousel's single-quoted charset.
+// ─────────────────────────────────────────────────────────────────────────────
+
+// ─────────────────────────────────────────────────────────────────────────────
+// NOTE: The following are NOT bundled by Vite because they have no npm package
+// and reference font files that need to stay at their current public URL:
+//   - boxicons.min.css / flaticon.css  (icon fonts with relative ../fonts/ paths)
+//   - meanmenu.min.css, nice-select.min.css, date-picker.min.css
+//   - beautiful-fonts.css, Vazirmatn-RD-FD-font-face.css
+//   - style-ltr.css, responsive.css
+// These remain as <link> tags in the Blade layout but are consolidated to
+// a single @include('layouts.partials.vendor-css') partial.
+// ─────────────────────────────────────────────────────────────────────────────

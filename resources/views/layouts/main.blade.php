@@ -133,68 +133,36 @@
         $chevronsDir = $isRtl ? 'bx-chevrons-left' : 'bx-chevrons-right';
     @endphp
 
-    {{-- Conditionally load RTL or LTR Bootstrap --}}
+    {{-- ═══════════════════════════════════════════════════════════════════
+         VITE-BUNDLED CSS
+         Includes: Bootstrap (LTR or vendor-CSS-only for RTL), Owl Carousel,
+         Animate.css, Magnific Popup, Odometer, Slick Carousel
+         All hashed and gzip-compressed by Vite.
+    ═══════════════════════════════════════════════════════════════════ --}}
     @if($isRtl)
-        <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.rtl.min.css') }}">
+        @vite(['resources/sass/app-rtl.scss', 'resources/js/theme-rtl.js'])
     @else
-        <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
+        @vite(['resources/sass/app-ltr.scss', 'resources/js/theme-ltr.js'])
     @endif
 
-    <link rel="preload" href="{{asset("assets/css/owl.theme.default.min.css")}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="{{asset("assets/css/owl.theme.default.min.css")}}"></noscript>
+    {{-- ═══════════════════════════════════════════════════════════════════
+         STATIC VENDOR CSS (no npm package — kept as raw assets)
+         Consolidated from 19 separate <link> tags into one @include.
+    ═══════════════════════════════════════════════════════════════════ --}}
+    @include('layouts.partials.vendor-css', ['isRtl' => $isRtl])
 
-    <link rel="preload" href="{{asset("assets/css/owl.carousel.min.css")}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="{{asset("assets/css/owl.carousel.min.css")}}"></noscript>
+    {{-- ═══════════════════════════════════════════════════════════════════
+         STATIC VENDOR JS (no npm package — remain as raw assets)
+         meanmenu, nice-select, ofi, ajaxchimp, appear, mixitup, form-validator,
+         contact-form-script, createScrollLinks — kept until npm equivalents found.
+    ═══════════════════════════════════════════════════════════════════ --}}
 
-    <link rel="preload" href="{{asset("assets/css/boxicons.min.css")}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="{{asset("assets/css/boxicons.min.css")}}"></noscript>
-
-    <link rel="preload" href="{{asset("assets/css/flaticon.css")}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="{{asset("assets/css/flaticon.css")}}"></noscript>
-
-    <link rel="preload" href="{{asset("assets/css/meanmenu.min.css")}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="{{asset("assets/css/meanmenu.min.css")}}"></noscript>
-
-    <link rel="preload" href="{{asset("assets/css/animate.min.css")}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="{{asset("assets/css/animate.min.css")}}"></noscript>
-
-    <link rel="preload" href="{{asset("assets/css/nice-select.min.css")}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="{{asset("assets/css/nice-select.min.css")}}"></noscript>
-
-    <link class="responsive-style" rel="preload" href="{{asset("assets/css/odometer.min.css")}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="{{asset("assets/css/odometer.min.css")}}"></noscript>
-
-    <link rel="preload" href="{{asset("assets/css/date-picker.min.css")}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="{{asset("assets/css/date-picker.min.css")}}"></noscript>
-
-    <link rel="preload" href="{{asset("assets/css/magnific-popup.min.css")}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="{{asset("assets/css/magnific-popup.min.css")}}"></noscript>
-
-    @if($isRtl)
-        <link rel="stylesheet" href="{{ asset('assets/css/style-rtl.css') }}?v={{ filemtime(public_path('assets/css/style-rtl.css')) }}">
-    @else
-        <link rel="stylesheet" href="{{ asset('assets/css/style-ltr.css') }}?v={{ filemtime(public_path('assets/css/style-ltr.css')) }}">
-    @endif
-    <link class="responsive-style" rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}?v={{ filemtime(public_path('assets/css/responsive.css')) }}">
-
-    {{-- Load rtl.css only for RTL locales (contains overrides for RTL layout) --}}
-    @if($isRtl)
-        <link rel="stylesheet" href="{{ asset('assets/css/rtl.css') }}?v={{ filemtime(public_path('assets/css/rtl.css')) }}">
-    @endif
-
-    {{-- Include navbar styles from external file or inline --}}
+    {{-- Inline navbar styles (kept as-is) --}}
     @include('layouts.partials.navbar-styles')
 
-    {{-- Preconnect for CDN resources BEFORE the actual resource requests --}}
+    {{-- Preconnect hints --}}
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
-
-    <!-- Slick Slider CSS -->
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"></noscript>
-
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"></noscript>
 
     @stack('styles')
 
@@ -289,30 +257,19 @@
         <i class="bx bx-chevrons-up"></i>
     </div>
 
-    <!-- Scripts -->
-    <script src="{{asset("../assets/js/jquery.min.js")}}"></script>
-    <script src="{{asset("../assets/js/bootstrap.bundle.min.js")}}"></script>
-    <script src="{{asset("../assets/js/meanmenu.min.js")}}"></script>
-    <script src="{{asset("../assets/js/owl.carousel.min.js")}}"></script>
-    <script src="{{asset("../assets/js/wow.min.js")}}"></script>
-    <script src="{{asset("../assets/js/nice-select.min.js")}}"></script>
-    <script src="{{asset("../assets/js/magnific-popup.min.js")}}"></script>
-    <script src="{{asset("../assets/js/jquery.mixitup.min.js")}}"></script>
-    <script src="{{asset("../assets/js/appear.min.js")}}"></script>
-    <script src="{{asset("../assets/js/odometer.min.js")}}"></script>
-    <script src="{{asset("../assets/js/bootstrap-datepicker.min.js")}}"></script>
-    <script src="{{asset("../assets/js/ofi.min.js")}}"></script>
-    <script src="{{asset("../assets/js/jarallax.min.js")}}"></script>
-    <script src="{{asset("../assets/js/form-validator.min.js")}}"></script>
-    <script src="{{asset("../assets/js/contact-form-script.js")}}"></script>
-    <script src="{{asset("../assets/js/ajaxchimp.min.js")}}"></script>
-
-    @if($isRtl)
-        <script src="{{asset("../assets/js/custom-rtl.js")}}"></script>
-    @else
-        <script src="{{asset("../assets/js/custom-ltr.js")}}"></script>
-    @endif
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    {{-- ═══════════════════════════════════════════════════════════════════
+         STATIC VENDOR JS (plugins without npm packages)
+         These are not yet bundled by Vite. Once npm equivalents are adopted
+         they can be moved into theme-ltr.js / theme-rtl.js.
+    ═══════════════════════════════════════════════════════════════════ --}}
+    <script src="{{asset('assets/js/meanmenu.min.js')}}"></script>
+    <script src="{{asset('assets/js/nice-select.min.js')}}"></script>
+    <script src="{{asset('assets/js/ofi.min.js')}}"></script>
+    <script src="{{asset('assets/js/ajaxchimp.min.js')}}"></script>
+    <script src="{{asset('assets/js/appear.min.js')}}"></script>
+    <script src="{{asset('assets/js/jquery.mixitup.min.js')}}"></script>
+    <script src="{{asset('assets/js/form-validator.min.js')}}"></script>
+    <script src="{{asset('assets/js/contact-form-script.js')}}"></script>
 
     @stack('scripts')
 
