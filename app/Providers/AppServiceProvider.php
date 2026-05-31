@@ -31,6 +31,10 @@ class AppServiceProvider extends ServiceProvider
             URL::forceScheme('https');
         }
 
+        \Illuminate\Support\Facades\Vite::useScriptTagAttributes([
+            'data-cfasync' => 'false',
+        ]);
+
         Paginator::useBootstrapFive();
 
         $this->configureRateLimiting();
