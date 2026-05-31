@@ -4055,7 +4055,7 @@ Ecorik Slider Area Five Style
 }
 
 .eorik-slider-area-five .owl-prev::before {
-    content: "قبلی";
+    content: "\0642\0628\0644\06cc";
     position: absolute;
     top: 8px;
     left: 35px;
@@ -4084,7 +4084,7 @@ Ecorik Slider Area Five Style
 }
 
 .eorik-slider-area-five .owl-next::before {
-    content: "بعدی";
+    content: "\0628\0639\062f\06cc";
     position: absolute;
     top: 7px;
     right: 15px;
