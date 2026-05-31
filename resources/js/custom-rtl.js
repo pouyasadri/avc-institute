@@ -519,7 +519,9 @@
 		}
 	}
 	$('.shorting').mixItUp();
-	objectFitImages();
+	if (typeof window.objectFitImages === 'function') {
+		window.objectFitImages();
+	}
 	jarallax(document.querySelectorAll('.jarallax'));
 	jarallax(document.querySelectorAll('.jarallax-keep-img'), {
 		keepImg: true,
