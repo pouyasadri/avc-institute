@@ -615,11 +615,12 @@
     if (typeof window.objectFitImages === 'function') {
         window.objectFitImages();
     }
-    jarallax(document.querySelectorAll('.jarallax'));
-
-    jarallax(document.querySelectorAll('.jarallax-keep-img'), {
-        keepImg: true,
-    });
+    if (typeof window.jarallax === 'function') {
+        window.jarallax(document.querySelectorAll('.jarallax'));
+        window.jarallax(document.querySelectorAll('.jarallax-keep-img'), {
+            keepImg: true,
+        });
+    }
 
     // Input Plus & Minus Number JS
     $('.input-counter').each(function () {

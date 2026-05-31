@@ -522,10 +522,12 @@
 	if (typeof window.objectFitImages === 'function') {
 		window.objectFitImages();
 	}
-	jarallax(document.querySelectorAll('.jarallax'));
-	jarallax(document.querySelectorAll('.jarallax-keep-img'), {
-		keepImg: true,
-	});
+	if (typeof window.jarallax === 'function') {
+		window.jarallax(document.querySelectorAll('.jarallax'));
+		window.jarallax(document.querySelectorAll('.jarallax-keep-img'), {
+			keepImg: true,
+		});
+	}
 	$('.input-counter').each(function () {
 		var spinner = jQuery(this),
 			input = spinner.find('input[type="text"]'),
