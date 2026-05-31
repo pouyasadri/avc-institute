@@ -15,7 +15,6 @@
         "bootstrap-datepicker": "^1.10.1",
         "jarallax": "^3.0.0",
         "jquery": "^3.7.1",
-        "jquery-migrate": "^4.0.2",
         "laravel-vite-plugin": "^3.1.0",
         "magnific-popup": "^1.2.0",
         "odometer": "^0.4.8",

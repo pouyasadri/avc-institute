@@ -7,7 +7,6 @@
 
 // ─── Global jQuery ────────────────────────────────────────────────────────────
 import './jquery-global.js';
-import 'jquery-migrate';
 
 // ─── Bootstrap JS ────────────────────────────────────────────────────────────
 import 'bootstrap';

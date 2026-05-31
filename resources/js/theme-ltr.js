@@ -7,7 +7,6 @@
 
 // ─── Global jQuery (required by all plugins below) ───────────────────────────
 import './jquery-global.js';
-import 'jquery-migrate';
 
 // ─── Bootstrap JS (uses Popper via bundled build) ────────────────────────────
 import 'bootstrap';
