@@ -8,7 +8,7 @@
         <div class="container">
             <div class="page-title-content">
                 <x-premium-breadcrumb :items="[
-            ['url' => url(app()->getLocale() . '/'), 'label' => __('blog/index.breadcrumb_home')],
+            ['url' => route('index', ['locale' => app()->getLocale()]), 'label' => __('blog/index.breadcrumb_home')],
             ['label' => __('blog/index.breadcrumb_blogs')]
         ]" />
                 <h1>{{ __('blog/index.main_heading') }}</h1>
