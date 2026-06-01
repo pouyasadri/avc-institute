@@ -44,6 +44,10 @@ return [
     'toulouse_title' => 'Toulouse: The Aerospace Frontier',
     'toulouse_description' => 'Reach new heights in Europe\'s aerospace capital. A young, innovative hub where deep-rooted tradition meets the absolute edge of the sky.',
 
+    'grenoble_alt' => 'Grenoble 2026: The Research & Alpine Hub',
+    'grenoble_title' => 'Grenoble: The Science & Alpine Hub',
+    'grenoble_description' => 'A world-class scientific ecosystem nestled in the majestic Alps. The perfect destination for STEM research, innovation, and mountain enthusiasts.',
+
     'read_more' => 'Explore City',
 
     // Schema.org

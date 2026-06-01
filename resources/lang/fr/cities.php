@@ -7,10 +7,11 @@ return [
     'map_lyon' => 'Lyon',
     'map_nice' => 'Nice',
     'map_toulouse' => 'Toulouse',
+    'map_grenoble' => 'Grenoble',
 
     // SEO Meta Tags
     'title' => 'Découvrez la France 2026 : Les Meilleures Villes pour Vivre, Étudier & Investir | A.V.C',
-    'keywords' => 'villes françaises, Paris 2026, Lyon, Nice, Toulouse, Strasbourg, étudier en France, vivre en France, affaires en France, étudiants internationaux France, style de vie français',
+    'keywords' => 'villes françaises, Paris 2026, Lyon, Nice, Toulouse, Strasbourg, Grenoble, étudier en France, vivre en France, affaires en France, étudiants internationaux France, style de vie français',
     'description' => 'Explorez les villes françaises les plus vibrantes en 2026. Des rues historiques de Paris aux pôles technologiques de la Silicon Coast, trouvez votre destination idéale pour l\'éducation et la carrière.',
 
     // Page Title & Breadcrumb
@@ -43,6 +44,10 @@ return [
     'toulouse_alt' => 'Toulouse 2026 : Capitale de l\'Aéronautique et de l\'Innovation',
     'toulouse_title' => 'Toulouse : La Frontière Aérospatiale',
     'toulouse_description' => 'Visez les étoiles dans la capitale européenne de l\'aéronautique. Un hub jeune et innovant où la tradition rencontre le futur de l\'aviation.',
+
+    'grenoble_alt' => 'Grenoble 2026 : Le Hub de la Recherche et des Alpes',
+    'grenoble_title' => 'Grenoble : Le Pôle Scientifique et Alpin',
+    'grenoble_description' => 'Un écosystème scientifique de classe mondiale niché au cœur des Alpes. La destination idéale pour la recherche STEM, l\'innovation et les passionnés de montagne.',
 
     'read_more' => 'Explorer la Ville',
 
