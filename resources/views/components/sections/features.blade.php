@@ -53,12 +53,13 @@
                                 @endif
                             </div>
                             @if(isset($item['label']))
-                                <span class="text-uppercase small fw-bold text-muted tracking-wider mb-2 d-block">{{ $item['label'] }}</span>
+                                <span class="text-uppercase small fw-bold facilities-label tracking-wider mb-2 d-block">{{ $item['label'] }}</span>
                             @endif
                             <h3 class="h5 fw-bold mb-3">{{ $item['title'] }}</h3>
-                            <p class="text-muted small mb-4">{{ $item['description'] }}</p>
-                            <a href="{{ url($currentLocale . "/consult") }}" class="icon-btn text-primary">
-                                <i class="{{ $arrowIcon }}"></i>
+                            <p class="facilities-desc small mb-4">{{ $item['description'] }}</p>
+                            <a href="{{ url($currentLocale . "/consult") }}" class="icon-btn text-primary"
+                               aria-label="{{ __('layout.facilities_consult_label', ['service' => $item['title']]) }}">
+                                <i class="{{ $arrowIcon }}" aria-hidden="true"></i>
                             </a>
                         </article>
                     </div>

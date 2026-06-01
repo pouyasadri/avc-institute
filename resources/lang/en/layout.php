@@ -9,6 +9,13 @@ return [
     'mobile_navigation' => 'Mobile navigation',
     'main_navigation' => 'Main navigation',
     'home' => 'Home page',
+    'facilities_consult_label' => 'Get a consultation about :service',
+
+    // Carousel navigation
+    'carousel' => [
+        'prev' => 'Previous slide',
+        'next' => 'Next slide',
+    ],
 
     // Social Media
     'social' => [

@@ -9,6 +9,13 @@ return [
     'mobile_navigation' => 'منوی موبایل',
     'main_navigation' => 'منوی اصلی',
     'home' => 'صفحه اصلی',
+    'facilities_consult_label' => 'مشاوره در مورد :service',
+
+    // برچسب‌های اسلایدر
+    'carousel' => [
+        'prev' => 'اسلاید قبلی',
+        'next' => 'اسلاید بعدی',
+    ],
 
     // شبکه‌های اجتماعی
     'social' => [

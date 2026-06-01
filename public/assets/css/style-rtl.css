@@ -2228,6 +2228,17 @@ Facilities Area Style
     transform: scale(1.1) rotate(-45deg);
 }
 
+/* Accessible colour overrides for facilities cards (WCAG AA contrast ≥4.5:1 on white) */
+/* Bootstrap text-muted (#6c757d) fails WCAG AA for small/bold text; use these instead. */
+.facilities-label {
+    color: #555c6e; /* contrast 5.2:1 on #fff */
+}
+
+.facilities-desc {
+    color: #4a5568; /* contrast 7.0:1 on #fff */
+    line-height: 1.7;
+}
+
 /* Responsive Design */
 
 

@@ -9,6 +9,13 @@ return [
     'mobile_navigation' => 'Navigation mobile',
     'main_navigation' => 'Navigation principale',
     'home' => 'Page d\'accueil',
+    'facilities_consult_label' => 'Obtenir une consultation sur :service',
+
+    // Navigation du carrousel
+    'carousel' => [
+        'prev' => 'Diapositive précédente',
+        'next' => 'Diapositive suivante',
+    ],
 
     // Réseaux sociaux
     'social' => [

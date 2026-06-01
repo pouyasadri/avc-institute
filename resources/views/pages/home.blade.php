@@ -166,7 +166,7 @@
                             __('cities.map_toulouse'),
                         ], JSON_UNESCAPED_UNICODE);
                     @endphp
-                    <div class="col-lg-5 col-md-12" style="height: 40rem" id="chartdiv"
+                    <div aria-hidden="true" role="presentation" class="col-lg-5 col-md-12" style="height: 40rem" id="chartdiv"
                         data-city-names="{{ $mapCityNamesJson }}"></div>
                     <div class="city-wrap col-lg-5 col-md-12">
                         <div class="single-city-item owl-carousel owl-theme">
@@ -434,5 +434,37 @@
                 alpha: 0.4
             }
         });
+
+        // Fix Owl Carousel nav button accessibility after carousel initialises.
+        // Owl Carousel 2 injects role="presentation" on <button> which is invalid
+        // (interactive elements cannot use role="none"/"presentation"), and leaves
+        // the buttons without an accessible name. We correct both issues here.
+        document.addEventListener('DOMContentLoaded', function () {
+            var cityCarousel = document.querySelector('.single-city-item');
+            if (!cityCarousel) return;
+
+            // Owl fires 'initialized.owl.carousel' on the element
+            $(cityCarousel).on('initialized.owl.carousel', function () {
+                fixOwlNavButtons(cityCarousel);
+            });
+
+            // Fallback: also fix after a short delay in case init already fired
+            setTimeout(function () { fixOwlNavButtons(cityCarousel); }, 500);
+        });
+
+        function fixOwlNavButtons(carousel) {
+            var prevLabel = '{{ __('layout.carousel.prev') }}';
+            var nextLabel = '{{ __('layout.carousel.next') }}';
+            var prevBtn = carousel.querySelector('.owl-prev');
+            var nextBtn = carousel.querySelector('.owl-next');
+            if (prevBtn) {
+                prevBtn.removeAttribute('role');
+                prevBtn.setAttribute('aria-label', prevLabel);
+            }
+            if (nextBtn) {
+                nextBtn.removeAttribute('role');
+                nextBtn.setAttribute('aria-label', nextLabel);
+            }
+        }
     </script>
 @endpush
