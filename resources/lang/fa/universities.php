@@ -19,6 +19,8 @@ return [
     // University Information
     'world_rank' => 'جایگاه علمی',
     'more_info' => 'مشاهده جزییات دانشگاه',
+    'related_universities' => 'دانشگاه‌های مرتبط',
+    'city_guide' => 'راهنمای شهر',
 
     // Universities
     'paris_saclay_name' => 'دانشگاه پاریس-ساکله',

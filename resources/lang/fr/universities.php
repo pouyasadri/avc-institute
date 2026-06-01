@@ -19,6 +19,8 @@ return [
     // University Information
     'world_rank' => 'Reconnaissance',
     'more_info' => 'Explorer l\'Université',
+    'related_universities' => 'Universités associées',
+    'city_guide' => 'Guide de la ville',
 
     // Universities
     'paris_saclay_name' => 'Université Paris-Saclay',

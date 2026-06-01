@@ -19,6 +19,8 @@ return [
     // University Information
     'world_rank' => 'Recognition',
     'more_info' => 'Explore University',
+    'related_universities' => 'Related Universities',
+    'city_guide' => 'City Guide',
 
     // Universities
     'paris_saclay_name' => 'Paris-Saclay University',
