@@ -25,20 +25,20 @@
         </h4>
         <ul class="list-unstyled mb-0">
             <li class="mb-2">
-                <a href="https://www.unistra.fr/" target="_blank" class="d-flex align-items-center text-decoration-none">
+                <a href="https://www.unistra.fr/" target="_blank" rel="noopener noreferrer" class="d-flex align-items-center text-decoration-none">
                     <i class='bx bx-globe me-2 fs-5 text-primary'></i>
                     <span>{{ __('university/strasbourg.official_website') }}</span>
                 </a>
             </li>
             <li class="mb-2">
                 <a href="https://fa.wikipedia.org/wiki/%D8%AF%D8%A7%D9%86%D8%B4%DA%AF%D8%A7%D9%87_%D8%A7%D8%B3%D8%AA%D8%B1%D8%A7%D8%B3%D8%A8%D9%88%D8%B1%DA%AF"
-                    target="_blank" class="d-flex align-items-center text-decoration-none">
+                    target="_blank" rel="noopener noreferrer" class="d-flex align-items-center text-decoration-none">
                     <i class='bx bxl-wikipedia me-2 fs-5 text-primary'></i>
                     <span>{{ __('university/strasbourg.wikipedia_link') }}</span>
                 </a>
             </li>
             <li>
-                <a href="{{ url(app()->getLocale() . '/cities/strasbourg') }}" target="_blank"
+                <a href="{{ url(app()->getLocale() . '/cities/strasbourg') }}" target="_blank" rel="noopener noreferrer"
                     class="d-flex align-items-center text-decoration-none">
                     <i class='bx bx-map-alt me-2 fs-5 text-primary'></i>
                     <span>{{ __('university/strasbourg.strasbourg_city_guide') }}</span>

@@ -23,13 +23,13 @@
         <h4 class="widget-title h5 fw-bold mb-3 border-bottom pb-2">{{ __('university/paris-cite.useful_links') }}</h4>
         <ul class="list-unstyled mb-0">
             <li class="mb-2">
-                <a href="https://u-paris.fr/" target="_blank" class="d-flex align-items-center text-decoration-none">
+                <a href="https://u-paris.fr/" target="_blank" rel="noopener noreferrer" class="d-flex align-items-center text-decoration-none">
                     <i class='bx bx-globe me-2 fs-5 text-primary'></i>
                     <span>{{ __('university/paris-cite.official_website') }}</span>
                 </a>
             </li>
             <li>
-                <a href="{{ url(app()->getLocale() . '/cities/paris') }}" target="_blank"
+                <a href="{{ url(app()->getLocale() . '/cities/paris') }}" target="_blank" rel="noopener noreferrer"
                     class="d-flex align-items-center text-decoration-none">
                     <i class='bx bx-map-alt me-2 fs-5 text-primary'></i>
                     <span>{{ __('university/paris-cite.paris_city_guide') }}</span>

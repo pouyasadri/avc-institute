@@ -25,7 +25,7 @@
         </h4>
         <ul class="list-unstyled mb-0">
             <li class="mb-2">
-                <a href="https://www.universite-paris-saclay.fr/" target="_blank"
+                <a href="https://www.universite-paris-saclay.fr/" target="_blank" rel="noopener noreferrer"
                     class="d-flex align-items-center text-decoration-none">
                     <i class='bx bx-globe me-2 fs-5 text-primary'></i>
                     <span>{{ __('university/paris-saclay-university.official_website') }}</span>
@@ -33,13 +33,13 @@
             </li>
             <li class="mb-2">
                 <a href="https://fa.wikipedia.org/wiki/%D8%AF%D8%A7%D9%86%D8%B4%DA%AF%D8%A7%D9%87_%D9%BE%D8%A7%D8%B1%DB%8C%D8%B3_%D8%B3%D9%88%D8%AF"
-                    target="_blank" class="d-flex align-items-center text-decoration-none">
+                    target="_blank" rel="noopener noreferrer" class="d-flex align-items-center text-decoration-none">
                     <i class='bx bxl-wikipedia me-2 fs-5 text-primary'></i>
                     <span>{{ __('university/paris-saclay-university.wikipedia_link') }}</span>
                 </a>
             </li>
             <li>
-                <a href="{{ url(app()->getLocale() . '/cities/paris') }}" target="_blank"
+                <a href="{{ url(app()->getLocale() . '/cities/paris') }}" target="_blank" rel="noopener noreferrer"
                     class="d-flex align-items-center text-decoration-none">
                     <i class='bx bx-map-alt me-2 fs-5 text-primary'></i>
                     <span>{{ __('university/paris-saclay-university.paris_city_guide') }}</span>

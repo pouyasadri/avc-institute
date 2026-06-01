@@ -25,24 +25,17 @@
         </h4>
         <ul class="list-unstyled mb-0">
             <li class="mb-2">
-                <a href="https://www.univ-grenoble-alpes.fr/" target="_blank"
+                <a href="https://www.univ-grenoble-alpes.fr/" target="_blank" rel="noopener noreferrer"
                     class="d-flex align-items-center text-decoration-none">
                     <i class='bx bx-globe me-2 fs-5 text-primary'></i>
                     <span>{{ __('university/universite-grenoble-alpes.official_website') }}</span>
                 </a>
             </li>
             <li class="mb-2">
-                <a href="https://fr.wikipedia.org/wiki/Universit%C3%A9_Grenoble-Alpes" target="_blank"
+                <a href="https://fr.wikipedia.org/wiki/Universit%C3%A9_Grenoble-Alpes" target="_blank" rel="noopener noreferrer"
                     class="d-flex align-items-center text-decoration-none">
                     <i class='bx bxl-wikipedia me-2 fs-5 text-primary'></i>
                     <span>{{ __('university/universite-grenoble-alpes.wikipedia_link') }}</span>
-                </a>
-            </li>
-            <li>
-                <a href="{{ url(app()->getLocale() . '/cities/grenoble') }}" target="_blank"
-                    class="d-flex align-items-center text-decoration-none">
-                    <i class='bx bx-map-alt me-2 fs-5 text-primary'></i>
-                    <span>{{ __('university/universite-grenoble-alpes.grenoble_city_guide') }}</span>
                 </a>
             </li>
         </ul>

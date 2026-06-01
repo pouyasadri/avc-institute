@@ -25,7 +25,7 @@
         </h4>
         <ul class="list-unstyled mb-0">
             <li class="mb-2">
-                <a href="https://www.umontpellier.fr/" target="_blank"
+                <a href="https://www.umontpellier.fr/" target="_blank" rel="noopener noreferrer"
                     class="d-flex align-items-center text-decoration-none transition-all hover-translate-x">
                     <i class='bx bx-globe me-2 fs-5 text-primary'></i>
                     <span>{{ __('university/universite-de-montpellier.official_website') }}</span>
@@ -33,7 +33,7 @@
             </li>
             <li class="mb-2">
                 <a href="https://en.wikipedia.org/wiki/University_of_Montpellier"
-                    target="_blank" class="d-flex align-items-center text-decoration-none transition-all hover-translate-x">
+                    target="_blank" rel="noopener noreferrer" class="d-flex align-items-center text-decoration-none transition-all hover-translate-x">
                     <i class='bx bxl-wikipedia me-2 fs-5 text-primary'></i>
                     <span>{{ __('university/universite-de-montpellier.wikipedia_link') }}</span>
                 </a>

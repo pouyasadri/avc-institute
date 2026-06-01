@@ -25,7 +25,7 @@
         </h4>
         <ul class="list-unstyled mb-0">
             <li class="mb-2">
-                <a href="https://www.sciencespo.fr/en/" target="_blank"
+                <a href="https://www.sciencespo.fr/en/" target="_blank" rel="noopener noreferrer"
                     class="d-flex align-items-center text-decoration-none transition-all hover-translate-x">
                     <i class='bx bx-globe me-2 fs-5 text-primary'></i>
                     <span>{{ __('university/sciences-po.official_website') }}</span>
@@ -33,7 +33,7 @@
             </li>
             <li class="mb-2">
                 <a href="https://en.wikipedia.org/wiki/Sciences_Po"
-                    target="_blank" class="d-flex align-items-center text-decoration-none transition-all hover-translate-x">
+                    target="_blank" rel="noopener noreferrer" class="d-flex align-items-center text-decoration-none transition-all hover-translate-x">
                     <i class='bx bxl-wikipedia me-2 fs-5 text-primary'></i>
                     <span>{{ __('university/sciences-po.wikipedia_link') }}</span>
                 </a>

@@ -25,20 +25,20 @@
         </h4>
         <ul class="list-unstyled mb-0">
             <li class="mb-2">
-                <a href="https://psl.eu/" target="_blank" class="d-flex align-items-center text-decoration-none">
+                <a href="https://psl.eu/" target="_blank" rel="noopener noreferrer" class="d-flex align-items-center text-decoration-none">
                     <i class='bx bx-globe me-2 fs-5 text-primary'></i>
                     <span>{{ __('university/universite-psl.official_website') }}</span>
                 </a>
             </li>
             <li class="mb-2">
-                <a href="https://fr.wikipedia.org/wiki/Universit%C3%A9_Paris_Sciences_et_Lettres" target="_blank"
+                <a href="https://fr.wikipedia.org/wiki/Universit%C3%A9_Paris_Sciences_et_Lettres" target="_blank" rel="noopener noreferrer"
                     class="d-flex align-items-center text-decoration-none">
                     <i class='bx bxl-wikipedia me-2 fs-5 text-primary'></i>
                     <span>{{ __('university/universite-psl.wikipedia_link') }}</span>
                 </a>
             </li>
             <li>
-                <a href="{{ url(app()->getLocale() . '/cities/paris') }}" target="_blank"
+                <a href="{{ url(app()->getLocale() . '/cities/paris') }}" target="_blank" rel="noopener noreferrer"
                     class="d-flex align-items-center text-decoration-none">
                     <i class='bx bx-map-alt me-2 fs-5 text-primary'></i>
                     <span>{{ __('university/universite-psl.paris_city_guide') }}</span>

@@ -25,20 +25,20 @@
         </h4>
         <ul class="list-unstyled mb-0">
             <li class="mb-2">
-                <a href="https://www.ip-paris.fr/" target="_blank" class="d-flex align-items-center text-decoration-none">
+                <a href="https://www.ip-paris.fr/" target="_blank" rel="noopener noreferrer" class="d-flex align-items-center text-decoration-none">
                     <i class='bx bx-globe me-2 fs-5 text-primary'></i>
                     <span>{{ __('university/ip-paris.official_website') }}</span>
                 </a>
             </li>
             <li class="mb-2">
-                <a href="https://fr.wikipedia.org/wiki/Institut_polytechnique_de_Paris" target="_blank"
+                <a href="https://fr.wikipedia.org/wiki/Institut_polytechnique_de_Paris" target="_blank" rel="noopener noreferrer"
                     class="d-flex align-items-center text-decoration-none">
                     <i class='bx bxl-wikipedia me-2 fs-5 text-primary'></i>
                     <span>{{ __('university/ip-paris.wikipedia_link') }}</span>
                 </a>
             </li>
             <li>
-                <a href="{{ url(app()->getLocale() . '/cities/paris') }}" target="_blank"
+                <a href="{{ url(app()->getLocale() . '/cities/paris') }}" target="_blank" rel="noopener noreferrer"
                     class="d-flex align-items-center text-decoration-none">
                     <i class='bx bx-map-alt me-2 fs-5 text-primary'></i>
                     <span>{{ __('university/ip-paris.paris_city_guide') }}</span>
