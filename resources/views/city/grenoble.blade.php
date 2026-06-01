@@ -80,7 +80,7 @@
 
     <div class="rounded-4 overflow-hidden shadow-sm mb-5">
         <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d178167.27644170693!2d4.8262037!3d45.7538785!3m2!i1024!2i768!4f13.1!3m3!1m2!1s0x47f4ea516ae88797%3A0x408ab2ae4bb21f0!2sGrenoble!5e0!3m2!1sfr!2sfr!4v1691146753003!5m2!1sfr!2sfr"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11342.348602206772!2d5.7245!3d45.1885!3m2!i1024!2i768!4f13.1!3m3!1m2!1s0x478af48bd6893637%3A0x408ab2ae4ba2120!2sGrenoble!5e0!3m2!1sfr!2sfr!4v1691146753003!5m2!1sfr!2sfr"
             width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
