@@ -51,7 +51,7 @@ Route::prefix('{locale}')
         // Cities Routes
         Route::prefix('cities')->group(function () {
             Route::view('/', 'pages.cities.index')->name('cities.index');
-            $cities = ['paris', 'strasbourg', 'nice', 'toulouse', 'lyon'];
+            $cities = ['paris', 'strasbourg', 'nice', 'toulouse', 'lyon', 'grenoble'];
             foreach ($cities as $city) {
                 Route::view("/$city", "city.$city")->name("cities.$city");
             }
