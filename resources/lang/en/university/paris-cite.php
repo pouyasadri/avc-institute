@@ -36,7 +36,7 @@ As a student here, you’ll be walking in the footsteps of centuries of medical 
 
     'global_excellence_title' => 'A World-Class Reputation, Built for You',
     'global_excellence_content' => 'When you choose UPC, you’re choosing one of the world’s best. For your 2026 studies, you’ll be part of an institution that is:
-- Shanghai Ranking (ARWU) 2025: #60 in the world.
+- Shanghai Ranking (ARWU) 2026: #60 in the world.
 - Times Higher Education (THE) 2026: #190 globally.
 - QS World University Rankings 2026: #300 globally.
 
@@ -109,7 +109,7 @@ These rankings are a testament to the quality of research and the supportive aca
         ],
         [
             'question' => 'When should I apply for the 2026 intake?',
-            'answer' => 'Applications via "Études en France" usually open in October 2025. We recommend applying early so you have plenty of time for your visa and prep!',
+            'answer' => 'Applications via "Études en France" usually open in October 2026. We recommend applying early so you have plenty of time for your visa and prep!',
         ],
         [
             'question' => 'Where will I be studying?',

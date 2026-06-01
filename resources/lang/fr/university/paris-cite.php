@@ -36,7 +36,7 @@ En tant qu\'étudiant ici, vous marcherez dans les pas de siècles d\'héritage 
 
     'global_excellence_title' => 'Une Réputation Mondiale Interprétée pour Vous',
     'global_excellence_content' => 'Choisir l\'UPC, c\'est opter pour l\'une des meilleures institutions au monde. Pour votre année 2026, vous intégrerez une université reconnue par les classements les plus exigeants :
-- Classement de Shanghai (ARWU) 2025 : 60e mondiale.
+- Classement de Shanghai (ARWU) 2026 : 60e mondiale.
 - Times Higher Education (THE) 2026 : 190e mondiale.
 - QS World University Rankings 2026 : 300e mondiale.
 
@@ -109,7 +109,7 @@ Ces distinctions témoignent de la qualité de notre recherche et de l\'environn
         ],
         [
             'question' => 'Quand postuler pour la rentrée 2026 ?',
-            'answer' => 'Les candidatures sur "Études en France" ouvrent généralement en octobre 2025. Postulez tôt pour préparer sereinement votre visa et votre voyage !',
+            'answer' => 'Les candidatures sur "Études en France" ouvrent généralement en octobre 2026. Postulez tôt pour préparer sereinement votre visa et votre voyage !',
         ],
         [
             'question' => 'Où se situent les campus ?',

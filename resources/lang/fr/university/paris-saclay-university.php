@@ -4,7 +4,7 @@ return [
     // SEO Meta
     'title' => 'Votre Guide pour l\'Université Paris-Saclay | Opportunités 2026',
     'keywords' => 'Université Paris-Saclay, étudier en France 2026, classement Paris-Saclay 2026, vie étudiante France, recherche Paris, admission étudiants internationaux',
-    'description' => 'Prêt à rejoindre un leader mondial de l\'innovation ? Découvrez l\'Université Paris-Saclay. Classée 13e mondiale (Shanghai 2025), elle offre un cadre chaleureux et dynamique pour votre réussite en 2026.',
+    'description' => 'Prêt à rejoindre un leader mondial de l\'innovation ? Découvrez l\'Université Paris-Saclay. Classée 13e mondiale (Shanghai 2026), elle offre un cadre chaleureux et dynamique pour votre réussite en 2026.',
 
     // Page Title Area
     'main_heading' => 'Bienvenue à l\'Université Paris-Saclay',
@@ -27,9 +27,9 @@ return [
 
     'global_leader_title' => 'Une Éducation de Rang Mondial, pensée pour Vous',
     'global_leader_content' => 'En choisissant Paris-Saclay, vous rejoignez l\'élite académique mondiale. Pour 2026, notre université confirme son excellence :
-- Classement de Shanghai 2025 : 13e mondiale (et fièrement n°1 en Europe continentale !).
+- Classement de Shanghai 2026 : 13e mondiale (et fièrement n°1 en Europe continentale !).
 - Classement QS 2026 : 70e mondiale.
-- Times Higher Education 2025 : 64e mondiale.
+- Times Higher Education 2026 : 64e mondiale.
 
 Ces chiffres témoignent de la qualité de l\'accompagnement et des opportunités exceptionnelles qui vous attendent en tant qu\'étudiant ici.',
 

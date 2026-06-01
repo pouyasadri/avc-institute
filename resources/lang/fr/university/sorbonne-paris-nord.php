@@ -40,7 +40,7 @@ return [
     ],
 
     'ranking_title' => 'Une Éducation de Qualité en laquelle vous pouvez avoir Confiance',
-    'ranking_content' => 'Rejoindre l\'USPN, c\'est intégrer une institution mondialement respectée. Nous figurons fièrement dans le top 5 % des meilleures universités mondiales (CWUR 2025). Mais ce qui fait notre fierté, c\'est surtout notre département de Mathématiques — classé dans le top 100 mondial — et nos recherches qui ont un impact réel sur la société.',
+    'ranking_content' => 'Rejoindre l\'USPN, c\'est intégrer une institution mondialement respectée. Nous figurons fièrement dans le top 5 % des meilleures universités mondiales (CWUR 2026). Mais ce qui fait notre fierté, c\'est surtout notre département de Mathématiques — classé dans le top 100 mondial — et nos recherches qui ont un impact réel sur la société.',
 
     'facilities_title' => 'Des Installations pensées pour Vous',
     'facilities_content' => 'Des laboratoires de pointe de l\'Institut Galilée à nos bibliothèques numériques modernes, nous avons créé un environnement où vous pouvez vraiment vous concentrer. Que vous soyez futur chercheur ou étudiant avec une idée de startup, notre incubateur est là pour booster votre innovation.',
@@ -115,7 +115,7 @@ return [
         ],
         [
             'question' => 'Quand postuler pour la rentrée 2026 ?',
-            'answer' => 'La plateforme Études en France ouvre généralement en octobre 2025. Nous conseillons toujours de s\'y prendre tôt pour finir l\'année sans stress !',
+            'answer' => 'La plateforme Études en France ouvre généralement en octobre 2026. Nous conseillons toujours de s\'y prendre tôt pour finir l\'année sans stress !',
         ],
         [
             'question' => 'La vie est-elle chère au nord de Paris ?',

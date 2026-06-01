@@ -106,7 +106,7 @@ Ces réalisations reflètent un engagement envers un enseignement exceptionnel e
         ],
         [
             'question' => 'Quand dois-je postuler pour 2026 ?',
-            'answer' => 'Nous vous recommandons de commencer votre dossier Études en France vers la fin de 2025 pour vous donner amplement le temps pour les tests de langue et les démarches de visa.',
+            'answer' => 'Nous vous recommandons de commencer votre dossier Études en France vers la fin de 2026 pour vous donner amplement le temps pour les tests de langue et les démarches de visa.',
         ],
         [
             'question' => 'À combien s\'élèvent les frais de scolarité ?',

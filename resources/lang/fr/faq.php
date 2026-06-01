@@ -1,8 +1,8 @@
 <?php
 
 return [
-    'title' => 'Questions Fréquemment Posées',
-    'subtitle' => 'Trouvez des réponses aux questions courantes sur nos services et l\'immigration en France.',
+    'title' => 'Questions Fréquemment Posées (Mis à jour en Mai 2026)',
+    'subtitle' => 'Trouvez les dernières réponses de 2026 aux questions courantes sur nos services et l\'immigration en France.',
     'items' => [
         [
             'question' => 'Combien de temps faut-il pour obtenir un visa étudiant pour la France ?',

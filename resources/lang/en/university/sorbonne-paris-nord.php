@@ -40,7 +40,7 @@ return [
     ],
 
     'ranking_title' => 'A Quality Education You Can Trust',
-    'ranking_content' => 'When you join USPN, you’re joining a globally recognized institution. We’re consistently ranked in the top 5% of universities worldwide (CWUR 2025). But what we’re most proud of is our world-class Mathematics department—ranked in the top 100 globally—and our growing reputation for research that actually matters.',
+    'ranking_content' => 'When you join USPN, you’re joining a globally recognized institution. We’re consistently ranked in the top 5% of universities worldwide (CWUR 2026). But what we’re most proud of is our world-class Mathematics department—ranked in the top 100 globally—and our growing reputation for research that actually matters.',
 
     'facilities_title' => 'Facilities Designed for You',
     'facilities_content' => 'From the cutting-edge labs at the Institut Galilée to our modern digital libraries, we’ve built an environment where you can truly focus. Whether you’re a researcher in training or a student with a startup idea, our active incubator system is here to support your innovation.',
@@ -115,7 +115,7 @@ return [
         ],
         [
             'question' => 'When is the best time to apply for 2026?',
-            'answer' => 'October 2025 is usually when the "Études en France" window opens. We always suggest starting early so you can relax during the final steps!',
+            'answer' => 'October 2026 is usually when the "Études en France" window opens. We always suggest starting early so you can relax during the final steps!',
         ],
         [
             'question' => 'Will I be able to afford living in Paris?',

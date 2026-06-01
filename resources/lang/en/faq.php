@@ -1,8 +1,8 @@
 <?php
 
 return [
-    'title' => 'Frequently Asked Questions',
-    'subtitle' => 'Find answers to common questions about our services and immigration to France.',
+    'title' => 'Frequently Asked Questions (Updated May 2026)',
+    'subtitle' => 'Find the latest 2026 answers to common questions about our services and immigration to France.',
     'items' => [
         [
             'question' => 'How long does it take to get a student visa for France?',

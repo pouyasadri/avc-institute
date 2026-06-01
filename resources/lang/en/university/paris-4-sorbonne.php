@@ -106,7 +106,7 @@ These achievements reflect a commitment to outstanding teaching and deep, impact
         ],
         [
             'question' => 'When should I apply for 2026?',
-            'answer' => 'We recommend starting your Études en France application by late 2025 to give yourself plenty of time for language testing and visa arrangements.',
+            'answer' => 'We recommend starting your Études en France application by late 2026 to give yourself plenty of time for language testing and visa arrangements.',
         ],
         [
             'question' => 'What are the tuition fees like?',
