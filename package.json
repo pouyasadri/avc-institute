@@ -8,7 +8,6 @@
     },
     "devDependencies": {
         "@popperjs/core": "^2.11.8",
-        "@rollup/plugin-inject": "^5.0.5",
         "animate.css": "^4.1.1",
         "axios": "^1.16.0",
         "bootstrap": "^5.3.8",
