@@ -55,7 +55,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="{{ url(app()->getLocale() . '#services') }}">
+                                <a href="{{ route('services.index', ['locale' => app()->getLocale()]) }}">
                                     <i class="right-icon bx {{ $chevronsDir }}"></i>
                                     {{ __('layout.footer.links.services') }}
                                 </a>
@@ -73,7 +73,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="{{ route('index', ['locale' => app()->getLocale()]) }}">
+                                <a href="{{ route('index', ['locale' => app()->getLocale()]) }}#about">
                                     <i class="right-icon bx {{ $chevronsDir }}"></i>
                                     {{ __('layout.footer.links.about') }}
                                 </a>
@@ -85,7 +85,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="https://applyvipconseil.com/sitemap.xml">
+                                <a href="{{ route('sitemap') }}">
                                     <i class="right-icon bx {{ $chevronsDir }}"></i>
                                     {{ __('layout.footer.links.sitemap') }}
                                 </a>
@@ -100,36 +100,37 @@
                         <h3>{{ __('layout.footer.services_title') }}</h3>
                         <ul>
                             <li>
-                                <a href="{{ url(app()->getLocale() . '/consult') }}">
+                                <a href="{{ route('services.show', ['locale' => app()->getLocale(), 'slug' => 'residence-permit']) }}">
                                     <i class="right-icon bx {{ $chevronsDir }}"></i>
-                                    {{ __('layout.footer.services.residence') }} </a>
+                                    {{ __('layout.footer.services.residence') }}
+                                </a>
                             </li>
                             <li>
-                                <a href="{{ url(app()->getLocale() . '/consult') }}">
+                                <a href="{{ route('services.show', ['locale' => app()->getLocale(), 'slug' => 'educational-counseling']) }}">
                                     <i class="right-icon bx {{ $chevronsDir }}"></i>
                                     {{ __('layout.footer.services.education') }}
                                 </a>
                             </li>
                             <li>
-                                <a href="{{ url(app()->getLocale() . '/consult') }}">
+                                <a href="{{ route('services.show', ['locale' => app()->getLocale(), 'slug' => 'housing-assistance']) }}">
                                     <i class="right-icon bx {{ $chevronsDir }}"></i>
                                     {{ __('layout.footer.services.accommodation') }}
                                 </a>
                             </li>
                             <li>
-                                <a href="{{ url(app()->getLocale() . '/consult') }}">
+                                <a href="{{ route('services.show', ['locale' => app()->getLocale(), 'slug' => 'certified-translation']) }}">
                                     <i class="right-icon bx {{ $chevronsDir }}"></i>
                                     {{ __('layout.footer.services.translation') }}
                                 </a>
                             </li>
                             <li>
-                                <a href="{{ url(app()->getLocale() . '/consult') }}">
+                                <a href="{{ route('services.show', ['locale' => app()->getLocale(), 'slug' => 'administrative-advocacy']) }}">
                                     <i class="right-icon bx {{ $chevronsDir }}"></i>
                                     {{ __('layout.footer.services.admin_support') }}
                                 </a>
                             </li>
                             <li>
-                                <a href="{{ url(app()->getLocale() . '/consult') }}">
+                                <a href="{{ route('services.show', ['locale' => app()->getLocale(), 'slug' => 'arrival-support']) }}">
                                     <i class="right-icon bx {{ $chevronsDir }}"></i>
                                     {{ __('layout.footer.services.arrival_support') }}
                                 </a>
@@ -176,7 +177,7 @@
                 <div class="col-lg-12">
                     <div class="designed">
                         <p>{{ __('layout.footer.designed_by') }} <a href="https://www.pouyasadri.com"
-                                target="_blank">PouyaSadri</a></p>
+                                target="_blank" rel="noopener noreferrer">PouyaSadri</a></p>
                     </div>
                 </div>
             </div>
