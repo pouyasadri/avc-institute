@@ -68,7 +68,10 @@
                                     @if($blog->category)
                                         <li title="Category">
                                             <i class="bx bx-folder text-primary"></i>
-                                            {{ $blog->category->translations->where('locale', $currentLocale)->first()->name ?? $blog->category->name }}
+                                            <a href="{{ route('blog.categories.index', ['locale' => $currentLocale]) }}"
+                                               class="text-decoration-none text-muted">
+                                                {{ $blog->category->translations->where('locale', $currentLocale)->first()->name ?? $blog->category->name }}
+                                            </a>
                                         </li>
                                     @endif
                                     <li title="Reading Time">
@@ -283,6 +286,7 @@
                                         <i class='bx bx-envelope'></i>
                                     </a>
                                     <a href="https://www.instagram.com/apply_vip_conseil/" target="_blank"
+                                        rel="noopener noreferrer"
                                         class="text-white fs-4 hover-lift" aria-label="Follow us on Instagram">
                                         <i class='bx bxl-instagram'></i>
                                     </a>
