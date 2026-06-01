@@ -44,12 +44,12 @@ export default defineConfig({
         },
     },
     css: {
-        // Vite 8 uses LightningCSS by default. Enable error recovery so that
-        // IE6-era star-property hacks (* zoom, *display) in older vendor CSS
-        // (Owl Carousel, animate.css) are silently stripped rather than crashing
-        // the build. These properties are already ignored by all modern browsers.
-        lightningcss: {
-            errorRecovery: true,
+        preprocessorOptions: {
+            scss: {
+                api: 'modern-compiler',
+                quietDeps: true,
+                silenceDeprecations: ['import', 'global-builtin', 'color-functions', 'if-function'],
+            },
         },
     },
     resolve: {

@@ -25,9 +25,9 @@
 @import 'magnific-popup/dist/magnific-popup.css';
 
 // ─────────────────────────────────────────────────────────────────────────────
-// Odometer — default theme (from npm)
+// Odometer — default theme (local clean version)
 // ─────────────────────────────────────────────────────────────────────────────
-@import 'odometer/themes/odometer-theme-default.css';
+@import 'vendor/odometer-theme-default';
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Slick Carousel CSS is imported in theme-ltr.js / theme-rtl.js to avoid the
