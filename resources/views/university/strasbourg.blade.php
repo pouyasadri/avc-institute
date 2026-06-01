@@ -52,7 +52,7 @@
     <h2 class="h3 fw-bold mb-4">{{ __('university/strasbourg.page_title') }}</h2>
 
     <div class="single-services-imgs mb-4">
-        <img src="{{asset("assets/img/universities/strasbourg/strasbourg_university.webp")}}"
+        <img src="{{asset("assets/img/universities/Strasbourg/strasbourg_university.webp")}}"
             alt="{{ __('university/strasbourg.page_title') }}" class="rounded-4 shadow-sm w-100">
     </div>
 
@@ -84,7 +84,7 @@
     </section>
 
     <div class="rooms-details mb-5">
-        <img src="{{asset("assets/img/universities/strasbourg/strasbourg_university_1.webp")}}"
+        <img src="{{asset("assets/img/universities/Strasbourg/strasbourg_university_1.webp")}}"
             alt="{{ __('university/strasbourg.page_title') }}" class="rounded-4 shadow-sm w-100">
     </div>
 
@@ -126,7 +126,7 @@
     <div class="car-service-list-wrap p-4 rounded-5 bg-primary-subtle border-0 mb-5">
         <div class="row align-items-center">
             <div class="col-lg-4 text-center mb-4 mb-lg-0">
-                <img src="{{asset("assets/img/universities/strasbourg/strasbourg_logo.webp")}}"
+                <img src="{{asset("assets/img/universities/Strasbourg/strasbourg_logo.webp")}}"
                     alt="{{ __('university/strasbourg.page_title') }}" style="max-width: 150px;" class="img-fluid">
             </div>
             <div class="col-lg-8">
@@ -160,7 +160,7 @@
             __('university/strasbourg.description'),
             $currentLocale,
             $universityId,
-            asset('assets/img/universities/strasbourg/strasbourg_logo.webp')
+            asset('assets/img/universities/Strasbourg/strasbourg_logo.webp')
         );
 
         $university = new \App\Services\StructuredData\UniversitySchema(
@@ -168,7 +168,7 @@
             __('university/strasbourg.breadcrumb_current'),
             $officialUrl,
             __('university/strasbourg.schema_description'),
-            asset('assets/img/universities/strasbourg/strasbourg_logo.webp'),
+            asset('assets/img/universities/Strasbourg/strasbourg_logo.webp'),
             [
                 $officialUrl,
                 'https://fa.wikipedia.org/wiki/%D8%AF%D8%A7%D9%86%D8%B4%DA%AF%D8%A7%D9%87_%D8%A7%D8%B3%D8%AA%D8%B1%D8%A7%D8%B3%D8%A8%D9%88%D8%B1%DA%AF',
