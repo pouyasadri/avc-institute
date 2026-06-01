@@ -58,7 +58,7 @@ class SitemapController extends Controller
         $properties = collect(); // Empty collection prevents errors
 
         // Static pages (cities and universities)
-        $cities = ['paris', 'strasbourg', 'nice', 'toulouse', 'lyon'];
+        $cities = ['paris', 'strasbourg', 'nice', 'toulouse', 'lyon', 'grenoble'];
         $universities = [
             'paris-saclay-university',
             'sorbonne-paris-nord',

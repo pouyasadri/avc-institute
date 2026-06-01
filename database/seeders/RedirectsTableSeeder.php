@@ -32,7 +32,7 @@ class RedirectsTableSeeder extends Seeder
         ];
 
         // Dynamic resources (Cities)
-        $cities = ['paris', 'strasbourg', 'nice', 'toulouse', 'lyon'];
+        $cities = ['paris', 'strasbourg', 'nice', 'toulouse', 'lyon', 'grenoble'];
 
         // Dynamic resources (Universities)
         $universities = [

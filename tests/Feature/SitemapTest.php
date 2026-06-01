@@ -40,5 +40,10 @@ class SitemapTest extends TestCase
                 "Lastmod '{$lastmod}' does not match expected Atom date format."
             );
         }
+
+        // Check that Grenoble city pages are included in all three locales
+        $this->assertStringContainsString('/fa/cities/grenoble', $content);
+        $this->assertStringContainsString('/en/cities/grenoble', $content);
+        $this->assertStringContainsString('/fr/cities/grenoble', $content);
     }
 }
