@@ -29,9 +29,9 @@
 
 {{-- Theme-specific main stylesheets --}}
 @if($isRtl)
-    <link rel="stylesheet" href="{{ asset('assets/css/style-rtl.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/rtl.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/style-rtl.css') }}?v={{ file_exists(public_path('assets/css/style-rtl.css')) ? filemtime(public_path('assets/css/style-rtl.css')) : time() }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/rtl.css') }}?v={{ file_exists(public_path('assets/css/rtl.css')) ? filemtime(public_path('assets/css/rtl.css')) : time() }}">
 @else
-    <link rel="stylesheet" href="{{ asset('assets/css/style-ltr.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/style-ltr.css') }}?v={{ file_exists(public_path('assets/css/style-ltr.css')) ? filemtime(public_path('assets/css/style-ltr.css')) : time() }}">
 @endif
-<link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}?v={{ file_exists(public_path('assets/css/responsive.css')) ? filemtime(public_path('assets/css/responsive.css')) : time() }}">
