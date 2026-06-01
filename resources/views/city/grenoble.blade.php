@@ -109,18 +109,8 @@
         <ul class="list-group list-group-flush mb-4">
             <li class="list-group-item bg-transparent border-0 ps-0">
                 <i class="bx bx-right-arrow-alt text-primary me-2"></i>
-                <a href="{{ url($currentLocale . '/universities/grenoble-1') }}"
-                    target="_blank">{{ __('city/grenoble.university_grenoble_1') }}</a>
-            </li>
-            <li class="list-group-item bg-transparent border-0 ps-0">
-                <i class="bx bx-right-arrow-alt text-primary me-2"></i>
-                <a href="{{ url($currentLocale . '/universities/grenoble-2') }}"
-                    target="_blank">{{ __('city/grenoble.university_grenoble_2') }}</a>
-            </li>
-            <li class="list-group-item bg-transparent border-0 ps-0">
-                <i class="bx bx-right-arrow-alt text-primary me-2"></i>
-                <a href="{{ url($currentLocale . '/universities/grenoble-3') }}"
-                    target="_blank">{{ __('city/grenoble.university_grenoble_3') }}</a>
+                <a href="{{ url($currentLocale . '/universities/universite-grenoble-alpes') }}"
+                    target="_blank">{{ __('city/grenoble.university_grenoble_alpes') }}</a>
             </li>
         </ul>
     </section>
