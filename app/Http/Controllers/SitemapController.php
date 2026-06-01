@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Blog;
 use App\Models\Property;
+use Carbon\Carbon;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Cache;
 
@@ -23,9 +24,32 @@ class SitemapController extends Controller
             return Blog::published()->with('translations')->get();
         });
 
-        // Static content last-modified date — use a fixed date; avoid now() which
-        // makes every crawl think content changed and wastes crawl budget.
-        $staticLastmod = '2025-01-01T00:00:00+00:00';
+        // Static content last-modified dates — dynamically determined by checking
+        // the view template and corresponding language files.
+        $getLastmod = function (string $viewPath, array $translationPaths = []): string {
+            $timestamps = [];
+
+            // 1. Check Blade view file
+            $viewFullPath = resource_path('views/'.str_replace('.', '/', $viewPath).'.blade.php');
+            if (file_exists($viewFullPath)) {
+                $timestamps[] = filemtime($viewFullPath);
+            }
+
+            // 2. Check translation files
+            foreach ($translationPaths as $langPath) {
+                $langFullPath = resource_path('lang/'.$langPath);
+                if (file_exists($langFullPath)) {
+                    $timestamps[] = filemtime($langFullPath);
+                }
+            }
+
+            if (! empty($timestamps)) {
+                return Carbon::createFromTimestamp(max($timestamps))->toAtomString();
+            }
+
+            // Fallback baseline date
+            return '2026-06-01T00:00:00+00:00';
+        };
 
         // PROPERTIES FEATURE DISABLED - COMING SOON
         // Original: $properties = Property::published()->with('translations')->get();
@@ -102,7 +126,7 @@ class SitemapController extends Controller
 
             $urls[] = [
                 'loc' => "{$baseUrl}/{$locale}",
-                'lastmod' => $staticLastmod,
+                'lastmod' => $getLastmod('pages.home', ["{$locale}/index.php"]),
                 'changefreq' => config('seo.sitemap.changefreq.homepage', 'daily'),
                 'priority' => $homePriority,
                 'alternates' => $generateAlternates(''),
@@ -184,7 +208,7 @@ class SitemapController extends Controller
             // Cities index
             $urls[] = [
                 'loc' => "{$baseUrl}/{$locale}/cities",
-                'lastmod' => $staticLastmod,
+                'lastmod' => $getLastmod('pages.cities.index', ["{$locale}/cities.php"]),
                 'changefreq' => 'monthly',
                 'priority' => 0.8,
                 'alternates' => $generateAlternates('/cities'),
@@ -194,7 +218,7 @@ class SitemapController extends Controller
             foreach ($cities as $city) {
                 $urls[] = [
                     'loc' => "{$baseUrl}/{$locale}/cities/{$city}",
-                    'lastmod' => $staticLastmod,
+                    'lastmod' => $getLastmod("city.{$city}", ["{$locale}/city/{$city}.php"]),
                     'changefreq' => config('seo.sitemap.changefreq.city', 'monthly'),
                     'priority' => config('seo.sitemap.priorities.city', 0.8),
                     'alternates' => $generateAlternates("/cities/{$city}"),
@@ -207,7 +231,7 @@ class SitemapController extends Controller
             // Universities index
             $urls[] = [
                 'loc' => "{$baseUrl}/{$locale}/universities",
-                'lastmod' => $staticLastmod,
+                'lastmod' => $getLastmod('pages.universities.index', ["{$locale}/universities.php"]),
                 'changefreq' => 'monthly',
                 'priority' => 0.8,
                 'alternates' => $generateAlternates('/universities'),
@@ -217,7 +241,7 @@ class SitemapController extends Controller
             foreach ($universities as $university) {
                 $urls[] = [
                     'loc' => "{$baseUrl}/{$locale}/universities/{$university}",
-                    'lastmod' => $staticLastmod,
+                    'lastmod' => $getLastmod("university.{$university}", ["{$locale}/university/{$university}.php"]),
                     'changefreq' => config('seo.sitemap.changefreq.university', 'monthly'),
                     'priority' => config('seo.sitemap.priorities.university', 0.75),
                     'alternates' => $generateAlternates("/universities/{$university}"),
@@ -230,7 +254,7 @@ class SitemapController extends Controller
             // Services index
             $urls[] = [
                 'loc' => "{$baseUrl}/{$locale}/services",
-                'lastmod' => $staticLastmod,
+                'lastmod' => $getLastmod('pages.services.index', ["{$locale}/services.php"]),
                 'changefreq' => 'monthly',
                 'priority' => 0.9,
                 'alternates' => $generateAlternates('/services'),
@@ -240,7 +264,7 @@ class SitemapController extends Controller
             foreach ($services as $service) {
                 $urls[] = [
                     'loc' => "{$baseUrl}/{$locale}/services/{$service}",
-                    'lastmod' => $staticLastmod,
+                    'lastmod' => $getLastmod('pages.services.show', ["{$locale}/services.php"]),
                     'changefreq' => 'monthly',
                     'priority' => 0.85,
                     'alternates' => $generateAlternates("/services/{$service}"),
@@ -252,9 +276,10 @@ class SitemapController extends Controller
         $staticPages = ['consult', 'contactUs'];
         foreach ($locales as $locale) {
             foreach ($staticPages as $page) {
+                $viewName = $page === 'contactUs' ? 'pages.contact' : "pages.{$page}";
                 $urls[] = [
                     'loc' => "{$baseUrl}/{$locale}/{$page}",
-                    'lastmod' => $staticLastmod,
+                    'lastmod' => $getLastmod($viewName, ["{$locale}/".($page === 'contactUs' ? 'contact' : $page).'.php']),
                     'changefreq' => config('seo.sitemap.changefreq.static_page', 'monthly'),
                     'priority' => config('seo.sitemap.priorities.static_page', 0.6),
                     'alternates' => $generateAlternates("/{$page}"),
