@@ -29,7 +29,8 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ url(app()->getLocale() . '#services') }}">
+                    <a href="{{ route('services.index', ['locale' => app()->getLocale()]) }}"
+                        class="{{ request()->routeIs('services.*') ? 'active' : '' }}">
                         {{ __('layout.nav.services') }}
                     </a>
                 </li>
@@ -68,8 +69,8 @@
 
         {{-- Social Links --}}
         <div class="mobile-menu-social">
-            <a href="https://www.instagram.com/apply_vip_conseil/" aria-label="Instagram"><i
-                    class='bx bxl-instagram'></i></a>
+            <a href="https://www.instagram.com/apply_vip_conseil/" aria-label="Instagram"
+                target="_blank" rel="noopener noreferrer"><i class='bx bxl-instagram'></i></a>
             <a href="#" aria-label="Facebook"><i class='bx bxl-facebook'></i></a>
             <a href="#" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
         </div>
