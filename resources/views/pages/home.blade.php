@@ -85,7 +85,7 @@
         <!-- End Ecorik Slider Area -->
 
         <!-- Start Explore Area -->
-        <section class="explore-area pt-100 pb-100">
+        <section id="about" class="explore-area pt-100 pb-100">
             <div class="container">
                 <div class="section-title">
                     <span>{{ __('index.about.subtitle') }}</span>
@@ -178,10 +178,10 @@
                                         <p>{{ $city['description'] }}</p>
 
                                         @php
-                                            $cityUrls = ['paris', 'strasbourg', 'lyon', 'nice', 'toulouse'];
-                                            $citySlug = $cityUrls[$index] ?? 'paris';
+                                            $cityRouteNames = ['paris', 'strasbourg', 'lyon', 'nice', 'toulouse'];
+                                            $citySlug = $cityRouteNames[$index] ?? 'paris';
                                         @endphp
-                                        <a href="{{ url(app()->getLocale() . '/cities/' . $citySlug) }}" class="default-btn">
+                                        <a href="{{ route('cities.' . $citySlug, ['locale' => app()->getLocale()]) }}" class="default-btn">
                                             {{ $city['button'] }}
                                             <i class="{{ $arrowIcon }}"></i>
                                         </a>
