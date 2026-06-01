@@ -46,6 +46,13 @@
             'desc_key' => 'toulouse_description',
             'alt_key' => 'toulouse_alt',
         ],
+        [
+            'slug' => 'grenoble',
+            'img' => 'assets/img/cities/Grenoble/grenoble.webp',
+            'title_key' => 'grenoble_title',
+            'desc_key' => 'grenoble_description',
+            'alt_key' => 'grenoble_alt',
+        ],
     ];
 @endphp
 
