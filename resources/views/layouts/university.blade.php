@@ -3,6 +3,34 @@
 @php
     $currentLocale = app()->getLocale();
     $isRtl = in_array($currentLocale, ['fa'], true);
+
+    // Map each university slug to its city page slug (only cities that have a page)
+    $universityCityMap = [
+        'paris-saclay-university'   => 'paris',
+        'sorbonne-paris-nord'       => 'paris',
+        'paris-cite'                => 'paris',
+        'paris-4-sorbonne'          => 'paris',
+        'paris-3'                   => 'paris',
+        'paris-2'                   => 'paris',
+        'pantheon-sorbonne'         => 'paris',
+        'universite-psl'            => 'paris',
+        'ip-paris'                  => 'paris',
+        'sciences-po'               => 'paris',
+        'lyon-1'                    => 'lyon',
+        'lyon-2'                    => 'lyon',
+        'lyon-3'                    => 'lyon',
+        'cote-d-azure'              => 'nice',
+        'toulouse'                  => 'toulouse',
+        'strasbourg'                => 'strasbourg',
+        // Universities in cities with no dedicated page return null
+        'universite-grenoble-alpes' => null,
+        'aix-marseille-university'  => null,
+        'universite-de-bordeaux'    => null,
+        'universite-de-lille'       => null,
+        'universite-de-montpellier' => null,
+    ];
+    $universitySlug = $universityName ?? '';
+    $linkedCity = $universityCityMap[$universitySlug] ?? null;
 @endphp
 
 @section('content')
@@ -57,6 +85,25 @@
                                 </li>
                             </ul>
                         </div>
+
+                        {{-- Related Universities --}}
+                        <x-university.related :currentSlug="$universitySlug" />
+
+                        {{-- City Guide Link (auto-mapped from university slug) --}}
+                        @if($linkedCity)
+                            <div class="sidebar-widget p-4 rounded-5 shadow-sm bg-white mb-4 border-0">
+                                <h4 class="widget-title h5 fw-bold mb-3 border-bottom pb-2">
+                                    {{ __('universities.city_guide') }}
+                                </h4>
+                                <a href="{{ route('cities.' . $linkedCity, ['locale' => $currentLocale]) }}"
+                                   class="d-flex align-items-center text-decoration-none text-dark">
+                                    <i class='bx bx-map-alt me-2 fs-5 text-primary'></i>
+                                    <span class="small fw-medium">
+                                        {{ __('cities.' . $linkedCity . '_title') }}
+                                    </span>
+                                </a>
+                            </div>
+                        @endif
 
                         <!-- Useful Links -->
                         <div class="sidebar-widgets">
