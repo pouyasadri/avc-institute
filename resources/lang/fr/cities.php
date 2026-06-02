@@ -49,6 +49,10 @@ return [
     'grenoble_title' => 'Grenoble : Le Pôle Scientifique et Alpin',
     'grenoble_description' => 'Un écosystème scientifique de classe mondiale niché au cœur des Alpes. La destination idéale pour la recherche STEM, l\'innovation et les passionnés de montagne.',
 
+    'bordeaux_alt' => 'Bordeaux 2026 : Capitale Mondiale de l\'Art de Vivre',
+    'bordeaux_title' => 'Bordeaux : Capitale Mondiale de l\'Art de Vivre',
+    'bordeaux_description' => 'Découvrez l\'élégance française et la splendeur architecturale. Un pôle dynamique pour l\'aéronautique, les lasers et l\'art de vivre d\'exception.',
+
     'read_more' => 'Explorer la Ville',
 
     // Schema.org

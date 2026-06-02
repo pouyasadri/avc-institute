@@ -7,10 +7,12 @@ return [
     'map_lyon' => 'Lyon',
     'map_nice' => 'Nice',
     'map_toulouse' => 'Toulouse',
+    'map_grenoble' => 'Grenoble',
+    'map_bordeaux' => 'Bordeaux',
 
     // SEO Meta Tags
     'title' => 'Discover France 2026: The Best Cities to Live, Study & Invest | A.V.C',
-    'keywords' => 'French cities, Paris 2026, Lyon, Nice, Toulouse, Strasbourg, study in France, live in France, business in France, international students France, French lifestyle',
+    'keywords' => 'French cities, Paris 2026, Lyon, Nice, Toulouse, Strasbourg, Grenoble, Bordeaux, study in France, live in France, business in France, international students France, French lifestyle',
     'description' => 'Explore the most vibrant French cities in 2026. From the historic streets of Paris to the tech hubs of the Silicon Coast, find your perfect French destination for education and career growth.',
 
     // Page Title & Breadcrumb
@@ -47,6 +49,10 @@ return [
     'grenoble_alt' => 'Grenoble 2026: The Research & Alpine Hub',
     'grenoble_title' => 'Grenoble: The Science & Alpine Hub',
     'grenoble_description' => 'A world-class scientific ecosystem nestled in the majestic Alps. The perfect destination for STEM research, innovation, and mountain enthusiasts.',
+
+    'bordeaux_alt' => 'Bordeaux 2026: The Global Capital of Art de Vivre',
+    'bordeaux_title' => 'Bordeaux: The World Capital of Art de Vivre',
+    'bordeaux_description' => 'Experience the pinnacle of French elegance and architectural beauty. A thriving hub for aerospace, laser technology, and high-end lifestyle.',
 
     'read_more' => 'Explore City',
 

@@ -53,6 +53,13 @@
             'desc_key' => 'grenoble_description',
             'alt_key' => 'grenoble_alt',
         ],
+        [
+            'slug' => 'bordeaux',
+            'img' => 'assets/img/cities/bordeaux/bordeaux.webp',
+            'title_key' => 'bordeaux_title',
+            'desc_key' => 'bordeaux_description',
+            'alt_key' => 'bordeaux_alt',
+        ],
     ];
 @endphp
 
