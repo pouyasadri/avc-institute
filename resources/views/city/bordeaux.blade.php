@@ -44,7 +44,7 @@
             __('city/bordeaux.description'),
             $currentLocale,
             $cityId,
-            asset('assets/img/cities/Bordeaux/bordeaux.webp')
+            asset('assets/img/cities/bordeaux/bordeaux.webp')
         );
 
         $city = new \App\Services\StructuredData\CityGuideSchema(
@@ -72,7 +72,7 @@
     <section class="mb-5">
         <h2 class="h3 fw-bold mb-4">{{ __('city/bordeaux.intro_heading') }}</h2>
         <div class="single-services-imgs mb-4">
-            <img src="{{ asset('assets/img/cities/Bordeaux/bordeaux1.webp') }}" alt="{{ __('city/bordeaux.breadcrumb_bordeaux') }}"
+            <img src="{{ asset('assets/img/cities/bordeaux/bordeaux1.webp') }}" alt="{{ __('city/bordeaux.breadcrumb_bordeaux') }}"
                 class="img-fluid rounded-4 shadow-sm w-100">
         </div>
         <p class="lead">{!! __('city/bordeaux.intro_paragraph') !!}</p>
@@ -116,7 +116,7 @@
     </section>
 
     <div class="mb-5">
-        <img src="{{ asset('assets/img/cities/Bordeaux/bordeaux.webp') }}" alt="{{ __('city/bordeaux.breadcrumb_bordeaux') }}"
+        <img src="{{ asset('assets/img/cities/bordeaux/bordeaux.webp') }}" alt="{{ __('city/bordeaux.breadcrumb_bordeaux') }}"
             class="img-fluid rounded-4 shadow-sm w-100">
     </div>
 
@@ -162,7 +162,7 @@
     </section>
 
     <div class="mb-5">
-        <img src="{{ asset('assets/img/cities/Bordeaux/bordeaux2.webp') }}" alt="{{ __('city/bordeaux.breadcrumb_bordeaux') }}"
+        <img src="{{ asset('assets/img/cities/bordeaux/bordeaux2.webp') }}" alt="{{ __('city/bordeaux.breadcrumb_bordeaux') }}"
             class="img-fluid rounded-4 shadow-sm w-100">
     </div>
 
