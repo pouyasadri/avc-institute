@@ -109,8 +109,8 @@
         <ul class="list-group list-group-flush mb-4">
             <li class="list-group-item bg-transparent border-0 ps-0">
                 <i class="bx bx-right-arrow-alt text-primary me-2"></i>
-                <a href="{{ url($currentLocale . '/universities/universite-bordeaux-alpes') }}"
-                    target="_blank">{{ __('city/bordeaux.university_bordeaux_alpes') }}</a>
+                <a href="{{ url($currentLocale . '/universities/universite-de-bordeaux') }}"
+                    target="_blank">{{ __('city/bordeaux.university_bordeaux') }}</a>
             </li>
         </ul>
     </section>
