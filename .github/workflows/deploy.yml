@@ -114,7 +114,14 @@ jobs:
             # seeders are configured to only run specific seeders in production
             php artisan db:seed --force
 
-            # Optimization commands
+            # Clear stale caches before re-optimizing
+            # This ensures sitemap cache (sitemap:blogs) and config cache
+            # are always regenerated fresh after each deploy
+            php artisan cache:clear
+            php artisan config:clear
+            php artisan view:clear
+
+            # Optimization commands (re-cache config, routes, views)
             php artisan optimize
             php artisan view:cache
 
