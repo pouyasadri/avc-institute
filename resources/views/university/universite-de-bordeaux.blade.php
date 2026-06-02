@@ -38,14 +38,6 @@
                     <span>{{ __('university/universite-de-bordeaux.wikipedia_link') }}</span>
                 </a>
             </li>
-            <li>
-                <a href="{{ url(app()->getLocale() . '/cities/bordeaux') }}" target="_blank" rel="noopener noreferrer"
-                    class="d-flex align-items-center text-decoration-none transition-all hover-translate-x">
-                    <i class='bx bx-map-alt me-2 fs-5 text-primary'></i>
-                    <span>{{ __('university/universite-de-bordeaux.bordeaux_city_guide') }}</span>
-                </a>
-            </li>
-        </ul>
     </div>
 @endsection
 
