@@ -22,10 +22,10 @@
         'cote-d-azure'              => 'nice',
         'toulouse'                  => 'toulouse',
         'strasbourg'                => 'strasbourg',
+        'universite-grenoble-alpes' => 'grenoble',
+        'universite-de-bordeaux'    => 'bordeaux',
         // Universities in cities with no dedicated page return null
-        'universite-grenoble-alpes' => null,
         'aix-marseille-university'  => null,
-        'universite-de-bordeaux'    => null,
         'universite-de-lille'       => null,
         'universite-de-montpellier' => null,
     ];
