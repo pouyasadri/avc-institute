@@ -138,12 +138,20 @@ Default Style
 }
 
 .btn-primary {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
     --bs-btn-bg: var(--bs-primary);
     --bs-btn-border-color: var(--bs-primary);
     --bs-btn-hover-bg: #0b2d63;
     --bs-btn-hover-border-color: #0b2d63;
     --bs-btn-active-bg: #0b2d63;
     --bs-btn-active-border-color: #0b2d63;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active {
+    background-color: #0b2d63 !important;
+    border-color: #0b2d63 !important;
+    color: #ffffff !important;
 }
 
 body {
