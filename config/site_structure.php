@@ -1,0 +1,49 @@
+<?php
+
+return [
+    'cities' => [
+        'paris',
+        'strasbourg',
+        'nice',
+        'toulouse',
+        'lyon',
+        'grenoble',
+        'bordeaux',
+    ],
+
+    'universities' => [
+        'paris-saclay-university',
+        'sorbonne-paris-nord',
+        'paris-cite',
+        'paris-4-sorbonne',
+        'paris-3',
+        'paris-2',
+        'lyon-3',
+        'lyon-2',
+        'lyon-1',
+        'pantheon-sorbonne',
+        'cote-d-azure',
+        'toulouse',
+        'strasbourg',
+        'universite-psl',
+        'ip-paris',
+        'universite-grenoble-alpes',
+        'aix-marseille-university',
+        'universite-de-bordeaux',
+        'universite-de-lille',
+        'sciences-po',
+        'universite-de-montpellier',
+    ],
+
+    'service_slugs' => [
+        'residence-permit',
+        'resume-lettre-motivation',
+        'arrival-support',
+        'certified-translation',
+        'educational-counseling',
+        'housing-assistance',
+        'university-application',
+        'administrative-advocacy',
+        'legal-support',
+    ],
+];

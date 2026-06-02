@@ -1,6 +1,14 @@
 <?php
 
 return [
+    'related_resources' => 'Related Resources',
+    'related_cities' => 'Popular Cities',
+    'related_universities' => 'Top Universities',
+    'more_learning' => 'Learn More',
+    'related_blog' => 'Read immigration blog articles',
+    'related_universities_index' => 'Explore university guides',
+    'related_cities_index' => 'Explore city guides',
+
     'residence-permit' => [
         'title' => 'Residence Permit & Immigration Assistance',
         'description' => 'Expert guidance for obtaining and renewing your French Titre de Séjour. We navigate the complexities of the French administration so you can settle in with peace of mind.',

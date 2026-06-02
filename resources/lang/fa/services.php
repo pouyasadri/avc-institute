@@ -2,6 +2,14 @@
 
 return [
     'other_services' => 'سایر خدمات مهاجرتی',
+    'related_resources' => 'منابع مرتبط',
+    'related_cities' => 'شهرهای محبوب',
+    'related_universities' => 'دانشگاه های برتر',
+    'more_learning' => 'مطالعه بیشتر',
+    'related_blog' => 'مطالب وبلاگ مهاجرت را بخوانید',
+    'related_universities_index' => 'راهنمای دانشگاه ها را ببینید',
+    'related_cities_index' => 'راهنمای شهرها را ببینید',
+
     'residence-permit' => [
         'title' => 'خدمات اقامت و امور مهاجرتی',
         'description' => 'راهنمایی تخصصی برای اخذ و تمدید کارت اقامت فرانسه (Titre de Séjour). ما پیچیدگی‌های اداری را مدیریت می‌کنیم تا شما با آرامش خاطر مستقر شوید.',

@@ -51,7 +51,7 @@ Route::prefix('{locale}')
         // Cities Routes
         Route::prefix('cities')->group(function () {
             Route::view('/', 'pages.cities.index')->name('cities.index');
-            $cities = ['paris', 'strasbourg', 'nice', 'toulouse', 'lyon', 'grenoble', 'bordeaux'];
+            $cities = config('site_structure.cities', []);
             foreach ($cities as $city) {
                 Route::view("/$city", "city.$city")->name("cities.$city");
             }
@@ -60,29 +60,7 @@ Route::prefix('{locale}')
         // Universities Routes
         Route::prefix('universities')->group(function () {
             Route::view('/', 'pages.universities.index')->name('universities.index');
-            $universities = [
-                'paris-saclay-university',
-                'sorbonne-paris-nord',
-                'paris-cite',
-                'paris-4-sorbonne',
-                'paris-3',
-                'paris-2',
-                'lyon-3',
-                'lyon-2',
-                'lyon-1',
-                'pantheon-sorbonne',
-                'cote-d-azure',
-                'toulouse',
-                'strasbourg',
-                'universite-psl',
-                'ip-paris',
-                'universite-grenoble-alpes',
-                'aix-marseille-university',
-                'universite-de-bordeaux',
-                'universite-de-lille',
-                'sciences-po',
-                'universite-de-montpellier',
-            ];
+            $universities = config('site_structure.universities', []);
             foreach ($universities as $university) {
                 Route::view("/$university", "university.$university")->name("universities.$university");
             }

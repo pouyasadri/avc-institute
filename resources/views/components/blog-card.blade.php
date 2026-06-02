@@ -1,8 +1,9 @@
 @props(['blog'])
 
 @php
-    $translation = $blog->translations->first();
-    $categoryTranslation = $blog->category?->translations->first();
+    $currentLocale = app()->getLocale();
+    $translation = $blog->translations->firstWhere('locale', $currentLocale) ?? $blog->translations->first();
+    $categoryTranslation = $blog->category?->translations->firstWhere('locale', $currentLocale) ?? $blog->category?->translations->first();
     $imagePath = $blog->main_image;
     if ($imagePath && !str_starts_with($imagePath, 'images/blogs/')) {
         $imagePath = 'images/blogs/' . $imagePath;

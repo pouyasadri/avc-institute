@@ -109,18 +109,15 @@
         <ul class="list-group list-group-flush mb-4">
             <li class="list-group-item bg-transparent border-0 ps-0">
                 <i class="bx bx-right-arrow-alt text-primary me-2"></i>
-                <a href="{{ url($currentLocale . '/universities/lyon-1') }}"
-                    target="_blank">{{ __('city/lyon.university_lyon_1') }}</a>
+                <a href="{{ url($currentLocale . '/universities/lyon-1') }}">{{ __('city/lyon.university_lyon_1') }}</a>
             </li>
             <li class="list-group-item bg-transparent border-0 ps-0">
                 <i class="bx bx-right-arrow-alt text-primary me-2"></i>
-                <a href="{{ url($currentLocale . '/universities/lyon-2') }}"
-                    target="_blank">{{ __('city/lyon.university_lyon_2') }}</a>
+                <a href="{{ url($currentLocale . '/universities/lyon-2') }}">{{ __('city/lyon.university_lyon_2') }}</a>
             </li>
             <li class="list-group-item bg-transparent border-0 ps-0">
                 <i class="bx bx-right-arrow-alt text-primary me-2"></i>
-                <a href="{{ url($currentLocale . '/universities/lyon-3') }}"
-                    target="_blank">{{ __('city/lyon.university_lyon_3') }}</a>
+                <a href="{{ url($currentLocale . '/universities/lyon-3') }}">{{ __('city/lyon.university_lyon_3') }}</a>
             </li>
         </ul>
     </section>

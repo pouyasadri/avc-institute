@@ -13,9 +13,25 @@
             <div class="lang-dropdown-menu">
                 @foreach(config('seo.locales') as $localeCode => $localeData)
                     @php
-                        $segments = request()->segments();
-                        $currentPath = count($segments) > 1 ? implode('/', array_slice($segments, 1)) : '';
-                        $newUrl = url($localeCode . ($currentPath ? '/' . $currentPath : ''));
+                        $newUrl = url($localeCode);
+                        $currentRoute = request()->route();
+
+                        if ($currentRoute && $currentRoute->getName()) {
+                            try {
+                                $routeName = $currentRoute->getName();
+                                $params = $currentRoute->parameters();
+                                $paramNames = method_exists($currentRoute, 'parameterNames') ? $currentRoute->parameterNames() : [];
+                                if (! empty($paramNames)) {
+                                    $params = array_intersect_key($params, array_flip($paramNames));
+                                }
+                                $params['locale'] = $localeCode;
+                                $newUrl = route($routeName, $params);
+                            } catch (\Throwable $e) {
+                                $segments = request()->segments();
+                                $currentPath = count($segments) > 1 ? implode('/', array_slice($segments, 1)) : '';
+                                $newUrl = url($localeCode . ($currentPath ? '/' . $currentPath : ''));
+                            }
+                        }
                     @endphp
                     <a href="{{ $newUrl }}" class="{{ app()->getLocale() === $localeCode ? 'active' : '' }}">
                         {{ $localeData['name'] }}
@@ -31,9 +47,25 @@
         <div class="language-buttons">
             @foreach(config('seo.locales') as $localeCode => $localeData)
                 @php
-                    $segments = request()->segments();
-                    $currentPath = count($segments) > 1 ? implode('/', array_slice($segments, 1)) : '';
-                    $newUrl = url($localeCode . ($currentPath ? '/' . $currentPath : ''));
+                    $newUrl = url($localeCode);
+                    $currentRoute = request()->route();
+
+                    if ($currentRoute && $currentRoute->getName()) {
+                        try {
+                            $routeName = $currentRoute->getName();
+                            $params = $currentRoute->parameters();
+                            $paramNames = method_exists($currentRoute, 'parameterNames') ? $currentRoute->parameterNames() : [];
+                            if (! empty($paramNames)) {
+                                $params = array_intersect_key($params, array_flip($paramNames));
+                            }
+                            $params['locale'] = $localeCode;
+                            $newUrl = route($routeName, $params);
+                        } catch (\Throwable $e) {
+                            $segments = request()->segments();
+                            $currentPath = count($segments) > 1 ? implode('/', array_slice($segments, 1)) : '';
+                            $newUrl = url($localeCode . ($currentPath ? '/' . $currentPath : ''));
+                        }
+                    }
                 @endphp
                 <a href="{{ $newUrl }}" class="lang-btn {{ app()->getLocale() === $localeCode ? 'active' : '' }}">
                     {{ $localeData['name'] }}

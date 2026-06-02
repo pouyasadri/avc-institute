@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Blog;
-use App\Models\Property;
 use Carbon\Carbon;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Cache;
@@ -51,48 +50,10 @@ class SitemapController extends Controller
             return '2026-06-01T00:00:00+00:00';
         };
 
-        // PROPERTIES FEATURE DISABLED - COMING SOON
-        // Original: $properties = Property::published()->with('translations')->get();
-        // To re-enable: Uncomment the line above and uncomment the URL generation below
-        // See PROPERTIES_DISABLED.md for full restoration guide
-        $properties = collect(); // Empty collection prevents errors
-
-        // Static pages (cities and universities)
-        $cities = ['paris', 'strasbourg', 'nice', 'toulouse', 'lyon', 'grenoble'];
-        $universities = [
-            'paris-saclay-university',
-            'sorbonne-paris-nord',
-            'paris-cite',
-            'paris-4-sorbonne',
-            'paris-3',
-            'paris-2',
-            'lyon-3',
-            'lyon-2',
-            'lyon-1',
-            'pantheon-sorbonne',
-            'cote-d-azure',
-            'toulouse',
-            'strasbourg',
-            'universite-psl',
-            'ip-paris',
-            'universite-grenoble-alpes',
-            'aix-marseille-university',
-            'universite-de-bordeaux',
-            'universite-de-lille',
-            'sciences-po',
-            'universite-de-montpellier',
-        ];
-        $services = [
-            'residence-permit',
-            'resume-lettre-motivation',
-            'arrival-support',
-            'certified-translation',
-            'educational-counseling',
-            'housing-assistance',
-            'university-application',
-            'administrative-advocacy',
-            'legal-support',
-        ];
+        // Static content source of truth
+        $cities = config('site_structure.cities', []);
+        $universities = config('site_structure.universities', []);
+        $services = config('site_structure.service_slugs', []);
 
         // Build URLs with hreflang alternates
         $urls = [];

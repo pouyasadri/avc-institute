@@ -1,6 +1,14 @@
 <?php
 
 return [
+    'related_resources' => 'Ressources associees',
+    'related_cities' => 'Villes populaires',
+    'related_universities' => 'Universites de reference',
+    'more_learning' => 'Approfondir',
+    'related_blog' => 'Lire les articles du blog immigration',
+    'related_universities_index' => 'Explorer les guides universites',
+    'related_cities_index' => 'Explorer les guides villes',
+
     'residence-permit' => [
         'title' => 'Assistance Titre de Séjour & Immigration',
         'description' => 'Accompagnement expert pour l\'obtention et le renouvellement de votre Titre de Séjour français. Nous gérons la complexité administrative pour votre tranquillité d\'esprit.',

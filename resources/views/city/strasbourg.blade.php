@@ -73,8 +73,7 @@
         <ul class="list-group list-group-flush mb-4">
             <li class="list-group-item bg-transparent border-0 ps-0">
                 <i class="bx bx-right-arrow-alt text-primary me-2"></i>
-                <a href="{{ url($currentLocale . '/universities/strasbourg') }}"
-                    target="_blank">{{ __('city/strasbourg.university_strasbourg') }}</a>
+                <a href="{{ url($currentLocale . '/universities/strasbourg') }}">{{ __('city/strasbourg.university_strasbourg') }}</a>
             </li>
             <li class="list-group-item bg-transparent border-0 ps-0">
                 <i class="bx bx-right-arrow-alt text-primary me-2"></i>

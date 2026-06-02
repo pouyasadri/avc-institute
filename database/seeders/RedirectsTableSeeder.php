@@ -32,24 +32,10 @@ class RedirectsTableSeeder extends Seeder
         ];
 
         // Dynamic resources (Cities)
-        $cities = ['paris', 'strasbourg', 'nice', 'toulouse', 'lyon', 'grenoble'];
+        $cities = config('site_structure.cities', []);
 
         // Dynamic resources (Universities)
-        $universities = [
-            'paris-saclay-university',
-            'sorbonne-paris-nord',
-            'paris-cite',
-            'paris-4-sorbonne',
-            'paris-3',
-            'paris-2',
-            'lyon-3',
-            'lyon-2',
-            'lyon-1',
-            'pantheon-sorbonne',
-            'cote-d-azure',
-            'toulouse',
-            'strasbourg',
-        ];
+        $universities = config('site_structure.universities', []);
 
         foreach ($domains as $oldDomain => $newLocale) {
             // 1. Static Paths

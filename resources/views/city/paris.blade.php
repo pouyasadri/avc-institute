@@ -83,8 +83,7 @@
             ] as $slug => $key)
                 <li class="list-group-item bg-transparent border-0 ps-0">
                     <i class="bx bx-right-arrow-alt text-primary me-2"></i>
-                    <a href="{{ url($currentLocale . '/universities/' . $slug) }}"
-                        target="_blank">{{ __('city/paris.' . $key) }}</a>
+                    <a href="{{ url($currentLocale . '/universities/' . $slug) }}">{{ __('city/paris.' . $key) }}</a>
                 </li>
             @endforeach
         </ul>

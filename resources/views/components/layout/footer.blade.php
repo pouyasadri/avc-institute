@@ -98,43 +98,20 @@
                 <div class="col-lg-3 col-md-6">
                     <div class="single-widget">
                         <h3>{{ __('layout.footer.services_title') }}</h3>
+                        @php
+                            $footerServices = collect(__('index.services.items'))
+                                ->filter(fn ($service) => ! empty($service['slug']) && ! empty($service['title']))
+                                ->take(6);
+                        @endphp
                         <ul>
-                            <li>
-                                <a href="{{ route('services.show', ['locale' => app()->getLocale(), 'slug' => 'residence-permit']) }}">
-                                    <i class="right-icon bx {{ $chevronsDir }}"></i>
-                                    {{ __('layout.footer.services.residence') }}
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{ route('services.show', ['locale' => app()->getLocale(), 'slug' => 'educational-counseling']) }}">
-                                    <i class="right-icon bx {{ $chevronsDir }}"></i>
-                                    {{ __('layout.footer.services.education') }}
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{ route('services.show', ['locale' => app()->getLocale(), 'slug' => 'housing-assistance']) }}">
-                                    <i class="right-icon bx {{ $chevronsDir }}"></i>
-                                    {{ __('layout.footer.services.accommodation') }}
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{ route('services.show', ['locale' => app()->getLocale(), 'slug' => 'certified-translation']) }}">
-                                    <i class="right-icon bx {{ $chevronsDir }}"></i>
-                                    {{ __('layout.footer.services.translation') }}
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{ route('services.show', ['locale' => app()->getLocale(), 'slug' => 'administrative-advocacy']) }}">
-                                    <i class="right-icon bx {{ $chevronsDir }}"></i>
-                                    {{ __('layout.footer.services.admin_support') }}
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{ route('services.show', ['locale' => app()->getLocale(), 'slug' => 'arrival-support']) }}">
-                                    <i class="right-icon bx {{ $chevronsDir }}"></i>
-                                    {{ __('layout.footer.services.arrival_support') }}
-                                </a>
-                            </li>
+                            @foreach($footerServices as $service)
+                                <li>
+                                    <a href="{{ route('services.show', ['locale' => app()->getLocale(), 'slug' => $service['slug']]) }}">
+                                        <i class="right-icon bx {{ $chevronsDir }}"></i>
+                                        {{ $service['title'] }}
+                                    </a>
+                                </li>
+                            @endforeach
                         </ul>
                     </div>
                 </div>

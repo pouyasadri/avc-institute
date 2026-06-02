@@ -37,7 +37,7 @@
                 </a>
             </li>
             <li>
-                <a href="{{ url(app()->getLocale() . '/cities/paris') }}" target="_blank" rel="noopener noreferrer"
+                <a href="{{ url(app()->getLocale() . '/cities/paris') }}"
                     class="d-flex align-items-center text-decoration-none">
                     <i class='bx bx-map-alt me-2 fs-5 text-primary'></i>
                     <span>{{ __('university/sorbonne-paris-nord.paris_city_guide') }}</span>
