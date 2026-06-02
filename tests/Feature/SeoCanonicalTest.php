@@ -97,4 +97,13 @@ class SeoCanonicalTest extends TestCase
         // Ensure the dirty parameters are NOT in the canonical
         $response->assertDontSee('<link rel="canonical" href="'.url($dirtyUrl).'" />', false);
     }
+
+    /**
+     * Test Bordeaux city page load.
+     */
+    public function test_bordeaux_city_page()
+    {
+        $response = $this->get('/fa/cities/bordeaux');
+        $response->assertStatus(200);
+    }
 }
