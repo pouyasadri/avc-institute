@@ -26,18 +26,20 @@
         <ul class="list-unstyled mb-0">
             <li class="mb-2">
                 <a href="https://www.u-bordeaux.fr/" target="_blank" rel="noopener noreferrer"
-                    class="d-flex align-items-center text-decoration-none transition-all hover-translate-x">
+                   class="d-flex align-items-center text-decoration-none transition-all hover-translate-x">
                     <i class='bx bx-globe me-2 fs-5 text-primary'></i>
                     <span>{{ __('university/universite-de-bordeaux.official_website') }}</span>
                 </a>
             </li>
             <li class="mb-2">
                 <a href="https://en.wikipedia.org/wiki/University_of_Bordeaux"
-                    target="_blank" rel="noopener noreferrer" class="d-flex align-items-center text-decoration-none transition-all hover-translate-x">
+                   target="_blank" rel="noopener noreferrer"
+                   class="d-flex align-items-center text-decoration-none transition-all hover-translate-x">
                     <i class='bx bxl-wikipedia me-2 fs-5 text-primary'></i>
                     <span>{{ __('university/universite-de-bordeaux.wikipedia_link') }}</span>
                 </a>
             </li>
+        </ul>
     </div>
 @endsection
 
@@ -46,7 +48,7 @@
 
     <div class="single-services-imgs mb-4">
         <img src="{{asset("assets/img/universities/Bordeaux/bordeaux_university.webp")}}"
-            alt="{{ __('university/universite-de-bordeaux.page_title') }}" class="rounded-4 shadow-sm w-100">
+             alt="{{ __('university/universite-de-bordeaux.page_title') }}" class="rounded-4 shadow-sm w-100">
     </div>
 
     <p class="lead text-muted mb-4">{{ __('university/universite-de-bordeaux.intro_content') }}</p>
@@ -97,7 +99,8 @@
         <div class="row g-3">
             @foreach(__('university/universite-de-bordeaux.facilities') as $facility)
                 <div class="col-md-6">
-                    <div class="p-3 rounded-4 bg-light border-0 h-100 d-flex align-items-center transition-all hover-lift shadow-sm">
+                    <div
+                        class="p-3 rounded-4 bg-light border-0 h-100 d-flex align-items-center transition-all hover-lift shadow-sm">
                         <i class="bx bx-buildings text-primary me-2 fs-5"></i>
                         <span class="small fw-medium">{{ $facility }}</span>
                     </div>
@@ -115,8 +118,8 @@
         <div class="row align-items-center">
             <div class="col-lg-4 text-center mb-4 mb-lg-0">
                 <img src="{{asset("assets/img/universities/Bordeaux/bordeaux_logo.webp")}}"
-                    alt="{{ __('university/universite-de-bordeaux.page_title') }}" style="max-width: 180px;"
-                    class="img-fluid drop-shadow">
+                     alt="{{ __('university/universite-de-bordeaux.page_title') }}" style="max-width: 180px;"
+                     class="img-fluid drop-shadow">
             </div>
             <div class="col-lg-8">
                 <div class="row g-3">
@@ -132,8 +135,9 @@
             </div>
         </div>
     </div>
-    <x-sections.faq :title="__('university/universite-de-bordeaux.faq_title')" :subtitle="__('university/universite-de-bordeaux.faq_subtitle')"
-        :items="__('university/universite-de-bordeaux.faq_items')" id="bordeaux-faq" />
+    <x-sections.faq :title="__('university/universite-de-bordeaux.faq_title')"
+                    :subtitle="__('university/universite-de-bordeaux.faq_subtitle')"
+                    :items="__('university/universite-de-bordeaux.faq_items')" id="bordeaux-faq"/>
 @endsection
 
 @push("json")
@@ -171,7 +175,7 @@
         ]);
     @endphp
 
-    <x-seo.structured-data :schema="$webPage" />
-    <x-seo.structured-data :schema="$university" />
-    <x-seo.structured-data :schema="$breadcrumb" />
+    <x-seo.structured-data :schema="$webPage"/>
+    <x-seo.structured-data :schema="$university"/>
+    <x-seo.structured-data :schema="$breadcrumb"/>
 @endpush
