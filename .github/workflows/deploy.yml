@@ -125,4 +125,7 @@ jobs:
             php artisan optimize
             php artisan view:cache
 
+            # Restart queue workers so they load the new code
+            php artisan queue:restart
+
             echo "Deployment complete!"
