@@ -4,25 +4,21 @@ namespace App\Mail;
 
 use App\Models\QuestionSubmission;
 use Illuminate\Bus\Queueable;
+use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Attachment;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class QuestionSubmitted extends Mailable
+class QuestionSubmitted extends Mailable implements ShouldQueue
 {
     use Queueable, SerializesModels;
-
-    public $submission;
 
     /**
      * Create a new message instance.
      */
-    public function __construct(QuestionSubmission $submission)
-    {
-        $this->submission = $submission;
-    }
+    public function __construct(public readonly QuestionSubmission $submission) {}
 
     /**
      * Get the message envelope.

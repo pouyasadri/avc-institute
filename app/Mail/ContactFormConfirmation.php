@@ -4,25 +4,21 @@ namespace App\Mail;
 
 use App\Models\ContactSubmission;
 use Illuminate\Bus\Queueable;
+use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Attachment;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class ContactFormConfirmation extends Mailable
+class ContactFormConfirmation extends Mailable implements ShouldQueue
 {
     use Queueable, SerializesModels;
-
-    public $submission;
 
     /**
      * Create a new message instance.
      */
-    public function __construct(ContactSubmission $submission)
-    {
-        $this->submission = $submission;
-    }
+    public function __construct(public readonly ContactSubmission $submission) {}
 
     /**
      * Get the message envelope.
