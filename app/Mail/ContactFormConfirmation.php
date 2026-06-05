@@ -36,7 +36,7 @@ class ContactFormConfirmation extends Mailable implements ShouldQueue
     public function content(): Content
     {
         return new Content(
-            view: 'emails.contact.confirmation',
+            markdown: 'emails.contact.confirmation',
         );
     }
 

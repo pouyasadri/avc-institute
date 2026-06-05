@@ -1,20 +1,16 @@
-<!DOCTYPE html>
-<html>
+@component('mail::message')
+# {{ __('emails.consultation.title') }}
 
-<head>
-    <title>{{ __('emails.consultation.title') }}</title>
-</head>
+{{ __('emails.consultation.intro_admin') }}
 
-<body>
-    <h1>{{ __('emails.consultation.title') }}</h1>
-    <p>{{ __('emails.consultation.intro_admin') }}</p>
+**{{ __('emails.labels.name') }}:** {{ $data['user_name'] }}
 
-    <p><strong>{{ __('emails.labels.name') }}:</strong> {{ $data['user_name'] }}</p>
-    <p><strong>{{ __('emails.labels.email') }}:</strong> {{ $data['user_email'] }}</p>
-    <p><strong>{{ __('emails.labels.phone') }}:</strong> {{ $data['user_phone_number'] }}</p>
-    <p><strong>{{ __('emails.labels.service') }}:</strong> {{ $data['user_service'] }}</p>
-    <p><strong>{{ __('emails.labels.details') }}:</strong></p>
-    <p>{{ $data['user_details'] }}</p>
-</body>
+**{{ __('emails.labels.email') }}:** {{ $data['user_email'] }}
 
-</html>
+**{{ __('emails.labels.phone') }}:** {{ $data['user_phone_number'] }}
+
+**{{ __('emails.labels.service') }}:** {{ $data['user_service'] }}
+
+**{{ __('emails.labels.details') }}:**
+{{ $data['user_details'] }}
+@endcomponent

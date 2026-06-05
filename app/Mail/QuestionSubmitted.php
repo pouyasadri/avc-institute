@@ -36,7 +36,7 @@ class QuestionSubmitted extends Mailable implements ShouldQueue
     public function content(): Content
     {
         return new Content(
-            view: 'emails.question.submitted',
+            markdown: 'emails.question.submitted',
         );
     }
 

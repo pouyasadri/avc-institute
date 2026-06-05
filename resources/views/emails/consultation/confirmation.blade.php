@@ -1,23 +1,18 @@
-<!DOCTYPE html>
-<html>
+@component('mail::message')
+# {{ __('emails.consultation.greeting', ['name' => $data['user_name']]) }}
 
-<head>
-    <title>Consultation Request Confirmation</title>
-</head>
+{{ __('emails.consultation.intro_user') }}
 
-<body>
-    <h1>{{ __('emails.consultation.greeting', ['name' => $data['user_name']]) }}</h1>
-    <p>{{ __('emails.consultation.intro_user') }}</p>
-    <p>{!! __('emails.consultation.service_info', ['service' => $data['user_service']]) !!}</p>
+{!! __('emails.consultation.service_info', ['service' => $data['user_service']]) !!}
 
-    <p><strong>{{ __('emails.consultation.copy_details') }}</strong></p>
-    <p><strong>{{ __('emails.labels.phone') }}:</strong> {{ $data['user_phone_number'] }}</p>
-    <p><strong>{{ __('emails.labels.details') }}:</strong></p>
-    <p>{{ $data['user_details'] }}</p>
+**{{ __('emails.consultation.copy_details') }}**
 
-    <br>
-    <p>{{ __('emails.regards') }}</p>
-    <p>{{ __('emails.team') }}</p>
-</body>
+**{{ __('emails.labels.phone') }}:** {{ $data['user_phone_number'] }}
 
-</html>
+**{{ __('emails.labels.details') }}:**
+{{ $data['user_details'] }}
+
+<br>
+{{ __('emails.regards') }}<br>
+{{ __('emails.team') }}
+@endcomponent

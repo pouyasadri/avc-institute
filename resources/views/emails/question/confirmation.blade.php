@@ -1,21 +1,14 @@
-<!DOCTYPE html>
-<html>
+@component('mail::message')
+# {{ __('emails.question.greeting', ['name' => $submission->name]) }}
 
-<head>
-    <title>Question Received</title>
-</head>
+{!! __('emails.question.intro_user', ['name' => $submission->page_name]) !!}
 
-<body>
-    <h1>{{ __('emails.question.greeting', ['name' => $submission->name]) }}</h1>
-    <p>{!! __('emails.question.intro_user', ['name' => $submission->page_name]) !!}</p>
-    <p>{{ __('emails.question.success_info') }}</p>
+{{ __('emails.question.success_info') }}
 
-    <p><strong>{{ __('emails.question.copy_message') }}</strong></p>
-    <p>{{ $submission->message }}</p>
+**{{ __('emails.question.copy_message') }}**
+> {{ $submission->message }}
 
-    <br>
-    <p>{{ __('emails.regards') }}</p>
-    <p>{{ __('emails.team') }}</p>
-</body>
-
-</html>
+<br>
+{{ __('emails.regards') }}<br>
+{{ __('emails.team') }}
+@endcomponent

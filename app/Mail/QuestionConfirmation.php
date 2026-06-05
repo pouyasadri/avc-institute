@@ -36,7 +36,7 @@ class QuestionConfirmation extends Mailable implements ShouldQueue
     public function content(): Content
     {
         return new Content(
-            view: 'emails.question.confirmation',
+            markdown: 'emails.question.confirmation',
         );
     }
 

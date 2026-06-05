@@ -1,20 +1,16 @@
-<!DOCTYPE html>
-<html>
+@component('mail::message')
+# {{ __('emails.contact.title') }}
 
-<head>
-    <title>New Contact Form Submission</title>
-</head>
+{{ __('emails.contact.intro_admin') }}
 
-<body>
-    <h1>{{ __('emails.contact.title') }}</h1>
-    <p>{{ __('emails.contact.intro_admin') }}</p>
+**{{ __('emails.labels.name') }}:** {{ $submission->name }}
 
-    <p><strong>{{ __('emails.labels.name') }}:</strong> {{ $submission->name }}</p>
-    <p><strong>{{ __('emails.labels.email') }}:</strong> {{ $submission->email }}</p>
-    <p><strong>{{ __('emails.labels.phone') }}:</strong> {{ $submission->phone_number }}</p>
-    <p><strong>{{ __('emails.labels.subject') }}:</strong> {{ $submission->subject }}</p>
-    <p><strong>{{ __('emails.labels.message') }}:</strong></p>
-    <p>{{ $submission->message }}</p>
-</body>
+**{{ __('emails.labels.email') }}:** {{ $submission->email }}
 
-</html>
+**{{ __('emails.labels.phone') }}:** {{ $submission->phone_number }}
+
+**{{ __('emails.labels.subject') }}:** {{ $submission->subject }}
+
+**{{ __('emails.labels.message') }}:**
+{{ $submission->message }}
+@endcomponent

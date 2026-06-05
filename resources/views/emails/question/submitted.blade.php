@@ -1,22 +1,20 @@
-<!DOCTYPE html>
-<html>
+@component('mail::message')
+# {{ __('emails.question.title') }}
 
-<head>
-    <title>New Question Submission</title>
-</head>
+{{ __('emails.question.intro_admin') }}
 
-<body>
-    <h1>{{ __('emails.question.title') }}</h1>
-    <p>{{ __('emails.question.intro_admin') }}</p>
+**{{ __('emails.labels.name') }}:** {{ $submission->name }}
 
-    <p><strong>{{ __('emails.labels.name') }}:</strong> {{ $submission->name }}</p>
-    <p><strong>{{ __('emails.labels.email') }}:</strong> {{ $submission->email }}</p>
-    <p><strong>{{ __('emails.labels.phone') }}:</strong> {{ $submission->phone_number }}</p>
-    <p><strong>{{ __('emails.labels.subject') }}:</strong> {{ $submission->subject }}</p>
-    <p><strong>{{ __('emails.labels.page_type') }}:</strong> {{ $submission->page_type }}</p>
-    <p><strong>{{ __('emails.labels.page_name') }}:</strong> {{ $submission->page_name }}</p>
-    <p><strong>{{ __('emails.labels.message') }}:</strong></p>
-    <p>{{ $submission->message }}</p>
-</body>
+**{{ __('emails.labels.email') }}:** {{ $submission->email }}
 
-</html>
+**{{ __('emails.labels.phone') }}:** {{ $submission->phone_number }}
+
+**{{ __('emails.labels.subject') }}:** {{ $submission->subject }}
+
+**{{ __('emails.labels.page_type') }}:** {{ $submission->page_type }}
+
+**{{ __('emails.labels.page_name') }}:** {{ $submission->page_name }}
+
+**{{ __('emails.labels.message') }}:**
+{{ $submission->message }}
+@endcomponent

@@ -36,7 +36,7 @@ class ContactFormSubmitted extends Mailable implements ShouldQueue
     public function content(): Content
     {
         return new Content(
-            view: 'emails.contact.submitted',
+            markdown: 'emails.contact.submitted',
         );
     }
 
