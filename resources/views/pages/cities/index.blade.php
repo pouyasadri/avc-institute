@@ -60,6 +60,13 @@
             'desc_key' => 'bordeaux_description',
             'alt_key' => 'bordeaux_alt',
         ],
+        [
+            'slug' => 'montpellier',
+            'img' => 'assets/img/cities/montpellier/montpellier.webp',
+            'title_key' => 'montpellier_title',
+            'desc_key' => 'montpellier_description',
+            'alt_key' => 'montpellier_alt',
+        ],
     ];
 @endphp
 
