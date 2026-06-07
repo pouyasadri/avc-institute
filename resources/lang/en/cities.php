@@ -54,6 +54,10 @@ return [
     'bordeaux_title' => 'Bordeaux: The World Capital of Art de Vivre',
     'bordeaux_description' => 'Experience the pinnacle of French elegance and architectural beauty. A thriving hub for aerospace, laser technology, and high-end lifestyle.',
 
+    'montpellier_alt' => 'Montpellier 2026: The Sunny Academic & Medical Hub',
+    'montpellier_title' => 'Montpellier: The Sunny Academic Hub',
+    'montpellier_description' => 'A vibrant, sun-drenched city with one of the world\'s oldest academic traditions. A global leader in medicine, agronomy, and digital innovation.',
+
     'read_more' => 'Explore City',
 
     // Schema.org

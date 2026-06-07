@@ -53,6 +53,10 @@ return [
     'bordeaux_title' => 'Bordeaux : Capitale Mondiale de l\'Art de Vivre',
     'bordeaux_description' => 'Découvrez l\'élégance française et la splendeur architecturale. Un pôle dynamique pour l\'aéronautique, les lasers et l\'art de vivre d\'exception.',
 
+    'montpellier_alt' => 'Montpellier 2026 : Le Hub Académique et Médical Ensoleillé',
+    'montpellier_title' => 'Montpellier : Le Pôle Académique Ensoleillé',
+    'montpellier_description' => 'Une ville vibrante وbaignée de soleil باl\'une des plus anciennes traditions académiques au monde. Leader mondial en médecine et agronomie.',
+
     'read_more' => 'Explorer la Ville',
 
     // Schema.org

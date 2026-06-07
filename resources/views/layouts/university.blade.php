@@ -27,7 +27,7 @@
         // Universities in cities with no dedicated page return null
         'aix-marseille-university'  => null,
         'universite-de-lille'       => null,
-        'universite-de-montpellier' => null,
+        'universite-de-montpellier' => 'montpellier',
     ];
     $universitySlug = $universityName ?? '';
     $linkedCity = $universityCityMap[$universitySlug] ?? null;

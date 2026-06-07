@@ -9,6 +9,7 @@ return [
         'lyon',
         'grenoble',
         'bordeaux',
+        'montpellier'
     ],
 
     'universities' => [
