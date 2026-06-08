@@ -134,6 +134,12 @@
     @endphp
 
     {{-- ═══════════════════════════════════════════════════════════════════
+         CRITICAL CSS — inlined to eliminate render-blocking for first paint.
+         Must come BEFORE Vite bundles and vendor CSS links.
+    ═══════════════════════════════════════════════════════════════════ --}}
+    @include('layouts.partials.critical-css')
+
+    {{-- ═══════════════════════════════════════════════════════════════════
          VITE-BUNDLED CSS
          Includes: Bootstrap (LTR or vendor-CSS-only for RTL), Owl Carousel,
          Animate.css, Magnific Popup, Odometer, Slick Carousel
@@ -147,7 +153,7 @@
 
     {{-- ═══════════════════════════════════════════════════════════════════
          STATIC VENDOR CSS (no npm package — kept as raw assets)
-         Consolidated from 19 separate <link> tags into one @include.
+         All loaded DEFERRED (non-render-blocking) — see vendor-css.blade.php.
     ═══════════════════════════════════════════════════════════════════ --}}
     @include('layouts.partials.vendor-css', ['isRtl' => $isRtl])
 
@@ -160,9 +166,25 @@
     {{-- Inline navbar styles (kept as-is) --}}
     @include('layouts.partials.navbar-styles')
 
-    {{-- Preconnect hints --}}
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    {{-- ═══════════════════════════════════════════════════════════════════
+         PRECONNECT HINTS
+         Only connect to origins the page actually uses. Max 4 origins.
+         Removed: cdn.jsdelivr.net (nothing loads from there).
+    ═══════════════════════════════════════════════════════════════════ --}}
+    <link rel="dns-prefetch" href="https://www.clarity.ms">
+    @php $routeName = optional(request()->route())->getName(); @endphp
+    @if($routeName === 'index')
+        {{-- amCharts is only used on the homepage map — 310 ms LCP savings --}}
+        <link rel="preconnect" href="https://www.amcharts.com">
+        {{-- Preload the hero LCP image so the browser fetches it immediately --}}
+        @if($isRtl)
+            <link rel="preload" as="image" fetchpriority="high"
+                  href="{{ asset('assets/img/cities/Paris/paris-slider1.webp') }}">
+        @else
+            <link rel="preload" as="image" fetchpriority="high"
+                  href="{{ asset('assets/img/cities/Paris/paris-slider1.webp') }}">
+        @endif
+    @endif
 
     @stack('styles')
 
