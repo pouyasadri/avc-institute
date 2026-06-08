@@ -21,6 +21,9 @@ export default defineConfig({
         }),
     ],
     build: {
+        // Target modern browsers — avoids polyfilling ES2020+ features unnecessarily.
+        // Lighthouse flagged legacy JS (Object.getPrototypeOf shims) as 8 KiB wasted.
+        target: ['es2020', 'chrome80', 'safari14', 'firefox78'],
         // Inline small assets (< 4 KB) as base64 to reduce HTTP requests
         assetsInlineLimit: 4096,
         // Separate CSS per JS chunk
