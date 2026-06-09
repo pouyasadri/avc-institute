@@ -94,7 +94,9 @@
     /* ── Mobile breakpoint ────────────────────────────────────── */
     @media (max-width: 991px) {
         .main-nav  { display: none; }
-        .mobile-nav { display: flex; justify-content: space-between; align-items: center; padding: .75rem 1rem; background: rgba(0,0,0,.85); }
+        /* No background here — the parent .eorik-nav-style-four handles it
+           (transparent by default, dark via .is-sticky added by scroll JS). */
+        .mobile-nav { display: flex; justify-content: space-between; align-items: center; padding: .75rem 1rem; }
         .mobile-nav .logo img { width: 4rem !important; padding-bottom: 0 !important; }
         .mobile-menu-toggle { background: none; border: none; cursor: pointer; color: #fff; font-size: 1.75rem; line-height: 1; }
         .eorik-slider-text h1 { font-size: 1.5rem; }
