@@ -57,6 +57,10 @@ return [
     'montpellier_title' => 'Montpellier : Le Pôle Académique Ensoleillé',
     'montpellier_description' => 'Une ville vibrante وbaignée de soleil باl\'une des plus anciennes traditions académiques au monde. Leader mondial en médecine et agronomie.',
 
+    'marseille_alt' => 'Marseille 2026 : La Puissance Méditerranéenne',
+    'marseille_title' => 'Marseille : La Puissance Méditerranéenne',
+    'marseille_description' => 'Une porte dynamique sur la Méditerranée, mêlant des millénaires d\'histoire à une innovation massive en logistique, IA et sciences marines.',
+
     'read_more' => 'Explorer la Ville',
 
     // Schema.org

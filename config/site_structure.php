@@ -10,6 +10,7 @@ return [
         'grenoble',
         'bordeaux',
         'montpellier',
+        'marseille',
     ],
 
     'universities' => [

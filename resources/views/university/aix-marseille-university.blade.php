@@ -39,7 +39,7 @@
                 </a>
             </li>
             <li>
-                <a href="#"
+                <a href="{{ url(app()->getLocale() . '/cities/marseille') }}"
                     class="d-flex align-items-center text-decoration-none transition-all hover-translate-x">
                     <i class='bx bx-map-alt me-2 fs-5 text-primary'></i>
                     <span>{{ __('university/aix-marseille-university.marseille_city_guide') }}</span>

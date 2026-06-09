@@ -67,6 +67,14 @@
             'desc_key' => 'montpellier_description',
             'alt_key' => 'montpellier_alt',
         ],
+
+        [
+            'slug' => 'marseille',
+            'img' => 'assets/img/cities/marseille/marseille.webp',
+            'title_key' => 'marseille_title',
+            'desc_key' => 'marseille_description',
+            'alt_key' => 'marseille_alt',
+        ],
     ];
 @endphp
 

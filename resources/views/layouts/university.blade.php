@@ -24,10 +24,10 @@
         'strasbourg'                => 'strasbourg',
         'universite-grenoble-alpes' => 'grenoble',
         'universite-de-bordeaux'    => 'bordeaux',
-        // Universities in cities with no dedicated page return null
-        'aix-marseille-university'  => null,
-        'universite-de-lille'       => null,
+        'aix-marseille-university'  => 'marseille',
         'universite-de-montpellier' => 'montpellier',
+        // Universities in cities with no dedicated page return null
+        'universite-de-lille'       => null,
     ];
     $universitySlug = $universityName ?? '';
     $linkedCity = $universityCityMap[$universitySlug] ?? null;

@@ -9,10 +9,13 @@ return [
     'map_toulouse' => 'Toulouse',
     'map_grenoble' => 'Grenoble',
     'map_bordeaux' => 'Bordeaux',
+    'map_montpellier' => 'Montpellier',
+    'map_marseille' => 'Marseille',
 
     // SEO Meta Tags
     'title' => 'Discover France 2026: The Best Cities to Live, Study & Invest | A.V.C',
-    'keywords' => 'French cities, Paris 2026, Lyon, Nice, Toulouse, Strasbourg, Grenoble, Bordeaux, study in France, live in France, business in France, international students France, French lifestyle',
+    'keywords' => 'French cities, Paris 2026, Lyon, Nice, Toulouse, Strasbourg, Grenoble, Bordeaux, Montpellier, Marseille, study in France, live in France, business in France, international students France, French lifestyle',
+
     'description' => 'Explore the most vibrant French cities in 2026. From the historic streets of Paris to the tech hubs of the Silicon Coast, find your perfect French destination for education and career growth.',
 
     // Page Title & Breadcrumb
@@ -57,6 +60,10 @@ return [
     'montpellier_alt' => 'Montpellier 2026: The Sunny Academic & Medical Hub',
     'montpellier_title' => 'Montpellier: The Sunny Academic Hub',
     'montpellier_description' => 'A vibrant, sun-drenched city with one of the world\'s oldest academic traditions. A global leader in medicine, agronomy, and digital innovation.',
+
+    'marseille_alt' => 'Marseille 2026: The Mediterranean Powerhouse',
+    'marseille_title' => 'Marseille: The Mediterranean Powerhouse',
+    'marseille_description' => 'A dynamic gateway to the Mediterranean, blending thousands of years of history with massive innovation in logistics, AI, and marine sciences.',
 
     'read_more' => 'Explore City',
 
