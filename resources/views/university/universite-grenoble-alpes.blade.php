@@ -38,6 +38,13 @@
                     <span>{{ __('university/universite-grenoble-alpes.wikipedia_link') }}</span>
                 </a>
             </li>
+            <li>
+                <a href="{{ url(app()->getLocale() . '/cities/grenoble') }}"
+                    class="d-flex align-items-center text-decoration-none transition-all hover-translate-x">
+                    <i class='bx bx-map-alt me-2 fs-5 text-primary'></i>
+                    <span>{{ __('university/universite-grenoble-alpes.grenoble_city_guide') }}</span>
+                </a>
+            </li>
         </ul>
     </div>
 @endsection
