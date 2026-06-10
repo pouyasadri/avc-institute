@@ -28,7 +28,7 @@ class DiscoveryHeadersTest extends TestCase
 
             $response->assertHeader('Link');
             $linkHeader = $response->headers->get('Link');
-            
+
             $this->assertStringContainsString('</llms.txt>; rel="help"', $linkHeader);
             $this->assertStringContainsString('</sitemap.xml>; rel="sitemap"', $linkHeader);
         }
@@ -41,9 +41,9 @@ class DiscoveryHeadersTest extends TestCase
     {
         $response = $this->get('/en/blog');
         $response->assertStatus(200);
-        
+
         $linkHeader = $response->headers->get('Link');
-        
+
         if ($linkHeader) {
             $this->assertStringNotContainsString('</llms.txt>; rel="help"', $linkHeader);
         }
