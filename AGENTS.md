@@ -4,6 +4,13 @@ This file provides authoritative guidance for agentic coding tools operating in 
 
 Repository: `avc-institute` (git@github.com:pouyasadri/avc-institute.git)
 
+## Agent Discovery
+
+This project implements modern agent discovery standards:
+- **`llms.txt`**: authoritative summary of site intent (in `public/llms.txt`).
+- **Discovery Headers**: Managed by `AddDiscoveryHeaders` middleware.
+- **DNS-AID**: Configured via HTTPS/SVCB records (see `DNS_AID.md`).
+
 ---
 
 ## Project Overview

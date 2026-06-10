@@ -16,10 +16,19 @@
   <a href="#technology-stack">Tech Stack</a> •
   <a href="#getting-started">Getting Started</a> •
   <a href="#localization">Localization</a> •
-  <a href="#admin-dashboard">Admin Section</a>
+  <a href="#admin-dashboard">Admin Section</a> •
+  <a href="#agent-discovery">Agent Discovery</a>
 </p>
 
 ---
+
+## Agent Discovery
+
+This site supports modern agent discovery protocols to help AI agents (like ChatGPT, Claude, and Perplexity) understand its structure and services:
+
+- **llms.txt**: Found at [/llms.txt](/public/llms.txt), providing a machine-readable summary of the site's content and intent.
+- **Link Headers**: Discovery headers are served on the homepage to point agents to the `llms.txt` and `sitemap.xml`.
+- **DNS-AID**: Support for DNS-based AI Discovery via HTTPS/SVCB records. See [DNS_AID.md](DNS_AID.md) for configuration details.
 
 ## About The Project
 
