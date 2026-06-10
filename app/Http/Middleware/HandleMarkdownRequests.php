@@ -4,22 +4,22 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
-use Symfony\Component\HttpFoundation\Response;
 use Illuminate\Support\Facades\View;
+use Symfony\Component\HttpFoundation\Response;
 
 class HandleMarkdownRequests
 {
     /**
      * Handle an incoming request.
      *
-     * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
+     * @param  Closure(Request): (Response)  $next
      */
     public function handle(Request $request, Closure $next): Response
     {
         // Check if the agent specifically requests markdown
-        if ($request->header('Accept') === 'text/markdown' || 
+        if ($request->header('Accept') === 'text/markdown' ||
             str_contains($request->header('Accept') ?? '', 'text/markdown')) {
-            
+
             $response = $next($request);
 
             // Only attempt conversion for successful HTML responses
@@ -60,6 +60,7 @@ class HandleMarkdownRequests
         if (property_exists($response, 'original') && $response->original instanceof \Illuminate\View\View) {
             return $response->original->getData();
         }
+
         return [];
     }
 
@@ -69,14 +70,14 @@ class HandleMarkdownRequests
     protected function generateFallbackMarkdown(Response $response): string
     {
         $html = $response->getContent();
-        
+
         // Very basic extraction of main content if we don't have a template
         // In a real scenario, you might use a library like league/html-to-markdown
         // For now, we'll provide a helpful message or a simple strip tags approach
-        
+
         $title = preg_match('/<title>(.*?)<\/title>/', $html, $matches) ? $matches[1] : 'Apply VIP Conseil';
-        
-        return "# {$title}\n\n" . 
-               "This page is currently optimized for HTML. Please visit https://applyvipconseil.com/llms.txt for a machine-readable summary of our services.";
+
+        return "# {$title}\n\n".
+               'This page is currently optimized for HTML. Please visit https://applyvipconseil.com/llms.txt for a machine-readable summary of our services.';
     }
 }

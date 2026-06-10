@@ -1,13 +1,13 @@
 <?php
 
 use App\Http\Middleware\AddDiscoveryHeaders;
-use App\Http\Middleware\HandleMarkdownRequests;
 use App\Http\Middleware\AdminMiddleware;
 use App\Http\Middleware\Authenticate;
 use App\Http\Middleware\CheckRedirects;
 use App\Http\Middleware\EncryptCookies;
 use App\Http\Middleware\ForceAdminLocale;
 use App\Http\Middleware\ForceCanonicalHost;
+use App\Http\Middleware\HandleMarkdownRequests;
 use App\Http\Middleware\PreventRequestsDuringMaintenance;
 use App\Http\Middleware\RedirectIfAuthenticated;
 use App\Http\Middleware\SetLocale;

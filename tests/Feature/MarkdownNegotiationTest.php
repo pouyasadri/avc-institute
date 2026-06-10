@@ -15,13 +15,13 @@ class MarkdownNegotiationTest extends TestCase
     public function test_homepage_returns_markdown_when_requested(): void
     {
         $response = $this->get('/en', [
-            'Accept' => 'text/markdown'
+            'Accept' => 'text/markdown',
         ]);
 
         $response->assertStatus(200);
         $response->assertHeader('Content-Type', 'text/markdown; charset=UTF-8');
         $response->assertHeader('x-markdown-tokens', 'true');
-        
+
         $content = $response->getContent();
         $this->assertStringContainsString('# ', $content);
         $this->assertStringContainsString('Our Services', $content);
@@ -37,7 +37,7 @@ class MarkdownNegotiationTest extends TestCase
 
         $response->assertStatus(200);
         $response->assertHeader('Content-Type', 'text/html; charset=UTF-8');
-        
+
         $content = $response->getContent();
         $this->assertStringContainsString('<!DOCTYPE html>', $content);
     }
@@ -48,12 +48,12 @@ class MarkdownNegotiationTest extends TestCase
     public function test_fallback_markdown_for_other_pages(): void
     {
         $response = $this->get('/en/blog', [
-            'Accept' => 'text/markdown'
+            'Accept' => 'text/markdown',
         ]);
 
         $response->assertStatus(200);
         $response->assertHeader('Content-Type', 'text/markdown; charset=UTF-8');
-        
+
         $content = $response->getContent();
         $this->assertStringContainsString('# ', $content);
         $this->assertStringContainsString('optimized for HTML', $content);
