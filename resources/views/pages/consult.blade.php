@@ -151,7 +151,7 @@
                                         <h3 class="h5 fw-bold mb-0">{{ __('consult.info.phone.france_label' ?? 'France') }}
                                         </h3>
                                     </div>
-                                    <a href="tel:+33768688326" class="text-muted text-decoration-none">0033-768-68-83-26</a>
+                                    <a href="tel:+33768688326" class="text-muted text-decoration-none">+33 7 68 68 83 26</a>
                                 </div>
                             </div>
                             <!-- Phone Iran -->
@@ -165,7 +165,7 @@
                                         <h3 class="h5 fw-bold mb-0">{{ __('consult.info.phone.iran_label' ?? 'Iran') }}</h3>
                                     </div>
                                     <a href="tel:+989120087194"
-                                        class="text-muted text-decoration-none">0098-912-008-7194</a>
+                                        class="text-muted text-decoration-none">+98 912 008 7194</a>
                                 </div>
                             </div>
                             <!-- Description (Optional/Bottom) -->
