@@ -224,7 +224,7 @@ return [
             'addressCountry' => 'FR',
         ],
         'contactPoint' => [
-            'telephone' => '+33-000-000-000',
+            'telephone' => '+33768688326',
             'contactType' => 'service client',
             'areaServed' => ['FR', 'IR'],
             'availableLanguage' => ['English', 'French', 'Persian'],

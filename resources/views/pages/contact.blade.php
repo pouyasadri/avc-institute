@@ -177,7 +177,7 @@
                                                 class="badge bg-light text-dark me-2">{{ __('contact.info.phone.iran_label' ?? 'Iran') }}</span>
                                             {{ __('contact.info.phone.iran') }}
                                         </a>
-                                        <a href="tel:+33780953333" class="text-muted text-decoration-none">
+                                        <a href="tel:+33768688326" class="text-muted text-decoration-none">
                                             <span
                                                 class="badge bg-light text-dark me-2">{{ __('contact.info.phone.france_label' ?? 'France') }}</span>
                                             {{ __('contact.info.phone.france') }}
@@ -239,7 +239,7 @@
                 ],
                 [
                     '@type' => 'ContactPoint',
-                    'telephone' => '+33-7-80-95-33-33',
+                    'telephone' => '+33-7-68-68-83-26',
                     'contactType' => 'customer service',
                     'areaServed' => 'FR',
                     'availableLanguage' => ['French', 'English'],

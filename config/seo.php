@@ -35,7 +35,7 @@ return [
         'logo' => '/assets/img/logo/logo.png',
         'description' => 'Expert immigration and education consulting services in France, specializing in student visas, residence permits, and real estate acquisition.',
         'email' => 'info@applyvipconseil.com',
-        'telephone' => '+33780953333',
+        'telephone' => '+33768688326',
         'address' => [
             'street_address' => '24 Rue de Courcelles', // TODO: Update with your actual office address
             'locality' => 'Paris',

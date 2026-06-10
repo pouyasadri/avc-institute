@@ -141,8 +141,8 @@
                             <li class="address">
                                 <i class="flaticon-call"></i>
                                 <span>{{ __('layout.contact.whatsapp_label') }}</span>
-                                <a href="tel:+33780953333">
-                                    0033-780-95-33-33
+                                <a href="tel:+33768688326">
+                                    0033-768-68-83-26
                                 </a>
                             </li>
                             <li class="address">

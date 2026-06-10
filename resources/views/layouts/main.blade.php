@@ -408,7 +408,7 @@
     </div>
 
     {{-- Floating WhatsApp Button --}}
-    <a href="https://wa.me/33780953333?text={{ urlencode(__('layout.whatsapp_default_message', [], 'fa')) }}"
+    <a href="https://wa.me/33768688326?text={{ urlencode(__('layout.whatsapp_default_message', [], 'fa')) }}"
        class="whatsapp-float"
        id="whatsapp-float-btn"
        target="_blank"

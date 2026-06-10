@@ -86,6 +86,6 @@
 - Name: Apply VIP Conseil (A.V.C)
 - Domain: https://applyvipconseil.com
 - Focus: immigration, education, legal/admin support, and settlement in France
-- Contact: info@applyvipconseil.com | +33 7 80 95 33 33
+- Contact: info@applyvipconseil.com | +33 7 68 68 83 26
 - Sitemap: https://applyvipconseil.com/sitemap.xml
 - Instagram: https://www.instagram.com/apply_vip_conseil/

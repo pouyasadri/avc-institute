@@ -60,7 +60,7 @@ return [
         ],
         'phone' => [
             'title' => 'Appelez-nous:',
-            'france' => '0033-780-95-33-33',
+            'france' => '0033-768-68-83-26',
             'iran' => '0098-912-008-7194',
             'france_label' => 'France',
             'iran_label' => 'Iran',
