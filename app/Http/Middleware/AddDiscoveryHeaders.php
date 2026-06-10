@@ -21,6 +21,9 @@ class AddDiscoveryHeaders
         if ($this->isHomepage($request)) {
             $links = [
                 '</llms.txt>; rel="help"',
+                '</llms.txt>; rel="describedby"',
+                '</llms.txt>; rel="service-doc"',
+                '</.well-known/api-catalog>; rel="api-catalog"',
                 '</sitemap.xml>; rel="sitemap"',
             ];
 

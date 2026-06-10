@@ -40,6 +40,28 @@ Route::get('/llms.txt', function () {
         ]);
 })->name('llms');
 
+// API Catalog (RFC 9727) — advertising service description and documentation for agents.
+Route::get('/.well-known/api-catalog', function () {
+    $catalog = [
+        'linkset' => [
+            [
+                'anchor' => url('/'),
+                'service-doc' => [
+                    [
+                        'href' => url('/llms.txt'),
+                        'type' => 'text/plain',
+                    ],
+                ],
+            ],
+        ],
+    ];
+
+    return response()->json($catalog, 200, [
+        'Content-Type' => 'application/linkset+json; charset=utf-8',
+        'Cache-Control' => 'public, max-age=86400',
+    ]);
+})->name('api-catalog');
+
 // Locale-prefixed routes
 Route::prefix('{locale}')
     ->whereIn('locale', ['en', 'fr', 'fa'])
