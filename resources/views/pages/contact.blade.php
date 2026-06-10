@@ -175,12 +175,12 @@
                                         <a href="tel:+989120087194" class="text-muted text-decoration-none">
                                             <span
                                                 class="badge bg-light text-dark me-2">{{ __('contact.info.phone.iran_label' ?? 'Iran') }}</span>
-                                            {{ __('contact.info.phone.iran') }}
+                                            <span dir="ltr">{{ __('contact.info.phone.iran') }}</span>
                                         </a>
                                         <a href="tel:+33768688326" class="text-muted text-decoration-none">
                                             <span
                                                 class="badge bg-light text-dark me-2">{{ __('contact.info.phone.france_label' ?? 'France') }}</span>
-                                            {{ __('contact.info.phone.france') }}
+                                            <span dir="ltr">{{ __('contact.info.phone.france') }}</span>
                                         </a>
                                     </div>
                                 </div>

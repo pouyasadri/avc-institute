@@ -142,14 +142,14 @@
                                 <i class="flaticon-call"></i>
                                 <span>{{ __('layout.contact.whatsapp_label') }}</span>
                                 <a href="tel:+33768688326">
-                                    +33 7 68 68 83 26
+                                    <span dir="ltr">+33 7 68 68 83 26</span>
                                 </a>
                             </li>
                             <li class="address">
                                 <i class="flaticon-call"></i>
                                 <span>{{ __('layout.contact.iran_phone_label') }}</span>
                                 <a href="tel:+989120087194">
-                                    +98 912 008 7194
+                                    <span dir="ltr">+98 912 008 7194</span>
                                 </a>
                             </li>
                             <li class="address">
