@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Middleware\AddDiscoveryHeaders;
 use App\Http\Middleware\AdminMiddleware;
 use App\Http\Middleware\Authenticate;
 use App\Http\Middleware\CheckRedirects;
@@ -65,6 +66,7 @@ return Application::configure(basePath: dirname(__DIR__))
             ShareErrorsFromSession::class,
             VerifyCsrfToken::class,
             SubstituteBindings::class,
+            AddDiscoveryHeaders::class,
         ]);
 
         // API middleware group
