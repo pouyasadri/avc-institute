@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Middleware\AddDiscoveryHeaders;
+use App\Http\Middleware\HandleMarkdownRequests;
 use App\Http\Middleware\AdminMiddleware;
 use App\Http\Middleware\Authenticate;
 use App\Http\Middleware\CheckRedirects;
@@ -67,6 +68,7 @@ return Application::configure(basePath: dirname(__DIR__))
             VerifyCsrfToken::class,
             SubstituteBindings::class,
             AddDiscoveryHeaders::class,
+            HandleMarkdownRequests::class,
         ]);
 
         // API middleware group
