@@ -235,3 +235,48 @@ Route::get('/{locale}/admin', function () {
 Route::get('/{locale}/admin/{any?}', function ($locale, $any = null) {
     return redirect('/admin/'.$any);
 })->whereIn('locale', ['en', 'fr', 'fa'])->where('any', '.*');
+
+/*
+|--------------------------------------------------------------------------
+| Non-Localized URL Redirects
+|--------------------------------------------------------------------------
+| These routes redirect non-locale-prefixed URLs (e.g. /cities/lyon) to
+| their canonical Persian equivalents (/fa/cities/lyon). This fixes Google
+| Search Console data showing non-localized pages ranking for Persian
+| queries and prevents duplicate content / cannibalization.
+|
+| Based on GSC data: /cities/toulouse, /cities/strasbourg, /cities/lyon
+| are ranking for Iranian users but without locale prefix.
+|--------------------------------------------------------------------------
+*/
+Route::get('/cities', function () {
+    return redirect('/fa/cities', 301);
+});
+Route::get('/cities/{city}', function (string $city) {
+    return redirect('/fa/cities/' . $city, 301);
+})->where('city', '[a-zA-Z\-]+');
+
+Route::get('/universities', function () {
+    return redirect('/fa/universities', 301);
+});
+Route::get('/universities/{university}', function (string $university) {
+    return redirect('/fa/universities/' . $university, 301);
+})->where('university', '[a-zA-Z0-9\-]+');
+
+Route::get('/services', function () {
+    return redirect('/fa/services', 301);
+});
+Route::get('/services/{slug}', function (string $slug) {
+    return redirect('/fa/services/' . $slug, 301);
+})->where('slug', '[a-zA-Z0-9\-]+');
+
+Route::get('/blog', function () {
+    return redirect('/fa/blog', 301);
+});
+Route::get('/blog/{post}', function (string $post) {
+    return redirect('/fa/blog/' . $post, 301);
+})->where('post', '[a-zA-Z0-9\-]+');
+
+Route::get('/consult', function () {
+    return redirect('/fa/consult', 301);
+});

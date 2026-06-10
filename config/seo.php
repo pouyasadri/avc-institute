@@ -37,10 +37,10 @@ return [
         'email' => 'info@applyvipconseil.com',
         'telephone' => '+33780953333',
         'address' => [
-            'street_address' => '123 Avenue des Champs-Élysées', // TODO: Update with actual address
+            'street_address' => '24 Rue de Courcelles', // TODO: Update with your actual office address
             'locality' => 'Paris',
             'region' => 'Île-de-France',
-            'postal_code' => '75008', // TODO: Update with actual postal code
+            'postal_code' => '75008',
             'country' => 'France',
         ],
         'same_as' => [
@@ -157,7 +157,7 @@ return [
             'city' => 0.8,
             'university' => 0.75,
             'category' => 0.7,
-            'static_page' => 0.6,
+            'static_page' => 0.9, // Consult page is our primary conversion page — raised from 0.6
         ],
         'changefreq' => [
             'homepage' => 'daily',
@@ -176,8 +176,8 @@ return [
     |--------------------------------------------------------------------------
     */
     'images' => [
-        'default_og_image' => '/assets/img/og-default.svg',
-        'default_twitter_image' => '/assets/img/twitter-default.svg',
+        'default_og_image' => '/assets/img/og-default.png',
+        'default_twitter_image' => '/assets/img/twitter-default.png',
         'sizes' => [
             'og' => ['width' => 1200, 'height' => 630],
             'twitter' => ['width' => 1200, 'height' => 600],

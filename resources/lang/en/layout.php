@@ -39,6 +39,7 @@ return [
         'cities' => 'Cities',
         'houses' => 'Real Estate',
         'contact' => 'Contact us',
+        'consult' => 'Free Consultation',
         'menu' => 'Menu',
     ],
 

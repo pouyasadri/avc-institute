@@ -111,7 +111,8 @@
 
                             <p>{{ __('index.about.p4') }}</p>
 
-                            <a href="{{ route('contact', ['locale' => app()->getLocale()]) }}" class="default-btn">
+                            <a href="{{ url(app()->getLocale() . '/consult') }}" class="default-btn"
+                               id="about-consult-btn">
                                 {{ __('index.about.button') }}
                                 <i class="{{ $arrowIcon }}"></i>
                             </a>

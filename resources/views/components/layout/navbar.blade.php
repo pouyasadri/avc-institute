@@ -74,6 +74,16 @@
 
                         {{-- Desktop Language Switcher --}}
                         <x-layout.language-switcher :desktop="true" />
+
+                        {{-- Consult CTA Button --}}
+                        <a href="{{ url(app()->getLocale() . '/consult') }}"
+                           class="navbar-consult-cta"
+                           aria-label="{{ __('layout.nav.consult') }}"
+                           id="navbar-consult-btn"
+                        >
+                            <i class='bx bx-calendar-check'></i>
+                            {{ __('layout.nav.consult') }}
+                        </a>
                     </div>
                 </div>
             </nav>

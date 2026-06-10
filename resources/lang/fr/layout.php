@@ -39,6 +39,7 @@ return [
         'cities' => 'Villes',
         'houses' => 'Immobilier',
         'contact' => 'Contactez-nous',
+        'consult' => 'Consultation Gratuite',
     ],
 
     'sidebar' => [

@@ -22,6 +22,17 @@
     <div class="mobile-menu-body">
         <nav class="mobile-menu-nav">
             <ul>
+                {{-- Consult CTA — Prominently at Top --}}
+                <li class="mobile-consult-cta-item">
+                    <a href="{{ url(app()->getLocale() . '/consult') }}"
+                       class="mobile-consult-cta-link"
+                       id="mobile-consult-btn"
+                    >
+                        <i class='bx bx-calendar-check'></i>
+                        {{ __('layout.nav.consult') }}
+                    </a>
+                </li>
+
                 <li>
                     <a href="{{ route('index', ['locale' => app()->getLocale()]) }}"
                         class="{{ request()->is(app()->getLocale()) || request()->is(app()->getLocale() . '/') ? 'active' : '' }}">
@@ -71,8 +82,10 @@
         <div class="mobile-menu-social">
             <a href="https://www.instagram.com/apply_vip_conseil/" aria-label="Instagram"
                 target="_blank" rel="noopener noreferrer"><i class='bx bxl-instagram'></i></a>
-            <a href="#" aria-label="Facebook"><i class='bx bxl-facebook'></i></a>
-            <a href="#" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+            <a href="https://www.facebook.com/applyvipconseil" aria-label="Facebook"
+                target="_blank" rel="noopener noreferrer"><i class='bx bxl-facebook'></i></a>
+            <a href="https://www.linkedin.com/company/applyvipconseil" aria-label="LinkedIn"
+                target="_blank" rel="noopener noreferrer"><i class='bx bxl-linkedin'></i></a>
         </div>
     </div>
 </div>

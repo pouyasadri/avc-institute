@@ -14,28 +14,37 @@
                         <p>{{ __('layout.footer.about_short') }}</p>
                         <ul class="social-icon">
                             <li>
-                                <a href="#" aria-label="{{ __('layout.social.facebook') }}">
+                                <a href="https://www.facebook.com/applyvipconseil"
+                                   aria-label="{{ __('layout.social.facebook') }}"
+                                   target="_blank" rel="noopener noreferrer">
                                     <i class="bx bxl-facebook"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="#" aria-label="{{ __('layout.social.twitter') }}">
+                                <a href="https://twitter.com/applyvipconseil"
+                                   aria-label="{{ __('layout.social.twitter') }}"
+                                   target="_blank" rel="noopener noreferrer">
                                     <i class="bx bxl-twitter"></i>
                                 </a>
                             </li>
                             <li>
                                 <a href="https://www.instagram.com/apply_vip_conseil/"
-                                    aria-label="{{ __('layout.social.instagram') }}">
+                                    aria-label="{{ __('layout.social.instagram') }}"
+                                    target="_blank" rel="noopener noreferrer">
                                     <i class='bx bxl-instagram'></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="#" aria-label="{{ __('layout.social.linkedin') }}">
+                                <a href="https://www.linkedin.com/company/applyvipconseil"
+                                   aria-label="{{ __('layout.social.linkedin') }}"
+                                   target="_blank" rel="noopener noreferrer">
                                     <i class='bx bxl-linkedin'></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="#" aria-label="{{ __('layout.social.youtube') }}">
+                                <a href="https://www.youtube.com/@applyvipconseil"
+                                   aria-label="{{ __('layout.social.youtube') }}"
+                                   target="_blank" rel="noopener noreferrer">
                                     <i class='bx bxl-youtube'></i>
                                 </a>
                             </li>
@@ -48,6 +57,14 @@
                     <div class="single-widget">
                         <h3>{{ __('layout.footer.quick_links_title') }}</h3>
                         <ul>
+                            {{-- Consult CTA as first quick link --}}
+                            <li>
+                                <a href="{{ url(app()->getLocale() . '/consult') }}"
+                                   style="color: #f5a623; font-weight: 600;">
+                                    <i class="right-icon bx {{ $chevronsDir }}"></i>
+                                    {{ __('layout.nav.consult') }}
+                                </a>
+                            </li>
                             <li>
                                 <a href="{{ route('index', ['locale' => app()->getLocale()]) }}">
                                     <i class="right-icon bx {{ $chevronsDir }}"></i>
@@ -138,7 +155,7 @@
                             <li class="address">
                                 <i class="flaticon-envelope"></i>
                                 <span>{{ __('layout.contact.email_label') }}</span>
-                                <a href="mailto:info@applyvipcoseil.com">
+                                <a href="mailto:info@applyvipconseil.com">
                                     info@applyvipconseil.com
                                 </a>
                             </li>

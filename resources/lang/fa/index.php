@@ -217,14 +217,14 @@ return [
         'logo' => 'https://applyvipconseil.com/images/logo.png',
         'description' => 'موسسه پیشرو در خدمات مهاجرتی فرانسه. اخذ ویزای تحصیلی، اقامت و سرمایه‌گذاری ملکی.',
         'address' => [
-            'streetAddress' => 'YOUR_OFFICE_ADDRESS',
+            'streetAddress' => '24 Rue de Courcelles', // دفتر پاریس - آدرس واقعی خود را جایگزین کنید
             'addressLocality' => 'Paris',
             'addressRegion' => 'Île-de-France',
-            'postalCode' => '75000',
+            'postalCode' => '75008',
             'addressCountry' => 'FR',
         ],
         'contactPoint' => [
-            'telephone' => '+33-000-000-000',
+            'telephone' => '+33780953333',
             'contactType' => 'customer service',
             'areaServed' => ['FR', 'IR'],
             'availableLanguage' => ['English', 'French', 'Persian'],
