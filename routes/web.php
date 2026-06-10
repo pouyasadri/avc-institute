@@ -253,28 +253,28 @@ Route::get('/cities', function () {
     return redirect('/fa/cities', 301);
 });
 Route::get('/cities/{city}', function (string $city) {
-    return redirect('/fa/cities/' . $city, 301);
+    return redirect('/fa/cities/'.$city, 301);
 })->where('city', '[a-zA-Z\-]+');
 
 Route::get('/universities', function () {
     return redirect('/fa/universities', 301);
 });
 Route::get('/universities/{university}', function (string $university) {
-    return redirect('/fa/universities/' . $university, 301);
+    return redirect('/fa/universities/'.$university, 301);
 })->where('university', '[a-zA-Z0-9\-]+');
 
 Route::get('/services', function () {
     return redirect('/fa/services', 301);
 });
 Route::get('/services/{slug}', function (string $slug) {
-    return redirect('/fa/services/' . $slug, 301);
+    return redirect('/fa/services/'.$slug, 301);
 })->where('slug', '[a-zA-Z0-9\-]+');
 
 Route::get('/blog', function () {
     return redirect('/fa/blog', 301);
 });
 Route::get('/blog/{post}', function (string $post) {
-    return redirect('/fa/blog/' . $post, 301);
+    return redirect('/fa/blog/'.$post, 301);
 })->where('post', '[a-zA-Z0-9\-]+');
 
 Route::get('/consult', function () {
