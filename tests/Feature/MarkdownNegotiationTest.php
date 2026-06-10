@@ -24,8 +24,10 @@ class MarkdownNegotiationTest extends TestCase
 
         $content = $response->getContent();
         $this->assertStringContainsString('# ', $content);
-        $this->assertStringContainsString('Our Services', $content);
-        $this->assertStringContainsString('Latest from the Blog', $content);
+        $this->assertStringContainsString('Our Core Services', $content);
+        $this->assertStringContainsString('Explore French Cities', $content);
+        $this->assertStringContainsString('University Guides', $content);
+        $this->assertStringContainsString('Latest Immigration News', $content);
     }
 
     /**
