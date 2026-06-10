@@ -4,6 +4,11 @@ return [
     'logo_alt' => 'A.V.C: Education, Life, Investment in France.',
     'language' => 'Language',
 
+    // SEO
+    'seo' => [
+        'title_suffix' => ' | Your France Migration & Education Partner',
+    ],
+
     // Accessibility
     'skip_to_content' => 'Skip to main content',
     'mobile_navigation' => 'Mobile navigation',

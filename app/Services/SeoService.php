@@ -21,7 +21,16 @@ class SeoService
      */
     public function setTitle(string $title, bool $appendSuffix = true): self
     {
-        $suffix = $appendSuffix ? config('seo.defaults.title_suffix', '') : '';
+        $suffix = '';
+        if ($appendSuffix) {
+            $locale = app()->getLocale();
+            $suffix = __('layout.seo.title_suffix');
+            // Fallback if translation missing
+            if ($suffix === 'layout.seo.title_suffix') {
+                $suffix = config('seo.defaults.title_suffix', '');
+            }
+        }
+        
         $this->meta['title'] = $title.$suffix;
         $this->openGraph['og:title'] = $title;
         $this->twitter['twitter:title'] = $title;

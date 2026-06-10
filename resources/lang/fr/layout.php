@@ -4,6 +4,11 @@ return [
     'logo_alt' => 'A.V.C : Éducation, Vie, Investissement en France',
     'language' => 'Langue',
 
+    // SEO
+    'seo' => [
+        'title_suffix' => ' | Votre Partenaire Immigration & Éducation en France',
+    ],
+
     // Accessibilité
     'skip_to_content' => 'Aller au contenu principal',
     'mobile_navigation' => 'Navigation mobile',
