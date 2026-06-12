@@ -44,4 +44,3 @@ Schedule::command('indexnow:submit')
     ->weeklyOn(1, '03:00') // Every Monday at 3 AM
     ->withoutOverlapping()
     ->runInBackground();
-
