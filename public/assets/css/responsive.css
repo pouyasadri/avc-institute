@@ -70,7 +70,8 @@
     padding-bottom: 40px;
   }
 
-  .eorik-slider-item .eorik-slider-text h1 {
+  .eorik-slider-item .eorik-slider-text h1,
+  .eorik-slider-item .eorik-slider-text h2 {
     font-size: 32px;
     line-height: 1.25;
     margin-bottom: 15px;
@@ -1924,7 +1925,8 @@
     padding-bottom: 100px;
   }
 
-  .eorik-slider-item .eorik-slider-text h1 {
+  .eorik-slider-item .eorik-slider-text h1,
+  .eorik-slider-item .eorik-slider-text h2 {
     font-size: 55px;
     margin-bottom: 10px;
   }

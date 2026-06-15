@@ -1556,7 +1556,8 @@ Eorik SliderArea Style
     margin-top: -80px;
 }
 
-.eorik-slider-item .eorik-slider-text h1 {
+.eorik-slider-item .eorik-slider-text h1,
+.eorik-slider-item .eorik-slider-text h2 {
     font-size: 60px;
     color: #ffffff;
     margin-top: 30px;
@@ -1593,7 +1594,8 @@ Eorik SliderArea Style
     overflow: hidden;
 }
 
-.eorik-slider-area .owl-item.active .eorik-slider-text.one h1 {
+.eorik-slider-area .owl-item.active .eorik-slider-text.one h1,
+.eorik-slider-area .owl-item.active .eorik-slider-text.one h2 {
     -webkit-animation: 1s .1s fadeInUpBig both;
     animation: 1s .1s fadeInUpBig both;
 }
@@ -1608,7 +1610,8 @@ Eorik SliderArea Style
     animation: 3s .3s fadeInUpBig both;
 }
 
-.eorik-slider-area .owl-item.active .eorik-slider-text.two h1 {
+.eorik-slider-area .owl-item.active .eorik-slider-text.two h1,
+.eorik-slider-area .owl-item.active .eorik-slider-text.two h2 {
     -webkit-animation: 2s .2s fadeInLeft both;
     animation: 2s .2s fadeInLeft both;
 }
@@ -1623,7 +1626,8 @@ Eorik SliderArea Style
     animation: 2s .2s fadeInUpBig both;
 }
 
-.eorik-slider-area .owl-item.active .eorik-slider-text.three h1 {
+.eorik-slider-area .owl-item.active .eorik-slider-text.three h1,
+.eorik-slider-area .owl-item.active .eorik-slider-text.three h2 {
     -webkit-animation: 2s .2s fadeInDown both;
     animation: 2s .2s fadeInDown both;
 }

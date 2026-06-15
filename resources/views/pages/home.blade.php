@@ -48,7 +48,7 @@
                         <div class="d-table-cell">
                             <div class="container">
                                 <div class="eorik-slider-text overflow-hidden two">
-                                    <h1>{{ __('index.slider.slide2.title') }}</h1>
+                                    <h2>{{ __('index.slider.slide2.title') }}</h2>
                                     <span>{{ __('index.slider.slide2.subtitle') }}</span>
                                     <div class="slider-btn">
                                         <a class="default-btn" href="{{url(app()->getLocale() . "/consult")}}">
@@ -67,7 +67,7 @@
                         <div class="d-table-cell">
                             <div class="container">
                                 <div class="eorik-slider-text overflow-hidden three">
-                                    <h1>{{ __('index.slider.slide3.title') }}</h1>
+                                    <h2>{{ __('index.slider.slide3.title') }}</h2>
                                     <span>{{ __('index.slider.slide3.subtitle') }}</span>
                                     <div class="slider-btn">
                                         <a class="default-btn" href="{{url(app()->getLocale() . "/consult")}}">
