@@ -168,6 +168,36 @@
         <p>{{ __('city/lyon.visa_paragraph') }}</p>
     </section>
 
+    {{-- NEW: "ایرانیان شهر لیون فرانسه" — targeting 127-impression zero-click keyword --}}
+    <section class="mb-5" id="iranians-in-lyon">
+        <h3 class="h4 fw-bold mb-3">{{ __('city/lyon.iranians_heading') }}</h3>
+        <p>{{ __('city/lyon.iranians_paragraph_1') }}</p>
+        <p>{{ __('city/lyon.iranians_paragraph_2') }}</p>
+
+        @if(is_array(__('city/lyon.iranians_checklist')))
+            <div class="row g-2 my-3">
+                @foreach (__('city/lyon.iranians_checklist') as $item)
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-start p-3 rounded-4 bg-light border-0 h-100">
+                            <i class="bx bx-check-circle text-primary me-2 mt-1 fs-5"></i>
+                            <span class="small fw-medium">{{ $item }}</span>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        @endif
+
+        <p class="mt-3">{{ __('city/lyon.iranians_paragraph_3') }}</p>
+
+        <div class="mt-4">
+            <a href="{{ url($currentLocale . '/consult') }}"
+               class="btn btn-primary rounded-pill px-4 py-2">
+                <i class="bx bx-chat me-1"></i>
+                {{ __('city/lyon.consultation_request') }}
+            </a>
+        </div>
+    </section>
+
     <div class="mb-5">
         <img src="{{ asset('assets/img/cities/Lyon/lyon2.webp') }}" alt="{{ __('city/lyon.breadcrumb_lyon') }}"
             class="img-fluid rounded-4 shadow-sm w-100">
