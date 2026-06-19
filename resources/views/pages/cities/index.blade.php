@@ -109,62 +109,161 @@
                 </div>
 
                 {{-- مقایسه شهرها — targeting "بهترین شهرهای فرانسه برای تحصیل" keyword --}}
-                <div class="mb-5">
-                    <h3 class="h4 fw-bold mb-4 text-center">مقایسه بهترین شهرهای فرانسه برای ایرانیان ۲۰۲۶</h3>
-                    <div class="table-responsive rounded-4 shadow-sm">
-                        <table class="table table-hover align-middle mb-0 bg-white" id="cities-comparison-table">
-                            <thead class="table-primary">
-                                <tr>
-                                    <th class="px-4 py-3">🏙️ شهر</th>
-                                    <th class="px-4 py-3">💸 هزینه ماهانه</th>
-                                    <th class="px-4 py-3">🎓 دانشگاه‌های برتر</th>
-                                    <th class="px-4 py-3">👨‍👩‍👧 مناسب برای</th>
-                                    <th class="px-4 py-3">⭐ امتیاز ایرانیان</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="px-4 py-3 fw-bold">لیون</td>
-                                    <td class="px-4 py-3">۱۰۰۰–۱۳۵۰ €</td>
-                                    <td class="px-4 py-3">لیون ۱، ۲، ۳ | ENS Lyon</td>
-                                    <td class="px-4 py-3">دانشجو، خانواده</td>
-                                    <td class="px-4 py-3"><span class="badge bg-success">عالی ⭐⭐⭐⭐⭐</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="px-4 py-3 fw-bold">پاریس</td>
-                                    <td class="px-4 py-3">۱۴۰۰–۲۰۰۰ €</td>
-                                    <td class="px-4 py-3">سوربن | پاریس‌ساکله | Sciences Po</td>
-                                    <td class="px-4 py-3">دانشجو، متخصص</td>
-                                    <td class="px-4 py-3"><span class="badge bg-primary">بسیار خوب ⭐⭐⭐⭐</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="px-4 py-3 fw-bold">تولوز</td>
-                                    <td class="px-4 py-3">۱۰۰۰–۱۳۰۰ €</td>
-                                    <td class="px-4 py-3">دانشگاه تولوز | INSA</td>
-                                    <td class="px-4 py-3">مهندسی، هوافضا</td>
-                                    <td class="px-4 py-3"><span class="badge bg-success">عالی ⭐⭐⭐⭐⭐</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="px-4 py-3 fw-bold">استراسبورگ</td>
-                                    <td class="px-4 py-3">۹۰۰–۱۲۰۰ €</td>
-                                    <td class="px-4 py-3">دانشگاه استراسبورگ</td>
-                                    <td class="px-4 py-3">علوم انسانی، حقوق</td>
-                                    <td class="px-4 py-3"><span class="badge bg-info text-dark">خوب ⭐⭐⭐⭐</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="px-4 py-3 fw-bold">نیس</td>
-                                    <td class="px-4 py-3">۱۱۰۰–۱۵۰۰ €</td>
-                                    <td class="px-4 py-3">دانشگاه کوت دازور</td>
-                                    <td class="px-4 py-3">فناوری، کارآفرینی</td>
-                                    <td class="px-4 py-3"><span class="badge bg-primary">بسیار خوب ⭐⭐⭐⭐</span></td>
-                                </tr>
-                            </tbody>
-                        </table>
+                <div class="mb-5" id="cities-comparison">
+                    <h3 class="h4 fw-bold mb-2 text-center">مقایسه بهترین شهرهای فرانسه برای ایرانیان ۲۰۲۶</h3>
+                    <p class="text-muted text-center mb-4 small">هزینه‌ها شامل اجاره، غذا و حمل‌ونقل است. با کمک‌هزینه CAF، اجاره تا ۴۰٪ کاهش می‌یابد.</p>
+
+                    <div class="row g-3 row-cols-1 row-cols-sm-2 row-cols-xl-5">
+
+                        {{-- لیون --}}
+                        <div class="col">
+                            <div class="city-compare-card h-100 rounded-4 p-4 bg-white shadow-sm border-0 d-flex flex-column">
+                                <div class="d-flex align-items-center gap-2 mb-3">
+                                    <span class="city-icon fs-2">🦁</span>
+                                    <div>
+                                        <h4 class="h6 fw-bold mb-0">لیون</h4>
+                                        <span class="badge bg-success-subtle text-success small">محبوب ایرانیان</span>
+                                    </div>
+                                </div>
+                                <div class="mb-2">
+                                    <div class="d-flex justify-content-between small text-muted mb-1">
+                                        <span>💸 هزینه ماهانه</span>
+                                    </div>
+                                    <div class="cost-pill fw-bold text-primary">۱۰۰۰–۱۳۵۰ €</div>
+                                    <div class="progress mt-1" style="height:4px;">
+                                        <div class="progress-bar bg-success" style="width:55%"></div>
+                                    </div>
+                                </div>
+                                <ul class="list-unstyled small text-muted mt-2 mb-3 flex-grow-1">
+                                    <li class="mb-1"><i class="bx bx-check text-success me-1"></i>لیون ۱، ۲، ۳ | ENS Lyon</li>
+                                    <li class="mb-1"><i class="bx bx-group text-primary me-1"></i>دانشجو و خانواده</li>
+                                    <li><i class="bx bx-heart text-danger me-1"></i>جامعه ایرانی فعال</li>
+                                </ul>
+                                <a href="{{ url($currentLocale . '/cities/lyon') }}" class="btn btn-outline-primary btn-sm rounded-pill mt-auto">بیشتر بدان</a>
+                            </div>
+                        </div>
+
+                        {{-- پاریس --}}
+                        <div class="col">
+                            <div class="city-compare-card h-100 rounded-4 p-4 bg-white shadow-sm border-0 d-flex flex-column">
+                                <div class="d-flex align-items-center gap-2 mb-3">
+                                    <span class="city-icon fs-2">🗼</span>
+                                    <div>
+                                        <h4 class="h6 fw-bold mb-0">پاریس</h4>
+                                        <span class="badge bg-primary-subtle text-primary small">معتبرترین مدرک</span>
+                                    </div>
+                                </div>
+                                <div class="mb-2">
+                                    <div class="d-flex justify-content-between small text-muted mb-1">
+                                        <span>💸 هزینه ماهانه</span>
+                                    </div>
+                                    <div class="cost-pill fw-bold text-primary">۱۴۰۰–۲۰۰۰ €</div>
+                                    <div class="progress mt-1" style="height:4px;">
+                                        <div class="progress-bar bg-danger" style="width:90%"></div>
+                                    </div>
+                                </div>
+                                <ul class="list-unstyled small text-muted mt-2 mb-3 flex-grow-1">
+                                    <li class="mb-1"><i class="bx bx-check text-success me-1"></i>سوربن | پاریس‌ساکله | Sciences Po</li>
+                                    <li class="mb-1"><i class="bx bx-group text-primary me-1"></i>دانشجو و متخصص</li>
+                                    <li><i class="bx bx-trending-up text-warning me-1"></i>بالاترین اعتبار مدرک</li>
+                                </ul>
+                                <a href="{{ url($currentLocale . '/cities/paris') }}" class="btn btn-outline-primary btn-sm rounded-pill mt-auto">بیشتر بدان</a>
+                            </div>
+                        </div>
+
+                        {{-- تولوز --}}
+                        <div class="col">
+                            <div class="city-compare-card h-100 rounded-4 p-4 bg-white shadow-sm border-0 d-flex flex-column">
+                                <div class="d-flex align-items-center gap-2 mb-3">
+                                    <span class="city-icon fs-2">✈️</span>
+                                    <div>
+                                        <h4 class="h6 fw-bold mb-0">تولوز</h4>
+                                        <span class="badge bg-warning-subtle text-warning-emphasis small">بهترین برای مهندسی</span>
+                                    </div>
+                                </div>
+                                <div class="mb-2">
+                                    <div class="d-flex justify-content-between small text-muted mb-1">
+                                        <span>💸 هزینه ماهانه</span>
+                                    </div>
+                                    <div class="cost-pill fw-bold text-primary">۱۰۰۰–۱۳۰۰ €</div>
+                                    <div class="progress mt-1" style="height:4px;">
+                                        <div class="progress-bar bg-success" style="width:50%"></div>
+                                    </div>
+                                </div>
+                                <ul class="list-unstyled small text-muted mt-2 mb-3 flex-grow-1">
+                                    <li class="mb-1"><i class="bx bx-check text-success me-1"></i>دانشگاه تولوز | INSA</li>
+                                    <li class="mb-1"><i class="bx bx-group text-primary me-1"></i>مهندسی و هوافضا</li>
+                                    <li><i class="bx bx-buildings text-info me-1"></i>Airbus و صنایع برتر</li>
+                                </ul>
+                                <a href="{{ url($currentLocale . '/cities/toulouse') }}" class="btn btn-outline-primary btn-sm rounded-pill mt-auto">بیشتر بدان</a>
+                            </div>
+                        </div>
+
+                        {{-- استراسبورگ --}}
+                        <div class="col">
+                            <div class="city-compare-card h-100 rounded-4 p-4 bg-white shadow-sm border-0 d-flex flex-column">
+                                <div class="d-flex align-items-center gap-2 mb-3">
+                                    <span class="city-icon fs-2">🏛️</span>
+                                    <div>
+                                        <h4 class="h6 fw-bold mb-0">استراسبورگ</h4>
+                                        <span class="badge bg-info-subtle text-info small">ارزان‌ترین گزینه</span>
+                                    </div>
+                                </div>
+                                <div class="mb-2">
+                                    <div class="d-flex justify-content-between small text-muted mb-1">
+                                        <span>💸 هزینه ماهانه</span>
+                                    </div>
+                                    <div class="cost-pill fw-bold text-primary">۹۰۰–۱۲۰۰ €</div>
+                                    <div class="progress mt-1" style="height:4px;">
+                                        <div class="progress-bar bg-info" style="width:40%"></div>
+                                    </div>
+                                </div>
+                                <ul class="list-unstyled small text-muted mt-2 mb-3 flex-grow-1">
+                                    <li class="mb-1"><i class="bx bx-check text-success me-1"></i>دانشگاه استراسبورگ</li>
+                                    <li class="mb-1"><i class="bx bx-group text-primary me-1"></i>علوم انسانی، حقوق</li>
+                                    <li><i class="bx bx-globe text-success me-1"></i>قلب اروپا، دو زبانه</li>
+                                </ul>
+                                <a href="{{ url($currentLocale . '/cities/strasbourg') }}" class="btn btn-outline-primary btn-sm rounded-pill mt-auto">بیشتر بدان</a>
+                            </div>
+                        </div>
+
+                        {{-- نیس --}}
+                        <div class="col">
+                            <div class="city-compare-card h-100 rounded-4 p-4 bg-white shadow-sm border-0 d-flex flex-column">
+                                <div class="d-flex align-items-center gap-2 mb-3">
+                                    <span class="city-icon fs-2">☀️</span>
+                                    <div>
+                                        <h4 class="h6 fw-bold mb-0">نیس</h4>
+                                        <span class="badge bg-danger-subtle text-danger small">بهترین آب‌وهوا</span>
+                                    </div>
+                                </div>
+                                <div class="mb-2">
+                                    <div class="d-flex justify-content-between small text-muted mb-1">
+                                        <span>💸 هزینه ماهانه</span>
+                                    </div>
+                                    <div class="cost-pill fw-bold text-primary">۱۱۰۰–۱۵۰۰ €</div>
+                                    <div class="progress mt-1" style="height:4px;">
+                                        <div class="progress-bar bg-warning" style="width:65%"></div>
+                                    </div>
+                                </div>
+                                <ul class="list-unstyled small text-muted mt-2 mb-3 flex-grow-1">
+                                    <li class="mb-1"><i class="bx bx-check text-success me-1"></i>دانشگاه کوت دازور</li>
+                                    <li class="mb-1"><i class="bx bx-group text-primary me-1"></i>فناوری، کارآفرینی</li>
+                                    <li><i class="bx bx-sun text-warning me-1"></i>مدیترانه و آفتاب</li>
+                                </ul>
+                                <a href="{{ url($currentLocale . '/cities/nice') }}" class="btn btn-outline-primary btn-sm rounded-pill mt-auto">بیشتر بدان</a>
+                            </div>
+                        </div>
+
                     </div>
-                    <p class="text-muted small mt-3 text-center">
-                        * هزینه‌ها شامل اجاره، غذا و حمل‌ونقل است. با کمک‌هزینه CAF، هزینه اجاره تا ۴۰٪ کاهش می‌یابد.
-                        <a href="{{ url($currentLocale . '/consult') }}" class="text-primary fw-bold ms-1">مشاوره رایگان بگیرید ←</a>
-                    </p>
+
+                    <div class="text-center mt-4">
+                        <a href="{{ url($currentLocale . '/consult') }}"
+                           class="btn btn-primary rounded-pill px-5 py-2 shadow-sm">
+                            <i class="bx bx-chat me-2"></i>
+                            مشاوره رایگان — کدام شهر برای من مناسب‌تر است؟
+                        </a>
+                    </div>
                 </div>
 
                 <div class="row g-4">
@@ -235,6 +334,33 @@
                         -webkit-line-clamp: 3;
                         -webkit-box-orient: vertical;
                         overflow: hidden;
+                    }
+
+                    /* City Comparison Cards */
+                    .city-compare-card {
+                        transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+                        border: 1.5px solid transparent !important;
+                    }
+
+                    .city-compare-card:hover {
+                        transform: translateY(-6px);
+                        box-shadow: 0 0.75rem 2rem rgba(0, 0, 0, 0.1) !important;
+                        border-color: var(--bs-primary) !important;
+                    }
+
+                    .city-compare-card .cost-pill {
+                        font-size: 1.1rem;
+                        letter-spacing: -0.02em;
+                    }
+
+                    .city-compare-card .city-icon {
+                        line-height: 1;
+                        filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+                    }
+
+                    .city-compare-card .progress {
+                        background-color: #f0f0f0;
+                        border-radius: 10px;
                     }
                 </style>
             </div>
