@@ -31,6 +31,38 @@
         </header>
         <!-- End Page Title Area -->
 
+        {{-- Trust Signal Bar — targeting "موسسه مهاجرتی فرانسه" and "مشاوره مهاجرت تحصیلی" keywords --}}
+        <section class="py-4 bg-primary text-white" id="consult-trust-bar">
+            <div class="container">
+                <div class="row g-3 text-center justify-content-center">
+                    <div class="col-6 col-md-3">
+                        <div class="px-3">
+                            <div class="display-6 fw-bold">+۱۰</div>
+                            <div class="small opacity-75">سال تجربه در مهاجرت فرانسه</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="px-3">
+                            <div class="display-6 fw-bold">+۵۰۰</div>
+                            <div class="small opacity-75">ایرانی موفق به فرانسه</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="px-3">
+                            <div class="display-6 fw-bold">۳</div>
+                            <div class="small opacity-75">زبان پشتیبانی (فارسی، فرانسه، انگلیسی)</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="px-3">
+                            <div class="display-6 fw-bold">رایگان</div>
+                            <div class="small opacity-75">مشاوره اولیه برای همه</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <x-sections.features :subtitle="__('consult.facilities_section_title')"
             :title="__('consult.facilities_section_heading')" :items="[
             ['icon' => 'globe', 'label' => __('consult.residence_france_subtitle'), 'title' => __('consult.residence_france_title'), 'description' => __('consult.residence_france_description')],
