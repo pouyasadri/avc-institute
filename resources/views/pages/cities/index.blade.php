@@ -108,6 +108,65 @@
                     </p>
                 </div>
 
+                {{-- مقایسه شهرها — targeting "بهترین شهرهای فرانسه برای تحصیل" keyword --}}
+                <div class="mb-5">
+                    <h3 class="h4 fw-bold mb-4 text-center">مقایسه بهترین شهرهای فرانسه برای ایرانیان ۲۰۲۶</h3>
+                    <div class="table-responsive rounded-4 shadow-sm">
+                        <table class="table table-hover align-middle mb-0 bg-white" id="cities-comparison-table">
+                            <thead class="table-primary">
+                                <tr>
+                                    <th class="px-4 py-3">🏙️ شهر</th>
+                                    <th class="px-4 py-3">💸 هزینه ماهانه</th>
+                                    <th class="px-4 py-3">🎓 دانشگاه‌های برتر</th>
+                                    <th class="px-4 py-3">👨‍👩‍👧 مناسب برای</th>
+                                    <th class="px-4 py-3">⭐ امتیاز ایرانیان</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="px-4 py-3 fw-bold">لیون</td>
+                                    <td class="px-4 py-3">۱۰۰۰–۱۳۵۰ €</td>
+                                    <td class="px-4 py-3">لیون ۱، ۲، ۳ | ENS Lyon</td>
+                                    <td class="px-4 py-3">دانشجو، خانواده</td>
+                                    <td class="px-4 py-3"><span class="badge bg-success">عالی ⭐⭐⭐⭐⭐</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-3 fw-bold">پاریس</td>
+                                    <td class="px-4 py-3">۱۴۰۰–۲۰۰۰ €</td>
+                                    <td class="px-4 py-3">سوربن | پاریس‌ساکله | Sciences Po</td>
+                                    <td class="px-4 py-3">دانشجو، متخصص</td>
+                                    <td class="px-4 py-3"><span class="badge bg-primary">بسیار خوب ⭐⭐⭐⭐</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-3 fw-bold">تولوز</td>
+                                    <td class="px-4 py-3">۱۰۰۰–۱۳۰۰ €</td>
+                                    <td class="px-4 py-3">دانشگاه تولوز | INSA</td>
+                                    <td class="px-4 py-3">مهندسی، هوافضا</td>
+                                    <td class="px-4 py-3"><span class="badge bg-success">عالی ⭐⭐⭐⭐⭐</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-3 fw-bold">استراسبورگ</td>
+                                    <td class="px-4 py-3">۹۰۰–۱۲۰۰ €</td>
+                                    <td class="px-4 py-3">دانشگاه استراسبورگ</td>
+                                    <td class="px-4 py-3">علوم انسانی، حقوق</td>
+                                    <td class="px-4 py-3"><span class="badge bg-info text-dark">خوب ⭐⭐⭐⭐</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-3 fw-bold">نیس</td>
+                                    <td class="px-4 py-3">۱۱۰۰–۱۵۰۰ €</td>
+                                    <td class="px-4 py-3">دانشگاه کوت دازور</td>
+                                    <td class="px-4 py-3">فناوری، کارآفرینی</td>
+                                    <td class="px-4 py-3"><span class="badge bg-primary">بسیار خوب ⭐⭐⭐⭐</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="text-muted small mt-3 text-center">
+                        * هزینه‌ها شامل اجاره، غذا و حمل‌ونقل است. با کمک‌هزینه CAF، هزینه اجاره تا ۴۰٪ کاهش می‌یابد.
+                        <a href="{{ url($currentLocale . '/consult') }}" class="text-primary fw-bold ms-1">مشاوره رایگان بگیرید ←</a>
+                    </p>
+                </div>
+
                 <div class="row g-4">
                     @foreach ($cities as $city)
                         <div class="col-lg-6">
