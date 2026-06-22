@@ -474,4 +474,21 @@
     body.mobile-menu-open {
         overflow: hidden;
     }
+
+    /* Optimize LTR desktop navbar layout to prevent overflow on English/French locales */
+    body.ltr .navbar-area {
+        width: 95%;
+        max-width: 1280px;
+    }
+    body.ltr .main-nav nav .navbar-nav .nav-item a {
+        font-family: 'Inter', sans-serif;
+        font-size: 14px;
+        padding: 8px 12px !important;
+        margin: 0 2px;
+    }
+    body.ltr .navbar-consult-cta {
+        padding: 8px 14px;
+        font-size: 0.85rem;
+        margin-left: 10px;
+    }
 </style>
