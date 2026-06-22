@@ -37,26 +37,26 @@
                 <div class="row g-3 text-center justify-content-center">
                     <div class="col-6 col-md-3">
                         <div class="px-3">
-                            <div class="display-6 fw-bold">+۱۰</div>
-                            <div class="small opacity-75">سال تجربه در مهاجرت فرانسه</div>
+                            <div class="display-6 fw-bold">{{ __('consult.stats_years_value') }}</div>
+                            <div class="small opacity-75">{{ __('consult.stats_years_label') }}</div>
                         </div>
                     </div>
                     <div class="col-6 col-md-3">
                         <div class="px-3">
-                            <div class="display-6 fw-bold">+۵۰۰</div>
-                            <div class="small opacity-75">ایرانی موفق به فرانسه</div>
+                            <div class="display-6 fw-bold">{{ __('consult.stats_success_value') }}</div>
+                            <div class="small opacity-75">{{ __('consult.stats_success_label') }}</div>
                         </div>
                     </div>
                     <div class="col-6 col-md-3">
                         <div class="px-3">
-                            <div class="display-6 fw-bold">۳</div>
-                            <div class="small opacity-75">زبان پشتیبانی (فارسی، فرانسه، انگلیسی)</div>
+                            <div class="display-6 fw-bold">{{ __('consult.stats_languages_value') }}</div>
+                            <div class="small opacity-75">{{ __('consult.stats_languages_label') }}</div>
                         </div>
                     </div>
                     <div class="col-6 col-md-3">
                         <div class="px-3">
-                            <div class="display-6 fw-bold">رایگان</div>
-                            <div class="small opacity-75">مشاوره اولیه برای همه</div>
+                            <div class="display-6 fw-bold">{{ __('consult.stats_price_value') }}</div>
+                            <div class="small opacity-75">{{ __('consult.stats_price_label') }}</div>
                         </div>
                     </div>
                 </div>

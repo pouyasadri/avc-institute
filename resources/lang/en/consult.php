@@ -99,4 +99,14 @@ return [
 
     'legal_services' => 'Legal Services',
     'legal_services_description' => 'We have experienced and specialized lawyers in France and Iran who can handle all your legal matters in these two countries. We will proudly be by your side to solve your problems in France and Iran with the best legal services. We look forward to working with you.',
+
+    // Trust signal stats
+    'stats_years_value' => '+10',
+    'stats_years_label' => 'Years of experience in France immigration',
+    'stats_success_value' => '+500',
+    'stats_success_label' => 'Successful Iranians in France',
+    'stats_languages_value' => '3',
+    'stats_languages_label' => 'Supported languages (Persian, French, English)',
+    'stats_price_value' => 'Free',
+    'stats_price_label' => 'Initial consultation for everyone',
 ];

@@ -99,4 +99,14 @@ return [
 
     'legal_services' => 'خدمات حقوقی',
     'legal_services_description' => 'ما وکلا با تجربه و متخصص در فرانسه و ایران داریم که می‌توانند به تمام مسائل حقوقی شما در این دو کشور رسیدگی کنند. با افتخار در کنارتان خواهیم بود تا با بهترین خدمات حقوقی، مشکلات شما را در فرانسه و ایران حل کنیم. منتظر همکاری با شما هستیم.',
+
+    // Trust signal stats
+    'stats_years_value' => '+۱۰',
+    'stats_years_label' => 'سال تجربه در مهاجرت فرانسه',
+    'stats_success_value' => '+۵۰۰',
+    'stats_success_label' => 'ایرانی موفق به فرانسه',
+    'stats_languages_value' => '۳',
+    'stats_languages_label' => 'زبان پشتیبانی (فارسی، فرانسه، انگلیسی)',
+    'stats_price_value' => 'رایگان',
+    'stats_price_label' => 'مشاوره اولیه برای همه',
 ];

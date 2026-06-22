@@ -99,4 +99,14 @@ return [
 
     'legal_services' => 'Services Juridiques',
     'legal_services_description' => 'Nous avons des avocats expérimentés et spécialisés en France et en Iran qui peuvent traiter toutes vos questions juridiques dans ces deux pays. Nous serons fièrement à vos côtés pour résoudre vos problèmes en France et en Iran avec les meilleurs services juridiques. Nous avons hâte de travailler avec vous.',
+
+    // Trust signal stats
+    'stats_years_value' => '+10',
+    'stats_years_label' => 'Années d\'expérience en immigration France',
+    'stats_success_value' => '+500',
+    'stats_success_label' => 'Iraniens ayant réussi en France',
+    'stats_languages_value' => '3',
+    'stats_languages_label' => 'Langues supportées (Persan, Français, Anglais)',
+    'stats_price_value' => 'Gratuit',
+    'stats_price_label' => 'Consultation initiale pour tous',
 ];
