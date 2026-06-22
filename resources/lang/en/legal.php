@@ -27,7 +27,7 @@ return [
             [
                 'icon' => 'bx bx-shield-check',
                 'title' => 'Registered in France',
-                'description' => 'We are officially registered in the French National Business Register (RNE), maintained by the INPI — the French intellectual property and business authority.',
+                'description' => 'We are officially registered in the French National Business Register (RNE), maintained by the INPI, the French intellectual property and business authority.',
             ],
             [
                 'icon' => 'bx bx-file',
@@ -62,7 +62,7 @@ return [
             'inpi_link' => 'Verify on INPI',
         ],
         'values' => [
-            'legal_form' => 'SAS — Société par actions simplifiée',
+            'legal_form' => 'SAS (Société par actions simplifiée)',
             'naf_label' => 'Real estate dealer activities',
             'address' => '57 Route de Hausbergen, 67300 Schiltigheim, France',
             'share_capital' => '€1,000 (fixed)',
@@ -76,6 +76,6 @@ return [
 
     'disclaimer' => [
         'title' => 'Data Source',
-        'text' => 'The information on this page is sourced directly from the French National Business Register (Registre National des Entreprises — RNE), maintained by the Institut National de la Propriété Industrielle (INPI). It is provided for transparency and public verification purposes.',
+        'text' => 'The information on this page is sourced directly from the French National Business Register (Registre National des Entreprises, RNE), maintained by the Institut National de la Propriété Industrielle (INPI). It is provided for transparency and public verification purposes.',
     ],
 ];

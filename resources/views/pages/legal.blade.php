@@ -142,34 +142,21 @@
                                     <span class="data-label">{{ $fields['address'] }}</span>
                                     <span class="data-value">{{ $values['address'] }}</span>
                                 </div>
-                                <div class="data-row">
-                                    <span class="data-label">{{ $fields['share_capital'] }}</span>
-                                    <span class="data-value">{{ $values['share_capital'] }}</span>
-                                </div>
-                                <div class="data-row">
-                                    <span class="data-label">{{ $fields['founding_date'] }}</span>
-                                    <span class="data-value">{{ $values['founding_date'] }}</span>
-                                </div>
-                                <div class="data-row">
-                                    <span class="data-label">{{ $fields['rne_date'] }}</span>
-                                    <span class="data-value">{{ $values['rne_date'] }}</span>
-                                </div>
-                                <div class="data-row">
-                                    <span class="data-label">{{ $fields['nature'] }}</span>
-                                    <span class="data-value">{{ $values['nature'] }}</span>
-                                </div>
                             </div>
 
-                            <div class="mt-4 p-4 bg-primary bg-opacity-10 rounded-4 border border-primary border-opacity-25 d-flex align-items-center flex-wrap gap-3">
+                            <div class="mt-4 p-4 rounded-4 shadow-sm d-flex align-items-center flex-wrap gap-3" style="background: linear-gradient(135deg, #0F3A80, #1d4b8f); color: white; border: 1px solid rgba(255,255,255,0.15);">
                                 <div>
-                                    <i class="bx bx-check-shield text-primary" style="font-size: 2.5rem;"></i>
+                                    <i class="bx bx-check-shield text-warning" style="font-size: 2.5rem;"></i>
                                 </div>
                                 <div class="flex-grow-1">
-                                    <strong class="d-block text-dark">{{ __('legal.registration.inpi_label') }}</strong>
-                                    <span class="text-muted small">annuaire-entreprises.data.gouv.fr</span>
+                                    <strong class="d-block text-white" style="font-size: 1.1rem;">{{ __('legal.registration.inpi_label') }}</strong>
+                                    <span class="text-white-50 small">annuaire-entreprises.data.gouv.fr</span>
                                 </div>
                                 <a href="{{ $org['inpi_url'] ?? 'https://annuaire-entreprises.data.gouv.fr/entreprise/983675331' }}"
-                                   class="default-btn"
+                                   class="btn btn-light rounded-pill px-4 py-2 fw-bold text-primary shadow-sm"
+                                   style="transition: all 0.3s ease;"
+                                   onmouseover="this.style.transform='translateY(-2px)';"
+                                   onmouseout="this.style.transform='none';"
                                    target="_blank"
                                    rel="noopener noreferrer">
                                     {{ __('legal.registration.inpi_button') }}

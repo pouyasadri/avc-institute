@@ -27,7 +27,7 @@ return [
             [
                 'icon' => 'bx bx-shield-check',
                 'title' => 'Immatriculée en France',
-                'description' => 'Nous sommes officiellement immatriculée au Registre National des Entreprises (RNE), tenu par l\'INPI — l\'autorité française en matière de propriété intellectuelle et d\'identification des entreprises.',
+                'description' => 'Nous sommes officiellement immatriculée au Registre National des Entreprises (RNE), tenu par l\'INPI, l\'autorité française en matière de propriété intellectuelle et d\'identification des entreprises.',
             ],
             [
                 'icon' => 'bx bx-file',
@@ -62,7 +62,7 @@ return [
             'inpi_link' => 'Vérifier sur l\'INPI',
         ],
         'values' => [
-            'legal_form' => 'SAS — Société par actions simplifiée',
+            'legal_form' => 'SAS (Société par actions simplifiée)',
             'naf_label' => 'Activités des marchands de biens immobiliers',
             'address' => '57 Route de Hausbergen, 67300 Schiltigheim, France',
             'share_capital' => '1 000 € (fixe)',
