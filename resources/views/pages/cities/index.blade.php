@@ -110,8 +110,8 @@
 
                 {{-- مقایسه شهرها — targeting "بهترین شهرهای فرانسه برای تحصیل" keyword --}}
                 <div class="mb-5" id="cities-comparison">
-                    <h3 class="h4 fw-bold mb-2 text-center">مقایسه بهترین شهرهای فرانسه برای ایرانیان ۲۰۲۶</h3>
-                    <p class="text-muted text-center mb-4 small">هزینه‌ها شامل اجاره، غذا و حمل‌ونقل است. با کمک‌هزینه CAF، اجاره تا ۴۰٪ کاهش می‌یابد.</p>
+                    <h3 class="h4 fw-bold mb-2 text-center">{{ __('cities.comparison_title') }}</h3>
+                    <p class="text-muted text-center mb-4 small">{{ __('cities.comparison_subtitle') }}</p>
 
                     <div class="row g-3 row-cols-1 row-cols-sm-2 row-cols-xl-5">
 
@@ -121,13 +121,13 @@
                                 <div class="d-flex align-items-center gap-2 mb-3">
                                     <span class="city-icon fs-2">🦁</span>
                                     <div>
-                                        <h4 class="h6 fw-bold mb-0">لیون</h4>
-                                        <span class="badge bg-success-subtle text-success small">محبوب ایرانیان</span>
+                                        <h4 class="h6 fw-bold mb-0">{{ __('cities.lyon') }}</h4>
+                                        <span class="badge bg-success-subtle text-success small">{{ __('cities.lyon_tag') }}</span>
                                     </div>
                                 </div>
                                 <div class="mb-2">
                                     <div class="d-flex justify-content-between small text-muted mb-1">
-                                        <span>💸 هزینه ماهانه</span>
+                                        <span>💸 {{ __('cities.comparison_monthly_cost') }}</span>
                                     </div>
                                     <div class="cost-pill fw-bold text-primary">۱۰۰۰–۱۳۵۰ €</div>
                                     <div class="progress mt-1" style="height:4px;">
@@ -135,11 +135,11 @@
                                     </div>
                                 </div>
                                 <ul class="list-unstyled small text-muted mt-2 mb-3 flex-grow-1">
-                                    <li class="mb-1"><i class="bx bx-check text-success me-1"></i>لیون ۱، ۲، ۳ | ENS Lyon</li>
-                                    <li class="mb-1"><i class="bx bx-group text-primary me-1"></i>دانشجو و خانواده</li>
-                                    <li><i class="bx bx-heart text-danger me-1"></i>جامعه ایرانی فعال</li>
+                                    <li class="mb-1"><i class="bx bx-check text-success me-1"></i>{{ __('cities.lyon_feature_1') }}</li>
+                                    <li class="mb-1"><i class="bx bx-group text-primary me-1"></i>{{ __('cities.lyon_feature_2') }}</li>
+                                    <li><i class="bx bx-heart text-danger me-1"></i>{{ __('cities.lyon_feature_3') }}</li>
                                 </ul>
-                                <a href="{{ url($currentLocale . '/cities/lyon') }}" class="btn btn-outline-primary btn-sm rounded-pill mt-auto">بیشتر بدان</a>
+                                <a href="{{ url($currentLocale . '/cities/lyon') }}" class="btn btn-outline-primary btn-sm rounded-pill mt-auto">{{ __('cities.comparison_more_info') }}</a>
                             </div>
                         </div>
 
@@ -149,13 +149,13 @@
                                 <div class="d-flex align-items-center gap-2 mb-3">
                                     <span class="city-icon fs-2">🗼</span>
                                     <div>
-                                        <h4 class="h6 fw-bold mb-0">پاریس</h4>
-                                        <span class="badge bg-primary-subtle text-primary small">معتبرترین مدرک</span>
+                                        <h4 class="h6 fw-bold mb-0">{{ __('cities.paris') }}</h4>
+                                        <span class="badge bg-primary-subtle text-primary small">{{ __('cities.paris_tag') }}</span>
                                     </div>
                                 </div>
                                 <div class="mb-2">
                                     <div class="d-flex justify-content-between small text-muted mb-1">
-                                        <span>💸 هزینه ماهانه</span>
+                                        <span>💸 {{ __('cities.comparison_monthly_cost') }}</span>
                                     </div>
                                     <div class="cost-pill fw-bold text-primary">۱۴۰۰–۲۰۰۰ €</div>
                                     <div class="progress mt-1" style="height:4px;">
@@ -163,11 +163,11 @@
                                     </div>
                                 </div>
                                 <ul class="list-unstyled small text-muted mt-2 mb-3 flex-grow-1">
-                                    <li class="mb-1"><i class="bx bx-check text-success me-1"></i>سوربن | پاریس‌ساکله | Sciences Po</li>
-                                    <li class="mb-1"><i class="bx bx-group text-primary me-1"></i>دانشجو و متخصص</li>
-                                    <li><i class="bx bx-trending-up text-warning me-1"></i>بالاترین اعتبار مدرک</li>
+                                    <li class="mb-1"><i class="bx bx-check text-success me-1"></i>{{ __('cities.paris_feature_1') }}</li>
+                                    <li class="mb-1"><i class="bx bx-group text-primary me-1"></i>{{ __('cities.paris_feature_2') }}</li>
+                                    <li><i class="bx bx-trending-up text-warning me-1"></i>{{ __('cities.paris_feature_3') }}</li>
                                 </ul>
-                                <a href="{{ url($currentLocale . '/cities/paris') }}" class="btn btn-outline-primary btn-sm rounded-pill mt-auto">بیشتر بدان</a>
+                                <a href="{{ url($currentLocale . '/cities/paris') }}" class="btn btn-outline-primary btn-sm rounded-pill mt-auto">{{ __('cities.comparison_more_info') }}</a>
                             </div>
                         </div>
 
@@ -177,13 +177,13 @@
                                 <div class="d-flex align-items-center gap-2 mb-3">
                                     <span class="city-icon fs-2">✈️</span>
                                     <div>
-                                        <h4 class="h6 fw-bold mb-0">تولوز</h4>
-                                        <span class="badge bg-warning-subtle text-warning-emphasis small">بهترین برای مهندسی</span>
+                                        <h4 class="h6 fw-bold mb-0">{{ __('cities.toulouse') }}</h4>
+                                        <span class="badge bg-warning-subtle text-warning-emphasis small">{{ __('cities.toulouse_tag') }}</span>
                                     </div>
                                 </div>
                                 <div class="mb-2">
                                     <div class="d-flex justify-content-between small text-muted mb-1">
-                                        <span>💸 هزینه ماهانه</span>
+                                        <span>💸 {{ __('cities.comparison_monthly_cost') }}</span>
                                     </div>
                                     <div class="cost-pill fw-bold text-primary">۱۰۰۰–۱۳۰۰ €</div>
                                     <div class="progress mt-1" style="height:4px;">
@@ -191,11 +191,11 @@
                                     </div>
                                 </div>
                                 <ul class="list-unstyled small text-muted mt-2 mb-3 flex-grow-1">
-                                    <li class="mb-1"><i class="bx bx-check text-success me-1"></i>دانشگاه تولوز | INSA</li>
-                                    <li class="mb-1"><i class="bx bx-group text-primary me-1"></i>مهندسی و هوافضا</li>
-                                    <li><i class="bx bx-buildings text-info me-1"></i>Airbus و صنایع برتر</li>
+                                    <li class="mb-1"><i class="bx bx-check text-success me-1"></i>{{ __('cities.toulouse_feature_1') }}</li>
+                                    <li class="mb-1"><i class="bx bx-group text-primary me-1"></i>{{ __('cities.toulouse_feature_2') }}</li>
+                                    <li><i class="bx bx-buildings text-info me-1"></i>{{ __('cities.toulouse_feature_3') }}</li>
                                 </ul>
-                                <a href="{{ url($currentLocale . '/cities/toulouse') }}" class="btn btn-outline-primary btn-sm rounded-pill mt-auto">بیشتر بدان</a>
+                                <a href="{{ url($currentLocale . '/cities/toulouse') }}" class="btn btn-outline-primary btn-sm rounded-pill mt-auto">{{ __('cities.comparison_more_info') }}</a>
                             </div>
                         </div>
 
@@ -205,13 +205,13 @@
                                 <div class="d-flex align-items-center gap-2 mb-3">
                                     <span class="city-icon fs-2">🏛️</span>
                                     <div>
-                                        <h4 class="h6 fw-bold mb-0">استراسبورگ</h4>
-                                        <span class="badge bg-info-subtle text-info small">ارزان‌ترین گزینه</span>
+                                        <h4 class="h6 fw-bold mb-0">{{ __('cities.strasbourg') }}</h4>
+                                        <span class="badge bg-info-subtle text-info small">{{ __('cities.strasbourg_tag') }}</span>
                                     </div>
                                 </div>
                                 <div class="mb-2">
                                     <div class="d-flex justify-content-between small text-muted mb-1">
-                                        <span>💸 هزینه ماهانه</span>
+                                        <span>💸 {{ __('cities.comparison_monthly_cost') }}</span>
                                     </div>
                                     <div class="cost-pill fw-bold text-primary">۹۰۰–۱۲۰۰ €</div>
                                     <div class="progress mt-1" style="height:4px;">
@@ -219,11 +219,11 @@
                                     </div>
                                 </div>
                                 <ul class="list-unstyled small text-muted mt-2 mb-3 flex-grow-1">
-                                    <li class="mb-1"><i class="bx bx-check text-success me-1"></i>دانشگاه استراسبورگ</li>
-                                    <li class="mb-1"><i class="bx bx-group text-primary me-1"></i>علوم انسانی، حقوق</li>
-                                    <li><i class="bx bx-globe text-success me-1"></i>قلب اروپا، دو زبانه</li>
+                                    <li class="mb-1"><i class="bx bx-check text-success me-1"></i>{{ __('cities.strasbourg_feature_1') }}</li>
+                                    <li class="mb-1"><i class="bx bx-group text-primary me-1"></i>{{ __('cities.strasbourg_feature_2') }}</li>
+                                    <li><i class="bx bx-globe text-success me-1"></i>{{ __('cities.strasbourg_feature_3') }}</li>
                                 </ul>
-                                <a href="{{ url($currentLocale . '/cities/strasbourg') }}" class="btn btn-outline-primary btn-sm rounded-pill mt-auto">بیشتر بدان</a>
+                                <a href="{{ url($currentLocale . '/cities/strasbourg') }}" class="btn btn-outline-primary btn-sm rounded-pill mt-auto">{{ __('cities.comparison_more_info') }}</a>
                             </div>
                         </div>
 
@@ -233,13 +233,13 @@
                                 <div class="d-flex align-items-center gap-2 mb-3">
                                     <span class="city-icon fs-2">☀️</span>
                                     <div>
-                                        <h4 class="h6 fw-bold mb-0">نیس</h4>
-                                        <span class="badge bg-danger-subtle text-danger small">بهترین آب‌وهوا</span>
+                                        <h4 class="h6 fw-bold mb-0">{{ __('cities.nice') }}</h4>
+                                        <span class="badge bg-danger-subtle text-danger small">{{ __('cities.nice_tag') }}</span>
                                     </div>
                                 </div>
                                 <div class="mb-2">
                                     <div class="d-flex justify-content-between small text-muted mb-1">
-                                        <span>💸 هزینه ماهانه</span>
+                                        <span>💸 {{ __('cities.comparison_monthly_cost') }}</span>
                                     </div>
                                     <div class="cost-pill fw-bold text-primary">۱۱۰۰–۱۵۰۰ €</div>
                                     <div class="progress mt-1" style="height:4px;">
@@ -247,11 +247,11 @@
                                     </div>
                                 </div>
                                 <ul class="list-unstyled small text-muted mt-2 mb-3 flex-grow-1">
-                                    <li class="mb-1"><i class="bx bx-check text-success me-1"></i>دانشگاه کوت دازور</li>
-                                    <li class="mb-1"><i class="bx bx-group text-primary me-1"></i>فناوری، کارآفرینی</li>
-                                    <li><i class="bx bx-sun text-warning me-1"></i>مدیترانه و آفتاب</li>
+                                    <li class="mb-1"><i class="bx bx-check text-success me-1"></i>{{ __('cities.nice_feature_1') }}</li>
+                                    <li class="mb-1"><i class="bx bx-group text-primary me-1"></i>{{ __('cities.nice_feature_2') }}</li>
+                                    <li><i class="bx bx-sun text-warning me-1"></i>{{ __('cities.nice_feature_3') }}</li>
                                 </ul>
-                                <a href="{{ url($currentLocale . '/cities/nice') }}" class="btn btn-outline-primary btn-sm rounded-pill mt-auto">بیشتر بدان</a>
+                                <a href="{{ url($currentLocale . '/cities/nice') }}" class="btn btn-outline-primary btn-sm rounded-pill mt-auto">{{ __('cities.comparison_more_info') }}</a>
                             </div>
                         </div>
 
@@ -261,7 +261,7 @@
                         <a href="{{ url($currentLocale . '/consult') }}"
                            class="btn btn-primary rounded-pill px-5 py-2 shadow-sm">
                             <i class="bx bx-chat me-2"></i>
-                            مشاوره رایگان — کدام شهر برای من مناسب‌تر است؟
+                            {{ __('cities.comparison_cta') }}
                         </a>
                     </div>
                 </div>

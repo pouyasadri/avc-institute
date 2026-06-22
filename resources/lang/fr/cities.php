@@ -66,4 +66,46 @@ return [
     // Schema.org
     'schema_headline' => 'Découvrez les Villes les plus Populaires de France en 2026',
     'schema_author_name' => 'Éducation, Vie, Investissement: Vos Rêves en France avec A.V.C',
+
+    // Cities Comparison
+    'comparison_title' => 'Comparatif des Meilleures Villes de France pour les Iraniens en 2026',
+    'comparison_subtitle' => 'Les coûts comprennent le loyer, l\'alimentation et les transports. Avec l\'aide au logement CAF, le loyer peut diminuer jusqu\'à 40%.',
+    'comparison_monthly_cost' => 'Coût mensuel',
+    'comparison_cta' => 'Consultation Gratuite — Quelle ville me convient le mieux ?',
+    'comparison_more_info' => 'En savoir plus',
+
+    // Tags
+    'lyon_tag' => 'Choix Populaire',
+    'paris_tag' => 'Le Plus Prestigieux',
+    'toulouse_tag' => 'Idéal pour l\'Ingénierie',
+    'strasbourg_tag' => 'Le Plus Abordable',
+    'nice_tag' => 'Meilleur Climat',
+
+    // City Names
+    'lyon' => 'Lyon',
+    'paris' => 'Paris',
+    'toulouse' => 'Toulouse',
+    'strasbourg' => 'Strasbourg',
+    'nice' => 'Nice',
+
+    // Features
+    'lyon_feature_1' => 'Lyon 1, 2, 3 | ENS Lyon',
+    'lyon_feature_2' => 'Étudiants & Familles',
+    'lyon_feature_3' => 'Communauté iranienne active',
+
+    'paris_feature_1' => 'Sorbonne | Paris-Saclay | Sciences Po',
+    'paris_feature_2' => 'Étudiants & Professionnels',
+    'paris_feature_3' => 'Prestige académique maximal',
+
+    'toulouse_feature_1' => 'Université de Toulouse | INSA',
+    'toulouse_feature_2' => 'Ingénierie & Aérospatiale',
+    'toulouse_feature_3' => 'Airbus & industries de pointe',
+
+    'strasbourg_feature_1' => 'Université de Strasbourg',
+    'strasbourg_feature_2' => 'Sciences humaines & Droit',
+    'strasbourg_feature_3' => 'Au cœur de l\'Europe & bilingue',
+
+    'nice_feature_1' => 'Université Côte d\'Azur',
+    'nice_feature_2' => 'Tech & Entrepreneuriat',
+    'nice_feature_3' => 'Méditerranée & Soleil',
 ];

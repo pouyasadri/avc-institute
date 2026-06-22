@@ -69,4 +69,46 @@ return [
     // Schema.org
     'schema_headline' => 'محبوب‌ترین شهرهای فرانسه برای تحصیل و زندگی در سال ۲۰۲۶ را بشناسید',
     'schema_author_name' => 'تحصیل، زندگی، سرمایه گذاری: رویاهای شما در فرانسه با A.V.C',
+
+    // Cities Comparison
+    'comparison_title' => 'مقایسه بهترین شهرهای فرانسه برای ایرانیان ۲۰۲۶',
+    'comparison_subtitle' => 'هزینه‌ها شامل اجاره، غذا و حمل‌ونقل است. با کمک‌هزینه CAF، اجاره تا ۴۰٪ کاهش می‌یابد.',
+    'comparison_monthly_cost' => 'هزینه ماهانه',
+    'comparison_cta' => 'مشاوره رایگان — کدام شهر برای من مناسب‌تر است؟',
+    'comparison_more_info' => 'بیشتر بدان',
+
+    // Tags
+    'lyon_tag' => 'محبوب ایرانیان',
+    'paris_tag' => 'معتبرترین مدرک',
+    'toulouse_tag' => 'بهترین برای مهندسی',
+    'strasbourg_tag' => 'ارزان‌ترین گزینه',
+    'nice_tag' => 'بهترین آب‌وهوا',
+
+    // City Names
+    'lyon' => 'لیون',
+    'paris' => 'پاریس',
+    'toulouse' => 'تولوز',
+    'strasbourg' => 'استراسبورگ',
+    'nice' => 'نیس',
+
+    // Features
+    'lyon_feature_1' => 'لیون ۱، ۲، ۳ | ENS Lyon',
+    'lyon_feature_2' => 'دانشجو و خانواده',
+    'lyon_feature_3' => 'جامعه ایرانی فعال',
+
+    'paris_feature_1' => 'سوربن | پاریس‌ساکله | Sciences Po',
+    'paris_feature_2' => 'دانشجو و متخصص',
+    'paris_feature_3' => 'بالاترین اعتبار مدرک',
+
+    'toulouse_feature_1' => 'دانشگاه تولوز | INSA',
+    'toulouse_feature_2' => 'مهندسی و هوافضا',
+    'toulouse_feature_3' => 'Airbus و صنایع برتر',
+
+    'strasbourg_feature_1' => 'دانشگاه استراسبورگ',
+    'strasbourg_feature_2' => 'علوم انسانی، حقوق',
+    'strasbourg_feature_3' => 'قلب اروپا، دو زبانه',
+
+    'nice_feature_1' => 'دانشگاه کوت دازور',
+    'nice_feature_2' => 'فناوری، کارآفرینی',
+    'nice_feature_3' => 'مدیترانه و آفتاب',
 ];

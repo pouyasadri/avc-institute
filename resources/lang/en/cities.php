@@ -70,4 +70,46 @@ return [
     // Schema.org
     'schema_headline' => 'Discover the Most Popular Cities in France for 2026',
     'schema_author_name' => 'Education, Life, Investment: Your Dreams in France with A.V.C',
+
+    // Cities Comparison
+    'comparison_title' => 'Comparing the Best Cities in France for Iranians in 2026',
+    'comparison_subtitle' => 'Costs include rent, food, and transport. With the CAF housing allowance, rent can decrease by up to 40%.',
+    'comparison_monthly_cost' => 'Monthly cost',
+    'comparison_cta' => 'Free Consultation — Which city is right for me?',
+    'comparison_more_info' => 'Learn More',
+
+    // Tags
+    'lyon_tag' => 'Popular Choice',
+    'paris_tag' => 'Most Prestigious',
+    'toulouse_tag' => 'Best for Engineering',
+    'strasbourg_tag' => 'Most Affordable',
+    'nice_tag' => 'Best Climate',
+
+    // City Names
+    'lyon' => 'Lyon',
+    'paris' => 'Paris',
+    'toulouse' => 'Toulouse',
+    'strasbourg' => 'Strasbourg',
+    'nice' => 'Nice',
+
+    // Features
+    'lyon_feature_1' => 'Lyon 1, 2, 3 | ENS Lyon',
+    'lyon_feature_2' => 'Students & Families',
+    'lyon_feature_3' => 'Active Iranian community',
+
+    'paris_feature_1' => 'Sorbonne | Paris-Saclay | Sciences Po',
+    'paris_feature_2' => 'Students & Professionals',
+    'paris_feature_3' => 'Highest degree prestige',
+
+    'toulouse_feature_1' => 'University of Toulouse | INSA',
+    'toulouse_feature_2' => 'Engineering & Aerospace',
+    'toulouse_feature_3' => 'Airbus & top industries',
+
+    'strasbourg_feature_1' => 'University of Strasbourg',
+    'strasbourg_feature_2' => 'Humanities & Law',
+    'strasbourg_feature_3' => 'Heart of Europe & bilingual',
+
+    'nice_feature_1' => 'Université Côte d\'Azur',
+    'nice_feature_2' => 'Tech & Entrepreneurship',
+    'nice_feature_3' => 'Mediterranean & Sunshine',
 ];
