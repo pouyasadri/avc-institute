@@ -39,6 +39,30 @@ class OrganizationSchema extends SchemaBuilder
             ->add('areaServed', ['France', 'Iran'])
             ->add('availableLanguage', ['French', 'Persian', 'English']);
 
+        // Add official French registration identifiers
+        if (! empty($org['vat_id'])) {
+            $this->add('vatID', $org['vat_id']);
+        }
+        if (! empty($org['siren'])) {
+            $this->add('taxID', $org['siren']);
+        }
+        if (! empty($org['siret'])) {
+            $this->add('identifier', [
+                '@type' => 'PropertyValue',
+                'name' => 'SIRET',
+                'value' => $org['siret'],
+                'propertyID' => 'https://www.wikidata.org/wiki/Q1350767',
+            ]);
+        }
+        if (! empty($org['naf_code'])) {
+            $this->add('additionalProperty', [
+                '@type' => 'PropertyValue',
+                'name' => 'Code NAF/APE',
+                'value' => $org['naf_code'],
+                'description' => $org['naf_label'] ?? '',
+            ]);
+        }
+
         // Add contact point
         if (! empty($org['telephone']) || ! empty($org['email'])) {
             $this->add('contactPoint', $this->buildContactPoint($org));

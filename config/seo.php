@@ -30,36 +30,41 @@ return [
     */
     'organization' => [
         'name' => 'Apply Vip Conseil',
-        'legal_name' => 'Apply Vip Conseil AVC',
+        'legal_name' => 'APPLY VIP CONSEIL',
         'url' => env('APP_URL', 'https://applyvipconseil.com'),
         'logo' => '/assets/img/logo/logo.png',
         'description' => 'Expert immigration and education consulting services in France, specializing in student visas, residence permits, and real estate acquisition.',
         'email' => 'info@applyvipconseil.com',
         'telephone' => '+33768688326',
         'address' => [
-            'street_address' => '24 Rue de Courcelles', // TODO: Update with your actual office address
-            'locality' => 'Paris',
-            'region' => 'Île-de-France',
-            'postal_code' => '75008',
-            'country' => 'France',
+            'street_address' => '57 Route de Hausbergen',
+            'locality' => 'Schiltigheim',
+            'region' => 'Grand Est',
+            'postal_code' => '67300',
+            'country' => 'FR',
         ],
         'same_as' => [
             'https://www.instagram.com/apply_vip_conseil/',
-            // Add other social media profiles
+            'https://www.facebook.com/applyvipconseil',
+            'https://www.linkedin.com/company/applyvipconseil',
         ],
         'founder' => 'Apply Vip Conseil',
-        'founding_date' => '2023',
-        // // Geo coordinates for LocalBusiness schema (Paris, France — update with exact location)
-        // 'geo' => [
-        //     'latitude'  => 48.8723,
-        //     'longitude' => 2.3029,
-        // ],
-        // // Google Maps link for hasMap property
-        // 'has_map'           => 'https://maps.app.goo.gl/applyvipconseil',
-        // // Currencies accepted
-        // 'currencies_accepted' => 'EUR',
-        // // Payment methods accepted
-        // 'payment_accepted'    => 'Cash, Credit Card, Bank Transfer',
+        'founding_date' => '2023-10-01',
+
+        // Official French registration identifiers
+        'siren' => '983675331',
+        'siret' => '98367533100018',
+        'vat_id' => 'FR49983675331',
+        'naf_code' => '68.10Z',
+        'naf_label' => 'Activités des marchands de biens immobiliers',
+        'legal_form' => 'SAS — Société par actions simplifiée',
+        'share_capital' => '1000.00',
+        'rne_registration_date' => '2024-02-14',
+        'inpi_url' => 'https://annuaire-entreprises.data.gouv.fr/entreprise/983675331',
+
+        // Currencies and payment accepted
+        'currencies_accepted' => 'EUR',
+        'payment_accepted' => 'Cash, Credit Card, Bank Transfer',
     ],
 
     /*
