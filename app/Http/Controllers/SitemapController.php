@@ -234,7 +234,7 @@ class SitemapController extends Controller
         }
 
         // Other static pages for each locale
-        $staticPages = ['consult', 'contactUs'];
+        $staticPages = ['consult', 'contactUs', 'legal'];
         foreach ($locales as $locale) {
             foreach ($staticPages as $page) {
                 $viewName = $page === 'contactUs' ? 'pages.contact' : "pages.{$page}";

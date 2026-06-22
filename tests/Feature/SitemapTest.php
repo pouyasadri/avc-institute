@@ -45,5 +45,10 @@ class SitemapTest extends TestCase
         $this->assertStringContainsString('/fa/cities/grenoble', $content);
         $this->assertStringContainsString('/en/cities/grenoble', $content);
         $this->assertStringContainsString('/fr/cities/grenoble', $content);
+
+        // Check that legal pages are included in all three locales
+        $this->assertStringContainsString('/fa/legal', $content);
+        $this->assertStringContainsString('/en/legal', $content);
+        $this->assertStringContainsString('/fr/legal', $content);
     }
 }
