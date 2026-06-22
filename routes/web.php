@@ -213,6 +213,9 @@ Route::prefix('{locale}')
             ->name('questions.submit')
             ->middleware('throttle:question-form');
 
+        // Legal identity / Mentions Légales
+        Route::view('/legal', 'pages.legal')->name('legal');
+
         // Auth routes localized
 
         // Debug route for locale detection (only in non-production)
@@ -301,4 +304,8 @@ Route::get('/blog/{post}', function (string $post) {
 
 Route::get('/consult', function () {
     return redirect('/fa/consult', 301);
+});
+
+Route::get('/legal', function () {
+    return redirect('/fa/legal', 301);
 });

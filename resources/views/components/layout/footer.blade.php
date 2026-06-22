@@ -107,6 +107,12 @@
                                     {{ __('layout.footer.links.sitemap') }}
                                 </a>
                             </li>
+                            <li>
+                                <a href="{{ route('legal', ['locale' => app()->getLocale()]) }}">
+                                    <i class="right-icon bx {{ $chevronsDir }}"></i>
+                                    {{ __('layout.footer.links.legal') }}
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
