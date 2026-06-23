@@ -217,10 +217,10 @@ return [
         'logo' => 'https://applyvipconseil.com/images/logo.png',
         'description' => 'موسسه پیشرو در خدمات مهاجرتی فرانسه. اخذ ویزای تحصیلی، اقامت و سرمایه‌گذاری ملکی.',
         'address' => [
-            'streetAddress' => '24 Rue de Courcelles', // دفتر پاریس - آدرس واقعی خود را جایگزین کنید
-            'addressLocality' => 'Paris',
-            'addressRegion' => 'Île-de-France',
-            'postalCode' => '75008',
+            'streetAddress' => '57 Route de Hausbergen',
+            'addressLocality' => 'Schiltigheim',
+            'addressRegion' => 'Grand Est',
+            'postalCode' => '67300',
             'addressCountry' => 'FR',
         ],
         'contactPoint' => [

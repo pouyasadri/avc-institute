@@ -4,7 +4,7 @@ return [
     // Meta Tags
     'meta' => [
         'title' => 'France Immigration, Study & Investment | A.V.C Institute Expert Services',
-        'keywords' => 'study in France, migrate to France, France residence permit, invest in France, life in France, A.V.C institute, French student visa, Campus France, talent passport, buy property in France, Schengen visa, higher education France, French universities, immigration lawyer France',
+        'keywords' => 'study in France, migrate to France, France residence permit, invest in France, life in France, A.V.C institute, French student visa, Campus France, talent passport, buy property in France, Schengen visa, higher education France, French universities, immigration lawyer France, french immigration regulations 2026, study in France cost 2026, Prefectures French residence permit, certified translation French court, Visale French guarantor',
         'description' => 'Secure your future with A.V.C Institute. Expert guidance for French student visas (Campus France), Talent Passport, real estate investment, and permanent residence. Trusted immigration consultants for a seamless transition to life in France.',
 
         // Open Graph
@@ -217,10 +217,10 @@ return [
         'logo' => 'https://applyvipconseil.com/images/logo.png',
         'description' => 'Leading immigration consulting firm for France. Services include student visas, residency permits, and real estate investment.',
         'address' => [
-            'streetAddress' => 'YOUR_OFFICE_ADDRESS', // Ideally this should be filled with real data
-            'addressLocality' => 'Paris',
-            'addressRegion' => 'Île-de-France',
-            'postalCode' => '75000',
+            'streetAddress' => '57 Route de Hausbergen',
+            'addressLocality' => 'Schiltigheim',
+            'addressRegion' => 'Grand Est',
+            'postalCode' => '67300',
             'addressCountry' => 'FR',
         ],
         'contactPoint' => [

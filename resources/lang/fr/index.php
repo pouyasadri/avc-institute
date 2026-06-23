@@ -4,7 +4,7 @@ return [
     // Meta Tags
     'meta' => [
         'title' => 'Immigration, Études et Investissement en France | Expert A.V.C Institut',
-        'keywords' => 'étudier en France, immigrer en France, titre de séjour France, investir en France, vie en France, institut A.V.C, visa étudiant France, Campus France, passeport talent, achat immobilier France, visa Schengen, enseignement supérieur France, universités françaises, avocat immigration France, préfecture',
+        'keywords' => 'étudier en France, immigrer en France, titre de séjour France, investir en France, vie en France, institut A.V.C, visa étudiant France, Campus France, passeport talent, achat immobilier France, visa Schengen, enseignement supérieur France, universités françaises, avocat immigration France, préfecture, réglementation immigration France 2026, coût études en France 2026, renouvellement titre de séjour préfecture, traducteur assermenté tribunal, garant Visale France',
         'description' => 'Assurez votre avenir avec l\'Institut A.V.C. Conseils d\'experts pour les visas étudiants (Campus France), Passeport Talent, investissement immobilier et résidence permanente. Consultants en immigration de confiance pour une transition fluide vers la vie en France.',
 
         // Open Graph
@@ -217,10 +217,10 @@ return [
         'logo' => 'https://applyvipconseil.com/images/logo.png',
         'description' => 'Cabinet de conseil en immigration leader pour la France. Services incluant visas étudiants, titres de séjour et investissement immobilier.',
         'address' => [
-            'streetAddress' => 'YOUR_OFFICE_ADDRESS',
-            'addressLocality' => 'Paris',
-            'addressRegion' => 'Île-de-France',
-            'postalCode' => '75000',
+            'streetAddress' => '57 Route de Hausbergen',
+            'addressLocality' => 'Schiltigheim',
+            'addressRegion' => 'Grand Est',
+            'postalCode' => '67300',
             'addressCountry' => 'FR',
         ],
         'contactPoint' => [
