@@ -2,6 +2,8 @@
 
 namespace App\Services\StructuredData;
 
+use Illuminate\Support\Facades\Storage;
+
 class PropertySchema extends SchemaBuilder
 {
     protected $property;
@@ -85,11 +87,11 @@ class PropertySchema extends SchemaBuilder
         $images = [];
 
         if ($this->property->main_image) {
-            $images[] = $this->asset('storage/'.$this->property->main_image);
+            $images[] = Storage::url($this->property->main_image);
         }
 
         foreach ($this->property->images as $image) {
-            $images[] = $this->asset('storage/'.$image->path);
+            $images[] = Storage::url($image->path);
         }
 
         return $images ?: [$this->asset('assets/img/default-property.jpg')];

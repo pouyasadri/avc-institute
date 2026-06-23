@@ -2,6 +2,7 @@
 
 namespace App\Services;
 
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\URL;
 
 class SeoService
@@ -293,7 +294,7 @@ class SeoService
 
         if ($blog->main_image) {
             $this->setImage(
-                asset('storage/'.$blog->main_image),
+                Storage::url($blog->main_image),
                 $translation->title
             );
         }
@@ -344,7 +345,7 @@ class SeoService
 
         if ($property->main_image) {
             $this->setImage(
-                asset('storage/'.$property->main_image),
+                Storage::url($property->main_image),
                 $title
             );
         }

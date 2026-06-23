@@ -89,7 +89,7 @@
                                     <label class="form-label">Image Principale</label>
                                     @if($blog->blog_main_image)
                                         <div class="mb-2">
-                                            <img src="{{ asset('storage/' . $blog->blog_main_image) }}" alt="Current Image"
+                                            <img src="{{ \Storage::url($blog->blog_main_image) }}" alt="Current Image"
                                                 class="img-fluid rounded">
                                         </div>
                                     @endif

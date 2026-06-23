@@ -261,7 +261,7 @@
                             @php
                                 $translation = $property->getTranslation(app()->getLocale());
                                 $cardBgUrl = $property->main_image
-                                    ? asset('storage/images/properties/' . $property->main_image)
+                                    ? \Storage::url($property->main_image)
                                     : 'https://via.placeholder.com/600x400';
                             @endphp
                             <div class="col-lg-6 col-md-6">

@@ -225,7 +225,7 @@
                     $translation = $property->getTranslation(app()->getLocale());
                     @endphp
                     <div class="single-restaurants" @if($property->main_image)
-                        style="background-image: url('{{ asset('storage/' . $property->main_image) }}'); background-size:
+                        style="background-image: url('{{ \Storage::url($property->main_image) }}'); background-size:
                         cover; background-position: center;"
                         @else
                         style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"

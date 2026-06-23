@@ -2,6 +2,8 @@
 
 namespace App\Services\StructuredData;
 
+use Illuminate\Support\Facades\Storage;
+
 class BlogPostingSchema extends SchemaBuilder
 {
     protected $blog;
@@ -86,7 +88,7 @@ class BlogPostingSchema extends SchemaBuilder
 
         return [
             '@type' => 'ImageObject',
-            'url' => $this->asset('storage/'.$this->blog->main_image),
+            'url' => Storage::url($this->blog->main_image),
             'width' => 1200,
             'height' => 630,
         ];

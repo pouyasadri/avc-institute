@@ -6,6 +6,7 @@ use App\Models\Blog;
 use Carbon\Carbon;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Storage;
 
 class SitemapController extends Controller
 {
@@ -119,7 +120,7 @@ class SitemapController extends Controller
                 if ($blog->main_image) {
                     $translation = $blog->getTranslation($locale);
                     $entry['image'] = [
-                        'loc' => rtrim(config('app.url'), '/').'/storage/'.$blog->main_image,
+                        'loc' => Storage::url($blog->main_image),
                         'title' => $translation?->title ?? $blog->id,
                     ];
                 }

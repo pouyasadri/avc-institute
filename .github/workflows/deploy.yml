@@ -107,6 +107,9 @@ jobs:
             # Link storage if not already linked (idempotent-ish)
             php artisan storage:link || true
 
+            # Upload assets to N0C storage CDN
+            php artisan storage:upload-assets --force
+
             # Database migrations
             php artisan migrate --force
 

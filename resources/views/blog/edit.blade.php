@@ -86,7 +86,7 @@
                             <div class="form-group">
                                 <label>{{ __('Current Main Image') }}</label>
                                 <div>
-                                    <img src="{{ asset('storage/' . $blog->main_image) }}"
+                                    <img src="{{ \Storage::url($blog->main_image) }}"
                                          alt="Main image"
                                          style="max-height: 200px;"
                                          class="img-thumbnail">

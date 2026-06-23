@@ -46,7 +46,7 @@
                         <header>
                             @if($blog->main_image)
                                 <div class="blog-details-img mb-4">
-                                    <img src="{{ asset('storage/' . $imagePath) }}" alt="{{ $translation->title }}"
+                                    <img src="{{ \Storage::url($imagePath) }}" alt="{{ $translation->title }}"
                                         class="rounded-4 shadow-sm w-100" style="max-height: 500px; object-fit: cover;">
                                 </div>
                             @endif
@@ -239,7 +239,7 @@
                                                 <a
                                                     href="{{ route('blog.show', ['locale' => $currentLocale, 'blog' => $recent->id]) }}">
                                                     @if($recent->main_image)
-                                                        <img src="{{ asset('storage/' . $recentImage) }}"
+                                                        <img src="{{ \Storage::url($recentImage) }}"
                                                             alt="{{ $recentTranslation->title }}" class="rounded-4 shadow-sm"
                                                             style="width: 70px; height: 70px; object-fit: cover;">
                                                     @else
