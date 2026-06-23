@@ -18,15 +18,17 @@ class ServiceController extends Controller
         $locale = app()->getLocale();
         $servicesList = __('index.services.items');
         $pageTitle = __('layout.nav.services') ?? 'Services';
+        $pageDescription = __('services.meta.description') ?? 'Our services';
+        $pageKeywords = __('services.meta.keywords') ?? '';
 
         $schema = new WebPageSchema(
             url()->current(),
             $pageTitle,
-            'Our services',
+            $pageDescription,
             $locale
         );
 
-        return view('pages.services.index', compact('servicesList', 'locale', 'pageTitle', 'schema'));
+        return view('pages.services.index', compact('servicesList', 'locale', 'pageTitle', 'pageDescription', 'pageKeywords', 'schema'));
     }
 
     /**
@@ -63,7 +65,8 @@ class ServiceController extends Controller
                 url: request()->url(),
                 description: $serviceDetails['description'] ?? '',
                 providerName: 'A.V.C Institute',
-                areaServed: 'France'
+                areaServed: 'France',
+                serviceType: $serviceDetails['service_type'] ?? 'Immigration and Education Consulting'
             );
 
             // Generate FAQ schema if the service has FAQ items

@@ -8,6 +8,13 @@
     // Metadata for SEO
     $pageTitle = $serviceDetails['title'] ?? 'Service';
     $pageDescription = $serviceDetails['description'] ?? '';
+    $pageKeywords = $serviceDetails['meta_keywords'] ?? '';
+
+    $seoService = app(\App\Services\SeoService::class);
+    $seoService->setTitle($pageTitle . ' - A.V.C Institute', false)
+               ->setDescription($pageDescription)
+               ->setKeywords($pageKeywords)
+               ->setLocale($currentLocale);
 
     $featuredCities = ['paris', 'lyon', 'strasbourg'];
     $featuredUniversities = [
@@ -19,6 +26,7 @@
 
 @section('title', $pageTitle . ' - A.V.C Institute')
 @section('description', $pageDescription)
+@section('keywords', $pageKeywords)
 
 @section('content')
     <div>
@@ -28,6 +36,7 @@
                 <div class="page-title-content">
                     <x-premium-breadcrumb :items="[
             ['url' => url($currentLocale . '/'), 'label' => __('consult.breadcrumb_home') ?? 'Home'],
+            ['url' => url($currentLocale . '/services'), 'label' => __('layout.nav.services') ?? 'Services'],
             ['label' => $pageTitle]
         ]" />
                     <h1>{{ $pageTitle }}</h1>
@@ -42,7 +51,7 @@
                 <div class="row">
                     <div class="col-lg-8 col-md-12">
                         <div class="service-details-desc">
-                            <h2 class="mb-4">{{ $pageTitle }}</h2>
+                            <h2 class="h4 mb-4 text-muted">{{ $pageDescription }}</h2>
 
                             @if(isset($serviceDetails['content']) && is_array($serviceDetails['content']))
                                 @foreach($serviceDetails['content'] as $paragraph)
@@ -51,7 +60,7 @@
                             @endif
 
                             @if(isset($serviceDetails['benefits']) && is_array($serviceDetails['benefits']))
-                                <h3 class="mt-5 mb-4">{{ __('index.facilities.subtitle') ?? 'Benefits' }}</h3>
+                                <h3 class="mt-5 mb-4">{{ __('services.benefits_heading') ?? 'Why Choose This Service' }}</h3>
                                 <ul class="list-unstyled">
                                     @foreach($serviceDetails['benefits'] as $benefit)
                                         <li class="mb-3 d-flex align-items-center">
@@ -172,6 +181,7 @@
     @php
         $breadcrumb = \App\Services\StructuredData\BreadcrumbSchema::fromArray([
             ['name' => __('consult.breadcrumb_home') ?? 'Home', 'url' => url($currentLocale . '/')],
+            ['name' => __('layout.nav.services') ?? 'Services', 'url' => url($currentLocale . '/services')],
             ['name' => $pageTitle, 'url' => request()->url()],
         ]);
     @endphp

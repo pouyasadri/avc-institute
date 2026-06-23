@@ -1,6 +1,17 @@
 @extends('layouts.main')
 
-@section('title', $pageTitle . ' - A.V.C Institute')
+@php
+    $currentLocale = app()->getLocale();
+    $seoService = app(\App\Services\SeoService::class);
+    $seoService->setTitle(__('services.meta.title') ?? ($pageTitle . ' - A.V.C Institute'), false)
+               ->setDescription($pageDescription ?? __('services.meta.description') ?? 'Our services')
+               ->setKeywords($pageKeywords ?? __('services.meta.keywords') ?? '')
+               ->setLocale($currentLocale);
+@endphp
+
+@section('title', __('services.meta.title') ?? ($pageTitle . ' - A.V.C Institute'))
+@section('description', $pageDescription ?? __('services.meta.description') ?? 'Our services')
+@section('keywords', $pageKeywords ?? __('services.meta.keywords') ?? '')
 
 @section('content')
     <div>

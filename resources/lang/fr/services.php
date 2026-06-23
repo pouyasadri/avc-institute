@@ -8,10 +8,20 @@ return [
     'related_blog' => 'Lire les articles du blog immigration',
     'related_universities_index' => 'Explorer les guides universites',
     'related_cities_index' => 'Explorer les guides villes',
+    'other_services' => 'Autres services',
+    'benefits_heading' => 'Pourquoi choisir ce service',
+
+    'meta' => [
+        'title' => 'Nos Services | Conseil Expert Immigration & Études en France',
+        'description' => 'Découvrez les services d\'accompagnement professionnels de l\'Institut A.V.C : titres de séjour, candidatures universitaires, traductions assermentées et soutien juridique.',
+        'keywords' => 'immigrer en France, étudier en France 2026, renouvellement titre de séjour, traduction assermentée français, assistance visa France',
+    ],
 
     'residence-permit' => [
         'title' => 'Assistance Titre de Séjour & Immigration',
-        'description' => 'Accompagnement expert pour l\'obtention et le renouvellement de votre Titre de Séjour français. Nous gérons la complexité administrative pour votre tranquillité d\'esprit.',
+        'description' => 'Sécurisez ou renouvelez votre Titre de Séjour français selon les règles 2026. Aide pour visa étudiant, passeport talent et changement de statut.',
+        'service_type' => 'GovernmentResidencyPermitService',
+        'meta_keywords' => 'titre de séjour, renouvellement titre de séjour, préfecture rendez-vous 2026, avocat immigration France, changement de statut, passeport talent',
         'content' => [
             'Sécuriser votre droit légal de vivre et travailler en France est l\'étape la plus cruciale de votre parcours. Cependant, le paysage administratif français est réputé pour sa complexité, avec des réglementations changeantes et des exigences documentaires rigoureuses qui peuvent sembler accablantes.',
             'À l\'Institut A.V.C, nous ne nous contentons pas de fournir une "aide administrative" ; nous vous offrons la sérénité. Nos experts en immigration se spécialisent dans une large gamme de parcours de résidence : Visas Étudiants, Passeports Talents (chercheurs, créateurs d\'entreprise, artistes), Regroupement Familial et Visas Visiteur Long Séjour.',
@@ -26,7 +36,7 @@ return [
         'faq' => [
             [
                 'q' => 'Quelle est la différence entre un VLS-TS et un Titre de Séjour ?',
-                'a' => 'Un VLS-TS (Visa Long Séjour Valant Titre de Séjour) est ce que vous recevez généralement à l\'ambassade ; il sert de titre de séjour pour la première année après validation. Un "Titre de Séjour" est la carte physique que vous demandez à la Préfecture lors de l\'expiration de votre visa initial ou d\'un changement de statut.',
+                'a' => 'Un VLS-TS (Visa Long Séjour Valant Titre de Séjour) is what you receive generally at the embassy ; it serves of titre de séjour for the first year after validation. Un "Titre de Séjour" is the card physique that you demand to the Prefecture during the expiration of your initial visa or of a status change.',
             ],
             [
                 'q' => 'Que se passe-t-il si ma demande de résidence est bloquée ou sans réponse depuis des mois ?',
@@ -44,7 +54,9 @@ return [
     ],
     'resume-lettre-motivation' => [
         'title' => 'CV & Lettre de Motivation',
-        'description' => 'Services de rédaction et d\'édition professionnelle pour adapter votre profil aux standards français. Maximisez vos chances d\'admission dans les meilleures universités et Grandes Écoles.',
+        'description' => 'Optimisez votre CV et Lettre de Motivation pour Parcoursup, e-Candidat ou Grandes Écoles. Une adaptation de profil académique sur mesure.',
+        'service_type' => 'EducationalService',
+        'meta_keywords' => 'CV français, lettre de motivation, Parcoursup aide, candidature e-candidat, rédiger CV France, Grandes Ecoles motivation',
         'content' => [
             'Dans le monde académique et professionnel français, votre CV et votre "Lettre de Motivation" sont votre première — et souvent unique — chance de faire une impression durable. Les recruteurs et les commissions d\'admission universitaire en France ont des attentes très spécifiques en matière de structure, de ton et de hiérarchie de l\'information. Ce qui fonctionne dans votre pays d\'origine peut ne pas être optimal dans le contexte français.',
             'Notre service va bien au-delà de la simple traduction. Nous proposons une véritable adaptation culturelle et professionnelle de votre profil. Que vous postuliez via Parcoursup, e-Candidat ou directement auprès d\'une Grande École, nous veillons à ce que votre lettre de motivation reflète fidèlement vos aspirations tout en parlant le "langage" de l\'enseignement supérieur français.',
@@ -77,7 +89,9 @@ return [
     ],
     'arrival-support' => [
         'title' => 'Accompagnement à l\'Installation & Arrivée',
-        'description' => 'Vos 30 premiers jours en France, simplifiés. Nous gérons le "Carré Administratif" : Banque, SIM, Assurance et CAF.',
+        'description' => 'Simplifiez votre installation en France. Nous gérons banque, carte SIM, Assurance Maladie (Ameli) et CAF dès votre première semaine.',
+        'service_type' => 'ConsultingService',
+        'meta_keywords' => 'installation France, CPAM numéro de sécurité sociale, compte bancaire étranger France, aide logement CAF, carte SIM française',
         'content' => [
             'Les premières semaines en France sont souvent une série de situations bloquantes : il faut un compte bancaire pour louer un appartement, mais il faut souvent une preuve de domicile pour ouvrir un compte. Il faut un numéro de téléphone français pour presque toutes les inscriptions, mais certains opérateurs exigent un compte bancaire français. Ce cercle vicieux peut vite devenir épuisant.',
             'Notre service d\'Accompagnement à l\'Arrivée est conçu pour briser ce cycle. Nous agissons comme votre concierge local, vous guidant à travers la liste critique de votre "Première Semaine". Cela inclut la souscription à un forfait mobile adapté, la recherche d\'un partenaire bancaire habitué aux profils internationaux, et l\'initiation de votre inscription au système de santé (L\'Assurance Maladie).',
@@ -110,7 +124,9 @@ return [
     ],
     'certified-translation' => [
         'title' => 'Traduction Assermentée (Certifiée)',
-        'description' => 'Traductions officielles reconnues par les tribunaux pour vos documents juridiques et académiques. Acceptation garantie par toutes les préfectures et universités françaises.',
+        'description' => 'Obtenez des traductions assermentées officielles (acte de naissance, diplômes) reconnues par les préfectures et universités françaises. Acceptation 100%.',
+        'service_type' => 'TranslationService',
+        'meta_keywords' => 'traduction assermentée, traducteur assermenté Paris, traduction certifiée, traduire acte de naissance, traduction diplôme français',
         'content' => [
             'En France, pour qu\'un document étranger soit légalement valable auprès de l\'administration — qu\'il s\'agisse d\'un acte de naissance pour la CAF, d\'un diplôme pour une inscription universitaire ou d\'un acte de mariage pour un titre de séjour — il doit être traduit par un "Traducteur Assermenté". Ce sont des experts judiciaires ayant prêté serment devant une Cour d\'Appel française, dont la signature et le sceau font foi.',
             'À l\'Institut A.V.C, nous gérons l\'intégralité du processus pour vous. Nous collaborons avec un réseau de traducteurs assermentés pour de nombreuses combinaisons linguistiques (Anglais, Persan, Arabe, etc.) afin de garantir que vos documents ne soient pas seulement traduits, mais officiellement adaptés à la terminologie attendue par l\'administration française.',
@@ -143,11 +159,13 @@ return [
     ],
     'educational-counseling' => [
         'title' => 'Conseil Éducatif Stratégique & Plan de Carrière',
-        'description' => 'Un accompagnement expert pour naviguer dans le paysage complexe de l\'enseignement supérieur français. Des universités publiques aux Grandes Écoles prestigieuses, nous bâtissons votre réussite.',
+        'description' => 'Conseil stratégique pour universités publiques et Grandes Écoles en France. Définissez votre plan de carrière et trouvez des bourses.',
+        'service_type' => 'EducationalService',
+        'meta_keywords' => 'conseil études France, orientation scolaire France, bourse Eiffel, admission université française, Grandes Écoles commerce ingénieur',
         'content' => [
             'La France offre un système éducatif de classe mondiale, mais avec plus de 3 500 établissements et une grande variété d\'écoles spécialisées, choisir la bonne voie est une décision stratégique qui va au-delà des simples classements. Il s\'agit de trouver la synergie parfaite entre votre parcours académique, votre budget et les exigences spécifiques des marchés de l\'emploi français et international.',
             'Notre service de conseil éducatif propose une analyse complète à 360 degrés de votre profil. Nous ne nous contentons pas de regarder vos relevés de notes ; nous évaluons vos objectifs professionnels, vos "Soft Skills" et vos ambitions à long terme en France. Nous vous orientons vers des programmes — allant des universités publiques financées par l\'État aux Grandes Écoles de commerce et d\'ingénieurs — qui offrent les meilleurs taux d\'insertion professionnelle.',
-            'Nous fournissons également des informations cruciales sur les différentes fenêtres de candidature (Parcoursup, Études en France, e-Candidat) et vous aidons à naviguer dans les nuances du système français "Licence-Master-Doctorat" (LMD), en vous assurant de postuler au bon niveau d\'études pour éviter les obstacles administratifs ou les retards académiques inutiles.',
+            'We provide also crucial details on application periods (Parcoursup, Études en France, e-Candidat) and help you navigate the LMD system, ensuring your target study level is the right fit to prevent administrative hurdles.',
         ],
         'benefits' => [
             'Audit Holistique du Profil : Une analyse approfondie de votre parcours académique et professionnel pour identifier vos atouts les plus compétitifs pour les admissions françaises.',
@@ -176,7 +194,9 @@ return [
     ],
     'housing-assistance' => [
         'title' => 'Recherche de Logement & Aide CAF',
-        'description' => 'Sécurisez votre futur "chez-vous" en France avant même d\'atterrir. Nous naviguons pour vous le marché locatif compétitif et gérons vos aides au logement.',
+        'description' => 'Trouvez votre logement étudiant en France depuis l\'étranger. Nous gérons votre dossier et votre demande d\'aide au logement CAF (APL).',
+        'service_type' => 'ConsultingService',
+        'meta_keywords' => 'logement étudiant France, louer studio Paris, garant Visale, aide logement CAF APL, résidence CROUS colocation',
         'content' => [
             'Trouver un logement dans les grandes métropoles françaises comme Paris, Lyon ou Bordeaux est un défi de taille pour les nouveaux arrivants internationaux. Les propriétaires exigent souvent un "Dossier de Location" complet incluant des documents que beaucoup d\'étrangers ne possèdent pas encore, comme un garant résidant en France ou un historique de revenus locaux.',
             'L\'Institut A.V.C agit comme votre représentant local. Nous exploitons notre réseau de résidences partenaires et de propriétaires de confiance pour trouver le logement qui correspond à votre budget et à votre style de vie. Que vous recherchiez une chambre en résidence CROUS, un studio privé ou une colocation, nous veillons à ce que votre logement soit confirmé avant votre départ.',
@@ -209,7 +229,9 @@ return [
     ],
     'university-application' => [
         'title' => 'Admission & Gestion de Plateformes (Parcoursup & Campus France)',
-        'description' => 'Gestion de bout en bout de vos candidatures universitaires. Nous maîtrisons la complexité technique des plateformes Études en France, Parcoursup et e-Candidat.',
+        'description' => 'Gestion complète de vos candidatures Campus France, Parcoursup et e-Candidat. Nous préparons vos entretiens et suivons les calendriers.',
+        'service_type' => 'EducationalService',
+        'meta_keywords' => 'Campus France admission 2026, Parcoursup inscription, e-Candidat université, entretien Campus France, s\'inscrire fac France',
         'content' => [
             'Postuler dans une université française est souvent un marathon technique. Selon votre nationalité, votre pays de résidence et le niveau d\'études visé, vous devrez peut-être naviguer sur plusieurs plateformes simultanément. La procédure "Études en France" (EEF), par exemple, impose des délais stricts et exige un dossier parfaitement calibré avant même d\'être transmis aux universités.',
             'À l\'Institut A.V.C, nous agissons comme vos chefs de projet de candidature. Nous gérons la configuration structurelle de vos comptes sur Parcoursup (pour les bacheliers), e-Candidat (pour les candidatures directes) et le portail Campus France. Cela inclut la catégorisation précise de vos diplômes, la conversion de vos notes dans le système français et la vérification de tous les champs obligatoires pour éviter le statut de "Dossier Incomplet".',
@@ -242,7 +264,9 @@ return [
     ],
     'administrative-advocacy' => [
         'title' => 'Plaidoyer Administratif & Liaison',
-        'description' => 'Nous agissons comme votre représentant officiel pour débloquer les dossiers en souffrance et résoudre les obstacles bureaucratiques complexes.',
+        'description' => 'Plaidoyer administratif officiel pour débloquer vos dossiers CPAM, CAF, URSSAF ou Préfecture. Résolvez les retards de l\'administration.',
+        'service_type' => 'ConsultingService',
+        'meta_keywords' => 'bloqué administration française, numéro Ameli retard, retard CAF APL, CPAM réclamation, représentant administratif',
         'content' => [
             'La bureaucratie française est légendaire pour sa complexité, et il n\'est pas rare que des dossiers restent "bloqués" sans explication. Qu\'il s\'agisse d\'un numéro de sécurité sociale qui tarde, d\'une inscription fiscale bloquée ou d\'une demande à la Préfecture restée sans réponse, le manque de communication des autorités peut avoir de graves conséquences sur votre statut légal et vos finances.',
             'À l\'Institut A.V.C, nous assurons un plaidoyer administratif de haut niveau. Nos experts maîtrisent la hiérarchie des organismes gouvernementaux français et comprennent les "mots-clés" et les cadres juridiques nécessaires pour obtenir une réponse. Nous ne nous contentons pas d\'attendre ; nous contactons proactivement les fonctionnaires, rédigeons des demandes formelles et, si nécessaire, saisissons le Défenseur des Droits ou d\'autres instances de médiation.',
@@ -275,7 +299,9 @@ return [
     ],
     'legal-support' => [
         'title' => 'Support Juridique & Contentieux (Droit Public)',
-        'description' => 'Défense juridique rapide pour les refus de visa, les OQTF et les litiges complexes devant les tribunaux administratifs français.',
+        'description' => 'Défense juridique rapide contre les refus de visa et OQTF. Recours devant le Tribunal Administratif avec nos avocats partenaires experts.',
+        'service_type' => 'LegalService',
+        'meta_keywords' => 'refus de visa, recours OQTF, avocat droit des étrangers, tribunal administratif immigration, obligation quitter territoire',
         'content' => [
             'Recevoir un refus de visa ou, pire, une "Obligation de Quitter le Territoire Français" (OQTF) est une urgence absolue qui nécessite une action juridique immédiate. En France, les délais de recours sont extrêmement courts — parfois seulement 48 heures ou jusqu\'à 30 jours selon la procédure. Manquer ces échéances peut entraîner une interdiction définitive de retour.',
             'L\'Institut A.V.C s\'associe à des avocats spécialisés en droit des étrangers et en droit public dans toute la France. Nous agissons comme votre équipe de soutien principale, rassemblant les preuves nécessaires pour construire un "Recours Gracieux" (au Préfet), un "Recours Hiérarchique" (au Ministère) ou un recours contentieux devant le Tribunal Administratif.',

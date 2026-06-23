@@ -8,10 +8,20 @@ return [
     'related_blog' => 'Read immigration blog articles',
     'related_universities_index' => 'Explore university guides',
     'related_cities_index' => 'Explore city guides',
+    'other_services' => 'Other Services',
+    'benefits_heading' => 'Why Choose This Service',
+
+    'meta' => [
+        'title' => 'Our Services | Expert Immigration & Education Consulting France',
+        'description' => 'Explore the professional consulting services offered by A.V.C Institute: residence permit assistance, university applications, certified translations, and legal support in France.',
+        'keywords' => 'immigrate to France, study in France 2026, French residence permit renewal, certified translation French, visa assistance France',
+    ],
 
     'residence-permit' => [
         'title' => 'Residence Permit & Immigration Assistance',
-        'description' => 'Expert guidance for obtaining and renewing your French Titre de Séjour. We navigate the complexities of the French administration so you can settle in with peace of mind.',
+        'description' => 'Secure or renew your French Titre de Séjour under 2026 Prefecture guidelines. Expert support for student visas, Talent Passports, and status changes.',
+        'service_type' => 'GovernmentResidencyPermitService',
+        'meta_keywords' => 'French residence permit, Titre de Sejour renewal, Prefecture appointment 2026, immigration lawyer France, change of status France',
         'content' => [
             'Securing your legal right to live and work in France is the most critical step in your journey. However, the French administrative landscape is famously complex, with shifting regulations and rigorous documentation requirements that can feel overwhelming for even the most prepared individuals.',
             'At A.V.C Institute, we don\'t just provide "paperwork assistance"; we provide peace of mind. Our immigration experts specialize in a wide range of residency paths, including Student Visas, Talent Passports (for researchers, business creators, and artists), Family Reunification, and Long-stay Visitor Visas.',
@@ -44,7 +54,9 @@ return [
     ],
     'resume-lettre-motivation' => [
         'title' => 'CV & Motivation Letter (Lettre de Motivation)',
-        'description' => 'Professional writing and editing services to adapt your profile to French standards. We help you stand out in the competitive admissions process for top French universities.',
+        'description' => 'Perfect your French CV and Lettre de Motivation for Parcoursup, e-Candidat, or Grandes Écoles. Get tailored, professional academic profile adaptation.',
+        'service_type' => 'EducationalService',
+        'meta_keywords' => 'French CV writing, Lettre de Motivation Parcoursup, CV standards France, e-Candidat application, university letter support',
         'content' => [
             'In the French academic and professional world, your CV and "Lettre de Motivation" are your first—and often only—chance to make a lasting impression. French recruiters and university admissions boards have very specific expectations regarding structure, tone, and the hierarchy of information. What works in your home country might not translate well to the French context.',
             'Our service goes beyond simple translation. We provide a deep cultural and professional adaptation of your profile. Whether you are applying via Parcoursup, e-Candidat, or directly to a Grande École, we ensure your motivation letter accurately reflects your aspirations while speaking the "language" of French higher education.',
@@ -77,7 +89,9 @@ return [
     ],
     'arrival-support' => [
         'title' => 'Settling-In & Arrival Support',
-        'description' => 'Your first 30 days in France, simplified. We handle the essential "Administrative Quadrangle": Bank, SIM, Insurance, and CAF.',
+        'description' => 'Simplify your transition to France. We set up your bank account, French SIM card, health insurance (Ameli), and CAF housing subsidies in your first week.',
+        'service_type' => 'ConsultingService',
+        'meta_keywords' => 'relocation support France, CPAM registration, open bank account France, CAF housing subsidy, French SIM card set up',
         'content' => [
             'The first few weeks in France are often a series of "Catch-22" situations: You need a bank account to rent an apartment, but you often need a proof of address to open a bank account. You need a French phone number for almost every registration, but some providers require a French bank account for a subscription. This administrative loop can be exhausting.',
             'Our Arrival Support service is designed to break this cycle. We act as your local concierge, guiding you through the critical "First Week" checklist. This includes securing a mobile plan that works for you, finding a banking partner that understands international profiles, and initiating your registration for the French health insurance system (L\'Assurance Maladie).',
@@ -110,7 +124,9 @@ return [
     ],
     'certified-translation' => [
         'title' => 'Certified Sworn Translation (Traduction Assermentée)',
-        'description' => 'Official, court-recognized translations for your legal and academic documents. Guaranteed acceptance by all French Prefectures, Universities, and administrative bodies.',
+        'description' => 'Get official, court-recognized sworn translations (Traduction Assermentée) for birth certificates, diplomas, and legal papers. 100% acceptance guaranteed.',
+        'service_type' => 'TranslationService',
+        'meta_keywords' => 'sworn translation French, Traduction Assermentee, certified translator Paris, birth certificate translation, academic document translation',
         'content' => [
             'In France, for a foreign document to be legally valid for administrative purposes—whether it\'s a birth certificate for the CAF, a diploma for university admission, or a marriage license for a residence permit—it must be translated by a "Traducteur Assermenté" (Sworn Translator). These are professionals who have taken an oath before a French Court of Appeal and whose signature and seal carry official weight.',
             'At A.V.C Institute, we manage the entire process for you. We work with a network of sworn translators across various language pairs (English, Persian, Arabic, etc.) to ensure that your documents are not just translated, but "officially adapted" to the terminology expected by French civil servants.',
@@ -143,7 +159,9 @@ return [
     ],
     'educational-counseling' => [
         'title' => 'Strategic Educational Counseling & Career Roadmap',
-        'description' => 'Expert guidance to navigate the complex French higher education landscape. From public universities to prestigious Grandes Écoles, we build your path to success.',
+        'description' => 'Get strategic guidance on French public universities and Grandes Écoles. We build your personalized career roadmap and find scholarship opportunities.',
+        'service_type' => 'EducationalService',
+        'meta_keywords' => 'study in France counseling, French higher education guide, scholarship strategy France, Grandes Ecoles admissions, career roadmap France',
         'content' => [
             'France offers a world-class education system, but with over 3,500 institutions and a wide variety of specialized schools, choosing the right path is a strategic decision that goes beyond just rankings. It’s about finding the perfect synergy between your academic background, your budget, and the specific demands of the French and international job markets.',
             'Our educational counseling service provides a comprehensive, 360-degree analysis of your profile. We don’t just look at your transcripts; we evaluate your professional goals, your "Soft Skills," and your long-term ambitions in France. We match you with programs—ranging from state-funded public universities to elite private business and engineering schools—that offer the highest post-graduation placement rates.',
@@ -176,7 +194,9 @@ return [
     ],
     'housing-assistance' => [
         'title' => 'Housing Search & CAF Housing Aid',
-        'description' => 'Secure your home in France before you land. We navigate the competitive French rental market and handle your monthly subsidy application.',
+        'description' => 'Find and secure your student room, studio, or shared flat in France before landing. We handle your CAF APL housing subsidy application to maximize savings.',
+        'service_type' => 'ConsultingService',
+        'meta_keywords' => 'student accommodation France, rent apartment Paris, Visale guarantor guide, CAF housing aid APL, CROUS residence application',
         'content' => [
             'Finding a place to call home in major French cities like Paris, Lyon, or Bordeaux is notoriously difficult for international arrivals. Landlords often demand a "Dossier de Location" that includes documents many foreigners don\'t have yet, such as a French guarantor or a salary history in France. This creates a barrier that can stall your plans.',
             'A.V.C Institute acts as your local representative. We leverage our network of trusted partner residences and landlords to find accommodation that fits your budget and lifestyle. Whether you are looking for a state-subsidized CROUS room, a private studio, or a "Colocation" (shared apartment), we ensure your housing is confirmed before you leave your home country.',
@@ -209,7 +229,9 @@ return [
     ],
     'university-application' => [
         'title' => 'Admission & Platform Management (Parcoursup & Campus France)',
-        'description' => 'End-to-end management of your university applications. We handle the technical complexities of Études en France, Parcoursup, and e-Candidat platforms.',
+        'description' => 'Complete admission management for Campus France, Parcoursup, and e-Candidat. We handle the platforms, organize mock interviews, and trace deadlines.',
+        'service_type' => 'EducationalService',
+        'meta_keywords' => 'Campus France application 2026, Parcoursup guide, e-Candidat portal help, university admission France, mock interview preparation',
         'content' => [
             'Applying to a French university is often a technical marathon. Depending on your nationality, country of residence, and the level of study you are targeting, you may need to navigate multiple platforms simultaneously. The "Études en France" (EEF) procedure, for instance, has strict deadlines and requires a perfectly calibrated dossier before it even reaches the universities.',
             'At A.V.C Institute, we act as your application project managers. We handle the structural setup of your accounts on Parcoursup (for first-year bachelor applicants), e-Candidat (for direct university applications), and the Campus France portal. This includes the precise categorization of your diplomas, the translation of your grades into the French system, and ensuring that all mandatory fields are filled out to avoid the dreaded "Dossier Incomplet" status.',
@@ -242,7 +264,9 @@ return [
     ],
     'administrative-advocacy' => [
         'title' => 'Administrative Advocacy & Liaison',
-        'description' => 'We act as your official representative to unblock stalled dossiers and resolve complex bureaucratic hurdles with French authorities.',
+        'description' => 'Liaison and administrative advocacy to unblock CPAM, CAF, URSSAF, or Prefecture applications. Resolve bureaucratic delays with French authorities.',
+        'service_type' => 'ConsultingService',
+        'meta_keywords' => 'unblock French bureaucracy, CPAM delay number, CAF application issue, Prefecture contact, administrative liaison France',
         'content' => [
             'French bureaucracy is legendary for its complexity, and it\'s not uncommon for files to get "stuck" in a silent loop. Whether it\'s a delayed social security number, a blocked tax registration, or an unanswered inquiry at the Prefecture, the lack of communication from authorities can have serious consequences on your legal status and finances.',
             'At A.V.C Institute, we provide heavy-duty administrative advocacy. Our team knows the hierarchy of French government bodies and understands the specific "keywords" and legal frameworks required to get a response. We don\'t just wait for the system to work; we proactively reach out to officials, draft formal inquiries (notices), and if necessary, escalate your case to the "Médiateur de la République" or other oversight bodies.',
@@ -275,7 +299,9 @@ return [
     ],
     'legal-support' => [
         'title' => 'Legal & Litigation Support (Public Law Experts)',
-        'description' => 'Fast-track legal defense for visa refusals, OQTF (deportation orders), and complex immigration litigation in French Administrative Courts.',
+        'description' => 'Fast-track legal defense against visa refusals, OQTF deportation orders, and administrative litigation in France with expert public law attorneys.',
+        'service_type' => 'LegalService',
+        'meta_keywords' => 'visa refusal appeal, OQTF defense France, immigration lawyer Paris, administrative court appeal, French citizenship application',
         'content' => [
             'Receiving a visa refusal or, worse, an "Obligation de Quitter le Territoire Français" (OQTF) is a critical emergency that requires immediate legal action. In France, the windows for appealing these decisions are extremely narrow—sometimes as short as 48 hours or up to 30 days depending on the procedure. Missing these deadlines can lead to a definitive ban on re-entering the country.',
             'A.V.C Institute partners with specialized immigration and public law attorneys across France. We act as your primary support team, gathering the necessary evidence and coordinates to build a "Recours Gracieux" (informal appeal to the Prefect), a "Recours Hiérarchique" (to the Ministry), or a formal litigation before the "Tribunal Administratif" (Administrative Court).',

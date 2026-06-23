@@ -17,6 +17,7 @@ class ServiceSchema extends SchemaBuilder
     {
         $this->setContext()
             ->setType('Service')
+            ->add('@id', $this->url.'#service')
             ->add('name', $this->name)
             ->add('url', $this->url)
             ->add('description', $this->description)
@@ -30,6 +31,35 @@ class ServiceSchema extends SchemaBuilder
             ->add('areaServed', [
                 '@type' => 'Country',
                 'name' => $this->areaServed,
+            ])
+            ->add('audience', [
+                '@type' => 'Audience',
+                'audienceType' => 'International students and immigrants in France',
+            ])
+            ->add('potentialAction', [
+                '@type' => 'ReserveAction',
+                'target' => [
+                    '@type' => 'EntryPoint',
+                    'urlTemplate' => url(app()->getLocale().'/consult'),
+                    'inLanguage' => app()->getLocale(),
+                    'actionPlatform' => [
+                        'http://schema.org/DesktopWebPlatform',
+                        'http://schema.org/MobileWebPlatform',
+                    ],
+                ],
+                'result' => [
+                    '@type' => 'Reservation',
+                    'name' => 'Consultation Booking',
+                ],
+            ])
+            ->add('availableChannel', [
+                '@type' => 'ServiceChannel',
+                'servicePhone' => [
+                    '@type' => 'ContactPoint',
+                    'telephone' => config('seo.organization.telephone', '+33768688326'),
+                    'contactType' => 'customer service',
+                    'availableLanguage' => ['English', 'French', 'Persian'],
+                ],
             ]);
 
         return $this->data;
