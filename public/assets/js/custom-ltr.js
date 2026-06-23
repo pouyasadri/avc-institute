@@ -717,11 +717,12 @@ function toggleTheme() {
 
 // Immediately invoked function to set the theme on initial load
 (function () {
+    const slider = document.getElementById('slider');
     if (localStorage.getItem('ecorik_theme') === 'theme-dark') {
         setTheme('theme-dark');
-        document.getElementById('slider').checked = false;
+        if (slider) slider.checked = false;
     } else {
         setTheme('theme-light');
-        document.getElementById('slider').checked = true;
+        if (slider) slider.checked = true;
     }
 })();
