@@ -76,6 +76,11 @@ return [
     'comparison_monthly_cost' => 'هزینه ماهانه',
     'comparison_cta' => 'مشاوره رایگان — کدام شهر برای من مناسب‌تر است؟',
     'comparison_more_info' => 'بیشتر بدان',
+    'lyon_cost' => '۱۰۰۰–۱۳۵۰ €',
+    'paris_cost' => '۱۴۰۰–۲۰۰۰ €',
+    'toulouse_cost' => '۱۰۰۰–۱۳۰۰ €',
+    'strasbourg_cost' => '۹۰۰–۱۲۰۰ €',
+    'nice_cost' => '۱۱۰۰–۱۵۰۰ €',
 
     // Tags
     'lyon_tag' => 'محبوب ایرانیان',

@@ -129,7 +129,7 @@
                                     <div class="d-flex justify-content-between small text-muted mb-1">
                                         <span>💸 {{ __('cities.comparison_monthly_cost') }}</span>
                                     </div>
-                                    <div class="cost-pill fw-bold text-primary">۱۰۰۰–۱۳۵۰ €</div>
+                                    <div class="cost-pill fw-bold text-primary">{{ __('cities.lyon_cost') }}</div>
                                     <div class="progress mt-1" style="height:4px;">
                                         <div class="progress-bar bg-success" style="width:55%"></div>
                                     </div>
@@ -157,7 +157,7 @@
                                     <div class="d-flex justify-content-between small text-muted mb-1">
                                         <span>💸 {{ __('cities.comparison_monthly_cost') }}</span>
                                     </div>
-                                    <div class="cost-pill fw-bold text-primary">۱۴۰۰–۲۰۰۰ €</div>
+                                    <div class="cost-pill fw-bold text-primary">{{ __('cities.paris_cost') }}</div>
                                     <div class="progress mt-1" style="height:4px;">
                                         <div class="progress-bar bg-danger" style="width:90%"></div>
                                     </div>
@@ -185,7 +185,7 @@
                                     <div class="d-flex justify-content-between small text-muted mb-1">
                                         <span>💸 {{ __('cities.comparison_monthly_cost') }}</span>
                                     </div>
-                                    <div class="cost-pill fw-bold text-primary">۱۰۰۰–۱۳۰۰ €</div>
+                                    <div class="cost-pill fw-bold text-primary">{{ __('cities.toulouse_cost') }}</div>
                                     <div class="progress mt-1" style="height:4px;">
                                         <div class="progress-bar bg-success" style="width:50%"></div>
                                     </div>
@@ -213,7 +213,7 @@
                                     <div class="d-flex justify-content-between small text-muted mb-1">
                                         <span>💸 {{ __('cities.comparison_monthly_cost') }}</span>
                                     </div>
-                                    <div class="cost-pill fw-bold text-primary">۹۰۰–۱۲۰۰ €</div>
+                                    <div class="cost-pill fw-bold text-primary">{{ __('cities.strasbourg_cost') }}</div>
                                     <div class="progress mt-1" style="height:4px;">
                                         <div class="progress-bar bg-info" style="width:40%"></div>
                                     </div>
@@ -241,7 +241,7 @@
                                     <div class="d-flex justify-content-between small text-muted mb-1">
                                         <span>💸 {{ __('cities.comparison_monthly_cost') }}</span>
                                     </div>
-                                    <div class="cost-pill fw-bold text-primary">۱۱۰۰–۱۵۰۰ €</div>
+                                    <div class="cost-pill fw-bold text-primary">{{ __('cities.nice_cost') }}</div>
                                     <div class="progress mt-1" style="height:4px;">
                                         <div class="progress-bar bg-warning" style="width:65%"></div>
                                     </div>

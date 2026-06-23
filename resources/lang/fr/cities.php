@@ -73,6 +73,11 @@ return [
     'comparison_monthly_cost' => 'Coût mensuel',
     'comparison_cta' => 'Consultation Gratuite — Quelle ville me convient le mieux ?',
     'comparison_more_info' => 'En savoir plus',
+    'lyon_cost' => '1 000 – 1 350 €',
+    'paris_cost' => '1 400 – 2 000 €',
+    'toulouse_cost' => '1 000 – 1 300 €',
+    'strasbourg_cost' => '900 – 1 200 €',
+    'nice_cost' => '1 100 – 1 500 €',
 
     // Tags
     'lyon_tag' => 'Choix Populaire',
