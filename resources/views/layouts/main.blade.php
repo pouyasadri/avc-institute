@@ -177,13 +177,16 @@
         {{-- amCharts is only used on the homepage map — 310 ms LCP savings --}}
         <link rel="preconnect" href="https://www.amcharts.com">
         {{-- Preload the hero LCP image so the browser fetches it immediately --}}
-        @if($isRtl)
-            <link rel="preload" as="image" fetchpriority="high"
-                  href="{{ asset('assets/img/cities/Paris/paris-slider1.webp') }}">
-        @else
-            <link rel="preload" as="image" fetchpriority="high"
-                  href="{{ asset('assets/img/cities/Paris/paris-slider1.webp') }}">
-        @endif
+        <link rel="preload" as="image" fetchpriority="high"
+              href="{{ asset('assets/img/cities/Paris/paris-slider1.webp') }}">
+    @endif
+
+    {{-- Preload Critical Font Files (reduce CLS and fix font-display penalty) --}}
+    <link rel="preload" href="{{ asset('assets/fonts/boxicons.woff2') }}" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{{ asset('assets/fonts/Flaticon.woff2') }}" as="font" type="font/woff2" crossorigin>
+    @if($isRtl)
+        <link rel="preload" href="{{ asset('assets/fonts/webfonts/Vazirmatn-RD-FD-Regular.woff2') }}" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="{{ asset('assets/fonts/webfonts/Vazirmatn-RD-FD-Bold.woff2') }}" as="font" type="font/woff2" crossorigin>
     @endif
 
     @stack('styles')

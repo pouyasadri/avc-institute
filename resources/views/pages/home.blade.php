@@ -97,7 +97,8 @@
                             <img src="{{asset("assets/img/cities/Paris/paris4.webp")}}"
                                 alt="{{ __('index.about.image_alt') }}"
                                 width="679" height="424"
-                                loading="lazy">
+                                fetchpriority="high"
+                                style="max-width: 100%; height: auto;">
                         </div>
                     </div>
                     <div class="col-lg-6">
