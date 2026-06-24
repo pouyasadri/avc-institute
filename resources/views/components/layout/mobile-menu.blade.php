@@ -10,7 +10,7 @@
     <div class="mobile-menu-header">
         <div class="mobile-menu-logo">
             <a href="{{ route('index', ['locale' => app()->getLocale()]) }}">
-                <img src="{{asset("../assets/img/logo/new-logo.webp")}}" alt="{{ __('layout.logo_alt') }}">
+                <img src="{{asset("assets/img/logo/new-logo.webp")}}" alt="{{ __('layout.logo_alt') }}">
             </a>
         </div>
         <button class="mobile-menu-close" aria-label="Close menu" onclick="toggleMobileMenu()">

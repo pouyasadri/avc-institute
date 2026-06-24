@@ -150,7 +150,7 @@
             </div>
             <div class="white-shape">
                 <img src="{{asset("assets/img/shape/white-shape-top.png")}}" alt="{{ __('index.video.image_alt') }}">
-                <img src="{{asset("../assets/img/shape/white-shape-bottom.png")}}" alt="{{ __('index.video.image_alt') }}">
+                <img src="{{asset("assets/img/shape/white-shape-bottom.png")}}" alt="{{ __('index.video.image_alt') }}">
             </div>
         </section>
         <!-- End Incredible Area -->

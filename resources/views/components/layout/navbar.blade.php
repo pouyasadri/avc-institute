@@ -6,7 +6,7 @@
         {{-- Menu For Mobile Device --}}
         <nav class="mobile-nav" role="navigation" aria-label="{{ __('layout.mobile_navigation') }}">
             <a href="{{ route('index', ['locale' => app()->getLocale()]) }}" class="logo" aria-label="{{ __('layout.home') }}">
-                <img style="width: 4rem;padding-bottom: 0.5rem;" src="{{asset("../assets/img/logo/new-logo.webp")}}"
+                <img style="width: 4rem;padding-bottom: 0.5rem;" src="{{asset("assets/img/logo/new-logo.webp")}}"
                     alt="{{ __('layout.logo_alt') }}" width="64" height="64">
             </a>
 
@@ -23,7 +23,7 @@
                 aria-label="{{ __('layout.main_navigation') }}">
                 <div class="container">
                     <a class="navbar-brand" href="{{ route('index', ['locale' => app()->getLocale()]) }}" aria-label="{{ __('layout.home') }}">
-                        <img style="width: 8rem" src="{{asset("../assets/img/logo/new-logo.png")}}"
+                        <img style="width: 8rem" src="{{asset("assets/img/logo/new-logo.png")}}"
                             alt="{{ __('layout.logo_alt') }}" width="128" height="86">
                     </a>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">

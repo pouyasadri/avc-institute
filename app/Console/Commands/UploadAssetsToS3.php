@@ -92,10 +92,20 @@ class UploadAssetsToS3 extends Command
         foreach ($files as $fileInfo) {
             try {
                 $stream = fopen($fileInfo['absolute_path'], 'r');
+
+                $isBuildAsset = str_starts_with($fileInfo['relative_path'], 'build/');
+
+                $options = [
+                    'visibility' => 'public',
+                    'CacheControl' => $isBuildAsset
+                        ? 'public, max-age=31536000, immutable'
+                        : 'public, max-age=604800, must-revalidate',
+                ];
+
                 $uploaded = Storage::disk($disk)->put(
                     $fileInfo['relative_path'],
                     $stream,
-                    ['visibility' => 'public']
+                    $options
                 );
 
                 if (is_resource($stream)) {

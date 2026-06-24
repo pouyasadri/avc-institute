@@ -172,6 +172,9 @@
          Removed: cdn.jsdelivr.net (nothing loads from there).
     ═══════════════════════════════════════════════════════════════════ --}}
     <link rel="dns-prefetch" href="https://www.clarity.ms">
+    @if(config('app.asset_url'))
+        <link rel="preconnect" href="{{ config('app.asset_url') }}" crossorigin>
+    @endif
     @php $routeName = optional(request()->route())->getName(); @endphp
     @if($routeName === 'index')
         {{-- amCharts is only used on the homepage map — 310 ms LCP savings --}}
