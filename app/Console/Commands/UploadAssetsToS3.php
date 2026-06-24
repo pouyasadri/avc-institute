@@ -61,7 +61,7 @@ class UploadAssetsToS3 extends Command
 
                 $files[] = [
                     'absolute_path' => $file->getPathname(),
-                    'relative_path' => $folderName.'/'.$file->getRelativePathname(),
+                    'relative_path' => 'public/'.$folderName.'/'.$file->getRelativePathname(),
                 ];
             }
         }
@@ -93,7 +93,7 @@ class UploadAssetsToS3 extends Command
             try {
                 $stream = fopen($fileInfo['absolute_path'], 'r');
 
-                $isBuildAsset = str_starts_with($fileInfo['relative_path'], 'build/');
+                $isBuildAsset = str_starts_with($fileInfo['relative_path'], 'public/build/');
 
                 $options = [
                     'visibility' => 'public',
