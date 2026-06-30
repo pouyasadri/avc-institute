@@ -12,6 +12,22 @@ class UpdateBlogPostRequest extends FormRequest
         return true;
     }
 
+    protected function prepareForValidation(): void
+    {
+        $translations = $this->input('translations', []);
+        if (is_array($translations)) {
+            foreach ($translations as $locale => &$translation) {
+                if (! empty($translation['body'])) {
+                    $decoded = base64_decode($translation['body'], true);
+                    if ($decoded !== false) {
+                        $translation['body'] = $decoded;
+                    }
+                }
+            }
+            $this->merge(['translations' => $translations]);
+        }
+    }
+
     public function rules(): array
     {
         return [

@@ -117,3 +117,28 @@
         </div>
     </div>
 @endsection
+
+@push('scripts')
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.querySelector('form');
+        if (form) {
+            form.addEventListener('submit', function(e) {
+                if (e.defaultPrevented) {
+                    return;
+                }
+                form.querySelectorAll('textarea[name$="[body]"]').forEach(function(textarea) {
+                    if (textarea.value && !textarea.hasAttribute('data-encoded')) {
+                        try {
+                            textarea.value = btoa(unescape(encodeURIComponent(textarea.value)));
+                            textarea.setAttribute('data-encoded', 'true');
+                        } catch (err) {
+                            console.error('Failed to encode textarea:', err);
+                        }
+                    }
+                });
+            });
+        }
+    });
+</script>
+@endpush
