@@ -126,7 +126,7 @@
             <div class="login-form-wrapper">
                 <div class="login-logo">
                     <a href="{{ url('/') }}">
-                        <img src="{{ asset('assets/img/logo/new-logo.webp') }}" alt="Logo">
+                        <img src="{{ asset('assets/img/logo/new-logo.webp') }}" alt="Logo" width="224" height="150">
                     </a>
                 </div>
 

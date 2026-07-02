@@ -179,9 +179,16 @@
     @if($routeName === 'index')
         {{-- amCharts is only used on the homepage map — 310 ms LCP savings --}}
         <link rel="preconnect" href="https://www.amcharts.com">
-        {{-- Preload the hero LCP image so the browser fetches it immediately --}}
+        {{-- Preload the slider background (first paint, but not the actual LCP element) --}}
         <link rel="preload" as="image" fetchpriority="high"
               href="{{ asset('assets/img/cities/Paris/paris-slider1.webp') }}">
+        {{-- Preload the real LCP element: the "about" section image (confirmed via
+             Lighthouse — it paints before the CSS-driven slider background because
+             it's a plain <img> the preload scanner can find immediately). Without
+             this, the browser doesn't discover it until it parses ~100 lines into
+             the body, adding ~1.8s of avoidable "resource load delay" to LCP. --}}
+        <link rel="preload" as="image" fetchpriority="high"
+              href="{{ asset('assets/img/cities/Paris/paris4.webp') }}">
     @endif
 
     {{-- Preload Critical Font Files (reduce CLS and fix font-display penalty) --}}
@@ -359,15 +366,30 @@
     @stack('json')
 
     <script type="text/javascript">
+        // Analytics is deferred until the page has finished loading (or after a
+        // short idle fallback) so it never competes with the critical rendering
+        // path for bandwidth / main-thread time during FCP/LCP.
         (function (c, l, a, r, i, t, y) {
-            c[a] = c[a] || function () {
-                (c[a].q = c[a].q || []).push(arguments)
-            };
-            t = l.createElement(r);
-            t.async = 1;
-            t.src = "https://www.clarity.ms/tag/" + i;
-            y = l.getElementsByTagName(r)[0];
-            y.parentNode.insertBefore(t, y);
+            function loadClarity() {
+                c[a] = c[a] || function () {
+                    (c[a].q = c[a].q || []).push(arguments)
+                };
+                t = l.createElement(r);
+                t.async = 1;
+                t.src = "https://www.clarity.ms/tag/" + i;
+                y = l.getElementsByTagName(r)[0];
+                y.parentNode.insertBefore(t, y);
+            }
+
+            if (document.readyState === 'complete') {
+                loadClarity();
+            } else {
+                window.addEventListener('load', function () {
+                    ('requestIdleCallback' in window)
+                        ? requestIdleCallback(loadClarity, { timeout: 4000 })
+                        : setTimeout(loadClarity, 1000);
+                });
+            }
         })(window, document, "clarity", "script", "kxqm47bwto");
     </script>
 </head>

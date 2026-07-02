@@ -336,24 +336,25 @@
     <x-seo.structured-data :schema="$webPageSchema" />
 @endpush
 @push("scripts")
-    {{-- amCharts scripts are already at end-of-body (non-render-blocking).
-         Do NOT use defer here — the inline AmCharts.makeChart() block below
-         would execute before the deferred library loads. --}}
-    <script src="https://www.amcharts.com/lib/3/ammap.js"></script>
-    <script src="https://www.amcharts.com/lib/3/maps/js/franceLow.js"></script>
+    {{-- amCharts (~60 KiB, ~23 KiB unused) is only loaded once the map section
+         scrolls near the viewport, instead of unconditionally at page load.
+         This removes it from the initial JS payload / main-thread cost entirely
+         for users who never scroll that far, and reduces "reduce unused JS" /
+         TBT on first load. --}}
     <script>
-        // Dynamic Map Configuration with Locale-based City Names
-        var targetSVG = "M9,0C4.029,0,0,4.029,0,9s4.029,9,9,9s9-4.029,9-9S13.971,0,9,0z M9,15.93 c-3.83,0-6.93-3.1-6.93-6.93S5.17,2.07,9,2.07s6.93,3.1,6.93,6.93S12.83,15.93,9,15.93 M12.5,9c0,1.933-1.567,3.5-3.5,3.5S5.5,10.933,5.5,9S7.067,5.5,9,5.5 S12.5,7.067,12.5,9z";
-        var planeSVG = "m2,106h28l24,30h72l-44,-133h35l80,132h98c21,0 21,34 0,34l-98,0 -80,134h-35l43,-133h-71l-24,30h-28l15,-47";
+        function initFranceMap() {
+            // Dynamic Map Configuration with Locale-based City Names
+            var targetSVG = "M9,0C4.029,0,0,4.029,0,9s4.029,9,9,9s9-4.029,9-9S13.971,0,9,0z M9,15.93 c-3.83,0-6.93-3.1-6.93-6.93S5.17,2.07,9,2.07s6.93,3.1,6.93,6.93S12.83,15.93,9,15.93 M12.5,9c0,1.933-1.567,3.5-3.5,3.5S5.5,10.933,5.5,9S7.067,5.5,9,5.5 S12.5,7.067,12.5,9z";
+            var planeSVG = "m2,106h28l24,30h72l-44,-133h35l80,132h98c21,0 21,34 0,34l-98,0 -80,134h-35l43,-133h-71l-24,30h-28l15,-47";
 
-        // Get city names from translations
-        var chartEl = document.getElementById("chartdiv");
-        var cityNames = [];
-        if (chartEl && chartEl.dataset && chartEl.dataset.cityNames) {
-            cityNames = JSON.parse(chartEl.dataset.cityNames);
-        }
+            // Get city names from translations
+            var chartEl = document.getElementById("chartdiv");
+            var cityNames = [];
+            if (chartEl && chartEl.dataset && chartEl.dataset.cityNames) {
+                cityNames = JSON.parse(chartEl.dataset.cityNames);
+            }
 
-        AmCharts.makeChart("chartdiv", {
+            AmCharts.makeChart("chartdiv", {
             type: "map",
             fontSize: 20,
             balloon: { horizontalPadding: 20, verticalPadding: 15 },
@@ -440,7 +441,47 @@
                 color: "#585869",
                 alpha: 0.4
             }
-        });
+            });
+        }
+
+        // Load the amCharts library (+ France map data) only once #chartdiv is
+        // about to enter the viewport, then initialise the map.
+        (function () {
+            var chartEl = document.getElementById("chartdiv");
+            if (!chartEl) return;
+
+            var loaded = false;
+
+            function loadMapScripts() {
+                if (loaded) return;
+                loaded = true;
+
+                var ammap = document.createElement("script");
+                ammap.src = "https://www.amcharts.com/lib/3/ammap.js";
+                ammap.onload = function () {
+                    var franceLow = document.createElement("script");
+                    franceLow.src = "https://www.amcharts.com/lib/3/maps/js/franceLow.js";
+                    franceLow.onload = initFranceMap;
+                    document.body.appendChild(franceLow);
+                };
+                document.body.appendChild(ammap);
+            }
+
+            if ("IntersectionObserver" in window) {
+                var observer = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                            loadMapScripts();
+                            observer.disconnect();
+                        }
+                    });
+                }, { rootMargin: "200px 0px" });
+                observer.observe(chartEl);
+            } else {
+                // Fallback for older browsers without IntersectionObserver support
+                loadMapScripts();
+            }
+        })();
 
         // Fix Owl Carousel nav button accessibility after carousel initialises.
         // Owl Carousel 2 injects role="presentation" on <button> which is invalid

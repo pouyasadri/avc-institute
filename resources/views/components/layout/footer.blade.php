@@ -9,7 +9,7 @@
                 <div class="col-lg-3 col-md-6">
                     <div class="single-widget">
                         <a href="{{ route('index', ['locale' => app()->getLocale()]) }}">
-                            <img src="{{asset("assets/img/logo/new-logo.webp")}}" alt="{{ __('layout.logo_alt') }}">
+                            <img src="{{asset("assets/img/logo/new-logo.webp")}}" alt="{{ __('layout.logo_alt') }}" width="224" height="150" loading="lazy">
                         </a>
                         <p>{{ __('layout.footer.about_short') }}</p>
                         <ul class="social-icon">
