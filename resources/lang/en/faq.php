@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'title' => 'Frequently Asked Questions (Updated May 2026)',
+    'title' => 'Frequently Asked Questions (Latest 2026 Update)',
     'subtitle' => 'Find the latest 2026 answers to common questions about our services and immigration to France.',
     'items' => [
         [
