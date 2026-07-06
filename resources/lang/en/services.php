@@ -341,28 +341,28 @@ return [
         'content' => [
             'Obtaining your French student visa (VLS-TS) is the crucial first step to beginning your academic journey in France. Despite high acceptance rates, simple formatting errors or incorrect financial proof arrangement can lead to a visa refusal.',
             'A.V.C leverages years of expertise in French educational migration to manage every stage: CV and motivation letter optimization, Campus France registration, VFS appointment coordination, and preparing a bulletproof financial file.',
-            'We also host mock interview prep sessions simulating the Campus France interview, ensuring you present your academic plans with absolute confidence.'
+            'We also host mock interview prep sessions simulating the Campus France interview, ensuring you present your academic plans with absolute confidence.',
         ],
         'benefits' => [
             'Meticulous review of proof of funds and financial guarantor (Garant) files matching consular updates.',
             'Priority VFS appointment booking assistance.',
             'Realistic Campus France mock interviews with experienced advisors.',
-            'Complete support with France-Visas application forms and motivation letters.'
+            'Complete support with France-Visas application forms and motivation letters.',
         ],
         'faq' => [
             [
                 'q' => 'What is the required proof of funds for a French student visa in 2026?',
-                'a' => 'Students must prove they have at least €615 per month (€7,380 for one academic year) through personal bank statements or a certified guarantor (Garant) residing in France or abroad.'
+                'a' => 'Students must prove they have at least €615 per month (€7,380 for one academic year) through personal bank statements or a certified guarantor (Garant) residing in France or abroad.',
             ],
             [
                 'q' => 'How long is the VLS-TS visa valid, and does it need validation?',
-                'a' => 'The long-stay student visa (VLS-TS) is typically valid for 4 to 12 months. Within 3 months of arriving in France, you must validate your visa online through the official OFII portal.'
+                'a' => 'The long-stay student visa (VLS-TS) is typically valid for 4 to 12 months. Within 3 months of arriving in France, you must validate your visa online through the official OFII portal.',
             ],
             [
                 'q' => 'Are international students allowed to work in France?',
-                'a' => 'Yes, international students are legally allowed to work part-time up to 60% of the annual work hours (equivalent to 964 hours per year).'
-            ]
-        ]
+                'a' => 'Yes, international students are legally allowed to work part-time up to 60% of the annual work hours (equivalent to 964 hours per year).',
+            ],
+        ],
     ],
 
     'investment-visa' => [
@@ -373,28 +373,27 @@ return [
         'content' => [
             'France is one of Europe\'s premier economies for investment and family relocation. If you are looking to obtain residency without active local employment or study, several pathways like property investment, self-sufficiency (Visiteur), and the Talent Passport are available.',
             'Under the Visiteur (self-sufficiency) scheme, you can obtain French residency for you and your family by demonstrating sufficient passive income, with no requirement to buy property or transfer capital.',
-            'A.V.C\'s legal network in France handles the complex legalities, assisting in international bank account setup, Notary liaison, and visa filing.'
+            'A.V.C\'s legal network in France handles the complex legalities, assisting in international bank account setup, Notary liaison, and visa filing.',
         ],
         'benefits' => [
             'A-Z guidance on selecting and acquiring premium real estate in key cities (Paris, Lyon, Nice).',
             'Strategic file preparation for self-sufficiency visas (Visiteur) with high success rates.',
             'Direct collaboration with French Notaries (Notaires) and immigration specialists.',
-            'Family reunification support for spouse and minor children.'
+            'Family reunification support for spouse and minor children.',
         ],
         'faq' => [
             [
                 'q' => 'What is the minimum passive income required for a Visiteur (self-sufficiency) visa?',
-                'a' => 'You must demonstrate a regular passive income of at least €1,400 to €1,800 per month (from rental yields, dividends, pensions, etc.) for the main applicant, increasing proportionally for dependents.'
+                'a' => 'You must demonstrate a regular passive income of at least €1,400 to €1,800 per month (from rental yields, dividends, pensions, etc.) for the main applicant, increasing proportionally for dependents.',
             ],
             [
                 'q' => 'Does buying a property in France guarantee residency?',
-                'a' => 'Property ownership does not grant automatic residency, but it acts as excellent proof of housing and financial strength, vastly improving your chances for a Visiteur long-stay visa.'
+                'a' => 'Property ownership does not grant automatic residency, but it acts as excellent proof of housing and financial strength, vastly improving your chances for a Visiteur long-stay visa.',
             ],
             [
                 'q' => 'Am I allowed to work in France under a Visiteur visa?',
-                'a' => 'No. Under the Visiteur status, you sign an agreement not to engage in any professional activity within the French domestic market. However, you can manage assets or businesses located outside of France.'
-            ]
-        ]
+                'a' => 'No. Under the Visiteur status, you sign an agreement not to engage in any professional activity within the French domestic market. However, you can manage assets or businesses located outside of France.',
+            ],
+        ],
     ],
 ];
-

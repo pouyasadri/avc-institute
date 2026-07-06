@@ -175,4 +175,3 @@ return [
     'tuition_note_title' => '💡 Note sur l\'Exonération des Frais de Scolarité :',
     'tuition_note_content' => 'Plusieurs universités publiques françaises (comme l\'Université de Strasbourg, Lyon 2, etc.) n\'appliquent pas les frais différenciés ou offrent des bourses d\'exonération. Dans ce cas, vous paierez le tarif national standard (170 €/an pour la Licence, 243 €/an pour le Master). Contactez A.V.C pour plus d\'informations.',
 ];
-

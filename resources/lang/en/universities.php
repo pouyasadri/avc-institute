@@ -175,4 +175,3 @@ return [
     'tuition_note_title' => '💡 Note on Tuition Fee Waivers (Exonération):',
     'tuition_note_content' => 'Many public French universities (such as University of Strasbourg, Lyon 2, etc.) do not apply the high differentiated fees to non-EU students or offer fee waiver scholarships. In this case, you will only pay the standard national rate (€170/yr for Bachelor, €243/yr for Master). Contact A.V.C to find out which universities offer these waivers.',
 ];
-
