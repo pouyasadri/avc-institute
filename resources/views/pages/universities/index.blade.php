@@ -104,6 +104,63 @@
             </div>
         </section>
 
+        <!-- Start Tuition Fees Section (Targeting 'هزینه تحصیل در فرانسه' July 2026) -->
+        <section class="pb-100 bg-white" id="tuition-fees">
+            <div class="container">
+                <div class="section-title text-center mb-5">
+                    <span class="text-uppercase fw-bold text-primary tracking-wider">{{ __('universities.tuition_section_title') }}</span>
+                    <h2 class="display-6 fw-bold mt-2">{{ __('universities.tuition_section_heading') }}</h2>
+                    <p class="mx-auto mt-3 text-muted" style="max-width: 800px;">
+                        {{ __('universities.tuition_section_paragraph') }}
+                    </p>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="table-responsive rounded-4 shadow-sm border">
+                            <table class="table table-hover align-middle mb-0 bg-white" id="tuition-fees-table">
+                                <thead class="table-primary">
+                                    <tr>
+                                        <th class="px-4 py-3">{{ __('universities.tuition_table_degree') }}</th>
+                                        <th class="px-4 py-3">{{ __('universities.tuition_table_public') }}</th>
+                                        <th class="px-4 py-3">{{ __('universities.tuition_table_exempt') }}</th>
+                                        <th class="px-4 py-3">{{ __('universities.tuition_table_private') }}</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="px-4 py-3 fw-bold">{{ __('universities.tuition_licence') }}</td>
+                                        <td class="px-4 py-3">{{ __('universities.tuition_licence_fee') }}</td>
+                                        <td class="px-4 py-3 text-success fw-bold">{{ __('universities.tuition_licence_exempt_fee') }}</td>
+                                        <td class="px-4 py-3 text-muted">{{ __('universities.tuition_licence_private_fee') }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-3 fw-bold">{{ __('universities.tuition_master') }}</td>
+                                        <td class="px-4 py-3">{{ __('universities.tuition_master_fee') }}</td>
+                                        <td class="px-4 py-3 text-success fw-bold">{{ __('universities.tuition_master_exempt_fee') }}</td>
+                                        <td class="px-4 py-3 text-muted">{{ __('universities.tuition_master_private_fee') }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-3 fw-bold">{{ __('universities.tuition_phd') }}</td>
+                                        <td class="px-4 py-3 text-success fw-bold">{{ __('universities.tuition_phd_fee') }}</td>
+                                        <td class="px-4 py-3 text-success fw-bold">{{ __('universities.tuition_phd_exempt_fee') }}</td>
+                                        <td class="px-4 py-3 text-muted">{{ __('universities.tuition_phd_private_fee') }}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="mt-4 p-4 rounded-4 bg-light border-0">
+                            <h4 class="h6 fw-bold text-dark mb-2">{{ __('universities.tuition_note_title') }}</h4>
+                            <p class="text-muted small mb-0">
+                                {{ __('universities.tuition_note_content') }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Start Benefits Section -->
         <section class="our-rooms-area-two pb-100 bg-light-subtle pt-100">
             <div class="container">

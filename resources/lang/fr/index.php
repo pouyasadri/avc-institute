@@ -105,6 +105,16 @@ return [
                 'description' => 'Support complet pour l\'obtention et le renouvellement de votre Titre de Séjour. Nous gérons la bureaucratie pour que vous restiez en règle sans souci.',
             ],
             [
+                'slug' => 'student-visa',
+                'title' => 'Visa Étudiant France (VLS-TS)',
+                'description' => 'Accompagnement complet pour l\'obtention du visa étudiant français, rendez-vous VFS, justificatifs financiers et préparation aux entretiens Campus France.',
+            ],
+            [
+                'slug' => 'investment-visa',
+                'title' => 'Visa d\'Investissement & Résidence',
+                'description' => 'Conseil spécialisé et dépôt de dossier pour la résidence en France via l\'investissement immobilier, la formule visiteur (auto-suffisant) et le Passeport Talent.',
+            ],
+            [
                 'slug' => 'resume-lettre-motivation',
                 'title' => 'Rédaction CV & Lettre de Motivation',
                 'description' => 'Services de rédaction professionnelle pour faire ressortir votre dossier auprès des universités et employeurs français.',
@@ -145,6 +155,7 @@ return [
                 'description' => 'Accès à des avocats spécialisés pour les refus de visa, recours et cas d\'immigration complexes en France et dans votre pays d\'origine.',
             ],
         ],
+
     ],
 
     // Cities Section

@@ -105,6 +105,16 @@ return [
                 'description' => 'Full support for obtaining and renewing your Titre de Séjour. We handle the bureaucracy so you stay legal and worry-free.',
             ],
             [
+                'slug' => 'student-visa',
+                'title' => 'French Student Visa (VLS-TS)',
+                'description' => 'End-to-end guidance for obtaining a French student visa, VFS appointments, proof of funds documentation, and Campus France interview prep.',
+            ],
+            [
+                'slug' => 'investment-visa',
+                'title' => 'Investment Visa & Residency',
+                'description' => 'Specialized counseling and application filing for French residency through property investment, self-sufficiency (visiteur), and Talent Passport.',
+            ],
+            [
                 'slug' => 'resume-lettre-motivation',
                 'title' => 'CV & Motivation Letter (Lettre de Motivation)',
                 'description' => 'Professional writing services to make your application stand out to French universities and employers.',
@@ -145,6 +155,7 @@ return [
                 'description' => 'Access to specialized lawyers for visa refusals, appeals, and complex immigration cases in both France and your home country.',
             ],
         ],
+
     ],
 
     // Cities Section
