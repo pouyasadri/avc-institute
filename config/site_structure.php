@@ -39,6 +39,8 @@ return [
 
     'service_slugs' => [
         'residence-permit',
+        'student-visa',
+        'investment-visa',
         'resume-lettre-motivation',
         'arrival-support',
         'certified-translation',
@@ -49,3 +51,4 @@ return [
         'legal-support',
     ],
 ];
+
