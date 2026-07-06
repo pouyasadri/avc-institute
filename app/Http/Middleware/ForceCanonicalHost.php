@@ -17,6 +17,10 @@ class ForceCanonicalHost
 {
     public function handle(Request $request, Closure $next): Response
     {
+        if (app()->environment('local')) {
+            return $next($request);
+        }
+
         $appUrl = rtrim(parse_url(config('app.url', 'https://applyvipconseil.com'), PHP_URL_HOST) ?: 'applyvipconseil.com', '/');
 
         $host = $request->getHost();
