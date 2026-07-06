@@ -4,7 +4,7 @@ return [
     // SEO Meta
     'title' => 'Votre Guide pour l\'Université Paris-Saclay | Opportunités 2026',
     'keywords' => 'Université Paris-Saclay, étudier en France 2026, classement Paris-Saclay 2026, vie étudiante France, recherche Paris, admission étudiants internationaux',
-    'description' => 'Prêt à rejoindre un leader mondial de l\'innovation ? Découvrez l\'Université Paris-Saclay. Classée 13e mondiale (Shanghai 2026), elle offre un cadre chaleureux et dynamique pour votre réussite en 2026.',
+    'description' => 'Prêt à rejoindre un leader mondial de l\'innovation ? Découvrez l\'Université Paris-Saclay. Classée 12e mondiale (Shanghai 2026), elle offre un cadre chaleureux et dynamique pour votre réussite en 2026.',
 
     // Page Title Area
     'main_heading' => 'Bienvenue à l\'Université Paris-Saclay',
@@ -27,7 +27,7 @@ return [
 
     'global_leader_title' => 'Une Éducation de Rang Mondial, pensée pour Vous',
     'global_leader_content' => 'En choisissant Paris-Saclay, vous rejoignez l\'élite académique mondiale. Pour 2026, notre université confirme son excellence :
-- Classement de Shanghai 2026 : 13e mondiale (et fièrement n°1 en Europe continentale !).
+- Classement de Shanghai 2026 : 12e mondiale (et fièrement n°1 en Europe continentale !).
 - Classement QS 2026 : 70e mondiale.
 - Times Higher Education 2026 : 64e mondiale.
 
@@ -94,7 +94,7 @@ Ces chiffres témoignent de la qualité de l\'accompagnement et des opportunité
 
     // JSON-LD Schema
     'schema_headline' => 'Université Paris-Saclay : Votre voyage vers 2026 commence ici',
-    'schema_description' => 'Guide complet et bienveillant sur l\'Université Paris-Saclay (13e mondiale). Découvrez nos programmes et lancez votre candidature pour 2026.',
+    'schema_description' => 'Guide complet et bienveillant sur l\'Université Paris-Saclay (12e mondiale). Découvrez nos programmes et lancez votre candidature pour 2026.',
     'schema_author' => 'A.V.C - Votre Guide Personnel pour réussir en France',
 
     // FAQ Section
@@ -103,7 +103,7 @@ Ces chiffres témoignent de la qualité de l\'accompagnement et des opportunité
     'faq_items' => [
         [
             'question' => 'Est-ce que Paris-Saclay est vraiment au top ?',
-            'answer' => 'Absolument ! Classée 13e mondiale et 1ère en Europe continentale, l\'université offre des ressources et un soutien que vous ne trouverez nulle part ailleurs.',
+            'answer' => 'Absolument ! Classée 12e mondiale et 1ère en Europe continentale, l\'université offre des ressources et un soutien que vous ne trouverez nulle part ailleurs.',
         ],
         [
             'question' => 'Peut-on étudier en anglais ?',

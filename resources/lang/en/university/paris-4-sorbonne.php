@@ -28,7 +28,7 @@ return [
 
     'global_leader_title' => 'A World-Renowned Academic Tradition',
     'global_leader_content' => 'By choosing Sorbonne, you’re joining one of the most respected academic institutions in the world. As we look ahead to 2026, the university remains extremely highly regarded:
-- QS World Rankings: Consistently ranked among the top 230 universities globally.
+- QS World Rankings: Consistently ranked among the top 50 universities globally.
 - Times Higher Education: Leading the way in Arts and Humanities worldwide.
 
 These achievements reflect a commitment to outstanding teaching and deep, impactful research.',

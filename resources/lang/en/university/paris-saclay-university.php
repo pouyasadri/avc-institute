@@ -4,7 +4,7 @@ return [
     // SEO Meta
     'title' => 'Your Guide to Paris-Saclay University | 2026 Academic Opportunities',
     'keywords' => 'University of Paris-Saclay, study in France 2026, Paris-Saclay rankings, student life France, research in Paris, international students Paris-Saclay, top French universities',
-    'description' => 'Ready to join a world leader in science and innovation? Discover the University of Paris-Saclay. Ranked #13 globally (Shanghai 2026), UPC offers a welcoming and vibrant environment for your 2026 academic journey.',
+    'description' => 'Ready to join a world leader in science and innovation? Discover the University of Paris-Saclay. Ranked #12 globally (Shanghai 2026), UPC offers a welcoming and vibrant environment for your 2026 academic journey.',
 
     // Page Title Area
     'main_heading' => 'Welcome to Paris-Saclay University',
@@ -27,7 +27,7 @@ return [
 
     'global_leader_title' => 'A World-Class Education, Just for You',
     'global_leader_content' => 'By choosing Paris-Saclay, you’re joining one of the top universities on the planet. As we step into 2026, our university continues to lead:
-- Shanghai Ranking 2026: #13 in the world (we’re proud to be #1 in Continental Europe!).
+- Shanghai Ranking 2026: #12 in the world (we’re proud to be #1 in Continental Europe!).
 - QS World Rankings 2026: #70 globally.
 - Times Higher Education 2026: #64 globally.
 
@@ -94,7 +94,7 @@ These aren’t just numbers—they represent the quality of support, research, a
 
     // JSON-LD Schema
     'schema_headline' => 'University of Paris-Saclay: Your 2026 Journey Starts Here',
-    'schema_description' => 'A student-centric guide to the University of Paris-Saclay, ranked #13 globally. Explore our programs and start your 2026 application today.',
+    'schema_description' => 'A student-centric guide to the University of Paris-Saclay, ranked #12 globally. Explore our programs and start your 2026 application today.',
     'schema_author' => 'A.V.C - Your Personal Guide to Life in France',
 
     // FAQ Section
@@ -103,7 +103,7 @@ These aren’t just numbers—they represent the quality of support, research, a
     'faq_items' => [
         [
             'question' => 'How good is Paris-Saclay really?',
-            'answer' => 'It\'s actually one of the best in the world! Ranked #13 globally and #1 in Continental Europe, we offer top-tier support and resources that are rarely matched elsewhere.',
+            'answer' => 'It\'s actually one of the best in the world! Ranked #12 globally and #1 in Continental Europe, we offer top-tier support and resources that are rarely matched elsewhere.',
         ],
         [
             'question' => 'Can I study in English?',

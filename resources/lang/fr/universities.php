@@ -24,7 +24,7 @@ return [
 
     // Universities
     'paris_saclay_name' => 'Université Paris-Saclay',
-    'paris_saclay_rank' => '12ème au Monde (ARWU)',
+    'paris_saclay_rank' => '12ème au Monde (Shanghai)',
     'paris_saclay_description' => 'Un géant mondial de la recherche et la #1 en Europe continentale. Idéal pour ceux qui visent l\'excellence en mathématiques, physique et tech.',
 
     'sorbonne_paris_nord_name' => 'Université Sorbonne Paris Nord',
@@ -32,7 +32,7 @@ return [
     'sorbonne_paris_nord_description' => 'Un pôle dynamique du Grand Paris spécialisé en santé, numérique et sciences sociales, avec un fort accent sur l\'insertion professionnelle.',
 
     'paris_cite_name' => 'Université Paris Cité',
-    'paris_cite_rank' => '65ème rang mondial',
+    'paris_cite_rank' => '60ème rang mondial',
     'paris_cite_description' => 'Une force multidisciplinaire d\'élite au cœur de Paris, pionnière en santé mondiale et sciences humaines avec un esprit résolument international.',
 
     'paris_4_name' => 'Sorbonne Université (Paris 4)',
@@ -84,7 +84,7 @@ return [
     'ip_paris_description' => 'Un institut de classe mondiale axé sur les sciences et l\'ingénierie, regroupant cinq écoles d\'ingénieurs françaises prestigieuses pour former les innovateurs de demain.',
 
     'grenoble_alpes_name' => 'Université Grenoble Alpes',
-    'grenoble_alpes_rank' => 'Top 100 Mondial',
+    'grenoble_alpes_rank' => 'Top 150 Mondial',
     'grenoble_alpes_description' => 'Nichée au cœur des Alpes, une université pluridisciplinaire de premier plan, réputée pour l\'innovation, l\'excellence de sa recherche et son cadre d\'études exceptionnel.',
 
     'aix_marseille_name' => 'Aix-Marseille Université',

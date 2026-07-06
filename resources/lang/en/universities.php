@@ -24,7 +24,7 @@ return [
 
     // Universities
     'paris_saclay_name' => 'Paris-Saclay University',
-    'paris_saclay_rank' => '12th Globally (ARWU)',
+    'paris_saclay_rank' => '12th Globally (Shanghai)',
     'paris_saclay_description' => 'A global research giant and the #1 university in Continental Europe. Perfect for students seeking peak performance in mathematics, physics, and deep tech.',
 
     'sorbonne_paris_nord_name' => 'Sorbonne Paris Nord University',
@@ -32,7 +32,7 @@ return [
     'sorbonne_paris_nord_description' => 'A vibrant hub in Northern Paris specializing in health, digital innovation, and social sciences with a strong focus on professional integration.',
 
     'paris_cite_name' => 'Université Paris Cité',
-    'paris_cite_rank' => '65th in the World',
+    'paris_cite_rank' => '60th in the World',
     'paris_cite_description' => 'An elite multidisciplinary powerhouse at the heart of Paris, leading the way in global health and humanities with a truly international spirit.',
 
     'paris_4_name' => 'Sorbonne University (Paris 4)',
@@ -84,7 +84,7 @@ return [
     'ip_paris_description' => 'A world-class institute focusing on science and engineering, gathering five prestigious French engineering schools to cultivate the innovators of tomorrow.',
 
     'grenoble_alpes_name' => 'Université Grenoble Alpes',
-    'grenoble_alpes_rank' => 'Top 100 Worldwide',
+    'grenoble_alpes_rank' => 'Top 150 Worldwide',
     'grenoble_alpes_description' => 'Nestled in the French Alps, a leading comprehensive university renowned for innovation, research excellence, and a breathtaking study environment.',
 
     'aix_marseille_name' => 'Aix-Marseille University',
