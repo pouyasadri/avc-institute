@@ -259,18 +259,9 @@
             </div>
         </section>
 
-        <x-sections.services :subtitle="__('universities.services_section_title')"
-            :title="__('universities.services_section_heading')" :items="[
-            ['title' => __('universities.residence_consultation'), 'description' => __('universities.residence_consultation_description')],
-            ['title' => __('universities.resume_motivation_writing'), 'description' => __('universities.resume_motivation_description')],
-            ['title' => __('universities.administrative_ease'), 'description' => __('universities.administrative_ease_description')],
-            ['title' => __('universities.document_translation'), 'description' => __('universities.document_translation_description')],
-            ['title' => __('universities.educational_consultation'), 'description' => __('universities.educational_consultation_description')],
-            ['title' => __('universities.accommodation_booking'), 'description' => __('universities.accommodation_booking_description')],
-            ['title' => __('universities.admission_acceptance'), 'description' => __('universities.admission_acceptance_description')],
-            ['title' => __('universities.administrative_support_france'), 'description' => __('universities.administrative_support_description')],
-            ['title' => __('universities.legal_services'), 'description' => __('universities.legal_services_description')],
-        ]" />
+        <x-sections.services :subtitle="__('index.services.subtitle')"
+            :title="__('index.services.title')"
+            :items="__('index.services.items')" />
     </div>
 @endsection
 
