@@ -151,4 +151,28 @@ return [
 
     'legal_services' => 'Comprehensive Legal & Administrative Shield',
     'legal_services_description' => 'Benefit from expert legal advice in both France and Iran to secure all aspects of your international transition.',
+
+    // Tuition Fees Section
+    'tuition_section_title' => 'Tuition Fees 2026',
+    'tuition_section_heading' => 'Tuition Fees in France for International Students (July 2026 Update)',
+    'tuition_section_paragraph' => 'One of the major benefits of studying in France is the heavily subsidized public education system. Below are the registration fees for the 2026-2027 academic year.',
+    'tuition_table_degree' => '🎓 Degree Level',
+    'tuition_table_public' => '💶 Differentiated Public Fee (Non-EU)',
+    'tuition_table_exempt' => '✨ National Fee (With Tuition Waiver)',
+    'tuition_table_private' => '🏛️ Private Universities & Business Schools',
+    'tuition_licence' => 'Bachelor\'s (Licence)',
+    'tuition_licence_fee' => '€2,770 / year',
+    'tuition_licence_exempt_fee' => '€170 / year',
+    'tuition_licence_private_fee' => '€5,000 to €15,000 / year',
+    'tuition_master' => 'Master\'s (Master)',
+    'tuition_master_fee' => '€3,770 / year',
+    'tuition_master_exempt_fee' => '€243 / year',
+    'tuition_master_private_fee' => '€8,000 to €25,000 / year',
+    'tuition_phd' => 'Doctorate (PhD)',
+    'tuition_phd_fee' => '€380 / year (No increase)',
+    'tuition_phd_exempt_fee' => '€380 / year',
+    'tuition_phd_private_fee' => 'N/A (Usually funded/paid)',
+    'tuition_note_title' => '💡 Note on Tuition Fee Waivers (Exonération):',
+    'tuition_note_content' => 'Many public French universities (such as University of Strasbourg, Lyon 2, etc.) do not apply the high differentiated fees to non-EU students or offer fee waiver scholarships. In this case, you will only pay the standard national rate (€170/yr for Bachelor, €243/yr for Master). Contact A.V.C to find out which universities offer these waivers.',
 ];
+

@@ -117,6 +117,41 @@
                     <article class="service-details-wrap p-4 p-md-5 rounded-5 shadow-sm bg-white border-0">
                         <div class="article-content">
                             @yield('university_content')
+
+                            @php
+                                $slug = $universitySlug;
+                                $hasScholarshipLang = Lang::has("university/{$slug}.scholarships_title");
+                                
+                                // English Fallback
+                                if ($currentLocale === 'en') {
+                                    $scholarshipsTitle = $hasScholarshipLang ? __("university/{$slug}.scholarships_title") : 'Scholarships & Financial Aid (2026 Update)';
+                                    $scholarshipsContent = $hasScholarshipLang ? __("university/{$slug}.scholarships_content") : 'This institution offers various scholarship opportunities, including the prestigious Eiffel Excellence Scholarship, merit-based grants, and national aids like CAF housing assistance.';
+                                    $scholarshipsNote = $hasScholarshipLang ? __("university/{$slug}.scholarships_note") : '<strong>Note:</strong> Scholarship eligibility and deadlines change frequently. Please check the official university website (see Useful Links in the sidebar) or contact A.V.C consultants to help you with your application.';
+                                }
+                                // French Fallback
+                                elseif ($currentLocale === 'fr') {
+                                    $scholarshipsTitle = $hasScholarshipLang ? __("university/{$slug}.scholarships_title") : 'Bourses & Aides Financières (Mise à jour 2026)';
+                                    $scholarshipsContent = $hasScholarshipLang ? __("university/{$slug}.scholarships_content") : 'Cet établissement propose plusieurs options de bourses, notamment la bourse d\'excellence Eiffel, des bourses de mérite et les aides nationales comme l\'APL/CAF.';
+                                    $scholarshipsNote = $hasScholarshipLang ? __("university/{$slug}.scholarships_note") : '<strong>Note:</strong> Les critères et dates limites varient. Veuillez consulter le site officiel de l\'université (voir Liens utiles dans la barre latérale) ou contacter nos conseillers A.V.C pour vous guider.';
+                                }
+                                // Persian default
+                                else {
+                                    $scholarshipsTitle = $hasScholarshipLang ? __("university/{$slug}.scholarships_title") : '🎓 بورسیه‌ها و کمک‌هزینه‌های تحصیلی (آپدیت ۲۰۲۶)';
+                                    $scholarshipsContent = $hasScholarshipLang ? __("university/{$slug}.scholarships_content") : 'این دانشگاه فرصت‌های متنوعی برای دریافت بورسیه و کمک‌هزینه ارائه می‌دهد؛ از جمله بورس تحصیلی عالی ایفل، بورس‌های شایستگی اختصاصی دانشگاه، و کمک‌هزینه مسکن دولتی CAF (تا سقف ۴۰ درصد اجاره‌بها).';
+                                    $scholarshipsNote = $hasScholarshipLang ? __("university/{$slug}.scholarships_note") : '<strong>⚠️ توجه مهم:</strong> ددلاین‌ها و شرایط دریافت بورسیه برای هر رشته متفاوت است. حتماً سایت رسمی خود دانشگاه (بخش Useful Links در سایدبار) را بررسی کنید یا جهت برنامه‌ریزی و اقدام، با مشاوران A.V.C تماس بگیرید.';
+                                }
+                            @endphp
+
+                            <section class="mt-5 p-4 rounded-4 bg-light border border-primary-subtle" id="university-scholarships">
+                                <h3 class="h5 fw-bold text-primary mb-3">
+                                    <i class="bx bxs-graduation me-2"></i>{{ $scholarshipsTitle }}
+                                </h3>
+                                <p class="text-muted small mb-3">{{ $scholarshipsContent }}</p>
+                                <div class="alert alert-info small rounded-3 mb-0">
+                                    <i class="bx bx-info-circle me-1"></i>
+                                    {!! $scholarshipsNote !!}
+                                </div>
+                            </section>
                         </div>
 
                         <!-- Contact Form -->

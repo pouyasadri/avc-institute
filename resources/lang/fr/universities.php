@@ -151,4 +151,28 @@ return [
 
     'legal_services' => 'Bouclier Juridique & Administratif',
     'legal_services_description' => 'Bénéficiez de conseils juridiques experts en France et en Iran pour sécuriser tous les aspects de votre transition internationale.',
+
+    // Tuition Fees Section
+    'tuition_section_title' => 'Frais de Scolarité 2026',
+    'tuition_section_heading' => 'Frais de Scolarité en France pour Étudiants Internationaux (Juillet 2026)',
+    'tuition_section_paragraph' => 'L\'un des plus grands avantages des études en France est le système public fortement subventionné. Voici les frais d\'inscription pour l\'année académique 2026-2027.',
+    'tuition_table_degree' => '🎓 Niveau d\'Études',
+    'tuition_table_public' => '💶 Frais Différenciés (Non-UE)',
+    'tuition_table_exempt' => '✨ Frais Nationaux (Avec Exonération)',
+    'tuition_table_private' => '🏛️ Écoles Privées & Écoles de Commerce',
+    'tuition_licence' => 'Licence',
+    'tuition_licence_fee' => '2 770 € / an',
+    'tuition_licence_exempt_fee' => '170 € / an',
+    'tuition_licence_private_fee' => '5 000 € à 15 000 € / an',
+    'tuition_master' => 'Master',
+    'tuition_master_fee' => '3 770 € / an',
+    'tuition_master_exempt_fee' => '243 € / an',
+    'tuition_master_private_fee' => '8 000 € à 25 000 € / an',
+    'tuition_phd' => 'Doctorat',
+    'tuition_phd_fee' => '380 € / an (Pas d\'augmentation)',
+    'tuition_phd_exempt_fee' => '380 € / an',
+    'tuition_phd_private_fee' => 'N/A (Généralement financé)',
+    'tuition_note_title' => '💡 Note sur l\'Exonération des Frais de Scolarité :',
+    'tuition_note_content' => 'Plusieurs universités publiques françaises (comme l\'Université de Strasbourg, Lyon 2, etc.) n\'appliquent pas les frais différenciés ou offrent des bourses d\'exonération. Dans ce cas, vous paierez le tarif national standard (170 €/an pour la Licence, 243 €/an pour le Master). Contactez A.V.C pour plus d\'informations.',
 ];
+
