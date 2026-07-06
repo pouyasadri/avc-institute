@@ -213,18 +213,9 @@
             </div>
         </section>
 
-        <x-sections.services :subtitle="__('consult.services_section_title')"
-            :title="__('consult.services_section_heading')" :items="[
-            ['label' => __('consult.free_consultation'), 'title' => __('consult.residence_consultation'), 'description' => __('consult.residence_consultation_description')],
-            ['label' => __('consult.free_service'), 'title' => __('consult.resume_motivation_writing'), 'description' => __('consult.resume_motivation_description')],
-            ['label' => null, 'title' => __('consult.administrative_ease'), 'description' => __('consult.administrative_ease_description')],
-            ['label' => null, 'title' => __('consult.document_translation'), 'description' => __('consult.document_translation_description')],
-            ['label' => null, 'title' => __('consult.educational_consultation_service'), 'description' => __('consult.educational_consultation_service_desc')],
-            ['label' => null, 'title' => __('consult.accommodation_booking'), 'description' => __('consult.accommodation_booking_description')],
-            ['label' => null, 'title' => __('consult.admission_acceptance'), 'description' => __('consult.admission_acceptance_description')],
-            ['label' => null, 'title' => __('consult.administrative_support_france'), 'description' => __('consult.administrative_support_description')],
-            ['label' => null, 'title' => __('consult.legal_services'), 'description' => __('consult.legal_services_description')],
-        ]" />
+        <x-sections.services :subtitle="__('index.services.subtitle')"
+            :title="__('index.services.title')"
+            :items="__('index.services.items')" />
 
         <x-sections.faq :title="__('faq.title')" :subtitle="__('faq.subtitle')" :items="__('faq.items')" />
     </div>
