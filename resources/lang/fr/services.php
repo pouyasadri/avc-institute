@@ -332,4 +332,69 @@ return [
             ],
         ],
     ],
+
+    'student-visa' => [
+        'title' => 'Visa Étudiant France (VLS-TS)',
+        'description' => 'Accompagnement complet pour l\'obtention du visa étudiant français, rendez-vous VFS, justificatifs financiers et préparation Campus France.',
+        'service_type' => 'EducationalVisaService',
+        'meta_keywords' => 'visa etudiant france, visa etudes france, rdv vfs france, ressources financieres visa etudiant, entretien campus france, visa long sejour etudiant',
+        'content' => [
+            'L\'obtention de votre visa étudiant pour la France (VLS-TS) est la première étape indispensable pour commencer votre parcours académique. Malgré de bonnes perspectives, un dossier mal préparé ou des justificatifs financiers incomplets peuvent mener à un refus.',
+            'A.V.C met à votre disposition son expertise pour gérer chaque étape : optimisation de CV et lettre de motivation, inscription Campus France, prise de rendez-vous VFS, et montage du dossier financier.',
+            'Nous organisons également des simulations d\'entretien pour vous préparer au mieux à l\'oral Campus France et maximiser vos chances de réussite.'
+        ],
+        'benefits' => [
+            'Vérification rigoureuse des justificatifs financiers et garants (locaux ou internationaux).',
+            'Assistance rapide pour la prise de rendez-vous VFS.',
+            'Simulations réalistes de l\'entretien Campus France avec des conseillers expérimentés.',
+            'Soutien complet pour le formulaire France-Visas et les lettres de motivation.'
+        ],
+        'faq' => [
+            [
+                'q' => 'Quel est le montant minimum requis pour le visa étudiant en 2026 ?',
+                'a' => 'Les étudiants doivent justifier de ressources mensuelles d\'au moins 615 € (soit 7 380 € pour une année universitaire), par le biais de comptes bancaires personnels ou d\'un garant certifié.'
+            ],
+            [
+                'q' => 'Quelle est la durée de validité du VLS-TS, et comment le valider ?',
+                'a' => 'Le visa de long séjour valant titre de séjour (VLS-TS) est généralement valide de 4 à 12 mois. Vous devez impérativement le valider en ligne sur le portail de l\'OFII dans les 3 mois suivant votre arrivée.'
+            ],
+            [
+                'q' => 'Les étudiants internationaux ont-ils le droit de travailler en France ?',
+                'a' => 'Oui, la loi française autorise les étudiants internationaux à travailler à titre accessoire jusqu\'à 60% de la durée annuelle du travail (soit 964 heures par an).'
+            ]
+        ]
+    ],
+
+    'investment-visa' => [
+        'title' => 'Visa d\'Investissement & Résidence Visiteur',
+        'description' => 'Conseil professionnel et constitution de dossier pour la résidence en France par l\'acquisition immobilière, la formule visiteur et le Passeport Talent.',
+        'service_type' => 'InvestmentResidencyService',
+        'meta_keywords' => 'visa investisseur france, achat immobilier residence france, visa visiteur france, residence fonds propres france, passeport talent investisseur, investir en france',
+        'content' => [
+            'La France offre d\'excellentes opportunités d\'investissement et de relocalisation familiale. Si vous souhaitez obtenir la résidence sans contrat de travail local ou études, plusieurs options s\'offrent à vous : l\'acquisition immobilière, le statut Visiteur, ou le Passeport Talent.',
+            'Le statut Visiteur (autonomie financière) vous permet d\'obtenir la résidence pour vous et votre famille en démontrant des revenus passifs suffisants, sans obligation de transfert de capital ou d\'achat immobilier.',
+            'Le réseau juridique d\'A.V.C gère l\'ensemble des démarches, y compris la création de comptes bancaires et la liaison avec les notaires.'
+        ],
+        'benefits' => [
+            'Accompagnement de A à Z pour l\'acquisition de biens immobiliers premium dans les grandes villes.',
+            'Préparation stratégique des dossiers Visiteur avec un taux de réussite optimal.',
+            'Collaboration directe avec des notaires et spécialistes français de l\'immigration.',
+            'Soutien au regroupement familial pour conjoints et enfants mineurs.'
+        ],
+        'faq' => [
+            [
+                'q' => 'Quel est le revenu passif minimum requis pour le visa Visiteur ?',
+                'a' => 'Vous devez justifier de revenus passifs réguliers d\'au moins 1 400 € à 1 800 € par mois pour le demandeur principal, augmentant proportionnellement pour chaque personne à charge.'
+            ],
+            [
+                'q' => 'L\'achat d\'un bien immobilier en France garantit-il la résidence ?',
+                'a' => 'La propriété seule n\'octroie pas de résidence automatique, mais elle constitue une preuve solide de logement et de stabilité financière, améliorant considérablement vos chances d\'obtenir un visa de long séjour Visiteur.'
+            ],
+            [
+                'q' => 'Puis-je travailler en France avec un visa Visiteur ?',
+                'a' => 'Non. Sous le statut Visiteur, vous vous engagez formellement à n\'exercer aucune activité professionnelle soumise au marché du travail français. Vous pouvez toutefois gérer vos actifs ou entreprises basés à l\'étranger.'
+            ]
+        ]
+    ],
 ];
+

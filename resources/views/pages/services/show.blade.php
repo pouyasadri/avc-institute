@@ -59,6 +59,36 @@
                                 @endforeach
                             @endif
 
+                            @if($slug === 'university-application' && $currentLocale === 'fa')
+                                <h3 class="h5 fw-bold mt-5 mb-4 text-primary">نحوه درخواست دانشگاه در فرانسه — گام به گام (کمپوس فرانسه ۲۰۲۶)</h3>
+                                <div class="timeline-steps position-relative mb-4">
+                                    <div class="row g-4">
+                                        <div class="col-12 col-md-4">
+                                            <div class="p-3 bg-light rounded-4 h-100 position-relative border-top border-primary border-4 shadow-sm">
+                                                <div class="step-num bg-primary text-white rounded-circle d-flex align-items-center justify-content-center fw-bold mb-3" style="width:30px; height:30px;">۱</div>
+                                                <h4 class="h6 fw-bold mb-2">انتخاب رشته و دانشگاه</h4>
+                                                <p class="small text-muted mb-0">بررسی کامل رشته‌های مورد علاقه در پورتال کمپوس فرانسه و آماده‌سازی مدرک زبان فرانسوی (DELF B2/TCF) یا انگلیسی (IELTS).</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-4">
+                                            <div class="p-3 bg-light rounded-4 h-100 position-relative border-top border-primary border-4 shadow-sm">
+                                                <div class="step-num bg-primary text-white rounded-circle d-flex align-items-center justify-content-center fw-bold mb-3" style="width:30px; height:30px;">۲</div>
+                                                <h4 class="h6 fw-bold mb-2">ثبت‌نام در کمپوس فرانسه</h4>
+                                                <p class="small text-muted mb-0">پر کردن اطلاعات شخصی و آپلود ترجمه رسمی مدارک، رزومه استاندارد و انگیزه‌نامه (Lettre de Motivation) شخصی‌سازی شده در پورتال EEF.</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-4">
+                                            <div class="p-3 bg-light rounded-4 h-100 position-relative border-top border-primary border-4 shadow-sm">
+                                                <div class="step-num bg-primary text-white rounded-circle d-flex align-items-center justify-content-center fw-bold mb-3" style="width:30px; height:30px;">۳</div>
+                                                <h4 class="h6 fw-bold mb-2">مصاحبه و اخذ پذیرش</h4>
+                                                <p class="small text-muted mb-0">شرکت در مصاحبه حضوری/آنلاین کمپوس فرانسه برای دفاع از پروژه تحصیلی و سپس دریافت پاسخ نهایی پذیرش از سوی دانشگاه‌ها.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endif
+
+
                             @if(isset($serviceDetails['benefits']) && is_array($serviceDetails['benefits']))
                                 <h3 class="mt-5 mb-4">{{ __('services.benefits_heading') ?? 'Why Choose This Service' }}</h3>
                                 <ul class="list-unstyled">
