@@ -118,7 +118,7 @@
 @endsection
 
 @push('scripts')
-<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+<script src="https://cdn.tiny.cloud/1/9miszad6siqmvj7ab46z564zwoxop04p4dma99uso4yethkl/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         tinymce.init({
