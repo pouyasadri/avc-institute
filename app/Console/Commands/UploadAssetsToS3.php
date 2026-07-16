@@ -38,6 +38,7 @@ class UploadAssetsToS3 extends Command
         $directories = [
             'assets' => public_path('assets'),
             'build' => public_path('build'),
+            'images' => storage_path('app/public/images'),
         ];
 
         // Filter out non-existing directories

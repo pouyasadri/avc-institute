@@ -26,10 +26,11 @@ return [
     'settings' => [
         'default' => [
             'HTML.Doctype' => 'HTML 4.01 Transitional',
-            'HTML.Allowed' => 'div,b,strong,i,em,u,a[href|title],ul,ol,li,p[style],br,span[style],img[width|height|alt|src]',
-            'CSS.AllowedProperties' => 'font,font-size,font-weight,font-style,font-family,text-decoration,padding-left,color,background-color,text-align',
-            'AutoFormat.AutoParagraph' => true,
-            'AutoFormat.RemoveEmpty' => true,
+            'HTML.Allowed' => 'div[class|id|data-bs-parent|data-bs-target|data-bs-toggle|aria-expanded|aria-controls|aria-labelledby],b,strong,i,em,u,a[href|title|class|id|target|rel],ul[class|id],ol[class|id],li[class|id],p[style|class|id],br,span[style|class|id],img[width|height|alt|src|class|id|style],h1[class|id|style],h2[class|id|style],h3[class|id|style],h4[class|id|style],h5[class|id|style],h6[class|id|style],blockquote[class|id|style],button[class|id|type|data-bs-toggle|data-bs-target|aria-expanded|aria-controls]',
+            'CSS.AllowedProperties' => 'font,font-size,font-weight,font-style,font-family,text-decoration,padding-left,color,background-color,text-align,max-height,object-fit,width,height',
+            'AutoFormat.AutoParagraph' => false,
+            'AutoFormat.RemoveEmpty' => false,
+            'Attr.EnableID' => true,
         ],
         'test' => [
             'Attr.EnableID' => 'true',
@@ -94,6 +95,17 @@ return [
                 ['tr', 'width', 'Text'],
                 ['tr', 'height', 'Text'],
                 ['tr', 'border', 'Text'],
+                ['div', 'data-bs-parent', 'Text'],
+                ['div', 'data-bs-target', 'Text'],
+                ['div', 'data-bs-toggle', 'Text'],
+                ['div', 'aria-expanded', 'Text'],
+                ['div', 'aria-controls', 'Text'],
+                ['div', 'aria-labelledby', 'Text'],
+                ['button', 'data-bs-target', 'Text'],
+                ['button', 'data-bs-toggle', 'Text'],
+                ['button', 'aria-expanded', 'Text'],
+                ['button', 'aria-controls', 'Text'],
+                ['a', 'data-bs-toggle', 'Text'],
             ],
         ],
         'custom_attributes' => [
