@@ -194,7 +194,7 @@ return [
     | Custom Storage Paths
     |--------------------------------------------------------------------------
     */
-    'blog_image_path' => 'images/blogs/',
-    'property_image_path' => 'images/properties/',
-    'property_gallery_path' => 'images/properties/gallery/',
+    'blog_image_path' => 'public/images/blogs/',
+    'property_image_path' => 'public/images/properties/',
+    'property_gallery_path' => 'public/images/properties/gallery/',
 ];
