@@ -136,7 +136,7 @@ jobs:
           tar -czf deploy_artifact.tar.gz -C deploy_artifact .
 
       - name: Upload Artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: deploy-artifact
           path: deploy_artifact.tar.gz
@@ -149,7 +149,7 @@ jobs:
 
     steps:
       - name: Download Artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v7
         with:
           name: deploy-artifact
 
