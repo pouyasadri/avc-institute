@@ -10,8 +10,8 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  deploy:
-    name: Build, Test & Deploy
+  lint:
+    name: Code Style (Pint)
     runs-on: ubuntu-latest
 
     steps:
@@ -24,6 +24,82 @@ jobs:
           php-version: '8.4'
           extensions: mbstring, intl, pdo, pdo_mysql, sqlite, pdo_sqlite
           tools: composer:v2
+          coverage: none
+
+      - name: Get Composer Cache Directory
+        id: composer-cache
+        run: |
+          echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
+
+      - name: Cache Composer Dependencies
+        uses: actions/cache@v5
+        with:
+          path: ${{ steps.composer-cache.outputs.dir }}
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-composer-
+
+      - name: Install All Composer Dependencies
+        run: composer install --no-progress --no-interaction --prefer-dist
+
+      - name: Run PHP Code Style Check
+        run: ./vendor/bin/pint --test
+
+  test:
+    name: Automated Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+          extensions: mbstring, intl, pdo, pdo_mysql, sqlite, pdo_sqlite
+          tools: composer:v2
+          coverage: none
+
+      - name: Get Composer Cache Directory
+        id: composer-cache
+        run: |
+          echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
+
+      - name: Cache Composer Dependencies
+        uses: actions/cache@v5
+        with:
+          path: ${{ steps.composer-cache.outputs.dir }}
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-composer-
+
+      - name: Install All Composer Dependencies
+        run: composer install --no-progress --no-interaction --prefer-dist
+
+      - name: Copy Environment File & Generate Key
+        run: |
+          cp .env.example .env
+          php artisan key:generate
+
+      - name: Run Automated Tests
+        run: php artisan test
+
+  build:
+    name: Build Dependencies & Assets
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+          extensions: mbstring, intl, pdo, pdo_mysql, sqlite, pdo_sqlite
+          tools: composer:v2
+          coverage: none
 
       - name: Setup Node.js
         uses: actions/setup-node@v6
@@ -44,21 +120,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-composer-
 
-      - name: Install All Composer Dependencies (with dev)
-        run: composer install --no-progress --no-interaction --prefer-dist
-
-      - name: Copy Environment File & Generate Key
-        run: |
-          cp .env.example .env
-          php artisan key:generate
-
-      - name: Run PHP Code Style Check (Pint)
-        run: ./vendor/bin/pint --test
-
-      - name: Run Automated Tests
-        run: php artisan test
-
-      - name: Prune Dev Dependencies for Production
+      - name: Install Production Composer Dependencies
         run: composer install --no-dev --optimize-autoloader --no-progress --no-interaction --prefer-dist
 
       - name: Install NPM Dependencies
@@ -71,6 +133,30 @@ jobs:
         run: |
           mkdir deploy_artifact
           rsync -av --progress ./ deploy_artifact/ --exclude .git --exclude .github --exclude node_modules --exclude tests --exclude deploy_artifact
+          tar -czf deploy_artifact.tar.gz -C deploy_artifact .
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: deploy-artifact
+          path: deploy_artifact.tar.gz
+          retention-days: 1
+
+  deploy:
+    name: Deploy to Server
+    needs: [lint, test, build]
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download Artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: deploy-artifact
+
+      - name: Decompress Artifact
+        run: |
+          mkdir deploy_artifact
+          tar -xzf deploy_artifact.tar.gz -C deploy_artifact
 
       - name: Sync Files to Server
         uses: easingthemes/ssh-deploy@v6
