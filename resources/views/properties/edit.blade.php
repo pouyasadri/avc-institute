@@ -148,7 +148,7 @@
                             <div class="form-group">
                                 <label>{{ __('Current Main Image') }}</label>
                                 <div>
-                                    <img src="{{ \Storage::url($property->main_image) }}"
+                                    <img src="{{ \Storage::disk('s3')->url($property->main_image) }}"
                                          alt="Main image"
                                          style="max-height: 200px;"
                                          class="img-thumbnail">
@@ -171,7 +171,7 @@
                                     @foreach($property->images as $image)
                                         <div class="col-md-3 mb-3">
                                             <div class="card">
-                                                <img src="{{ \Storage::url($image->path) }}"
+                                                <img src="{{ \Storage::disk('s3')->url($image->path) }}"
                                                      class="card-img-top"
                                                      alt="Gallery">
                                                 <div class="card-body p-2">

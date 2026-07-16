@@ -40,7 +40,7 @@
                 <div class="col-lg-8">
                     {{-- Main Image --}}
                     @if($property->main_image)
-                        <img src="{{ \Storage::url($property->main_image) }}"
+                        <img src="{{ \Storage::disk('s3')->url($property->main_image) }}"
                              class="img-fluid rounded mb-4"
                              alt="{{ $translation->name ?? 'Property' }}">
                     @endif
@@ -50,7 +50,7 @@
                         <div class="row mb-4">
                             @foreach($property->images as $image)
                                 <div class="col-md-4 mb-3">
-                                    <img src="{{ \Storage::url($image->path) }}"
+                                    <img src="{{ \Storage::disk('s3')->url($image->path) }}"
                                          class="img-fluid rounded"
                                          alt="Gallery image">
                                 </div>

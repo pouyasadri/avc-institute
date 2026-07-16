@@ -139,7 +139,7 @@
                                         <tr>
                                             <td class="product-thumbnail">
                                                 <a href="/house/{{$house}}">
-                                                    <img src="{{asset("storage/images/property/" . $house->house_main_image)}}"
+                                                    <img src="{{ \Storage::disk('s3')->url('images/properties/' . $house->house_main_image) }}"
                                                         alt="{{$house->house_name}}">
                                                 </a>
                                             </td>

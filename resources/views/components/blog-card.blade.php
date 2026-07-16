@@ -14,7 +14,7 @@
     <div class="news-img">
         <a href="{{ route('blog.show', ['locale' => app()->getLocale(), 'blog' => $blog->id]) }}">
             @if($blog->main_image)
-                <img src="{{ \Storage::url($imagePath) }}" style="aspect-ratio: 1.5/1; object-fit: cover;"
+                <img src="{{ \Storage::disk('s3')->url($imagePath) }}" style="aspect-ratio: 1.5/1; object-fit: cover;"
                     alt="{{ $translation->title ?? 'Blog post' }}" loading="lazy">
             @else
                 <div class="bg-secondary text-white d-flex align-items-center justify-content-center"
