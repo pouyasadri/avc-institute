@@ -53,8 +53,7 @@
                                     <div class="mb-3">
                                         <label class="form-label">Contenu ({{ strtoupper($code) }}) <span
                                                 class="text-danger">*</span></label>
-                                        <textarea class="form-control" name="translations[{{ $code }}][body]" rows="10"
-                                            required></textarea>
+                                        <textarea class="form-control tinymce" name="translations[{{ $code }}][body]" rows="15"></textarea>
                                     </div>
                                 </div>
                             @endforeach
@@ -108,14 +107,36 @@
 @endsection
 
 @push('scripts')
+<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
+        tinymce.init({
+            selector: 'textarea.tinymce',
+            height: 500,
+            menubar: false,
+            plugins: [
+                'advlist', 'autolink', 'lists', 'link', 'image', 'charmap', 'preview',
+                'anchor', 'searchreplace', 'visualblocks', 'code', 'fullscreen',
+                'insertdatetime', 'media', 'table', 'help', 'wordcount'
+            ],
+            toolbar: 'undo redo | blocks | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | code | removeformat | help',
+            content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }',
+            setup: function (editor) {
+                editor.on('change', function () {
+                    tinymce.triggerSave();
+                });
+            }
+        });
+
         const form = document.querySelector('form');
         if (form) {
             form.addEventListener('submit', function(e) {
                 if (e.defaultPrevented) {
                     return;
                 }
+                
+                tinymce.triggerSave();
+                
                 form.querySelectorAll('textarea[name$="[body]"]').forEach(function(textarea) {
                     if (textarea.value && !textarea.hasAttribute('data-encoded')) {
                         try {
