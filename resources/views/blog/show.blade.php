@@ -46,18 +46,13 @@
                         <header>
                             @if($blog->main_image)
                                 <div class="blog-details-img mb-4">
-                                    <img src="{{ \Storage::url($imagePath) }}" alt="{{ $translation->title }}"
+                                    <img src="/n0c-storage/{{ ltrim($imagePath, '/') }}" alt="{{ $translation->title }}"
                                         class="rounded-4 shadow-sm w-100" style="max-height: 500px; object-fit: cover;">
                                 </div>
                             @endif
 
                             <div class="blog-details-meta mb-4">
                                 <ul class="d-flex flex-wrap gap-3 list-unstyled">
-                                    <li title="Author">
-                                        <i class="flaticon-user text-primary"></i>
-                                        <span
-                                            itemprop="author">{{ $blog->author?->name ?? __('blog/index.author_label') }}</span>
-                                    </li>
                                     <li title="Published Date">
                                         <i class="bx bx-calendar text-primary"></i>
                                         <time
@@ -239,7 +234,7 @@
                                                 <a
                                                     href="{{ route('blog.show', ['locale' => $currentLocale, 'blog' => $recent->id]) }}">
                                                     @if($recent->main_image)
-                                                        <img src="{{ \Storage::url($recentImage) }}"
+                                                        <img src="/n0c-storage/{{ ltrim($recentImage, '/') }}"
                                                             alt="{{ $recentTranslation->title }}" class="rounded-4 shadow-sm"
                                                             style="width: 70px; height: 70px; object-fit: cover;">
                                                     @else
