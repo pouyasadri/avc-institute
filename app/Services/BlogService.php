@@ -171,7 +171,7 @@ class BlogService
             // Handle image replacement
             if (! empty($validatedData['blog_main_image'])) {
                 if ($blog->main_image) {
-                    Storage::delete($blog->main_image);
+                    Storage::disk('s3')->delete($blog->main_image);
                 }
                 $validatedData['main_image'] = $this->uploadImage(
                     $validatedData['blog_main_image'],
@@ -233,7 +233,7 @@ class BlogService
     public function deleteBlog(Blog $blog): void
     {
         if ($blog->main_image) {
-            Storage::delete($blog->main_image);
+            Storage::disk('s3')->delete($blog->main_image);
         }
 
         $blog->delete();
@@ -255,7 +255,7 @@ class BlogService
 
     protected function uploadImage($file, string $path): string
     {
-        $filename = time().'_'.Str::random(10).'.'.$file->getClientOriginalExtension();
+        $filename = time().'_'.Str::random(10).'.jpg';
         $fullPath = $path.$filename;
 
         $image = $this->imageManager()->read($file);
@@ -265,10 +265,11 @@ class BlogService
         }
 
         $encoded = $image->toJpeg(quality: 80);
-        Storage::put($fullPath, $encoded);
 
-        // Return path relative to the 'public' disk root (remove 'public/' prefix if present)
-        return str_replace('public/', '', $fullPath);
+        // Upload to n0c S3 object storage with public-read visibility
+        Storage::disk('s3')->put($fullPath, $encoded, 'public');
+
+        return $fullPath;
     }
 
     protected function generateUniqueSlug(string $title, string $locale, ?string $excludeId = null): string

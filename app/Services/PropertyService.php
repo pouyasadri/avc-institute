@@ -122,7 +122,7 @@ class PropertyService
             // Handle main image replacement
             if (! empty($data['main_image'])) {
                 if ($property->main_image) {
-                    Storage::delete($property->main_image);
+                    Storage::disk('s3')->delete($property->main_image);
                 }
                 $data['main_image'] = $this->uploadImage($data['main_image'], config('app.property_image_path'));
             } else {
@@ -199,12 +199,12 @@ class PropertyService
         DB::transaction(function () use ($property) {
             // Delete main image
             if ($property->main_image) {
-                Storage::delete($property->main_image);
+                Storage::disk('s3')->delete($property->main_image);
             }
 
             // Delete gallery images
             foreach ($property->images as $image) {
-                Storage::delete($image->path);
+                Storage::disk('s3')->delete($image->path);
                 $image->delete();
             }
 
@@ -228,7 +228,7 @@ class PropertyService
 
     public function deletePropertyImage(PropertyImage $image): void
     {
-        Storage::delete($image->path);
+        Storage::disk('s3')->delete($image->path);
         $image->delete();
     }
 
@@ -249,8 +249,8 @@ class PropertyService
         // Encode with quality
         $encoded = $image->toWebp(quality: 80);
 
-        // Store the image
-        Storage::put($fullPath, $encoded);
+        // Upload to n0c S3 object storage with public-read visibility
+        Storage::disk('s3')->put($fullPath, $encoded, 'public');
 
         return $fullPath;
     }
