@@ -86,7 +86,7 @@
                             <div class="form-group">
                                 <label>{{ __('Current Main Image') }}</label>
                                 <div>
-                                    <img src="{{ \Storage::disk('s3')->url($blog->main_image) }}"
+                                    <img src="{{ $blog->main_image_url }}"
                                          alt="Main image"
                                          style="max-height: 200px;"
                                          class="img-thumbnail">

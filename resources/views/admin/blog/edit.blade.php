@@ -86,9 +86,9 @@
 
                                 <div class="mb-3">
                                     <label class="form-label">Image Principale</label>
-                                    @if($blog->blog_main_image)
+                                    @if($blog->main_image)
                                         <div class="mb-2">
-                                            <img src="{{ \Storage::disk('s3')->url($blog->blog_main_image) }}" alt="Current Image"
+                                            <img src="{{ $blog->main_image_url }}" alt="Current Image"
                                                 class="img-fluid rounded">
                                         </div>
                                     @endif

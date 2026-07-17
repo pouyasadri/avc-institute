@@ -107,8 +107,8 @@
                                     <tr>
                                         <td class="ps-4">
                                             <div class="d-flex align-items-center">
-                                                @if($blog->blog_main_image)
-                                                    <img src="{{ \Storage::disk('s3')->url($blog->blog_main_image) }}" class="rounded me-2" width="32" height="32" style="object-fit: cover;">
+                                                @if($blog->main_image)
+                                                    <img src="{{ $blog->main_image_url }}" class="rounded me-2" width="32" height="32" style="object-fit: cover;">
                                                 @else
                                                     <div class="rounded me-2 bg-secondary bg-opacity-10 d-flex align-items-center justify-content-center" style="width: 32px; height: 32px; min-width: 32px;">
                                                         <i class='bx bx-image text-secondary'></i>

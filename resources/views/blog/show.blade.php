@@ -9,8 +9,6 @@
     $pageDescription = $translation->excerpt ?? \Illuminate\Support\Str::limit(strip_tags($translation->body), 160, '...');
     $pageKeywords = $translation->title;
 
-    $imagePath = $blog->main_image;
-
     // SEO: Reading Time Estimation
     $wordCount = str_word_count(strip_tags($translation->body));
     $readingTime = max(1, ceil($wordCount / 200)); // Average 200 words per minute
@@ -43,7 +41,7 @@
                         <header>
                             @if($blog->main_image)
                                 <div class="blog-details-img mb-4">
-                                    <img src="{{ \Storage::disk('s3')->url($imagePath) }}" alt="{{ $translation->title }}"
+                                    <img src="{{ $blog->main_image_url }}" alt="{{ $translation->title }}"
                                         class="rounded-4 shadow-sm w-100" style="max-height: 500px; object-fit: cover;">
                                 </div>
                             @endif
@@ -221,14 +219,13 @@
                                     @foreach($recentBlogs as $recent)
                                         @php
                                             $recentTranslation = $recent->getTranslation($currentLocale);
-                                            $recentImage = $recent->main_image;
                                         @endphp
                                         <article class="recent-post-item d-flex gap-3 mb-3 pb-3 border-bottom">
                                             <div class="recent-post-img flex-shrink-0">
                                                 <a
                                                     href="{{ route('blog.show', ['locale' => $currentLocale, 'blog' => $recent->id]) }}">
                                                     @if($recent->main_image)
-                                                        <img src="{{ \Storage::disk('s3')->url($recentImage) }}"
+                                                        <img src="{{ $recent->main_image_url }}"
                                                             alt="{{ $recentTranslation->title }}" class="rounded-4 shadow-sm"
                                                             style="width: 70px; height: 70px; object-fit: cover;">
                                                     @else

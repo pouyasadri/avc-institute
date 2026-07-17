@@ -4,17 +4,13 @@
     $currentLocale = app()->getLocale();
     $translation = $blog->translations->firstWhere('locale', $currentLocale) ?? $blog->translations->first();
     $categoryTranslation = $blog->category?->translations->firstWhere('locale', $currentLocale) ?? $blog->category?->translations->first();
-    $imagePath = $blog->main_image;
-    if ($imagePath && !str_starts_with($imagePath, 'images/blogs/')) {
-        $imagePath = 'images/blogs/' . $imagePath;
-    }
 @endphp
 
 <div class="single-news h-100 d-flex flex-column position-relative">
     <div class="news-img">
         <a href="{{ route('blog.show', ['locale' => app()->getLocale(), 'blog' => $blog->id]) }}">
             @if($blog->main_image)
-                <img src="{{ \Storage::disk('s3')->url($imagePath) }}" style="aspect-ratio: 1.5/1; object-fit: cover;"
+                <img src="{{ $blog->main_image_url }}" style="aspect-ratio: 1.5/1; object-fit: cover;"
                     alt="{{ $translation->title ?? 'Blog post' }}" loading="lazy">
             @else
                 <div class="bg-secondary text-white d-flex align-items-center justify-content-center"

@@ -29,8 +29,8 @@
                             <tr>
                                 <td class="fw-bold text-secondary">#{{ $blog->id }}</td>
                                 <td>
-                                    @if($blog->blog_main_image)
-                                        <img src="{{ \Storage::disk('s3')->url($blog->blog_main_image) }}" alt="Img" class="table-img">
+                                    @if($blog->main_image)
+                                        <img src="{{ $blog->main_image_url }}" alt="Img" class="table-img">
                                     @else
                                         <span class="badge bg-light text-secondary">Aucune</span>
                                     @endif
