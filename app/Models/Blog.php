@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Facades\Storage;
 
 class Blog extends Model
 {
@@ -41,6 +42,24 @@ class Blog extends Model
     public function setBlogMainImageAttribute($value): void
     {
         $this->attributes['main_image'] = $value;
+    }
+
+    public function getMainImageUrlAttribute(): ?string
+    {
+        $path = $this->main_image;
+        if (! $path) {
+            return null;
+        }
+
+        if (str_starts_with($path, 'public/')) {
+            $path = substr($path, 7);
+        }
+
+        if (! str_starts_with($path, 'images/blogs/')) {
+            $path = 'images/blogs/'.$path;
+        }
+
+        return Storage::disk('s3')->url($path);
     }
 
     public function category(): BelongsTo
