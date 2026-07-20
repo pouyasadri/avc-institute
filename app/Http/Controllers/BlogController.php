@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreBlogPostRequest;
 use App\Http\Requests\UpdateBlogPostRequest;
 use App\Models\Blog;
+use App\Models\BlogPostTranslation;
 use App\Services\BlogCategoryService;
 use App\Services\BlogService;
 use Illuminate\Http\RedirectResponse;
@@ -36,7 +37,7 @@ class BlogController extends Controller
     public function show(string $locale, string $blog): View|RedirectResponse
     {
         $locale = app()->getLocale();
-        $translation = \App\Models\BlogPostTranslation::where('slug', $blog)
+        $translation = BlogPostTranslation::where('slug', $blog)
             ->where('locale', $locale)
             ->first();
 
