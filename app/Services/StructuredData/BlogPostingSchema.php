@@ -39,7 +39,7 @@ class BlogPostingSchema extends SchemaBuilder
             ->add('dateModified', $this->blog->updated_at->toIso8601String())
             ->add('mainEntityOfPage', [
                 '@type' => 'WebPage',
-                '@id' => $this->url(route('blog.show', ['locale' => $this->locale, 'blog' => $this->blog->id])),
+                '@id' => $this->url(route('blog.show', ['locale' => $this->locale, 'blog' => $this->translation->slug])),
             ]);
 
         // Add article body excerpt for LLMs — use mb_substr to preserve Persian codepoints

@@ -33,15 +33,19 @@ class BlogController extends Controller
         return view('blog.index', compact('blogs', 'locale', 'includeTrashed'));
     }
 
-    public function show(string $locale, Blog $blog): View|RedirectResponse
+    public function show(string $locale, string $blog): View|RedirectResponse
     {
-        $blog->load(['translations', 'category', 'category.translations', 'author']);
         $locale = app()->getLocale();
-        $translation = $blog->getTranslation($locale, false);
+        $translation = \App\Models\BlogPostTranslation::where('slug', $blog)
+            ->where('locale', $locale)
+            ->first();
 
         if (! $translation) {
             return redirect()->route('blog.index', ['locale' => $locale]);
         }
+
+        $blog = $translation->post;
+        $blog->load(['translations', 'category', 'category.translations', 'author']);
 
         $nextBlog = $this->blogService->getNextBlog($blog);
         $prevBlog = $this->blogService->getPreviousBlog($blog);
@@ -69,7 +73,7 @@ class BlogController extends Controller
         $blog = $this->blogService->storeBlog($request->validated());
 
         return redirect()
-            ->route('blog.show', ['locale' => app()->getLocale(), 'blog' => $blog->id])
+            ->route('blog.show', ['locale' => app()->getLocale(), 'blog' => $blog->getTranslation(app()->getLocale())->slug])
             ->with('success', __('messages.blog_saved'));
     }
 
@@ -91,7 +95,7 @@ class BlogController extends Controller
         $this->blogService->updateBlog($blog, $request->validated());
 
         return redirect()
-            ->route('blog.show', ['locale' => app()->getLocale(), 'blog' => $blog->id])
+            ->route('blog.show', ['locale' => app()->getLocale(), 'blog' => $blog->getTranslation(app()->getLocale())->slug])
             ->with('success', __('messages.blog_updated'));
     }
 
@@ -114,7 +118,7 @@ class BlogController extends Controller
 
         if ($blog) {
             return redirect()
-                ->route('blog.show', ['locale' => app()->getLocale(), 'blog' => $blog->id])
+                ->route('blog.show', ['locale' => app()->getLocale(), 'blog' => $blog->getTranslation(app()->getLocale())->slug])
                 ->with('success', __('messages.blog_restored'));
         }
 

@@ -38,7 +38,7 @@ Information on admission, Campus France, and student life for top institutions:
 @forelse($blogs as $blog)
 ### {{ $blog->translate(app()->getLocale())->title }}
 > {{ Str::limit(strip_tags($blog->translate(app()->getLocale())->content), 160) }}
-[Read Full Article]({{ route('blog.show', ['locale' => app()->getLocale(), 'blog' => $blog->slug]) }})
+[Read Full Article]({{ route('blog.show', ['locale' => app()->getLocale(), 'blog' => $blog->getTranslation(app()->getLocale())?->slug ?? $blog->id]) }})
 @empty
 No articles available at the moment.
 @endforelse

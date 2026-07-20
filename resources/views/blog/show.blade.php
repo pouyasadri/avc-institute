@@ -81,7 +81,7 @@
                             <div class="row align-items-center">
                                 <nav class="col-6 text-start" aria-label="Previous post">
                                     @if ($prevBlog)
-                                        <a href="{{ route('blog.show', ['locale' => $currentLocale, 'blog' => $prevBlog->id]) }}"
+                                        <a href="{{ route('blog.show', ['locale' => $currentLocale, 'blog' => $prevBlog->getTranslation($currentLocale)?->slug ?? $prevBlog->id]) }}"
                                             class="d-flex align-items-center gap-2 group text-decoration-none">
                                             <div class="nav-btn-circle shadow-sm">
                                                 <i class="{{ $isRtl ? 'bx bx-right-arrow-alt' : 'bx bx-left-arrow-alt' }}"></i>
@@ -97,7 +97,7 @@
                                 </nav>
                                 <nav class="col-6 text-end" aria-label="Next post">
                                     @if ($nextBlog)
-                                        <a href="{{ route('blog.show', ['locale' => $currentLocale, 'blog' => $nextBlog->id]) }}"
+                                        <a href="{{ route('blog.show', ['locale' => $currentLocale, 'blog' => $nextBlog->getTranslation($currentLocale)?->slug ?? $nextBlog->id]) }}"
                                             class="d-flex align-items-center justify-content-end gap-2 group text-decoration-none">
                                             <div class="d-none d-md-block">
                                                 <span class="d-block text-muted small">{{ __('blog/show.next_blog') }}</span>
@@ -223,7 +223,7 @@
                                         <article class="recent-post-item d-flex gap-3 mb-3 pb-3 border-bottom">
                                             <div class="recent-post-img flex-shrink-0">
                                                 <a
-                                                    href="{{ route('blog.show', ['locale' => $currentLocale, 'blog' => $recent->id]) }}">
+                                                    href="{{ route('blog.show', ['locale' => $currentLocale, 'blog' => $recentTranslation?->slug ?? $recent->id]) }}">
                                                     @if($recent->main_image)
                                                         <img src="{{ $recent->main_image_url }}"
                                                             alt="{{ $recentTranslation->title }}" class="rounded-4 shadow-sm"
@@ -238,7 +238,7 @@
                                             </div>
                                             <div class="recent-post-content">
                                                 <h5 class="fs-6 mb-1">
-                                                    <a href="{{ route('blog.show', ['locale' => $currentLocale, 'blog' => $recent->id]) }}"
+                                                    <a href="{{ route('blog.show', ['locale' => $currentLocale, 'blog' => $recentTranslation?->slug ?? $recent->id]) }}"
                                                         class="text-dark text-decoration-none fw-bold">
                                                         {{ \Illuminate\Support\Str::limit($recentTranslation->title, 50) }}
                                                     </a>
@@ -298,7 +298,7 @@
         $breadcrumbSchema = \App\Services\StructuredData\BreadcrumbSchema::fromArray([
             ['name' => __('blog/show.breadcrumb_home'), 'url' => route('index', ['locale' => $currentLocale])],
             ['name' => __('blog/show.breadcrumb_blogs'), 'url' => route('blog.index', ['locale' => $currentLocale])],
-            ['name' => $translation->title, 'url' => route('blog.show', ['locale' => $currentLocale, 'blog' => $blog->id])],
+            ['name' => $translation->title, 'url' => route('blog.show', ['locale' => $currentLocale, 'blog' => $translation->slug])],
         ]);
     @endphp
     <x-seo.structured-data :schema="$breadcrumbSchema" />

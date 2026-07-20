@@ -8,7 +8,7 @@
 
 <div class="single-news h-100 d-flex flex-column position-relative">
     <div class="news-img">
-        <a href="{{ route('blog.show', ['locale' => app()->getLocale(), 'blog' => $blog->id]) }}">
+        <a href="{{ route('blog.show', ['locale' => app()->getLocale(), 'blog' => $translation->slug ?? $blog->id]) }}">
             @if($blog->main_image)
                 <img src="{{ $blog->main_image_url }}" style="aspect-ratio: 1.5/1; object-fit: cover;"
                     alt="{{ $translation->title ?? 'Blog post' }}" loading="lazy">
@@ -33,7 +33,7 @@
             </ul>
         @endif
 
-        <a href="{{ route('blog.show', ['locale' => app()->getLocale(), 'blog' => $blog->id]) }}"
+        <a href="{{ route('blog.show', ['locale' => app()->getLocale(), 'blog' => $translation->slug ?? $blog->id]) }}"
             class="stretched-link">
             <h3>{{ $translation->title ?? __('No translation') }}</h3>
         </a>
