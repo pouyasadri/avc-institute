@@ -57,7 +57,7 @@
                             @endif
                             <h3 class="h5 fw-bold mb-3">{{ $item['title'] }}</h3>
                             <p class="facilities-desc small mb-4">{{ $item['description'] }}</p>
-                            <a href="{{ url($currentLocale . "/consult") }}" class="icon-btn text-primary"
+                            <a href="{{ url($currentLocale . "/consult") }}" class="icon-btn"
                                aria-label="{{ __('layout.facilities_consult_label', ['service' => $item['title']]) }}">
                                 <i class="{{ $arrowIcon }}" aria-hidden="true"></i>
                             </a>
