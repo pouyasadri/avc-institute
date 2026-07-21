@@ -12,6 +12,11 @@
     // SEO: Reading Time Estimation
     $wordCount = str_word_count(strip_tags($translation->body));
     $readingTime = max(1, ceil($wordCount / 200)); // Average 200 words per minute
+
+    // SEO & LLM: Generate Table of Contents and inject IDs into headings
+    $tocData = \App\Helpers\TocHelper::generate($translation->body);
+    $bodyWithIds = $tocData['content'];
+    $toc = $tocData['toc'];
 @endphp
 
 @section('title', $pageTitle)
@@ -74,7 +79,7 @@
 
                         <div class="article-content"
                             style="font-family: 'Inter', sans-serif; line-height: 1.8; color: #4a5568;">
-                            {!! $translation->body !!}
+                            {!! $bodyWithIds !!}
                         </div>
 
                         <footer class="post-navigation mt-5 pt-4 border-top">
@@ -202,12 +207,7 @@
                 <div class="col-lg-4 mt-5 mt-lg-0">
                     <aside class="blog-sidebar">
                         <!-- Table of Contents -->
-                        <nav class="sidebar-widget p-4 rounded-5 shadow-sm bg-white mb-4" aria-label="Table of contents">
-                            <h4 class="widget-title mb-3 fs-5 fw-bold border-bottom pb-2">
-                                {{ __('blog/show.table_of_contents') }}
-                            </h4>
-                            <ol id="board" class="ps-3 mb-0" style="font-size: 0.95rem;"></ol>
-                        </nav>
+                        <x-toc :toc="$toc" :title="__('blog/show.table_of_contents')" />
 
                         <!-- Recent Posts -->
                         @if($recentBlogs->count() > 0)
@@ -285,7 +285,6 @@
         </div>
     </section>
 
-    <script src="{{asset("assets/js/createScrollLinks.js")}}"></script>
 @endsection
 
 @push("json")

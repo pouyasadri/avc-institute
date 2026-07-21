@@ -3,6 +3,11 @@
 @php
     $currentLocale = app()->getLocale();
     $isRtl = in_array($currentLocale, ['fa'], true);
+
+    $cityContent = trim($__env->yieldContent('city_content'));
+    $tocData = \App\Helpers\TocHelper::generate($cityContent);
+    $cityContentWithIds = $tocData['content'];
+    $toc = $tocData['toc'];
 @endphp
 
 @section('content')
@@ -28,11 +33,7 @@
                 <aside class="col-lg-4 order-2 order-lg-1">
                     <div class="service-sidebar-area">
                         <!-- Table of Contents -->
-                        <div class="sidebar-widget p-4 rounded-5 shadow-sm bg-white mb-4 border-0">
-                            <h4 class="widget-title h5 fw-bold mb-3 border-bottom pb-2">
-                                @yield('toc_title', __('city/paris.table_of_contents'))</h4>
-                            <ol id="board" class="list-unstyled mb-0"></ol>
-                        </div>
+                        <x-toc :toc="$toc" :title="trim($__env->yieldContent('toc_title', __('city/paris.table_of_contents')))" />
 
                         <!-- Contact Sidebar -->
                         <div class="sidebar-widget p-4 rounded-5 shadow-sm bg-white mb-4 border-0">
@@ -67,7 +68,7 @@
                 <div class="col-lg-8 order-1 order-lg-2">
                     <article class="service-details-wrap p-4 p-md-5 rounded-5 shadow-sm bg-white border-0">
                         <div class="article-content">
-                            @yield('city_content')
+                            {!! $cityContentWithIds !!}
                         </div>
 
                         <!-- Contact Form -->
@@ -81,5 +82,4 @@
         </div>
     </section>
 
-    <script src="{{ asset('assets/js/createScrollLinks.js') }}"></script>
 @endsection

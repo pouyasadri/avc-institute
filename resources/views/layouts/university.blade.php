@@ -31,6 +31,11 @@
     ];
     $universitySlug = $universityName ?? '';
     $linkedCity = $universityCityMap[$universitySlug] ?? null;
+
+    $universityContent = trim($__env->yieldContent('university_content'));
+    $tocData = \App\Helpers\TocHelper::generate($universityContent);
+    $universityContentWithIds = $tocData['content'];
+    $toc = $tocData['toc'];
 @endphp
 
 @section('content')
@@ -56,13 +61,7 @@
                 <aside class="col-lg-4 order-2 order-lg-1">
                     <div class="service-sidebar-area">
                         <!-- Table of Contents -->
-                        @if (trim($__env->yieldContent('toc')))
-                            <div class="sidebar-widget p-4 rounded-5 shadow-sm bg-white mb-4 border-0">
-                                <h4 class="widget-title h5 fw-bold mb-3 border-bottom pb-2">
-                                    @yield('toc_title', 'Table of Contents')</h4>
-                                <ol id="board" class="list-unstyled mb-0"></ol>
-                            </div>
-                        @endif
+                        <x-toc :toc="$toc" :title="trim($__env->yieldContent('toc_title', 'Table of Contents'))" />
 
                         <!-- Contact Sidebar -->
                         <div class="sidebar-widget p-4 rounded-5 shadow-sm bg-white mb-4 border-0">
@@ -116,7 +115,7 @@
                 <div class="col-lg-8 order-1 order-lg-2">
                     <article class="service-details-wrap p-4 p-md-5 rounded-5 shadow-sm bg-white border-0">
                         <div class="article-content">
-                            @yield('university_content')
+                            {!! $universityContentWithIds !!}
 
                             @php
                                 $slug = $universitySlug;
@@ -165,5 +164,4 @@
         </div>
     </section>
 
-    <script src="{{ asset('assets/js/createScrollLinks.js') }}"></script>
 @endsection
