@@ -108,20 +108,46 @@ class SitemapController extends Controller
 
             // Individual blog posts
             foreach ($blogs as $blog) {
+                $translation = $blog->getTranslation($locale);
+                if (! $translation || ! $translation->slug) {
+                    continue;
+                }
+
+                $slug = $translation->slug;
+
+                // Slugs are localized, so we need to map the exact slug for each alternate language
+                $blogAlternates = [];
+                foreach ($locales as $altLocale) {
+                    $altTrans = $blog->getTranslation($altLocale);
+                    if ($altTrans && $altTrans->slug) {
+                        $blogAlternates[] = [
+                            'hreflang' => $altLocale,
+                            'href' => "{$baseUrl}/{$altLocale}/blog/{$altTrans->slug}",
+                        ];
+                        
+                        // x-default points to English
+                        if ($altLocale === 'en') {
+                            $blogAlternates[] = [
+                                'hreflang' => 'x-default',
+                                'href' => "{$baseUrl}/en/blog/{$altTrans->slug}",
+                            ];
+                        }
+                    }
+                }
+
                 $entry = [
-                    'loc' => "{$baseUrl}/{$locale}/blog/{$blog->id}",
+                    'loc' => "{$baseUrl}/{$locale}/blog/{$slug}",
                     'lastmod' => $blog->updated_at->toAtomString(),
                     'changefreq' => config('seo.sitemap.changefreq.blog_post', 'weekly'),
                     'priority' => config('seo.sitemap.priorities.blog_post', 0.8),
-                    'alternates' => $generateAlternates("/blog/{$blog->id}"),
+                    'alternates' => $blogAlternates,
                 ];
 
                 // Add image metadata for Google Images indexing
                 if ($blog->main_image) {
-                    $translation = $blog->getTranslation($locale);
                     $entry['image'] = [
                         'loc' => Storage::url($blog->main_image),
-                        'title' => $translation?->title ?? $blog->id,
+                        'title' => $translation->title,
                     ];
                 }
 

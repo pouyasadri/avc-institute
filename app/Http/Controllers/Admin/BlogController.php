@@ -55,6 +55,9 @@ class BlogController extends Controller
 
         // Notify all IndexNow engines about the new blog post
         $this->pingBlogUrls($blog);
+        
+        // Clear sitemap cache so the new post appears immediately
+        \Illuminate\Support\Facades\Cache::forget('sitemap:blogs');
 
         return redirect()
             ->route('admin.blog.index')
@@ -77,6 +80,9 @@ class BlogController extends Controller
         // Notify all IndexNow engines that the post has changed
         $blog->refresh();
         $this->pingBlogUrls($blog);
+        
+        // Clear sitemap cache so updates reflect immediately
+        \Illuminate\Support\Facades\Cache::forget('sitemap:blogs');
 
         return redirect()
             ->route('admin.blog.index')
@@ -94,6 +100,9 @@ class BlogController extends Controller
         if (! empty($urls)) {
             $this->indexNow->pingBatch($urls);
         }
+        
+        // Clear sitemap cache
+        \Illuminate\Support\Facades\Cache::forget('sitemap:blogs');
 
         return redirect()
             ->route('admin.blog.index')
