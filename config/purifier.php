@@ -27,7 +27,7 @@ return [
         'default' => [
             'HTML.Doctype' => 'HTML 4.01 Transitional',
             'HTML.Allowed' => 'div[class|id|style|data-bs-parent|data-bs-target|data-bs-toggle|aria-expanded|aria-controls|aria-labelledby],b,strong,i[class],em,u,a[href|title|class|id|target|rel],ul[class|id],ol[class|id],li[class|id],p[style|class|id],br,span[style|class|id],img[width|height|alt|src|class|id|style],h1[class|id|style],h2[class|id|style],h3[class|id|style],h4[class|id|style],h5[class|id|style],h6[class|id|style],blockquote[class|id|style],button[class|id|data-bs-toggle|data-bs-target|aria-expanded|aria-controls]',
-            'CSS.AllowedProperties' => 'font,font-size,font-weight,font-style,font-family,text-decoration,padding-left,color,background-color,text-align,max-height,object-fit,width,height',
+            'CSS.AllowedProperties' => 'font,font-size,font-weight,font-style,font-family,text-decoration,padding-left,color,background-color,text-align,max-height,width,height',
             'AutoFormat.AutoParagraph' => false,
             'AutoFormat.RemoveEmpty' => false,
             'Attr.EnableID' => true,
