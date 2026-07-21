@@ -124,7 +124,7 @@ class SitemapController extends Controller
                             'hreflang' => $altLocale,
                             'href' => "{$baseUrl}/{$altLocale}/blog/{$altTrans->slug}",
                         ];
-                        
+
                         // x-default points to English
                         if ($altLocale === 'en') {
                             $blogAlternates[] = [
