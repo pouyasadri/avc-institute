@@ -7,7 +7,7 @@
         <nav class="mobile-nav" role="navigation" aria-label="{{ __('layout.mobile_navigation') }}">
             <a href="{{ route('index', ['locale' => app()->getLocale()]) }}" class="logo" aria-label="{{ __('layout.home') }}">
                 <img style="width: 4rem;padding-bottom: 0.5rem;" src="{{asset("assets/img/logo/new-logo.webp")}}"
-                    alt="{{ __('layout.logo_alt') }}" width="64" height="64">
+                    alt="{{ __('layout.logo_alt') }}" width="64" height="43">
             </a>
 
             {{-- Hamburger Button --}}
