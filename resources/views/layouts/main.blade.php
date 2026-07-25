@@ -145,27 +145,11 @@
          Animate.css, Magnific Popup, Odometer, Slick Carousel
          All hashed and gzip-compressed by Vite.
     ═══════════════════════════════════════════════════════════════════ --}}
-    @php
-        Illuminate\Support\Facades\Vite::useStyleTagAttributes([
-            'media' => 'print',
-            'onload' => "this.onload=null;this.media='all'"
-        ]);
-    @endphp
     @if($isRtl)
         @vite(['resources/sass/app-rtl.scss', 'resources/js/theme-rtl.js'])
     @else
         @vite(['resources/sass/app-ltr.scss', 'resources/js/theme-ltr.js'])
     @endif
-    <noscript>
-        @php
-            Illuminate\Support\Facades\Vite::useStyleTagAttributes([]);
-        @endphp
-        @if($isRtl)
-            @vite(['resources/sass/app-rtl.scss'])
-        @else
-            @vite(['resources/sass/app-ltr.scss'])
-        @endif
-    </noscript>
 
     {{-- ═══════════════════════════════════════════════════════════════════
          STATIC VENDOR CSS (no npm package — kept as raw assets)
