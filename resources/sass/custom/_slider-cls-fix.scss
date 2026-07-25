@@ -1,0 +1,12 @@
+/* 
+ * Fix for Owl Carousel Cumulative Layout Shift (CLS) 
+ * Hides all items except the first one before the JS initializes
+ */
+.owl-carousel:not(.owl-loaded) {
+    display: block;
+    overflow: hidden;
+}
+
+.owl-carousel:not(.owl-loaded) > *:not(:first-child) {
+    display: none !important;
+}
