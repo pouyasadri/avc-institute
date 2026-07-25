@@ -29,6 +29,8 @@
 // ─────────────────────────────────────────────────────────────────────────────
 @import 'vendor/odometer-theme-default';
 
+@import 'custom/navbar';
+
 // ─────────────────────────────────────────────────────────────────────────────
 // Slick Carousel CSS is imported in theme-ltr.js / theme-rtl.js to avoid the
 // postcss-import @charset conflict with slick-carousel's single-quoted charset.

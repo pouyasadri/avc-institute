@@ -398,14 +398,7 @@
     <!-- Skip to Content Link for Accessibility -->
     <a href="#main-content" class="skip-to-content">{{ __('layout.skip_to_content') }}</a>
 
-    <!-- Start Preloader Area -->
-    <div class="preloader" aria-hidden="true">
-        <div class="lds-ripple">
-            <div></div>
-            <div></div>
-        </div>
-    </div>
-    <!-- End Preloader Area -->
+
 
     <!-- Start Navbar Area -->
     <header role="banner">
