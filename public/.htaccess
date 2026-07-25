@@ -61,6 +61,8 @@
     <If "%{REQUEST_URI} =~ m#^/(admin|login|register|password)#">
         Header set X-Robots-Tag "noindex, nofollow"
     </If>
+
+    Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.clarity.ms https://www.amcharts.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' https://www.clarity.ms https://c.clarity.ms;"
 </IfModule>
 
 # Enable Gzip Compression
@@ -83,7 +85,7 @@
 # Browser Caching
 <IfModule mod_expires.c>
     ExpiresActive On
-    
+
     # Images
     ExpiresByType image/jpg "access plus 1 year"
     ExpiresByType image/jpeg "access plus 1 year"
@@ -92,23 +94,23 @@
     ExpiresByType image/webp "access plus 1 year"
     ExpiresByType image/svg+xml "access plus 1 year"
     ExpiresByType image/x-icon "access plus 1 year"
-    
+
     # CSS and JavaScript
     ExpiresByType text/css "access plus 1 month"
     ExpiresByType text/javascript "access plus 1 month"
     ExpiresByType application/javascript "access plus 1 month"
     ExpiresByType application/x-javascript "access plus 1 month"
-    
+
     # Fonts
     ExpiresByType font/ttf "access plus 1 year"
     ExpiresByType font/otf "access plus 1 year"
     ExpiresByType font/woff "access plus 1 year"
     ExpiresByType font/woff2 "access plus 1 year"
     ExpiresByType application/font-woff "access plus 1 year"
-    
+
     # Documents
     ExpiresByType application/pdf "access plus 1 month"
-    
+
     # Default
     ExpiresDefault "access plus 2 days"
 </IfModule>
