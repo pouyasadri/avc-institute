@@ -23,7 +23,7 @@
                 aria-label="{{ __('layout.main_navigation') }}">
                 <div class="container">
                     <a class="navbar-brand" href="{{ route('index', ['locale' => app()->getLocale()]) }}" aria-label="{{ __('layout.home') }}">
-                        <img style="width: 8rem" src="{{asset("assets/img/logo/new-logo.png")}}"
+                        <img style="width: 8rem" src="{{asset("assets/img/logo/new-logo.webp")}}"
                             alt="{{ __('layout.logo_alt') }}" width="128" height="86">
                     </a>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">

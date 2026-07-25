@@ -98,7 +98,7 @@
                                 alt="{{ __('index.about.image_alt') }}"
                                 width="679" height="424"
                                 fetchpriority="high"
-                                style="max-width: 100%; height: auto;">
+                                style="max-width: 100%; height: auto; aspect-ratio: 679/424;">
                         </div>
                     </div>
                     <div class="col-lg-6">
