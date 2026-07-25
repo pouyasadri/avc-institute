@@ -43,6 +43,29 @@
         <p class="lead">{!! __('city/paris.intro_paragraph') !!}</p>
     </section>
 
+    @if(is_array(__('city/paris.quick_facts')))
+        <div class="card border-0 shadow-sm rounded-4 mb-5 bg-light">
+            <div class="card-body p-4">
+                <h3 class="h5 fw-bold text-primary mb-3 d-flex align-items-center">
+                    <i class='bx bxs-check-shield me-2 fs-4'></i>
+                    {{ __('city/paris.quick_facts_title') }}
+                </h3>
+                <div class="row g-3">
+                    @foreach (__('city/paris.quick_facts') as $item)
+                        @if(is_array($item) && isset($item['label'], $item['value']))
+                            <div class="col-md-6">
+                                <div class="p-3 bg-white rounded-3 shadow-xs border h-100">
+                                    <div class="text-muted small mb-1 fw-semibold">{{ $item['label'] }}</div>
+                                    <div class="fw-bold text-dark fs-6">{{ $item['value'] }}</div>
+                                </div>
+                            </div>
+                        @endif
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    @endif
+
     <div class="rounded-4 overflow-hidden shadow-sm mb-5">
         <iframe
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d84004.81432415127!2d2.3499021!3d48.8553214!3m2!i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis!5e0!3m2!1sfr!2sfr!4v1691146313133!5m2!1sfr!2sfr"
@@ -180,12 +203,30 @@
             </div>
         </div>
     </div>
-    <x-sections.faq
-        :title="__('city/paris.faq_title')"
-        :subtitle="__('city/paris.faq_subtitle')"
-        :items="__('city/paris.faq_items')"
-        id="paris-faq"
-    />
+
+    <div class="cta-consult-banner my-5 py-4 px-4 px-md-5 rounded-5 shadow-sm text-center text-md-start bg-primary text-white position-relative overflow-hidden">
+        <div class="row align-items-center position-relative" style="z-index: 2;">
+            <div class="col-lg-8 mb-3 mb-lg-0">
+                <h3 class="h4 fw-bold text-white mb-2">{{ __('city/paris.cta_banner_title') }}</h3>
+                <p class="mb-0 text-white-50 fs-6">{{ __('city/paris.cta_banner_subtitle') }}</p>
+            </div>
+            <div class="col-lg-4 text-center text-lg-end">
+                <a href="{{ url($currentLocale . '/consult') }}" class="btn btn-light btn-lg rounded-pill fw-bold px-4 py-3 text-primary shadow-sm">
+                    <i class='bx bx-calendar-event me-2'></i>
+                    {{ __('city/paris.cta_banner_button') }}
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="my-5">
+        <x-sections.faq
+            :title="__('city/paris.faq_title')"
+            :subtitle="__('city/paris.faq_subtitle')"
+            :items="__('city/paris.faq_items')"
+            id="paris-faq"
+        />
+    </div>
 @endsection
 
 @push('json')

@@ -12,14 +12,44 @@ return [
     'breadcrumb_cities' => 'Villes de France',
     'breadcrumb_paris' => 'Paris',
 
+    // Quick Facts Section
+    'quick_facts_title' => 'Paris 2026 en un coup d\'œil',
+    'quick_facts' => [
+        [
+            'label' => 'Coût moyen mensuel',
+            'value' => '1 200 € – 1 600 € (avec réductions étudiants)',
+        ],
+        [
+            'label' => 'Aide au logement CAF (APL)',
+            'value' => 'Jusqu\'à 30 % – 40 % du loyer mensuel',
+        ],
+        [
+            'label' => 'Garantie financière visa 2026',
+            'value' => 'Min. 7 380 €/an (615 €/mois)',
+        ],
+        [
+            'label' => 'Droit au travail étudiant',
+            'value' => '964 heures/an (60 % temps plein)',
+        ],
+        [
+            'label' => 'Langue d\'études et de vie',
+            'value' => 'Français (B2) / Anglais (la plupart des Masters)',
+        ],
+    ],
+
     // Sidebar Content
     'table_of_contents' => 'Au Sommaire',
     'contact_us' => 'Parlons de Paris',
     'ask_question' => 'Poser une Question',
     'consultation_request' => 'Commencez votre voyage parisien avec nos experts',
     'email' => 'Email',
-    'useful_links' => 'La Boîte à Outils Paris',
+    'useful_links' => 'Le Kit Parisien',
     'paris_wikipedia' => 'Paris - Wikipédia',
+
+    // CTA Banner
+    'cta_banner_title' => 'Prêt à commencer votre parcours d\'études et de vie à Paris ?',
+    'cta_banner_subtitle' => 'Réservez une séance de conseil dédiée avec les experts A.V.C et obtenez votre feuille de route 2026 sur mesure.',
+    'cta_banner_button' => 'Réserver une consultation',
 
     // Main Content
     'intro_heading' => 'Bienvenue dans Votre Histoire Parisienne',
