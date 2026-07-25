@@ -54,7 +54,6 @@
         width: 90%;
         max-width: 1200px;
         border-radius: 50px;
-        overflow: hidden;
     }
 
     /* Sticky State */
@@ -153,6 +152,9 @@
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         min-width: 150px;
         z-index: 1000;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
     }
 
     .desktop-language-switcher .dropdown:hover .lang-dropdown-menu {
@@ -162,6 +164,7 @@
     }
 
     .lang-dropdown-menu a {
+        text-decoration: none;
         color: var(--text-dark);
         border-radius: 8px;
         padding: 8px 16px;
