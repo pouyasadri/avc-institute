@@ -10,7 +10,7 @@
     "require": {
         "php": "^8.4",
         "guzzlehttp/guzzle": "^7.10",
-        "intervention/image": "^3.11",
+        "intervention/image": "^4.0",
         "laravel/framework": "^13.0",
         "laravel/sanctum": "^4.0",
         "laravel/ui": "^4.5",
