@@ -258,13 +258,13 @@ class BlogService
         $filename = time().'_'.Str::random(10).'.jpg';
         $fullPath = $path.$filename;
 
-        $image = $this->imageManager()->read($file);
+        $image = $this->imageManager()->decode($file);
 
         if ($image->width() > 1920) {
             $image->scale(width: 1920);
         }
 
-        $encoded = $image->toJpeg(quality: 80);
+        $encoded = $image->encodeUsingFormat(\Intervention\Image\Format::JPEG, quality: 80)->toString();
 
         // Upload to n0c S3 object storage with public-read visibility
         Storage::disk('s3')->put($fullPath, $encoded, 'public');

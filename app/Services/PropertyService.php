@@ -239,7 +239,7 @@ class PropertyService
         $fullPath = $path.$filename;
 
         // Process and optimize image
-        $image = $this->imageManager()->read($file);
+        $image = $this->imageManager()->decode($file);
 
         // Resize if larger than max width
         if ($image->width() > 1920) {
@@ -247,7 +247,7 @@ class PropertyService
         }
 
         // Encode with quality
-        $encoded = $image->toWebp(quality: 80);
+        $encoded = $image->encodeUsingFormat(\Intervention\Image\Format::WEBP, quality: 80)->toString();
 
         // Upload to n0c S3 object storage with public-read visibility
         Storage::disk('s3')->put($fullPath, $encoded, 'public');
