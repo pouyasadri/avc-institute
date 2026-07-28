@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Intervention\Image\Drivers\Gd\Driver;
+use Intervention\Image\Format;
 use Intervention\Image\ImageManager;
 
 class BlogService
@@ -264,7 +265,7 @@ class BlogService
             $image->scale(width: 1920);
         }
 
-        $encoded = $image->encodeUsingFormat(\Intervention\Image\Format::JPEG, quality: 80)->toString();
+        $encoded = $image->encodeUsingFormat(Format::JPEG, quality: 80)->toString();
 
         // Upload to n0c S3 object storage with public-read visibility
         Storage::disk('s3')->put($fullPath, $encoded, 'public');
