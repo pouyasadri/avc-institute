@@ -12,6 +12,35 @@ return [
     'breadcrumb_cities' => 'French Cities',
     'breadcrumb_nice' => 'Nice',
 
+    // Quick Facts Section
+    'quick_facts_title' => 'Nice 2026 at a Glance',
+    'quick_facts' => [
+        [
+            'label' => 'Average Monthly Cost',
+            'value' => '€1,400 – €1,850 (French Riviera living)',
+        ],
+        [
+            'label' => 'CAF Housing Subsidy (APL)',
+            'value' => 'Up to 30% – 40% of rent (~€200–€320/mo)',
+        ],
+        [
+            'label' => '2026 Visa Proof of Funds',
+            'value' => 'Min. €7,380/yr (€615/month)',
+        ],
+        [
+            'label' => 'Housing Guarantor (Visale)',
+            'value' => 'Free state guarantor available without French resident',
+        ],
+        [
+            'label' => 'Legal Student Work Rights',
+            'value' => '964 hours/year (60% full-time)',
+        ],
+        [
+            'label' => 'Language of Study & Life',
+            'value' => 'French (B2) / English (Master’s & Business Schools)',
+        ],
+    ],
+
     // Sidebar Content
     'table_of_contents' => 'What’s Inside',
     'contact_us' => 'Your Riviera Chapter',
@@ -20,6 +49,11 @@ return [
     'email' => 'Email',
     'useful_links' => 'Nice Resources',
     'nice_wikipedia' => 'Nice - Wikipedia',
+
+    // CTA Banner
+    'cta_banner_title' => 'Ready to Start Your Journey to Study and Live in Nice?',
+    'cta_banner_subtitle' => 'Book a dedicated consultation session with A.V.C experts and get your customized 2026 Riviera roadmap.',
+    'cta_banner_button' => 'Book Your Consultation',
 
     // Main Content
     'intro_heading' => 'Welcome to the Capital of the Azure Coast',
