@@ -56,7 +56,7 @@ return [
     'cta_banner_button' => 'Réserver une consultation',
 
     // Main Content
-    'intro_heading' => 'Bienvenue à Montpellier : Le Pôle Académique Ensoleillé',
+    'intro_heading' => 'Montpellier : Une énergie étudiante pétillante, du soleil toute l’année et un savoir séculaire',
     'intro_paragraph' => 'Montpellier en 2026 s\'affirme comme l\'une des villes les plus dynamiques et les plus jeunes d\'Europe. Forte d\'une histoire profondément ancrée dans sa faculté de médecine mondialement célèbre — la plus ancienne encore en activité — Montpellier s\'est transformée en un hub mondial pour la biotechnologie, l\'agronomie et la santé numérique. Située à quelques minutes de la mer Méditerranée et baignée par plus de 300 jours de soleil par an, elle offre un style de vie qui équilibre parfaitement l\'intensité académique et la détente méridionale. Ici, les ruelles médiévales de l\'Écusson s\'ouvrent sur de grandes places modernes, reflétant une ville qui honore son passé tout en construisant l\'avenir avec audace. Pour les étudiants et les professionnels en quête d\'une destination dynamique, abordable et magnifique, Montpellier est l\'étoile la plus brillante de la Méditerranée.',
 
     // Section: Student Life

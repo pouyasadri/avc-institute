@@ -56,7 +56,7 @@ return [
     'cta_banner_button' => 'Book Your Consultation',
 
     // Main Content
-    'intro_heading' => 'Welcome to Montpellier: The Sun-Drenched Academic Hub',
+    'intro_heading' => 'Montpellier: Energetic Student Vibe, Year-Round Sun & Centuries of Knowledge',
     'intro_paragraph' => 'Montpellier in 2026 stands as one of Europe’s most dynamic and youthful cities. With a history deeply rooted in its world-famous medical school—the oldest in continuous operation—Montpellier has transformed into a global hub for biotechnology, agronomy, and digital health. Located just minutes from the Mediterranean Sea and bathed in over 300 days of sunshine a year, it offers a lifestyle that perfectly balances academic intensity with southern French relaxation. Here, the narrow medieval streets of the "Écusson" open up into grand modern plazas, reflecting a city that honors its past while aggressively building the future. For students and professionals seeking a high-energy, affordable, and beautiful destination, Montpellier is the Mediterranean’s brightest star.',
 
     // Section: Student Life
