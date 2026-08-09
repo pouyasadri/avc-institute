@@ -12,6 +12,35 @@ return [
     'breadcrumb_cities' => 'Villes Françaises',
     'breadcrumb_marseille' => 'Marseille',
 
+    // Quick Facts Section
+    'quick_facts_title' => 'Marseille 2026 en un coup d\'œil',
+    'quick_facts' => [
+        [
+            'label' => 'Coût moyen mensuel',
+            'value' => '950 € – 1 200 € (Grande métropole abordable)',
+        ],
+        [
+            'label' => 'Aide au logement CAF (APL)',
+            'value' => 'Jusqu\'à 30 % – 40 % du loyer (~180 €–280 €/mois)',
+        ],
+        [
+            'label' => 'Garantie financière visa 2026',
+            'value' => 'Min. 7 380 €/an (615 €/mois)',
+        ],
+        [
+            'label' => 'Garant logement (Visale)',
+            'value' => 'Garantie d\'État gratuite sans besoin de garant résidant en France',
+        ],
+        [
+            'label' => 'Droit au travail étudiant',
+            'value' => '964 heures/an (60 % temps plein)',
+        ],
+        [
+            'label' => 'Langue d\'études et de vie',
+            'value' => 'Français (B2) / Anglais (Univ. Aix-Marseille & Masters KEDGE)',
+        ],
+    ],
+
     // Sidebar Content
     'table_of_contents' => 'Sommaire',
     'contact_us' => 'Parlons de Marseille',
@@ -20,6 +49,11 @@ return [
     'email' => 'E-mail',
     'useful_links' => 'La Boîte à Outils de Marseille',
     'marseille_wikipedia' => 'Marseille - Wikipédia',
+
+    // CTA Banner
+    'cta_banner_title' => 'Prêt à commencer votre parcours d\'études et de vie à Marseille ?',
+    'cta_banner_subtitle' => 'Réservez une séance de conseil dédiée avec les experts A.V.C et obtenez votre feuille de route marseillaise 2026 sur mesure.',
+    'cta_banner_button' => 'Réserver une consultation',
 
     // Main Content
     'intro_heading' => 'Bienvenue dans la Plus Ancienne Ville de France',

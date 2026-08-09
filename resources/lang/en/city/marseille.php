@@ -12,6 +12,35 @@ return [
     'breadcrumb_cities' => 'French Cities',
     'breadcrumb_marseille' => 'Marseille',
 
+    // Quick Facts Section
+    'quick_facts_title' => 'Marseille 2026 at a Glance',
+    'quick_facts' => [
+        [
+            'label' => 'Average Monthly Cost',
+            'value' => '€950 – €1,200 (Affordable Major City)',
+        ],
+        [
+            'label' => 'CAF Housing Subsidy (APL)',
+            'value' => 'Up to 30% – 40% of rent (~€180–€280/mo)',
+        ],
+        [
+            'label' => '2026 Visa Proof of Funds',
+            'value' => 'Min. €7,380/yr (€615/month)',
+        ],
+        [
+            'label' => 'Housing Guarantor (Visale)',
+            'value' => 'Free state guarantor available without French resident',
+        ],
+        [
+            'label' => 'Legal Student Work Rights',
+            'value' => '964 hours/year (60% full-time)',
+        ],
+        [
+            'label' => 'Language of Study & Life',
+            'value' => 'French (B2) / English (Aix-Marseille Univ. & KEDGE Masters)',
+        ],
+    ],
+
     // Sidebar Content
     'table_of_contents' => 'What’s Inside',
     'contact_us' => 'Let’s Talk Marseille',
@@ -20,6 +49,11 @@ return [
     'email' => 'Email',
     'useful_links' => 'The Marseille Toolkit',
     'marseille_wikipedia' => 'Marseille - Wikipedia',
+
+    // CTA Banner
+    'cta_banner_title' => 'Ready to Start Your Journey to Study and Live in Marseille?',
+    'cta_banner_subtitle' => 'Book a dedicated consultation session with A.V.C experts and get your customized 2026 Marseille roadmap.',
+    'cta_banner_button' => 'Book Your Consultation',
 
     // Main Content
     'intro_heading' => 'Welcome to the Oldest City in France',
