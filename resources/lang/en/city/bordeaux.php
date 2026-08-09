@@ -56,7 +56,7 @@ return [
     'cta_banner_button' => 'Book Your Consultation',
 
     // Main Content
-    'intro_heading' => 'Welcome to Your Bordeaux Story',
+    'intro_heading' => 'Bordeaux: Enjoy High-Standard Lifestyle, Economic Vitality & Atlantic Charm',
     'intro_paragraph' => 'Bordeaux in 2026 is far more than just the global capital of wine; it is a masterpiece of 18th-century urban design infused with a 21st-century pulse. Often called the "Sleeping Beauty" that has fully awakened, Bordeaux offers an unparalleled quality of life where grand limestone facades meet cutting-edge digital hubs. It is a city that celebrates the finer things—art, history, and gastronomy—while driving innovation in aerospace and laser technology. Whether you are an ambitious student, a professional seeking balance, or a family looking for a safe, beautiful home, Bordeaux provides a stage where excellence is a way of life. Ready to join the Atlantic coast’s most elegant success story?',
 
     // Section: Student Life

@@ -56,7 +56,7 @@ return [
     'cta_banner_button' => 'Réserver une consultation',
 
     // Main Content
-    'intro_heading' => 'Bienvenue dans votre Histoire Bordelaise',
+    'intro_heading' => 'Bordeaux : L’alliance parfaite entre art de vivre, dynamisme et charme atlantique',
     'intro_paragraph' => 'Bordeaux en 2026 est bien plus que la capitale mondiale du vin ; c\'est un chef-d\'œuvre de l\'urbanisme du XVIIIe siècle animé par un souffle du XXIe siècle. Surnommée la "Belle au bois dormant" désormais pleinement éveillée, Bordeaux offre une qualité de vie inégalée où les façades en pierre de taille côtoient des pôles numériques de pointe. C\'est une ville qui célèbre les belles choses – art, histoire et gastronomie – tout en restant à la pointe de l\'innovation dans l\'aéronautique et les technologies laser. Que vous soyez un étudiant ambitieux, un professionnel en quête d\'équilibre ou une famille cherchant un cadre de vie sûr et magnifique, Bordeaux offre un théâtre où l\'excellence est un art de vivre.',
 
     // Section: Student Life
