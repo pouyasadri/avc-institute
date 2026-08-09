@@ -52,7 +52,7 @@ return [
     'cta_banner_button' => 'Réserver une consultation',
 
     // Main Content
-    'intro_heading' => 'Bienvenue dans Votre Histoire Parisienne',
+    'intro_heading' => 'Pourquoi Paris est bien plus qu’une ville — C’est votre prochain chapitre',
     'intro_paragraph' => 'Paris n\'est pas seulement une destination ; c\'est une expérience transformative. En 2026, la Ville Lumière continue de se redéfinir comme un hub mondial de l\'innovation tout en préservant son charme intemporel. Que vous soyez un étudiant en quête d\'une éducation d\'élite, un professionnel cherchant sa prochaine grande étape de carrière, ou une famille en quête d\'un foyer culturel vibrant, Paris offre une scène où vos ambitions peuvent véritablement s\'épanouir. Au-delà des musées et monuments, vous trouverez une ville qui célèbre l\'« Art de Vivre ». Prêt à écrire votre prochain chapitre dans la plus belle capitale du monde ?',
 
     // Section: Student Life

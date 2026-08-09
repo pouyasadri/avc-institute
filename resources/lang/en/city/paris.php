@@ -52,7 +52,7 @@ return [
     'cta_banner_button' => 'Book Your Consultation',
 
     // Main Content
-    'intro_heading' => 'Welcome to Your Paris Story',
+    'intro_heading' => 'Why Paris is More Than a City — It’s Your Next Big Chapter',
     'intro_paragraph' => 'Paris is not just a destination; it’s a transformative experience. In 2026, the City of Light continues to redefine itself as a global hub for innovation while preserving its timeless charm. Whether you are a student seeking world-clase education, a professional looking for the next big career move, or a family searching for a vibrant cultural home, Paris offers a stage where your ambitions can truly breathe. Beyond the museums and monuments, you’ll find a city that celebrates the "Art de Vivre" – the art of living well. Ready to write your next chapter in the world’s most beautiful capital?',
 
     // Section: Student Life
