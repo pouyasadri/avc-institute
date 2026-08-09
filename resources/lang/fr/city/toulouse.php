@@ -12,6 +12,35 @@ return [
     'breadcrumb_cities' => 'Villes de France',
     'breadcrumb_toulouse' => 'Toulouse',
 
+    // Quick Facts Section
+    'quick_facts_title' => 'Toulouse 2026 en un coup d\'œil',
+    'quick_facts' => [
+        [
+            'label' => 'Coût moyen mensuel',
+            'value' => '1 150 € – 1 500 € (Hub aéronautique & Tech)',
+        ],
+        [
+            'label' => 'Aide au logement CAF (APL)',
+            'value' => 'Jusqu\'à 30 % – 40 % du loyer (~180 €–300 €/mois)',
+        ],
+        [
+            'label' => 'Garantie financière visa 2026',
+            'value' => 'Min. 7 380 €/an (615 €/mois)',
+        ],
+        [
+            'label' => 'Garant logement (Visale)',
+            'value' => 'Garantie d\'État gratuite sans besoin de garant résidant en France',
+        ],
+        [
+            'label' => 'Droit au travail étudiant',
+            'value' => '964 heures/an (60 % temps plein)',
+        ],
+        [
+            'label' => 'Langue d\'études et de vie',
+            'value' => 'Français (B2) / Anglais (Masters Ingénierie & Management)',
+        ],
+    ],
+
     // Sidebar Content
     'table_of_contents' => 'Au Sommaire',
     'contact_us' => 'Votre Chapitre Toulousain',
@@ -20,6 +49,11 @@ return [
     'email' => 'Email',
     'useful_links' => 'Ressources Toulouse',
     'toulouse_wikipedia' => 'Toulouse - Wikipédia',
+
+    // CTA Banner
+    'cta_banner_title' => 'Prêt à commencer votre parcours d\'études et de vie à Toulouse ?',
+    'cta_banner_subtitle' => 'Réservez une séance de conseil dédiée avec les experts A.V.C et obtenez votre feuille de route toulousaine 2026 sur mesure.',
+    'cta_banner_button' => 'Réserver une consultation',
 
     // Main Content
     'intro_heading' => 'Bienvenue dans la Ville Rose',
