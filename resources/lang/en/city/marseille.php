@@ -56,7 +56,7 @@ return [
     'cta_banner_button' => 'Book Your Consultation',
 
     // Main Content
-    'intro_heading' => 'Welcome to the Oldest City in France',
+    'intro_heading' => 'Marseille: Raw Mediterranean Vitality, Great Affordability & Endless Growth',
     'intro_paragraph' => 'Marseille in 2026 is a city of spectacular rebirth. Founded by the Greeks 2,600 years ago, France\'s second-largest city has transformed into a booming Mediterranean metropolis. It offers a unique blend of gritty urban energy, massive tech investments, and the breathtaking natural beauty of the Calanques. Known for its 300 days of sunshine, its multicultural soul, and its deep connection to the sea, Marseille provides an intense, vibrant, and highly authentic French experience. Whether you are studying marine biology, diving into AI, or seeking a more affordable alternative to Paris with an unbeatable lifestyle, Marseille is a city where you don\'t just live—you thrive.',
 
     // Section: Student Life

@@ -56,7 +56,7 @@ return [
     'cta_banner_button' => 'Réserver une consultation',
 
     // Main Content
-    'intro_heading' => 'Bienvenue dans la Plus Ancienne Ville de France',
+    'intro_heading' => 'Marseille : Une vitalité méditerranéenne authentique, abordable et pleine d’opportunités',
     'intro_paragraph' => 'Marseille en 2026 est une ville en pleine renaissance spectaculaire. Fondée par les Grecs il y a 2 600 ans, la deuxième plus grande ville de France s\'est transformée en une métropole méditerranéenne en plein essor. Elle offre un mélange unique d\'énergie urbaine brute, d\'investissements technologiques massifs et de la beauté naturelle époustouflante des Calanques. Connue pour ses 300 jours de soleil, son âme multiculturelle et son lien profond avec la mer, Marseille offre une expérience française intense, vibrante et hautement authentique. Que vous étudiiez la biologie marine, plongiez dans l\'IA ou cherchiez une alternative plus abordable à Paris avec un style de vie inégalé, Marseille est une ville où vous ne vous contentez pas de vivre — vous prospérez.',
 
     // Section: Student Life
