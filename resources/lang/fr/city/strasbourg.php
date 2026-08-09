@@ -56,7 +56,7 @@ return [
     'cta_banner_button' => 'Réserver une consultation',
 
     // Main Content
-    'intro_heading' => 'Bienvenue dans Votre Chapitre Européen',
+    'intro_heading' => 'Strasbourg : Quand l’ambition européenne rencontre une qualité de vie paisible',
     'intro_paragraph' => 'Strasbourg en 2026 est bien plus qu\'une ville historique française ; c\'est le symbole vivant d\'une Europe unie. Nichée à la frontière allemande, elle offre une âme « franco-allemande » unique où canaux, maisons à colombages et institutions européennes futuristes coexistent en parfaite harmonie. Que vous veniez pour maîtriser le droit européen, lancer une carrière dans la diplomatie internationale ou élever une famille dans un environnement multiculturel et cyclable, Strasbourg vous accueille à bras ouverts. C\'est la ville où vous pouvez prendre votre petit-déjeuner en France et être en Allemagne pour le déjeuner — un véritable carrefour d\'opportunités.',
 
     // Section: Student Life

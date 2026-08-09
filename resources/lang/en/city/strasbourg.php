@@ -56,7 +56,7 @@ return [
     'cta_banner_button' => 'Book Your Consultation',
 
     // Main Content
-    'intro_heading' => 'Welcome to Your European Chapter',
+    'intro_heading' => 'Strasbourg: Where European Ambition Meets Cozy, Peaceful Living',
     'intro_paragraph' => 'Strasbourg in 2026 is much more than a historic French city; it is a living symbol of a united Europe. Nestled on the border with Germany, it offers a unique "Franco-German" soul where canals, half-timbered houses, and futuristic European institutions coexist in perfect harmony. Whether you are coming to master European Law, launch a career in international diplomacy, or raise a family in a multicultural, bike-friendly environment, Strasbourg welcomes you with open arms and a global spirit. It is the city where you can have breakfast in France and be in Germany by lunchtime—a true crossroads of opportunity.',
 
     // Section: Student Life
