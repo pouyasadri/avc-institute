@@ -56,7 +56,7 @@ return [
     'cta_banner_button' => 'Réserver une consultation',
 
     // Main Content
-    'intro_heading' => 'Bienvenue à Grenoble : La Capitale de la Recherche',
+    'intro_heading' => 'Grenoble : L’innovation haute technologie au cœur des Alpes majestueuses',
     'intro_paragraph' => 'Grenoble en 2026 est le lieu où la pointe absolue de la technologie européenne rencontre la beauté époustouflante des Alpes françaises. Connue comme la "Silicon Valley de l\'Europe", Grenoble est une ville qui respire l\'innovation, accueillant des milliers de chercheurs et d\'étudiants internationaux dans un environnement compact, sûr et incroyablement dynamique. Entourée de trois massifs montagneux, elle offre un style de vie unique au monde : vous pouvez passer votre matinée dans un laboratoire de classe mondiale et votre après-midi sur une piste de ski ou un sentier de randonnée. Pour ceux qui sont animés par la curiosité et l\'amour de la nature, Grenoble n\'est pas seulement une ville ; c\'est un écosystème conçu pour la croissance.',
 
     // Section: Student Life

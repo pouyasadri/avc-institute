@@ -56,7 +56,7 @@ return [
     'cta_banner_button' => 'Book Your Consultation',
 
     // Main Content
-    'intro_heading' => 'Welcome to Grenoble: The Research Capital',
+    'intro_heading' => 'Grenoble: High-Tech Innovation Surrounded by the Breathtaking Alps',
     'intro_paragraph' => 'Grenoble in 2026 is where the absolute cutting edge of European technology meets the breathtaking beauty of the French Alps. Known as the "Silicon Valley of Europe," Grenoble is a city that breathes innovation, hosting thousands of researchers and international students in a compact, safe, and incredibly dynamic environment. Surrounded by three mountain ranges, it offers a lifestyle like no other—where you can spend your morning in a world-class laboratory and your afternoon on a ski slope or a hiking trail. For those driven by curiosity and a love for nature, Grenoble is not just a city; it’s an ecosystem designed for growth.',
 
     // Section: Student Life
