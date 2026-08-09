@@ -12,6 +12,35 @@ return [
     'breadcrumb_cities' => 'French Cities',
     'breadcrumb_montpellier' => 'Montpellier',
 
+    // Quick Facts Section
+    'quick_facts_title' => 'Montpellier 2026 at a Glance',
+    'quick_facts' => [
+        [
+            'label' => 'Average Monthly Cost',
+            'value' => '€900 – €1,150 (Affordable Mediterranean Hub)',
+        ],
+        [
+            'label' => 'CAF Housing Subsidy (APL)',
+            'value' => 'Up to 30% – 40% of rent (~€180–€270/mo)',
+        ],
+        [
+            'label' => '2026 Visa Proof of Funds',
+            'value' => 'Min. €7,380/yr (€615/month)',
+        ],
+        [
+            'label' => 'Housing Guarantor (Visale)',
+            'value' => 'Free state guarantor available without French resident',
+        ],
+        [
+            'label' => 'Legal Student Work Rights',
+            'value' => '964 hours/year (60% full-time)',
+        ],
+        [
+            'label' => 'Language of Study & Life',
+            'value' => 'French (B2) / English (Univ. of Montpellier & MBS Masters)',
+        ],
+    ],
+
     // Sidebar Content
     'table_of_contents' => 'What’s Inside',
     'contact_us' => 'Let’s Talk Montpellier',
@@ -20,6 +49,11 @@ return [
     'email' => 'Email',
     'useful_links' => 'The Montpellier Toolkit',
     'montpellier_wikipedia' => 'Montpellier - Wikipedia',
+
+    // CTA Banner
+    'cta_banner_title' => 'Ready to Start Your Journey to Study and Live in Montpellier?',
+    'cta_banner_subtitle' => 'Book a dedicated consultation session with A.V.C experts and get your customized 2026 Montpellier roadmap.',
+    'cta_banner_button' => 'Book Your Consultation',
 
     // Main Content
     'intro_heading' => 'Welcome to Montpellier: The Sun-Drenched Academic Hub',

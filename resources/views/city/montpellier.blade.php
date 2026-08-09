@@ -78,6 +78,29 @@
         <p class="lead">{!! __('city/montpellier.intro_paragraph') !!}</p>
     </section>
 
+    @if(is_array(__('city/montpellier.quick_facts')))
+        <div class="card border-0 shadow-sm rounded-4 mb-5 bg-light">
+            <div class="card-body p-4">
+                <h3 class="h5 fw-bold text-primary mb-3 d-flex align-items-center">
+                    <i class='bx bxs-check-shield me-2 fs-4'></i>
+                    {{ __('city/montpellier.quick_facts_title') }}
+                </h3>
+                <div class="row g-3">
+                    @foreach (__('city/montpellier.quick_facts') as $item)
+                        @if(is_array($item) && isset($item['label'], $item['value']))
+                            <div class="col-md-6">
+                                <div class="p-3 bg-white rounded-3 shadow-xs border h-100">
+                                    <div class="text-muted small mb-1 fw-semibold">{{ $item['label'] }}</div>
+                                    <div class="fw-bold text-dark fs-6">{{ $item['value'] }}</div>
+                                </div>
+                            </div>
+                        @endif
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    @endif
+
     <div class="rounded-4 overflow-hidden shadow-sm mb-5">
         <iframe
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11342.348602206772!2d3.8767!3d43.6112!3m2!i1024!2i768!4f13.1!3m3!1m2!1s0x478af48bd6893637%3A0x408ab2ae4ba2120!2sMontpellier!5e0!3m2!1sfr!2sfr!4v1691146753003!5m2!1sfr!2sfr"
@@ -206,6 +229,24 @@
             </div>
         </div>
     </div>
-    <x-sections.faq :title="__('city/montpellier.faq_title')" :subtitle="__('city/montpellier.faq_subtitle')"
-        :items="__('city/montpellier.faq_items')" id="montpellier-faq" />
+
+    <div class="cta-consult-banner my-5 py-4 px-4 px-md-5 rounded-5 shadow-sm text-center text-md-start bg-primary text-white position-relative overflow-hidden">
+        <div class="row align-items-center position-relative" style="z-index: 2;">
+            <div class="col-lg-8 mb-3 mb-lg-0">
+                <h3 class="h4 fw-bold text-white mb-2">{{ __('city/montpellier.cta_banner_title') }}</h3>
+                <p class="mb-0 text-white-50 fs-6">{{ __('city/montpellier.cta_banner_subtitle') }}</p>
+            </div>
+            <div class="col-lg-4 text-center text-lg-end">
+                <a href="{{ url($currentLocale . '/consult') }}" class="btn btn-light btn-lg rounded-pill fw-bold px-4 py-3 text-primary shadow-sm">
+                    <i class='bx bx-calendar-event me-2'></i>
+                    {{ __('city/montpellier.cta_banner_button') }}
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="my-5">
+        <x-sections.faq :title="__('city/montpellier.faq_title')" :subtitle="__('city/montpellier.faq_subtitle')"
+            :items="__('city/montpellier.faq_items')" id="montpellier-faq" />
+    </div>
 @endsection

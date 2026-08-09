@@ -12,6 +12,35 @@ return [
     'breadcrumb_cities' => 'Villes Françaises',
     'breadcrumb_montpellier' => 'Montpellier',
 
+    // Quick Facts Section
+    'quick_facts_title' => 'Montpellier 2026 en un coup d\'œil',
+    'quick_facts' => [
+        [
+            'label' => 'Coût moyen mensuel',
+            'value' => '900 € – 1 150 € (Hub Méditerranéen Abordable)',
+        ],
+        [
+            'label' => 'Aide au logement CAF (APL)',
+            'value' => 'Jusqu\'à 30 % – 40 % du loyer (~180 €–270 €/mois)',
+        ],
+        [
+            'label' => 'Garantie financière visa 2026',
+            'value' => 'Min. 7 380 €/an (615 €/mois)',
+        ],
+        [
+            'label' => 'Garant logement (Visale)',
+            'value' => 'Garantie d\'État gratuite sans besoin de garant résidant en France',
+        ],
+        [
+            'label' => 'Droit au travail étudiant',
+            'value' => '964 heures/an (60 % temps plein)',
+        ],
+        [
+            'label' => 'Langue d\'études et de vie',
+            'value' => 'Français (B2) / Anglais (Univ. de Montpellier & Masters MBS)',
+        ],
+    ],
+
     // Sidebar Content
     'table_of_contents' => 'Sommaire',
     'contact_us' => 'Parlons de Montpellier',
@@ -20,6 +49,11 @@ return [
     'email' => 'E-mail',
     'useful_links' => 'La Boîte à Outils de Montpellier',
     'montpellier_wikipedia' => 'Montpellier - Wikipédia',
+
+    // CTA Banner
+    'cta_banner_title' => 'Prêt à commencer votre parcours d\'études et de vie à Montpellier ?',
+    'cta_banner_subtitle' => 'Réservez une séance de conseil dédiée avec les experts A.V.C et obtenez votre feuille de route montpelliéraine 2026 sur mesure.',
+    'cta_banner_button' => 'Réserver une consultation',
 
     // Main Content
     'intro_heading' => 'Bienvenue à Montpellier : Le Pôle Académique Ensoleillé',
