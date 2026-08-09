@@ -56,7 +56,7 @@ return [
     'cta_banner_button' => 'Book Your Consultation',
 
     // Main Content
-    'intro_heading' => 'Welcome to Your Lyon Story',
+    'intro_heading' => 'Living & Studying in Lyon: World-Class Education with a Human Touch',
     'intro_paragraph' => 'Lyon in 2026 offers a perfect sweet spot for those seeking a dynamic French life without the overwhelming intensity of the capital. Often called the "Petit Paris" with a bigger heart, Lyon is where centuries of UNESCO-listed history meet a pulse of modern biotech and digital innovation. It is a city that doesn’t just observe culture—it lives it daily through legendary gastronomy and vibrant community spaces. Whether you are an ambitious student, a growing family, or a professional aiming for global impact, Lyon provides a stage where you can live authentically and thrive. Ready to experience France’s culinary capital as more than just a visitor?',
 
     // Section: Student Life

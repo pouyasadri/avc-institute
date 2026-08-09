@@ -56,7 +56,7 @@ return [
     'cta_banner_button' => 'Réserver une consultation',
 
     // Main Content
-    'intro_heading' => 'Bienvenue dans Votre Histoire Lyonnaise',
+    'intro_heading' => 'Vivre et étudier à Lyon : Une excellence académique à taille humaine',
     'intro_paragraph' => 'Lyon en 2026 offre le point d\'équilibre parfait pour ceux qui recherchent une vie française dynamique sans l\'intensité écrasante de la capitale. Souvent appelée le « Petit Paris » avec un plus grand cœur, Lyon est le lieu où des siècles d\'histoire classée à l\'UNESCO rencontrent l\'innovation moderne en biotechnologie et en numérique. C\'est une ville qui ne se contente pas d\'observer la culture — elle la vit quotidiennement à travers sa gastronomie légendaire et ses espaces communautaires vibrants. Que vous soyez un étudiant ambitieux, une famille en pleine croissance ou un professionnel visant un impact mondial, Lyon offre une scène où vous pouvez vivre authentiquement et prospérer.',
 
     // Section: Student Life
