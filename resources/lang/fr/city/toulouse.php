@@ -56,7 +56,7 @@ return [
     'cta_banner_button' => 'Réserver une consultation',
 
     // Main Content
-    'intro_heading' => 'Bienvenue dans la Ville Rose',
+    'intro_heading' => 'Toulouse : Envolez-vous vers l’avenir dans la ville ingénieure la plus jeune de France',
     'intro_paragraph' => 'Toulouse en 2026 est un chef-d\'œuvre de briques roses, de chaleur méridionale et d\'ambition futuriste. Surnommée la "Ville Rose" en raison de son architecture unique en terre cuite, Toulouse est la capitale incontestée de l\'aéronautique en Europe. C\'est une ville à la fois grandiose et intimiste – où vous pouvez travailler sur des projets spatiaux mondiaux le jour et savourer un cassoulet au bord de la Garonne le soir. Avec une immense population étudiante et une économie qui vise les étoiles, Toulouse est le tremplin idéal pour les spécialistes et les étudiants.',
 
     // Section: Student Life

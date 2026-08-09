@@ -56,7 +56,7 @@ return [
     'cta_banner_button' => 'Book Your Consultation',
 
     // Main Content
-    'intro_heading' => 'Welcome to the Ville Rose',
+    'intro_heading' => 'Toulouse: Soar High in France’s Most Youthful Aerospace & Engineering Hub',
     'intro_paragraph' => 'Toulouse in 2026 is a masterpiece of pink brick, southern warmth, and futuristic ambition. Known as the "Ville Rose" (Pink City) due to its unique terracotta architecture, Toulouse is the undisputed aerospace capital of Europe. It is a city that feels both grand and intimate – where you can work on global aerospace projects by day and enjoy a rustic cassoulet by the Garonne river by night. With a massive, brainy student population and an economy that is literally reaching for the stars, Toulouse is the perfect launchpad for specialists and students seeking a high-quality, dynamic life in France.',
 
     // Section: Student Life
