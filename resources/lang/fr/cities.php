@@ -15,14 +15,40 @@ return [
     'description' => 'Explorez les villes françaises les plus vibrantes en 2026. Des rues historiques de Paris aux pôles technologiques de la Silicon Coast, trouvez votre destination idéale pour l\'éducation et la carrière.',
 
     // Page Title & Breadcrumb
-    'main_heading' => 'Votre Porte d\'Entrée vers les Villes Iconiques de France',
+    'main_heading' => 'Votre Porte d\'Entrée vers les Villes Iconiques de France en 2026',
     'breadcrumb_home' => 'Accueil',
     'breadcrumb_cities' => 'Villes de France',
+
+    // 2026 National Overview
+    'national_overview_title' => 'Règles Essentielles France 2026 pour Étudiants et Familles',
+    'national_overview' => [
+        [
+            'label' => 'Garantie financière visa 2026',
+            'value' => 'Min. 7 380 €/an (615 €/mois exigé par l\'Ambassade)',
+        ],
+        [
+            'label' => 'Aide au logement CAF (APL)',
+            'value' => 'Couvre 30 % à 40 % du loyer mensuel dans toutes les villes',
+        ],
+        [
+            'label' => 'Garant logement (Visale)',
+            'value' => 'Garantie d\'État gratuite pour les -30 ans sans garant résidant en France',
+        ],
+        [
+            'label' => 'Droit au travail étudiant',
+            'value' => '964 heures/an (60 % temps plein autorisés)',
+        ],
+    ],
 
     // Section Content
     'section_title' => 'Au-delà des Icônes',
     'section_heading' => 'La France Moderne : Un Territoire d\'Opportunités',
-    'section_paragraph' => 'La France en 2026 est une fusion dynamique de patrimoine et d\'ambition technologique. Si Paris demeure le cœur éternel du prestige mondial, des villes comme Lyon, Nice et Toulouse ouvrent la voie en termes d\'innovation, de durabilité et de qualité de vie. Que vous recherchiez une recherche de classe mondiale à l\'UCA, une carrière dans l\'aéronautique dans la Ville Rose ou l\'âme culinaire de Lyon, votre chapitre français commence ici.',
+    'section_paragraph' => 'La France en 2026 est une fusion dynamique de patrimoine et d\'ambition technologique. Si Paris demeure le cœur éternel du prestige mondial, des villes comme Lyon, Nice, Toulouse et Marseille ouvrent la voie en termes d\'innovation, de durabilité et de qualité de vie. Que vous recherchiez une recherche de classe mondiale à l\'UCA, une carrière dans l\'aéronautique dans la Ville Rose ou l\'âme culinaire de Lyon, votre chapitre français commence ici.',
+
+    // CTA Banner
+    'cta_banner_title' => 'Vous ne savez pas quelle ville française correspond le mieux à votre profil ?',
+    'cta_banner_subtitle' => 'Réservez une consultation individuelle avec les experts A.V.C et trouvez votre destination idéale pour les études, la famille ou la carrière en 2026.',
+    'cta_banner_button' => 'Obtenir des conseils gratuits',
 
     // City Cards
     'paris_alt' => 'Paris 2026 : L\'Éternelle Capitale de la France',
@@ -55,7 +81,7 @@ return [
 
     'montpellier_alt' => 'Montpellier 2026 : Le Hub Académique et Médical Ensoleillé',
     'montpellier_title' => 'Montpellier : Le Pôle Académique Ensoleillé',
-    'montpellier_description' => 'Une ville vibrante وbaignée de soleil باl\'une des plus anciennes traditions académiques au monde. Leader mondial en médecine et agronomie.',
+    'montpellier_description' => 'Une ville vibrante, baignée de soleil, avec l\'une des plus anciennes traditions académiques au monde. Leader mondial en médecine et agronomie.',
 
     'marseille_alt' => 'Marseille 2026 : La Puissance Méditerranéenne',
     'marseille_title' => 'Marseille : La Puissance Méditerranéenne',

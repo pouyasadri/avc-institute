@@ -19,14 +19,40 @@ return [
     'description' => 'Explore the most vibrant French cities in 2026. From the historic streets of Paris to the tech hubs of the Silicon Coast, find your perfect French destination for education and career growth.',
 
     // Page Title & Breadcrumb
-    'main_heading' => 'Your Gateway to France\'s Most Iconic Cities',
+    'main_heading' => 'Your Gateway to France\'s Most Iconic Cities in 2026',
     'breadcrumb_home' => 'Home',
     'breadcrumb_cities' => 'Cities of France',
+
+    // 2026 National Overview
+    'national_overview_title' => 'Essential France 2026 Rules for Students & Families',
+    'national_overview' => [
+        [
+            'label' => '2026 Visa Proof of Funds',
+            'value' => 'Min. €7,380/yr (€615/month required by French Embassy)',
+        ],
+        [
+            'label' => 'CAF Housing Subsidy (APL)',
+            'value' => 'Covers 30% to 40% of monthly rent across all French cities',
+        ],
+        [
+            'label' => 'Housing Guarantor (Visale)',
+            'value' => 'Free state guarantor for under 30s without needing a French resident',
+        ],
+        [
+            'label' => 'Legal Student Work Allowance',
+            'value' => '964 hours/year (60% full-time legal work allowance)',
+        ],
+    ],
 
     // Section Content
     'section_title' => 'Beyond the Icons',
     'section_heading' => 'Modern France: A Tapestry of Opportunity',
-    'section_paragraph' => 'France in 2026 is a dynamic fusion of heritage and high-tech ambition. While Paris remains the eternal heart of global prestige, cities like Lyon, Nice, and Toulouse are leading the way in innovation, sustainability, and quality of life. Whether you are seeking world-class research at UCA, an aerospace career in the Ville Rose, or the culinary soul of Lyon, your French chapter begins here.',
+    'section_paragraph' => 'France in 2026 is a dynamic fusion of heritage and high-tech ambition. While Paris remains the eternal heart of global prestige, cities like Lyon, Nice, Toulouse, and Marseille are leading the way in innovation, sustainability, and quality of life. Whether you are seeking world-class research at UCA, an aerospace career in the Ville Rose, or the culinary soul of Lyon, your French chapter begins here.',
+
+    // CTA Banner
+    'cta_banner_title' => 'Not Sure Which French City Suits Your Profile Best?',
+    'cta_banner_subtitle' => 'Book a dedicated 1-on-1 consultation with A.V.C experts and find your ideal destination for study, family, or career in 2026.',
+    'cta_banner_button' => 'Get Free City Guidance',
 
     // City Cards
     'paris_alt' => 'Paris 2026: The Eternal Capital of France',

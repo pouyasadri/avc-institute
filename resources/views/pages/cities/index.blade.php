@@ -108,6 +108,29 @@
                     </p>
                 </div>
 
+                @if(is_array(__('cities.national_overview')))
+                    <div class="card border-0 shadow-sm rounded-4 mb-5 bg-light">
+                        <div class="card-body p-4">
+                            <h3 class="h5 fw-bold text-primary mb-3 d-flex align-items-center">
+                                <i class='bx bxs-check-shield me-2 fs-4'></i>
+                                {{ __('cities.national_overview_title') }}
+                            </h3>
+                            <div class="row g-3">
+                                @foreach (__('cities.national_overview') as $item)
+                                    @if(is_array($item) && isset($item['label'], $item['value']))
+                                        <div class="col-md-6 col-lg-3">
+                                            <div class="p-3 bg-white rounded-3 shadow-xs border h-100">
+                                                <div class="text-muted small mb-1 fw-semibold">{{ $item['label'] }}</div>
+                                                <div class="fw-bold text-dark fs-6">{{ $item['value'] }}</div>
+                                            </div>
+                                        </div>
+                                    @endif
+                                @endforeach
+                            </div>
+                        </div>
+                    </div>
+                @endif
+
                 {{-- مقایسه شهرها — targeting "بهترین شهرهای فرانسه برای تحصیل" keyword --}}
                 <div class="mb-5" id="cities-comparison">
                     <h3 class="h4 fw-bold mb-2 text-center">{{ __('cities.comparison_title') }}</h3>
@@ -263,6 +286,21 @@
                             <i class="bx bx-chat me-2"></i>
                             {{ __('cities.comparison_cta') }}
                         </a>
+                    </div>
+                </div>
+
+                <div class="cta-consult-banner my-5 py-4 px-4 px-md-5 rounded-5 shadow-sm text-center text-md-start bg-primary text-white position-relative overflow-hidden">
+                    <div class="row align-items-center position-relative" style="z-index: 2;">
+                        <div class="col-lg-8 mb-3 mb-lg-0">
+                            <h3 class="h4 fw-bold text-white mb-2">{{ __('cities.cta_banner_title') }}</h3>
+                            <p class="mb-0 text-white-50 fs-6">{{ __('cities.cta_banner_subtitle') }}</p>
+                        </div>
+                        <div class="col-lg-4 text-center text-lg-end">
+                            <a href="{{ url($currentLocale . '/consult') }}" class="btn btn-light btn-lg rounded-pill fw-bold px-4 py-3 text-primary shadow-sm">
+                                <i class='bx bx-calendar-event me-2'></i>
+                                {{ __('cities.cta_banner_button') }}
+                            </a>
+                        </div>
                     </div>
                 </div>
 
