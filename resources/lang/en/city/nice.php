@@ -56,7 +56,7 @@ return [
     'cta_banner_button' => 'Book Your Consultation',
 
     // Main Content
-    'intro_heading' => 'Welcome to the Capital of the Azure Coast',
+    'intro_heading' => 'Nice: Where Innovation and Modern Tech Meet Sunshine & Mediterranean Life',
     'intro_paragraph' => 'Nice in 2026 is much more than a world-famous tourist resort; it is a thriving European hub for technology, sustainability, and high-quality living. Known as the heart of "La French Tech" on the Mediterranean, Nice offers a unique proposition: a high-octane career or world-class education balanced by the "Slow Living" soul of the Riviera. With 300 days of sunshine, a booming "Eco-Vallée" district, and the proximity to Europe\'s largest science park, Sophia Antipolis, Nice is where you come to build a future that looks as good as it feels.',
 
     // Section: Student Life

@@ -56,7 +56,7 @@ return [
     'cta_banner_button' => 'Réserver une consultation',
 
     // Main Content
-    'intro_heading' => 'Bienvenue dans la Capitale de la Côte d\'Azur',
+    'intro_heading' => 'Nice : Quand l\'innovation et la tech rencontrent le soleil méditerranéen',
     'intro_paragraph' => 'Nice en 2026 est bien plus qu\'une station balnéaire de renommée mondiale ; c\'est un hub européen florissant pour la technologie, la durabilité et la qualité de vie. Au cœur de "La French Tech" méditerranéenne, Nice propose une proposition unique : une carrière dynamique ou une éducation de classe mondiale, équilibrée par l\'âme "Slow Living" de la Riviera. Avec 300 jours de soleil, le quartier "Eco-Vallée" en plein essor et la proximité de Sophia Antipolis, Nice est l\'endroit idéal pour construire un avenir radieux.',
 
     // Section: Student Life
