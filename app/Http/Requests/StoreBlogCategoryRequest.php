@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use App\Enums\Locale;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
@@ -18,12 +19,12 @@ class StoreBlogCategoryRequest extends FormRequest
             'parent_id' => ['nullable', 'string'],
 
             // Allow either flat fields or translations[] array
-            'locale' => ['nullable', 'string', 'max:5'],
+            'locale' => ['nullable', Rule::enum(Locale::class)],
             'name' => ['nullable', 'string', 'max:255'],
             'slug' => ['nullable', 'string', 'max:255'],
 
             'translations' => ['sometimes', 'array'],
-            'translations.*.locale' => ['required_with:translations', 'string', 'max:5', Rule::in(config('localization.supported_locales'))],
+            'translations.*.locale' => ['required_with:translations', Rule::enum(Locale::class)],
             'translations.*.name' => ['nullable', 'string', 'max:255'],
             'translations.*.slug' => ['nullable', 'string', 'max:255'],
         ];

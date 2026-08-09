@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use App\Enums\Locale;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
@@ -39,7 +40,7 @@ class StoreBlogPostRequest extends FormRequest
 
             // Translations
             'translations' => ['required', 'array', 'min:1'],
-            'translations.*.locale' => ['required', 'string', 'max:5', Rule::in(config('localization.supported_locales'))],
+            'translations.*.locale' => ['required', Rule::enum(Locale::class)],
             'translations.*.title' => ['required', 'string', 'max:255'],
             'translations.*.slug' => ['nullable', 'string', 'max:500'],
             'translations.*.excerpt' => ['nullable', 'string', 'max:500'],

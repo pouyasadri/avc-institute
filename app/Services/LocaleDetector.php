@@ -2,6 +2,7 @@
 
 namespace App\Services;
 
+use App\Enums\Locale;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
 use Stevebauman\Location\Facades\Location;
@@ -20,7 +21,7 @@ class LocaleDetector
      */
     public function detectLocale(Request $request, ?string $routeLocale = null): string
     {
-        $supported = config('localization.supported_locales', ['en', 'fr', 'fa']);
+        $supported = config('localization.supported_locales', Locale::values());
         $detectionMethods = [];
 
         // Collect all possible locales with their priorities
@@ -99,7 +100,7 @@ class LocaleDetector
             return null;
         }
 
-        $supported = config('localization.supported_locales', ['en', 'fr', 'fa']);
+        $supported = config('localization.supported_locales', Locale::values());
         $languageMap = config('localization.language_locale_map', [
             'en' => 'en',
             'fr' => 'fr',

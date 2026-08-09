@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Enums\Locale;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreBlogPostRequest;
 use App\Http\Requests\UpdateBlogPostRequest;
@@ -45,7 +46,7 @@ class BlogController extends Controller
     public function create(): View
     {
         $categories = $this->categoryService->getAllCategories();
-        $locales = config('localization.supported_locales', ['en', 'fr', 'fa']);
+        $locales = config('localization.supported_locales', Locale::values());
 
         return view('admin.blog.create', compact('categories', 'locales'));
     }
@@ -69,7 +70,7 @@ class BlogController extends Controller
     {
         $blog->load(['translations', 'category']);
         $categories = $this->categoryService->getAllCategories();
-        $locales = config('localization.supported_locales', ['en', 'fr', 'fa']);
+        $locales = config('localization.supported_locales', Locale::values());
 
         return view('admin.blog.edit', compact('blog', 'categories', 'locales'));
     }
@@ -134,7 +135,7 @@ class BlogController extends Controller
     private function buildBlogUrls(Blog $blog): array
     {
         $baseUrl = rtrim(config('app.url'), '/');
-        $locales = config('localization.supported_locales', ['fa', 'en', 'fr']);
+        $locales = config('localization.supported_locales', Locale::values());
         $urls = [];
 
         foreach ($locales as $locale) {

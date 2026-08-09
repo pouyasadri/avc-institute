@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use App\Enums\PropertyStatus;
+use App\Enums\PropertyType;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -36,6 +38,8 @@ class Property extends Model
         'price' => 'decimal:2',
         'rooms' => 'integer',
         'garages' => 'integer',
+        'status' => PropertyStatus::class,
+        'type' => PropertyType::class,
         'published_at' => 'datetime',
         'created_at' => 'datetime',
         'updated_at' => 'datetime',
@@ -87,6 +91,6 @@ class Property extends Model
 
     public function scopeAvailable($query)
     {
-        return $query->where('status', 'available');
+        return $query->where('status', PropertyStatus::AVAILABLE);
     }
 }

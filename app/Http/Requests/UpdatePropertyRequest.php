@@ -2,6 +2,9 @@
 
 namespace App\Http\Requests;
 
+use App\Enums\Locale;
+use App\Enums\PropertyStatus;
+use App\Enums\PropertyType;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
@@ -18,8 +21,8 @@ class UpdatePropertyRequest extends FormRequest
             'price' => ['sometimes', 'required', 'numeric', 'min:0'],
             'rooms' => ['nullable', 'integer', 'min:0', 'max:100'],
             'garages' => ['nullable', 'integer', 'min:0', 'max:20'],
-            'type' => ['sometimes', 'required', Rule::in(['apartment', 'property', 'villa', 'studio', 'land', 'commercial'])],
-            'status' => ['nullable', Rule::in(['available', 'reserved', 'sold', 'rented'])],
+            'type' => ['sometimes', 'required', Rule::enum(PropertyType::class)],
+            'status' => ['nullable', Rule::enum(PropertyStatus::class)],
             'address_line' => ['nullable', 'string', 'max:255'],
             'postal_code' => ['sometimes', 'required', 'string', 'max:12'],
             'city' => ['sometimes', 'required', 'string', 'max:255'],
@@ -30,7 +33,7 @@ class UpdatePropertyRequest extends FormRequest
 
             // Translations
             'translations' => ['sometimes', 'array'],
-            'translations.*.locale' => ['required_with:translations', 'string', 'max:5', Rule::in(config('localization.supported_locales'))],
+            'translations.*.locale' => ['required_with:translations', Rule::enum(Locale::class)],
             'translations.*.name' => ['required_with:translations', 'string', 'max:255'],
             'translations.*.slug' => ['nullable', 'string', 'max:255'],
             'translations.*.description' => ['required_with:translations', 'string'],

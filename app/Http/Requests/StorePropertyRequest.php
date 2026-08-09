@@ -2,6 +2,9 @@
 
 namespace App\Http\Requests;
 
+use App\Enums\Locale;
+use App\Enums\PropertyStatus;
+use App\Enums\PropertyType;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
@@ -18,8 +21,8 @@ class StorePropertyRequest extends FormRequest
             'price' => ['required', 'numeric', 'min:0'],
             'rooms' => ['nullable', 'integer', 'min:0', 'max:100'],
             'garages' => ['nullable', 'integer', 'min:0', 'max:20'],
-            'type' => ['required', Rule::in(['apartment', 'property', 'villa', 'studio', 'land', 'commercial'])],
-            'status' => ['nullable', Rule::in(['available', 'reserved', 'sold', 'rented'])],
+            'type' => ['required', Rule::enum(PropertyType::class)],
+            'status' => ['nullable', Rule::enum(PropertyStatus::class)],
             'address_line' => ['nullable', 'string', 'max:255'],
             'postal_code' => ['required', 'string', 'max:12'],
             'city' => ['required', 'string', 'max:255'],
@@ -30,7 +33,7 @@ class StorePropertyRequest extends FormRequest
 
             // Translations
             'translations' => ['required', 'array', 'min:1'],
-            'translations.*.locale' => ['required', 'string', 'max:5', Rule::in(config('localization.supported_locales'))],
+            'translations.*.locale' => ['required', Rule::enum(Locale::class)],
             'translations.*.name' => ['required', 'string', 'max:255'],
             'translations.*.slug' => ['nullable', 'string', 'max:255'],
             'translations.*.description' => ['required', 'string'],

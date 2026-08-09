@@ -1,8 +1,10 @@
 <?php
 
+use App\Enums\Locale;
+
 return [
     // Locales supported by the application (used in routes and detection)
-    'supported_locales' => ['en', 'fr', 'fa'],
+    'supported_locales' => Locale::values(),
 
     // Locales that are right-to-left
     'rtl_locales' => ['fa'],
