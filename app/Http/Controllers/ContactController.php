@@ -23,6 +23,15 @@ class ContactController extends Controller
             $subject = $validatedData['msg_subject'];
             $message = $validatedData['message'];
 
+            $visaTypeKey = $validatedData['visa_type'] ?? null;
+            if ($visaTypeKey) {
+                $visaLabel = __('contact.form.visa_type.options.'.$visaTypeKey);
+                if (is_string($visaLabel)) {
+                    $subject = '['.$visaLabel.'] '.$subject;
+                    $message = 'Visa Category / Target: '.$visaLabel."\n\n".$message;
+                }
+            }
+
             // Save to database
             $submission = ContactSubmission::create([
                 'name' => $name,

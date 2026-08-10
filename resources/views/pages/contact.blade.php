@@ -105,6 +105,21 @@
 
                                         <div class="col-lg-6 col-sm-6">
                                             <div class="form-group mb-3">
+                                                <label for="visa_type"
+                                                    class="form-label small fw-bold text-muted">{{ __('contact.form.visa_type.label' ?? 'Visa Category') }}</label>
+                                                <select name="visa_type" id="visa_type" class="form-select rounded-pill px-4 py-2">
+                                                    <option value="" disabled selected>{{ __('contact.form.visa_type.placeholder' ?? 'Select Visa Type') }}</option>
+                                                    @if(is_array(__('contact.form.visa_type.options')))
+                                                        @foreach(__('contact.form.visa_type.options') as $key => $optionLabel)
+                                                            <option value="{{ $key }}">{{ $optionLabel }}</option>
+                                                        @endforeach
+                                                    @endif
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-12 col-md-12">
+                                            <div class="form-group mb-3">
                                                 <label for="msg_subject"
                                                     class="form-label small fw-bold text-muted">{{ __('contact.form.subject.label' ?? 'Subject') }}</label>
                                                 <input type="text" name="msg_subject" id="msg_subject"
@@ -218,31 +233,44 @@
             ['name' => __('contact.breadcrumb.contact'), 'url' => url($currentLocale . '/contactUs')],
         ]);
 
-        $contactPageSchema = new \App\Services\StructuredData\WebPageSchema(
-            url()->current(),
-            $pageTitle,
-            $pageDescription,
-            $currentLocale
-        );
-        $contactPageArray = $contactPageSchema->build();
-        $contactPageArray['@type'] = 'ContactPage';
-        $contactPageArray['mainEntity'] = [
-            '@type' => 'Organization',
-            '@id' => rtrim(config('app.url'), '/') . '/' . '#organization',
-            'contactPoint' => [
-                [
-                    '@type' => 'ContactPoint',
-                    'telephone' => '+98-912-008-7194',
-                    'contactType' => 'customer service',
-                    'areaServed' => 'IR',
-                    'availableLanguage' => ['Persian', 'English'],
+        $contactPageArray = [
+            '@context' => 'https://schema.org',
+            '@type' => 'ContactPage',
+            'url' => url()->current(),
+            'name' => $pageTitle,
+            'description' => $pageDescription,
+            'inLanguage' => $currentLocale,
+            'mainEntity' => [
+                '@type' => 'ProfessionalService',
+                '@id' => rtrim(config('app.url'), '/') . '/#organization',
+                'name' => 'A.V.C Institute',
+                'image' => asset('assets/images/logo.png'),
+                'priceRange' => '$$',
+                'telephone' => '+33-7-68-68-83-26',
+                'email' => 'info@applyvipconseil.com',
+                'areaServed' => ['IR', 'FR'],
+                'knowsAbout' => [
+                    'France Immigration',
+                    'Campus France Student Visa',
+                    'Visiteur Financial Independence Visa',
+                    'France Residence Permits 2026',
+                    'Real Estate Investment France'
                 ],
-                [
-                    '@type' => 'ContactPoint',
-                    'telephone' => '+33-7-68-68-83-26',
-                    'contactType' => 'customer service',
-                    'areaServed' => 'FR',
-                    'availableLanguage' => ['French', 'English'],
+                'contactPoint' => [
+                    [
+                        '@type' => 'ContactPoint',
+                        'telephone' => '+98-912-008-7194',
+                        'contactType' => 'customer service',
+                        'areaServed' => 'IR',
+                        'availableLanguage' => ['Persian', 'English'],
+                    ],
+                    [
+                        '@type' => 'ContactPoint',
+                        'telephone' => '+33-7-68-68-83-26',
+                        'contactType' => 'customer service',
+                        'areaServed' => 'FR',
+                        'availableLanguage' => ['French', 'English', 'Persian'],
+                    ],
                 ],
             ],
         ];
