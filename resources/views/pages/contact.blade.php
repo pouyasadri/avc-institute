@@ -107,7 +107,7 @@
                                             <div class="form-group mb-3">
                                                 <label for="visa_type"
                                                     class="form-label small fw-bold text-muted">{{ __('contact.form.visa_type.label' ?? 'Visa Category') }}</label>
-                                                <select name="visa_type" id="visa_type" class="form-select rounded-pill px-4 py-2">
+                                                <select name="visa_type" id="visa_type" class="form-control form-select rounded-pill px-4 py-2">
                                                     <option value="" disabled selected>{{ __('contact.form.visa_type.placeholder' ?? 'Select Visa Type') }}</option>
                                                     @if(is_array(__('contact.form.visa_type.options')))
                                                         @foreach(__('contact.form.visa_type.options') as $key => $optionLabel)
@@ -115,6 +115,7 @@
                                                         @endforeach
                                                     @endif
                                                 </select>
+                                                <div class="help-block with-errors"></div>
                                             </div>
                                         </div>
 
