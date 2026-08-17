@@ -398,6 +398,69 @@ class SeoService
     }
 
     /**
+     * Generate meta tags for blogs index page
+     */
+    public function forBlogIndex(string $locale): self
+    {
+        $title = __('blog/index.meta.title');
+        if ($title === 'blog/index.meta.title') {
+            $title = __('blog/index.title');
+        }
+
+        $description = __('blog/index.meta.description');
+        if ($description === 'blog/index.meta.description') {
+            $description = __('blog/index.description');
+        }
+
+        $keywords = __('blog/index.meta.keywords');
+        if ($keywords === 'blog/index.meta.keywords') {
+            $keywords = __('blog/index.keywords');
+        }
+
+        if ($title === 'blog/index.title') {
+            $title = config('seo.defaults.title');
+        }
+        if ($description === 'blog/index.description') {
+            $description = config('seo.defaults.description');
+        }
+
+        $this->setTitle($title, false)
+            ->setDescription($description)
+            ->setKeywords($keywords)
+            ->setLocale($locale)
+            ->setType('website')
+            ->setTwitterCard('summary_large_image');
+
+        // Localized Open Graph & Twitter
+        $ogSiteName = __('blog/index.meta.og.site_name');
+        if ($ogSiteName !== 'blog/index.meta.og.site_name') {
+            $this->openGraph['og:site_name'] = $ogSiteName;
+        }
+
+        $ogTitle = __('blog/index.meta.og.title');
+        if ($ogTitle !== 'blog/index.meta.og.title') {
+            $this->openGraph['og:title'] = $ogTitle;
+        }
+
+        $ogDesc = __('blog/index.meta.og.description');
+        if ($ogDesc !== 'blog/index.meta.og.description') {
+            $this->openGraph['og:description'] = $ogDesc;
+        }
+
+        $twitterTitle = __('blog/index.meta.twitter.title');
+        if ($twitterTitle !== 'blog/index.meta.twitter.title') {
+            $this->twitter['twitter:title'] = $twitterTitle;
+        }
+
+        $twitterDesc = __('blog/index.meta.twitter.description');
+        if ($twitterDesc !== 'blog/index.meta.twitter.description') {
+            $this->twitter['twitter:description'] = $twitterDesc;
+        }
+
+        return $this;
+    }
+
+    /**
      * Get default meta tags
      */
     protected function getDefaults(): array

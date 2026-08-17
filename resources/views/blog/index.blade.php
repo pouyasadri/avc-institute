@@ -1,7 +1,9 @@
 @extends('layouts.main')
+
 @section('title', __('blog/index.title'))
-@section("keywords", __('blog/index.keywords'))
-@section("description", __('blog/index.description'))
+@section('keywords', __('blog/index.keywords'))
+@section('description', __('blog/index.description'))
+
 @section('content')
     <!-- Start Page Title Area -->
     <header class="page-title-area" role="banner">
@@ -46,3 +48,42 @@
     </section>
     <!-- End News Area -->
 @endsection
+
+@push('json')
+    @php
+        $currentLocale = app()->getLocale();
+        $pageTitle = __('blog/index.title');
+        $pageDescription = __('blog/index.description');
+
+        $breadcrumb = \App\Services\StructuredData\BreadcrumbSchema::fromArray([
+            ['name' => __('blog/index.breadcrumb_home'), 'url' => route('index', ['locale' => $currentLocale])],
+            ['name' => __('blog/index.breadcrumb_blogs'), 'url' => route('blog.index', ['locale' => $currentLocale])],
+        ]);
+
+        $collectionPage = new \App\Services\StructuredData\CollectionPageSchema(
+            url()->current(),
+            $pageTitle,
+            $pageDescription,
+            $currentLocale
+        );
+
+        $list = new \App\Services\StructuredData\ItemListSchema($pageTitle);
+        $position = 1;
+        foreach ($blogs as $blogItem) {
+            $blogTranslation = $blogItem->translations->firstWhere('locale', $currentLocale) ?? $blogItem->translations->first();
+            if ($blogTranslation) {
+                $list->addItem(
+                    $position,
+                    route('blog.show', ['locale' => $currentLocale, 'blog' => $blogTranslation->slug ?? $blogItem->id]),
+                    $blogTranslation->title,
+                    $blogItem->main_image ? asset($blogItem->main_image_url) : null
+                );
+                $position++;
+            }
+        }
+    @endphp
+
+    <x-seo.structured-data :schema="$collectionPage" />
+    <x-seo.structured-data :schema="$breadcrumb" />
+    <x-seo.structured-data :schema="$list" />
+@endpush

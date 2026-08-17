@@ -9,6 +9,7 @@ use App\Models\Blog;
 use App\Models\BlogPostTranslation;
 use App\Services\BlogCategoryService;
 use App\Services\BlogService;
+use App\Services\SeoService;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
@@ -29,8 +30,10 @@ class BlogController extends Controller
     {
         $includeTrashed = $request->query('trashed') === 'true' && auth()->check();
         $perPage = 9;
-        $blogs = $this->blogService->getPaginatedBlogs($perPage, app()->getLocale(), $includeTrashed);
         $locale = app()->getLocale();
+        $blogs = $this->blogService->getPaginatedBlogs($perPage, $locale, $includeTrashed);
+
+        app(SeoService::class)->forBlogIndex($locale);
 
         return view('blog.index', compact('blogs', 'locale', 'includeTrashed'));
     }

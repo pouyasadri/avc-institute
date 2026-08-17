@@ -50,7 +50,7 @@ class SeoCanonicalTest extends TestCase
     }
 
     /**
-     * Test blog page canonicals.
+     * Test blog page canonicals, meta tags, and structured data.
      */
     public function test_blog_index_seo_tags()
     {
@@ -63,7 +63,31 @@ class SeoCanonicalTest extends TestCase
 
             // Canonical
             $response->assertSee('<link rel="canonical" href="'.url("/$locale/blog").'" />', false);
+
+            // Hreflang tags
+            foreach ($locales as $l) {
+                $response->assertSee('hreflang="'.$l.'" href="'.url("/$l/blog").'"', false);
+            }
+
+            // Meta tags & Structured Data
+            $response->assertSee('<title>', false);
+            $response->assertSee('name="description"', false);
+            $response->assertSee('name="keywords"', false);
+            $response->assertSee('property="og:title"', false);
+            $response->assertSee('property="og:description"', false);
+            $response->assertSee('name="twitter:card"', false);
+
+            // Structured data
+            $response->assertSee('"@type": "CollectionPage"', false);
+            $response->assertSee('"@type": "BreadcrumbList"', false);
+            $response->assertSee('"@type": "ItemList"', false);
         }
+
+        // Test Persian 2026 specific SEO keywords
+        $faResponse = $this->get('/fa/blog');
+        $faResponse->assertSee('مهاجرت به فرانسه ۲۰۲۶', false);
+        $faResponse->assertSee('ویزای تحصیلی فرانسه ۲۰۲۶', false);
+        $faResponse->assertSee('تمکن مالی', false);
     }
 
     /**

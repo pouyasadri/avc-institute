@@ -2,9 +2,25 @@
 
 return [
     // SEO Meta
-    'title' => 'Immigration to France: Fulfilling Your Dreams with Comprehensive Information and Guidance',
-    'keywords' => 'immigration to France, studying in France, working in France, investing in France, French visa, French residence, French citizenship, legal immigration, work immigration, educational immigration, investment immigration, living in France, cost of living in France, French culture, French customs, French language',
-    'description' => 'On this page, we answer all your questions about immigration to France. From the conditions and documents required to obtain a French visa to important tips about living and working in this country.',
+    'title' => 'France Immigration & Study Guide 2026 | Blog & Insights | A.V.C',
+    'keywords' => 'france immigration 2026, study in france, french student visa, france visitor visa, passport talent france, living in france, french residence permit, study abroad france, cost of living in france',
+    'description' => 'Explore the latest 2026 guides on French immigration, student visas, financial independence (Visiteur), university admissions, and residence permits.',
+
+    // Open Graph & Twitter
+    'meta' => [
+        'title' => 'France Immigration & Study Guide 2026 | Blog & Insights | A.V.C',
+        'keywords' => 'france immigration 2026, study in france, french student visa, france visitor visa, passport talent france, living in france, french residence permit, study abroad france, cost of living in france',
+        'description' => 'Explore the latest 2026 guides on French immigration, student visas, financial independence (Visiteur), university admissions, and residence permits.',
+        'og' => [
+            'site_name' => 'Apply VIP Conseil (A.V.C)',
+            'title' => 'France Immigration & Education Insights 2026 | A.V.C',
+            'description' => 'Comprehensive articles and practical advice for studying, working, and residing in France.',
+        ],
+        'twitter' => [
+            'title' => 'France Immigration & Study Guide 2026 | A.V.C',
+            'description' => 'Expert guides and updates on French visas, university admissions, and residency.',
+        ],
+    ],
 
     // Page Content
     'main_heading' => 'Comprehensive Guide to Immigration to France: From Education to Work and Investment',
