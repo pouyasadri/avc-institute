@@ -98,10 +98,12 @@ class IndexNowSubmitCommand extends Command
             $batchNum = $batchIndex + 1;
             $this->line("  <fg=yellow>Batch {$batchNum}/".count($chunks).'</> ('.count($chunk).' URLs)');
 
+            $batchResults = $service->submitBatchToAllEngines($chunk);
+
             foreach ($engines as $engine) {
                 $this->output->write("    → <comment>{$engine['name']}</comment>… ");
 
-                $result = $service->submitBatchToAllEngines($chunk)[$engine['name']] ?? null;
+                $result = $batchResults[$engine['name']] ?? null;
 
                 if ($result === null) {
                     $this->line('<error> SKIPPED </error>');
@@ -122,10 +124,12 @@ class IndexNowSubmitCommand extends Command
                     $this->line('<error> 429 TOO MANY REQUESTS </error> — wait and retry later.');
                     $overallSuccess = false;
                 } elseif ($status === 403) {
-                    $this->line('<error> 403 FORBIDDEN </error> — check key file is accessible.');
+                    $detail = $error ? " ({$error})" : ' — check key file is accessible.';
+                    $this->line("<error> 403 FORBIDDEN </error>{$detail}");
                     $overallSuccess = false;
                 } else {
-                    $this->line("<error> HTTP {$status} </error>");
+                    $detail = $error ? " ({$error})" : '';
+                    $this->line("<error> HTTP {$status} </error>{$detail}");
                     $overallSuccess = false;
                 }
             }

@@ -129,7 +129,7 @@ class IndexNowService
         $cities = config('site_structure.cities', []);
         $universities = config('site_structure.universities', []);
         $services = config('site_structure.service_slugs', []);
-        $staticPages = ['consult', 'contactUs'];
+        $staticPages = ['consult', 'contactUs', 'legal'];
 
         $urls = [];
 
@@ -158,22 +158,24 @@ class IndexNowService
                 $urls[] = "{$baseUrl}/{$locale}/services/{$service}";
             }
 
-            // Static pages (consult, contactUs)
+            // Static pages (consult, contactUs, legal)
             foreach ($staticPages as $page) {
                 $urls[] = "{$baseUrl}/{$locale}/{$page}";
             }
         }
 
-        // Blog posts — use $blog->id (not slug) to match the sitemap URL pattern
-        // SitemapController: "{$baseUrl}/{$locale}/blog/{$blog->id}"
+        // Blog posts — localized slug to match the sitemap and route pattern
         try {
             $blogs = Blog::published()
-                ->select('id', 'updated_at')
+                ->with('translations')
                 ->get();
 
             foreach ($blogs as $blog) {
                 foreach ($locales as $locale) {
-                    $urls[] = "{$baseUrl}/{$locale}/blog/{$blog->id}";
+                    $translation = $blog->getTranslation($locale);
+                    if ($translation && $translation->slug) {
+                        $urls[] = "{$baseUrl}/{$locale}/blog/{$translation->slug}";
+                    }
                 }
             }
         } catch (\Throwable $e) {
@@ -226,6 +228,7 @@ class IndexNowService
                 ->post($engine['endpoint'], $payload);
 
             $status = $response->status();
+            $body = trim($response->body());
 
             if ($this->logResponses) {
                 Log::info("IndexNow [{$engine['name']}]: HTTP {$status} for ".count($urls).' URL(s)', [
@@ -240,9 +243,11 @@ class IndexNowService
                 Log::warning("IndexNow [{$engine['name']}]: Unexpected HTTP {$status}", [
                     'engine' => $engine['name'],
                     'status' => $status,
-                    'body' => $response->body(),
+                    'body' => $body,
                     'urls' => array_slice($urls, 0, 5), // Only log first 5 to avoid huge logs
                 ]);
+
+                return ['engine' => $engine['name'], 'status' => $status, 'error' => $body ?: null];
             }
 
             return ['engine' => $engine['name'], 'status' => $status, 'error' => null];
