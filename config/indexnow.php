@@ -15,7 +15,7 @@ return [
     | rename/update the public key file, and redeploy.
     |--------------------------------------------------------------------------
     */
-    'key' => env('INDEXNOW_KEY', 'd33064cc40f89ae903b4b4d286880abb'),
+    'key' => env('INDEXNOW_KEY', '917a0bd55b154c0a96b10f32c5d76e9f'),
 
     /*
     |--------------------------------------------------------------------------
@@ -25,7 +25,7 @@ return [
     | Must be reachable by search engine crawlers.
     |--------------------------------------------------------------------------
     */
-    'key_location' => env('INDEXNOW_KEY_LOCATION', 'https://applyvipconseil.com/d33064cc40f89ae903b4b4d286880abb.txt'),
+    'key_location' => env('INDEXNOW_KEY_LOCATION', 'https://applyvipconseil.com/917a0bd55b154c0a96b10f32c5d76e9f.txt'),
 
     /*
     |--------------------------------------------------------------------------
