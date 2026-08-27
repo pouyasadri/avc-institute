@@ -57,6 +57,40 @@
                             </ul>
                         </div>
 
+                        <!-- Related Services Widget -->
+                        <div class="sidebar-widget p-4 rounded-5 shadow-sm bg-white mb-4 border-0">
+                            <h4 class="widget-title h6 fw-bold mb-3 border-bottom pb-2">
+                                <i class="bx bx-briefcase-alt text-primary me-2"></i>
+                                {{ __('services.other_services') ?? 'خدمات مهاجرتی مرتبط' }}
+                            </h4>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2">
+                                    <a href="{{ route('services.show', ['locale' => $currentLocale, 'slug' => 'housing-assistance']) }}" class="text-decoration-none text-dark d-flex align-items-center small">
+                                        <i class="bx {{ $isRtl ? 'bx-chevron-left' : 'bx-chevron-right' }} text-primary me-1"></i>
+                                        <span>{{ __('services.housing-assistance.title') ?? 'اجاره مسکن و کمک‌هزینه CAF' }}</span>
+                                    </a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="{{ route('services.show', ['locale' => $currentLocale, 'slug' => 'student-visa']) }}" class="text-decoration-none text-dark d-flex align-items-center small">
+                                        <i class="bx {{ $isRtl ? 'bx-chevron-left' : 'bx-chevron-right' }} text-primary me-1"></i>
+                                        <span>{{ __('services.student-visa.title') ?? 'ویزای تحصیلی فرانسه' }}</span>
+                                    </a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="{{ route('services.show', ['locale' => $currentLocale, 'slug' => 'residence-permit']) }}" class="text-decoration-none text-dark d-flex align-items-center small">
+                                        <i class="bx {{ $isRtl ? 'bx-chevron-left' : 'bx-chevron-right' }} text-primary me-1"></i>
+                                        <span>{{ __('services.residence-permit.title') ?? 'کارت اقامت و تمدید' }}</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('services.show', ['locale' => $currentLocale, 'slug' => 'arrival-support']) }}" class="text-decoration-none text-dark d-flex align-items-center small">
+                                        <i class="bx {{ $isRtl ? 'bx-chevron-left' : 'bx-chevron-right' }} text-primary me-1"></i>
+                                        <span>{{ __('services.arrival-support.title') ?? 'پشتیبانی بدو ورود فرانسه' }}</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
                         <!-- Useful Links -->
                         <div class="sidebar-widgets">
                             @yield('useful_links')

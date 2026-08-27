@@ -104,6 +104,40 @@
                             </div>
                         @endif
 
+                        {{-- Relevant Application & Visa Services Widget --}}
+                        <div class="sidebar-widget p-4 rounded-5 shadow-sm bg-white mb-4 border-0">
+                            <h4 class="widget-title h6 fw-bold mb-3 border-bottom pb-2">
+                                <i class="bx bx-briefcase-alt text-primary me-2"></i>
+                                {{ __('services.other_services') ?? 'خدمات اپلای و ویزا' }}
+                            </h4>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2">
+                                    <a href="{{ route('services.show', ['locale' => $currentLocale, 'slug' => 'university-application']) }}" class="text-decoration-none text-dark d-flex align-items-center small">
+                                        <i class="bx {{ $isRtl ? 'bx-chevron-left' : 'bx-chevron-right' }} text-primary me-1"></i>
+                                        <span>{{ __('services.university-application.title') ?? 'پذیرش دانشگاه و کمپوس فرانسه' }}</span>
+                                    </a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="{{ route('services.show', ['locale' => $currentLocale, 'slug' => 'student-visa']) }}" class="text-decoration-none text-dark d-flex align-items-center small">
+                                        <i class="bx {{ $isRtl ? 'bx-chevron-left' : 'bx-chevron-right' }} text-primary me-1"></i>
+                                        <span>{{ __('services.student-visa.title') ?? 'ویزای تحصیلی فرانسه' }}</span>
+                                    </a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="{{ route('services.show', ['locale' => $currentLocale, 'slug' => 'resume-lettre-motivation']) }}" class="text-decoration-none text-dark d-flex align-items-center small">
+                                        <i class="bx {{ $isRtl ? 'bx-chevron-left' : 'bx-chevron-right' }} text-primary me-1"></i>
+                                        <span>{{ __('services.resume-lettre-motivation.title') ?? 'رزومه و انگیزه‌نامه فرانسوی' }}</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('services.show', ['locale' => $currentLocale, 'slug' => 'housing-assistance']) }}" class="text-decoration-none text-dark d-flex align-items-center small">
+                                        <i class="bx {{ $isRtl ? 'bx-chevron-left' : 'bx-chevron-right' }} text-primary me-1"></i>
+                                        <span>{{ __('services.housing-assistance.title') ?? 'خوابگاه و کمک‌هزینه CAF' }}</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
                         <!-- Useful Links -->
                         <div class="sidebar-widgets">
                             @yield('useful_links')

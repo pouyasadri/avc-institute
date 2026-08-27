@@ -53,11 +53,46 @@
                         <div class="service-details-desc">
                             <h2 class="h4 mb-4 text-muted">{{ $pageDescription }}</h2>
 
+                            @if(isset($serviceDetails['key_facts']) && is_array($serviceDetails['key_facts']))
+                                <div class="key-facts-card p-4 rounded-4 mb-4 bg-light border border-primary-subtle shadow-sm">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <i class="bx bx-check-shield fs-4 text-primary me-2"></i>
+                                        <h3 class="h6 fw-bold mb-0 text-primary">{{ __('services.key_facts_title') }}</h3>
+                                    </div>
+                                    <div class="row g-3">
+                                        @foreach($serviceDetails['key_facts'] as $fact)
+                                            <div class="col-12 col-sm-6">
+                                                <div class="p-3 bg-white rounded-3 border h-100 shadow-xs">
+                                                    <div class="text-muted small mb-1">{{ $fact['label'] }}</div>
+                                                    <div class="fw-bold text-dark">{{ $fact['value'] }}</div>
+                                                </div>
+                                            </div>
+                                        @endforeach
+                                    </div>
+                                </div>
+                            @endif
+
                             @if(isset($serviceDetails['content']) && is_array($serviceDetails['content']))
                                 @foreach($serviceDetails['content'] as $paragraph)
                                     <p class="mb-3">{{ $paragraph }}</p>
                                 @endforeach
                             @endif
+
+                            {{-- Mid-content Contextual CTA Banner --}}
+                            <div class="service-mid-cta p-4 rounded-4 my-4 text-white bg-primary shadow-sm">
+                                <div class="row align-items-center g-3">
+                                    <div class="col-lg-8">
+                                        <h3 class="h5 fw-bold text-white mb-2">{{ __('services.cta_banner_title') }}</h3>
+                                        <p class="small text-white-50 mb-0">{{ __('services.cta_banner_desc') }}</p>
+                                    </div>
+                                    <div class="col-lg-4 text-lg-end">
+                                        <a href="{{ url($currentLocale . '/consult?service=' . $slug) }}" class="btn btn-light rounded-pill px-4 py-2 fw-bold text-primary shadow-sm">
+                                            {{ __('services.cta_banner_button') }}
+                                            <i class="{{ $arrowIcon }} ms-1"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
 
                             @if($slug === 'university-application' && $currentLocale === 'fa')
                                 <h3 class="h5 fw-bold mt-5 mb-4 text-primary">نحوه درخواست دانشگاه در فرانسه — گام به گام (کمپوس فرانسه ۲۰۲۶)</h3>
@@ -141,7 +176,7 @@
                             <h3 class="h5 fw-bold mb-3">{{ __('index.video.button') ?? 'Contact Us' }}</h3>
                             <p class="text-muted small mb-4">{{ __('index.video.p2') ?? 'Contact us for more details.' }}
                             </p>
-                            <a href="{{ url($currentLocale . '/consult') }}" class="default-btn w-100 text-center">
+                            <a href="{{ url($currentLocale . '/consult?service=' . $slug) }}" class="default-btn w-100 text-center">
                                 {{ __('index.video.button') ?? 'Book Consultation' }}
                                 <i class="{{ $arrowIcon }}"></i>
                             </a>
@@ -204,6 +239,20 @@
             @endphp
             <x-sections.faq :title="__('faq.title') ?? 'Frequently Asked Questions'" :items="$faqItems" />
         @endif
+
+        {{-- Mobile Sticky Conversion Bar (Targeting 94% mobile users) --}}
+        <div class="mobile-sticky-cta d-md-none fixed-bottom bg-white border-top shadow-lg py-2 px-3" style="z-index: 1050;">
+            <div class="d-flex align-items-center justify-content-between">
+                <div class="me-2 text-truncate">
+                    <span class="d-block small text-muted text-truncate" style="max-width: 190px;">{{ $pageTitle }}</span>
+                    <strong class="small text-primary">{{ __('services.sticky_mobile_cta') }}</strong>
+                </div>
+                <a href="{{ url($currentLocale . '/consult?service=' . $slug) }}" class="btn btn-primary btn-sm rounded-pill px-3 py-2 text-nowrap fw-bold shadow-sm">
+                    {{ __('index.video.button') ?? 'Book Consultation' }}
+                    <i class="{{ $arrowIcon }}"></i>
+                </a>
+            </div>
+        </div>
     </div>
 @endsection
 

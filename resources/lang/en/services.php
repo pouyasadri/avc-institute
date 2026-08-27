@@ -10,6 +10,11 @@ return [
     'related_cities_index' => 'Explore city guides',
     'other_services' => 'Other Services',
     'benefits_heading' => 'Why Choose This Service',
+    'key_facts_title' => 'Key Case Facts & Requirements (2026 Snapshot)',
+    'cta_banner_title' => 'Need an expert evaluation of your dossier or application?',
+    'cta_banner_desc' => 'Our immigration specialists and partner legal experts in France assess your situation with complete precision.',
+    'cta_banner_button' => 'Book Consultation',
+    'sticky_mobile_cta' => 'Get Expert Consultation',
 
     'meta' => [
         'title' => 'Our Services | Expert Immigration & Education Consulting France',

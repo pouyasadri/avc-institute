@@ -114,20 +114,42 @@
                                             <div class="form-group mb-3">
                                                 <label for="user_service"
                                                     class="form-label small fw-bold text-muted">{{ __('consult.form.service.label' ?? 'Service Needed') }}</label>
+                                                @php
+                                                    $paramService = request('service');
+                                                    $serviceMapping = [
+                                                        'residence-permit' => __('consult.form_service_residence'),
+                                                        'student-visa' => __('consult.form_service_immigration'),
+                                                        'investment-visa' => __('consult.form_service_immigration'),
+                                                        'educational-counseling' => __('consult.form_service_education'),
+                                                        'university-application' => __('consult.form_service_education'),
+                                                        'resume-lettre-motivation' => __('consult.form_service_education'),
+                                                        'housing-assistance' => __('consult.form_service_immigration'),
+                                                        'arrival-support' => __('consult.form_service_immigration'),
+                                                        'certified-translation' => __('consult.form_service_legal'),
+                                                        'administrative-advocacy' => __('consult.form_service_legal'),
+                                                        'legal-support' => __('consult.form_service_legal'),
+                                                    ];
+                                                    $preselected = $serviceMapping[$paramService] ?? (in_array($paramService, [
+                                                        __('consult.form_service_residence'),
+                                                        __('consult.form_service_education'),
+                                                        __('consult.form_service_immigration'),
+                                                        __('consult.form_service_legal')
+                                                    ], true) ? $paramService : null);
+                                                @endphp
                                                 <select name="user_service" id="user_service"
                                                     class="form-control rounded-pill px-4 py-2">
-                                                    <option value="default">{{ __('consult.form_service_default') }}
+                                                    <option value="default" {{ !$preselected ? 'selected' : '' }}>{{ __('consult.form_service_default') }}
                                                     </option>
-                                                    <option value="{{ __('consult.form_service_residence') }}">
+                                                    <option value="{{ __('consult.form_service_residence') }}" {{ $preselected === __('consult.form_service_residence') ? 'selected' : '' }}>
                                                         {{ __('consult.form_service_residence') }}
                                                     </option>
-                                                    <option value="{{ __('consult.form_service_education') }}">
+                                                    <option value="{{ __('consult.form_service_education') }}" {{ $preselected === __('consult.form_service_education') ? 'selected' : '' }}>
                                                         {{ __('consult.form_service_education') }}
                                                     </option>
-                                                    <option value="{{ __('consult.form_service_immigration') }}">
+                                                    <option value="{{ __('consult.form_service_immigration') }}" {{ $preselected === __('consult.form_service_immigration') ? 'selected' : '' }}>
                                                         {{ __('consult.form_service_immigration') }}
                                                     </option>
-                                                    <option value="{{ __('consult.form_service_legal') }}">
+                                                    <option value="{{ __('consult.form_service_legal') }}" {{ $preselected === __('consult.form_service_legal') ? 'selected' : '' }}>
                                                         {{ __('consult.form_service_legal') }}
                                                     </option>
                                                 </select>

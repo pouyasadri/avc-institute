@@ -10,6 +10,11 @@ return [
     'related_cities_index' => 'Explorer les guides villes',
     'other_services' => 'Autres services',
     'benefits_heading' => 'Pourquoi choisir ce service',
+    'key_facts_title' => 'Points clés & Conditions du dossier (Synthèse 2026)',
+    'cta_banner_title' => 'Besoin d\'une évaluation experte de votre dossier ?',
+    'cta_banner_desc' => 'Nos spécialistes de l\'immigration et juristes partenaires en France analysent votre profil en toute conformité.',
+    'cta_banner_button' => 'Prendre rendez-vous',
+    'sticky_mobile_cta' => 'Consultation experte',
 
     'meta' => [
         'title' => 'Nos Services | Conseil Expert Immigration & Études en France',
