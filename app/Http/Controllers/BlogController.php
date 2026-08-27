@@ -9,6 +9,7 @@ use App\Models\Blog;
 use App\Models\BlogPostTranslation;
 use App\Services\BlogCategoryService;
 use App\Services\BlogService;
+use App\Services\IndexNowService;
 use App\Services\SeoService;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -77,6 +78,20 @@ class BlogController extends Controller
 
         $blog = $this->blogService->storeBlog($request->validated());
 
+        // Ping Bing (and Yandex/Yep) immediately so new content is indexed within minutes
+        if (app()->environment('production')) {
+            $urls = [];
+            foreach (['fa', 'en', 'fr'] as $pingLocale) {
+                $t = $blog->getTranslation($pingLocale);
+                if ($t?->slug) {
+                    $urls[] = route('blog.show', ['locale' => $pingLocale, 'blog' => $t->slug]);
+                }
+            }
+            if (! empty($urls)) {
+                app(IndexNowService::class)->pingBatch($urls);
+            }
+        }
+
         return redirect()
             ->route('blog.show', ['locale' => app()->getLocale(), 'blog' => $blog->getTranslation(app()->getLocale())->slug])
             ->with('success', __('messages.blog_saved'));
@@ -98,6 +113,20 @@ class BlogController extends Controller
         $this->authorize('update', $blog);
 
         $this->blogService->updateBlog($blog, $request->validated());
+
+        // Ping Bing immediately so updated content is re-crawled within minutes
+        if (app()->environment('production')) {
+            $urls = [];
+            foreach (['fa', 'en', 'fr'] as $pingLocale) {
+                $t = $blog->getTranslation($pingLocale);
+                if ($t?->slug) {
+                    $urls[] = route('blog.show', ['locale' => $pingLocale, 'blog' => $t->slug]);
+                }
+            }
+            if (! empty($urls)) {
+                app(IndexNowService::class)->pingBatch($urls);
+            }
+        }
 
         return redirect()
             ->route('blog.show', ['locale' => app()->getLocale(), 'blog' => $blog->getTranslation(app()->getLocale())->slug])

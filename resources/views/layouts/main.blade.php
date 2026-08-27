@@ -79,13 +79,26 @@
         $hreflangTags = [];
         $currentRoute = request()->route();
         if ($currentRoute) {
-            $routeName = $currentRoute->getName();
+            $routeName   = $currentRoute->getName();
             $routeParams = $currentRoute->parameters();
 
             foreach (config('seo.locales') as $locale => $localeData) {
                 try {
-                    $params = array_merge($routeParams, ['locale' => $locale]);
-                    $hreflangTags[$locale] = route($routeName, $params);
+                    // Blog show pages use per-locale slugs — resolve the real slug for each language
+                    // so hreflang points to /fa/blog/slug-in-persian, /en/blog/slug-in-english, etc.
+                    // (same approach already used in SitemapController for sitemap hreflang alternates)
+                    if ($routeName === 'blog.show' && isset($blog)) {
+                        $altTranslation = $blog->getTranslation($locale);
+                        if ($altTranslation && $altTranslation->slug) {
+                            $hreflangTags[$locale] = route($routeName, [
+                                'locale' => $locale,
+                                'blog'   => $altTranslation->slug,
+                            ]);
+                        }
+                    } else {
+                        $params = array_merge($routeParams, ['locale' => $locale]);
+                        $hreflangTags[$locale] = route($routeName, $params);
+                    }
                 } catch (\Exception $e) {
                     // If route doesn't exist for this locale, skip
                 }

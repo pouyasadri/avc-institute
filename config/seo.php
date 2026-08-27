@@ -13,10 +13,13 @@ return [
         'title' => env('APP_NAME', 'Apply Vip Conseil'),
         'title_suffix' => ' | Apply Vip Conseil',
         'description' => 'Apply Vip Conseil - Your trusted partner for immigration, education, and real estate services in France. Expert consultation for residence permits, student visas, and property acquisition.',
-        'keywords' => 'immigration france, student visa france, real estate france, french residence permit, study in france, property france',
+        // Bilingual keywords — Bing still uses keyword meta for non-English content ranking
+        'keywords' => 'immigration france, student visa france, real estate france, french residence permit, study in france, property france, '
+            .'مهاجرت به فرانسه, ویزای تحصیلی فرانسه, تحصیل در فرانسه, اقامت فرانسه, دانشگاه فرانسه, مشاوره مهاجرت, سرمایه گذاری فرانسه',
         'author' => 'Apply Vip Conseil',
         'image' => '/assets/img/logo/logo.webp',
-        'locale' => 'en_US',
+        // Aligned with default_locale = 'fa' — was incorrectly set to 'en_US'
+        'locale' => 'fa_IR',
         'type' => 'website',
     ],
 
@@ -42,6 +45,11 @@ return [
             'region' => 'Grand Est',
             'postal_code' => '67300',
             'country' => 'FR',
+        ],
+        // GeoCoordinates for Bing Maps Knowledge Panel and LocalBusiness schema
+        'geo' => [
+            'latitude' => 48.5937,
+            'longitude' => 7.7463,
         ],
         'same_as' => [
             'https://www.instagram.com/apply_vip_conseil/',
