@@ -227,7 +227,7 @@
                                                 <textarea class="form-control rounded-4 px-4 py-3" name="user_details"
                                                     id="user_details" cols="30" rows="5"
                                                     placeholder="{{ __('consult.form_details_placeholder') }}"
-                                                    required></textarea>
+                                                    required>{{ old('user_details', request('details', '')) }}</textarea>
                                             </div>
                                         </div>
 

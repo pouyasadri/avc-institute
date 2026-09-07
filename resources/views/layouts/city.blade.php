@@ -62,6 +62,13 @@
                                     </a>
                                 </li>
                             </ul>
+                            <div class="mt-3 pt-3 border-top">
+                                <a href="{{ url($currentLocale . "/consult?service=student-visa") }}"
+                                   class="btn btn-outline-primary btn-sm rounded-pill w-100 fw-bold d-flex align-items-center justify-content-center gap-1">
+                                    <i class="bx bx-calendar-plus"></i>
+                                    <span>{{ __('cta.city.sidebar_cta_btn') }}</span>
+                                </a>
+                            </div>
                         </div>
 
                         <!-- Related Services Widget -->
@@ -110,6 +117,9 @@
                     <article class="service-details-wrap p-4 p-md-5 rounded-5 shadow-sm bg-white border-0">
                         <div class="article-content">
                             {!! $cityContentWithIds !!}
+
+                            {{-- Immigration, Settlement & Visa Evaluation CTA Banner --}}
+                            <x-cta.city-evaluation :cityName="$cityName ?? ''" />
                         </div>
 
                         <!-- Contact Form -->

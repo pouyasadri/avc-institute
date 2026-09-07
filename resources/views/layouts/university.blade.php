@@ -90,6 +90,13 @@
                                     </a>
                                 </li>
                             </ul>
+                            <div class="mt-3 pt-3 border-top">
+                                <a href="{{ url($currentLocale . "/consult?service=educational-counseling") }}"
+                                   class="btn btn-outline-primary btn-sm rounded-pill w-100 fw-bold d-flex align-items-center justify-content-center gap-1">
+                                    <i class="bx bx-calendar-plus"></i>
+                                    <span>{{ __('cta.university.sidebar_cta_btn') }}</span>
+                                </a>
+                            </div>
                         </div>
 
                         {{-- Related Universities --}}
@@ -181,6 +188,9 @@
                                     $scholarshipsNote = $hasScholarshipLang ? __("university/{$slug}.scholarships_note") : '<strong>⚠️ توجه مهم:</strong> ددلاین‌ها و شرایط دریافت بورسیه برای هر رشته متفاوت است. حتماً سایت رسمی خود دانشگاه (بخش Useful Links در سایدبار) را بررسی کنید یا جهت برنامه‌ریزی و اقدام، با مشاوران A.V.C تماس بگیرید.';
                                 }
                             @endphp
+
+                            {{-- Admission & Student Visa Evaluation CTA Banner --}}
+                            <x-cta.university-evaluation :universitySlug="$universitySlug" :universityName="$universityName ?? ''" />
 
                             <section class="mt-5 p-4 rounded-4 bg-light border border-primary-subtle" id="university-scholarships">
                                 <h3 class="h5 fw-bold text-primary mb-3">
