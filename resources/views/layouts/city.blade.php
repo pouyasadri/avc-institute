@@ -134,3 +134,20 @@
     </section>
 
 @endsection
+
+@push('json')
+    @php
+        $citySlug = $cityName ?? request()->route('city') ?? request()->segment(3) ?? '';
+        $cityFaqKey = "city/{$citySlug}.faq_items";
+        if (Lang::has($cityFaqKey)) {
+            $cityFaqItems = __($cityFaqKey);
+            if (is_array($cityFaqItems) && !empty($cityFaqItems)) {
+                $cityFaqSchema = (new \App\Services\StructuredData\FAQSchema())->addQuestions($cityFaqItems);
+            }
+        }
+    @endphp
+
+    @if(isset($cityFaqSchema))
+        <x-seo.structured-data :schema="$cityFaqSchema" />
+    @endif
+@endpush

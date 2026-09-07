@@ -29,7 +29,7 @@
         // Universities in cities with no dedicated page return null
         'universite-de-lille'       => null,
     ];
-    $universitySlug = $universityName ?? '';
+    $universitySlug = $universityName ?? request()->route('university') ?? request()->segment(3) ?? '';
     $linkedCity = $universityCityMap[$universitySlug] ?? null;
 
     $universityContent = trim($__env->yieldContent('university_content'));
@@ -216,3 +216,21 @@
     </section>
 
 @endsection
+
+@push('json')
+    @php
+        $faqKey = "university/{$universitySlug}.faq_items";
+        if (Lang::has($faqKey)) {
+            $faqItems = __($faqKey);
+            if (is_array($faqItems) && !empty($faqItems)) {
+                $universityFaqSchema = (new \App\Services\StructuredData\FAQSchema())->addQuestions($faqItems);
+            }
+        }
+    @endphp
+
+    @if(isset($universityFaqSchema))
+        <x-seo.structured-data :schema="$universityFaqSchema" />
+    @endif
+@endpush
+
+

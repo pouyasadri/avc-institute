@@ -61,11 +61,19 @@
             ['name' => __('cities.breadcrumb_cities'), 'url' => url($currentLocale . '/cities')],
             ['name' => __('city/lyon.breadcrumb_lyon'), 'url' => $pageUrl],
         ]);
+
+        $faqItems = __('city/lyon.faq_items');
+        if (is_array($faqItems) && !empty($faqItems)) {
+            $faqSchema = (new \App\Services\StructuredData\FAQSchema())->addQuestions($faqItems);
+        }
     @endphp
 
     <x-seo.structured-data :schema="$webPage" />
     <x-seo.structured-data :schema="$city" />
     <x-seo.structured-data :schema="$breadcrumb" />
+    @if(isset($faqSchema))
+        <x-seo.structured-data :schema="$faqSchema" />
+    @endif
 @endpush
 
 @section('city_content')
@@ -129,20 +137,41 @@
 
         <h3 class="h4 fw-bold mt-4 mb-3">{{ __('city/lyon.universities_heading') }}</h3>
         <p>{{ __('city/lyon.universities_intro') }}</p>
-        <ul class="list-group list-group-flush mb-4">
-            <li class="list-group-item bg-transparent border-0 ps-0">
-                <i class="bx bx-right-arrow-alt text-primary me-2"></i>
-                <a href="{{ url($currentLocale . '/universities/lyon-1') }}">{{ __('city/lyon.university_lyon_1') }}</a>
-            </li>
-            <li class="list-group-item bg-transparent border-0 ps-0">
-                <i class="bx bx-right-arrow-alt text-primary me-2"></i>
-                <a href="{{ url($currentLocale . '/universities/lyon-2') }}">{{ __('city/lyon.university_lyon_2') }}</a>
-            </li>
-            <li class="list-group-item bg-transparent border-0 ps-0">
-                <i class="bx bx-right-arrow-alt text-primary me-2"></i>
-                <a href="{{ url($currentLocale . '/universities/lyon-3') }}">{{ __('city/lyon.university_lyon_3') }}</a>
-            </li>
-        </ul>
+        <div class="row g-3 mb-4">
+            <div class="col-md-4">
+                <div class="p-3 rounded-4 bg-light border border-secondary-subtle h-100 d-flex flex-column justify-content-between">
+                    <div>
+                        <h4 class="h6 fw-bold mb-2 text-primary">
+                            <i class="bx bx-dna me-1"></i>{{ __('city/lyon.university_lyon_1') }}
+                        </h4>
+                        <p class="small text-muted mb-3">قطب علوم پایه، مهندسی و پزشکی فرانسه (پردیس لا دوآ)</p>
+                    </div>
+                    <a href="{{ url($currentLocale . '/universities/lyon-1') }}" class="btn btn-outline-primary btn-sm rounded-pill w-100">مشاهده راهنمای پذیرش</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="p-3 rounded-4 bg-light border border-secondary-subtle h-100 d-flex flex-column justify-content-between">
+                    <div>
+                        <h4 class="h6 fw-bold mb-2 text-primary">
+                            <i class="bx bx-palette me-1"></i>{{ __('city/lyon.university_lyon_2') }}
+                        </h4>
+                        <p class="small text-muted mb-3">قطب هنر، ادبیات، روانشناسی و علوم اجتماعی</p>
+                    </div>
+                    <a href="{{ url($currentLocale . '/universities/lyon-2') }}" class="btn btn-outline-primary btn-sm rounded-pill w-100">مشاهده راهنمای پذیرش</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="p-3 rounded-4 bg-light border border-secondary-subtle h-100 d-flex flex-column justify-content-between">
+                    <div>
+                        <h4 class="h6 fw-bold mb-2 text-primary">
+                            <i class="bx bx-briefcase me-1"></i>{{ __('city/lyon.university_lyon_3') }}
+                        </h4>
+                        <p class="small text-muted mb-3">قطب حقوق، علوم سیاسی و مدرسه مدیریت IAE</p>
+                    </div>
+                    <a href="{{ url($currentLocale . '/universities/lyon-3') }}" class="btn btn-outline-primary btn-sm rounded-pill w-100">مشاهده راهنمای پذیرش</a>
+                </div>
+            </div>
+        </div>
     </section>
 
     <div class="mb-5">

@@ -51,6 +51,18 @@
 @section('university_content')
     <h2 class="h3 fw-bold mb-4">{{ __('university/lyon-3.page_title') }}</h2>
 
+    @if(Lang::has('university/lyon-3.geo_capsule_text'))
+        <div class="p-4 mb-4 rounded-4 bg-primary-subtle border border-primary-subtle" role="region" aria-label="{{ __('university/lyon-3.geo_capsule_title') }}">
+            <div class="d-flex align-items-center gap-2 mb-2 text-primary fw-bold">
+                <i class="bx bxs-check-shield fs-5"></i>
+                <h3 class="h6 fw-bold mb-0 text-primary">{{ __('university/lyon-3.geo_capsule_title') }}</h3>
+            </div>
+            <p class="mb-0 text-dark small leading-relaxed">
+                {{ __('university/lyon-3.geo_capsule_text') }}
+            </p>
+        </div>
+    @endif
+
     <div class="single-services-imgs mb-4">
         <img src="{{asset("assets/img/universities/Lyon3/lyon_3_university.webp")}}"
             alt="{{ __('university/lyon-3.page_title') }}" class="rounded-4 shadow-sm w-100">
@@ -98,6 +110,15 @@
         <p class="text-muted">{{ __('university/lyon-3.admission_content') }}</p>
     </section>
 
+    @if(Lang::has('university/lyon-3.tuition_title'))
+        <section class="mb-5 p-4 rounded-4 bg-light border border-secondary-subtle">
+            <h3 class="h5 fw-bold mb-3 text-dark">
+                <i class="bx bx-money text-primary me-2"></i>{{ __('university/lyon-3.tuition_title') }}
+            </h3>
+            <p class="text-muted small leading-relaxed mb-0">{{ __('university/lyon-3.tuition_content') }}</p>
+        </section>
+    @endif
+
     <section class="mb-5">
         <h3 class="h4 fw-bold mb-3">{{ __('university/lyon-3.career_title') }}</h3>
         <p class="text-muted">{{ __('university/lyon-3.career_content') }}</p>
@@ -117,6 +138,35 @@
             @endforeach
         </div>
     </section>
+
+    @if(Lang::has('university/lyon-3.comparison_title'))
+        <section class="mb-5 p-4 rounded-4 bg-light border border-primary-subtle">
+            <h3 class="h5 fw-bold mb-3 text-primary">
+                <i class="bx bx-git-compare me-2"></i>{{ __('university/lyon-3.comparison_title') }}
+            </h3>
+            <p class="text-muted small leading-relaxed mb-3">{{ __('university/lyon-3.comparison_content') }}</p>
+            <div class="row g-2 pt-2">
+                <div class="col-md-4">
+                    <a href="{{ url(app()->getLocale() . '/universities/lyon-1') }}" class="btn btn-outline-primary btn-sm rounded-pill w-100 d-flex align-items-center justify-content-center gap-1">
+                        <i class="bx bx-dna"></i>
+                        <span>دانشگاه لیون ۱ (علوم و سلامت)</span>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="{{ url(app()->getLocale() . '/universities/lyon-2') }}" class="btn btn-outline-primary btn-sm rounded-pill w-100 d-flex align-items-center justify-content-center gap-1">
+                        <i class="bx bx-palette"></i>
+                        <span>دانشگاه لیون ۲ (هنر و علوم انسانی)</span>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="{{ url(app()->getLocale() . '/cities/lyon') }}" class="btn btn-outline-secondary btn-sm rounded-pill w-100 d-flex align-items-center justify-content-center gap-1">
+                        <i class="bx bx-map-alt"></i>
+                        <span>راهنمای شهر لیون و مسکن</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    @endif
 
     <section class="mb-5">
         <h3 class="h4 fw-bold mb-3">{{ __('university/lyon-3.conclusion_title') }}</h3>
@@ -180,9 +230,17 @@
             ['name' => __('universities.breadcrumb_universities') ?? 'Universities', 'url' => url($currentLocale . '/universities')],
             ['name' => __('university/lyon-3.breadcrumb_current'), 'url' => $pageUrl],
         ]);
+
+        $faqItems = __('university/lyon-3.faq_items');
+        if (is_array($faqItems) && !empty($faqItems)) {
+            $faqSchema = (new \App\Services\StructuredData\FAQSchema())->addQuestions($faqItems);
+        }
     @endphp
 
     <x-seo.structured-data :schema="$webPage" />
     <x-seo.structured-data :schema="$university" />
     <x-seo.structured-data :schema="$breadcrumb" />
+    @if(isset($faqSchema))
+        <x-seo.structured-data :schema="$faqSchema" />
+    @endif
 @endpush
