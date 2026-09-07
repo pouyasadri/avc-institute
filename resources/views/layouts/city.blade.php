@@ -41,10 +41,17 @@
                                 @yield('contact_title', __('city/paris.contact_us'))</h4>
                             <ul class="list-unstyled mb-0">
                                 <li class="mb-2">
-                                    <a href="{{ url($currentLocale . "/consult") }}"
-                                        class="d-flex align-items-center text-decoration-none">
+                                    <a href="{{ url($currentLocale . "/consult?service=student-visa") }}"
+                                        class="d-flex align-items-center text-decoration-none"
+                                        title="{{ $currentLocale === 'fa' ? 'مشاوره مهاجرت و اخذ اقامت فرانسه با موسسه A.V.C' : 'Consultation' }}">
                                         <i class='bx bx-time me-2 fs-5 text-primary'></i>
-                                        <span>@yield('consultation_text')</span>
+                                        <span class="fw-semibold">
+                                            @if($currentLocale === 'fa')
+                                                رزرو وقت در موسسه مهاجرتی فرانسه (A.V.C)
+                                            @else
+                                                @yield('consultation_text')
+                                            @endif
+                                        </span>
                                     </a>
                                 </li>
                                 <li>

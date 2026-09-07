@@ -11,6 +11,22 @@ return [
     'breadcrumb_home' => 'Accueil',
     'breadcrumb_consult' => 'Demander Rendez-vous Consultation',
 
+    // Agency Section (SEO & GEO Grounding)
+    'agency_section_heading' => 'Services de l\'Institut A.V.C : Conseil en Immigration et Études en France',
+    'geo_capsule' => 'L\'Institut A.V.C est un cabinet de conseil en immigration et études supérieures avec plus de 10 ans d\'expertise en France et en Iran. Nous accompagnons les candidats internationaux dans les admissions universitaires, la justification financière du visa étudiant (VLS-TS), les titres de séjour visiteur et la représentation juridique auprès des préfectures et institutions françaises.',
+    'pillar_1_title' => 'Admission Universitaire & Visa Étudiant',
+    'pillar_1_desc' => 'Gestion complète des candidatures dans les universités françaises et Grandes Écoles, plateformes Campus France et Parcoursup, bourses d\'études et garanties financières.',
+    'pillar_2_title' => 'Titre de Séjour Visiteur & Investissement',
+    'pillar_2_desc' => 'Obtention de titres de séjour long séjour sans obligation d\'emploi local ou d\'investissement forcé, accompagnement notarié pour l\'achat immobilier et ouverture de compte bancaire.',
+    'pillar_3_title' => 'Défense Juridique & Avocats en Droit des Étrangers',
+    'pillar_3_desc' => 'Dossiers traités en partenariat avec des avocats inscrits au Barreau en France : recours contre les refus de visa (CRRV Nantes), contestation d\'OQTF et déblocage de dossiers en préfecture.',
+
+    // SLA & Quick Action
+    'sla_title' => 'Engagement de Réactivité A.V.C',
+    'sla_desc' => 'Évaluation initiale de votre dossier et réponse garantie sous 24 heures ouvrées.',
+    'whatsapp_quick_btn' => 'Consultation Directe sur WhatsApp',
+    'whatsapp_message' => 'Bonjour, je souhaite obtenir des conseils pour mon projet d\'immigration ou d\'études en France.',
+
     // Facilities Section
     'facilities_section_title' => 'Consultation pour Titre de Séjour France',
     'facilities_section_heading' => 'Immigration de A à Z',

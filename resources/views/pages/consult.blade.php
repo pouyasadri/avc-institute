@@ -71,6 +71,71 @@
             ['icon' => 'chat', 'label' => __('consult.immigration_psychology_subtitle'), 'title' => __('consult.immigration_psychology_title'), 'description' => __('consult.immigration_psychology_description')],
         ]" />
 
+        @if(Lang::has('consult.agency_section_heading'))
+            <!-- Agency Overview & GEO Answer Capsule Section -->
+            <section class="py-5 bg-white border-bottom border-top my-4" id="agency-overview">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-10">
+                            <div class="text-center mb-4">
+                                <span class="badge bg-primary-subtle text-primary px-3 py-2 rounded-pill fw-bold mb-2">
+                                    {{ __('consult.facilities_section_title') }}
+                                </span>
+                                <h2 class="h3 fw-bold text-dark mt-2">
+                                    {{ __('consult.agency_section_heading') }}
+                                </h2>
+                            </div>
+
+                            {{-- 45-Word GEO Answer Capsule --}}
+                            <div class="p-4 rounded-4 bg-light border border-primary-subtle shadow-xs mb-4">
+                                <div class="d-flex align-items-start gap-3">
+                                    <div class="flex-shrink-0 text-primary mt-1">
+                                        <i class="bx bxs-badge-check fs-2"></i>
+                                    </div>
+                                    <div>
+                                        <p class="mb-0 text-secondary" style="line-height: 1.9; font-size: 1.02rem;">
+                                            {{ __('consult.geo_capsule') }}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {{-- 3 Core Service Pillars --}}
+                            <div class="row g-3">
+                                <div class="col-md-4">
+                                    <div class="p-4 rounded-4 bg-white border shadow-xs h-100 hover-lift transition-all">
+                                        <div class="d-flex align-items-center gap-2 mb-2 text-primary">
+                                            <i class="bx bxs-graduation fs-4"></i>
+                                            <h3 class="h6 fw-bold mb-0 text-dark">{{ __('consult.pillar_1_title') }}</h3>
+                                        </div>
+                                        <p class="small text-muted mb-0">{{ __('consult.pillar_1_desc') }}</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="p-4 rounded-4 bg-white border shadow-xs h-100 hover-lift transition-all">
+                                        <div class="d-flex align-items-center gap-2 mb-2 text-primary">
+                                            <i class="bx bxs-bank fs-4"></i>
+                                            <h3 class="h6 fw-bold mb-0 text-dark">{{ __('consult.pillar_2_title') }}</h3>
+                                        </div>
+                                        <p class="small text-muted mb-0">{{ __('consult.pillar_2_desc') }}</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="p-4 rounded-4 bg-white border shadow-xs h-100 hover-lift transition-all">
+                                        <div class="d-flex align-items-center gap-2 mb-2 text-primary">
+                                            <i class="bx bxs-shield-alt-2 fs-4"></i>
+                                            <h3 class="h6 fw-bold mb-0 text-dark">{{ __('consult.pillar_3_title') }}</h3>
+                                        </div>
+                                        <p class="small text-muted mb-0">{{ __('consult.pillar_3_desc') }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        @endif
+
         <!-- Start Consultation Request Area -->
         <section class="book-table-area-three pt-70 pb-100">
             <div class="container">
@@ -156,7 +221,7 @@
                                             </div>
                                         </div>
                                         <div class="col-lg-12">
-                                            <div class="form-group mb-4">
+                                            <div class="form-group mb-3">
                                                 <label for="user_details"
                                                     class="form-label small fw-bold text-muted">{{ __('consult.form.details.label' ?? 'Details') }}</label>
                                                 <textarea class="form-control rounded-4 px-4 py-3" name="user_details"
@@ -165,12 +230,37 @@
                                                     required></textarea>
                                             </div>
                                         </div>
+
+                                        @if(Lang::has('consult.sla_title'))
+                                            <div class="col-lg-12">
+                                                <div class="d-flex align-items-center gap-2 p-3 rounded-3 bg-success-subtle text-success-emphasis small">
+                                                    <i class="bx bx-check-shield fs-5 flex-shrink-0"></i>
+                                                    <div>
+                                                        <span class="fw-bold">{{ __('consult.sla_title') }}:</span>
+                                                        <span>{{ __('consult.sla_desc') }}</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        @endif
+
                                         <div class="col-lg-12">
-                                            <button type="submit" class="default-btn rounded-pill px-5 transition-all">
+                                            <button type="submit" class="default-btn rounded-pill px-5 transition-all w-100">
                                                 {{ __('consult.form_submit_button') }}
-                                                <i class="{{ $arrowIcon }}"></i>
+                                                <i class="{{ $arrowIcon }} ms-2"></i>
                                             </button>
                                         </div>
+
+                                        @if(Lang::has('consult.whatsapp_quick_btn'))
+                                            <div class="col-lg-12 text-center mt-3">
+                                                <a href="https://wa.me/33768688326?text={{ urlencode(__('consult.whatsapp_message')) }}" 
+                                                   target="_blank" 
+                                                   rel="noopener noreferrer" 
+                                                   class="btn btn-outline-success rounded-pill px-4 py-2 w-100 d-flex align-items-center justify-content-center gap-2 shadow-xs fw-semibold">
+                                                    <i class="bx bxl-whatsapp fs-4"></i>
+                                                    <span>{{ __('consult.whatsapp_quick_btn') }}</span>
+                                                </a>
+                                            </div>
+                                        @endif
                                     </div>
                                 </form>
                             </div>
@@ -239,7 +329,13 @@
             :title="__('index.services.title')"
             :items="__('index.services.items')" />
 
-        <x-sections.faq :title="__('faq.title')" :subtitle="__('faq.subtitle')" :items="__('faq.items')" />
+        @php
+            $hasCommercialFaqs = Lang::has('consult.commercial_faqs') && is_array(__('consult.commercial_faqs')) && count(__('consult.commercial_faqs')) > 0;
+            $faqItems = $hasCommercialFaqs ? __('consult.commercial_faqs') : __('faq.items');
+            $faqTitle = $hasCommercialFaqs ? __('consult.commercial_faqs_title') : __('faq.title');
+            $faqSubtitle = $hasCommercialFaqs ? __('consult.commercial_faqs_subtitle') : __('faq.subtitle');
+        @endphp
+        <x-sections.faq :title="$faqTitle" :subtitle="$faqSubtitle" :items="$faqItems" id="consult-faq" />
     </div>
 @endsection
 
@@ -259,14 +355,33 @@
 
         $serviceSchema = [
             '@context' => 'https://schema.org',
-            '@type' => 'Service',
+            '@type' => ['Service', 'EducationalOrganization', 'LegalService'],
             'name' => $pageTitle,
             'description' => $pageDescription,
-            'provider' => ['@id' => rtrim(config('app.url'), '/') . '/' . '#organization'],
-            'areaServed' => ['FR', 'IR'],
+            'url' => url()->current(),
+            'provider' => [
+                '@type' => 'Organization',
+                '@id' => rtrim(config('app.url'), '/') . '/#organization',
+                'name' => 'A.V.C Institute',
+                'url' => url('/'),
+                'telephone' => '+33768688326',
+            ],
+            'areaServed' => [
+                ['@type' => 'Country', 'name' => 'France', 'identifier' => 'FR'],
+                ['@type' => 'Country', 'name' => 'Iran', 'identifier' => 'IR'],
+            ],
+            'knowsAbout' => [
+                'موسسه مهاجرتی فرانسه',
+                'مشاوره تحصیل در فرانسه',
+                'وکیل مهاجرت به فرانسه',
+                'ویزای تحصیلی فرانسه ۲۰۲۶',
+                'اقامت تمکن مالی فرانسه',
+                'Campus France',
+                'Prefecture',
+            ],
             'hasOfferCatalog' => [
                 '@type' => 'OfferCatalog',
-                'name' => 'Immigration Services',
+                'name' => 'Immigration & Educational Consulting Services',
                 'itemListElement' => [
                     [
                         '@type' => 'Offer',

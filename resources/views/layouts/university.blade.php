@@ -69,10 +69,17 @@
                                 @yield('contact_title', 'Contact Us')</h4>
                             <ul class="list-unstyled mb-0">
                                 <li class="mb-2">
-                                    <a href="{{ url($currentLocale . "/consult") }}"
-                                        class="d-flex align-items-center text-decoration-none">
+                                    <a href="{{ url($currentLocale . "/consult?service=educational-counseling") }}"
+                                        class="d-flex align-items-center text-decoration-none"
+                                        title="{{ $currentLocale === 'fa' ? 'مشاوره تحصیل در فرانسه و اخذ پذیرش دانشگاه' : 'Consultation' }}">
                                         <i class='bx bx-time me-2 fs-5 text-primary'></i>
-                                        <span>@yield('consultation_text')</span>
+                                        <span class="fw-semibold">
+                                            @if($currentLocale === 'fa')
+                                                مشاوره تحصیل در فرانسه و اخذ پذیرش
+                                            @else
+                                                @yield('consultation_text', 'Consultation Request')
+                                            @endif
+                                        </span>
                                     </a>
                                 </li>
                                 <li>

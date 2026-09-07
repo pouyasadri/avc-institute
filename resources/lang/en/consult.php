@@ -11,6 +11,22 @@ return [
     'breadcrumb_home' => 'Home',
     'breadcrumb_consult' => 'Request Consultation Appointment',
 
+    // Agency Section (SEO & GEO Grounding)
+    'agency_section_heading' => 'A.V.C Institute Services: Immigration & Education Consulting in France',
+    'geo_capsule' => 'A.V.C Institute is an established immigration and educational consultancy with over 10 years of expertise in France and Iran. We guide international clients through French university admissions, student visa (VLS-TS) financial proof, financially independent visitor visas (Visiteur), and legal representation before French prefectures and administrative bodies.',
+    'pillar_1_title' => 'University Admission & Student Visa',
+    'pillar_1_desc' => 'Admission management across top French universities and Grandes Écoles, Campus France and Parcoursup portal handling, scholarships, and proof of funds guidance.',
+    'pillar_2_title' => 'Financial Independence & Investment Visa',
+    'pillar_2_desc' => 'Long-stay visitor visas (Visiteur) without mandatory local employment or forced capital investment, property acquisition support, and international bank account setup.',
+    'pillar_3_title' => 'Legal Defense & Immigration Lawyers',
+    'pillar_3_desc' => 'Case support by certified attorneys registered with the French Bar; appeals against visa refusals before the CRRV Nantes commission and prefecture administrative assistance.',
+
+    // SLA & Quick Action
+    'sla_title' => 'A.V.C Response Commitment',
+    'sla_desc' => 'Initial file assessment and expert feedback guaranteed within 24 business hours.',
+    'whatsapp_quick_btn' => 'Direct Consultation on WhatsApp',
+    'whatsapp_message' => 'Hello, I would like to inquire about immigration and study consultation for France.',
+
     // Facilities Section
     'facilities_section_title' => 'Consultation for France Residence Permit',
     'facilities_section_heading' => 'Immigration from A to Z',
