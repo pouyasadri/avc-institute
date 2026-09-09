@@ -10,6 +10,7 @@ use App\Http\Middleware\ForceCanonicalHost;
 use App\Http\Middleware\HandleMarkdownRequests;
 use App\Http\Middleware\PreventRequestsDuringMaintenance;
 use App\Http\Middleware\RedirectIfAuthenticated;
+use App\Http\Middleware\SanitizeTrackingAndLegacyParameters;
 use App\Http\Middleware\SetLocale;
 use App\Http\Middleware\TrimStrings;
 use App\Http\Middleware\TrustProxies;
@@ -56,6 +57,7 @@ return Application::configure(basePath: dirname(__DIR__))
             ValidatePostSize::class,
             TrimStrings::class,
             ConvertEmptyStringsToNull::class,
+            SanitizeTrackingAndLegacyParameters::class,
             CheckRedirects::class,
         ]);
 

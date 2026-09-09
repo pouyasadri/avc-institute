@@ -98,6 +98,7 @@
             @foreach ([
                 'pantheon-sorbonne' => 'university_pantheon_sorbonne',
                 'paris-cite' => 'university_paris_cite',
+                'sciences-po' => 'university_sciences_po',
                 'paris-2' => 'university_pantheon_assas',
                 'paris-3' => 'university_sorbonne_nouvelle',
                 'paris-4-sorbonne' => 'university_sorbonne',
@@ -257,9 +258,18 @@
             ['name' => __('cities.breadcrumb_cities'), 'url' => url($currentLocale.'/cities')],
             ['name' => __('city/paris.breadcrumb_paris'), 'url' => $pageUrl],
         ]);
+
+        $faqs = __('city/paris.faq_items');
+        if (is_array($faqs) && !empty($faqs)) {
+            $faqSchema = new \App\Services\StructuredData\FAQSchema();
+            $faqSchema->addQuestions($faqs);
+        }
     @endphp
 
     <x-seo.structured-data :schema="$webPage" />
     <x-seo.structured-data :schema="$city" />
     <x-seo.structured-data :schema="$breadcrumb" />
+    @if(isset($faqSchema))
+        <x-seo.structured-data :schema="$faqSchema" />
+    @endif
 @endpush

@@ -63,12 +63,34 @@
         ]);
     @endphp
 
+    @php
+        $faqs = __('city/toulouse.faq_items');
+        if (is_array($faqs) && !empty($faqs)) {
+            $faqSchema = new \App\Services\StructuredData\FAQSchema();
+            $faqSchema->addQuestions($faqs);
+        }
+    @endphp
+
     <x-seo.structured-data :schema="$webPage" />
     <x-seo.structured-data :schema="$city" />
     <x-seo.structured-data :schema="$breadcrumb" />
+    @if(isset($faqSchema))
+        <x-seo.structured-data :schema="$faqSchema" />
+    @endif
 @endpush
 
 @section('city_content')
+    {{-- GEO Answer Capsule --}}
+    @if(!empty(__('city/toulouse.geo_capsule.title')))
+        <div class="geo-answer-capsule card border-0 shadow-sm rounded-4 mb-5 p-4 bg-primary-subtle border-start border-primary border-4">
+            <div class="d-flex align-items-center mb-2">
+                <i class="bx bxs-bulb text-primary fs-3 me-2"></i>
+                <h3 class="h5 fw-bold text-primary mb-0">{{ __('city/toulouse.geo_capsule.title') }}</h3>
+            </div>
+            <p class="mb-0 text-dark lh-base">{{ __('city/toulouse.geo_capsule.content') }}</p>
+        </div>
+    @endif
+
     <section class="mb-5">
         <h2 class="h3 fw-bold mb-4">{{ __('city/toulouse.intro_heading') }}</h2>
         <div class="single-services-imgs mb-4">
@@ -101,6 +123,40 @@
         </div>
     @endif
 
+    {{-- Cost Breakdown Table --}}
+    @if(is_array(__('city/toulouse.cost_table_rows')))
+        <div class="card border-0 shadow-sm rounded-4 mb-5">
+            <div class="card-body p-4">
+                <h3 class="h5 fw-bold text-dark mb-3 d-flex align-items-center">
+                    <i class='bx bx-calculator text-primary me-2 fs-4'></i>
+                    {{ __('city/toulouse.cost_table_title') }}
+                </h3>
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle mb-0">
+                        <thead class="table-light">
+                            <tr>
+                                <th scope="col">{{ __('city/toulouse.cost_table_headers.category') }}</th>
+                                <th scope="col">{{ __('city/toulouse.cost_table_headers.gross') }}</th>
+                                <th scope="col" class="text-primary">{{ __('city/toulouse.cost_table_headers.net_caf') }}</th>
+                                <th scope="col">{{ __('city/toulouse.cost_table_headers.details') }}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach(__('city/toulouse.cost_table_rows') as $row)
+                                <tr>
+                                    <td class="fw-semibold">{{ $row['category'] }}</td>
+                                    <td>{{ $row['gross'] }}</td>
+                                    <td class="fw-bold text-primary">{{ $row['net_caf'] }}</td>
+                                    <td class="small text-muted">{{ $row['details'] }}</td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    @endif
+
     <section class="mb-5">
         <h3 class="h4 fw-bold mb-3">{{ __('city/toulouse.student_life_heading') }}</h3>
         <p>{{ __('city/toulouse.student_life_paragraph') }}</p>
@@ -128,20 +184,35 @@
 
         <h3 class="h4 fw-bold mt-4 mb-3">{{ __('city/toulouse.universities_heading') }}</h3>
         <p>{{ __('city/toulouse.universities_intro') }}</p>
-        <ul class="list-group list-group-flush mb-4">
-            <li class="list-group-item bg-transparent border-0 ps-0">
-                <i class="bx bx-right-arrow-alt text-primary me-2"></i>
-                <span>{{ __('city/toulouse.university_capitole') }}</span>
-            </li>
-            <li class="list-group-item bg-transparent border-0 ps-0">
-                <i class="bx bx-right-arrow-alt text-primary me-2"></i>
-                <span>{{ __('city/toulouse.university_jaures') }}</span>
-            </li>
-            <li class="list-group-item bg-transparent border-0 ps-0">
-                <i class="bx bx-right-arrow-alt text-primary me-2"></i>
-                <span>{{ __('city/toulouse.university_sabatier') }}</span>
-            </li>
-        </ul>
+        <div class="row g-3 mb-4">
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm rounded-4 p-3 bg-white">
+                    <h4 class="h6 fw-bold text-primary mb-2">
+                        <i class='bx bxs-graduation me-1'></i> {{ __('city/toulouse.university_capitole') }}
+                    </h4>
+                    <p class="small text-muted mb-3">حقوق، علوم سیاسی و مدرسه اقتصاد ممتاز تولوز (TSE).</p>
+                    <a href="{{ url($currentLocale . '/universities/toulouse') }}" class="btn btn-sm btn-outline-primary rounded-pill mt-auto">راهنمای پذیرش ۲۰۲۶</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm rounded-4 p-3 bg-white">
+                    <h4 class="h6 fw-bold text-primary mb-2">
+                        <i class='bx bxs-book-content me-1'></i> {{ __('city/toulouse.university_jaures') }}
+                    </h4>
+                    <p class="small text-muted mb-3">هنر، ادبیات، زبان‌های خارجی و علوم انسانی و اجتماعی.</p>
+                    <a href="{{ url($currentLocale . '/universities/toulouse') }}" class="btn btn-sm btn-outline-primary rounded-pill mt-auto">راهنمای پذیرش ۲۰۲۶</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm rounded-4 p-3 bg-white">
+                    <h4 class="h6 fw-bold text-primary mb-2">
+                        <i class='bx bxs-rocket me-1'></i> {{ __('city/toulouse.university_sabatier') }}
+                    </h4>
+                    <p class="small text-muted mb-3">علوم پایه، مهندسی، سلامت، پزشکی و فناوری‌های هوافضا.</p>
+                    <a href="{{ url($currentLocale . '/universities/toulouse') }}" class="btn btn-sm btn-outline-primary rounded-pill mt-auto">راهنمای پذیرش ۲۰۲۶</a>
+                </div>
+            </div>
+        </div>
     </section>
 
     <div class="mb-5">

@@ -403,6 +403,19 @@
                 </style>
             </div>
         </section>
+
+        @if(is_array(__('cities.faq_items')) && count(__('cities.faq_items')) > 0)
+            <section class="pb-100">
+                <div class="container">
+                    <x-sections.faq
+                        :title="__('cities.faq_title')"
+                        :subtitle="__('cities.faq_subtitle')"
+                        :items="__('cities.faq_items')"
+                        id="cities-comparison-faq"
+                    />
+                </div>
+            </section>
+        @endif
     </div>
 @endsection
 
@@ -431,9 +444,18 @@
             );
             $position++;
         }
+
+        $faqs = __('cities.faq_items');
+        if (is_array($faqs) && !empty($faqs)) {
+            $faqSchema = new \App\Services\StructuredData\FAQSchema();
+            $faqSchema->addQuestions($faqs);
+        }
     @endphp
 
     <x-seo.structured-data :schema="$collectionPage" />
     <x-seo.structured-data :schema="$breadcrumb" />
     <x-seo.structured-data :schema="$list" />
+    @if(isset($faqSchema))
+        <x-seo.structured-data :schema="$faqSchema" />
+    @endif
 @endpush

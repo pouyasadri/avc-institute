@@ -50,6 +50,27 @@
 @endsection
 
 @section('university_content')
+    {{-- GEO Answer Capsule --}}
+    @if(!empty(__('university/toulouse.geo_capsule.title')))
+        <div class="geo-answer-capsule card border-0 shadow-sm rounded-4 mb-5 p-4 bg-primary-subtle border-start border-primary border-4">
+            <div class="d-flex align-items-center mb-2">
+                <i class="bx bxs-check-shield text-primary fs-3 me-2"></i>
+                <h3 class="h5 fw-bold text-primary mb-0">{{ __('university/toulouse.geo_capsule.title') }}</h3>
+            </div>
+            <p class="mb-0 text-dark lh-base">{{ __('university/toulouse.geo_capsule.content') }}</p>
+        </div>
+    @endif
+
+    {{-- Official Portal & Admissions Note --}}
+    @if(!empty(__('university/toulouse.portal_note.title')))
+        <div class="card border-0 shadow-sm rounded-4 mb-4 p-4 bg-light">
+            <h4 class="h6 fw-bold text-primary mb-2">
+                <i class='bx bx-globe me-1'></i> {{ __('university/toulouse.portal_note.title') }}
+            </h4>
+            <p class="mb-0 small text-muted">{{ __('university/toulouse.portal_note.content') }}</p>
+        </div>
+    @endif
+
     <h2 class="h3 fw-bold mb-4">{{ __('university/toulouse.page_title') }}</h2>
 
     <div class="single-services-imgs mb-4">
@@ -58,6 +79,17 @@
     </div>
 
     <p class="lead text-muted mb-4">{{ __('university/toulouse.intro_content') }}</p>
+
+    {{-- Tuition and Exemption Section --}}
+    @if(!empty(__('university/toulouse.tuition_section.title')))
+        <div class="card border-0 shadow-sm rounded-4 mb-5 p-4 bg-white border">
+            <h3 class="h5 fw-bold text-dark mb-3">
+                <i class='bx bx-credit-card-front text-primary me-2'></i>
+                {{ __('university/toulouse.tuition_section.title') }}
+            </h3>
+            <p class="mb-0 text-muted lh-base">{{ __('university/toulouse.tuition_section.content') }}</p>
+        </div>
+    @endif
 
     <div class="map-container mb-5 rounded-4 overflow-hidden shadow-sm">
         <iframe
@@ -181,9 +213,18 @@
             ['name' => __('universities.breadcrumb_universities') ?? 'Universities', 'url' => url($currentLocale . '/universities')],
             ['name' => __('university/toulouse.breadcrumb_current'), 'url' => $pageUrl],
         ]);
+
+        $faqs = __('university/toulouse.faq_items');
+        if (is_array($faqs) && !empty($faqs)) {
+            $faqSchema = new \App\Services\StructuredData\FAQSchema();
+            $faqSchema->addQuestions($faqs);
+        }
     @endphp
 
     <x-seo.structured-data :schema="$webPage" />
     <x-seo.structured-data :schema="$university" />
     <x-seo.structured-data :schema="$breadcrumb" />
+    @if(isset($faqSchema))
+        <x-seo.structured-data :schema="$faqSchema" />
+    @endif
 @endpush

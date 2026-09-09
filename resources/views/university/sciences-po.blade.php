@@ -49,6 +49,28 @@
 @endsection
 
 @section('university_content')
+    {{-- GEO Answer Capsule --}}
+    @if(!empty(__('university/sciences-po.geo_capsule.title')))
+        <div class="geo-answer-capsule card border-0 shadow-sm rounded-4 mb-5 p-4 bg-primary-subtle border-start border-primary border-4">
+            <div class="d-flex align-items-center mb-2">
+                <i class="bx bxs-institution text-primary fs-3 me-2"></i>
+                <h3 class="h5 fw-bold text-primary mb-0">{{ __('university/sciences-po.geo_capsule.title') }}</h3>
+            </div>
+            <p class="mb-0 text-dark lh-base">{{ __('university/sciences-po.geo_capsule.content') }}</p>
+        </div>
+    @endif
+
+    {{-- Scholarships Section --}}
+    @if(!empty(__('university/sciences-po.scholarships_title')))
+        <div class="card border-0 shadow-sm rounded-4 mb-4 p-4 bg-warning-subtle border-start border-warning border-4">
+            <h4 class="h6 fw-bold text-dark mb-2">
+                {{ __('university/sciences-po.scholarships_title') }}
+            </h4>
+            <p class="small text-dark mb-2">{{ __('university/sciences-po.scholarships_content') }}</p>
+            <div class="small text-muted">{!! __('university/sciences-po.scholarships_note') !!}</div>
+        </div>
+    @endif
+
     <h2 class="h3 fw-bold mb-4">{{ __('university/sciences-po.page_title') }}</h2>
 
     <div class="single-services-imgs mb-4">
@@ -176,9 +198,18 @@
             ['name' => __('universities.breadcrumb_universities') ?? 'Universities', 'url' => url($currentLocale . '/universities')],
             ['name' => __('university/sciences-po.breadcrumb_current'), 'url' => $pageUrl],
         ]);
+
+        $faqs = __('university/sciences-po.faq_items');
+        if (is_array($faqs) && !empty($faqs)) {
+            $faqSchema = new \App\Services\StructuredData\FAQSchema();
+            $faqSchema->addQuestions($faqs);
+        }
     @endphp
 
     <x-seo.structured-data :schema="$webPage" />
     <x-seo.structured-data :schema="$university" />
     <x-seo.structured-data :schema="$breadcrumb" />
+    @if(isset($faqSchema))
+        <x-seo.structured-data :schema="$faqSchema" />
+    @endif
 @endpush

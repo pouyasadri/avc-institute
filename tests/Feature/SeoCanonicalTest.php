@@ -103,23 +103,29 @@ class SeoCanonicalTest extends TestCase
     }
 
     /**
-     * Test that query parameters are stripped from canonical URLs.
+     * Test that legacy dirty query parameters are 301 redirected, and query parameters are stripped from canonical URLs.
      */
     public function test_canonical_strips_query_parameters()
     {
         $url = '/en/universities/lyon-1';
         $dirtyUrl = $url.'?view=university.lyon-1&status=200';
 
-        $response = $this->get($dirtyUrl);
+        // Legacy dirty parameters (view, status) are 301 redirected by SanitizeTrackingAndLegacyParameters
+        $redirectResponse = $this->get($dirtyUrl);
+        $redirectResponse->assertStatus(301);
+        $redirectResponse->assertRedirect($url);
 
+        // For regular query parameters (e.g. ?source=campaign), page renders 200 and canonical remains clean
+        $trackingUrl = $url.'?source=campaign';
+        $response = $this->get($trackingUrl);
         $response->assertStatus(200);
 
-        // Canonical should be the clean URL, NOT the dirty one
+        // Canonical should be the clean URL, NOT the tracking one
         $cleanCanonical = url($url);
         $response->assertSee('<link rel="canonical" href="'.$cleanCanonical.'" />', false);
 
-        // Ensure the dirty parameters are NOT in the canonical
-        $response->assertDontSee('<link rel="canonical" href="'.url($dirtyUrl).'" />', false);
+        // Ensure the query parameters are NOT in the canonical
+        $response->assertDontSee('<link rel="canonical" href="'.url($trackingUrl).'" />', false);
     }
 
     /**
