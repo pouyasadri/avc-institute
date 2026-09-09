@@ -3,8 +3,6 @@ Disallow: /admin
 Disallow: /login
 Disallow: /register
 Disallow: /password
-Disallow: /*?view=*
-Disallow: /*?status=*
 
 # AI/LLM crawlers — allow indexing to appear in AI-generated answers
 # (Perplexity, ChatGPT Search, Bing Copilot, Claude, Apple Intelligence)

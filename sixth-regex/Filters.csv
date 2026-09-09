@@ -1,0 +1,4 @@
+Filter,Value
+Search type,Web
+Date,Last 3 months
+Page,+.*(\?view=|\?status=|#[a-zA-Z0-9_\-]+|\.en\.|\.fr\.|applyvipconseil\.com\/(cities|universities|services|blog)\/?)
