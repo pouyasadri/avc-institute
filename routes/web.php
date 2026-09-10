@@ -299,11 +299,25 @@ Route::get('/blog', function () {
     return redirect('/fa/blog', 301);
 });
 Route::get('/blog/{post}', function (string $post) {
-    return redirect('/fa/blog/'.$post, 301);
-})->where('post', '[a-zA-Z0-9\-]+');
+    $encodedPost = implode('/', array_map('rawurlencode', explode('/', $post)));
+
+    return redirect('/fa/blog/'.$encodedPost, 301);
+})->where('post', '.*');
 
 Route::get('/consult', function () {
     return redirect('/fa/consult', 301);
+});
+
+Route::get('/contact', function () {
+    return redirect('/fa/contactUs', 301);
+});
+
+Route::get('/contact-us', function () {
+    return redirect('/fa/contactUs', 301);
+});
+
+Route::get('/contactUs', function () {
+    return redirect('/fa/contactUs', 301);
 });
 
 Route::get('/legal', function () {

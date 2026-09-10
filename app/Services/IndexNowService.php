@@ -174,7 +174,8 @@ class IndexNowService
                 foreach ($locales as $locale) {
                     $translation = $blog->getTranslation($locale);
                     if ($translation && $translation->slug) {
-                        $urls[] = "{$baseUrl}/{$locale}/blog/{$translation->slug}";
+                        $encodedSlug = implode('/', array_map('rawurlencode', explode('/', $translation->slug)));
+                        $urls[] = "{$baseUrl}/{$locale}/blog/{$encodedSlug}";
                     }
                 }
             }

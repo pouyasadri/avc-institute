@@ -128,10 +128,8 @@
         Header set Cache-Control "public, max-age=31536000"
     </FilesMatch>
 
-    # Don't cache HTML or PHP responses
+    # HTML or PHP responses: require revalidation without disallowing search engine indexing (no-store causes Bingbot index drop)
     <FilesMatch "\.(html|htm|php)$">
-        Header set Cache-Control "no-cache, no-store, must-revalidate"
-        Header set Pragma "no-cache"
-        Header set Expires "0"
+        Header set Cache-Control "no-cache, must-revalidate"
     </FilesMatch>
 </IfModule>

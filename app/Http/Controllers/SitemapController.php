@@ -113,30 +113,36 @@ class SitemapController extends Controller
                     continue;
                 }
 
+                $encodeSlug = function (string $rawSlug): string {
+                    return implode('/', array_map('rawurlencode', explode('/', $rawSlug)));
+                };
+
                 $slug = $translation->slug;
+                $encodedSlug = $encodeSlug($slug);
 
                 // Slugs are localized, so we need to map the exact slug for each alternate language
                 $blogAlternates = [];
                 foreach ($locales as $altLocale) {
                     $altTrans = $blog->getTranslation($altLocale);
                     if ($altTrans && $altTrans->slug) {
+                        $encodedAltSlug = $encodeSlug($altTrans->slug);
                         $blogAlternates[] = [
                             'hreflang' => $altLocale,
-                            'href' => "{$baseUrl}/{$altLocale}/blog/{$altTrans->slug}",
+                            'href' => "{$baseUrl}/{$altLocale}/blog/{$encodedAltSlug}",
                         ];
 
                         // x-default points to English
                         if ($altLocale === 'en') {
                             $blogAlternates[] = [
                                 'hreflang' => 'x-default',
-                                'href' => "{$baseUrl}/en/blog/{$altTrans->slug}",
+                                'href' => "{$baseUrl}/en/blog/{$encodedAltSlug}",
                             ];
                         }
                     }
                 }
 
                 $entry = [
-                    'loc' => "{$baseUrl}/{$locale}/blog/{$slug}",
+                    'loc' => "{$baseUrl}/{$locale}/blog/{$encodedSlug}",
                     'lastmod' => $blog->updated_at->toAtomString(),
                     'changefreq' => config('seo.sitemap.changefreq.blog_post', 'weekly'),
                     'priority' => config('seo.sitemap.priorities.blog_post', 0.8),
