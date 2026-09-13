@@ -31,6 +31,10 @@ return [
     'question_success' => 'Your question has been submitted successfully! We will respond shortly.',
     'question_error' => 'There was an error submitting your question. Please try again.',
 
+    // Consultation form messages
+    'consult_success' => 'Your consultation request has been submitted successfully! We will respond shortly.',
+    'consult_error' => 'There was an error submitting your consultation request. Please try again.',
+
     // Rate limiting messages
     'throttle' => 'Too many attempts. Please wait a moment before trying again.',
 ];

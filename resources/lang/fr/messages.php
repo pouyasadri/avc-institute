@@ -31,6 +31,10 @@ return [
     'question_success' => 'Votre question a été soumise avec succès ! Nous vous répondrons bientôt.',
     'question_error' => 'Une erreur s\'est produite lors de la soumission de votre question. Veuillez réessayer.',
 
+    // Consultation form messages
+    'consult_success' => 'Votre demande de consultation a été soumise avec succès ! Nous vous répondrons bientôt.',
+    'consult_error' => 'Une erreur s\'est produite lors de la soumission de votre demande. Veuillez réessayer.',
+
     // Rate limiting messages
     'throttle' => 'Trop de tentatives. Veuillez patienter un moment avant de réessayer.',
 ];

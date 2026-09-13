@@ -145,7 +145,22 @@
                         <div class="contact-wrap rounded-5 shadow-sm p-4 p-md-5 bg-white border-0 transition-all">
                             <div class="contact-form">
                                 <h3 class="fw-bold mb-4">{{ __('consult.consultation_form_heading') }}</h3>
-                                <form action="{{ route('consult.submit') }}" method="POST">
+
+                                @if (session('success'))
+                                    <div class="alert alert-success rounded-4 mb-4 border-0 shadow-sm">
+                                        <i class="bx bx-check-circle me-2"></i>
+                                        {{ session('success') }}
+                                    </div>
+                                @endif
+
+                                @if (session('error'))
+                                    <div class="alert alert-danger rounded-4 mb-4 border-0 shadow-sm">
+                                        <i class="bx bx-error-circle me-2"></i>
+                                        {{ session('error') }}
+                                    </div>
+                                @endif
+
+                                <form action="{{ route('consult.submit') }}" method="POST" id="consultForm">
                                     @csrf
                                     <div class="row g-3">
                                         <div class="col-lg-6">
@@ -244,9 +259,9 @@
                                         @endif
 
                                         <div class="col-lg-12">
-                                            <button type="submit" class="default-btn rounded-pill px-5 transition-all w-100">
-                                                {{ __('consult.form_submit_button') }}
-                                                <i class="{{ $arrowIcon }} ms-2"></i>
+                                            <button type="submit" id="consultSubmitBtn" class="default-btn rounded-pill px-5 transition-all w-100">
+                                                <span id="consultSubmitText">{{ __('consult.form_submit_button') }}</span>
+                                                <i class="{{ $arrowIcon }} ms-2" id="consultSubmitIcon"></i>
                                             </button>
                                         </div>
 
@@ -405,4 +420,25 @@
     <x-seo.structured-data :schema="$webPageSchema" />
     <x-seo.structured-data :schema="$breadcrumb" />
     <x-seo.structured-data :schema="$serviceSchema" />
+@endpush
+
+@push('scripts')
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('consultForm');
+            const submitBtn = document.getElementById('consultSubmitBtn');
+
+            if (form && submitBtn) {
+                form.addEventListener('submit', function () {
+                    setTimeout(function () {
+                        submitBtn.disabled = true;
+                    }, 0);
+                    const icon = document.getElementById('consultSubmitIcon');
+                    if (icon) {
+                        icon.className = 'spinner-border spinner-border-sm ms-2';
+                    }
+                });
+            }
+        });
+    </script>
 @endpush

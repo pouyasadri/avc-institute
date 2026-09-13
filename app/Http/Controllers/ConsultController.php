@@ -23,6 +23,22 @@ class ConsultController extends Controller
             $userDetails = $validatedData['user_details'];
             $userPhoneNumber = $validatedData['user_phone_number'];
 
+            // Prevent duplicate submissions within a 2-minute window (idempotent handling)
+            $recentSubmission = ConsultingSubmission::where('email', $userEmail)
+                ->where('service', $userService)
+                ->where('created_at', '>=', now()->subMinutes(2))
+                ->first();
+
+            if ($recentSubmission) {
+                Log::info('Duplicate consultation request prevented', [
+                    'email' => $userEmail,
+                    'service' => $userService,
+                    'ip' => $request->ip(),
+                ]);
+
+                return redirect()->back()->with('success', __('messages.consult_success'));
+            }
+
             // Save to database
             $submission = ConsultingSubmission::create([
                 'name' => $userName,
@@ -57,12 +73,12 @@ class ConsultController extends Controller
                     'user_details' => $userDetails,
                 ]));
 
-            return redirect('/')->with('success', 'Your request has been submitted successfully!');
+            return redirect()->back()->with('success', __('messages.consult_success'));
         } catch (\Exception $e) {
             // Log the error message
             Log::error('Error in submitting consultation request: '.$e->getMessage());
 
-            return redirect('/consult')->with('error', 'There was an error processing your request.');
+            return redirect()->back()->with('error', __('messages.consult_error'));
         }
     }
 }
