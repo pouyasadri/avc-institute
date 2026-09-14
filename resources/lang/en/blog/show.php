@@ -35,4 +35,7 @@ return [
     // Comments
     'comments_title' => 'Comments',
     'comment_submitted' => 'Your comment has been submitted and is pending approval.',
+
+    // FAQs
+    'faq_title' => 'Frequently Asked Questions',
 ];

@@ -8,6 +8,7 @@ use App\Models\BlogCategory;
 use App\Models\BlogPostTranslation;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Facades\Blade;
 use Tests\TestCase;
 
 class BlogFaqSchemaTest extends TestCase
@@ -42,14 +43,79 @@ class BlogFaqSchemaTest extends TestCase
         $this->assertEquals('بله، ترجمه رسمی تمامی مدارک الزامی است.', $faqs[1]['answer']);
     }
 
+    public function test_faq_extractor_splits_content_and_faqs_correctly(): void
+    {
+        $html = <<<'HTML'
+        <p>This is the narrative content of the blog post.</p>
+        <div class="my-5 p-5 text-center text-white bg-primary">CTA Banner</div>
+        <h3 class="h3 mt-5 mb-4 fw-bold text-center">Frequently Asked Questions</h3>
+        <div id="faq-accordion" class="faq-accordion">
+            <div class="faq-item mb-4">
+                <span class="faq-question fw-bold"> How much is the tuition fee? </span>
+                <div class="faq-answer text-muted">
+                    <p>Tuition fees in French public universities are heavily subsidized.</p>
+                </div>
+            </div>
+        </div>
+        HTML;
+
+        $result = FaqExtractor::splitContentAndFaqs($html);
+
+        $this->assertStringContainsString('This is the narrative content of the blog post.', $result['content']);
+        $this->assertStringContainsString('CTA Banner', $result['content']);
+        $this->assertStringNotContainsString('faq-accordion', $result['content']);
+        $this->assertStringNotContainsString('Frequently Asked Questions', $result['content']);
+
+        $this->assertEquals('Frequently Asked Questions', $result['title']);
+        $this->assertCount(1, $result['faqs']);
+        $this->assertEquals('How much is the tuition fee?', $result['faqs'][0]['question']);
+        $this->assertEquals('Tuition fees in French public universities are heavily subsidized.', $result['faqs'][0]['answer']);
+    }
+
     public function test_faq_extractor_returns_empty_when_no_faq_markup(): void
     {
         $this->assertEmpty(FaqExtractor::extractFromHtml(null));
         $this->assertEmpty(FaqExtractor::extractFromHtml(''));
         $this->assertEmpty(FaqExtractor::extractFromHtml('<p>Just a normal blog paragraph.</p>'));
+
+        $split = FaqExtractor::splitContentAndFaqs('<p>Simple post.</p>');
+        $this->assertEquals('<p>Simple post.</p>', $split['content']);
+        $this->assertEmpty($split['faqs']);
+        $this->assertNull($split['title']);
     }
 
-    public function test_blog_show_renders_faq_page_schema_when_faqs_exist(): void
+    public function test_centralized_faq_component_renders_inline_and_full_section_modes(): void
+    {
+        $items = [
+            ['question' => 'What is Campus France?', 'answer' => '<p>The official French agency.</p>'],
+        ];
+
+        // 1. Full section mode (default, used on city and university pages)
+        $fullRender = Blade::render(
+            '<x-sections.faq :items="$items" title="General FAQ" />',
+            ['items' => $items]
+        );
+
+        $this->assertStringContainsString('<section class="faq-area pt-100 pb-70">', $fullRender);
+        $this->assertStringContainsString('General FAQ', $fullRender);
+        $this->assertStringContainsString('What is Campus France?', $fullRender);
+        $this->assertStringContainsString('bx-chevron-down', $fullRender);
+
+        // 2. Inline mode (used inside blog post articles)
+        $inlineRender = Blade::render(
+            '<x-sections.faq :items="$items" title="Blog FAQ" id="blog-faq-accordion" :inline="true" />',
+            ['items' => $items]
+        );
+
+        $this->assertStringNotContainsString('<section class="faq-area', $inlineRender);
+        $this->assertStringContainsString('<div class="faq-container-inline my-5">', $inlineRender);
+        $this->assertStringContainsString('id="blog-faq-accordion"', $inlineRender);
+        $this->assertStringContainsString('Blog FAQ', $inlineRender);
+        $this->assertStringContainsString('What is Campus France?', $inlineRender);
+        $this->assertStringContainsString('bx-chevron-down', $inlineRender);
+    }
+
+    public function test_blog_show_renders_centralized_faq_component_and_schema(): void
     {
         $author = User::factory()->create([
             'password' => 'password',
@@ -70,6 +136,7 @@ class BlogFaqSchemaTest extends TestCase
 
         $bodyWithFaq = <<<'HTML'
         <p>مقدمه مقاله</p>
+        <h3 class="h3 mt-5 mb-4 fw-bold text-center">پاسخ به سوالات متداول تمکن مالی</h3>
         <div id="faq-accordion" class="faq-accordion">
             <div class="faq-item mb-4">
                 <span class="faq-question fw-bold"> حداقل تمکن مالی فرانسه ۲۰۲۶ چقدر است؟ </span>
@@ -91,10 +158,20 @@ class BlogFaqSchemaTest extends TestCase
         $response = $this->get('/fa/blog/france-financial-proof-guide');
 
         $response->assertStatus(200);
-        $response->assertSee('"@type": "FAQPage"', false);
-        $response->assertSee('"@type": "Question"', false);
+
+        // Assert centralized component rendered in inline mode
+        $response->assertSee('id="blog-faq-accordion"', false);
+        $response->assertSee('bx-chevron-down', false);
+        $response->assertSee('bx-help-circle', false);
+
+        // Assert content and FAQs rendered
+        $response->assertSee('مقدمه مقاله', false);
         $response->assertSee('حداقل تمکن مالی فرانسه ۲۰۲۶ چقدر است؟', false);
         $response->assertSee('حداقل ۶۱۵ یورو در ماه طبق نرخ حواله سنا.', false);
+
+        // Assert Schema.org FAQPage emitted
+        $response->assertSee('"@type": "FAQPage"', false);
+        $response->assertSee('"@type": "Question"', false);
     }
 
     public function test_blog_show_omits_faq_schema_when_no_faqs_exist(): void
@@ -128,6 +205,7 @@ class BlogFaqSchemaTest extends TestCase
 
         $response->assertStatus(200);
         $response->assertDontSee('"@type": "FAQPage"', false);
+        $response->assertDontSee('id="blog-faq-accordion"', false);
     }
 
     public function test_htaccess_does_not_contain_410_for_dirty_parameters(): void

@@ -13,8 +13,14 @@
     $wordCount = str_word_count(strip_tags($translation->body));
     $readingTime = max(1, ceil($wordCount / 200)); // Average 200 words per minute
 
+    // Separate FAQ accordion from narrative content
+    $faqSplit = \App\Helpers\FaqExtractor::splitContentAndFaqs($translation->body);
+    $cleanBody = $faqSplit['content'];
+    $blogFaqs = $faqSplit['faqs'];
+    $blogFaqTitle = $faqSplit['title'] ?: __('blog/show.faq_title');
+
     // SEO & LLM: Generate Table of Contents and inject IDs into headings
-    $tocData = \App\Helpers\TocHelper::generate($translation->body);
+    $tocData = \App\Helpers\TocHelper::generate($cleanBody);
     $bodyWithIds = $tocData['content'];
     $toc = $tocData['toc'];
 @endphp
@@ -81,6 +87,17 @@
                             style="font-family: 'Inter', sans-serif; line-height: 1.8; color: #4a5568;">
                             {!! $bodyWithIds !!}
                         </div>
+
+                        @if (! empty($blogFaqs))
+                            <div class="blog-faq-section mt-5">
+                                <x-sections.faq 
+                                    :items="$blogFaqs" 
+                                    :title="$blogFaqTitle" 
+                                    id="blog-faq-accordion" 
+                                    :inline="true" 
+                                />
+                            </div>
+                        @endif
 
                         <footer class="post-navigation mt-5 pt-4 border-top">
                             <div class="row align-items-center">
@@ -301,14 +318,4 @@
         ]);
     @endphp
     <x-seo.structured-data :schema="$breadcrumbSchema" />
-
-    @php
-        $faqs = \App\Helpers\FaqExtractor::extractFromHtml($translation->body);
-    @endphp
-    @if (! empty($faqs))
-        @php
-            $faqSchema = (new \App\Services\StructuredData\FAQSchema)->addQuestions($faqs);
-        @endphp
-        <x-seo.structured-data :schema="$faqSchema" />
-    @endif
 @endpush

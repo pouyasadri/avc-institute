@@ -35,4 +35,7 @@ return [
     // Comments
     'comments_title' => 'Commentaires',
     'comment_submitted' => 'Votre commentaire a été soumis et est en attente d\'approbation.',
+
+    // FAQs
+    'faq_title' => 'Foire Aux Questions',
 ];

@@ -2,7 +2,8 @@
     'title' => null,
     'subtitle' => null,
     'items' => [],
-    'id' => 'faq-accordion'
+    'id' => 'faq-accordion',
+    'inline' => false,
 ])
 
 @php
@@ -10,59 +11,109 @@
     $isRtl = in_array($currentLocale, ['fa'], true);
 @endphp
 
-<section class="faq-area pt-100 pb-70">
-    <div class="container">
+@if($inline)
+    <div class="faq-container-inline my-5">
         @if($title || $subtitle)
-            <div class="section-title text-center">
+            <div class="section-title text-center mb-4">
                 @if($subtitle)
-                    <span>{{ $subtitle }}</span>
+                    <span class="text-muted small d-block mb-1">{{ $subtitle }}</span>
                 @endif
                 @if($title)
-                    <h2>{{ $title }}</h2>
+                    <h3 class="h3 fw-bold">{{ $title }}</h3>
                 @endif
             </div>
         @endif
 
-        <div class="row justify-content-center">
-            <div class="col-lg-10">
-                <div class="faq-accordion" id="{{ $id }}">
-                    @foreach($items as $index => $item)
-                        <div class="faq-item mb-4">
-                            <div class="accordion-item border-0 rounded-4 shadow-sm overflow-hidden transition-all">
-                                <h3 class="accordion-header mb-0" id="heading-{{ $index }}">
-                                    <button class="accordion-button {{ $index === 0 ? '' : 'collapsed' }} d-flex align-items-center justify-content-between w-100 text-start border-0 bg-white p-4" 
-                                            type="button" 
-                                            data-bs-toggle="collapse" 
-                                            data-bs-target="#collapse-{{ $index }}" 
-                                            aria-expanded="{{ $index === 0 ? 'true' : 'false' }}" 
-                                            aria-controls="collapse-{{ $index }}">
-                                        <span class="faq-question fw-bold">
-                                            <i class='bx bx-help-circle me-2 text-primary fs-5'></i>
-                                            {{ $item['question'] }}
-                                        </span>
-                                        <span class="faq-icon ms-3 flex-shrink-0">
-                                            <i class='bx bx-chevron-down fs-4 transition-transform'></i>
-                                        </span>
-                                    </button>
-                                </h3>
-                                <div id="collapse-{{ $index }}" 
-                                     class="accordion-collapse collapse {{ $index === 0 ? 'show' : '' }}" 
-                                     aria-labelledby="heading-{{ $index }}" 
-                                     data-bs-parent="#{{ $id }}">
-                                    <div class="accordion-body bg-light p-4 border-top">
-                                        <div class="faq-answer text-muted">
-                                            {!! $item['answer'] !!}
+        <div class="faq-accordion" id="{{ $id }}">
+            @foreach($items as $index => $item)
+                <div class="faq-item mb-4">
+                    <div class="accordion-item border-0 rounded-4 shadow-sm overflow-hidden transition-all">
+                        <h3 class="accordion-header mb-0" id="heading-{{ $id }}-{{ $index }}">
+                            <button class="accordion-button {{ $index === 0 ? '' : 'collapsed' }} d-flex align-items-center justify-content-between w-100 text-start border-0 bg-white p-4" 
+                                    type="button" 
+                                    data-bs-toggle="collapse" 
+                                    data-bs-target="#collapse-{{ $id }}-{{ $index }}" 
+                                    aria-expanded="{{ $index === 0 ? 'true' : 'false' }}" 
+                                    aria-controls="collapse-{{ $id }}-{{ $index }}">
+                                <span class="faq-question fw-bold">
+                                    <i class='bx bx-help-circle me-2 text-primary fs-5'></i>
+                                    {{ $item['question'] }}
+                                </span>
+                                <span class="faq-icon ms-3 flex-shrink-0">
+                                    <i class='bx bx-chevron-down fs-4 transition-transform'></i>
+                                </span>
+                            </button>
+                        </h3>
+                        <div id="collapse-{{ $id }}-{{ $index }}" 
+                             class="accordion-collapse collapse {{ $index === 0 ? 'show' : '' }}" 
+                             aria-labelledby="heading-{{ $id }}-{{ $index }}" 
+                             data-bs-parent="#{{ $id }}">
+                            <div class="accordion-body bg-light p-4 border-top">
+                                <div class="faq-answer text-muted">
+                                    {!! $item['answer'] !!}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    </div>
+@else
+    <section class="faq-area pt-100 pb-70">
+        <div class="container">
+            @if($title || $subtitle)
+                <div class="section-title text-center">
+                    @if($subtitle)
+                        <span>{{ $subtitle }}</span>
+                    @endif
+                    @if($title)
+                        <h2>{{ $title }}</h2>
+                    @endif
+                </div>
+            @endif
+
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="faq-accordion" id="{{ $id }}">
+                        @foreach($items as $index => $item)
+                            <div class="faq-item mb-4">
+                                <div class="accordion-item border-0 rounded-4 shadow-sm overflow-hidden transition-all">
+                                    <h3 class="accordion-header mb-0" id="heading-{{ $id }}-{{ $index }}">
+                                        <button class="accordion-button {{ $index === 0 ? '' : 'collapsed' }} d-flex align-items-center justify-content-between w-100 text-start border-0 bg-white p-4" 
+                                                type="button" 
+                                                data-bs-toggle="collapse" 
+                                                data-bs-target="#collapse-{{ $id }}-{{ $index }}" 
+                                                aria-expanded="{{ $index === 0 ? 'true' : 'false' }}" 
+                                                aria-controls="collapse-{{ $id }}-{{ $index }}">
+                                            <span class="faq-question fw-bold">
+                                                <i class='bx bx-help-circle me-2 text-primary fs-5'></i>
+                                                {{ $item['question'] }}
+                                            </span>
+                                            <span class="faq-icon ms-3 flex-shrink-0">
+                                                <i class='bx bx-chevron-down fs-4 transition-transform'></i>
+                                            </span>
+                                        </button>
+                                    </h3>
+                                    <div id="collapse-{{ $id }}-{{ $index }}" 
+                                         class="accordion-collapse collapse {{ $index === 0 ? 'show' : '' }}" 
+                                         aria-labelledby="heading-{{ $id }}-{{ $index }}" 
+                                         data-bs-parent="#{{ $id }}">
+                                        <div class="accordion-body bg-light p-4 border-top">
+                                            <div class="faq-answer text-muted">
+                                                {!! $item['answer'] !!}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    @endforeach
+                        @endforeach
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+@endif
 
 @push('json')
     @php
