@@ -72,6 +72,40 @@ class BlogFaqSchemaTest extends TestCase
         $this->assertEquals('Tuition fees in French public universities are heavily subsidized.', $result['faqs'][0]['answer']);
     }
 
+    public function test_faq_extractor_does_not_swallow_prior_headings_into_faq_title(): void
+    {
+        $html = <<<'HTML'
+        <h3 class="h3 fw-bold">📌 پاسخ سریع: چرا استراسبورگ بهترین شهر دانشجویی در فرانسه است؟</h3>
+        <p>استراسبورگ با داشتن دانشگاه معتبر Unistra یکی از بهترین گزینه‌ها است.</p>
+        <h2>۱. چرا استراسبورگ انتخابی هوشمندانه است؟</h2>
+        <h3>🎓 دانشگاه بین‌المللی استراسبورگ</h3>
+        <p>یکی از معتبرترین دانشگاه‌های اروپا.</p>
+        <h3 class="h3 mt-5 mb-4 fw-bold text-center">پاسخ به سوالات متداول تحصیل در استراسبورگ</h3>
+        <div id="faq-accordion" class="faq-accordion">
+            <div class="faq-item mb-4">
+                <span class="faq-question fw-bold"> آیا در دانشگاه استراسبورگ رشته‌هایی به زبان انگلیسی تدریس می‌شوند؟ </span>
+                <div class="faq-answer text-muted">
+                    <p>بله! در مقاطع کارشناسی ارشد و دکترا.</p>
+                </div>
+            </div>
+        </div>
+        HTML;
+
+        $result = FaqExtractor::splitContentAndFaqs($html);
+
+        // Verify title is ONLY the immediate heading
+        $this->assertEquals('پاسخ به سوالات متداول تحصیل در استراسبورگ', $result['title']);
+        $this->assertStringNotContainsString('📌 پاسخ سریع', $result['title']);
+        $this->assertStringNotContainsString('Unistra', $result['title']);
+
+        // Verify prior headings and content remain intact in the content
+        $this->assertStringContainsString('📌 پاسخ سریع: چرا استراسبورگ بهترین شهر دانشجویی در فرانسه است؟', $result['content']);
+        $this->assertStringContainsString('۱. چرا استراسبورگ انتخابی هوشمندانه است؟', $result['content']);
+        $this->assertStringContainsString('🎓 دانشگاه بین‌المللی استراسبورگ', $result['content']);
+        $this->assertStringNotContainsString('پاسخ به سوالات متداول تحصیل در استراسبورگ', $result['content']);
+        $this->assertStringNotContainsString('faq-accordion', $result['content']);
+    }
+
     public function test_faq_extractor_returns_empty_when_no_faq_markup(): void
     {
         $this->assertEmpty(FaqExtractor::extractFromHtml(null));

@@ -95,12 +95,10 @@ class FaqExtractor
         $stripStart = $divStart;
 
         // Check if there is a heading directly before the accordion
-        if (preg_match('/<h[234][^>]*>(.*?)<\/h[234]>\s*$/is', $beforeDiv, $hMatch)) {
-            $title = trim(strip_tags(html_entity_decode($hMatch[1], ENT_QUOTES | ENT_HTML5, 'UTF-8')));
-            $hStart = strrpos($beforeDiv, '<h');
-            if ($hStart !== false) {
-                $stripStart = $hStart;
-            }
+        if (preg_match('/<h([234])[^>]*>((?:(?!<\/?h[1-6]).)*)<\/h\1>\s*$/is', $beforeDiv, $hMatch, PREG_OFFSET_CAPTURE)) {
+            $title = trim(strip_tags(html_entity_decode($hMatch[2][0], ENT_QUOTES | ENT_HTML5, 'UTF-8')));
+            $title = preg_replace('/\s+/', ' ', $title);
+            $stripStart = $hMatch[0][1];
         }
 
         $cleanContent = trim(substr($html, 0, $stripStart));
