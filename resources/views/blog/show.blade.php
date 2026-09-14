@@ -301,4 +301,14 @@
         ]);
     @endphp
     <x-seo.structured-data :schema="$breadcrumbSchema" />
+
+    @php
+        $faqs = \App\Helpers\FaqExtractor::extractFromHtml($translation->body);
+    @endphp
+    @if (! empty($faqs))
+        @php
+            $faqSchema = (new \App\Services\StructuredData\FAQSchema)->addQuestions($faqs);
+        @endphp
+        <x-seo.structured-data :schema="$faqSchema" />
+    @endif
 @endpush

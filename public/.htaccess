@@ -13,10 +13,10 @@
     RewriteCond %{HTTP_HOST} ^www\.applyvipconseil\.com$ [NC]
     RewriteRule ^(.*)$ https://applyvipconseil.com/$1 [L,R=301]
 
-    # Return 410 Gone for debug/legacy query parameter URLs (?view=, ?status=)
-    # This tells Google these URLs are permanently gone (faster de-indexing than 404)
+    # 301 Redirect legacy/debug query parameter URLs (?view=, ?status=) to clean canonical URL
+    # Trailing ? discards the incoming dirty query string
     RewriteCond %{QUERY_STRING} (^|&)(view|status)= [NC]
-    RewriteRule ^ - [R=410,L]
+    RewriteRule ^(.*)$ https://applyvipconseil.com/$1? [L,R=301]
 
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
