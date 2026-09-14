@@ -139,6 +139,24 @@
             </div>
         </div>
     </div>
+
+    <div class="cta-consult-banner my-5 py-4 px-4 px-md-5 rounded-5 shadow-sm text-center text-md-start bg-primary text-white position-relative overflow-hidden">
+        <div class="row align-items-center position-relative" style="z-index: 2;">
+            <div class="col-lg-8 mb-3 mb-lg-0">
+                <h3 class="h4 fw-bold text-white mb-2">راهنمای جامع اسکان و زندگی دانشجویی در مونپلیه</h3>
+                <p class="mb-0 text-white-50 fs-6">بررسی هزینه‌های واقعی، کمک‌هزینه مسکن CAF، خوابگاه‌های CROUS و راهنمای کامل شهر مونپلیه برای دانشجویان ایرانی</p>
+            </div>
+            <div class="col-lg-4 text-center text-lg-end d-flex flex-column flex-sm-row gap-2 justify-content-lg-end">
+                <a href="{{ url(app()->getLocale() . '/cities/montpellier') }}" class="btn btn-light rounded-pill fw-bold px-4 py-2 text-primary shadow-sm">
+                    <i class='bx bx-map-alt me-1'></i> راهنمای شهر مونپلیه
+                </a>
+                <a href="{{ url(app()->getLocale() . '/consult?service=student-visa') }}" class="btn btn-outline-light rounded-pill fw-bold px-4 py-2 shadow-sm">
+                    <i class='bx bx-calendar-event me-1'></i> مشاوره اپلای ۲۰۲۶
+                </a>
+            </div>
+        </div>
+    </div>
+
     <x-sections.faq :title="__('university/universite-de-montpellier.faq_title')" :subtitle="__('university/universite-de-montpellier.faq_subtitle')"
         :items="__('university/universite-de-montpellier.faq_items')" id="montpellier-faq" />
 @endsection
