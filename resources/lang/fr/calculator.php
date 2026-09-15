@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 return [
-    'badge' => 'Simulateur Officiel 2026',
+    'badge' => 'Simulateur Intelligent 2026',
     'title' => 'Simulateur Justificatif Financier Visa & Coût de la Vie Étudiante en France',
     'subtitle' => 'Estimez avec précision les ressources consulaires obligatoires, l’allocation logement CAF (APL), les frais de scolarité et le budget mensuel réel en 2026.',
 
@@ -13,7 +13,7 @@ return [
     'accommodation_label' => 'Type de logement étudiant :',
     'tuition_label' => 'Établissement & Frais de scolarité :',
     'lifestyle_label' => 'Dépenses personnelles & mode de vie :',
-    'lifestyle_economic' => 'Économe / Essentiel étudiant',
+    'lifestyle_economic' => 'Économe / Besoins essentiels',
     'lifestyle_moderate' => 'Standard / Équilibré (+80€ / mois)',
     'lifestyle_comfortable' => 'Aisé / Confortable (+160€ / mois)',
     'duration_label' => 'Durée de référence du séjour :',
@@ -22,7 +22,7 @@ return [
 
     // Output Cards
     'results_heading' => 'Synthèse du budget & Évaluation de conformité visa',
-    'official_proof_title' => 'Minimum Légal Requis par le Consulat (615€ / mois)',
+    'official_proof_title' => 'Minimum Légal Consulaire (615€ / mois)',
     'official_proof_desc' => 'Montant plancher obligatoire fixé par les autorités françaises pour la délivrance du visa VLS-TS.',
     'recommended_proof_title' => 'Budget Recommandé A.V.C pour Sécuriser le Visa',
     'recommended_proof_desc' => 'Garantie financière conseillée pour éviter les refus de visa dans les grandes métropoles.',
@@ -39,6 +39,11 @@ return [
     'item_health_phone' => 'Mutuelle santé, forfait mobile & internet',
     'item_lifestyle' => 'Loisirs & dépenses personnelles',
     'item_caf_deduction' => 'Déduction directe de l’APL (CAF)',
+
+    // Advisory disclaimer
+    'advisory_title' => 'Avertissement : Simulation indicative — contactez nos experts pour valider votre dossier',
+    'advisory_text' => 'L’accord consulaire ne repose pas uniquement sur le solde bancaire : l’historique des relevés sur 6 mois, la cohérence du garant financier et la pertinence du parcours académique sont déterminants. Cette simulation ne remplace pas une analyse experte. Contactez les spécialistes A.V.C pour fiabiliser vos justificatifs avant le dépôt.',
+    'advisory_contact_btn' => 'Faire vérifier mon dossier financier par les experts A.V.C',
 
     // CTA
     'cta_title' => 'Besoin d’un audit personnalisé de vos justificatifs financiers et de votre dossier visa ?',

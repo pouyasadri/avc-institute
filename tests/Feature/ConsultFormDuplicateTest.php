@@ -22,6 +22,7 @@ class ConsultFormDuplicateTest extends TestCase
             'user_phone_number' => '09123456789',
             'user_service' => 'France Study Consultation',
             'user_details' => 'I want to study in France.',
+            'gdpr_consent' => '1',
         ];
 
         $response = $this->from('/fa/consult')->post(route('consult.submit', ['locale' => 'fa']), $payload);
@@ -49,6 +50,7 @@ class ConsultFormDuplicateTest extends TestCase
             'user_phone_number' => '09123456789',
             'user_service' => 'France Study Consultation',
             'user_details' => 'I want to study in France.',
+            'gdpr_consent' => '1',
         ];
 
         // First submission
@@ -79,6 +81,7 @@ class ConsultFormDuplicateTest extends TestCase
             'user_phone_number' => '09123456789',
             'user_service' => 'France Study Consultation',
             'user_details' => 'I want to study in France.',
+            'gdpr_consent' => '1',
         ];
 
         $secondPayload = [
@@ -87,6 +90,7 @@ class ConsultFormDuplicateTest extends TestCase
             'user_phone_number' => '09123456789',
             'user_service' => 'France Residence Consultation',
             'user_details' => 'I also have questions about residence.',
+            'gdpr_consent' => '1',
         ];
 
         $this->from('/fa/consult')->post(route('consult.submit', ['locale' => 'fa']), $firstPayload);

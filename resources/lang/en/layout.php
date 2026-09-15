@@ -79,6 +79,7 @@ return [
             'contact' => 'Contact us',
             'sitemap' => 'Sitemap',
             'legal' => 'Legal Identity',
+            'privacy' => 'Privacy Policy',
         ],
         'services_title' => 'Our Services',
         'services' => [

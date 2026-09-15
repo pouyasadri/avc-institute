@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 return [
-    'badge' => 'Official 2026 Calculator',
+    'badge' => 'Official 2026 Smart Calculator',
     'title' => 'French Student Visa Financial Proof & Cost of Living Calculator',
     'subtitle' => 'Accurately estimate mandatory consular visa funds, government CAF housing aid, tuition fees, and net monthly student expenses in France for 2026.',
 
@@ -13,16 +13,16 @@ return [
     'accommodation_label' => 'Accommodation Type:',
     'tuition_label' => 'University & Tuition Tier:',
     'lifestyle_label' => 'Personal Lifestyle & Discretionary Spending:',
-    'lifestyle_economic' => 'Frugal / Student Essential',
-    'lifestyle_moderate' => 'Standard / Balanced (+€80 / month)',
-    'lifestyle_comfortable' => 'Comfortable (+€160 / month)',
+    'lifestyle_economic' => 'Frugal / Essential Needs',
+    'lifestyle_moderate' => 'Standard / Balanced (+€80 / mo)',
+    'lifestyle_comfortable' => 'Comfortable (+€160 / mo)',
     'duration_label' => 'Visa Duration for Calculation:',
     'duration_10_months' => '10 Months (Academic Year)',
     'duration_12_months' => '12 Months (Full VLS-TS Calendar Year)',
 
     // Output Cards
     'results_heading' => 'Budget Summary & Visa Approval Assessment',
-    'official_proof_title' => 'Official Consular Minimum Proof (Legal Baseline: €615/mo)',
+    'official_proof_title' => 'Official Consular Minimum Proof (€615 / mo)',
     'official_proof_desc' => 'Mandatory blocked account or bank certificate required by French consular authorities for VLS-TS issuance.',
     'recommended_proof_title' => 'A.V.C Recommended Safety Buffer',
     'recommended_proof_desc' => 'Recommended funds to prevent visa refusals in high-cost or high-demand metropolitan areas.',
@@ -39,6 +39,11 @@ return [
     'item_health_phone' => 'Health Insurance & Mobile/Internet Plan',
     'item_lifestyle' => 'Personal & Leisure Spending',
     'item_caf_deduction' => 'Direct CAF Housing Subsidy Deduction',
+
+    // Advisory disclaimer
+    'advisory_title' => 'Important Notice: This tool provides initial guidance only — contact us for case verification',
+    'advisory_text' => 'Consular approval depends heavily on applicant age, academic progression, source of funds documentation, 6-month bank statement consistency, and sponsor credibility. A numerical simulation alone cannot guarantee visa issuance. Contact our immigration specialists for an authoritative evaluation of your visa dossier before submission.',
+    'advisory_contact_btn' => 'Have Your Financial Dossier Reviewed by A.V.C',
 
     // CTA
     'cta_title' => 'Need personalized guidance on financial proof and visa preparation?',

@@ -78,6 +78,7 @@ return [
             'contact' => 'Contactez-nous',
             'sitemap' => 'Plan du site',
             'legal' => 'Identité Légale',
+            'privacy' => 'Politique de Confidentialité',
         ],
         'services_title' => 'Nos Services',
         'services' => [

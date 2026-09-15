@@ -81,6 +81,7 @@ return [
             'contact' => 'تماس با ما',
             'sitemap' => 'نقشه سایت',
             'legal' => 'هویت حقوقی',
+            'privacy' => 'سیاست حریم خصوصی',
         ],
         'services_title' => 'خدمات ما',
         'services' => [

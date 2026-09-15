@@ -178,6 +178,7 @@ class StudentBudgetCalculatorTest extends TestCase
         $this->assertStringContainsString('مونپلیه', $rendered);
         $this->assertStringContainsString('خوابگاه دولتی کروس', $rendered);
         $this->assertStringContainsString('درخواست بررسی پرونده و رزرو مشاوره تخصصی', $rendered);
+        $this->assertStringContainsString('توجه مهم: این ابزار صرفاً جهت برآورد اولیه است', $rendered);
         $this->assertStringContainsString('data-is-rtl="true"', $rendered);
     }
 
@@ -187,6 +188,7 @@ class StudentBudgetCalculatorTest extends TestCase
         $renderedEn = Blade::render('<x-calculator.student-budget initialCity="paris" />');
         $this->assertStringContainsString('French Student Visa Financial Proof', $renderedEn);
         $this->assertStringContainsString('Paris', $renderedEn);
+        $this->assertStringContainsString('Important Notice: This tool provides initial guidance only', $renderedEn);
         $this->assertStringContainsString('data-is-rtl="false"', $renderedEn);
 
         app()->setLocale('fr');
