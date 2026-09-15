@@ -123,6 +123,11 @@
                                 </div>
                             @endif
 
+                            @if($slug === 'student-visa')
+                                <div class="my-5">
+                                    <x-calculator.student-budget initialCity="paris" />
+                                </div>
+                            @endif
 
                             @if(isset($serviceDetails['benefits']) && is_array($serviceDetails['benefits']))
                                 <h3 class="mt-5 mb-4">{{ __('services.benefits_heading') ?? 'Why Choose This Service' }}</h3>

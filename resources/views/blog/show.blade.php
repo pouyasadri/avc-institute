@@ -88,6 +88,20 @@
                             {!! $bodyWithIds !!}
                         </div>
 
+                        @php
+                            $slugText = strtolower($translation->slug ?? '');
+                            $isVisaOrCostBlog = \Illuminate\Support\Str::contains(
+                                $slugText, 
+                                ['visa', 'financial', 'proof', 'money', 'budget', 'cost', 'argent', 'تمکن', 'هزینه', 'ویزای-تحصیلی']
+                            );
+                        @endphp
+
+                        @if ($isVisaOrCostBlog)
+                            <div class="my-5">
+                                <x-calculator.student-budget initialCity="paris" />
+                            </div>
+                        @endif
+
                         @if (! empty($blogFaqs))
                             <div class="blog-faq-section mt-5">
                                 <x-sections.faq 

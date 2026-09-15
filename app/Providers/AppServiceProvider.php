@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Contracts\Calculator\StudentBudgetBenchmarkProviderInterface;
+use App\Services\Calculator\ConfigStudentBudgetBenchmarkProvider;
 use App\Services\SeoService;
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Http\Request;
@@ -21,6 +23,11 @@ class AppServiceProvider extends ServiceProvider
         $this->app->scoped(SeoService::class, function () {
             return new SeoService;
         });
+
+        $this->app->bind(
+            StudentBudgetBenchmarkProviderInterface::class,
+            ConfigStudentBudgetBenchmarkProvider::class
+        );
     }
 
     /**
