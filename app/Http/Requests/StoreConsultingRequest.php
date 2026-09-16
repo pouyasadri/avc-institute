@@ -28,6 +28,7 @@ class StoreConsultingRequest extends FormRequest
             'user_service' => 'required|string',
             'user_phone_number' => 'required|string',
             'user_details' => 'required|string',
+            'gdpr_consent' => 'required|accepted',
         ];
     }
 }

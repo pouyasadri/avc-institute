@@ -29,6 +29,7 @@ class StoreContactRequest extends FormRequest
             'visa_type' => 'nullable|string|max:100',
             'msg_subject' => 'required|string|max:255',
             'message' => 'required|string',
+            'gdpr_consent' => 'required|accepted',
         ];
     }
 }

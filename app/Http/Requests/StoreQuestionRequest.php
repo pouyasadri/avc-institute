@@ -30,6 +30,7 @@ class StoreQuestionRequest extends FormRequest
             'message' => 'required|string',
             'page_type' => 'required|in:university,city',
             'page_name' => 'required|string|max:255',
+            'gdpr_consent' => 'required|accepted',
         ];
     }
 }

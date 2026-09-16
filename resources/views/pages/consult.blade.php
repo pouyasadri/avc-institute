@@ -258,6 +258,27 @@
                                             </div>
                                         @endif
 
+                                        {{-- GDPR Consent Checkbox --}}
+                                        <div class="col-lg-12">
+                                            <div class="form-group mb-3">
+                                                <div class="form-check">
+                                                    <input class="form-check-input @error('gdpr_consent') is-invalid @enderror"
+                                                           type="checkbox"
+                                                           name="gdpr_consent"
+                                                           id="gdpr_consent_consult"
+                                                           value="1"
+                                                           required
+                                                           {{ old('gdpr_consent') ? 'checked' : '' }}>
+                                                    <label class="form-check-label small text-muted" for="gdpr_consent_consult">
+                                                        {!! __('privacy.form.gdpr_consent_label', ['url' => route('privacy', ['locale' => app()->getLocale()])]) !!}
+                                                    </label>
+                                                    @error('gdpr_consent')
+                                                        <div class="invalid-feedback">{{ $message }}</div>
+                                                    @enderror
+                                                </div>
+                                            </div>
+                                        </div>
+
                                         <div class="col-lg-12">
                                             <button type="submit" id="consultSubmitBtn" class="default-btn rounded-pill px-5 transition-all w-100">
                                                 <span id="consultSubmitText">{{ __('consult.form_submit_button') }}</span>

@@ -143,6 +143,27 @@
                                             </div>
                                         </div>
 
+                                        {{-- GDPR Consent Checkbox --}}
+                                        <div class="col-lg-12 col-md-12">
+                                            <div class="form-group mb-4">
+                                                <div class="form-check">
+                                                    <input class="form-check-input @error('gdpr_consent') is-invalid @enderror"
+                                                           type="checkbox"
+                                                           name="gdpr_consent"
+                                                           id="gdpr_consent_contact"
+                                                           value="1"
+                                                           required
+                                                           {{ old('gdpr_consent') ? 'checked' : '' }}>
+                                                    <label class="form-check-label small text-muted" for="gdpr_consent_contact">
+                                                        {!! __('privacy.form.gdpr_consent_label', ['url' => route('privacy', ['locale' => app()->getLocale()])]) !!}
+                                                    </label>
+                                                    @error('gdpr_consent')
+                                                        <div class="invalid-feedback">{{ $message }}</div>
+                                                    @enderror
+                                                </div>
+                                            </div>
+                                        </div>
+
                                         <div class="col-lg-12 col-md-12">
                                             <button type="submit" class="default-btn rounded-pill px-5 transition-all">
                                                 {{ __('contact.form.submit') }}
