@@ -113,6 +113,12 @@
                                     {{ __('layout.footer.links.legal') }}
                                 </a>
                             </li>
+                            <li>
+                                <a href="{{ route('privacy', ['locale' => app()->getLocale()]) }}">
+                                    <i class="right-icon bx {{ $chevronsDir }}"></i>
+                                    {{ __('layout.footer.links.privacy') }}
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>

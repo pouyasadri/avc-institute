@@ -378,6 +378,7 @@
 
     @stack('json')
 
+    @if(session('clarity_consent') === true)
     <script type="text/javascript">
         // Analytics is deferred until the page has finished loading (or after a
         // short idle fallback) so it never competes with the critical rendering
@@ -405,6 +406,7 @@
             }
         })(window, document, "clarity", "script", "kxqm47bwto");
     </script>
+@endif
 </head>
 
 <body class="{{ $isRtl ? 'rtl' : 'ltr' }}">
@@ -546,6 +548,9 @@
             document.addEventListener('DOMContentLoaded', handleScroll);
         })();
     </script>
+    {{-- GDPR Cookie Consent Banner --}}
+    <x-gdpr.cookie-banner />
+
 </body>
 
 </html>
