@@ -25,18 +25,25 @@ return new class extends Migration
         ];
 
         foreach ($tables as $table) {
-            Schema::table($table, function (Blueprint $t) {
-                // Was consent given at form submission?
-                $t->boolean('gdpr_consent')->default(false)->after('user_agent');
+            Schema::table($table, function (Blueprint $t) use ($table) {
+                if (! Schema::hasColumn($table, 'gdpr_consent')) {
+                    $col = $t->boolean('gdpr_consent')->default(false);
+                    if (Schema::hasColumn($table, 'user_agent')) {
+                        $col->after('user_agent');
+                    }
+                }
 
-                // Timestamp of when consent was recorded
-                $t->timestamp('consent_given_at')->nullable()->after('gdpr_consent');
+                if (! Schema::hasColumn($table, 'consent_given_at')) {
+                    $t->timestamp('consent_given_at')->nullable()->after('gdpr_consent');
+                }
 
-                // Version of the privacy policy in force at time of submission
-                $t->string('privacy_policy_version', 20)->nullable()->after('consent_given_at');
+                if (! Schema::hasColumn($table, 'privacy_policy_version')) {
+                    $t->string('privacy_policy_version', 20)->nullable()->after('consent_given_at');
+                }
 
-                // Soft-deletes for data-erasure ("right to be forgotten") support
-                $t->softDeletes();
+                if (! Schema::hasColumn($table, 'deleted_at')) {
+                    $t->softDeletes();
+                }
             });
         }
     }
