@@ -37,6 +37,9 @@ class QuestionController extends Controller
                 'locale' => app()->getLocale(),
                 'ip_address' => $request->ip(),
                 'user_agent' => $request->userAgent(),
+                'gdpr_consent' => true,
+                'consent_given_at' => now(),
+                'privacy_policy_version' => config('gdpr.privacy_policy_version', '1.0'),
             ]);
 
             // Send Confirmation Email to User
