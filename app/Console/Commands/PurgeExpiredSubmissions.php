@@ -2,12 +2,11 @@
 
 namespace App\Console\Commands;
 
-use App\Models\ContactSubmission;
 use App\Models\ConsultingSubmission;
+use App\Models\ContactSubmission;
 use App\Models\QuestionSubmission;
 use Carbon\Carbon;
 use Illuminate\Console\Command;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 
 class PurgeExpiredSubmissions extends Command
@@ -31,31 +30,31 @@ class PurgeExpiredSubmissions extends Command
      */
     public function handle(): int
     {
-        $isDryRun        = $this->option('dry-run');
-        $retentionDays   = config('gdpr.retention_days', 730);
+        $isDryRun = $this->option('dry-run');
+        $retentionDays = config('gdpr.retention_days', 730);
         $gracePeriodDays = 30; // soft-deleted records kept 30 days before permanent deletion
         $ipRetentionDays = config('gdpr.technical_retention_days', 90);
 
         $retentionCutoff = Carbon::now()->subDays($retentionDays);
-        $graceCutoff     = Carbon::now()->subDays($gracePeriodDays);
-        $ipCutoff        = Carbon::now()->subDays($ipRetentionDays);
+        $graceCutoff = Carbon::now()->subDays($gracePeriodDays);
+        $ipCutoff = Carbon::now()->subDays($ipRetentionDays);
 
-        $this->info("GDPR Purge — " . now()->toDateTimeString());
+        $this->info('GDPR Purge — '.now()->toDateTimeString());
         $this->info("Retention cutoff  : {$retentionCutoff->toDateString()} ({$retentionDays} days)");
         $this->info("IP cutoff         : {$ipCutoff->toDateString()} ({$ipRetentionDays} days)");
         $this->info("Grace period end  : {$graceCutoff->toDateString()} ({$gracePeriodDays} days after soft-delete)");
-        $isDryRun && $this->warn("[DRY RUN] No changes will be made.");
+        $isDryRun && $this->warn('[DRY RUN] No changes will be made.');
         $this->newLine();
 
         $models = [
-            'contact_submissions'   => ContactSubmission::class,
+            'contact_submissions' => ContactSubmission::class,
             'consulting_submissions' => ConsultingSubmission::class,
-            'question_submissions'  => QuestionSubmission::class,
+            'question_submissions' => QuestionSubmission::class,
         ];
 
-        $totalSoftDeleted   = 0;
-        $totalHardDeleted   = 0;
-        $totalIpAnonymised  = 0;
+        $totalSoftDeleted = 0;
+        $totalHardDeleted = 0;
+        $totalIpAnonymised = 0;
 
         foreach ($models as $table => $modelClass) {
             // 1. Soft-delete records older than retention window (not yet soft-deleted)
@@ -114,7 +113,7 @@ class PurgeExpiredSubmissions extends Command
             $this->newLine();
         }
 
-        $summary = "[GDPR Purge] Soft-deleted: {$totalSoftDeleted} | Permanently purged: {$totalHardDeleted} | IP anonymised: {$totalIpAnonymised}" .
+        $summary = "[GDPR Purge] Soft-deleted: {$totalSoftDeleted} | Permanently purged: {$totalHardDeleted} | IP anonymised: {$totalIpAnonymised}".
                    ($isDryRun ? ' [DRY RUN]' : '');
 
         $this->info($summary);

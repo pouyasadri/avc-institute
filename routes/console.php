@@ -44,3 +44,19 @@ Schedule::command('indexnow:submit')
     ->weeklyOn(1, '03:00') // Every Monday at 3 AM
     ->withoutOverlapping()
     ->runInBackground();
+
+/*
+|--------------------------------------------------------------------------
+| GDPR Data Retention — Daily Purge (Art. 5(1)(e) Storage Limitation)
+|--------------------------------------------------------------------------
+| Runs at 02:00 every day (low traffic).
+| - Soft-deletes submissions older than gdpr.retention_days (730)
+| - Permanently deletes soft-deleted records past 30-day grace period
+| - Nullifies ip_address / user_agent older than gdpr.technical_retention_days (90)
+|--------------------------------------------------------------------------
+*/
+Schedule::command('gdpr:purge')
+    ->dailyAt('02:00')
+    ->withoutOverlapping()
+    ->onOneServer()
+    ->runInBackground();
