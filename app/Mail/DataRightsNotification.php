@@ -19,7 +19,7 @@ class DataRightsNotification extends Mailable implements ShouldQueue
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: '[GDPR] New Data Rights Request — ' . strtoupper($this->dataRequest->request_type) . ' — ' . $this->dataRequest->email,
+            subject: '[GDPR] New Data Rights Request — '.strtoupper($this->dataRequest->request_type).' — '.$this->dataRequest->email,
         );
     }
 

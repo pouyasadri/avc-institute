@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\ContactSubmission;
 use App\Models\ConsultingSubmission;
+use App\Models\ContactSubmission;
 use App\Models\DataRightsRequest;
 use App\Models\QuestionSubmission;
 use Illuminate\Http\RedirectResponse;
@@ -29,9 +29,9 @@ class DataRightsAdminController extends Controller
             ->paginate(20);
 
         $counts = [
-            'pending'   => DataRightsRequest::where('status', 'pending')->count(),
+            'pending' => DataRightsRequest::where('status', 'pending')->count(),
             'completed' => DataRightsRequest::where('status', 'completed')->count(),
-            'rejected'  => DataRightsRequest::where('status', 'rejected')->count(),
+            'rejected' => DataRightsRequest::where('status', 'rejected')->count(),
         ];
 
         return view('admin.data-rights.index', compact('requests', 'status', 'counts'));
@@ -45,9 +45,9 @@ class DataRightsAdminController extends Controller
         $email = $dataRight->email;
 
         $matchedData = [
-            'contact'    => ContactSubmission::where('email', $email)->latest()->get(),
+            'contact' => ContactSubmission::where('email', $email)->latest()->get(),
             'consulting' => ConsultingSubmission::where('email', $email)->latest()->get(),
-            'questions'  => QuestionSubmission::where('email', $email)->latest()->get(),
+            'questions' => QuestionSubmission::where('email', $email)->latest()->get(),
         ];
 
         return view('admin.data-rights.show', compact('dataRight', 'matchedData'));
@@ -59,21 +59,21 @@ class DataRightsAdminController extends Controller
     public function update(Request $request, DataRightsRequest $dataRight): RedirectResponse
     {
         $validated = $request->validate([
-            'status'      => 'required|in:completed,rejected',
+            'status' => 'required|in:completed,rejected',
             'notes_admin' => 'nullable|string|max:2000',
         ]);
 
         try {
             $dataRight->update([
-                'status'       => $validated['status'],
-                'notes_admin'  => $validated['notes_admin'],
+                'status' => $validated['status'],
+                'notes_admin' => $validated['notes_admin'],
                 'completed_at' => now(),
             ]);
 
             Log::info("GDPR data-rights request {$dataRight->id} marked as {$validated['status']} by admin.");
 
         } catch (\Exception $e) {
-            Log::error('DataRightsAdminController@update failed: ' . $e->getMessage());
+            Log::error('DataRightsAdminController@update failed: '.$e->getMessage());
 
             return redirect()->back()->with('error', 'Update failed — check logs.');
         }
@@ -99,16 +99,16 @@ class DataRightsAdminController extends Controller
             QuestionSubmission::where('email', $email)->delete();
 
             $dataRight->update([
-                'status'       => 'completed',
+                'status' => 'completed',
                 'completed_at' => now(),
-                'notes_admin'  => ($dataRight->notes_admin ?? '') .
-                    "\n[ERASURE] Data erased by admin on " . now()->toDateTimeString(),
+                'notes_admin' => ($dataRight->notes_admin ?? '').
+                    "\n[ERASURE] Data erased by admin on ".now()->toDateTimeString(),
             ]);
 
             Log::info("GDPR Art. 17: data erased for {$email} — triggered by admin.");
 
         } catch (\Exception $e) {
-            Log::error('DataRightsAdminController@eraseData failed: ' . $e->getMessage());
+            Log::error('DataRightsAdminController@eraseData failed: '.$e->getMessage());
 
             return redirect()->back()->with('error', 'Erasure failed — check logs.');
         }

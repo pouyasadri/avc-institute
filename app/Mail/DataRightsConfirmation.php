@@ -19,8 +19,8 @@ class DataRightsConfirmation extends Mailable implements ShouldQueue
     public function envelope(): Envelope
     {
         $subject = match ($this->dataRequest->locale) {
-            'fr'    => 'Confirmation de votre demande de droit — A.V.C Institute',
-            'fa'    => 'تأیید درخواست حقوق داده شما — موسسه A.V.C',
+            'fr' => 'Confirmation de votre demande de droit — A.V.C Institute',
+            'fa' => 'تأیید درخواست حقوق داده شما — موسسه A.V.C',
             default => 'Confirmation of Your Data Rights Request — A.V.C Institute',
         };
 

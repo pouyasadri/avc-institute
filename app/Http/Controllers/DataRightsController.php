@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Mail\DataRightsConfirmation;
 use App\Mail\DataRightsNotification;
-use App\Models\ContactSubmission;
 use App\Models\ConsultingSubmission;
+use App\Models\ContactSubmission;
 use App\Models\DataRightsRequest;
 use App\Models\QuestionSubmission;
 use Illuminate\Http\RedirectResponse;
@@ -34,26 +34,26 @@ class DataRightsController extends Controller
     public function submitRequest(Request $request): RedirectResponse
     {
         $validated = $request->validate([
-            'email'            => 'required|email|max:255',
-            'request_type'     => 'required|in:access,rectification,erasure,portability,objection,restriction',
-            'notes_requester'  => 'nullable|string|max:2000',
-            'gdpr_consent'     => 'required|accepted',
+            'email' => 'required|email|max:255',
+            'request_type' => 'required|in:access,rectification,erasure,portability,objection,restriction',
+            'notes_requester' => 'nullable|string|max:2000',
+            'gdpr_consent' => 'required|accepted',
         ]);
 
         try {
             $locale = app()->getLocale();
 
             // Generate a unique secure token (used in emailed links)
-            $token = hash('sha256', uniqid($validated['email'], true) . random_bytes(16));
+            $token = hash('sha256', uniqid($validated['email'], true).random_bytes(16));
 
             $dataRequest = DataRightsRequest::create([
-                'email'           => $validated['email'],
-                'request_type'    => $validated['request_type'],
-                'status'          => 'pending',
-                'token'           => $token,
+                'email' => $validated['email'],
+                'request_type' => $validated['request_type'],
+                'status' => 'pending',
+                'token' => $token,
                 'notes_requester' => $validated['notes_requester'] ?? null,
-                'locale'          => $locale,
-                'ip_address'      => $request->ip(),
+                'locale' => $locale,
+                'ip_address' => $request->ip(),
             ]);
 
             // Notify requester
@@ -67,7 +67,7 @@ class DataRightsController extends Controller
             );
 
         } catch (\Exception $e) {
-            Log::error('DataRightsController@submitRequest failed: ' . $e->getMessage(), [
+            Log::error('DataRightsController@submitRequest failed: '.$e->getMessage(), [
                 'trace' => $e->getTraceAsString(),
             ]);
 
@@ -94,9 +94,9 @@ class DataRightsController extends Controller
         $email = $dataRequest->email;
 
         $export = [
-            'generated_at'       => now()->toIso8601String(),
-            'gdpr_article'       => 'Art. 20 — Right to Data Portability',
-            'data_controller'    => 'ApplyVIP Conseil (A.V.C Institute), 67000 Strasbourg, France',
+            'generated_at' => now()->toIso8601String(),
+            'gdpr_article' => 'Art. 20 — Right to Data Portability',
+            'data_controller' => 'ApplyVIP Conseil (A.V.C Institute), 67000 Strasbourg, France',
             'contact_submissions' => ContactSubmission::where('email', $email)
                 ->get(['name', 'email', 'phone_number', 'subject', 'message', 'locale', 'created_at'])
                 ->toArray(),
@@ -109,8 +109,8 @@ class DataRightsController extends Controller
         ];
 
         return response(json_encode($export, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE), 200, [
-            'Content-Type'        => 'application/json',
-            'Content-Disposition' => 'attachment; filename="avc-data-export-' . now()->format('Y-m-d') . '.json"',
+            'Content-Type' => 'application/json',
+            'Content-Disposition' => 'attachment; filename="avc-data-export-'.now()->format('Y-m-d').'.json"',
         ]);
     }
 
@@ -137,16 +137,16 @@ class DataRightsController extends Controller
 
                 // Mark request as completed
                 $dataRequest->update([
-                    'status'       => 'completed',
+                    'status' => 'completed',
                     'completed_at' => now(),
-                    'notes_admin'  => 'Data erased via Art. 17 erasure request. All submissions soft-deleted on ' . now()->toDateTimeString(),
+                    'notes_admin' => 'Data erased via Art. 17 erasure request. All submissions soft-deleted on '.now()->toDateTimeString(),
                 ]);
             });
 
-            Log::info('GDPR Art. 17: data erased for ' . $dataRequest->email);
+            Log::info('GDPR Art. 17: data erased for '.$dataRequest->email);
 
         } catch (\Exception $e) {
-            Log::error('DataRightsController@deleteData failed: ' . $e->getMessage());
+            Log::error('DataRightsController@deleteData failed: '.$e->getMessage());
 
             return redirect()->route('admin.data-rights.index')
                 ->with('error', 'Erasure failed — check logs.');
