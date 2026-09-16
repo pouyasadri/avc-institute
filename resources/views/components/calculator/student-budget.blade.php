@@ -54,7 +54,7 @@
             <div class="d-flex flex-column gap-3">
 
                 {{-- Step 1: Destination City --}}
-                <div class="calc-step-card p-3 p-sm-3 p-md-4 rounded-4 bg-white border shadow-xs">
+                <div class="calc-step-card p-3 p-sm-4 rounded-4 bg-white border shadow-xs">
                     <div class="d-flex align-items-center gap-2 mb-2">
                         <span class="step-circle">1</span>
                         <label class="form-label fw-bold text-dark mb-0 small">
@@ -81,7 +81,7 @@
                 </div>
 
                 {{-- Step 2: Accommodation (Interactive Full-Width Horizontal Cards) --}}
-                <div class="calc-step-card p-3 p-sm-3 p-md-4 rounded-4 bg-white border shadow-xs">
+                <div class="calc-step-card p-3 p-sm-4 rounded-4 bg-white border shadow-xs">
                     <div class="d-flex align-items-center justify-content-between mb-3">
                         <div class="d-flex align-items-center gap-2">
                             <span class="step-circle">2</span>
@@ -90,12 +90,12 @@
                                 {{ __('calculator.accommodation_label') }}
                             </label>
                         </div>
-                        <span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill py-1 px-2" style="font-size: 0.72rem;">
+                        <span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill py-1 px-2.5" style="font-size: 0.72rem;">
                             <i class="bx bx-check-shield align-middle"></i> سوبسید مسکن APL
                         </span>
                     </div>
 
-                    <div class="d-flex flex-column gap-2">
+                    <div class="d-flex flex-column gap-2.5">
                         @php
                             $accIcons = [
                                 'crous' => 'bxs-institution',
@@ -104,30 +104,28 @@
                             ];
                         @endphp
                         @foreach(\App\Enums\Calculator\AccommodationType::cases() as $acc)
-                            <label class="calc-card-option d-flex align-items-center justify-content-between p-2.5 p-sm-3 rounded-4 border position-relative cursor-pointer transition-all {{ $acc->value === $initialAccommodation ? 'selected' : '' }}">
+                            <label class="calc-card-option d-block p-3 rounded-4 border position-relative cursor-pointer transition-all {{ $acc->value === $initialAccommodation ? 'selected' : '' }}">
                                 <input type="radio" name="acc_{{ $calculatorId }}" value="{{ $acc->value }}" class="visually-hidden calc-acc" {{ $acc->value === $initialAccommodation ? 'checked' : '' }}>
                                 
-                                <div class="d-flex align-items-center gap-2 gap-sm-3">
-                                    <div class="calc-icon-box flex-shrink-0">
+                                <div class="d-flex align-items-start gap-3">
+                                    <div class="calc-icon-box flex-shrink-0 mt-1">
                                         <i class="bx {{ $accIcons[$acc->value] ?? 'bxs-home' }} fs-4 text-brand"></i>
                                     </div>
-                                    <div>
-                                        <div class="fw-bold text-dark small">{{ $acc->label($currentLocale) }}</div>
-                                        <span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill py-0.5 px-2 mt-1" style="font-size: 0.68rem;">
-                                            +{{ $cafAllowances[$acc->value] ?? 180 }}€ کمک‌هزینه CAF
-                                        </span>
+                                    <div class="flex-grow-1 min-w-0">
+                                        <div class="fw-bold text-dark text-wrap lh-base" style="font-size: 0.9rem;">{{ $acc->label($currentLocale) }}</div>
+                                        
+                                        <div class="d-flex flex-wrap align-items-center justify-content-between mt-2 gap-2">
+                                            <span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill py-1 px-2" style="font-size: 0.72rem;">
+                                                <i class="bx bx-check-shield align-middle"></i>
+                                                +{{ $cafAllowances[$acc->value] ?? 180 }}€ کمک‌هزینه CAF
+                                            </span>
+                                            
+                                            <div class="d-flex align-items-baseline gap-1 text-muted" style="font-size: 0.82rem;">
+                                                <strong class="text-dark fs-5 calc-acc-rent-preview" data-acc="{{ $acc->value }}">--</strong>
+                                                <span>€ / {{ $currentLocale === 'fa' ? 'ماه' : 'mo' }}</span>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-
-                                <div class="text-end flex-shrink-0">
-                                    <div class="d-flex align-items-baseline gap-1 justify-content-end text-muted" style="font-size: 0.78rem;">
-                                        <strong class="text-dark fs-6 fs-sm-5 calc-acc-rent-preview" data-acc="{{ $acc->value }}">--</strong>
-                                        <span>€ / {{ $currentLocale === 'fa' ? 'ماه' : 'mo' }}</span>
-                                    </div>
-                                </div>
-
-                                <div class="check-indicator position-absolute top-0 end-0 m-1.5">
-                                    <i class="bx bxs-check-circle text-brand fs-5"></i>
                                 </div>
                             </label>
                         @endforeach
@@ -135,7 +133,7 @@
                 </div>
 
                 {{-- Step 3: University Tuition Tier --}}
-                <div class="calc-step-card p-3 p-sm-3 p-md-4 rounded-4 bg-white border shadow-xs">
+                <div class="calc-step-card p-3 p-sm-4 rounded-4 bg-white border shadow-xs">
                     <div class="d-flex align-items-center gap-2 mb-3">
                         <span class="step-circle">3</span>
                         <label class="form-label fw-bold text-dark mb-0 small">
@@ -144,23 +142,22 @@
                         </label>
                     </div>
 
-                    <div class="d-flex flex-column gap-2">
+                    <div class="d-flex flex-column gap-2.5">
                         @foreach(\App\Enums\Calculator\TuitionType::cases() as $tui)
-                            <label class="calc-card-option d-flex align-items-center justify-content-between p-2.5 p-sm-3 rounded-4 border cursor-pointer position-relative transition-all {{ $tui->value === $initialTuition ? 'selected' : '' }}">
-                                <div class="d-flex align-items-center gap-2 gap-sm-3">
-                                    <input type="radio" name="tui_{{ $calculatorId }}" value="{{ $tui->value }}" class="visually-hidden calc-tui" {{ $tui->value === $initialTuition ? 'checked' : '' }}>
-                                    <div class="calc-icon-box flex-shrink-0">
+                            <label class="calc-card-option d-block p-3 rounded-4 border cursor-pointer position-relative transition-all {{ $tui->value === $initialTuition ? 'selected' : '' }}">
+                                <input type="radio" name="tui_{{ $calculatorId }}" value="{{ $tui->value }}" class="visually-hidden calc-tui" {{ $tui->value === $initialTuition ? 'checked' : '' }}>
+                                <div class="d-flex align-items-start gap-3">
+                                    <div class="calc-icon-box flex-shrink-0 mt-1">
                                         <i class="bx bx-book-bookmark text-brand fs-4"></i>
                                     </div>
-                                    <div>
-                                        <div class="fw-bold text-dark small">{{ $tui->label($currentLocale) }}</div>
+                                    <div class="flex-grow-1 min-w-0">
+                                        <div class="fw-bold text-dark text-wrap lh-base" style="font-size: 0.9rem;">{{ $tui->label($currentLocale) }}</div>
+                                        <div class="d-flex mt-2">
+                                            <span class="badge bg-light text-secondary border rounded-pill py-1.5 px-2.5 fw-bold small">
+                                                {{ number_format($tui->annualEstimate()) }} €
+                                            </span>
+                                        </div>
                                     </div>
-                                </div>
-                                <span class="badge bg-light text-secondary border rounded-pill py-1.5 px-2.5 fw-bold small flex-shrink-0">
-                                    {{ number_format($tui->annualEstimate()) }} €
-                                </span>
-                                <div class="check-indicator position-absolute top-0 end-0 m-1.5">
-                                    <i class="bx bxs-check-circle text-brand fs-5"></i>
                                 </div>
                             </label>
                         @endforeach
@@ -168,7 +165,7 @@
                 </div>
 
                 {{-- Step 4: Lifestyle & Duration --}}
-                <div class="calc-step-card p-3 p-sm-3 p-md-4 rounded-4 bg-white border shadow-xs">
+                <div class="calc-step-card p-3 p-sm-4 rounded-4 bg-white border shadow-xs">
                     <div class="d-flex align-items-center gap-2 mb-3">
                         <span class="step-circle">4</span>
                         <label class="form-label fw-bold text-dark mb-0 small">
@@ -219,7 +216,7 @@
             <div class="calc-results-sidebar d-flex flex-column gap-3">
                 
                 {{-- Primary Highlight Card --}}
-                <div class="p-3 p-sm-3 p-md-4 rounded-4 text-center border shadow-sm position-relative overflow-hidden calc-hero-card">
+                <div class="p-3 p-sm-4 rounded-4 text-center border shadow-sm position-relative overflow-hidden calc-hero-card">
                     <div class="d-flex flex-column flex-sm-row align-items-center justify-content-between gap-2 mb-3">
                         <span class="small fw-bold text-uppercase tracking-wider text-muted">
                             {{ __('calculator.results_heading') }}
@@ -247,13 +244,13 @@
                     {{-- 2 Sub-Metrics: Official vs Recommended --}}
                     <div class="row g-2 pt-3 border-top text-start">
                         <div class="col-12 col-sm-6">
-                            <div class="p-2 px-3 rounded-3 bg-white border h-100">
+                            <div class="p-2.5 px-3 rounded-3 bg-white border h-100">
                                 <span class="d-block text-muted" style="font-size: 0.72rem;">{{ __('calculator.official_proof_title') }}</span>
                                 <strong class="text-dark fs-6 d-block mt-1"><span class="calc-val-official-proof">{{ number_format($initialResult->officialAnnualVisaProof) }}</span> €</strong>
                             </div>
                         </div>
                         <div class="col-12 col-sm-6">
-                            <div class="p-2 px-3 rounded-3 bg-white border border-brand-subtle h-100">
+                            <div class="p-2.5 px-3 rounded-3 bg-white border border-brand-subtle h-100">
                                 <span class="d-block text-brand" style="font-size: 0.72rem;">{{ __('calculator.recommended_proof_title') }}</span>
                                 <strong class="text-brand fs-6 d-block mt-1"><span class="calc-val-recommended-proof">{{ number_format($initialResult->recommendedAnnualSafetyProof) }}</span> €</strong>
                             </div>
@@ -262,7 +259,7 @@
                 </div>
 
                 {{-- Detailed Breakdown Card --}}
-                <div class="p-3 p-sm-3 p-md-4 rounded-4 bg-white border shadow-xs">
+                <div class="p-3 p-sm-4 rounded-4 bg-white border shadow-xs">
                     <div class="d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center gap-2 mb-3">
                         <span class="fw-bold text-dark small">{{ __('calculator.breakdown_title') }}</span>
                         <div class="small bg-light px-2.5 py-1 rounded-pill border text-secondary text-wrap" style="font-size: 0.74rem;">
@@ -271,19 +268,19 @@
                     </div>
 
                     <div class="d-flex flex-column gap-2 small text-secondary">
-                        <div class="d-flex justify-content-between align-items-center py-1.5 border-bottom border-light w-100 min-w-0">
+                        <div class="d-flex justify-content-between align-items-center py-2 border-bottom border-light w-100 min-w-0">
                             <span class="text-truncate me-2"><i class="bx bx-home-alt me-1 text-muted"></i> {{ __('calculator.item_rent') }}</span>
                             <strong class="text-dark flex-shrink-0 ms-2"><span class="calc-item-rent">{{ number_format($initialResult->monthlyBreakdown['rent']) }}</span> €</strong>
                         </div>
-                        <div class="d-flex justify-content-between align-items-center py-1.5 border-bottom border-light w-100 min-w-0">
+                        <div class="d-flex justify-content-between align-items-center py-2 border-bottom border-light w-100 min-w-0">
                             <span class="text-truncate me-2"><i class="bx bx-restaurant me-1 text-muted"></i> {{ __('calculator.item_food') }}</span>
                             <strong class="text-dark flex-shrink-0 ms-2"><span class="calc-item-food">{{ number_format($initialResult->monthlyBreakdown['food']) }}</span> €</strong>
                         </div>
-                        <div class="d-flex justify-content-between align-items-center py-1.5 border-bottom border-light w-100 min-w-0">
+                        <div class="d-flex justify-content-between align-items-center py-2 border-bottom border-light w-100 min-w-0">
                             <span class="text-truncate me-2"><i class="bx bx-bus me-1 text-muted"></i> {{ __('calculator.item_transport') }} + {{ __('calculator.item_health_phone') }}</span>
                             <strong class="text-dark flex-shrink-0 ms-2"><span class="calc-item-misc">{{ number_format($initialResult->monthlyBreakdown['transport'] + $initialResult->monthlyBreakdown['health_phone']) }}</span> €</strong>
                         </div>
-                        <div class="d-flex justify-content-between align-items-center py-1.5 text-success fw-semibold w-100 min-w-0">
+                        <div class="d-flex justify-content-between align-items-center py-2 text-success fw-semibold w-100 min-w-0">
                             <span class="text-truncate me-2"><i class="bx bx-check-circle me-1"></i> {{ __('calculator.item_caf_deduction') }}</span>
                             <span class="flex-shrink-0 ms-2">-<span class="calc-item-caf">{{ number_format($initialResult->cafDeduction) }}</span> €</span>
                         </div>
@@ -291,7 +288,7 @@
                 </div>
 
                 {{-- Advisory & Legal Guidance Disclaimer Card (As requested by user) --}}
-                <div class="p-3 p-sm-3 p-md-4 rounded-4 border calc-advisory-card shadow-xs position-relative">
+                <div class="p-3 p-sm-4 rounded-4 border calc-advisory-card shadow-xs position-relative">
                     <div class="d-flex align-items-start gap-2.5">
                         <div class="flex-shrink-0 mt-1">
                             <i class="bx bxs-shield-error fs-3 text-warning"></i>
@@ -392,31 +389,38 @@
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        width: 38px;
-        height: 38px;
-        border-radius: 10px;
+        width: 40px;
+        height: 40px;
+        border-radius: 12px;
         background-color: #fff3ed;
+        transition: all 0.2s ease;
+    }
+    .calc-icon-box i {
+        color: #ff5d22;
+        transition: color 0.2s ease;
     }
     .calc-card-option {
         cursor: pointer;
         background: #ffffff;
         border: 1.5px solid #e2e8f0;
-        transition: all 0.2s ease-in-out;
+        border-radius: 1rem;
+        transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     }
     .calc-card-option:hover {
         border-color: #cbd5e1;
         transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
     }
     .calc-card-option.selected {
         border-color: #ff5d22 !important;
-        background-color: #fffaf7 !important;
-        box-shadow: 0 3px 12px rgba(255, 93, 34, 0.1) !important;
+        background: linear-gradient(145deg, #ffffff 0%, #fff9f6 100%) !important;
+        box-shadow: 0 4px 16px rgba(255, 93, 34, 0.12) !important;
     }
-    .calc-card-option .check-indicator {
-        display: none;
+    .calc-card-option.selected .calc-icon-box {
+        background-color: #ff5d22 !important;
     }
-    .calc-card-option.selected .check-indicator {
-        display: block;
+    .calc-card-option.selected .calc-icon-box i {
+        color: #ffffff !important;
     }
     .calc-segmented-group {
         display: flex;
@@ -429,17 +433,19 @@
     .calc-segmented-btn {
         flex: 1 1 0;
         text-align: center;
-        padding: 7px 6px;
+        padding: 8px 6px;
         border-radius: 9999px;
-        font-size: 0.76rem;
+        font-size: 0.78rem;
         font-weight: 600;
         color: #64748b;
         cursor: pointer;
-        white-space: nowrap;
+        white-space: normal;
+        line-height: 1.2;
         transition: all 0.2s ease;
         display: flex;
         align-items: center;
         justify-content: center;
+        min-height: 38px;
     }
     .calc-segmented-btn.active {
         background: #ffffff;
@@ -470,13 +476,107 @@
         line-height: 1.4;
         text-align: center;
     }
-    [dir="rtl"] .calc-city,
-    [data-is-rtl="true"] .calc-city {
-        background-position: left 0.75rem center !important;
-        padding-left: 2.25rem !important;
-        padding-right: 1.25rem !important;
+
+    /* Native Select & Option Alignment */
+    .avc-budget-calculator .calc-city,
+    .avc-budget-calculator select.calc-city {
+        width: 100% !important;
+        height: 50px !important;
+        font-size: 0.95rem !important;
+        font-weight: 600 !important;
+        color: #1e293b !important;
+        background-color: #ffffff !important;
+        border: 1.5px solid #e2e8f0 !important;
+        border-radius: 9999px !important;
+        cursor: pointer;
+        transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+    .avc-budget-calculator select.calc-city:focus,
+    .avc-budget-calculator .calc-city:focus {
+        border-color: #ff5d22 !important;
+        outline: none !important;
+        box-shadow: 0 0 0 3px rgba(255, 93, 34, 0.15) !important;
+    }
+    [dir="rtl"] .avc-budget-calculator select.calc-city,
+    [data-is-rtl="true"] .avc-budget-calculator select.calc-city {
+        text-align: right !important;
+        text-align-last: right !important;
+        direction: rtl !important;
+        background-position: left 1.25rem center !important;
+        padding-left: 3rem !important;
+        padding-right: 1.5rem !important;
+    }
+    [dir="rtl"] .avc-budget-calculator select.calc-city option,
+    [data-is-rtl="true"] .avc-budget-calculator select.calc-city option {
         text-align: right !important;
         direction: rtl !important;
+        padding: 8px 14px !important;
+        font-weight: 500 !important;
+    }
+    [dir="ltr"] .avc-budget-calculator select.calc-city,
+    [data-is-rtl="false"] .avc-budget-calculator select.calc-city {
+        text-align: left !important;
+        text-align-last: left !important;
+        direction: ltr !important;
+        background-position: right 1.25rem center !important;
+        padding-left: 1.5rem !important;
+        padding-right: 3rem !important;
+    }
+    [dir="ltr"] .avc-budget-calculator select.calc-city option,
+    [data-is-rtl="false"] .avc-budget-calculator select.calc-city option {
+        text-align: left !important;
+        direction: ltr !important;
+        padding: 8px 14px !important;
+    }
+
+    /* jQuery NiceSelect Overrides (If enabled by global theme script) */
+    .avc-budget-calculator .nice-select.calc-city {
+        float: none !important;
+        width: 100% !important;
+        height: 50px !important;
+        line-height: 48px !important;
+        border: 1.5px solid #e2e8f0 !important;
+        border-radius: 9999px !important;
+        background-color: #ffffff !important;
+        box-shadow: none !important;
+    }
+    [dir="rtl"] .avc-budget-calculator .nice-select.calc-city,
+    [data-is-rtl="true"] .avc-budget-calculator .nice-select.calc-city {
+        text-align: right !important;
+        direction: rtl !important;
+        padding-right: 1.5rem !important;
+        padding-left: 3rem !important;
+    }
+    [dir="rtl"] .avc-budget-calculator .nice-select.calc-city .current,
+    [data-is-rtl="true"] .avc-budget-calculator .nice-select.calc-city .current {
+        float: none !important;
+        display: block !important;
+        text-align: right !important;
+    }
+    [dir="rtl"] .avc-budget-calculator .nice-select.calc-city:after,
+    [data-is-rtl="true"] .avc-budget-calculator .nice-select.calc-city:after {
+        left: 1.25rem !important;
+        right: auto !important;
+    }
+    .avc-budget-calculator .nice-select.calc-city .list {
+        width: 100% !important;
+        border-radius: 1rem !important;
+        border: 1.5px solid #e2e8f0 !important;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.08) !important;
+        max-height: 280px !important;
+        overflow-y: auto !important;
+        z-index: 1050 !important;
+    }
+    [dir="rtl"] .avc-budget-calculator .nice-select.calc-city .list .option,
+    [data-is-rtl="true"] .avc-budget-calculator .nice-select.calc-city .list .option {
+        text-align: right !important;
+        padding: 0.65rem 1.5rem !important;
+        font-size: 0.9rem !important;
+    }
+    .avc-budget-calculator .nice-select.calc-city .list .option.selected {
+        font-weight: 700 !important;
+        color: #ff5d22 !important;
+        background-color: #fffaf7 !important;
     }
 </style>
 
@@ -672,6 +772,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Event listeners
         citySelect.addEventListener('change', recalculate);
+        if (typeof window.jQuery !== 'undefined') {
+            window.jQuery(citySelect).on('change', recalculate);
+        }
 
         container.querySelectorAll('input.calc-acc').forEach(radio => radio.addEventListener('change', recalculate));
         container.querySelectorAll('input.calc-tui').forEach(radio => radio.addEventListener('change', recalculate));
