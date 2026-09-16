@@ -208,9 +208,39 @@ return [
         'body' => 'For any privacy-related question or to exercise your rights, contact us at:',
     ],
 
-    // Form consent label (used in contact / consult / question forms)
+    // Form consent label (used in contact / consult / question / comment forms)
     'form' => [
         'gdpr_consent_label' => 'I have read and agree to the <a href=":url" target="_blank" class="text-decoration-underline">Privacy Policy</a> and consent to the processing of my personal data for the purpose of handling my enquiry.',
         'gdpr_consent_error' => 'You must accept the Privacy Policy to submit this form.',
+    ],
+
+    // Data-Subject Rights Request Form (Art. 15–22)
+    'data_rights' => [
+        'meta' => [
+            'title' => 'Your Data Rights — A.V.C Institute | GDPR Art. 15–22',
+        ],
+        'title'    => 'Exercise Your Data Rights',
+        'subtitle' => 'Submit a request to access, correct, delete, or export the personal data we hold about you.',
+        'response_time_heading' => 'Response within 30 days',
+        'response_time_body'    => 'Under <strong>GDPR Article 12</strong>, we are required to respond to all data rights requests within 30 days of receipt. You will receive an email confirmation immediately after submitting.',
+        'form' => [
+            'heading'          => 'Submit a Data Rights Request',
+            'email'            => 'Your Email Address',
+            'email_hint'       => 'Must match the email used when submitting a form on our site.',
+            'request_type'     => 'Type of Request',
+            'notes'            => 'Additional Details (optional)',
+            'notes_placeholder' => 'Describe your request in more detail if necessary…',
+            'submit'           => 'Submit Request',
+            'success'          => 'Your request has been received. You will get a confirmation email shortly. We will respond within 30 days (GDPR Art. 12).',
+            'error'            => 'An error occurred while processing your request. Please try again or contact us directly at dpo@applyvipconseil.com.',
+        ],
+        'types' => [
+            'access'        => ['label' => 'Right of Access',       'article' => 'Art. 15', 'desc' => 'Obtain a copy of the personal data we hold about you.'],
+            'rectification' => ['label' => 'Right to Rectification', 'article' => 'Art. 16', 'desc' => 'Correct inaccurate personal data without undue delay.'],
+            'erasure'       => ['label' => 'Right to Erasure',       'article' => 'Art. 17', 'desc' => 'Request deletion of your data ("right to be forgotten").'],
+            'portability'   => ['label' => 'Right to Portability',   'article' => 'Art. 20', 'desc' => 'Receive your data in a structured, machine-readable format.'],
+            'objection'     => ['label' => 'Right to Object',        'article' => 'Art. 21', 'desc' => 'Object to processing based on legitimate interests.'],
+            'restriction'   => ['label' => 'Right to Restriction',   'article' => 'Art. 18', 'desc' => 'Request suspension of processing pending resolution of a dispute.'],
+        ],
     ],
 ];

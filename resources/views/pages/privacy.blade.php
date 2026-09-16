@@ -292,6 +292,12 @@
                             @endforeach
                         </div>
                         <p>{!! __('privacy.rights.exercise') !!}</p>
+                        <div class="mb-3">
+                            <a href="{{ route('data-rights', ['locale' => app()->getLocale()]) }}" class="btn btn-outline-success rounded-pill px-4">
+                                <i class="bx bx-shield-quarter me-1"></i>
+                                {{ __('privacy.data_rights.title') }}
+                            </a>
+                        </div>
                         <div class="alert alert-warning border-0 rounded-3 py-2 px-3 small">
                             <i class="bx bx-building me-1"></i>
                             {!! __('privacy.rights.supervisory') !!}
