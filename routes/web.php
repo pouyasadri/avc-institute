@@ -8,6 +8,7 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\ConsultController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\CookieConsentController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\PropertyController;
 use App\Http\Controllers\QuestionController;
@@ -216,6 +217,9 @@ Route::prefix('{locale}')
         // Legal identity / Mentions Légales
         Route::view('/legal', 'pages.legal')->name('legal');
 
+        // Privacy Policy (GDPR)
+        Route::view('/privacy', 'pages.privacy')->name('privacy');
+
         // Auth routes localized
 
         // Debug route for locale detection (only in non-production)
@@ -228,6 +232,14 @@ Route::prefix('{locale}')
             })->name('locale.debug');
         }
     });
+
+// GDPR cookie-consent endpoint — outside locale group so banner works from any page
+Route::post('/gdpr/consent', [CookieConsentController::class, 'store'])->name('gdpr.consent');
+
+// Non-localized /privacy redirect → default locale (FA)
+Route::get('/privacy', function () {
+    return redirect('/fa/privacy', 301);
+});
 
 // Auth Routes (Non-Localized, defaults to FR often preferred for admin, or just default app locale)
 // User requested "just for the admin section", and "it should be in fr" for login.
