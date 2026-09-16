@@ -223,6 +223,23 @@
                                         <textarea name="message" class="form-control rounded-3" id="message" rows="5"
                                             required placeholder="{{ __('blog/show.message_placeholder') }}"></textarea>
                                     </div>
+                                    <div class="col-lg-12 mb-3">
+                                        <div class="form-check">
+                                            <input class="form-check-input @error('gdpr_consent') is-invalid @enderror"
+                                                   type="checkbox"
+                                                   name="gdpr_consent"
+                                                   id="gdpr_consent_comment"
+                                                   value="1"
+                                                   required
+                                                   {{ old('gdpr_consent') ? 'checked' : '' }}>
+                                            <label class="form-check-label small text-muted" for="gdpr_consent_comment">
+                                                {!! __('privacy.form.gdpr_consent_label', ['url' => route('privacy', ['locale' => $currentLocale])]) !!}
+                                            </label>
+                                            @error('gdpr_consent')
+                                                <div class="invalid-feedback">{{ $message }}</div>
+                                            @enderror
+                                        </div>
+                                    </div>
                                     <div class="col-lg-12">
                                         <button type="submit" class="default-btn border-0 w-100">
                                             {{ __('blog/show.submit_button') }}

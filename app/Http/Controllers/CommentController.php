@@ -16,20 +16,24 @@ class CommentController extends Controller
             'email' => 'required|email|max:255',
             'msg_subject' => 'nullable|string|max:255',
             'message' => 'required|string',
+            'gdpr_consent' => 'required|accepted',
         ]);
 
-        $comment = Comment::create([
+        Comment::create([
             'blog_post_id' => $blog->id,
             'locale' => $locale,
             'name' => $validated['name'],
             'email' => $validated['email'],
             'subject' => $validated['msg_subject'] ?? null,
             'body' => $validated['message'],
-            'is_approved' => false, // Pending approval
+            'is_approved' => false,
+            'gdpr_consent' => true,
+            'consent_given_at' => now(),
+            'privacy_policy_version' => config('gdpr.privacy_policy_version', '1.0'),
         ]);
 
         return redirect()
             ->back()
-            ->with('success', __('blog/show.comment_submitted')); // We might need to add this translation key
+            ->with('success', __('blog/show.comment_submitted'));
     }
 }
