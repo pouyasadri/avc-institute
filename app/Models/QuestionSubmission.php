@@ -3,9 +3,12 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class QuestionSubmission extends Model
 {
+    use SoftDeletes;
+
     protected $fillable = [
         'name',
         'email',
@@ -17,11 +20,17 @@ class QuestionSubmission extends Model
         'locale',
         'ip_address',
         'user_agent',
+        'gdpr_consent',
+        'consent_given_at',
+        'privacy_policy_version',
     ];
 
     protected $casts = [
+        'gdpr_consent' => 'boolean',
+        'consent_given_at' => 'datetime',
         'created_at' => 'datetime',
         'updated_at' => 'datetime',
+        'deleted_at' => 'datetime',
     ];
 
     // Query scopes for filtering
