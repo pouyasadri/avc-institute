@@ -18,3 +18,6 @@ yarn-error.log
 /.idea
 /.vscode
 .DS_Store
+/scratch/
+*.sql
+applyvipconseil.com-Performance-on-Search-Generative-AI-Features-2026-09-01/
