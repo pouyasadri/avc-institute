@@ -3,12 +3,14 @@
 use App\Http\Controllers\Admin\AdminUserController;
 use App\Http\Controllers\Admin\ConsultingController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\DataRightsAdminController;
 use App\Http\Controllers\BlogCategoryController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\ConsultController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\CookieConsentController;
+use App\Http\Controllers\DataRightsController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\PropertyController;
 use App\Http\Controllers\QuestionController;
@@ -220,6 +222,12 @@ Route::prefix('{locale}')
         // Privacy Policy (GDPR)
         Route::view('/privacy', 'pages.privacy')->name('privacy');
 
+        // Data-Subject Rights Request Form (Art. 15–22 GDPR)
+        Route::get('/data-rights', [DataRightsController::class, 'showForm'])->name('data-rights');
+        Route::post('/data-rights', [DataRightsController::class, 'submitRequest'])
+            ->name('data-rights.submit')
+            ->middleware('throttle:5,60');  // 5 requests per 60 minutes per IP
+
         // Auth routes localized
 
         // Debug route for locale detection (only in non-production)
@@ -257,6 +265,12 @@ Route::middleware(['admin.locale'])->group(function () {
         Route::resource('comments', App\Http\Controllers\Admin\CommentController::class)->only(['index', 'update', 'destroy']);
         Route::resource('consulting', ConsultingController::class)->only(['index', 'show', 'destroy']);
         Route::resource('admins', AdminUserController::class)->only(['index', 'create', 'store', 'destroy']);
+
+        // GDPR — Data-Rights Requests (Art. 15–22)
+        Route::resource('data-rights', DataRightsAdminController::class)
+            ->only(['index', 'show', 'update']);
+        Route::delete('data-rights/{dataRight}/erase', [DataRightsAdminController::class, 'eraseData'])
+            ->name('data-rights.erase');
     });
 });
 
