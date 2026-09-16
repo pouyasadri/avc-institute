@@ -11,6 +11,7 @@ use App\Http\Middleware\HandleMarkdownRequests;
 use App\Http\Middleware\PreventRequestsDuringMaintenance;
 use App\Http\Middleware\RedirectIfAuthenticated;
 use App\Http\Middleware\SanitizeTrackingAndLegacyParameters;
+use App\Http\Middleware\SecurityHeaders;
 use App\Http\Middleware\SetLocale;
 use App\Http\Middleware\TrimStrings;
 use App\Http\Middleware\TrustProxies;
@@ -59,6 +60,7 @@ return Application::configure(basePath: dirname(__DIR__))
             ConvertEmptyStringsToNull::class,
             SanitizeTrackingAndLegacyParameters::class,
             CheckRedirects::class,
+            SecurityHeaders::class,
         ]);
 
         // Web middleware group
