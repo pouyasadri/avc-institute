@@ -267,15 +267,18 @@ class SitemapController extends Controller
         }
 
         // Other static pages for each locale
-        $staticPages = ['consult', 'contactUs', 'legal'];
+        $staticPages = ['calculator', 'consult', 'contactUs', 'legal'];
         foreach ($locales as $locale) {
             foreach ($staticPages as $page) {
                 $viewName = $page === 'contactUs' ? 'pages.contact' : "pages.{$page}";
+                $pagePriority = $page === 'calculator' ? 0.85 : ($page === 'consult' ? 0.8 : config('seo.sitemap.priorities.static_page', 0.6));
+                $pageFreq = $page === 'calculator' ? 'weekly' : config('seo.sitemap.changefreq.static_page', 'monthly');
+
                 $urls[] = [
                     'loc' => "{$baseUrl}/{$locale}/{$page}",
                     'lastmod' => $getLastmod($viewName, ["{$locale}/".($page === 'contactUs' ? 'contact' : $page).'.php']),
-                    'changefreq' => config('seo.sitemap.changefreq.static_page', 'monthly'),
-                    'priority' => config('seo.sitemap.priorities.static_page', 0.6),
+                    'changefreq' => $pageFreq,
+                    'priority' => $pagePriority,
                     'alternates' => $generateAlternates("/{$page}"),
                 ];
             }

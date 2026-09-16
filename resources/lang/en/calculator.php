@@ -50,4 +50,18 @@ return [
     'cta_desc' => 'Our immigration specialists verify bank certificates, sponsor documentation, and motivational dossiers according to strict consular guidelines.',
     'cta_button' => 'Request Case Evaluation & Book Consultation',
     'disclaimer' => 'Regulatory Note: Benchmarks are based on current 2026 French Ministry of the Interior regulations, CROUS data, and official student living indices.',
+
+    // Extended Content & Teaser
+    'faq_heading' => 'Frequently Asked Questions: France Student Visa Financial Requirements',
+    'table_heading' => 'Comparative Monthly Living & Accommodation Costs Across French Student Cities (2026)',
+    'table_city' => 'University City',
+    'table_crous' => 'CROUS Dorm',
+    'table_colocation' => 'Shared Flat (Colocation)',
+    'table_studio' => 'Private Studio',
+    'table_caf' => 'CAF Allowance',
+    'table_action' => 'Calculate for this City',
+    'teaser_badge' => 'Smart 2026 Budget Calculator',
+    'teaser_title' => 'Calculate Real Living Costs & Minimum Visa Proof for :city',
+    'teaser_desc' => 'Estimate housing rent, monthly CAF subsidies, tuition tiers, and consular approval risk factors.',
+    'teaser_btn' => 'Open Budget Calculator',
 ];

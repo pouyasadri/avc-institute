@@ -90,6 +90,12 @@
                                 </a>
                             </li>
                             <li>
+                                <a href="{{ route('calculator', ['locale' => app()->getLocale()]) }}">
+                                    <i class="right-icon bx {{ $chevronsDir }}"></i>
+                                    {{ __('layout.footer.links.calculator') }}
+                                </a>
+                            </li>
+                            <li>
                                 <a href="{{ route('index', ['locale' => app()->getLocale()]) }}#about">
                                     <i class="right-icon bx {{ $chevronsDir }}"></i>
                                     {{ __('layout.footer.links.about') }}

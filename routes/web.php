@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\DataRightsAdminController;
 use App\Http\Controllers\BlogCategoryController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\CalculatorController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\ConsultController;
 use App\Http\Controllers\ContactController;
@@ -196,6 +197,9 @@ Route::prefix('{locale}')
             Route::get('/{id}/delete', $propertiesComingSoon)->name('property.delete');
             Route::get('/{id}', $propertiesComingSoon)->name('property.show');
         });
+
+        // Calculator Route
+        Route::get('/calculator', [CalculatorController::class, 'index'])->name('calculator');
 
         // Service Routes
         Route::get('/services', [ServiceController::class, 'index'])->name('services.index');

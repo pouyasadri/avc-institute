@@ -118,8 +118,8 @@
                         <div class="article-content">
                             {!! $cityContentWithIds !!}
 
-                            {{-- Interactive Student Budget & Visa Proof Calculator --}}
-                            <x-calculator.student-budget :initialCity="$cityName ?? 'paris'" />
+                            {{-- Interactive Student Budget & Visa Proof Calculator Teaser --}}
+                            <x-calculator.teaser-card :cityName="$cityName ?? 'paris'" />
 
                             {{-- Immigration, Settlement & Visa Evaluation CTA Banner --}}
                             <x-cta.city-evaluation :cityName="$cityName ?? ''" />

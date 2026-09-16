@@ -97,9 +97,7 @@
                         @endphp
 
                         @if ($isVisaOrCostBlog)
-                            <div class="my-5">
-                                <x-calculator.student-budget initialCity="paris" />
-                            </div>
+                            <x-calculator.teaser-card />
                         @endif
 
                         @if (! empty($blogFaqs))

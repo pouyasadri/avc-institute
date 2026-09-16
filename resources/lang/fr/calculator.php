@@ -50,4 +50,18 @@ return [
     'cta_desc' => 'Les experts A.V.C examinent vos attestations bancaires, garants financiers et lettre de motivation selon les exigences strictes du consulat.',
     'cta_button' => 'Demander une évaluation de dossier & Réserver un conseil',
     'disclaimer' => 'Mention réglementaire : Données conformes aux barèmes 2026 du Ministère de l’Intérieur, du réseau CROUS et des observatoires de la vie étudiante.',
+
+    // Extended Content & Teaser
+    'faq_heading' => 'Foire Aux Questions : Ressources Financières & Visa Étudiant France',
+    'table_heading' => 'Comparatif du Coût de la Vie & Logement Étudiant dans les Métropoles Françaises (2026)',
+    'table_city' => 'Ville Universitaire',
+    'table_crous' => 'Résidence CROUS',
+    'table_colocation' => 'Colocation',
+    'table_studio' => 'Studio Privé',
+    'table_caf' => 'Aide CAF (APL)',
+    'table_action' => 'Simuler pour cette ville',
+    'teaser_badge' => 'Simulateur Intelligent 2026',
+    'teaser_title' => 'Calculez le coût de la vie réel et les ressources visa requises pour :city',
+    'teaser_desc' => 'Estimez vos loyers, déductions CAF, frais universitaires et sécurisez votre demande de visa étudiant.',
+    'teaser_btn' => 'Accéder au Simulateur',
 ];

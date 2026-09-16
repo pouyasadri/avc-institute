@@ -124,9 +124,7 @@
                             @endif
 
                             @if($slug === 'student-visa')
-                                <div class="my-5">
-                                    <x-calculator.student-budget initialCity="paris" />
-                                </div>
+                                <x-calculator.teaser-card />
                             @endif
 
                             @if(isset($serviceDetails['benefits']) && is_array($serviceDetails['benefits']))

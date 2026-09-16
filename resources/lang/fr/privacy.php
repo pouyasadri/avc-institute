@@ -208,7 +208,6 @@ return [
         'body' => 'Pour toute question relative à la vie privée ou pour exercer vos droits, contactez-nous à :',
     ],
 
-
     // Libellé de consentement du formulaire
     'form' => [
         'gdpr_consent_label' => 'J\'ai lu et j\'accepte la <a href=":url" target="_blank" class="text-decoration-underline">Politique de confidentialité</a> et consens au traitement de mes données personnelles aux fins du traitement de ma demande.',
@@ -220,28 +219,28 @@ return [
         'meta' => [
             'title' => 'Vos droits — Institut A.V.C | RGPD Art. 15–22',
         ],
-        'title'    => 'Exercez vos droits sur vos données',
+        'title' => 'Exercez vos droits sur vos données',
         'subtitle' => 'Soumettez une demande pour accéder, corriger, supprimer ou exporter vos données personnelles.',
         'response_time_heading' => 'Réponse sous 30 jours',
-        'response_time_body'    => 'Conformément à l\'<strong>article 12 du RGPD</strong>, nous sommes tenus de répondre à toutes les demandes dans un délai de 30 jours. Vous recevrez une confirmation par e-mail immédiatement.',
+        'response_time_body' => 'Conformément à l\'<strong>article 12 du RGPD</strong>, nous sommes tenus de répondre à toutes les demandes dans un délai de 30 jours. Vous recevrez une confirmation par e-mail immédiatement.',
         'form' => [
-            'heading'           => 'Soumettre une demande de droit',
-            'email'             => 'Votre adresse e-mail',
-            'email_hint'        => 'Doit correspondre à l\'adresse utilisée lors d\'une soumission sur notre site.',
-            'request_type'      => 'Type de demande',
-            'notes'             => 'Précisions supplémentaires (facultatif)',
+            'heading' => 'Soumettre une demande de droit',
+            'email' => 'Votre adresse e-mail',
+            'email_hint' => 'Doit correspondre à l\'adresse utilisée lors d\'une soumission sur notre site.',
+            'request_type' => 'Type de demande',
+            'notes' => 'Précisions supplémentaires (facultatif)',
             'notes_placeholder' => 'Décrivez votre demande plus en détail si nécessaire…',
-            'submit'            => 'Envoyer la demande',
-            'success'           => 'Votre demande a été reçue. Vous recevrez un e-mail de confirmation. Nous répondrons dans un délai de 30 jours (RGPD Art. 12).',
-            'error'             => 'Une erreur s\'est produite. Veuillez réessayer ou nous contacter directement à dpo@applyvipconseil.com.',
+            'submit' => 'Envoyer la demande',
+            'success' => 'Votre demande a été reçue. Vous recevrez un e-mail de confirmation. Nous répondrons dans un délai de 30 jours (RGPD Art. 12).',
+            'error' => 'Une erreur s\'est produite. Veuillez réessayer ou nous contacter directement à dpo@applyvipconseil.com.',
         ],
         'types' => [
-            'access'        => ['label' => 'Droit d\'accès',               'article' => 'Art. 15', 'desc' => 'Obtenir une copie des données personnelles que nous détenons.'],
+            'access' => ['label' => 'Droit d\'accès',               'article' => 'Art. 15', 'desc' => 'Obtenir une copie des données personnelles que nous détenons.'],
             'rectification' => ['label' => 'Droit de rectification',        'article' => 'Art. 16', 'desc' => 'Corriger des données inexactes sans délai excessif.'],
-            'erasure'       => ['label' => 'Droit à l\'effacement',         'article' => 'Art. 17', 'desc' => 'Demander la suppression de vos données (« droit à l\'oubli »).'],
-            'portability'   => ['label' => 'Droit à la portabilité',        'article' => 'Art. 20', 'desc' => 'Recevoir vos données dans un format structuré et lisible par machine.'],
-            'objection'     => ['label' => 'Droit d\'opposition',           'article' => 'Art. 21', 'desc' => 'Vous opposer au traitement fondé sur les intérêts légitimes.'],
-            'restriction'   => ['label' => 'Droit à la limitation',         'article' => 'Art. 18', 'desc' => 'Demander la suspension du traitement en attente d\'une décision.'],
+            'erasure' => ['label' => 'Droit à l\'effacement',         'article' => 'Art. 17', 'desc' => 'Demander la suppression de vos données (« droit à l\'oubli »).'],
+            'portability' => ['label' => 'Droit à la portabilité',        'article' => 'Art. 20', 'desc' => 'Recevoir vos données dans un format structuré et lisible par machine.'],
+            'objection' => ['label' => 'Droit d\'opposition',           'article' => 'Art. 21', 'desc' => 'Vous opposer au traitement fondé sur les intérêts légitimes.'],
+            'restriction' => ['label' => 'Droit à la limitation',         'article' => 'Art. 18', 'desc' => 'Demander la suspension du traitement en attente d\'une décision.'],
         ],
     ],
 ];

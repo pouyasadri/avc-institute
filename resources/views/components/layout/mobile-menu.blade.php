@@ -64,6 +64,12 @@
                     </a>
                 </li>
                 <li>
+                    <a href="{{ route('calculator', ['locale' => app()->getLocale()]) }}"
+                        class="{{ request()->routeIs('calculator*') ? 'active' : '' }}">
+                        {{ __('layout.nav.calculator') }}
+                    </a>
+                </li>
+                <li>
                     <a href="{{ url(app()->getLocale() . '/contactUs') }}"
                         class="{{ request()->is(app()->getLocale() . '/contactUs*') ? 'active' : '' }}">
                         {{ __('layout.nav.contact') }}

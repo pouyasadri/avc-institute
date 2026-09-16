@@ -197,18 +197,30 @@ class StudentBudgetCalculatorTest extends TestCase
         $this->assertStringContainsString('Loyer (brut avant APL)', $renderedFr);
     }
 
-    public function test_city_page_renders_interactive_calculator(): void
+    public function test_city_page_renders_calculator_teaser(): void
     {
         $response = $this->get('/fa/cities/paris');
         $response->assertStatus(200);
-        $response->assertSee('student-budget-calculator', false);
-        $response->assertSee('محاسبه‌گر تمکن مالی ویزا', false);
+        $response->assertSee('avc-calculator-teaser', false);
+        $response->assertSee('محاسبه‌گر هوشمند تمکن ۲۰۲۶', false);
+        $response->assertSee('/fa/calculator?city=paris', false);
     }
 
-    public function test_student_visa_service_page_renders_calculator(): void
+    public function test_student_visa_service_page_renders_calculator_teaser(): void
     {
         $response = $this->get('/fa/services/student-visa');
         $response->assertStatus(200);
+        $response->assertSee('avc-calculator-teaser', false);
+        $response->assertSee('/fa/calculator', false);
+    }
+
+    public function test_standalone_calculator_page_renders_successfully(): void
+    {
+        $response = $this->get('/fa/calculator');
+        $response->assertStatus(200);
         $response->assertSee('student-budget-calculator', false);
+        $response->assertSee('calculator-page-area', false);
+        $response->assertSee('calculator-guide-area', false);
+        $response->assertSee('calculator-faqs-accordion', false);
     }
 }
