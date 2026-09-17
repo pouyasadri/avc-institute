@@ -74,9 +74,10 @@ class LocaleDetector
             }
         }
 
-        // Config fallback
+        // Config fallback (defaults to 'fa')
+        $fallbackLocale = config('localization.fallback_locale', config('app.locale', 'fa'));
         $detectionMethods[] = [
-            'locale' => config('app.locale', 'en'),
+            'locale' => in_array($fallbackLocale, $supported, true) ? $fallbackLocale : 'fa',
             'priority' => $priority['config'] ?? 0,
             'source' => 'config',
         ];

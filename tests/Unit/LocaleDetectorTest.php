@@ -127,7 +127,7 @@ class LocaleDetectorTest extends TestCase
      */
     public function test_falls_back_to_config_locale()
     {
-        config(['app.locale' => 'en']);
+        config(['localization.fallback_locale' => 'en', 'app.locale' => 'en']);
 
         $request = Request::create('/', 'GET');
 

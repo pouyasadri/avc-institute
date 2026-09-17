@@ -9,15 +9,18 @@ return [
     // Locales that are right-to-left
     'rtl_locales' => ['fa'],
 
-    // Enable IP-based geolocation detection
-    'enable_ip_detection' => env('LOCALE_IP_DETECTION', true),
+    // Enable IP-based geolocation detection (disabled by default for GDPR Chapter V compliance)
+    'enable_ip_detection' => env('LOCALE_IP_DETECTION', false),
+
+    // Default fallback locale when detection yields no match
+    'fallback_locale' => env('LOCALE_FALLBACK', 'fa'),
 
     // Detection priority order (higher number = higher priority)
     // route: from URL parameter
     // session: from user's session
     // browser: from Accept-Language header
     // ip: from IP geolocation
-    // config: fallback to config('app.locale')
+    // config: fallback to fallback_locale / config('app.locale')
     'detection_priority' => [
         'route' => 100,
         'session' => 90,
