@@ -38,9 +38,9 @@ return [
         'universities' => 'Universities',
         'cities' => 'Cities',
         'houses' => 'Real Estate',
-        'calculator' => 'Budget Calculator',
-        'contact' => 'Contact us',
-        'consult' => 'Free Consultation',
+        'calculator' => 'Calculator',
+        'contact' => 'Contact',
+        'consult' => 'Consultation',
         'menu' => 'Menu',
     ],
 

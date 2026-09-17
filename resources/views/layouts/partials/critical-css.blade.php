@@ -23,7 +23,7 @@
     .navbar-area { background: transparent; }
     .main-nav { display: block; }
     .mobile-nav { display: none; }
-    .navbar-brand img { max-width: 8rem; height: auto; }
+    .navbar-brand img, .navbar-desktop-logo { max-height: 58px; width: auto; }
 
     /* ── Hero / Slider shell — prevents blank white flash ─────────── */
     .eorik-slider-area { position: relative; overflow: hidden; background: #111; }
@@ -69,8 +69,9 @@
         .main-nav  { display: none; }
         /* No background here — the parent .eorik-nav-style-four handles it
            (transparent by default, dark via .is-sticky added by scroll JS). */
-        .mobile-nav { display: flex; justify-content: space-between; align-items: center; padding: .75rem 1rem; }
-        .mobile-nav .logo img { width: 4rem !important; padding-bottom: 0 !important; }
+        .mobile-nav { display: flex; justify-content: flex-end; align-items: center; padding: 0; min-height: 44px; position: relative; }
+        .mobile-header-logo { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: inline-flex; align-items: center; justify-content: center; }
+        .mobile-nav-logo-img { height: 38px !important; width: auto !important; padding-bottom: 0 !important; }
         .mobile-menu-toggle { background: none; border: none; cursor: pointer; color: #fff; font-size: 1.75rem; line-height: 1; }
         .eorik-slider-text h1 { font-size: 1.5rem; }
     }

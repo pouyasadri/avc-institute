@@ -38,9 +38,9 @@ return [
         'universities' => 'Universités',
         'cities' => 'Villes',
         'houses' => 'Immobilier',
-        'calculator' => 'Simulateur Budget',
-        'contact' => 'Contactez-nous',
-        'consult' => 'Consultation Gratuite',
+        'calculator' => 'Simulateur',
+        'contact' => 'Contact',
+        'consult' => 'Consultation',
     ],
 
     'sidebar' => [

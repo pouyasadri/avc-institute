@@ -37,7 +37,7 @@
         top: 0;
         width: 100%;
         z-index: 1030;
-        padding-top: 20px;
+        padding-top: 14px;
     }
 
     .navbar-area {
@@ -47,16 +47,31 @@
         border: 1px solid var(--glass-border);
         box-shadow: var(--glass-shadow);
         transition: all 0.4s ease;
-        padding: 10px 0;
+        padding: 5px 0;
         margin: 0 auto;
         width: 90%;
-        max-width: 1200px;
+        max-width: 1240px;
         border-radius: 50px;
+    }
+
+    /* Reset nested vertical paddings from legacy stylesheets */
+    .eorik-nav-style .navbar-area .main-nav,
+    .eorik-nav-style-four .navbar-area .main-nav,
+    .eorik-nav-style .navbar-area.is-sticky .main-nav,
+    .eorik-nav-style-four .navbar-area.is-sticky .main-nav {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    .main-nav nav.navbar {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        min-height: auto;
     }
 
     /* Sticky State */
     .eorik-nav-style-four.is-sticky {
-        padding-top: 10px;
+        padding-top: 8px;
     }
 
     .eorik-nav-style-four.is-sticky .navbar-area {
@@ -66,6 +81,7 @@
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         border: 1px solid rgba(255, 255, 255, 0.6);
         border-radius: 50px;
+        padding: 3px 0;
     }
 
     /* Navbar Links */
@@ -73,12 +89,13 @@
         color: var(--text-dark) !important;
         font-family: 'Inter', sans-serif;
         font-weight: 500;
-        font-size: 15px;
-        padding: 10px 20px !important;
-        margin: 0 4px;
+        font-size: 13.5px;
+        padding: 6px 12px !important;
+        margin: 0 2px;
         border-radius: 50px;
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         position: relative;
+        line-height: 1.4;
     }
 
     /* Hover Effect */
@@ -99,9 +116,29 @@
         transform: translateY(-1px);
     }
 
-    /* Brand Logo */
+    /* Brand Logo — Prominent & crisp on desktop */
+    .navbar-brand {
+        padding: 0 !important;
+        margin: 0 !important;
+        display: inline-flex !important;
+        align-items: center !important;
+    }
+
+    .navbar-desktop-logo,
     .navbar-brand img {
+        height: 56px !important;
+        width: auto !important;
+        max-height: 58px !important;
+        display: block !important;
+        object-fit: contain !important;
         transition: all 0.3s ease;
+    }
+
+    .eorik-nav-style-four.is-sticky .navbar-desktop-logo,
+    .eorik-nav-style-four.is-sticky .navbar-brand img {
+        height: 46px !important;
+        max-height: 46px !important;
+        width: auto !important;
     }
 
     /* Language Switcher */
@@ -117,13 +154,13 @@
         background: rgba(15, 58, 128, 0.05);
         border: 1px solid rgba(15, 58, 128, 0.1);
         color: var(--text-dark);
-        padding: 8px 16px;
+        padding: 5px 12px;
         border-radius: 50px;
-        font-size: 14px;
+        font-size: 12.5px;
         font-weight: 600;
         display: flex;
         align-items: center;
-        gap: 8px;
+        gap: 5px;
         transition: all 0.3s ease;
         cursor: pointer;
     }
@@ -214,7 +251,7 @@
         width: 100%;
         height: 100%;
         background: rgba(0, 0, 0, 0.5);
-        z-index: 1040;
+        z-index: 10005;
         opacity: 0;
         visibility: hidden;
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -235,7 +272,7 @@
         max-width: 85vw;
         background: white;
         box-shadow: -4px 0 20px rgba(0, 0, 0, 0.15);
-        z-index: 1041;
+        z-index: 10006;
         display: flex;
         flex-direction: column;
         transform: translateX(100%);
@@ -345,20 +382,24 @@
 
     /* Drawer Footer */
     .mobile-menu-footer {
-        padding: 20px;
+        padding: 16px 20px;
+        padding-bottom: max(20px, env(safe-area-inset-bottom));
         border-top: 1px solid rgba(15, 58, 128, 0.1);
         flex-shrink: 0;
+        background: #ffffff;
+        position: relative;
+        z-index: 2;
     }
 
     .mobile-language-switcher {
-        margin-bottom: 20px;
+        margin-bottom: 16px;
     }
 
     .mobile-language-switcher .language-label {
         color: var(--primary-blue);
         display: block;
-        margin-bottom: 12px;
-        font-size: 12px;
+        margin-bottom: 8px;
+        font-size: 11px;
         font-weight: 600;
         text-transform: uppercase;
         letter-spacing: 0.5px;
@@ -367,20 +408,21 @@
 
     .mobile-language-switcher .language-buttons {
         display: flex;
-        gap: 8px;
+        gap: 6px;
     }
 
     .mobile-language-switcher .lang-btn {
         color: var(--primary-blue);
         border: 1.5px solid rgba(15, 58, 128, 0.2);
         background: rgba(15, 58, 128, 0.05);
-        padding: 8px 16px;
+        padding: 7px 6px;
         border-radius: 8px;
-        font-size: 14px;
+        font-size: 13px;
         font-weight: 600;
         transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
         flex: 1;
         text-align: center;
+        white-space: nowrap;
     }
 
     .mobile-language-switcher .lang-btn:hover {
@@ -453,13 +495,15 @@
     }
 
     body.rtl .main-nav nav .navbar-nav .nav-item a {
-        font-size: 16px;
+        font-size: 13.5px;
         font-weight: 500;
         letter-spacing: 0;
+        padding: 6px 11px !important;
+        margin: 0 1px;
     }
 
     body.rtl .mobile-menu-nav ul li a {
-        font-size: 18px;
+        font-size: 17px;
     }
 
     /* Focus States */
@@ -474,6 +518,113 @@
         overflow: hidden;
     }
 
+    /* Prevent floating action buttons (WhatsApp, Sticky CTA) from overlapping mobile menu drawer / language switcher */
+    body.mobile-menu-open .whatsapp-float,
+    body.mobile-menu-open .sticky-mobile-cta {
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+        transform: scale(0.8) !important;
+        transition: opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+                    visibility 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+                    transform 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    }
+
+    /* Mobile Navigation Bar & Centered Logo */
+    @media (max-width: 991px) {
+        .eorik-nav-style-four {
+            padding-top: 10px;
+        }
+
+        .eorik-nav-style-four.is-sticky {
+            padding-top: 6px;
+        }
+
+        .navbar-area {
+            padding: 5px 14px !important;
+            width: 92% !important;
+            border-radius: 40px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .mobile-nav {
+            display: flex !important;
+            align-items: center !important;
+            width: 100% !important;
+            min-height: 44px;
+            padding: 0 !important;
+            margin: 0 !important;
+            position: relative !important;
+        }
+
+        /* Completely neutralize legacy selectors from meanmenu, rtl.css, and responsive.css */
+        .mobile-nav .logo {
+            display: none !important;
+        }
+
+        /* Centered Mobile Logo: Exactly centered regardless of language direction */
+        .mobile-header-logo {
+            position: absolute !important;
+            left: 50% !important;
+            top: 50% !important;
+            transform: translate(-50%, -50%) !important;
+            right: auto !important;
+            bottom: auto !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            line-height: 1 !important;
+            z-index: 2 !important;
+            text-decoration: none !important;
+        }
+
+        .mobile-nav-logo-img {
+            height: 38px !important;
+            width: auto !important;
+            max-height: 40px !important;
+            display: block !important;
+            object-fit: contain !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            transition: transform 0.2s ease;
+        }
+
+        /* Hamburger Toggle anchored at the corner */
+        .mobile-menu-toggle {
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            width: 40px !important;
+            height: 40px !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            line-height: 1 !important;
+            border-radius: 8px;
+            position: relative;
+            z-index: 3;
+        }
+
+        body.ltr .mobile-menu-toggle {
+            margin-left: auto !important;
+            margin-right: 0 !important;
+        }
+
+        body.rtl .mobile-menu-toggle {
+            margin-right: auto !important;
+            margin-left: 0 !important;
+        }
+
+        .mobile-menu-toggle i {
+            font-size: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
     /* Optimize LTR desktop navbar layout to prevent overflow on English/French locales */
     body.ltr .navbar-area {
         width: 95%;
@@ -481,12 +632,12 @@
     }
     body.ltr .main-nav nav .navbar-nav .nav-item a {
         font-family: 'Inter', sans-serif;
-        font-size: 14px;
-        padding: 8px 12px !important;
-        margin: 0 2px;
+        font-size: 13px;
+        padding: 6px 10px !important;
+        margin: 0 1px;
     }
     body.ltr .navbar-consult-cta {
-        padding: 8px 14px;
-        font-size: 0.85rem;
-        margin-left: 10px;
+        padding: 6px 14px !important;
+        font-size: 0.8rem !important;
+        margin-left: 8px;
     }
