@@ -332,6 +332,24 @@
         @media (max-width: 991px) {
             .whatsapp-float { bottom: 90px; }
         }
+
+        /* Footer Legal Links Bar */
+        .footer-legal-links {
+            font-size: 14px;
+        }
+        .footer-legal-links .legal-link {
+            color: rgba(255, 255, 255, 0.75);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .footer-legal-links .legal-link:hover {
+            color: #FF8C00;
+        }
+        .footer-legal-links .divider {
+            color: rgba(255, 255, 255, 0.35);
+            font-size: 12px;
+            user-select: none;
+        }
     </style>
 
 
