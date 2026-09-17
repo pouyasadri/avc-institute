@@ -55,6 +55,12 @@
                 <i class='bx bxs-user-badge'></i> Administrateurs
             </a>
         </div>
+        <div class="admin-nav-item">
+            <a href="{{ route('admin.data-rights.index') }}"
+                class="admin-nav-link {{ request()->routeIs('admin.data-rights.*') ? 'active' : '' }}">
+                <i class='bx bx-shield-quarter'></i> RGPD & Droits
+            </a>
+        </div>
 
         <div class="mt-auto pt-4 px-3 border-top border-secondary">
             <a href="{{ url('/') }}" class="admin-nav-link text-warning">

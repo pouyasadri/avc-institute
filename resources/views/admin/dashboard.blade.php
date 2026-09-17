@@ -154,10 +154,16 @@
                 <div class="card-body px-4">
                     <div class="d-grid gap-2">
                         <a href="{{ route('admin.blog.create') }}" class="btn btn-outline-primary text-start">
-                            <i class='bx bx-plus-circle me-2'></i> nouvel Article
+                            <i class='bx bx-plus-circle me-2'></i> Nouvel Article
                         </a>
                         <a href="{{ route('admin.admins.create') }}" class="btn btn-outline-secondary text-start">
                             <i class='bx bx-user-plus me-2'></i> Ajouter un Admin
+                        </a>
+                        <a href="{{ route('admin.data-rights.index') }}" class="btn btn-outline-success text-start">
+                            <i class='bx bx-shield-quarter me-2'></i> Demandes RGPD
+                            @if(!empty($stats['pending_data_rights']) && $stats['pending_data_rights'] > 0)
+                                <span class="badge bg-danger ms-auto float-end">{{ $stats['pending_data_rights'] }}</span>
+                            @endif
                         </a>
                     </div>
                 </div>

@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Blog;
 use App\Models\Comment;
 use App\Models\ConsultingSubmission;
+use App\Models\DataRightsRequest;
 use App\Models\QuestionSubmission;
 use Illuminate\Support\Facades\Cache;
 
@@ -20,6 +21,8 @@ class DashboardController extends Controller
                 'comments' => Comment::count(),
                 'consultations' => ConsultingSubmission::count(),
                 'pending_comments' => Comment::where('is_approved', false)->count(),
+                'data_rights' => DataRightsRequest::count(),
+                'pending_data_rights' => DataRightsRequest::where('status', 'pending')->count(),
             ];
         });
 
