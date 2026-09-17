@@ -96,33 +96,9 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="{{ route('index', ['locale' => app()->getLocale()]) }}#about">
-                                    <i class="right-icon bx {{ $chevronsDir }}"></i>
-                                    {{ __('layout.footer.links.about') }}
-                                </a>
-                            </li>
-                            <li>
                                 <a href="{{ url(app()->getLocale() . '/contactUs') }}">
                                     <i class="right-icon bx {{ $chevronsDir }}"></i>
                                     {{ __('layout.footer.links.contact') }}
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{ route('sitemap') }}">
-                                    <i class="right-icon bx {{ $chevronsDir }}"></i>
-                                    {{ __('layout.footer.links.sitemap') }}
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{ route('legal', ['locale' => app()->getLocale()]) }}">
-                                    <i class="right-icon bx {{ $chevronsDir }}"></i>
-                                    {{ __('layout.footer.links.legal') }}
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{ route('privacy', ['locale' => app()->getLocale()]) }}">
-                                    <i class="right-icon bx {{ $chevronsDir }}"></i>
-                                    {{ __('layout.footer.links.privacy') }}
                                 </a>
                             </li>
                         </ul>
@@ -185,10 +161,37 @@
 
         {{-- Footer Bottom --}}
         <div class="footer-bottom-area">
-            <div class="row align-items-center">
-                <div class="col-lg-12">
-                    <div class="designed">
-                        <p>{{ __('layout.footer.designed_by') }} <a href="https://www.pouyasadri.com"
+            <div class="row align-items-center g-3">
+                <div class="col-md-7 col-12">
+                    <ul class="footer-legal-links list-unstyled d-flex flex-wrap align-items-center mb-0 gap-3 justify-content-center justify-content-md-start">
+                        <li>
+                            <a href="{{ route('legal', ['locale' => app()->getLocale()]) }}" class="legal-link">
+                                {{ __('layout.footer.links.legal') }}
+                            </a>
+                        </li>
+                        <li class="divider" aria-hidden="true">•</li>
+                        <li>
+                            <a href="{{ route('privacy', ['locale' => app()->getLocale()]) }}" class="legal-link">
+                                {{ __('layout.footer.links.privacy') }}
+                            </a>
+                        </li>
+                        <li class="divider" aria-hidden="true">•</li>
+                        <li>
+                            <a href="{{ route('data-rights', ['locale' => app()->getLocale()]) }}" class="legal-link">
+                                {{ __('layout.footer.links.data_rights') }}
+                            </a>
+                        </li>
+                        <li class="divider" aria-hidden="true">•</li>
+                        <li>
+                            <a href="{{ route('sitemap') }}" class="legal-link">
+                                {{ __('layout.footer.links.sitemap') }}
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-5 col-12">
+                    <div class="designed text-center text-md-{{ $isRtl ? 'start' : 'end' }}">
+                        <p class="mb-0">{{ __('layout.footer.designed_by') }} <a href="https://www.pouyasadri.com"
                                 target="_blank" rel="noopener noreferrer">PouyaSadri</a></p>
                     </div>
                 </div>

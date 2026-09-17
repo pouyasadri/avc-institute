@@ -82,6 +82,7 @@ return [
             'sitemap' => 'Sitemap',
             'legal' => 'Legal Identity',
             'privacy' => 'Privacy Policy',
+            'data_rights' => 'Data Rights',
         ],
         'services_title' => 'Our Services',
         'services' => [

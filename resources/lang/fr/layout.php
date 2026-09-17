@@ -81,6 +81,7 @@ return [
             'sitemap' => 'Plan du site',
             'legal' => 'Identité Légale',
             'privacy' => 'Politique de Confidentialité',
+            'data_rights' => 'Droits sur vos Données',
         ],
         'services_title' => 'Nos Services',
         'services' => [
