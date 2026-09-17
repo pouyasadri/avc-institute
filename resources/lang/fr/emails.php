@@ -44,4 +44,9 @@ return [
     ],
     'regards' => 'Cordialement,',
     'team' => 'L\'équipe A.V.C',
+    'gdpr' => [
+        'notice' => 'Cet e-mail vous a été envoyé suite à votre demande sur applyvipconseil.com. Vos données sont traitées conformément à l\'article 6(1)(b) du RGPD (mesures précontractuelles).',
+        'privacy_link' => 'Politique de confidentialité',
+        'rights_link' => 'Gérer vos données et exercer vos droits',
+    ],
 ];

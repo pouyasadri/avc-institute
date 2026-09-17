@@ -44,4 +44,9 @@ return [
     ],
     'regards' => 'Best regards,',
     'team' => 'The A.V.C Team',
+    'gdpr' => [
+        'notice' => 'This email was sent in response to your enquiry on applyvipconseil.com. Your data is processed in accordance with GDPR Article 6(1)(b) (pre-contractual measures).',
+        'privacy_link' => 'Privacy Policy',
+        'rights_link' => 'Manage Your Data & Rights',
+    ],
 ];
