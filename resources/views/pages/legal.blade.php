@@ -163,6 +163,89 @@
                                 </a>
                             </div>
 
+                            {{-- Direction de la Publication (LCEN Art. 6) --}}
+                            <div class="mt-5">
+                                <h3 class="h4 fw-bold text-dark mb-1">{{ __('legal.publication.title') }}</h3>
+                                <p class="text-muted small mb-3">{{ __('legal.publication.subtitle') }}</p>
+                                
+                                <div class="bg-light-subtle rounded-4 p-4 border">
+                                    <div class="data-row">
+                                        <div class="data-label">{{ __('legal.publication.director_label') }}</div>
+                                        <div class="data-value fw-bold text-dark">{{ __('legal.publication.director_value') }}</div>
+                                    </div>
+                                    <div class="data-row">
+                                        <div class="data-label">{{ __('legal.publication.contact_label') }}</div>
+                                        <div class="data-value">
+                                            <a href="mailto:{{ __('legal.publication.contact_value') }}" class="text-primary text-decoration-none">
+                                                {{ __('legal.publication.contact_value') }}
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {{-- Hébergement du site (LCEN Art. 6) --}}
+                            <div class="mt-5">
+                                <h3 class="h4 fw-bold text-dark mb-1">{{ __('legal.hosting.title') }}</h3>
+                                <p class="text-muted small mb-3">{{ __('legal.hosting.subtitle') }}</p>
+                                
+                                <div class="bg-light-subtle rounded-4 p-4 border">
+                                    <div class="data-row">
+                                        <div class="data-label">{{ __('legal.registration.fields.company_name') }}</div>
+                                        <div class="data-value fw-bold text-dark">{{ __('legal.hosting.provider_name') }}</div>
+                                    </div>
+                                    <div class="data-row">
+                                        <div class="data-label">{{ __('legal.registration.fields.address') }}</div>
+                                        <div class="data-value text-secondary">{{ __('legal.hosting.provider_address') }}</div>
+                                    </div>
+                                    <div class="data-row">
+                                        <div class="data-label">Infrastructure & Datacenter</div>
+                                        <div class="data-value">
+                                            <span class="badge bg-success bg-opacity-10 text-success border border-success px-2 py-1">
+                                                <i class='bx bx-check-shield'></i> {{ __('legal.hosting.datacenter_location') }}
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="data-row">
+                                        <div class="data-label">Site Web</div>
+                                        <div class="data-value">
+                                            <a href="{{ __('legal.hosting.website') }}" target="_blank" rel="noopener noreferrer" class="text-primary text-decoration-none">
+                                                {{ __('legal.hosting.website') }} <i class='bx bx-link-external small'></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {{-- Protection des Données & DPO (RGPD Art. 13) --}}
+                            <div class="mt-5">
+                                <h3 class="h4 fw-bold text-dark mb-1">{{ __('legal.privacy_dpo.title') }}</h3>
+                                <p class="text-muted small mb-3">{{ __('legal.privacy_dpo.subtitle') }}</p>
+                                
+                                <div class="rounded-4 p-4 border shadow-sm" style="background: #fbfcfe;">
+                                    <div class="data-row">
+                                        <div class="data-label">{{ __('legal.privacy_dpo.dpo_label') }}</div>
+                                        <div class="data-value">
+                                            <a href="mailto:{{ __('legal.privacy_dpo.dpo_email') }}" class="fw-bold text-primary text-decoration-none">
+                                                <i class='bx bx-envelope me-1'></i> {{ __('legal.privacy_dpo.dpo_email') }}
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="data-row">
+                                        <div class="data-label">{{ __('legal.privacy_dpo.authority_label') }}</div>
+                                        <div class="data-value text-secondary">{{ __('legal.privacy_dpo.authority_value') }}</div>
+                                    </div>
+                                    <div class="mt-4 pt-3 border-top d-flex gap-3 flex-wrap">
+                                        <a href="{{ route('privacy', ['locale' => $currentLocale]) }}" class="btn btn-outline-primary rounded-pill px-4 py-2 small fw-bold">
+                                            <i class='bx bx-shield-quarter me-1'></i> {{ __('legal.privacy_dpo.privacy_policy_button') }}
+                                        </a>
+                                        <a href="{{ route('data-rights', ['locale' => $currentLocale]) }}" class="btn btn-outline-success rounded-pill px-4 py-2 small fw-bold">
+                                            <i class='bx bx-user-check me-1'></i> {{ __('legal.privacy_dpo.data_rights_button') }}
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
                             <div class="mt-5 pt-4 border-top">
                                 <p class="text-muted small d-flex align-items-start gap-2">
                                     <i class="bx bx-info-circle mt-1"></i>

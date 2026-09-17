@@ -74,6 +74,36 @@ return [
         'inpi_button' => 'Ouvrir la fiche officielle →',
     ],
 
+    'publication' => [
+        'title' => 'Direction de la Publication',
+        'subtitle' => 'Conformément à l\'article 6 de la loi n° 2004-575 du 21 juin 2004 (LCEN)',
+        'director_label' => 'Directeur de la publication',
+        'director_value' => 'Président / Représentant légal d\'APPLY VIP CONSEIL',
+        'contact_label' => 'Contact de la rédaction',
+        'contact_value' => 'contact@applyvipconseil.com',
+    ],
+
+    'hosting' => [
+        'title' => 'Hébergement du Site Internet',
+        'subtitle' => 'Prestataire d\'hébergement et localisation des infrastructures',
+        'provider_name' => 'PlanetHoster Inc.',
+        'provider_address' => '4416 Louis-B.-Mayer, Laval (Grand Montréal), Québec H7P 0G1, Canada',
+        'datacenter_location' => 'Datacenter Paris (Île-de-France) — Données hébergées sur le territoire de l\'Union Européenne',
+        'website' => 'https://www.planethoster.com',
+    ],
+
+    'privacy_dpo' => [
+        'title' => 'Protection des Données & DPO (RGPD)',
+        'subtitle' => 'Conformité au Règlement Général sur la Protection des Données (UE) 2016/679',
+        'controller' => 'APPLY VIP CONSEIL (SIREN 983 675 331)',
+        'dpo_label' => 'Délégué à la Protection des Données (DPO)',
+        'dpo_email' => 'dpo@applyvipconseil.com',
+        'authority_label' => 'Autorité de contrôle compétente',
+        'authority_value' => 'CNIL — Commission Nationale de l\'Informatique et des Libertés (3 Place de Fontenoy, 75007 Paris)',
+        'privacy_policy_button' => 'Consulter la Politique de Confidentialité',
+        'data_rights_button' => 'Exercer vos droits (Art. 15-22)',
+    ],
+
     'disclaimer' => [
         'title' => 'Source des données',
         'text' => 'Les informations figurant sur cette page proviennent directement du Registre National des Entreprises (RNE), tenu par l\'Institut National de la Propriété Industrielle (INPI). Elles sont publiées dans un souci de transparence et pour permettre leur vérification publique.',

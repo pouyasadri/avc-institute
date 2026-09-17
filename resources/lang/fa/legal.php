@@ -74,6 +74,36 @@ return [
         'inpi_button' => 'باز کردن پرونده رسمی ←',
     ],
 
+    'publication' => [
+        'title' => 'مدیریت انتشار',
+        'subtitle' => 'مطابق با ماده ۶ قانون شماره ۵۷۵-۲۰۰۴ فرانسه مورخ ۲۱ ژوئن ۲۰۰۴ (LCEN)',
+        'director_label' => 'مدیر مسئول انتشار',
+        'director_value' => 'رئیس و نماینده قانونی شرکت APPLY VIP CONSEIL',
+        'contact_label' => 'تماس با مدیریت انتشار',
+        'contact_value' => 'contact@applyvipconseil.com',
+    ],
+
+    'hosting' => [
+        'title' => 'اطلاعات هاستینگ و میزبانی وب',
+        'subtitle' => 'ارائه‌دهنده خدمات میزبانی و موقعیت فیزیکی سرورها',
+        'provider_name' => 'PlanetHoster Inc.',
+        'provider_address' => '4416 Louis-B.-Mayer, Laval (Grand Montréal), Québec H7P 0G1, Canada',
+        'datacenter_location' => 'دیتاسنتر پاریس (فرانسه) — سرورها و داده‌ها تماماً در قلمرو اتحادیه اروپا میزبانی می‌شوند',
+        'website' => 'https://www.planethoster.com',
+    ],
+
+    'privacy_dpo' => [
+        'title' => 'حفاظت از داده‌های شخصی و مسئول DPO (RGPD)',
+        'subtitle' => 'مطابق با مقررات عمومی حفاظت از داده‌های اتحادیه اروپا (GDPR 2016/679)',
+        'controller' => 'APPLY VIP CONSEIL (شماره ثبت ۹۸۳ ۶۷۵ ۳۳۱)',
+        'dpo_label' => 'مسئول حفاظت از داده‌ها (DPO)',
+        'dpo_email' => 'dpo@applyvipconseil.com',
+        'authority_label' => 'مرجع نظارتی ذی‌صلاح',
+        'authority_value' => 'CNIL — کمیسیون ملی انفورماتیک و آزادی‌های فرانسه (پاریس)',
+        'privacy_policy_button' => 'مشاهده سیاست کامل حفظ حریم خصوصی',
+        'data_rights_button' => 'اعمال حقوق قانونی بر روی داده‌ها (مواد ۱۵ الی ۲۲)',
+    ],
+
     'disclaimer' => [
         'title' => 'منبع داده‌ها',
         'text' => 'اطلاعات این صفحه مستقیماً از رجیستر ملی کسب‌وکار فرانسه (RNE) که توسط Institut National de la Propriété Industrielle (INPI) نگهداری می‌شود، دریافت شده‌اند. این اطلاعات به‌منظور شفافیت و امکان راستی‌آزمایی عمومی منتشر می‌شوند.',

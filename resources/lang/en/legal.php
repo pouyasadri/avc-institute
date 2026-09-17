@@ -74,6 +74,36 @@ return [
         'inpi_button' => 'Open Official Record →',
     ],
 
+    'publication' => [
+        'title' => 'Publication Direction',
+        'subtitle' => 'Pursuant to Article 6 of French Law No. 2004-575 of 21 June 2004 (LCEN)',
+        'director_label' => 'Publication Director',
+        'director_value' => 'President / Legal Representative of APPLY VIP CONSEIL',
+        'contact_label' => 'Editorial Contact',
+        'contact_value' => 'contact@applyvipconseil.com',
+    ],
+
+    'hosting' => [
+        'title' => 'Website Hosting Provider',
+        'subtitle' => 'Hosting infrastructure and datacenter location',
+        'provider_name' => 'PlanetHoster Inc.',
+        'provider_address' => '4416 Louis-B.-Mayer, Laval (Greater Montreal), Quebec H7P 0G1, Canada',
+        'datacenter_location' => 'Paris Datacenter (Île-de-France) — Data hosted strictly within the European Union',
+        'website' => 'https://www.planethoster.com',
+    ],
+
+    'privacy_dpo' => [
+        'title' => 'Data Protection & DPO (GDPR)',
+        'subtitle' => 'Compliance with EU General Data Protection Regulation 2016/679',
+        'controller' => 'APPLY VIP CONSEIL (SIREN 983 675 331)',
+        'dpo_label' => 'Data Protection Officer (DPO)',
+        'dpo_email' => 'dpo@applyvipconseil.com',
+        'authority_label' => 'Competent Supervisory Authority',
+        'authority_value' => 'CNIL — Commission Nationale de l\'Informatique et des Libertés (Paris, France)',
+        'privacy_policy_button' => 'View Full Privacy Policy',
+        'data_rights_button' => 'Exercise Your Data Rights (Art. 15-22)',
+    ],
+
     'disclaimer' => [
         'title' => 'Data Source',
         'text' => 'The information on this page is sourced directly from the French National Business Register (Registre National des Entreprises, RNE), maintained by the Institut National de la Propriété Industrielle (INPI). It is provided for transparency and public verification purposes.',
