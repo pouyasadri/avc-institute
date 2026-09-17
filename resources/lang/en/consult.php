@@ -55,7 +55,10 @@ return [
         'email' => ['label' => 'Email Address'],
         'whatsapp' => ['label' => 'WhatsApp/Phone Number'],
         'service' => ['label' => 'Service Needed'],
-        'details' => ['label' => 'Additional Details'],
+        'details' => [
+            'label' => 'Additional Details',
+            'guidance' => 'Please summarize your situation (max 2,000 characters). Do not include sensitive documents, banking, or medical records.',
+        ],
     ],
     'form_name_placeholder' => 'Full Name',
     'form_email_placeholder' => 'Email',

@@ -241,8 +241,12 @@
                                                     class="form-label small fw-bold text-muted">{{ __('consult.form.details.label' ?? 'Details') }}</label>
                                                 <textarea class="form-control rounded-4 px-4 py-3" name="user_details"
                                                     id="user_details" cols="30" rows="5"
+                                                    maxlength="2000"
                                                     placeholder="{{ __('consult.form_details_placeholder') }}"
                                                     required>{{ old('user_details', request('details', '')) }}</textarea>
+                                                <div class="form-text small text-muted mt-2">
+                                                    <i class='bx bx-info-circle me-1'></i> {{ __('consult.form.details.guidance') }}
+                                                </div>
                                             </div>
                                         </div>
 

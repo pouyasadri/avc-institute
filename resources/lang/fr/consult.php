@@ -55,7 +55,10 @@ return [
         'email' => ['label' => 'Adresse Email'],
         'whatsapp' => ['label' => 'Numéro WhatsApp/Téléphone'],
         'service' => ['label' => 'Service Souhaité'],
-        'details' => ['label' => 'Détails Supplémentaires'],
+        'details' => [
+            'label' => 'Détails Supplémentaires',
+            'guidance' => 'Veuillez résumer votre situation (2 000 caractères max). Ne transmettez pas de documents sensibles, bancaires ou médicaux.',
+        ],
     ],
     'form_name_placeholder' => 'Nom Complet',
     'form_email_placeholder' => 'Email',
