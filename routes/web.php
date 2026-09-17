@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\AdminUserController;
 use App\Http\Controllers\Admin\ConsultingController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\DataRightsAdminController;
+use App\Http\Controllers\Admin\RopaAdminController;
 use App\Http\Controllers\BlogCategoryController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CalculatorController;
@@ -275,6 +276,9 @@ Route::middleware(['admin.locale'])->group(function () {
             ->only(['index', 'show', 'update']);
         Route::delete('data-rights/{dataRight}/erase', [DataRightsAdminController::class, 'eraseData'])
             ->name('data-rights.erase');
+
+        // GDPR — Record of Processing Activities (ROPA Art. 30)
+        Route::get('ropa', [RopaAdminController::class, 'index'])->name('ropa.index');
     });
 });
 

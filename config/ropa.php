@@ -1,0 +1,125 @@
+<?php
+
+return [
+    /*
+    |--------------------------------------------------------------------------
+    | Data Controller Information (Art. 30(1)(a))
+    |--------------------------------------------------------------------------
+    */
+    'controller' => [
+        'name' => 'APPLY VIP CONSEIL (A.V.C Institute)',
+        'legal_form' => 'SAS — Société par actions simplifiée au capital de 1 000 €',
+        'registration' => 'RCS Strasbourg — SIREN 983 675 331 (SIRET 983 675 331 00018)',
+        'address' => '57 Route de Hausbergen, 67300 Schiltigheim, France',
+        'email' => 'contact@applyvipconseil.com',
+        'dpo_email' => 'dpo@applyvipconseil.com',
+        'supervisory_authority' => 'CNIL — Commission Nationale de l\'Informatique et des Libertés (France)',
+        'last_updated' => '2026-09-17',
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Processing Activities (Art. 30(1)(b)-(g))
+    |--------------------------------------------------------------------------
+    */
+    'activities' => [
+        [
+            'code' => 'ROPA-01',
+            'name' => 'Demandes de Contact Général',
+            'name_en' => 'General Contact Enquiries',
+            'purpose' => 'Réception, suivi et réponse aux demandes d\'information formulées via le formulaire public de contact.',
+            'purpose_en' => 'Receipt, follow-up, and response to general information requests submitted via the public contact form.',
+            'legal_basis' => 'Article 6(1)(a) — Consentement explicite lors de la soumission du formulaire.',
+            'data_categories' => ['Identité (Nom, Prénom)', 'Coordonnées (Email, Téléphone)', 'Message & Sujet', 'Métadonnées techniques (Horodatage, Statut de consentement)'],
+            'data_subjects' => ['Visiteurs du site', 'Prospects', 'Étudiants et clients potentiels'],
+            'recipients' => ['Service Relations Clients AVC', 'Sous-traitant hébergement (PlanetHoster — France)', 'Service d\'envoi d\'emails transactionnels (Brevo — France/UE)'],
+            'international_transfers' => 'Aucun transfert hors Union Européenne / EEE.',
+            'retention' => '2 ans (730 jours) à compter de la soumission, puis purge automatisée par commande journalière gdpr:purge.',
+            'security_measures' => 'Contrôle d\'accès par mot de passe chiffré, chiffrement TLS en transit, purge automatique des journaux et suppression douce (SoftDeletes).',
+        ],
+        [
+            'code' => 'ROPA-02',
+            'name' => 'Demandes de Consultation Spécialisée',
+            'name_en' => 'Specialized Consultation Requests',
+            'purpose' => 'Analyse des besoins d\'accompagnement en immigration, visas étudiants, études supérieures et acquisition immobilière en France.',
+            'purpose_en' => 'Evaluation of client requirements for immigration consulting, student visas, higher education, and property acquisition in France.',
+            'legal_basis' => 'Article 6(1)(b) — Exécution de mesures précontractuelles prises à la demande de la personne concernée.',
+            'data_categories' => ['Nom complet', 'Email', 'Numéro de téléphone', 'Service sollicité', 'Détails du projet (limités à 2000 car.)', 'Horodatage & version de politique'],
+            'data_subjects' => ['Candidats aux études en France', 'Investisseurs', 'Demandeurs de visas et titres de séjour'],
+            'recipients' => ['Conseillers spécialisés AVC', 'Hébergeur PlanetHoster', 'Brevo (notifications transactionnelles)'],
+            'international_transfers' => 'Aucun transfert hors UE.',
+            'retention' => '2 ans maximum en base active. Anonymisation des IP après 90 jours. Purge définitive après période de grâce de 30 jours suite à suppression.',
+            'security_measures' => 'Accès restreint aux administrateurs authentifiés, hachage SHA-256 dans les journaux techniques de dédoublonnage, validation stricte des entrées.',
+        ],
+        [
+            'code' => 'ROPA-03',
+            'name' => 'Questions sur les Villes & Universités',
+            'name_en' => 'City & University Programme Inquiries',
+            'purpose' => 'Orientation des futurs étudiants vers les établissements partenaires (Sorbonne, Paris-Saclay, Lyon, etc.) et informations pratiques des campus.',
+            'purpose_en' => 'Guiding prospective students toward partner universities and campus regional guides.',
+            'legal_basis' => 'Article 6(1)(a) — Consentement explicite.',
+            'data_categories' => ['Nom', 'Email', 'Téléphone', 'Page université/ville consultée', 'Question posée', 'Consentement RGPD horodaté'],
+            'data_subjects' => ['Étudiants internationaux et leurs familles'],
+            'recipients' => ['Équipe académique AVC', 'Hébergeur (UE)'],
+            'international_transfers' => 'Aucun.',
+            'retention' => '2 ans (730 jours) selon la politique de rétention globale.',
+            'security_measures' => 'Chiffrement HTTPS, limitation du débit de requêtes (rate limiting), séparation logique de base de données.',
+        ],
+        [
+            'code' => 'ROPA-04',
+            'name' => 'Commentaires et Avis sur le Blog',
+            'name_en' => 'Blog Comments & Testimonials',
+            'purpose' => 'Modération et publication des contributions des lecteurs sur les articles du blog.',
+            'purpose_en' => 'Moderation and display of reader comments on immigration and education articles.',
+            'legal_basis' => 'Article 6(1)(a) — Consentement explicite avant soumission.',
+            'data_categories' => ['Nom affiché', 'Email (conservé de manière confidentielle, non publié)', 'Corps du commentaire', 'Date et heure'],
+            'data_subjects' => ['Lecteurs et contributeurs du blog'],
+            'recipients' => ['Public (nom et commentaire uniquement après validation)', 'Modérateurs AVC (email et données internes)'],
+            'international_transfers' => 'Aucun.',
+            'retention' => 'Durée de publication de l\'article ou jusqu\'à exercice du droit à l\'effacement.',
+            'security_measures' => 'Modération préalable systématique (is_approved=false), protection contre les injections XSS (purification HTML).',
+        ],
+        [
+            'code' => 'ROPA-05',
+            'name' => 'Exercice des Droits des Personnes (RGPD)',
+            'name_en' => 'Data Subject Rights Management (GDPR)',
+            'purpose' => 'Enregistrement, traitement et traçabilité des demandes d\'accès, rectification, effacement, portabilité, opposition et limitation (Art. 15 à 22).',
+            'purpose_en' => 'Processing and fulfillment of data subject requests under GDPR Articles 15-22.',
+            'legal_basis' => 'Article 6(1)(c) — Obligation légale incombant au responsable du traitement (Chapitre III du RGPD).',
+            'data_categories' => ['Email du demandeur', 'Type de droit invoqué', 'Précisions éventuelles', 'Statut du traitement (En attente/Terminé/Rejeté)', 'Notes internes de traitement'],
+            'data_subjects' => ['Toute personne ayant soumis des données sur le site'],
+            'recipients' => ['Délégué à la Protection des Données (DPO)', 'Direction AVC'],
+            'international_transfers' => 'Aucun.',
+            'retention' => '3 ans à des fins probatoires de respect des obligations réglementaires (Art. 12 RGPD).',
+            'security_measures' => 'Identifiant unique ULID, jeton de sécurisation cryptographique, restriction stricte au tableau de bord administrateur.',
+        ],
+        [
+            'code' => 'ROPA-06',
+            'name' => 'Mesure d\'Audience et Télémesure (Microsoft Clarity)',
+            'name_en' => 'Analytics & Telemetry (Microsoft Clarity)',
+            'purpose' => 'Amélioration ergonomique, détection des bugs de navigation et optimisation des parcours utilisateurs.',
+            'purpose_en' => 'UX improvements, technical navigation debugging, and path optimization.',
+            'legal_basis' => 'Article 6(1)(a) — Consentement préalable via la bannière de consentement aux cookies.',
+            'data_categories' => ['Parcours de clics et défilement', 'Résolution d\'écran', 'Type de terminal', 'Données de saisie masquées automatiquement'],
+            'data_subjects' => ['Utilisateurs ayant expressément consenti aux cookies d\'analyse'],
+            'recipients' => ['Microsoft Corporation (sous-traitant — DPA avec clauses contractuelles types)'],
+            'international_transfers' => 'Clauses Contractuelles Types (SCCs) et Data Privacy Framework UE-USA.',
+            'retention' => '12 mois pour le cookie de consentement. Données analytiques conservées selon la politique Microsoft Clarity (30 jours session replay).',
+            'security_measures' => 'Masquage automatique des formulaires (text masking), chargement conditionné à la validation du consentement utilisateur.',
+        ],
+        [
+            'code' => 'ROPA-07',
+            'name' => 'Administration du Site et Accès Sécurisé',
+            'name_en' => 'Website Administration & Access Control',
+            'purpose' => 'Authentification, contrôle d\'accès et gestion des droits des administrateurs du portail de gestion.',
+            'purpose_en' => 'Authentication, role management, and access control for administrative users.',
+            'legal_basis' => 'Article 6(1)(f) — Intérêt légitime à préserver la sécurité et l\'intégrité des systèmes d\'information.',
+            'data_categories' => ['Nom', 'Adresse email', 'Mot de passe haché (Bcrypt 12 rounds)', 'Session de connexion'],
+            'data_subjects' => ['Personnel habilité AVC'],
+            'recipients' => ['Direction technique'],
+            'international_transfers' => 'Aucun.',
+            'retention' => 'Durée des fonctions de l\'administrateur, supprimé immédiatement lors de la révocation du compte.',
+            'security_measures' => 'Mots de passe hachés via Bcrypt (coût 12), protection CSRF, session HTTPS-only, déconnexion automatique après inactivité.',
+        ],
+    ],
+];
