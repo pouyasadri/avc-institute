@@ -31,9 +31,8 @@ class ConsultController extends Controller
 
             if ($recentSubmission) {
                 Log::info('Duplicate consultation request prevented', [
-                    'email' => $userEmail,
+                    'email_hash' => hash('sha256', $userEmail),
                     'service' => $userService,
-                    'ip' => $request->ip(),
                 ]);
 
                 return redirect()->back()->with('success', __('messages.consult_success'));
