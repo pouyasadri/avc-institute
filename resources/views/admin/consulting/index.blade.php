@@ -13,9 +13,10 @@
                         <tr>
                             <th scope="col" style="width: 5%;">ID</th>
                             <th scope="col" style="width: 20%;">Nom</th>
-                            <th scope="col" style="width: 25%;">Email</th>
-                            <th scope="col" style="width: 25%;">Service</th>
-                            <th scope="col" style="width: 15%;">Date</th>
+                            <th scope="col" style="width: 20%;">Email</th>
+                            <th scope="col" style="width: 20%;">Service</th>
+                            <th scope="col" style="width: 12%;">RGPD</th>
+                            <th scope="col" style="width: 13%;">Date</th>
                             <th scope="col" style="width: 10%;">Actions</th>
                         </tr>
                     </thead>
@@ -29,6 +30,17 @@
                                     <span class="badge bg-info bg-opacity-10 text-info border border-info">
                                         {{ $consultation->service }}
                                     </span>
+                                </td>
+                                <td>
+                                    @if($consultation->gdpr_consent)
+                                        <span class="badge bg-success bg-opacity-10 text-success border border-success" data-bs-toggle="tooltip" title="Consenti v{{ $consultation->privacy_policy_version ?? '1.0' }} le {{ $consultation->consent_given_at?->format('d/m/Y H:i') ?? $consultation->created_at->format('d/m/Y H:i') }}">
+                                            <i class='bx bx-check-shield'></i> v{{ $consultation->privacy_policy_version ?? '1.0' }}
+                                        </span>
+                                    @else
+                                        <span class="badge bg-secondary bg-opacity-10 text-secondary border border-secondary" data-bs-toggle="tooltip" title="Donnée antérieure aux formulaires RGPD">
+                                            <i class='bx bx-minus-circle'></i> Ancien
+                                        </span>
+                                    @endif
                                 </td>
                                 <td class="text-nowrap text-secondary">
                                     {{ $consultation->created_at->format('d/m/Y') }}<br><small>{{ $consultation->created_at->format('H:i') }}</small>

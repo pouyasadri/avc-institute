@@ -37,6 +37,22 @@
                     <strong>Locale:</strong>
                     <p>{{ strtoupper($question->locale) }}</p>
                 </div>
+                <div class="col-md-6 mb-3">
+                    <strong>Consentement RGPD:</strong>
+                    <p>
+                        @if($question->gdpr_consent)
+                            <span class="badge bg-success bg-opacity-10 text-success border border-success px-2 py-1">
+                                <i class='bx bx-check-shield'></i> Accordé (v{{ $question->privacy_policy_version ?? '1.0' }})
+                            </span>
+                            <br>
+                            <small class="text-muted">Horodatage: {{ $question->consent_given_at?->format('d/m/Y H:i:s') ?? $question->created_at->format('d/m/Y H:i:s') }}</small>
+                        @else
+                            <span class="badge bg-secondary bg-opacity-10 text-secondary border border-secondary px-2 py-1">
+                                <i class='bx bx-minus-circle'></i> Non spécifié (antérieur au RGPD)
+                            </span>
+                        @endif
+                    </p>
+                </div>
                 <div class="col-12 mb-3">
                     <strong>Sujet:</strong>
                     <p>{{ $question->subject }}</p>

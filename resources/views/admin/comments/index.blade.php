@@ -13,11 +13,12 @@
                         <tr>
                             <th scope="col" style="width: 5%;">ID</th>
                             <th scope="col" style="width: 15%;">Auteur</th>
-                            <th scope="col" style="width: 25%;">Blog</th>
-                            <th scope="col" style="width: 25%;">Message</th>
+                            <th scope="col" style="width: 22%;">Blog</th>
+                            <th scope="col" style="width: 20%;">Message</th>
+                            <th scope="col" style="width: 10%;">RGPD</th>
                             <th scope="col" style="width: 10%;">Statut</th>
                             <th scope="col" style="width: 10%;">Date</th>
-                            <th scope="col" style="width: 10%;">Actions</th>
+                            <th scope="col" style="width: 8%;">Actions</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -39,6 +40,17 @@
                                     @endif
                                 </td>
                                 <td class="text-muted fst-italic">"{{ Str::limit($comment->body, 60) }}"</td>
+                                <td>
+                                    @if($comment->gdpr_consent)
+                                        <span class="badge bg-success bg-opacity-10 text-success border border-success" data-bs-toggle="tooltip" title="Consenti v{{ $comment->privacy_policy_version ?? '1.0' }} le {{ $comment->consent_given_at?->format('d/m/Y H:i') ?? $comment->created_at->format('d/m/Y H:i') }}">
+                                            <i class='bx bx-check-shield'></i> v{{ $comment->privacy_policy_version ?? '1.0' }}
+                                        </span>
+                                    @else
+                                        <span class="badge bg-secondary bg-opacity-10 text-secondary border border-secondary" data-bs-toggle="tooltip" title="Donnée antérieure aux formulaires RGPD">
+                                            <i class='bx bx-minus-circle'></i> Ancien
+                                        </span>
+                                    @endif
+                                </td>
                                 <td>
                                     @if($comment->is_approved)
                                         <span
