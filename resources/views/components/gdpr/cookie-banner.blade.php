@@ -5,12 +5,19 @@
      Alpine.js is used only for the show/hide animation (progressive enhancement).
 --}}
 @php
-    $locale        = app()->getLocale();
-    $isRtl         = $locale === 'fa';
-    $consentCookie = request()->cookie('gdpr_consent');
-    $bannerHidden  = in_array($consentCookie, ['accepted', 'rejected'], true);
+    $locale         = app()->getLocale();
+    $isRtl          = $locale === 'fa';
+    $consentCookie  = request()->cookie('gdpr_consent');
+    
+    $parts          = explode(':', $consentCookie ?? '');
+    $choice         = $parts[0] ?? null;
+    $storedVersion  = $parts[1] ?? null;
+    $currentVersion = config('gdpr.privacy_policy_version');
 
-    $privacyUrl = route('privacy', ['locale' => $locale]);
+    $bannerHidden   = in_array($choice, ['accepted', 'rejected'], true) && $storedVersion === $currentVersion;
+    $policyUpdated  = in_array($choice, ['accepted', 'rejected'], true) && $storedVersion !== null && $storedVersion !== $currentVersion;
+
+    $privacyUrl     = route('privacy', ['locale' => $locale]);
 @endphp
 
 @unless($bannerHidden)
@@ -48,6 +55,17 @@
                         <i class="bx bx-cookie"></i>
                     </div>
                     <div>
+                        @if($policyUpdated)
+                            <div class="alert alert-warning py-1 px-2 mb-2 d-inline-block" style="font-size: 0.85rem; border-radius: 4px;">
+                                @if($locale === 'fa')
+                                    سیاست حریم خصوصی ما به‌روزرسانی شده است. لطفاً انتخاب خود را دوباره تأیید کنید.
+                                @elseif($locale === 'fr')
+                                    Notre politique de confidentialité a été mise à jour. Veuillez reconfirmer votre choix.
+                                @else
+                                    Our privacy policy has been updated. Please review and re-confirm your choice.
+                                @endif
+                            </div>
+                        @endif
                         <p class="mb-0 text-white fw-semibold" style="font-size:0.95rem;">
                             @if($locale === 'fa')
                                 ما از کوکی‌ها برای بهبود تجربه شما و (با رضایت شما) تحلیل رفتار بازدیدکنندگان استفاده می‌کنیم.

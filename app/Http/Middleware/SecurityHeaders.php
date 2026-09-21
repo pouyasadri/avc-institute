@@ -22,9 +22,13 @@ class SecurityHeaders
     {
         $response = $next($request);
 
-        // Remove server fingerprinting headers
+        // Remove server fingerprinting headers (both PHP FastCGI and response bag)
+        if (function_exists('header_remove')) {
+            @header_remove('X-Powered-By');
+        }
         $response->headers->remove('X-Powered-By');
         $response->headers->remove('Server');
+        $response->headers->set('X-Permitted-Cross-Domain-Policies', 'none');
 
         // Content-Security-Policy
         // - Microsoft Clarity is allowed only from 'self' context (loaded after consent)
@@ -33,12 +37,12 @@ class SecurityHeaders
             'Content-Security-Policy',
             implode('; ', [
                 "default-src 'self'",
-                "script-src 'self' https://www.clarity.ms https://c.bing.com 'unsafe-inline'",
+                "script-src 'self' https://www.clarity.ms https://c.bing.com https://cdn.tiny.cloud https://www.amcharts.com 'unsafe-inline' 'unsafe-eval'",
                 "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
                 "font-src 'self' https://fonts.gstatic.com data:",
-                "img-src 'self' data: https://www.clarity.ms https://c.bing.com",
-                "connect-src 'self' https://www.clarity.ms https://c.bing.com",
-                "frame-src 'none'",
+                "img-src 'self' data: https://www.clarity.ms https://c.bing.com https://www.amcharts.com",
+                "connect-src 'self' https://www.clarity.ms https://c.bing.com https://cdn.tiny.cloud",
+                "frame-src 'self' https://www.google.com",
                 "object-src 'none'",
                 "base-uri 'self'",
                 "form-action 'self'",

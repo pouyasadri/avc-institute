@@ -406,50 +406,6 @@
 		preloader: false,
 		fixedContentPos: false,
 	});
-	$(".newsletter-form").validator().on("submit", function (event) {
-		if (event.isDefaultPrevented()) {
-			formErrorSub();
-			submitMSGSub(false, "لطفا ایمیل خود را به درستی وارد کنید.");
-		} else {
-			event.preventDefault();
-		}
-	});
-
-	function callbackFunction(resp) {
-		if (resp.result === "success") {
-			formSuccessSub();
-		} else {
-			formErrorSub();
-		}
-	}
-
-	function formSuccessSub() {
-		$(".newsletter-form")[0].reset();
-		submitMSGSub(true, "از اشتراک شما متشکرم!");
-		setTimeout(function () {
-			$("#validator-newsletter").addClass('hide');
-		}, 4000)
-	}
-
-	function formErrorSub() {
-		$(".newsletter-form").addClass("animated shake");
-		setTimeout(function () {
-			$(".newsletter-form").removeClass("animated shake");
-		}, 1000)
-	}
-
-	function submitMSGSub(valid, msg) {
-		if (valid) {
-			var msgClasses = "validation-success";
-		} else {
-			var msgClasses = "validation-danger";
-		}
-		$("#validator-newsletter").removeClass().addClass(msgClasses).text(msg);
-	}
-	$(".newsletter-form").ajaxChimp({
-		url: "https://envytheme.us20.list-manage.com/subscribe/post?u=60e1ffe2e8a68ce1204cd39a5&amp;id=42d6d188d9",
-		callback: callbackFunction
-	});
 	var sync1 = $("#sync1");
 	var sync2 = $("#sync2");
 	var slidesPerPage = 4;

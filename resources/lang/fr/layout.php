@@ -80,8 +80,9 @@ return [
             'contact' => 'Contactez-nous',
             'sitemap' => 'Plan du site',
             'legal' => 'Identité Légale',
-            'privacy' => 'Politique de Confidentialité',
-            'data_rights' => 'Droits sur vos Données',
+            'privacy' => 'Politique de confidentialité',
+            'data_rights' => 'Droits des Données',
+            'withdraw_consent' => 'Retirer mon consentement',
         ],
         'services_title' => 'Nos Services',
         'services' => [

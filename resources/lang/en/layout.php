@@ -83,6 +83,7 @@ return [
             'legal' => 'Legal Identity',
             'privacy' => 'Privacy Policy',
             'data_rights' => 'Data Rights',
+            'withdraw_consent' => 'Withdraw Consent',
         ],
         'services_title' => 'Our Services',
         'services' => [

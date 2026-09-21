@@ -243,4 +243,25 @@ return [
             'restriction' => ['label' => 'Droit à la limitation',         'article' => 'Art. 18', 'desc' => 'Demander la suspension du traitement en attente d\'une décision.'],
         ],
     ],
+
+    'withdraw' => [
+        'title' => 'Retirer le consentement aux cookies',
+        'description' => 'Vous pouvez facilement retirer votre consentement pour les cookies non essentiels. Cliquez sur le bouton ci-dessous pour mettre à jour vos préférences.',
+        'button' => 'Retirer mon consentement',
+        'success' => 'Votre consentement a été retiré avec succès.',
+        'erasure_note' => 'Si vous souhaitez également supprimer définitivement toutes vos données soumises, veuillez soumettre une demande d\'effacement.',
+        'erasure_link' => 'Soumettre une demande d\'effacement',
+    ],
+
+    'status' => [
+        'title' => 'Statut de conformité RGPD',
+        'policy_version' => 'Version actuelle de la politique',
+        'retention_days' => 'Période de conservation des données',
+        'tech_retention' => 'Conservation des données techniques',
+        'days' => 'jours',
+        'last_purge' => 'Dernière purge des données',
+        'not_run_yet' => 'Pas encore exécutée',
+        'dpo_email' => 'Délégué à la protection des données',
+        'auth_url' => 'Autorité de contrôle',
+    ],
 ];

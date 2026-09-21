@@ -2,8 +2,10 @@
 
 namespace App\Console\Commands;
 
+use App\Models\Comment;
 use App\Models\ConsultingSubmission;
 use App\Models\ContactSubmission;
+use App\Models\DataRightsRequest;
 use App\Models\QuestionSubmission;
 use Carbon\Carbon;
 use Illuminate\Console\Command;
@@ -113,6 +115,39 @@ class PurgeExpiredSubmissions extends Command
             $this->newLine();
         }
 
+        // 4. Anonymise IP on DataRightsRequest older than 90 days
+        $drIpAnonymise = DataRightsRequest::where('created_at', '<', $ipCutoff)
+            ->whereNotNull('ip_address')
+            ->count();
+
+        $this->line("<fg=cyan>data_rights_requests</> — {$drIpAnonymise} IP records to anonymise");
+
+        if (! $isDryRun && $drIpAnonymise > 0) {
+            DataRightsRequest::where('created_at', '<', $ipCutoff)
+                ->whereNotNull('ip_address')
+                ->update(['ip_address' => null]);
+        }
+
+        $totalIpAnonymised += $drIpAnonymise;
+
+        // 5. Permanently delete soft-deleted comments past the grace period
+        $commentsToHardDelete = Comment::withTrashed()
+            ->where('deleted_at', '<', $graceCutoff)
+            ->whereNotNull('deleted_at')
+            ->count();
+
+        $this->line("<fg=cyan>comments</> — {$commentsToHardDelete} soft-deleted records to permanently purge");
+
+        if (! $isDryRun && $commentsToHardDelete > 0) {
+            Comment::withTrashed()
+                ->where('deleted_at', '<', $graceCutoff)
+                ->whereNotNull('deleted_at')
+                ->forceDelete();
+        }
+
+        $totalHardDeleted += $commentsToHardDelete;
+        $this->newLine();
+
         $summary = "[GDPR Purge] Soft-deleted: {$totalSoftDeleted} | Permanently purged: {$totalHardDeleted} | IP anonymised: {$totalIpAnonymised}".
                    ($isDryRun ? ' [DRY RUN]' : '');
 
@@ -120,6 +155,7 @@ class PurgeExpiredSubmissions extends Command
 
         if (! $isDryRun) {
             Log::info($summary);
+            @file_put_contents(storage_path('logs/gdpr-purge.log'), now()->toIso8601String()." {$summary}\n", FILE_APPEND);
         }
 
         return Command::SUCCESS;

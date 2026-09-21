@@ -96,12 +96,23 @@
                 </div>
             </div>
 
+            {{-- Export Action (Art. 15 / Art. 20) --}}
+            <div class="card border-0 shadow-sm rounded-4 mb-4">
+                <div class="card-body p-4">
+                    <h6 class="text-primary mb-1"><i class="bx bx-download me-1"></i>Data Export (Art. 15 / Art. 20)</h6>
+                    <p class="small text-muted mb-3">Download all personal data held for <strong>{{ $dataRight->email }}</strong> in structured JSON format.</p>
+                    <a href="{{ route('admin.data-rights.export', $dataRight->id) }}" class="btn btn-sm btn-outline-primary rounded-pill px-4">
+                        <i class="bx bx-download me-1"></i> Download JSON Package
+                    </a>
+                </div>
+            </div>
+
             {{-- Erasure Action (Art. 17) --}}
             @if($dataRight->request_type === 'erasure')
             <div class="card border-danger border-0 shadow-sm rounded-4" style="border-left:4px solid #dc3545!important">
                 <div class="card-body p-4">
                     <h6 class="text-danger mb-1"><i class="bx bx-trash me-1"></i>Execute Erasure (Art. 17)</h6>
-                    <p class="small text-muted mb-3">This will soft-delete ALL submissions (contact, consulting, questions) for <strong>{{ $dataRight->email }}</strong>. This action cannot be undone without database intervention.</p>
+                    <p class="small text-muted mb-3">This will soft-delete ALL submissions and comments for <strong>{{ $dataRight->email }}</strong>. This action cannot be undone without database intervention.</p>
                     <form action="{{ route('admin.data-rights.erase', $dataRight->id) }}" method="POST"
                           onsubmit="return confirm('Permanently erase all data for {{ $dataRight->email }}? This is irreversible.');">
                         @csrf @method('DELETE')
@@ -182,6 +193,31 @@
                                 <td class="text-nowrap text-muted small">{{ $row->created_at->format('d/m/Y') }}</td>
                                 <td class="small">{{ $row->page_name }}</td>
                                 <td class="small">{{ Str::limit($row->subject, 40) }}</td>
+                            </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
+                @else
+                    <div class="card-body text-muted small py-2 px-4">No records.</div>
+                @endif
+            </div>
+
+            {{-- Blog Comments --}}
+            <div class="card border-0 shadow-sm rounded-4 mt-3">
+                <div class="card-header bg-white border-bottom py-2 px-4 d-flex justify-content-between">
+                    <h6 class="mb-0 small fw-semibold">Blog Comments <span class="badge bg-secondary">{{ $matchedData['comments']->count() }}</span></h6>
+                </div>
+                @if($matchedData['comments']->isNotEmpty())
+                <div class="table-responsive">
+                    <table class="table table-sm mb-0">
+                        <thead class="table-light"><tr><th>Date</th><th>Subject / Post</th><th>Comment (preview)</th></tr></thead>
+                        <tbody>
+                            @foreach($matchedData['comments'] as $row)
+                            <tr>
+                                <td class="text-nowrap text-muted small">{{ $row->created_at->format('d/m/Y') }}</td>
+                                <td class="small">{{ Str::limit($row->subject ?? 'Comment', 30) }}</td>
+                                <td class="small text-muted">{{ Str::limit($row->body, 50) }}</td>
                             </tr>
                             @endforeach
                         </tbody>

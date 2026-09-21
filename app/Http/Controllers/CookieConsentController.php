@@ -22,7 +22,7 @@ class CookieConsentController extends Controller
         // 12-month cookie — HttpOnly, Secure, SameSite=Lax (set in config/session.php)
         $cookie = Cookie::make(
             name: 'gdpr_consent',
-            value: $accepted ? 'accepted' : 'rejected',
+            value: ($accepted ? 'accepted' : 'rejected').':'.config('gdpr.privacy_policy_version'),
             minutes: 525_600, // 365 days × 24 h × 60 min
             path: '/',
             domain: null,

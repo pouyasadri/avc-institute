@@ -13,11 +13,13 @@ use App\Http\Controllers\ConsultController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\CookieConsentController;
 use App\Http\Controllers\DataRightsController;
+use App\Http\Controllers\GdprStatusController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\PropertyController;
 use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SitemapController;
+use App\Http\Controllers\WithdrawConsentController;
 use App\Http\Middleware\SetLocale;
 use App\Services\LocaleDetector;
 use Illuminate\Http\Request;
@@ -226,6 +228,11 @@ Route::prefix('{locale}')
 
         // Privacy Policy (GDPR)
         Route::view('/privacy', 'pages.privacy')->name('privacy');
+        Route::get('/privacy/status', [GdprStatusController::class, 'show'])->name('privacy.status');
+        Route::get('/privacy/withdraw', [WithdrawConsentController::class, 'show'])->name('consent.withdraw');
+        Route::post('/privacy/withdraw', [WithdrawConsentController::class, 'withdraw'])
+            ->name('consent.withdraw.submit')
+            ->middleware('throttle:5,1');
 
         // Data-Subject Rights Request Form (Art. 15–22 GDPR)
         Route::get('/data-rights', [DataRightsController::class, 'showForm'])->name('data-rights');
@@ -274,6 +281,8 @@ Route::middleware(['admin.locale'])->group(function () {
         // GDPR — Data-Rights Requests (Art. 15–22)
         Route::resource('data-rights', DataRightsAdminController::class)
             ->only(['index', 'show', 'update']);
+        Route::get('data-rights/{dataRight}/export', [DataRightsAdminController::class, 'exportData'])
+            ->name('data-rights.export');
         Route::delete('data-rights/{dataRight}/erase', [DataRightsAdminController::class, 'eraseData'])
             ->name('data-rights.erase');
 

@@ -615,6 +615,18 @@
                                     </a>
                                 </li>
                                 <li class="mb-2">
+                                    <a href="{{ route('privacy.status', ['locale' => $currentLocale]) }}" class="text-decoration-none text-dark d-flex align-items-center">
+                                        <i class="bx {{ $isRtl ? 'bx-chevron-left ms-2' : 'bx-chevron-right me-2' }} text-primary"></i>
+                                        <span>{{ __('privacy.status.title') ?? 'GDPR Status' }}</span>
+                                    </a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="{{ route('consent.withdraw', ['locale' => $currentLocale]) }}" class="text-decoration-none text-dark d-flex align-items-center">
+                                        <i class="bx {{ $isRtl ? 'bx-chevron-left ms-2' : 'bx-chevron-right me-2' }} text-primary"></i>
+                                        <span>{{ __('privacy.withdraw.title') ?? 'Withdraw Consent' }}</span>
+                                    </a>
+                                </li>
+                                <li class="mb-2">
                                     <a href="{{ url($currentLocale . '/contactUs') }}" class="text-decoration-none text-dark d-flex align-items-center">
                                         <i class="bx {{ $isRtl ? 'bx-chevron-left ms-2' : 'bx-chevron-right me-2' }} text-primary"></i>
                                         <span>{{ __('layout.footer.links.contact') ?? 'Contact Us' }}</span>

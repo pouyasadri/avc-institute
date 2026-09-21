@@ -183,6 +183,12 @@
                         </li>
                         <li class="divider" aria-hidden="true">•</li>
                         <li>
+                            <a href="{{ route('consent.withdraw', ['locale' => app()->getLocale()]) }}" class="legal-link">
+                                {{ __('layout.footer.links.withdraw_consent') }}
+                            </a>
+                        </li>
+                        <li class="divider" aria-hidden="true">•</li>
+                        <li>
                             <a href="{{ route('sitemap') }}" class="legal-link">
                                 {{ __('layout.footer.links.sitemap') }}
                             </a>

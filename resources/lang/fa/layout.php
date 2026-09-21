@@ -85,6 +85,7 @@ return [
             'legal' => 'هویت حقوقی',
             'privacy' => 'سیاست حریم خصوصی',
             'data_rights' => 'حقوق داده‌ها و حریم خصوصی',
+            'withdraw_consent' => 'لغو رضایت',
         ],
         'services_title' => 'خدمات ما',
         'services' => [

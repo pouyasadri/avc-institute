@@ -172,7 +172,7 @@
 
     {{-- ═══════════════════════════════════════════════════════════════════
          STATIC VENDOR JS (no npm package — remain as raw assets)
-         meanmenu, nice-select, ofi, ajaxchimp, appear, mixitup, form-validator,
+         meanmenu, nice-select, ofi, appear, mixitup, form-validator,
          contact-form-script, createScrollLinks — kept until npm equivalents found.
     ═══════════════════════════════════════════════════════════════════ --}}
 

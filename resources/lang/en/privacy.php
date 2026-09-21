@@ -243,4 +243,25 @@ return [
             'restriction' => ['label' => 'Right to Restriction',   'article' => 'Art. 18', 'desc' => 'Request suspension of processing pending resolution of a dispute.'],
         ],
     ],
+
+    'withdraw' => [
+        'title' => 'Withdraw Cookie Consent',
+        'description' => 'You can easily withdraw your consent for non-essential cookies. Click the button below to update your preferences.',
+        'button' => 'Withdraw Consent',
+        'success' => 'Your consent has been successfully withdrawn.',
+        'erasure_note' => 'If you also want to permanently delete all your submitted data, please submit an erasure request.',
+        'erasure_link' => 'Submit Erasure Request',
+    ],
+
+    'status' => [
+        'title' => 'GDPR Compliance Status',
+        'policy_version' => 'Current Policy Version',
+        'retention_days' => 'Data Retention Window',
+        'tech_retention' => 'Technical Data Retention',
+        'days' => 'days',
+        'last_purge' => 'Last Data Purge',
+        'not_run_yet' => 'Not run yet',
+        'dpo_email' => 'Data Protection Officer',
+        'auth_url' => 'Supervisory Authority',
+    ],
 ];

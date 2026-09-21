@@ -3,12 +3,14 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Comment;
 use App\Models\ConsultingSubmission;
 use App\Models\ContactSubmission;
 use App\Models\DataRightsRequest;
 use App\Models\QuestionSubmission;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Log;
 use Illuminate\View\View;
 
@@ -48,6 +50,7 @@ class DataRightsAdminController extends Controller
             'contact' => ContactSubmission::where('email', $email)->latest()->get(),
             'consulting' => ConsultingSubmission::where('email', $email)->latest()->get(),
             'questions' => QuestionSubmission::where('email', $email)->latest()->get(),
+            'comments' => Comment::where('email', $email)->latest()->get(),
         ];
 
         return view('admin.data-rights.show', compact('dataRight', 'matchedData'));
@@ -84,9 +87,8 @@ class DataRightsAdminController extends Controller
     }
 
     /**
-     * Confirm erasure and soft-delete all submissions for the requester (Art. 17).
+     * Confirm erasure and soft-delete all submissions and comments for the requester (Art. 17).
      *
-     * Delegates to DataRightsController@deleteData via the signed token route.
      * Only available from the admin panel (not a public endpoint).
      */
     public function eraseData(DataRightsRequest $dataRight): RedirectResponse
@@ -97,6 +99,7 @@ class DataRightsAdminController extends Controller
             ContactSubmission::where('email', $email)->delete();
             ConsultingSubmission::where('email', $email)->delete();
             QuestionSubmission::where('email', $email)->delete();
+            Comment::where('email', $email)->delete();
 
             $dataRight->update([
                 'status' => 'completed',
@@ -105,7 +108,7 @@ class DataRightsAdminController extends Controller
                     "\n[ERASURE] Data erased by admin on ".now()->toDateTimeString(),
             ]);
 
-            Log::info("GDPR Art. 17: data erased for {$email} — triggered by admin.");
+            Log::info("GDPR Art. 17: data erased for request {$dataRight->id} (hash: ".hash('sha256', $email).') — triggered by admin.');
 
         } catch (\Exception $e) {
             Log::error('DataRightsAdminController@eraseData failed: '.$e->getMessage());
@@ -115,6 +118,41 @@ class DataRightsAdminController extends Controller
 
         return redirect()
             ->route('admin.data-rights.index')
-            ->with('success', "All submissions for {$dataRight->email} have been soft-deleted.");
+            ->with('success', "All submissions and comments for {$dataRight->email} have been soft-deleted.");
+    }
+
+    /**
+     * Export all personal data held for a requester in machine-readable JSON format (Art. 15 / Art. 20).
+     */
+    public function exportData(DataRightsRequest $dataRight): Response
+    {
+        $email = $dataRight->email;
+
+        $export = [
+            'generated_at' => now()->toIso8601String(),
+            'gdpr_article' => 'Art. 15 (Access) & Art. 20 (Data Portability)',
+            'data_controller' => 'ApplyVIP Conseil (A.V.C Institute), 67000 Strasbourg, France',
+            'requester' => [
+                'email' => $email,
+                'request_id' => $dataRight->id,
+            ],
+            'contact_submissions' => ContactSubmission::where('email', $email)
+                ->get(['name', 'email', 'phone_number', 'subject', 'message', 'locale', 'created_at'])
+                ->toArray(),
+            'consulting_submissions' => ConsultingSubmission::where('email', $email)
+                ->get(['name', 'email', 'phone_number', 'service', 'details', 'locale', 'created_at'])
+                ->toArray(),
+            'question_submissions' => QuestionSubmission::where('email', $email)
+                ->get(['name', 'email', 'phone_number', 'subject', 'message', 'page_type', 'page_name', 'locale', 'created_at'])
+                ->toArray(),
+            'comments' => Comment::where('email', $email)
+                ->get(['name', 'email', 'subject', 'body', 'created_at'])
+                ->toArray(),
+        ];
+
+        return response(json_encode($export, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE), 200, [
+            'Content-Type' => 'application/json',
+            'Content-Disposition' => 'attachment; filename="avc-data-export-'.$dataRight->id.'.json"',
+        ]);
     }
 }

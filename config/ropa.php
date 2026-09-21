@@ -14,7 +14,7 @@ return [
         'email' => 'contact@applyvipconseil.com',
         'dpo_email' => 'dpo@applyvipconseil.com',
         'supervisory_authority' => 'CNIL — Commission Nationale de l\'Informatique et des Libertés (France)',
-        'last_updated' => '2026-09-17',
+        'last_updated' => '2026-09-21',
     ],
 
     /*
@@ -90,8 +90,8 @@ return [
             'data_subjects' => ['Toute personne ayant soumis des données sur le site'],
             'recipients' => ['Délégué à la Protection des Données (DPO)', 'Direction AVC'],
             'international_transfers' => 'Aucun.',
-            'retention' => '3 ans à des fins probatoires de respect des obligations réglementaires (Art. 12 RGPD).',
-            'security_measures' => 'Identifiant unique ULID, jeton de sécurisation cryptographique, restriction stricte au tableau de bord administrateur.',
+            'retention' => '3 ans à des fins probatoires de respect des obligations réglementaires (Art. 12 RGPD). Anonymisation des adresses IP après 90 jours.',
+            'security_measures' => 'Identifiant unique ULID, restriction stricte au tableau de bord administrateur authentifié, purge et anonymisation automatique des IP.',
         ],
         [
             'code' => 'ROPA-06',

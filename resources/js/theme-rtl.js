@@ -42,7 +42,6 @@ import 'slick-carousel';
 import './vendor/meanmenu.min.js';
 import './vendor/nice-select.min.js';
 import './vendor/ofi.min.js';
-import './vendor/ajaxchimp.min.js';
 import './vendor/appear.min.js';
 import './vendor/jquery.mixitup.min.js';
 import './vendor/form-validator.min.js';

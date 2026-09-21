@@ -8,6 +8,8 @@ return [
     |
     | Version string is stored alongside each form submission so we can prove
     | which version of the policy was in force when consent was given.
+    | It is also embedded into the cookie consent value (e.g. "accepted:1.0")
+    | to re-prompt users when the policy changes.
     |
     */
 
