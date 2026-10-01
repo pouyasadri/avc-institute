@@ -242,7 +242,9 @@ Route::prefix('{locale}')
     });
 
 // GDPR cookie-consent endpoint — outside locale group so banner works from any page
-Route::post('/gdpr/consent', [CookieConsentController::class, 'store'])->name('gdpr.consent');
+Route::post('/gdpr/consent', [CookieConsentController::class, 'store'])
+    ->middleware('throttle:gdpr-consent')
+    ->name('gdpr.consent');
 
 // Non-localized /privacy redirect → default locale (FA)
 Route::get('/privacy', function () {

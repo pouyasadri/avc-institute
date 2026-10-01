@@ -30,9 +30,18 @@ class SecurityHeaders
         $response->headers->remove('Server');
         $response->headers->set('X-Permitted-Cross-Domain-Policies', 'none');
 
+        $imgSrc = array_filter([
+            "'self'",
+            'data:',
+            'https://www.clarity.ms',
+            'https://c.bing.com',
+            'https://www.amcharts.com',
+            $this->objectStorageHost(),
+        ]);
+
         // Content-Security-Policy
         // - Microsoft Clarity is allowed only from 'self' context (loaded after consent)
-        // - Bootstrap CDN icons are loaded via the bundled build, so 'self' covers them
+        // - 'unsafe-inline' remains for Bootstrap/inline scripts; TinyMCE still needs 'unsafe-eval' in admin
         $response->headers->set(
             'Content-Security-Policy',
             implode('; ', [
@@ -40,7 +49,7 @@ class SecurityHeaders
                 "script-src 'self' https://www.clarity.ms https://c.bing.com https://cdn.tiny.cloud https://www.amcharts.com 'unsafe-inline' 'unsafe-eval'",
                 "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
                 "font-src 'self' https://fonts.gstatic.com data:",
-                "img-src 'self' data: https://www.clarity.ms https://c.bing.com https://www.amcharts.com",
+                'img-src '.implode(' ', $imgSrc),
                 "connect-src 'self' https://www.clarity.ms https://c.bing.com https://cdn.tiny.cloud",
                 "frame-src 'self' https://www.google.com",
                 "object-src 'none'",
@@ -72,5 +81,26 @@ class SecurityHeaders
         }
 
         return $response;
+    }
+
+    /**
+     * Allow blog/property images hosted on object storage (S3 / N0C CDN).
+     */
+    protected function objectStorageHost(): ?string
+    {
+        $candidates = array_filter([
+            config('filesystems.disks.s3.url'),
+        ]);
+
+        foreach ($candidates as $url) {
+            $host = parse_url((string) $url, PHP_URL_HOST);
+            if ($host) {
+                $scheme = parse_url((string) $url, PHP_URL_SCHEME) ?: 'https';
+
+                return "{$scheme}://{$host}";
+            }
+        }
+
+        return null;
     }
 }

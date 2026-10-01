@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Concerns\HasTranslations;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
@@ -9,6 +10,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class BlogCategory extends Model
 {
+    use HasTranslations;
     use SoftDeletes;
 
     protected $table = 'blog_categories';
@@ -35,23 +37,5 @@ class BlogCategory extends Model
     public function posts(): HasMany
     {
         return $this->hasMany(Blog::class, 'category_id', 'id');
-    }
-
-    public function getTranslation(string $locale, bool $fallback = true): ?BlogCategoryTranslation
-    {
-        // Use the already eager-loaded in-memory collection when available
-        // to avoid firing extra DB queries (N+1 prevention)
-        $collection = $this->relationLoaded('translations')
-            ? $this->translations
-            : $this->translations()->get();
-
-        $translation = $collection->firstWhere('locale', $locale);
-
-        if (! $translation && $fallback) {
-            $fallbackLocale = config('app.fallback_locale', 'en');
-            $translation = $collection->firstWhere('locale', $fallbackLocale);
-        }
-
-        return $translation;
     }
 }

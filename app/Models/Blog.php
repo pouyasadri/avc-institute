@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Concerns\HasTranslations;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
@@ -10,6 +11,7 @@ use Illuminate\Support\Facades\Storage;
 
 class Blog extends Model
 {
+    use HasTranslations;
     use SoftDeletes;
 
     protected $table = 'blog_posts';
@@ -75,24 +77,6 @@ class Blog extends Model
     public function translations(): HasMany
     {
         return $this->hasMany(BlogPostTranslation::class, 'blog_post_id', 'id');
-    }
-
-    public function getTranslation(string $locale, bool $fallback = true): ?BlogPostTranslation
-    {
-        // Use the already eager-loaded in-memory collection when available
-        // to avoid firing extra DB queries (N+1 prevention)
-        $collection = $this->relationLoaded('translations')
-            ? $this->translations
-            : $this->translations()->get();
-
-        $translation = $collection->firstWhere('locale', $locale);
-
-        if (! $translation && $fallback) {
-            $fallbackLocale = config('app.fallback_locale', 'en');
-            $translation = $collection->firstWhere('locale', $fallbackLocale);
-        }
-
-        return $translation;
     }
 
     public function scopePublished($query)

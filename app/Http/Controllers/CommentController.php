@@ -2,30 +2,34 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Blog;
+use App\Http\Requests\StoreCommentRequest;
 use App\Models\Comment;
+use App\Services\Blog\BlogSlugResolver;
 use Illuminate\Http\RedirectResponse;
-use Illuminate\Http\Request;
 
 class CommentController extends Controller
 {
-    public function store(Request $request, string $locale, Blog $blog): RedirectResponse
+    public function __construct(protected BlogSlugResolver $slugResolver) {}
+
+    public function store(StoreCommentRequest $request, string $locale, string $blog): RedirectResponse
     {
-        $validated = $request->validate([
-            'name' => 'required|string|max:255',
-            'email' => 'required|email|max:255',
-            'msg_subject' => 'nullable|string|max:255',
-            'message' => 'required|string',
-            'gdpr_consent' => 'required|accepted',
-        ]);
+        $translation = $this->slugResolver->resolve($locale, $blog);
+
+        if (! $translation) {
+            return redirect()
+                ->route('blog.index', ['locale' => $locale])
+                ->with('error', __('messages.blog_not_found'));
+        }
+
+        $validated = $request->validated();
 
         Comment::create([
-            'blog_post_id' => $blog->id,
+            'blog_post_id' => $translation->blog_post_id,
             'locale' => $locale,
             'name' => $validated['name'],
             'email' => $validated['email'],
             'subject' => $validated['msg_subject'] ?? null,
-            'body' => $validated['message'],
+            'body' => strip_tags($validated['message']),
             'is_approved' => false,
             'gdpr_consent' => true,
             'consent_given_at' => now(),

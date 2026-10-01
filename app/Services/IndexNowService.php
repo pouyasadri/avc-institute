@@ -4,6 +4,7 @@ namespace App\Services;
 
 use App\Jobs\IndexNowPingJob;
 use App\Models\Blog;
+use App\Services\Seo\SiteUrlBuilder;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
@@ -47,7 +48,7 @@ class IndexNowService
 
     protected bool $logResponses;
 
-    public function __construct()
+    public function __construct(protected SiteUrlBuilder $siteUrls)
     {
         $this->key = config('indexnow.key');
         $this->keyLocation = config('indexnow.key_location');
@@ -119,25 +120,7 @@ class IndexNowService
      */
     public function buildBlogPostUrls(Blog $blog): array
     {
-        $blog->loadMissing('translations');
-
-        $baseUrl = rtrim(config('app.url'), '/');
-        $locales = array_keys(config('seo.locales', ['en' => [], 'fr' => [], 'fa' => []]));
-        $urls = [];
-
-        foreach ($locales as $locale) {
-            $translation = $blog->getTranslation($locale);
-            if ($translation && $translation->slug) {
-                $encodedSlug = $this->encodeSlug($translation->slug);
-                $urls[] = "{$baseUrl}/{$locale}/blog/{$encodedSlug}";
-            }
-        }
-
-        foreach ($locales as $locale) {
-            $urls[] = "{$baseUrl}/{$locale}/blog";
-        }
-
-        return array_values(array_unique($urls));
+        return $this->siteUrls->blogPostUrls($blog, includeIndexes: true);
     }
 
     /**
@@ -169,88 +152,13 @@ class IndexNowService
     }
 
     /**
-     * Encode a slug path segment-by-segment (supports Persian/UTF-8 slugs).
-     */
-    protected function encodeSlug(string $rawSlug): string
-    {
-        return implode('/', array_map('rawurlencode', explode('/', $rawSlug)));
-    }
-
-    /**
-     * Build all public site URLs — mirrors SitemapController exactly.
-     *
-     * Uses the same config sources as the sitemap so the IndexNow submission
-     * always covers 100% of indexed pages. If the sitemap adds a new page type,
-     * add it here too to keep them in sync.
+     * Build all public site URLs — delegates to SiteUrlBuilder (shared with sitemap).
      *
      * @return array<string> All URLs to submit
      */
     public function buildAllSiteUrls(): array
     {
-        // Use the same locale source as SitemapController (array_keys of seo.locales)
-        $locales = array_keys(config('seo.locales', ['en' => [], 'fr' => [], 'fa' => []]));
-        $baseUrl = rtrim(config('app.url'), '/');
-
-        // Use the same config keys as SitemapController
-        $cities = config('site_structure.cities', []);
-        $universities = config('site_structure.universities', []);
-        $services = config('site_structure.service_slugs', []);
-        $staticPages = ['consult', 'contactUs', 'legal'];
-
-        $urls = [];
-
-        foreach ($locales as $locale) {
-            // Homepages
-            $urls[] = "{$baseUrl}/{$locale}";
-
-            // Blog index + categories index (public SEO listing)
-            $urls[] = "{$baseUrl}/{$locale}/blog";
-            $urls[] = "{$baseUrl}/{$locale}/blog/categories";
-
-            // Cities index + individual city pages
-            $urls[] = "{$baseUrl}/{$locale}/cities";
-            foreach ($cities as $city) {
-                $urls[] = "{$baseUrl}/{$locale}/cities/{$city}";
-            }
-
-            // Universities index + individual university pages
-            $urls[] = "{$baseUrl}/{$locale}/universities";
-            foreach ($universities as $university) {
-                $urls[] = "{$baseUrl}/{$locale}/universities/{$university}";
-            }
-
-            // Services index + individual service pages
-            $urls[] = "{$baseUrl}/{$locale}/services";
-            foreach ($services as $service) {
-                $urls[] = "{$baseUrl}/{$locale}/services/{$service}";
-            }
-
-            // Static pages (consult, contactUs, legal)
-            foreach ($staticPages as $page) {
-                $urls[] = "{$baseUrl}/{$locale}/{$page}";
-            }
-        }
-
-        // Blog posts — localized slug to match the sitemap and route pattern
-        try {
-            $blogs = Blog::published()
-                ->with('translations')
-                ->get();
-
-            foreach ($blogs as $blog) {
-                foreach ($locales as $locale) {
-                    $translation = $blog->getTranslation($locale);
-                    if ($translation && $translation->slug) {
-                        $encodedSlug = $this->encodeSlug($translation->slug);
-                        $urls[] = "{$baseUrl}/{$locale}/blog/{$encodedSlug}";
-                    }
-                }
-            }
-        } catch (\Throwable $e) {
-            Log::warning('IndexNow: could not load blog posts — '.$e->getMessage());
-        }
-
-        return array_values(array_unique($urls));
+        return $this->siteUrls->buildAllAbsoluteUrls();
     }
 
     // -------------------------------------------------------------------------

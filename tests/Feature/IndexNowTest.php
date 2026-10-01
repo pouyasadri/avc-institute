@@ -63,6 +63,11 @@ class IndexNowTest extends TestCase
         $this->assertContains('https://applyvipconseil.com/fa/blog/categories', $urls);
         $this->assertContains('https://applyvipconseil.com/en/blog/categories', $urls);
         $this->assertContains('https://applyvipconseil.com/fr/blog/categories', $urls);
+
+        // Calculator aligned with sitemap static pages
+        $this->assertContains('https://applyvipconseil.com/fa/calculator', $urls);
+        $this->assertContains('https://applyvipconseil.com/en/calculator', $urls);
+        $this->assertContains('https://applyvipconseil.com/fr/calculator', $urls);
     }
 
     public function test_build_blog_post_urls_uses_translation_slugs_not_missing_blog_slug(): void

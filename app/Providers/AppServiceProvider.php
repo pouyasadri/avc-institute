@@ -74,5 +74,10 @@ class AppServiceProvider extends ServiceProvider
         RateLimiter::for('comment-form', function (Request $request) {
             return Limit::perMinutes(5, 10)->by($request->ip());
         });
+
+        // Cookie consent endpoint: 60 posts per minute per IP
+        RateLimiter::for('gdpr-consent', function (Request $request) {
+            return Limit::perMinute(60)->by($request->ip());
+        });
     }
 }

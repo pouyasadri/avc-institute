@@ -38,8 +38,8 @@ class BlogAuthorizationTest extends TestCase
             ],
         ]);
 
-        // AdminMiddleware redirects non-admins away from /admin/*
-        $response->assertRedirect('/');
+        // AdminMiddleware returns 403 for authenticated non-admins
+        $response->assertForbidden();
         $this->assertDatabaseCount('blog_posts', 0);
     }
 
@@ -70,7 +70,7 @@ class BlogAuthorizationTest extends TestCase
 
         $response = $this->actingAs($user)->get(route('admin.blog.categories.index'));
 
-        $response->assertRedirect('/');
+        $response->assertForbidden();
     }
 
     public function test_blog_policy_denies_non_admin_mutations(): void

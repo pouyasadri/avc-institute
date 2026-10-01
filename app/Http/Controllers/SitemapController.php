@@ -2,40 +2,36 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Blog;
+use App\Services\Seo\SiteUrlBuilder;
 use Carbon\Carbon;
 use Illuminate\Http\Response;
-use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Storage;
 
 class SitemapController extends Controller
 {
+    public function __construct(protected SiteUrlBuilder $siteUrls) {}
+
     /**
-     * Generate dynamic XML sitemap with hreflang annotations
+     * Generate dynamic XML sitemap with hreflang annotations.
      */
     public function index(): Response
     {
-        $locales = array_keys(config('seo.locales', ['en', 'fr', 'fa']));
-        $baseUrl = rtrim(config('app.url', 'https://applyvipconseil.com'), '/');
+        $locales = $this->siteUrls->locales();
+        $baseUrl = $this->siteUrls->baseUrl();
         $defaultLocale = config('seo.default_locale', 'fa');
+        $blogs = $this->siteUrls->publishedBlogs();
+        $cities = $this->siteUrls->cities();
+        $universities = $this->siteUrls->universities();
+        $services = $this->siteUrls->services();
 
-        // Cache blog queries for 1 hour — sitemap is crawled frequently by Googlebot
-        $blogs = Cache::remember('sitemap:blogs', 3600, function () {
-            return Blog::published()->with('translations')->get();
-        });
-
-        // Static content last-modified dates — dynamically determined by checking
-        // the view template and corresponding language files.
         $getLastmod = function (string $viewPath, array $translationPaths = []): string {
             $timestamps = [];
 
-            // 1. Check Blade view file
             $viewFullPath = resource_path('views/'.str_replace('.', '/', $viewPath).'.blade.php');
             if (file_exists($viewFullPath)) {
                 $timestamps[] = filemtime($viewFullPath);
             }
 
-            // 2. Check translation files
             foreach ($translationPaths as $langPath) {
                 $langFullPath = resource_path('lang/'.$langPath);
                 if (file_exists($langFullPath)) {
@@ -47,20 +43,10 @@ class SitemapController extends Controller
                 return Carbon::createFromTimestamp(max($timestamps))->toAtomString();
             }
 
-            // Fallback baseline date
             return '2026-06-01T00:00:00+00:00';
         };
 
-        // Static content source of truth
-        $cities = config('site_structure.cities', []);
-        $universities = config('site_structure.universities', []);
-        $services = config('site_structure.service_slugs', []);
-
-        // Build URLs with hreflang alternates
-        $urls = [];
-
-        // Helper function to generate hreflang alternates
-        $generateAlternates = function ($path) use ($locales, $baseUrl) {
+        $generateAlternates = function (string $path) use ($locales, $baseUrl): array {
             $alternates = [];
             foreach ($locales as $locale) {
                 $alternates[] = [
@@ -69,8 +55,6 @@ class SitemapController extends Controller
                 ];
             }
 
-            // x-default points to English — the universal fallback for unrecognized locales
-            // (consistent with hreflang.blade.php — do NOT point to /fa/ here)
             $alternates[] = [
                 'hreflang' => 'x-default',
                 'href' => "{$baseUrl}/en{$path}",
@@ -79,9 +63,9 @@ class SitemapController extends Controller
             return $alternates;
         };
 
-        // Homepage for each locale
+        $urls = [];
+
         foreach ($locales as $locale) {
-            // Only the default locale homepage gets priority 1.0
             $homePriority = ($locale === $defaultLocale)
                 ? config('seo.sitemap.priorities.homepage', 1.0)
                 : 0.9;
@@ -95,9 +79,7 @@ class SitemapController extends Controller
             ];
         }
 
-        // Blog index and posts for each locale
         foreach ($locales as $locale) {
-            // Blog index
             $urls[] = [
                 'loc' => "{$baseUrl}/{$locale}/blog",
                 'lastmod' => $blogs->max('updated_at')?->toAtomString() ?? now()->toAtomString(),
@@ -106,7 +88,6 @@ class SitemapController extends Controller
                 'alternates' => $generateAlternates('/blog'),
             ];
 
-            // Blog categories index (public SEO listing)
             $urls[] = [
                 'loc' => "{$baseUrl}/{$locale}/blog/categories",
                 'lastmod' => $blogs->max('updated_at')?->toAtomString() ?? now()->toAtomString(),
@@ -115,32 +96,24 @@ class SitemapController extends Controller
                 'alternates' => $generateAlternates('/blog/categories'),
             ];
 
-            // Individual blog posts
             foreach ($blogs as $blog) {
                 $translation = $blog->getTranslation($locale);
                 if (! $translation || ! $translation->slug) {
                     continue;
                 }
 
-                $encodeSlug = function (string $rawSlug): string {
-                    return implode('/', array_map('rawurlencode', explode('/', $rawSlug)));
-                };
+                $encodedSlug = $this->siteUrls->encodeSlug($translation->slug);
 
-                $slug = $translation->slug;
-                $encodedSlug = $encodeSlug($slug);
-
-                // Slugs are localized, so we need to map the exact slug for each alternate language
                 $blogAlternates = [];
                 foreach ($locales as $altLocale) {
                     $altTrans = $blog->getTranslation($altLocale);
                     if ($altTrans && $altTrans->slug) {
-                        $encodedAltSlug = $encodeSlug($altTrans->slug);
+                        $encodedAltSlug = $this->siteUrls->encodeSlug($altTrans->slug);
                         $blogAlternates[] = [
                             'hreflang' => $altLocale,
                             'href' => "{$baseUrl}/{$altLocale}/blog/{$encodedAltSlug}",
                         ];
 
-                        // x-default points to English
                         if ($altLocale === 'en') {
                             $blogAlternates[] = [
                                 'hreflang' => 'x-default',
@@ -158,7 +131,6 @@ class SitemapController extends Controller
                     'alternates' => $blogAlternates,
                 ];
 
-                // Add image metadata for Google Images indexing
                 if ($blog->main_image) {
                     $entry['image'] = [
                         'loc' => Storage::url($blog->main_image),
@@ -170,45 +142,7 @@ class SitemapController extends Controller
             }
         }
 
-        /*
-        ================================================================================
-        PROPERTIES FEATURE DISABLED - COMING SOON
-        ================================================================================
-        Property URLs removed from sitemap to prevent indexing during development.
-        To re-enable: Uncomment this section and see PROPERTIES_DISABLED.md
-        ================================================================================
-
-        // Property index and listings for each locale
         foreach ($locales as $locale) {
-            // Properties index
-            $urls[] = [
-                'loc' => "{$baseUrl}/{$locale}/properties",
-                'lastmod' => $properties->max('updated_at')?->toAtomString() ?? now()->toAtomString(),
-                'changefreq' => 'daily',
-                'priority' => 0.9,
-                'alternates' => $generateAlternates('/properties'),
-            ];
-
-            // Individual properties
-            foreach ($properties as $property) {
-                $urls[] = [
-                    'loc' => "{$baseUrl}/{$locale}/properties/{$property->id}",
-                    'lastmod' => $property->updated_at->toAtomString(),
-                    'changefreq' => config('seo.sitemap.changefreq.property', 'weekly'),
-                    'priority' => config('seo.sitemap.priorities.property', 0.8),
-                    'alternates' => $generateAlternates("/properties/{$property->id}"),
-                ];
-            }
-        }
-
-        ================================================================================
-        END PROPERTIES FEATURE DISABLED
-        ================================================================================
-        */
-
-        // Cities for each locale
-        foreach ($locales as $locale) {
-            // Cities index
             $urls[] = [
                 'loc' => "{$baseUrl}/{$locale}/cities",
                 'lastmod' => $getLastmod('pages.cities.index', ["{$locale}/cities.php"]),
@@ -217,7 +151,6 @@ class SitemapController extends Controller
                 'alternates' => $generateAlternates('/cities'),
             ];
 
-            // Individual cities
             foreach ($cities as $city) {
                 $urls[] = [
                     'loc' => "{$baseUrl}/{$locale}/cities/{$city}",
@@ -229,9 +162,7 @@ class SitemapController extends Controller
             }
         }
 
-        // Universities for each locale
         foreach ($locales as $locale) {
-            // Universities index
             $urls[] = [
                 'loc' => "{$baseUrl}/{$locale}/universities",
                 'lastmod' => $getLastmod('pages.universities.index', ["{$locale}/universities.php"]),
@@ -240,7 +171,6 @@ class SitemapController extends Controller
                 'alternates' => $generateAlternates('/universities'),
             ];
 
-            // Individual universities
             foreach ($universities as $university) {
                 $urls[] = [
                     'loc' => "{$baseUrl}/{$locale}/universities/{$university}",
@@ -252,9 +182,7 @@ class SitemapController extends Controller
             }
         }
 
-        // Services for each locale
         foreach ($locales as $locale) {
-            // Services index
             $urls[] = [
                 'loc' => "{$baseUrl}/{$locale}/services",
                 'lastmod' => $getLastmod('pages.services.index', ["{$locale}/services.php"]),
@@ -263,7 +191,6 @@ class SitemapController extends Controller
                 'alternates' => $generateAlternates('/services'),
             ];
 
-            // Individual services
             foreach ($services as $service) {
                 $urls[] = [
                     'loc' => "{$baseUrl}/{$locale}/services/{$service}",
@@ -275,10 +202,8 @@ class SitemapController extends Controller
             }
         }
 
-        // Other static pages for each locale
-        $staticPages = ['calculator', 'consult', 'contactUs', 'legal'];
         foreach ($locales as $locale) {
-            foreach ($staticPages as $page) {
+            foreach ($this->siteUrls->staticPages() as $page) {
                 $viewName = $page === 'contactUs' ? 'pages.contact' : "pages.{$page}";
                 $pagePriority = $page === 'calculator' ? 0.85 : ($page === 'consult' ? 0.8 : config('seo.sitemap.priorities.static_page', 0.6));
                 $pageFreq = $page === 'calculator' ? 'weekly' : config('seo.sitemap.changefreq.static_page', 'monthly');
@@ -293,7 +218,6 @@ class SitemapController extends Controller
             }
         }
 
-        // Determine cache freshness from the newest blog post
         $latestBlogDate = $blogs->max('updated_at');
         $lastModified = $latestBlogDate
             ? $latestBlogDate->format('D, d M Y H:i:s').' GMT'
