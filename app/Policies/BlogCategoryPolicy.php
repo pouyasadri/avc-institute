@@ -19,26 +19,26 @@ class BlogCategoryPolicy
 
     public function create(User $user): bool
     {
-        return $user !== null;
+        return (bool) $user->is_admin;
     }
 
     public function update(User $user, BlogCategory $category): bool
     {
-        return $user !== null;
+        return (bool) $user->is_admin;
     }
 
     public function delete(User $user, BlogCategory $category): bool
     {
-        return $user !== null;
+        return (bool) $user->is_admin;
     }
 
     public function restore(User $user): bool
     {
-        return $user !== null;
+        return (bool) $user->is_admin;
     }
 
     public function forceDelete(User $user, BlogCategory $category): bool
     {
-        return $user !== null;
+        return (bool) $user->is_admin;
     }
 }

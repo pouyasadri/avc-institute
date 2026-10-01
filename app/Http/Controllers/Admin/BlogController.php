@@ -12,26 +12,15 @@ use App\Services\BlogService;
 use App\Services\IndexNowService;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Cache;
 use Illuminate\View\View;
 
 class BlogController extends Controller
 {
-    protected BlogService $blogService;
-
-    protected BlogCategoryService $categoryService;
-
-    protected IndexNowService $indexNow;
-
     public function __construct(
-        BlogService $blogService,
-        BlogCategoryService $categoryService,
-        IndexNowService $indexNow,
-    ) {
-        $this->blogService = $blogService;
-        $this->categoryService = $categoryService;
-        $this->indexNow = $indexNow;
-    }
+        protected BlogService $blogService,
+        protected BlogCategoryService $categoryService,
+        protected IndexNowService $indexNow,
+    ) {}
 
     public function index(Request $request): View
     {
@@ -55,11 +44,7 @@ class BlogController extends Controller
     {
         $blog = $this->blogService->storeBlog($request->validated());
 
-        // Notify all IndexNow engines about the new blog post
-        $this->pingBlogUrls($blog);
-
-        // Clear sitemap cache so the new post appears immediately
-        Cache::forget('sitemap:blogs');
+        $this->indexNow->notifyBlogChanged($blog);
 
         return redirect()
             ->route('admin.blog.index')
@@ -79,12 +64,8 @@ class BlogController extends Controller
     {
         $this->blogService->updateBlog($blog, $request->validated());
 
-        // Notify all IndexNow engines that the post has changed
         $blog->refresh();
-        $this->pingBlogUrls($blog);
-
-        // Clear sitemap cache so updates reflect immediately
-        Cache::forget('sitemap:blogs');
+        $this->indexNow->notifyBlogChanged($blog);
 
         return redirect()
             ->route('admin.blog.index')
@@ -94,59 +75,14 @@ class BlogController extends Controller
     public function destroy(Blog $blog): RedirectResponse
     {
         // Capture URLs before the post is soft-deleted
-        $urls = $this->buildBlogUrls($blog);
+        $urls = $this->indexNow->buildBlogPostUrls($blog);
 
         $this->blogService->deleteBlog($blog);
 
-        // Notify engines so they can remove the page from their index
-        if (! empty($urls)) {
-            $this->indexNow->pingBatch($urls);
-        }
-
-        // Clear sitemap cache
-        Cache::forget('sitemap:blogs');
+        $this->indexNow->notifyBlogRemoved($urls);
 
         return redirect()
             ->route('admin.blog.index')
             ->with('success', __('messages.blog_deleted'));
-    }
-
-    // -------------------------------------------------------------------------
-    // Private helpers
-    // -------------------------------------------------------------------------
-
-    /**
-     * Build all locale-prefixed URLs for a blog post and ping IndexNow.
-     */
-    private function pingBlogUrls(Blog $blog): void
-    {
-        $urls = $this->buildBlogUrls($blog);
-
-        if (! empty($urls)) {
-            $this->indexNow->pingBatch($urls);
-        }
-    }
-
-    /**
-     * Return all locale-prefixed public URLs for a blog post.
-     *
-     * @return array<string>
-     */
-    private function buildBlogUrls(Blog $blog): array
-    {
-        $baseUrl = rtrim(config('app.url'), '/');
-        $locales = config('localization.supported_locales', Locale::values());
-        $urls = [];
-
-        foreach ($locales as $locale) {
-            $urls[] = "{$baseUrl}/{$locale}/blog/{$blog->slug}";
-        }
-
-        // Also ping the blog index page so it gets re-crawled with the latest post listing
-        foreach ($locales as $locale) {
-            $urls[] = "{$baseUrl}/{$locale}/blog";
-        }
-
-        return $urls;
     }
 }

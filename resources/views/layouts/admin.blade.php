@@ -27,8 +27,14 @@
         </div>
         <div class="admin-nav-item">
             <a href="{{ route('admin.blog.index') }}"
-                class="admin-nav-link {{ request()->routeIs('admin.blog.*') ? 'active' : '' }}">
+                class="admin-nav-link {{ request()->routeIs('admin.blog.*') && ! request()->routeIs('admin.blog.categories.*') ? 'active' : '' }}">
                 <i class='bx bxs-news'></i> Blogs
+            </a>
+        </div>
+        <div class="admin-nav-item">
+            <a href="{{ route('admin.blog.categories.index') }}"
+                class="admin-nav-link {{ request()->routeIs('admin.blog.categories.*') ? 'active' : '' }}">
+                <i class='bx bx-category'></i> Catégories
             </a>
         </div>
         <div class="admin-nav-item">

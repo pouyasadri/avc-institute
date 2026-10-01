@@ -50,5 +50,10 @@ class SitemapTest extends TestCase
         $this->assertStringContainsString('/fa/legal', $content);
         $this->assertStringContainsString('/en/legal', $content);
         $this->assertStringContainsString('/fr/legal', $content);
+
+        // Blog categories index (SEO)
+        $this->assertStringContainsString('/fa/blog/categories', $content);
+        $this->assertStringContainsString('/en/blog/categories', $content);
+        $this->assertStringContainsString('/fr/blog/categories', $content);
     }
 }

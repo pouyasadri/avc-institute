@@ -10,7 +10,7 @@ class StoreBlogCategoryRequest extends FormRequest
 {
     public function authorize(): bool
     {
-        return true; // routes are protected by auth middleware where needed
+        return (bool) $this->user()?->is_admin;
     }
 
     public function rules(): array

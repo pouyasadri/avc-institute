@@ -10,7 +10,7 @@ class UpdateBlogPostRequest extends FormRequest
 {
     public function authorize(): bool
     {
-        return true;
+        return (bool) $this->user()?->is_admin;
     }
 
     protected function prepareForValidation(): void

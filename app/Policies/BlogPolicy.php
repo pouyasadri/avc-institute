@@ -12,7 +12,7 @@ class BlogPolicy
      */
     public function viewAny(?User $user): bool
     {
-        return true; // Anyone can view blog list
+        return true;
     }
 
     /**
@@ -20,7 +20,7 @@ class BlogPolicy
      */
     public function view(?User $user, Blog $blog): bool
     {
-        return true; // Anyone can view a blog post
+        return true;
     }
 
     /**
@@ -28,7 +28,7 @@ class BlogPolicy
      */
     public function create(User $user): bool
     {
-        return $user !== null; // Any authenticated user can create
+        return (bool) $user->is_admin;
     }
 
     /**
@@ -36,7 +36,7 @@ class BlogPolicy
      */
     public function update(User $user, Blog $blog): bool
     {
-        return $user !== null; // Any authenticated user can update
+        return (bool) $user->is_admin;
     }
 
     /**
@@ -44,7 +44,7 @@ class BlogPolicy
      */
     public function delete(User $user, Blog $blog): bool
     {
-        return $user !== null; // Any authenticated user can delete
+        return (bool) $user->is_admin;
     }
 
     /**
@@ -52,7 +52,7 @@ class BlogPolicy
      */
     public function restore(User $user): bool
     {
-        return $user !== null; // Any authenticated user can restore
+        return (bool) $user->is_admin;
     }
 
     /**
@@ -60,6 +60,6 @@ class BlogPolicy
      */
     public function forceDelete(User $user, Blog $blog): bool
     {
-        return $user !== null; // Any authenticated user can force delete
+        return (bool) $user->is_admin;
     }
 }

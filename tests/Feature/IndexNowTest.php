@@ -58,6 +58,48 @@ class IndexNowTest extends TestCase
         $this->assertContains('https://applyvipconseil.com/fa/blog/test-blog-post-fa', $urls);
         $this->assertContains('https://applyvipconseil.com/en/blog/test-blog-post-en', $urls);
         $this->assertContains('https://applyvipconseil.com/fr/blog/test-blog-post-fr', $urls);
+
+        // Category index URLs for SEO
+        $this->assertContains('https://applyvipconseil.com/fa/blog/categories', $urls);
+        $this->assertContains('https://applyvipconseil.com/en/blog/categories', $urls);
+        $this->assertContains('https://applyvipconseil.com/fr/blog/categories', $urls);
+    }
+
+    public function test_build_blog_post_urls_uses_translation_slugs_not_missing_blog_slug(): void
+    {
+        $author = User::factory()->create([
+            'password' => 'password',
+        ]);
+        $category = BlogCategory::create();
+
+        $blog = Blog::create([
+            'author_id' => $author->id,
+            'category_id' => $category->id,
+            'published_at' => now(),
+        ]);
+        $blog->translations()->create([
+            'locale' => 'fa',
+            'slug' => 'post-fa',
+            'title' => 'عنوان',
+            'body' => 'محتوا',
+        ]);
+        $blog->translations()->create([
+            'locale' => 'en',
+            'slug' => 'post-en',
+            'title' => 'Title',
+            'body' => 'Content',
+        ]);
+
+        $urls = app(IndexNowService::class)->buildBlogPostUrls($blog);
+
+        $this->assertContains('https://applyvipconseil.com/fa/blog/post-fa', $urls);
+        $this->assertContains('https://applyvipconseil.com/en/blog/post-en', $urls);
+        $this->assertContains('https://applyvipconseil.com/fa/blog', $urls);
+        $this->assertContains('https://applyvipconseil.com/en/blog', $urls);
+        $this->assertFalse(
+            collect($urls)->contains(fn (string $url) => str_ends_with($url, '/blog/')),
+            'Must not ping URLs built from a missing parent slug attribute'
+        );
     }
 
     public function test_submit_batch_to_all_engines(): void

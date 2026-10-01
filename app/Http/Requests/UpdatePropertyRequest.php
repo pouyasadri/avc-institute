@@ -12,7 +12,7 @@ class UpdatePropertyRequest extends FormRequest
 {
     public function authorize(): bool
     {
-        return true;
+        return (bool) $this->user()?->is_admin;
     }
 
     public function rules(): array

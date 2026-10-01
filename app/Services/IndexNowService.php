@@ -4,6 +4,7 @@ namespace App\Services;
 
 use App\Jobs\IndexNowPingJob;
 use App\Models\Blog;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
 
@@ -111,6 +112,71 @@ class IndexNowService
     }
 
     /**
+     * Build public URLs for one blog post across all supported locales,
+     * plus each locale's blog index (so listings get re-crawled).
+     *
+     * @return array<string>
+     */
+    public function buildBlogPostUrls(Blog $blog): array
+    {
+        $blog->loadMissing('translations');
+
+        $baseUrl = rtrim(config('app.url'), '/');
+        $locales = array_keys(config('seo.locales', ['en' => [], 'fr' => [], 'fa' => []]));
+        $urls = [];
+
+        foreach ($locales as $locale) {
+            $translation = $blog->getTranslation($locale);
+            if ($translation && $translation->slug) {
+                $encodedSlug = $this->encodeSlug($translation->slug);
+                $urls[] = "{$baseUrl}/{$locale}/blog/{$encodedSlug}";
+            }
+        }
+
+        foreach ($locales as $locale) {
+            $urls[] = "{$baseUrl}/{$locale}/blog";
+        }
+
+        return array_values(array_unique($urls));
+    }
+
+    /**
+     * Ping IndexNow for a blog change and clear the sitemap blogs cache.
+     */
+    public function notifyBlogChanged(Blog $blog): void
+    {
+        $urls = $this->buildBlogPostUrls($blog);
+
+        if ($urls !== []) {
+            $this->pingBatch($urls);
+        }
+
+        Cache::forget('sitemap:blogs');
+    }
+
+    /**
+     * Ping IndexNow for removed blog URLs and clear the sitemap blogs cache.
+     *
+     * @param  array<string>  $urls  URLs captured before soft-delete
+     */
+    public function notifyBlogRemoved(array $urls): void
+    {
+        if ($urls !== []) {
+            $this->pingBatch($urls);
+        }
+
+        Cache::forget('sitemap:blogs');
+    }
+
+    /**
+     * Encode a slug path segment-by-segment (supports Persian/UTF-8 slugs).
+     */
+    protected function encodeSlug(string $rawSlug): string
+    {
+        return implode('/', array_map('rawurlencode', explode('/', $rawSlug)));
+    }
+
+    /**
      * Build all public site URLs — mirrors SitemapController exactly.
      *
      * Uses the same config sources as the sitemap so the IndexNow submission
@@ -137,8 +203,9 @@ class IndexNowService
             // Homepages
             $urls[] = "{$baseUrl}/{$locale}";
 
-            // Blog index
+            // Blog index + categories index (public SEO listing)
             $urls[] = "{$baseUrl}/{$locale}/blog";
+            $urls[] = "{$baseUrl}/{$locale}/blog/categories";
 
             // Cities index + individual city pages
             $urls[] = "{$baseUrl}/{$locale}/cities";
@@ -174,7 +241,7 @@ class IndexNowService
                 foreach ($locales as $locale) {
                     $translation = $blog->getTranslation($locale);
                     if ($translation && $translation->slug) {
-                        $encodedSlug = implode('/', array_map('rawurlencode', explode('/', $translation->slug)));
+                        $encodedSlug = $this->encodeSlug($translation->slug);
                         $urls[] = "{$baseUrl}/{$locale}/blog/{$encodedSlug}";
                     }
                 }

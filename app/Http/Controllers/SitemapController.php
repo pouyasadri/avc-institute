@@ -106,6 +106,15 @@ class SitemapController extends Controller
                 'alternates' => $generateAlternates('/blog'),
             ];
 
+            // Blog categories index (public SEO listing)
+            $urls[] = [
+                'loc' => "{$baseUrl}/{$locale}/blog/categories",
+                'lastmod' => $blogs->max('updated_at')?->toAtomString() ?? now()->toAtomString(),
+                'changefreq' => 'weekly',
+                'priority' => 0.7,
+                'alternates' => $generateAlternates('/blog/categories'),
+            ];
+
             // Individual blog posts
             foreach ($blogs as $blog) {
                 $translation = $blog->getTranslation($locale);

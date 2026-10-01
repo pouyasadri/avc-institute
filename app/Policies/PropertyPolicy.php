@@ -12,7 +12,7 @@ class PropertyPolicy
      */
     public function viewAny(?User $user): bool
     {
-        return true; // Anyone can view properties list
+        return true;
     }
 
     /**
@@ -20,7 +20,7 @@ class PropertyPolicy
      */
     public function view(?User $user, Property $property): bool
     {
-        return true; // Anyone can view a property
+        return true;
     }
 
     /**
@@ -28,7 +28,7 @@ class PropertyPolicy
      */
     public function create(User $user): bool
     {
-        return $user !== null; // Any authenticated user can create
+        return (bool) $user->is_admin;
     }
 
     /**
@@ -36,7 +36,7 @@ class PropertyPolicy
      */
     public function update(User $user, Property $property): bool
     {
-        return $user !== null; // Any authenticated user can update
+        return (bool) $user->is_admin;
     }
 
     /**
@@ -44,7 +44,7 @@ class PropertyPolicy
      */
     public function delete(User $user, Property $property): bool
     {
-        return $user !== null; // Any authenticated user can delete
+        return (bool) $user->is_admin;
     }
 
     /**
@@ -52,7 +52,7 @@ class PropertyPolicy
      */
     public function restore(User $user): bool
     {
-        return $user !== null; // Any authenticated user can restore
+        return (bool) $user->is_admin;
     }
 
     /**
@@ -60,6 +60,6 @@ class PropertyPolicy
      */
     public function forceDelete(User $user, Property $property): bool
     {
-        return $user !== null; // Any authenticated user can force delete
+        return (bool) $user->is_admin;
     }
 }

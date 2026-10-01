@@ -12,7 +12,7 @@ class StorePropertyRequest extends FormRequest
 {
     public function authorize(): bool
     {
-        return true; // auth middleware already protects routes
+        return (bool) $this->user()?->is_admin;
     }
 
     public function rules(): array

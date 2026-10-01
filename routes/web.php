@@ -94,31 +94,19 @@ Route::prefix('{locale}')
                 Route::view("/$university", "university.$university")->name("universities.$university");
             }
         });
-        // Blog Routes
+        // Blog Routes (public read-only; writes live under /admin)
         Route::prefix('blog')->group(function () {
             Route::get('/', [BlogController::class, 'index'])->name('blog.index');
-            Route::get('/create', [BlogController::class, 'create'])->middleware('auth')->name('blog.create');
-            Route::post('/', [BlogController::class, 'store'])->middleware('auth')->name('blog.store');
-            Route::post('/{id}/restore', [BlogController::class, 'restore'])->middleware('auth')->name('blog.restore');
+
+            // Category listing (SEO) — must be registered before /{blog}
+            Route::get('/categories', [BlogCategoryController::class, 'index'])->name('blog.categories.index');
+
             Route::get('/{blog}', [BlogController::class, 'show'])->name('blog.show');
-            Route::get('/{blog}/edit', [BlogController::class, 'edit'])->middleware('auth')->name('blog.edit');
-            Route::put('/{blog}', [BlogController::class, 'update'])->middleware('auth')->name('blog.update');
-            Route::delete('/{blog}', [BlogController::class, 'destroy'])->name('blog.delete')->middleware('auth');
 
             // Comments
             Route::post('/{blog}/comments', [CommentController::class, 'store'])
                 ->name('comments.store')
                 ->middleware('throttle:comment-form');
-
-            // Category CRUD
-            Route::prefix('/categories')->group(function () {
-                Route::get('/', [BlogCategoryController::class, 'index'])->name('blog.categories.index');
-                Route::get('/create', [BlogCategoryController::class, 'create'])->middleware('auth')->name('blog.categories.create');
-                Route::post('/', [BlogCategoryController::class, 'store'])->middleware('auth')->name('blog.categories.store');
-                Route::get('/{category}/edit', [BlogCategoryController::class, 'edit'])->middleware('auth')->name('blog.categories.edit');
-                Route::put('/{category}', [BlogCategoryController::class, 'update'])->middleware('auth')->name('blog.categories.update');
-                Route::delete('/{category}', [BlogCategoryController::class, 'destroy'])->middleware('auth')->name('blog.categories.delete');
-            });
         });
 
         /*
@@ -273,6 +261,10 @@ Route::middleware(['admin.locale'])->group(function () {
 
         // Blog Routes
         Route::resource('blogs', App\Http\Controllers\Admin\BlogController::class)->names('blog');
+        Route::resource('blog-categories', App\Http\Controllers\Admin\BlogCategoryController::class)
+            ->names('blog.categories')
+            ->parameters(['blog-categories' => 'category'])
+            ->except(['show']);
         Route::resource('questions', App\Http\Controllers\Admin\QuestionController::class)->only(['index', 'show', 'destroy']);
         Route::resource('comments', App\Http\Controllers\Admin\CommentController::class)->only(['index', 'update', 'destroy']);
         Route::resource('consulting', ConsultingController::class)->only(['index', 'show', 'destroy']);

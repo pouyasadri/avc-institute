@@ -8,7 +8,7 @@ class StoreBlogRequest extends FormRequest
 {
     public function authorize(): bool
     {
-        return true; // authentication middleware already protects routes
+        return (bool) $this->user()?->is_admin;
     }
 
     public function rules(): array

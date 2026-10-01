@@ -9,7 +9,10 @@ class BlogCategoryService
 {
     public function getAllCategories(): Collection
     {
-        return BlogCategory::with('translations')->orderBy('created_at', 'desc')->get();
+        return BlogCategory::with(['translations', 'parent.translations'])
+            ->withCount('posts')
+            ->orderBy('created_at', 'desc')
+            ->get();
     }
 
     public function storeCategory(array $data): BlogCategory

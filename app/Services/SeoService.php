@@ -461,6 +461,32 @@ class SeoService
     }
 
     /**
+     * Generate meta tags for the public blog categories listing (SEO).
+     */
+    public function forBlogCategories(string $locale): self
+    {
+        $titles = [
+            'fa' => 'دسته‌بندی‌های وبلاگ | مشاوره مهاجرت و تحصیل فرانسه',
+            'fr' => 'Catégories du blog | Immigration et études en France',
+            'en' => 'Blog Categories | France Immigration & Study Advice',
+        ];
+
+        $descriptions = [
+            'fa' => 'مرور دسته‌بندی‌های مقالات AVC درباره مهاجرت، ویزا، تحصیل و زندگی در فرانسه.',
+            'fr' => 'Parcourez les catégories d’articles AVC sur l’immigration, les visas, les études et la vie en France.',
+            'en' => 'Browse AVC article categories on immigration, visas, studying, and life in France.',
+        ];
+
+        $this->setTitle($titles[$locale] ?? $titles['en'], false)
+            ->setDescription($descriptions[$locale] ?? $descriptions['en'])
+            ->setLocale($locale)
+            ->setType('website')
+            ->setTwitterCard('summary');
+
+        return $this;
+    }
+
+    /**
      * Get default meta tags
      */
     protected function getDefaults(): array

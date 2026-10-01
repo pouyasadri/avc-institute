@@ -20,8 +20,8 @@ class IndexController extends Controller
      */
     public function index(): View
     {
-        // Fetch the latest 3 published blog posts with translations for current locale
-        $blogs = $this->blogService->getPublishedBlogs(app()->getLocale())->take(3);
+        // Fetch the latest 3 published blog posts at SQL level (avoid loading the full collection)
+        $blogs = $this->blogService->getRecentPublishedBlogs(app()->getLocale(), 3);
 
         // PROPERTIES FEATURE DISABLED - COMING SOON
         // Original: $properties = $this->propertyService->getPublishedProperties()->take(4);
