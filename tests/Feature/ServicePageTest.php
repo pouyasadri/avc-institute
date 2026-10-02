@@ -27,7 +27,7 @@ class ServicePageTest extends TestCase
         $response = $this->get('/en/services/residence-permit');
         $response->assertStatus(200);
         $response->assertViewIs('pages.services.show');
-        $response->assertSeeText('Residence Permit & Immigration Assistance'); // Updated title
+        $response->assertSeeText('Renew French Residence Permit 2026');
     }
 
     /**
@@ -49,7 +49,7 @@ class ServicePageTest extends TestCase
         $response = $this->get('/fr/services/residence-permit');
 
         $response->assertStatus(200);
-        $response->assertSeeText('Assistance Titre de Séjour & Immigration');
+        $response->assertSeeText('Renouvellement titre de séjour 2026');
     }
 
     /**

@@ -24,7 +24,8 @@ class ConsultPageSeoTest extends TestCase
         $response->assertSee('وکیل مهاجرت به فرانسه', false);
 
         // Assert GEO answer capsule is present
-        $response->assertSee('موسسه بین‌المللی A.V.C با بیش از ۱۰ سال سابقه تخصصی', false);
+        $response->assertSee('A.V.C Institute (Apply VIP Conseil) با دفتر در فرانسه', false);
+        $response->assertSee('بدون ادعای تضمین ویزا', false);
 
         // Assert SLA commitment and WhatsApp button
         $response->assertSee('تعهد سرعت و پاسخگویی A.V.C', false);
