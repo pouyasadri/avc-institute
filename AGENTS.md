@@ -7,9 +7,10 @@ Repository: `avc-institute` (git@github.com:pouyasadri/avc-institute.git)
 ## Agent Discovery
 
 This project implements modern agent discovery standards:
-- **`llms.txt`**: authoritative summary of site intent (in `public/llms.txt`).
+- **`llms.txt`**: authoritative summary of site intent (`resources/llms/llms.base.txt` → generated `public/llms.txt` via `php artisan llms:generate`).
 - **Discovery Headers**: Managed by `AddDiscoveryHeaders` middleware.
-- **DNS-AID**: Configured via HTTPS/SVCB records (see `DNS_AID.md`).
+- **Agent index**: `/.well-known/agents-index.json` (see `App\Services\Discovery\AgentDiscoveryCatalog`).
+- **DNS-AID**: Live HTTPS `_index._agents` / `_a2a._agents` + DNSSEC on Cloudflare (see `DNS_AID.md`). Verify with `php artisan discovery:verify`.
 
 ---
 
@@ -235,3 +236,66 @@ The GitHub Actions workflow (`.github/workflows/deploy.yml`) triggers on push to
 4. Remote: `php artisan migrate --force`, `db:seed --force`, `optimize`, `view:cache`
 
 There are **no automated tests in CI**. Run `php artisan test` locally before merging to `main`.
+
+---
+
+## Grok Bot — Multilingual Blog Publishing
+
+This site is a **custom Laravel admin**, not WordPress. Marketplace WordPress / Postiz MCPs do **not** apply.
+
+### What to connect in Grok Bot
+
+| Need | Connect | Why |
+|------|---------|-----|
+| Publish posts | **Nothing required** — use Grok Bot **computer + browser** | Admin is form-based at `/admin/blogs/create` |
+| Optional alerts | **Slack** plugin | Notify when a draft is ready for approval |
+| Optional research inbox | **Gmail** plugin | Topic ideas from email (not required) |
+| Future (recommended) | **Custom MCP** wrapping a secured Admin Blog API | More reliable than UI clicking for EN/FR/FA + image |
+
+Do **not** install WordPress MCP, WDS MCP, or Postiz WordPress plugins for this repo.
+
+### Publishing surface (production)
+
+- Domain: `https://applyvipconseil.com`
+- Admin login: `/login` (admin locale middleware; UI often FR)
+- Create post: `/admin/blogs/create` → `POST` `admin.blog.store`
+- Required per locale (`en`, `fr`, `fa`): `translations[locale][title]`, `translations[locale][body]`
+- Optional: `translations[locale][slug]`, `translations[locale][excerpt]`
+- Sidebar: `category_id` (required in UI), `blog_main_image` (image ≤ 10MB), `is_pinned`, `published_at`
+- Body HTML is cleaned via HTMLPurifier (`clean()`); TinyMCE fields may be base64-encoded on submit
+- After save: IndexNow ping + sitemap cache clear (`sitemap:blogs`)
+
+### Categories (seeded names)
+
+Use an existing category; do not invent new ones unless asked:
+
+- Immigration & Visas / Immigration et Visas / مهاجرت و ویزا
+- Education & Study / Études et Formation / تحصیل و آموزش
+- Work & Business / Travail et Affaires / کار و تجارت
+- Life in France / Vie en France / زندگی در فرانسه
+- Tourism & Culture / Tourisme et Culture / گردشگری و فرهنگ
+- Language Learning / Apprentissage du Français / یادگیری زبان فرانسه
+
+### Topic source
+
+Prefer topics from `seo_blog_strategy.md` and internal links to `/fa/` services, cities, universities (Persian-first audience — see `public/llms.txt`).
+
+### Recommended Grok Bot workflow
+
+1. Create a dedicated Bot (e.g. “AVC Blog Publisher”).
+2. Put standing rules in the **Bot description** (audience, locales, approval gate).
+3. Once: take over the computer, sign into `/admin` yourself (Bot never types passwords).
+4. Run one dry-run: research → draft EN/FR/FA → prepare hero image → **stop before Submit**.
+5. Save the proven steps as a **skill**.
+6. Add a **routine** (e.g. weekly) that stops at approval; only publish after you say yes.
+7. Longer term: add an authenticated Admin Blog API + custom MCP so publishing does not depend on browser UI.
+
+### Safety rules for agents
+
+- Never publish without explicit human approval.
+- Never paste admin passwords into chat; use Grok Bot secure secret handoff / human takeover for login.
+- Always create **all three** locales (`fa`, `fr`, `en`) in one post.
+- Prefer Persian-first SEO intent; FR/EN must be real translations, not machine-garbled copy.
+- Internal links must use locale-prefixed paths (`/fa/...`, `/fr/...`, `/en/...`).
+- Hero image: realistic, on-brand (France / study / immigration), no stock watermarks; upload as `blog_main_image`.
+- After publish, verify URLs: `/{locale}/blog/{slug}` for `fa`, `fr`, `en`.

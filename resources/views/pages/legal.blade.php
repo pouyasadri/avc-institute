@@ -108,7 +108,7 @@
 
                                 <div class="data-row">
                                     <span class="data-label">{{ $fields['company_name'] }}</span>
-                                    <span class="data-value">Apply Vip Conseil (A.V.C)</span>
+                                    <span class="data-value">{{ $org['name'] ?? 'A.V.C Institute' }} ({{ ($org['alternate_name'][0] ?? 'Apply VIP Conseil') }})</span>
                                 </div>
                                 <div class="data-row">
                                     <span class="data-label">{{ $fields['legal_name'] }}</span>

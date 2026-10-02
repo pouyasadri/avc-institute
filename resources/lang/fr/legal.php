@@ -2,9 +2,9 @@
 
 return [
     'meta' => [
-        'title' => 'Identité Légale & Immatriculation | Apply Vip Conseil',
-        'description' => 'Identité légale officielle d\'Apply Vip Conseil (APPLY VIP CONSEIL) — SIREN, SIRET, numéro de TVA, immatriculation RNE, code NAF et coordonnées du siège social en France.',
-        'keywords' => 'Apply Vip Conseil légal, SIREN 983675331, SIRET, immatriculation France, cabinet conseil immigration France',
+        'title' => 'Identité Légale & Immatriculation | A.V.C Institute',
+        'description' => 'Identité légale officielle d\'A.V.C Institute (APPLY VIP CONSEIL) — SIREN, SIRET, numéro de TVA, immatriculation RNE, code NAF et coordonnées du siège social en France.',
+        'keywords' => 'A.V.C Institute légal, Apply VIP Conseil, SIREN 983675331, SIRET, immatriculation France, cabinet conseil immigration France',
     ],
 
     'breadcrumb' => [
@@ -17,7 +17,7 @@ return [
     'hero' => [
         'badge' => 'Immatriculation Officielle',
         'title' => 'Notre Identité Légale',
-        'subtitle' => 'Apply Vip Conseil est une société française (SAS) immatriculée au Registre National des Entreprises (RNE) et pleinement conforme au droit commercial français. Retrouvez ci-dessous toutes nos informations officielles d\'immatriculation telles qu\'elles figurent au RNE, tenu par l\'INPI.',
+        'subtitle' => 'A.V.C Institute (APPLY VIP CONSEIL) est une société française (SAS) immatriculée au Registre National des Entreprises (RNE) et pleinement conforme au droit commercial français. Retrouvez ci-dessous toutes nos informations officielles d\'immatriculation telles qu\'elles figurent au RNE, tenu par l\'INPI.',
     ],
 
     'trust' => [

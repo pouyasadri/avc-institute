@@ -2,9 +2,9 @@
 
 return [
     'meta' => [
-        'title' => 'Legal Identity & Company Registration | Apply Vip Conseil',
-        'description' => 'Official legal identity of Apply Vip Conseil (APPLY VIP CONSEIL) — SIREN, SIRET, VAT number, RNE registration, NAF code, and company registration details as registered in France.',
-        'keywords' => 'Apply Vip Conseil legal, SIREN 983675331, SIRET, company registration France, immigration consulting France',
+        'title' => 'Legal Identity & Company Registration | A.V.C Institute',
+        'description' => 'Official legal identity of A.V.C Institute (APPLY VIP CONSEIL) — SIREN, SIRET, VAT number, RNE registration, NAF code, and company registration details as registered in France.',
+        'keywords' => 'A.V.C Institute legal, Apply VIP Conseil, SIREN 983675331, SIRET, company registration France, immigration consulting France',
     ],
 
     'breadcrumb' => [
@@ -17,7 +17,7 @@ return [
     'hero' => [
         'badge' => 'Official Registration',
         'title' => 'Our Legal Identity',
-        'subtitle' => 'Apply Vip Conseil is a French-registered company (SAS), fully compliant with French commercial law. Below you will find our complete official registration details as listed in the National Business Register (RNE), maintained by the INPI.',
+        'subtitle' => 'A.V.C Institute (APPLY VIP CONSEIL) is a French-registered company (SAS), fully compliant with French commercial law. Below you will find our complete official registration details as listed in the National Business Register (RNE), maintained by the INPI.',
     ],
 
     'trust' => [

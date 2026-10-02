@@ -11,6 +11,9 @@ return [
     'other_services' => 'Other Services',
     'benefits_heading' => 'Why Choose This Service',
     'key_facts_title' => 'Key Case Facts & Requirements (2026 Snapshot)',
+    'sources_label' => 'Official sources',
+    'last_checked_label' => 'Last checked',
+    'related_guides_heading' => 'Related guides',
     'cta_banner_title' => 'Need an expert evaluation of your dossier or application?',
     'cta_banner_desc' => 'Our immigration specialists and partner legal experts in France assess your situation with complete precision.',
     'cta_banner_button' => 'Book Consultation',
@@ -23,37 +26,101 @@ return [
     ],
 
     'residence-permit' => [
-        'title' => 'Residence Permit & Immigration Assistance',
-        'description' => 'Secure or renew your French Titre de Séjour under 2026 Prefecture guidelines. Expert support for student visas, Talent Passports, and status changes.',
+        'title' => 'Renew French Residence Permit 2026 | Documents, ANEF, Récépissé & New Rules',
+        'description' => 'Practical guide to renewing a French Titre de Séjour: documents, ANEF steps, timing, récépissé, Prefecture delays, and the 2026 French-level / civic exam rules — including who does NOT need them for renewal.',
         'service_type' => 'GovernmentResidencyPermitService',
-        'meta_keywords' => 'French residence permit, Titre de Sejour renewal, Prefecture appointment 2026, immigration lawyer France, change of status France',
+        'meta_keywords' => 'renew French residence permit, titre de séjour renewal 2026, ANEF renewal, récépissé, prefecture appointment, civic exam France, A2 B1 residence permit, change of status France',
+        'key_facts' => [
+            ['label' => 'When to start', 'value' => 'Legally often ~2 months before expiry; prepare 3–4 months ahead'],
+            ['label' => 'Main channel', 'value' => 'ANEF online + Prefecture follow-up'],
+            ['label' => 'Temporary proof', 'value' => 'Récépissé / renewal acknowledgement'],
+            ['label' => '2026 language/civic', 'value' => 'Usually NOT required for renewing an existing multi-year/resident card'],
+        ],
         'content' => [
-            'Securing your legal right to live and work in France is the most critical step in your journey. However, the French administrative landscape is famously complex, with shifting regulations and rigorous documentation requirements that can feel overwhelming for even the most prepared individuals.',
-            'At A.V.C Institute, we don\'t just provide "paperwork assistance"; we provide peace of mind. Our immigration experts specialize in a wide range of residency paths, including Student Visas, Talent Passports (for researchers, business creators, and artists), Family Reunification, and Long-stay Visitor Visas.',
-            'Our "AVCI Method" involves a thorough three-step process: First, a comprehensive audit of your documents to identify potential red flags before the Prefecture does. Second, we handle the technical hurdle of securing appointments, which are often scarce. Finally, we provide administrative advocacy, acting as your representative to resolve blocks or delays in your dossier.',
+            'If you already live in France and your residence card is expiring, you need a renewal playbook — not a generic marketing page. This guide covers documents, ANEF filing, récépissé, delays, and the 2026 civic-exam / A2–B1 rules with a clear renewal vs first-issue distinction.',
+            'A.V.C Institute operates in France (Schiltigheim / Strasbourg). We audit dossiers, support ANEF filing, chase Prefecture delays, and coordinate partner immigration lawyers for complex cases. We are not a substitute for a barreau attorney; we manage the administrative track and legal handoff when needed.',
+        ],
+        'sections' => [
+            [
+                'heading' => 'Common documents for residence-card renewal',
+                'paragraphs' => [
+                    'Exact lists vary by card type and Prefecture, but most renewals revolve around:',
+                ],
+                'list' => [
+                    'Valid passport + identity/visa pages',
+                    'Current residence card',
+                    'Recent French address proof',
+                    'Compliant identity photo',
+                    'Status proof (student certificate, employment contract/payslips, or financial means)',
+                    'Health coverage documents when required',
+                    'Tax stamp (timbre fiscal) when requested by the portal',
+                ],
+            ],
+            [
+                'heading' => 'ANEF renewal steps',
+                'steps' => [
+                    ['title' => 'Prepare early', 'body' => 'Collect documents and confirm whether you renew the same status or change status.'],
+                    ['title' => 'File on ANEF', 'body' => 'Complete the online renewal form and upload clear, consistent documents.'],
+                    ['title' => 'Get the récépissé', 'body' => 'Keep the temporary acknowledgement that covers your stay while the decision is pending.'],
+                    ['title' => 'Follow up', 'body' => 'Answer incompleteness notices quickly; escalate delayed files with formal administrative follow-up.'],
+                ],
+            ],
+            [
+                'heading' => '2026 rules: A2/B1 French + civic exam',
+                'paragraphs' => [
+                    'Since 1 January 2026, many <strong>first</strong> multi-year cards (CSP) require French A2 plus the civic exam; many <strong>first</strong> resident cards require B1 plus the civic exam.',
+                    '<strong>Critical renewal point:</strong> Service-Public states that renewing a multi-year or resident card you already hold generally does not require the civic exam again. Social media often misstates this as a renewal obligation.',
+                ],
+                'sources' => [
+                    ['label' => 'Service-Public — civic exam', 'url' => 'https://www.service-public.fr/particuliers/vosdroits/F39530'],
+                    ['label' => 'Service-Public — French level', 'url' => 'https://www.service-public.fr/particuliers/vosdroits/F34501'],
+                    ['label' => 'Interior civic training site', 'url' => 'https://formation-civique.interieur.gouv.fr/examen-civique/informations-générales-sur-lexamen-civique/'],
+                ],
+                'last_checked' => '2 October 2026',
+            ],
+            [
+                'heading' => 'What A.V.C does in France',
+                'list' => [
+                    'Pre-ANEF document audit',
+                    'Renewal timing and récépissé guidance',
+                    'Prefecture delay follow-up',
+                    'Partner-lawyer coordination for appeals / complex files',
+                    'Change-of-status strategy when a simple renewal is not enough',
+                ],
+            ],
+        ],
+        'related_guides' => [
+            [
+                'label' => 'French civic exam 2026 + A2/B1 rules',
+                'url' => '/en/blog/french-civic-exam-2026',
+            ],
+            [
+                'label' => 'Book a residence renewal consultation',
+                'url' => '/en/consult?service=residence-permit',
+            ],
         ],
         'benefits' => [
-            'Proactive document auditing to minimize the risk of refusal or "dossier incomplet" notifications.',
-            'Priority appointment scheduling assistance in high-demand Prefectures.',
-            'Strategic advice on choosing the residency status that best fits your long-term career or personal goals in France.',
-            'Continuous monitoring of your application status with direct administrative follow-ups.',
+            'Renewal-first content: documents, ANEF, récépissé, delays.',
+            'Sourced 2026 language/civic explanation that separates first issue from renewal.',
+            'France-based follow-up for Iranian residents.',
+            'Legal partner path when the file leaves the standard track.',
         ],
         'faq' => [
             [
+                'q' => 'Do I need the civic exam to renew my card?',
+                'a' => 'Usually no, if you are renewing a multi-year or resident card you already hold. The exam mainly targets first issuance of those cards. Confirm your exact category before filing.',
+            ],
+            [
                 'q' => 'What is the difference between a VLS-TS and a Titre de Séjour?',
-                'a' => 'A VLS-TS (Visa Long Séjour Valant Titre de Séjour) is what you usually receive at the embassy; it acts as your permit for the first year once validated. A "Titre de Séjour" is the physical card you apply for at the Prefecture when your initial visa is expiring or if your status changes.',
+                'a' => 'A VLS-TS is the long-stay visa that can act as your first-year permit after validation. A Titre de Séjour is the physical card usually requested later for continued stay or status change.',
             ],
             [
-                'q' => 'What happens if my residency application is stuck or I haven’t heard back for months?',
-                'a' => 'This is common in many Prefectures. We use "Administrative Advocacy" to send formal inquiries and, if necessary, work with legal partners to file a "recours" (appeal) or a formal notice to unblock your file.',
+                'q' => 'What if my renewal is stuck for months?',
+                'a' => 'Check ANEF for incompleteness first, then send formal administrative follow-ups. Partner lawyers can escalate when delays become unlawful or high-risk.',
             ],
             [
-                'q' => 'Can I travel outside of France while my renewal is being processed?',
-                'a' => 'If you have a valid "Récépissé" (receipt) for a renewal application and it is accompanied by your expired permit, you can generally travel within the Schengen area. For international travel, specific rules apply depending on whether it is your first application or a renewal. We provide specific guidance based on your exact situation.',
-            ],
-            [
-                'q' => 'How early should I start the renewal process?',
-                'a' => 'The legal requirement is to start 2 months before your current permit expires. However, due to appointment scarcity, we recommend checking for slots or preparing your dossier up to 4 months in advance.',
+                'q' => 'Can I travel with a récépissé?',
+                'a' => 'Schengen travel is often possible with récépissé + expired card. Leaving and re-entering Schengen is riskier and should be checked case by case.',
             ],
         ],
     ],

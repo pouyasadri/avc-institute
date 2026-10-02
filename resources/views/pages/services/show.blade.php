@@ -78,6 +78,69 @@
                                 @endforeach
                             @endif
 
+                            @if(!empty($serviceDetails['sections']) && is_array($serviceDetails['sections']))
+                                @foreach($serviceDetails['sections'] as $section)
+                                    @if(!empty($section['heading']))
+                                        <h3 class="h5 fw-bold mt-5 mb-3 text-primary">{{ $section['heading'] }}</h3>
+                                    @endif
+                                    @foreach(($section['paragraphs'] ?? []) as $paragraph)
+                                        <p class="mb-3">{!! $paragraph !!}</p>
+                                    @endforeach
+                                    @if(!empty($section['list']) && is_array($section['list']))
+                                        <ul class="mb-4">
+                                            @foreach($section['list'] as $item)
+                                                <li class="mb-2">{{ $item }}</li>
+                                            @endforeach
+                                        </ul>
+                                    @endif
+                                    @if(!empty($section['steps']) && is_array($section['steps']))
+                                        <div class="timeline-steps position-relative mb-4">
+                                            <div class="row g-4">
+                                                @foreach($section['steps'] as $index => $step)
+                                                    <div class="col-12 col-md-6">
+                                                        <div class="p-3 bg-light rounded-4 h-100 position-relative border-top border-primary border-4 shadow-sm">
+                                                            <div class="step-num bg-primary text-white rounded-circle d-flex align-items-center justify-content-center fw-bold mb-3" style="width:30px; height:30px;">{{ $index + 1 }}</div>
+                                                            <h4 class="h6 fw-bold mb-2">{{ $step['title'] ?? '' }}</h4>
+                                                            <p class="small text-muted mb-0">{{ $step['body'] ?? '' }}</p>
+                                                        </div>
+                                                    </div>
+                                                @endforeach
+                                            </div>
+                                        </div>
+                                    @endif
+                                    @if(!empty($section['note']))
+                                        <div class="alert alert-primary border-0 rounded-4 mb-4" role="note">
+                                            {!! $section['note'] !!}
+                                        </div>
+                                    @endif
+                                    @if(!empty($section['sources']) && is_array($section['sources']))
+                                        <p class="small text-muted mb-4">
+                                            <strong>{{ __('services.sources_label') ?? 'Sources' }}:</strong>
+                                            @foreach($section['sources'] as $i => $source)
+                                                @if($i > 0) · @endif
+                                                <a href="{{ $source['url'] }}" target="_blank" rel="noopener noreferrer">{{ $source['label'] }}</a>
+                                            @endforeach
+                                            @if(!empty($section['last_checked']))
+                                                · {{ __('services.last_checked_label') ?? 'Last checked' }}: {{ $section['last_checked'] }}
+                                            @endif
+                                        </p>
+                                    @endif
+                                @endforeach
+                            @endif
+
+                            @if(!empty($serviceDetails['related_guides']) && is_array($serviceDetails['related_guides']))
+                                <div class="p-4 rounded-4 bg-light border mb-4">
+                                    <h3 class="h6 fw-bold mb-3">{{ __('services.related_guides_heading') ?? 'Related guides' }}</h3>
+                                    <ul class="list-unstyled mb-0">
+                                        @foreach($serviceDetails['related_guides'] as $guide)
+                                            <li class="mb-2">
+                                                <a href="{{ $guide['url'] }}" class="text-decoration-none">{{ $guide['label'] }}</a>
+                                            </li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            @endif
+
                             {{-- Mid-content Contextual CTA Banner --}}
                             <div class="service-mid-cta p-4 rounded-4 my-4 text-white bg-primary shadow-sm">
                                 <div class="row align-items-center g-3">

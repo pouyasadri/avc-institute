@@ -23,6 +23,7 @@ class AddDiscoveryHeaders
                 '</llms.txt>; rel="help"',
                 '</llms.txt>; rel="describedby"',
                 '</llms.txt>; rel="service-doc"',
+                '</.well-known/agents-index.json>; rel="index"',
                 '</.well-known/api-catalog>; rel="api-catalog"',
                 '</sitemap.xml>; rel="sitemap"',
             ];

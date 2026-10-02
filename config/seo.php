@@ -10,13 +10,13 @@ return [
     |
     */
     'defaults' => [
-        'title' => env('APP_NAME', 'Apply Vip Conseil'),
-        'title_suffix' => ' | Apply Vip Conseil',
-        'description' => 'Apply Vip Conseil - Your trusted partner for immigration, education, and real estate services in France. Expert consultation for residence permits, student visas, and property acquisition.',
+        'title' => env('APP_NAME', 'A.V.C Institute'),
+        'title_suffix' => ' | A.V.C Institute',
+        'description' => 'A.V.C Institute (Apply VIP Conseil) — trusted partner for immigration, education, and real estate services in France. Expert consultation for residence permits, student visas, and property acquisition.',
         // Bilingual keywords — Bing still uses keyword meta for non-English content ranking
-        'keywords' => 'immigration france, student visa france, real estate france, french residence permit, study in france, property france, '
-            .'مهاجرت به فرانسه, ویزای تحصیلی فرانسه, تحصیل در فرانسه, اقامت فرانسه, دانشگاه فرانسه, مشاوره مهاجرت, سرمایه گذاری فرانسه',
-        'author' => 'Apply Vip Conseil',
+        'keywords' => 'immigration france, student visa france, real estate france, french residence permit, study in france, property france, A.V.C Institute, Apply VIP Conseil, '
+            .'مهاجرت به فرانسه, ویزای تحصیلی فرانسه, تحصیل در فرانسه, اقامت فرانسه, دانشگاه فرانسه, مشاوره مهاجرت, سرمایه گذاری فرانسه, موسسه A.V.C',
+        'author' => 'A.V.C Institute',
         'image' => '/assets/img/logo/logo.webp',
         // Aligned with default_locale = 'fa' — was incorrectly set to 'en_US'
         'locale' => 'fa_IR',
@@ -25,20 +25,31 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Organization Information
+    | Organization Information (Brand Card — single source of truth)
     |--------------------------------------------------------------------------
     |
-    | Your business/organization details for Schema.org structured data
+    | Canonical public name: A.V.C Institute
+    | Legal entity: APPLY VIP CONSEIL
+    | Aliases stay in alternate_name so LLMs/Knowledge Graphs map old names.
+    | Telephone E.164: +33768688326 | Display: +33 7 68 68 83 26
     |
     */
     'organization' => [
-        'name' => 'Apply Vip Conseil',
+        'name' => 'A.V.C Institute',
         'legal_name' => 'APPLY VIP CONSEIL',
+        'alternate_name' => [
+            'Apply VIP Conseil',
+            'Apply Vip Conseil',
+            'A.V.C',
+            'موسسه A.V.C',
+            'Institut A.V.C',
+        ],
         'url' => env('APP_URL', 'https://applyvipconseil.com'),
         'logo' => '/assets/img/logo/logo.png',
-        'description' => 'Expert immigration and education consulting services in France, specializing in student visas, residence permits, and real estate acquisition.',
+        'description' => 'A.V.C Institute (Apply VIP Conseil) provides expert immigration and education consulting in France, specializing in student visas, residence permits, and real estate acquisition for Persian-, French-, and English-speaking clients.',
         'email' => 'info@applyvipconseil.com',
         'telephone' => '+33768688326',
+        'telephone_display' => '+33 7 68 68 83 26',
         'address' => [
             'street_address' => '57 Route de Hausbergen',
             'locality' => 'Schiltigheim',
@@ -55,8 +66,9 @@ return [
             'https://www.instagram.com/apply_vip_conseil/',
             'https://www.facebook.com/applyvipconseil',
             'https://www.linkedin.com/company/applyvipconseil',
+            'https://annuaire-entreprises.data.gouv.fr/entreprise/983675331',
         ],
-        'founder' => 'Apply Vip Conseil',
+        'founder' => 'A.V.C Institute',
         'founding_date' => '2023-10-01',
 
         // Official French registration identifiers

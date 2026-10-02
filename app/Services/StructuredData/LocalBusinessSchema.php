@@ -30,8 +30,15 @@ class LocalBusinessSchema extends SchemaBuilder
             ->add('priceRange', '€€')
             ->add('currenciesAccepted', $org['currencies_accepted'] ?? 'EUR')
             ->add('paymentAccepted', $org['payment_accepted'] ?? 'Cash, Credit Card')
-            ->add('sameAs', $org['same_as'])
+            ->add('sameAs', array_values(array_unique(array_filter([
+                ...($org['same_as'] ?? []),
+                $org['inpi_url'] ?? null,
+            ]))))
             ->add('parentOrganization', ['@id' => $orgId]);
+
+        if (! empty($org['alternate_name'])) {
+            $this->add('alternateName', array_values($org['alternate_name']));
+        }
 
         // Geo coordinates (improves Google Maps association)
         if (! empty($org['geo'])) {

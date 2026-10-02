@@ -21,6 +21,7 @@ use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SitemapController;
 use App\Http\Controllers\WithdrawConsentController;
 use App\Http\Middleware\SetLocale;
+use App\Services\Discovery\AgentDiscoveryCatalog;
 use App\Services\LocaleDetector;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -39,31 +40,24 @@ Route::get('/sitemap.xml', [SitemapController::class, 'index'])->name('sitemap')
 // LLM discovery file — helps AI search engines (Perplexity, ChatGPT, Bing Copilot) understand
 // the site's structure and cite it correctly in Persian/French/English AI search responses.
 Route::get('/llms.txt', function () {
-    return response()
-        ->file(public_path('llms.txt'), [
-            'Content-Type' => 'text/plain; charset=utf-8',
-            // Tell Cloudflare not to cache this aggressively — we may update it
-            'Cache-Control' => 'public, max-age=86400',
-        ]);
+    return response(file_get_contents(public_path('llms.txt')), 200, [
+        'Content-Type' => 'text/plain; charset=utf-8',
+        'Cache-Control' => 'public, max-age=86400',
+    ]);
 })->name('llms');
 
-// API Catalog (RFC 9727) — advertising service description and documentation for agents.
-Route::get('/.well-known/api-catalog', function () {
-    $catalog = [
-        'linkset' => [
-            [
-                'anchor' => url('/'),
-                'service-doc' => [
-                    [
-                        'href' => url('/llms.txt'),
-                        'type' => 'text/plain',
-                    ],
-                ],
-            ],
-        ],
-    ];
+// Agent index — HTTP companion to DNS-AID _index._agents (see DNS_AID.md).
+Route::get('/.well-known/agents-index.json', function (AgentDiscoveryCatalog $catalog) {
+    return response()
+        ->json($catalog->agentsIndex(), 200, [
+            'Content-Type' => 'application/json; charset=utf-8',
+            'Cache-Control' => 'public, max-age=86400',
+        ]);
+})->name('agents-index');
 
-    return response()->json($catalog, 200, [
+// API Catalog (RFC 9727) — advertising service description and documentation for agents.
+Route::get('/.well-known/api-catalog', function (AgentDiscoveryCatalog $catalog) {
+    return response()->json($catalog->apiCatalog(), 200, [
         'Content-Type' => 'application/linkset+json; charset=utf-8',
         'Cache-Control' => 'public, max-age=86400',
     ]);

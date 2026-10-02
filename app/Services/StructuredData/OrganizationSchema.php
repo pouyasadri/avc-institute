@@ -24,6 +24,11 @@ class OrganizationSchema extends SchemaBuilder
             $description = $org['description'];
         }
 
+        $sameAs = array_values(array_unique(array_filter([
+            ...($org['same_as'] ?? []),
+            $org['inpi_url'] ?? null,
+        ])));
+
         $this->add('@id', $orgId)
             ->add('name', $org['name'])
             ->add('legalName', $org['legal_name'])
@@ -33,11 +38,15 @@ class OrganizationSchema extends SchemaBuilder
             ->add('email', $org['email'])
             ->add('telephone', $org['telephone'])
             ->add('address', $this->buildAddress($org['address']))
-            ->add('sameAs', $org['same_as'])
+            ->add('sameAs', $sameAs)
             ->add('founder', $org['founder'])
             ->add('foundingDate', $org['founding_date'])
             ->add('areaServed', ['France', 'Iran'])
             ->add('availableLanguage', ['French', 'Persian', 'English']);
+
+        if (! empty($org['alternate_name'])) {
+            $this->add('alternateName', array_values($org['alternate_name']));
+        }
 
         // Add official French registration identifiers
         if (! empty($org['vat_id'])) {

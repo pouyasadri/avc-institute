@@ -44,11 +44,11 @@ No articles available at the moment.
 @endforelse
 
 ## 📞 Get in Touch
+- **Organization**: {{ config('seo.organization.name') }} ({{ config('seo.organization.legal_name') }})
 - **Book a Consultation**: [{{ __('index.slider.slide1.button') }}]({{ route('consult', ['locale' => app()->getLocale()]) }})
 - **Contact Us**: [Send a Message]({{ route('contact', ['locale' => app()->getLocale()]) }})
-- **Support Email**: info@applyvipconseil.com
-- **Phone**: +33 7 80 95 33 33
+- **Support Email**: {{ config('seo.organization.email') }}
+- **Phone**: {{ config('seo.organization.telephone_display') }}
 
----
-**Machine-Readable Summary**: [llms.txt]({{ url('/llms.txt') }}) | **Sitemap**: [sitemap.xml]({{ url('/sitemap.xml') }})
+@include('markdown.partials.footer')
 

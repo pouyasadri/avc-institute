@@ -28,6 +28,9 @@ class MarkdownNegotiationTest extends TestCase
         $this->assertStringContainsString('Explore French Cities', $content);
         $this->assertStringContainsString('University Guides', $content);
         $this->assertStringContainsString('Latest Immigration News', $content);
+        $this->assertStringContainsString(config('seo.organization.telephone_display'), $content);
+        $this->assertStringContainsString(config('seo.organization.name'), $content);
+        $this->assertStringNotContainsString('+33 7 80 95 33 33', $content);
     }
 
     /**
@@ -58,7 +61,11 @@ class MarkdownNegotiationTest extends TestCase
 
         $content = $response->getContent();
         $this->assertStringContainsString('# ', $content);
-        $this->assertStringContainsString('optimized for HTML', $content);
-        $this->assertStringContainsString('/llms.txt', $content);
+        // Fallback converter now extracts page content or returns a cite-aware stub.
+        $this->assertStringContainsString('llms.txt', $content);
+        $this->assertTrue(
+            str_contains($content, 'Cite this page') || str_contains($content, 'optimized for HTML'),
+            'Fallback markdown should include cite guidance or explicit stub notice'
+        );
     }
 }

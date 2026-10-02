@@ -11,6 +11,9 @@ return [
     'other_services' => 'Autres services',
     'benefits_heading' => 'Pourquoi choisir ce service',
     'key_facts_title' => 'Points clés & Conditions du dossier (Synthèse 2026)',
+    'sources_label' => 'Sources officielles',
+    'last_checked_label' => 'Dernière vérification',
+    'related_guides_heading' => 'Guides associés',
     'cta_banner_title' => 'Besoin d\'une évaluation experte de votre dossier ?',
     'cta_banner_desc' => 'Nos spécialistes de l\'immigration et juristes partenaires en France analysent votre profil en toute conformité.',
     'cta_banner_button' => 'Prendre rendez-vous',
@@ -23,37 +26,98 @@ return [
     ],
 
     'residence-permit' => [
-        'title' => 'Assistance Titre de Séjour & Immigration',
-        'description' => 'Sécurisez ou renouvelez votre Titre de Séjour français selon les règles 2026. Aide pour visa étudiant, passeport talent et changement de statut.',
+        'title' => 'Renouvellement titre de séjour 2026 | Documents, ANEF, récépissé et nouvelles règles',
+        'description' => 'Guide pratique pour renouveler un titre de séjour : documents, étapes ANEF, délais, récépissé, retards préfectoraux et règles 2026 (niveau A2/B1 + examen civique) — y compris qui n\'en a PAS besoin en renouvellement.',
         'service_type' => 'GovernmentResidencyPermitService',
-        'meta_keywords' => 'titre de séjour, renouvellement titre de séjour, préfecture rendez-vous 2026, avocat immigration France, changement de statut, passeport talent',
+        'meta_keywords' => 'renouvellement titre de séjour, titre de séjour 2026, ANEF, récépissé, rendez-vous préfecture, examen civique, niveau A2 B1, changement de statut',
+        'key_facts' => [
+            ['label' => 'Quand démarrer', 'value' => 'Souvent ~2 mois avant expiration ; préparer 3–4 mois à l\'avance'],
+            ['label' => 'Canal principal', 'value' => 'ANEF en ligne + suivi préfecture'],
+            ['label' => 'Preuve temporaire', 'value' => 'Récépissé / accusé de renouvellement'],
+            ['label' => 'Langue / civique 2026', 'value' => 'Généralement PAS exigés pour renouveler une CSP/carte de résident déjà obtenue'],
+        ],
         'content' => [
-            'Sécuriser votre droit légal de vivre et travailler en France est l\'étape la plus cruciale de votre parcours. Cependant, le paysage administratif français est réputé pour sa complexité, avec des réglementations changeantes et des exigences documentaires rigoureuses qui peuvent sembler accablantes.',
-            'À l\'Institut A.V.C, nous ne nous contentons pas de fournir une "aide administrative" ; nous vous offrons la sérénité. Nos experts en immigration se spécialisent dans une large gamme de parcours de résidence : Visas Étudiants, Passeports Talents (chercheurs, créateurs d\'entreprise, artistes), Regroupement Familial et Visas Visiteur Long Séjour.',
-            'Notre "Méthode AVCI" repose sur un processus rigoureux en trois étapes : Premièrement, un audit complet de vos documents pour identifier les points de blocage potentiels avant la Préfecture. Deuxièmement, nous gérons l\'obstacle technique de l\'obtention des rendez-vous. Enfin, nous assurons un plaidoyer administratif, agissant comme votre représentant pour débloquer les dossiers en attente.',
+            'Si vous vivez déjà en France et que votre carte arrive à échéance, vous avez besoin d\'un guide de renouvellement concret — pas d\'une page marketing générique. Ce contenu détaille documents, dépôt ANEF, récépissé, retards et la distinction 2026 entre première délivrance et renouvellement.',
+            'A.V.C Institute est basé en France (Schiltigheim / Strasbourg). Nous auditons les dossiers, accompagnons l\'ANEF, relançons les préfectures et coordonnons des avocats partenaires pour les dossiers complexes. Nous ne remplaçons pas un avocat au barreau ; nous gérons le suivi administratif et le passage de relais juridique.',
+        ],
+        'sections' => [
+            [
+                'heading' => 'Documents fréquents pour un renouvellement',
+                'list' => [
+                    'Passeport valide + pages d\'identité/visa',
+                    'Titre de séjour actuel',
+                    'Justificatif de domicile récent',
+                    'Photo d\'identité aux normes',
+                    'Preuve de statut (scolarité, contrat/bulletins de salaire, ou ressources)',
+                    'Couverture santé si exigée',
+                    'Timbre fiscal lorsque le portail le demande',
+                ],
+            ],
+            [
+                'heading' => 'Étapes ANEF',
+                'steps' => [
+                    ['title' => 'Préparer tôt', 'body' => 'Rassembler les pièces et confirmer renouvellement à l\'identique ou changement de statut.'],
+                    ['title' => 'Déposer sur ANEF', 'body' => 'Compléter le formulaire et téléverser des documents lisibles et cohérents.'],
+                    ['title' => 'Obtenir le récépissé', 'body' => 'Conserver la preuve temporaire qui couvre votre séjour pendant l\'instruction.'],
+                    ['title' => 'Suivre et compléter', 'body' => 'Répondre vite aux demandes de pièces ; relancer en cas de retard anormal.'],
+                ],
+            ],
+            [
+                'heading' => 'Règles 2026 : niveau A2/B1 et examen civique',
+                'paragraphs' => [
+                    'Depuis le 1er janvier 2026, de nombreuses <strong>premières</strong> cartes de séjour pluriannuelles exigent le niveau A2 et l\'examen civique ; de nombreuses <strong>premières</strong> cartes de résident exigent le B1 et l\'examen civique.',
+                    '<strong>Point clé pour le renouvellement :</strong> selon Service-Public, le renouvellement d\'une CSP ou d\'une carte de résident déjà obtenue n\'exige en principe pas un nouvel examen civique. Les contenus sociaux confondent souvent première délivrance et renouvellement.',
+                ],
+                'sources' => [
+                    ['label' => 'Service-Public — examen civique', 'url' => 'https://www.service-public.fr/particuliers/vosdroits/F39530'],
+                    ['label' => 'Service-Public — niveau de français', 'url' => 'https://www.service-public.fr/particuliers/vosdroits/F34501'],
+                    ['label' => 'Formation civique (Intérieur)', 'url' => 'https://formation-civique.interieur.gouv.fr/examen-civique/informations-générales-sur-lexamen-civique/'],
+                ],
+                'last_checked' => '2 octobre 2026',
+            ],
+            [
+                'heading' => 'Ce que fait A.V.C en France',
+                'list' => [
+                    'Audit documentaire avant ANEF',
+                    'Calendrier de renouvellement et récépissé',
+                    'Relances préfectorales',
+                    'Coordination avocat partenaire pour recours / dossiers complexes',
+                    'Stratégie de changement de statut si le simple renouvellement ne suffit pas',
+                ],
+            ],
+        ],
+        'related_guides' => [
+            [
+                'label' => 'Examen civique 2026 et règles A2/B1',
+                'url' => '/fr/blog/examen-civique-france-2026',
+            ],
+            [
+                'label' => 'Réserver une consultation renouvellement',
+                'url' => '/fr/consult?service=residence-permit',
+            ],
         ],
         'benefits' => [
-            'Audit proactif des documents pour minimiser les risques de refus ou de notifications "dossier incomplet".',
-            'Assistance prioritaire pour la prise de rendez-vous dans les Préfectures à forte demande.',
-            'Conseils stratégiques sur le choix du statut de résidence le plus adapté à vos objectifs professionnels ou personnels à long terme.',
-            'Suivi continu de l\'état de votre demande avec des relances administratives directes.',
+            'Contenu orienté renouvellement : documents, ANEF, récépissé, retards.',
+            'Explication sourcée des règles 2026 (première délivrance vs renouvellement).',
+            'Suivi depuis la France pour résidents iraniens.',
+            'Passage avocat partenaire quand le dossier sort du circuit standard.',
         ],
         'faq' => [
             [
-                'q' => 'Quelle est la différence entre un VLS-TS et un Titre de Séjour ?',
-                'a' => 'Un VLS-TS (Visa Long Séjour Valant Titre de Séjour) is what you receive generally at the embassy ; it serves of titre de séjour for the first year after validation. Un "Titre de Séjour" is the card physique that you demand to the Prefecture during the expiration of your initial visa or of a status change.',
+                'q' => 'Dois-je passer l\'examen civique pour renouveler ma carte ?',
+                'a' => 'En général non, si vous renouvelez une CSP ou une carte de résident déjà obtenue. L\'examen vise surtout la première délivrance de ces titres. Vérifiez votre catégorie exacte.',
             ],
             [
-                'q' => 'Que se passe-t-il si ma demande de résidence est bloquée ou sans réponse depuis des mois ?',
-                'a' => 'C\'est courant dans de nombreuses Préfectures. Nous utilisons le "Plaidoyer Administratif" pour envoyer des demandes d\'informations formelles et, si nécessaire, travaillons avec des partenaires juridiques pour déposer un recours ou une mise en demeure.',
+                'q' => 'Quelle est la différence entre VLS-TS et Titre de Séjour ?',
+                'a' => 'Le VLS-TS est le visa long séjour qui peut valoir titre la première année après validation. Le Titre de Séjour est la carte physique demandée ensuite pour poursuivre le séjour ou changer de statut.',
             ],
             [
-                'q' => 'Puis-je voyager hors de France pendant que mon renouvellement est en cours ?',
-                'a' => 'Si vous possédez un Récépissé de renouvellement valide accompagné de votre titre expiré, vous pouvez généralement voyager dans l\'espace Schengen. Pour les voyages internationaux, des règles spécifiques s\'appliquent. Nous fournissons des conseils personnalisés selon votre situation exacte.',
+                'q' => 'Que faire si mon renouvellement est bloqué pendant des mois ?',
+                'a' => 'Vérifiez d\'abord les demandes de pièces ANEF, puis relancez formellement. Un avocat partenaire peut escalader en cas de retard anormal ou de risque élevé.',
             ],
             [
-                'q' => 'Quand dois-je commencer la procédure de renouvellement ?',
-                'a' => 'L\'exigence légale est de commencer 2 mois avant l\'expiration de votre titre actuel. Cependant, en raison de la rareté des rendez-vous, nous recommandons de préparer votre dossier jusqu\'à 4 mois à l\'avance.',
+                'q' => 'Puis-je voyager avec un récépissé ?',
+                'a' => 'Les voyages Schengen sont souvent possibles avec récépissé + titre expiré. Sortir puis revenir dans Schengen est plus risqué et doit être vérifié au cas par cas.',
             ],
         ],
     ],

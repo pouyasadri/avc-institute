@@ -47,6 +47,15 @@ Schedule::command('indexnow:submit')
 
 /*
 |--------------------------------------------------------------------------
+| llms.txt — Daily refresh of recent blog updates for AI agents
+|--------------------------------------------------------------------------
+*/
+Schedule::command('llms:generate')
+    ->dailyAt('04:30')
+    ->withoutOverlapping();
+
+/*
+|--------------------------------------------------------------------------
 | GDPR Data Retention — Daily Purge (Art. 5(1)(e) Storage Limitation)
 |--------------------------------------------------------------------------
 | Runs at 02:00 every day (low traffic).

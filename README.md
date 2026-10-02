@@ -27,8 +27,9 @@
 This site supports modern agent discovery protocols to help AI agents (like ChatGPT, Claude, and Perplexity) understand its structure and services:
 
 - **llms.txt**: Found at [/llms.txt](/public/llms.txt), providing a machine-readable summary of the site's content and intent.
-- **Link Headers**: Discovery headers are served on the homepage to point agents to the `llms.txt` and `sitemap.xml`.
-- **DNS-AID**: Support for DNS-based AI Discovery via HTTPS/SVCB records. See [DNS_AID.md](DNS_AID.md) for configuration details.
+- **Agent index**: Served at `/.well-known/agents-index.json` for AI crawlers.
+- **Link Headers**: Discovery headers on the homepage point agents to `llms.txt`, the agent index, api-catalog, and `sitemap.xml`.
+- **DNS-AID**: Live Cloudflare HTTPS records at `_index._agents` / `_a2a._agents` with DNSSEC. See [DNS_AID.md](DNS_AID.md). Verify with `php artisan discovery:verify`.
 
 ## About The Project
 

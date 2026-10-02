@@ -12,7 +12,7 @@ return [
         'keywords' => 'immigration france 2026, etudier en france, visa etudiant france, visa visiteur france, passeport talent france, vivre en france, titre de sejour, universites france',
         'description' => 'Découvrez les derniers articles et conseils d\'experts pour réussir votre immigration, vos études et votre installation en France en 2026.',
         'og' => [
-            'site_name' => 'Apply VIP Conseil (A.V.C)',
+            'site_name' => 'A.V.C Institute',
             'title' => 'Blog & Conseils Immigration France 2026 | A.V.C',
             'description' => 'Articles complets et conseils pratiques pour étudier, travailler et résider en France.',
         ],

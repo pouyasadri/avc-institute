@@ -4,6 +4,7 @@ namespace App\Services;
 
 use App\Jobs\IndexNowPingJob;
 use App\Models\Blog;
+use App\Services\Discovery\LlmsTxtGenerator;
 use App\Services\Seo\SiteUrlBuilder;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Http;
@@ -48,8 +49,10 @@ class IndexNowService
 
     protected bool $logResponses;
 
-    public function __construct(protected SiteUrlBuilder $siteUrls)
-    {
+    public function __construct(
+        protected SiteUrlBuilder $siteUrls,
+        protected LlmsTxtGenerator $llmsTxt,
+    ) {
         $this->key = config('indexnow.key');
         $this->keyLocation = config('indexnow.key_location');
         $this->host = parse_url(config('app.url'), PHP_URL_HOST) ?? 'applyvipconseil.com';
@@ -135,6 +138,7 @@ class IndexNowService
         }
 
         Cache::forget('sitemap:blogs');
+        $this->llmsTxt->generateSafely();
     }
 
     /**
@@ -149,6 +153,7 @@ class IndexNowService
         }
 
         Cache::forget('sitemap:blogs');
+        $this->llmsTxt->generateSafely();
     }
 
     /**

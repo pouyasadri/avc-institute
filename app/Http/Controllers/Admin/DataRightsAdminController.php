@@ -131,7 +131,7 @@ class DataRightsAdminController extends Controller
         $export = [
             'generated_at' => now()->toIso8601String(),
             'gdpr_article' => 'Art. 15 (Access) & Art. 20 (Data Portability)',
-            'data_controller' => 'ApplyVIP Conseil (A.V.C Institute), 67000 Strasbourg, France',
+            'data_controller' => 'A.V.C Institute (APPLY VIP CONSEIL), 67300 Schiltigheim, France',
             'requester' => [
                 'email' => $email,
                 'request_id' => $dataRight->id,

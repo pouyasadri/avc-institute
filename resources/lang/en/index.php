@@ -220,13 +220,13 @@ return [
         'no_blogs' => 'No articles found.',
     ],
 
-    // Schema
+    // Schema (description used by OrganizationSchema; name/contact mirror config/seo.php brand card)
     'schema' => [
-        'name' => 'Apply VIP Conseil (A.V.C)',
-        'legalName' => 'Apply VIP Conseil',
+        'name' => 'A.V.C Institute',
+        'legalName' => 'APPLY VIP CONSEIL',
         'url' => 'https://applyvipconseil.com/',
         'logo' => 'https://applyvipconseil.com/images/logo.png',
-        'description' => 'Leading immigration consulting firm for France. Services include student visas, residency permits, and real estate investment.',
+        'description' => 'A.V.C Institute (Apply VIP Conseil) — leading immigration consulting firm for France. Services include student visas, residency permits, and real estate investment.',
         'address' => [
             'streetAddress' => '57 Route de Hausbergen',
             'addressLocality' => 'Schiltigheim',
@@ -241,9 +241,10 @@ return [
             'availableLanguage' => ['English', 'French', 'Persian'],
         ],
         'sameAs' => [
-            'https://www.instagram.com/applyvipconseil',
+            'https://www.instagram.com/apply_vip_conseil/',
             'https://www.linkedin.com/company/applyvipconseil',
             'https://www.facebook.com/applyvipconseil',
+            'https://annuaire-entreprises.data.gouv.fr/entreprise/983675331',
         ],
     ],
 ];

@@ -9,7 +9,7 @@ return [
 
         // Open Graph
         'og' => [
-            'site_name' => 'موسسه Apply VIP Conseil (A.V.C)',
+            'site_name' => 'موسسه A.V.C Institute',
             'title' => 'مهاجرت، تحصیل و آینده‌ای درخشان در فرانسه با A.V.C',
             'description' => 'تخصصی‌ترین مرکز مشاوره پذیرش تحصیلی، ویزا و اقامت فرانسه. خدمات جامع از اپلای تا استقرار کامل در قلب اروپا.',
             'type' => 'website',
@@ -101,8 +101,8 @@ return [
         'items' => [
             [
                 'slug' => 'residence-permit',
-                'title' => 'اخذ و تمدید کارت اقامت',
-                'description' => 'پشتیبانی تخصصی برای دریافت اولین کارت اقامت و تمدید Titre de Séjour. ما پیچیدگی‌های اداری را مدیریت می‌کنیم تا اقامت قانونی شما تضمین شود.',
+                'title' => 'تمدید کارت اقامت فرانسه',
+                'description' => 'راهنمای عملی تمدید Titre de Séjour: مدارک، ANEF، رسیپیسه و قوانین زبان/آزمون مدنی ۲۰۲۶ برای ایرانیان مقیم فرانسه.',
             ],
             [
                 'slug' => 'student-visa',
@@ -220,13 +220,13 @@ return [
         'no_blogs' => 'مقاله‌ای یافت نشد.',
     ],
 
-    // Schema
+    // Schema (description used by OrganizationSchema; name/contact mirror config/seo.php brand card)
     'schema' => [
-        'name' => 'Apply VIP Conseil (A.V.C)',
-        'legalName' => 'Apply VIP Conseil',
+        'name' => 'A.V.C Institute',
+        'legalName' => 'APPLY VIP CONSEIL',
         'url' => 'https://applyvipconseil.com/',
         'logo' => 'https://applyvipconseil.com/images/logo.png',
-        'description' => 'موسسه پیشرو در خدمات مهاجرتی فرانسه. اخذ ویزای تحصیلی، اقامت و سرمایه‌گذاری ملکی.',
+        'description' => 'موسسه A.V.C Institute (Apply VIP Conseil) — پیشرو در خدمات مهاجرتی فرانسه. اخذ ویزای تحصیلی، اقامت و سرمایه‌گذاری ملکی.',
         'address' => [
             'streetAddress' => '57 Route de Hausbergen',
             'addressLocality' => 'Schiltigheim',
@@ -241,9 +241,10 @@ return [
             'availableLanguage' => ['English', 'French', 'Persian'],
         ],
         'sameAs' => [
-            'https://www.instagram.com/applyvipconseil',
+            'https://www.instagram.com/apply_vip_conseil/',
             'https://www.linkedin.com/company/applyvipconseil',
             'https://www.facebook.com/applyvipconseil',
+            'https://annuaire-entreprises.data.gouv.fr/entreprise/983675331',
         ],
     ],
 ];

@@ -12,7 +12,7 @@ return [
         'keywords' => 'france immigration 2026, study in france, french student visa, france visitor visa, passport talent france, living in france, french residence permit, study abroad france, cost of living in france',
         'description' => 'Explore the latest 2026 guides on French immigration, student visas, financial independence (Visiteur), university admissions, and residence permits.',
         'og' => [
-            'site_name' => 'Apply VIP Conseil (A.V.C)',
+            'site_name' => 'A.V.C Institute',
             'title' => 'France Immigration & Education Insights 2026 | A.V.C',
             'description' => 'Comprehensive articles and practical advice for studying, working, and residing in France.',
         ],

@@ -9,7 +9,7 @@ return [
 
         // Open Graph
         'og' => [
-            'site_name' => 'Institut A.V.C',
+            'site_name' => 'A.V.C Institute',
             'title' => 'Immigration, Études et Investissement Immobilier en France',
             'description' => 'Votre partenaire de confiance pour s\'installer en France. Spécialistes des visas étudiants, titres de séjour et opportunités d\'investissement.',
             'type' => 'website',
@@ -220,13 +220,13 @@ return [
         'no_blogs' => 'Aucun article trouvé.',
     ],
 
-    // Schema
+    // Schema (description used by OrganizationSchema; name/contact mirror config/seo.php brand card)
     'schema' => [
-        'name' => 'Apply VIP Conseil (A.V.C)',
-        'legalName' => 'Apply VIP Conseil',
+        'name' => 'A.V.C Institute',
+        'legalName' => 'APPLY VIP CONSEIL',
         'url' => 'https://applyvipconseil.com/',
         'logo' => 'https://applyvipconseil.com/images/logo.png',
-        'description' => 'Cabinet de conseil en immigration leader pour la France. Services incluant visas étudiants, titres de séjour et investissement immobilier.',
+        'description' => 'A.V.C Institute (Apply VIP Conseil) — cabinet de conseil en immigration pour la France. Services incluant visas étudiants, titres de séjour et investissement immobilier.',
         'address' => [
             'streetAddress' => '57 Route de Hausbergen',
             'addressLocality' => 'Schiltigheim',
@@ -241,9 +241,10 @@ return [
             'availableLanguage' => ['English', 'French', 'Persian'],
         ],
         'sameAs' => [
-            'https://www.instagram.com/applyvipconseil',
+            'https://www.instagram.com/apply_vip_conseil/',
             'https://www.linkedin.com/company/applyvipconseil',
             'https://www.facebook.com/applyvipconseil',
+            'https://annuaire-entreprises.data.gouv.fr/entreprise/983675331',
         ],
     ],
 ];

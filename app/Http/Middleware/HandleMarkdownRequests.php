@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware;
 
+use App\Services\Discovery\HtmlToMarkdownConverter;
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\View;
@@ -9,6 +10,10 @@ use Symfony\Component\HttpFoundation\Response;
 
 class HandleMarkdownRequests
 {
+    public function __construct(
+        protected HtmlToMarkdownConverter $htmlToMarkdown,
+    ) {}
+
     /**
      * Handle an incoming request.
      *
@@ -16,13 +21,11 @@ class HandleMarkdownRequests
      */
     public function handle(Request $request, Closure $next): Response
     {
-        // Check if the agent specifically requests markdown
         if ($request->header('Accept') === 'text/markdown' ||
             str_contains($request->header('Accept') ?? '', 'text/markdown')) {
 
             $response = $next($request);
 
-            // Only attempt conversion for successful HTML responses
             if ($response->isSuccessful() && str_contains($response->headers->get('Content-Type') ?? '', 'text/html')) {
                 return $this->convertToMarkdown($request, $response);
             }
@@ -37,13 +40,15 @@ class HandleMarkdownRequests
     protected function convertToMarkdown(Request $request, Response $response): Response
     {
         $routeName = $request->route()?->getName();
-        $viewName = "markdown.{$routeName}";
+        $viewName = $this->resolveMarkdownView($routeName);
 
-        // If we have a dedicated markdown view for this route, use it
-        if ($routeName && View::exists($viewName)) {
-            $markdownContent = View::make($viewName, $this->extractDataFromResponse($response))->render();
+        if ($viewName) {
+            $data = array_merge(
+                $this->extractDataFromResponse($response),
+                $this->extraViewData($request, $routeName),
+            );
+            $markdownContent = View::make($viewName, $data)->render();
         } else {
-            // Fallback: Use a generic template or a simple conversion
             $markdownContent = $this->generateFallbackMarkdown($response);
         }
 
@@ -52,8 +57,53 @@ class HandleMarkdownRequests
             ->header('x-markdown-tokens', 'true');
     }
 
+    protected function resolveMarkdownView(?string $routeName): ?string
+    {
+        if (! $routeName) {
+            return null;
+        }
+
+        if (View::exists("markdown.{$routeName}")) {
+            return "markdown.{$routeName}";
+        }
+
+        if (str_starts_with($routeName, 'cities.') && $routeName !== 'cities.index' && View::exists('markdown.city')) {
+            return 'markdown.city';
+        }
+
+        if (str_starts_with($routeName, 'universities.') && $routeName !== 'universities.index' && View::exists('markdown.university')) {
+            return 'markdown.university';
+        }
+
+        return null;
+    }
+
+    /**
+     * @return array<string, mixed>
+     */
+    protected function extraViewData(Request $request, ?string $routeName): array
+    {
+        $data = [
+            'markdownCanonical' => url()->current(),
+            'markdownLocale' => app()->getLocale(),
+            'markdownOrgName' => config('seo.organization.name', 'A.V.C Institute'),
+        ];
+
+        if ($routeName && str_starts_with($routeName, 'cities.') && $routeName !== 'cities.index') {
+            $data['citySlug'] = substr($routeName, strlen('cities.'));
+        }
+
+        if ($routeName && str_starts_with($routeName, 'universities.') && $routeName !== 'universities.index') {
+            $data['universitySlug'] = substr($routeName, strlen('universities.'));
+        }
+
+        return $data;
+    }
+
     /**
      * Extract data passed to the original view if possible.
+     *
+     * @return array<string, mixed>
      */
     protected function extractDataFromResponse(Response $response): array
     {
@@ -65,19 +115,36 @@ class HandleMarkdownRequests
     }
 
     /**
-     * Generate a simple markdown fallback from HTML content.
+     * Generate markdown from HTML when no dedicated digest template exists.
      */
     protected function generateFallbackMarkdown(Response $response): string
     {
-        $html = $response->getContent();
+        $converted = $this->htmlToMarkdown->convert(
+            (string) $response->getContent(),
+            config('seo.organization.name', 'A.V.C Institute')
+        );
 
-        // Very basic extraction of main content if we don't have a template
-        // In a real scenario, you might use a library like league/html-to-markdown
-        // For now, we'll provide a helpful message or a simple strip tags approach
+        $title = $converted['title'];
+        $canonical = $converted['canonical'] ?: url()->current();
+        $body = $converted['body'];
+        $llms = url('/llms.txt');
 
-        $title = preg_match('/<title>(.*?)<\/title>/', $html, $matches) ? $matches[1] : 'Apply VIP Conseil';
+        if (mb_strlen($body) < 80) {
+            return "# {$title}\n\n".
+                "This page is currently optimized for HTML.\n\n".
+                "## Cite this page\n{$canonical}\n\n".
+                "## Machine-Readable Summary\n[llms.txt]({$llms})\n";
+        }
 
         return "# {$title}\n\n".
-               'This page is currently optimized for HTML. Please visit https://applyvipconseil.com/llms.txt for a machine-readable summary of our services.';
+            "{$body}\n\n".
+            "## Cite this page\n{$canonical}\n\n".
+            "## Related official sources\n".
+            "- [Campus France](https://www.campusfrance.org/)\n".
+            "- [France-Visas](https://france-visas.gouv.fr/)\n".
+            "- [Service-Public.fr](https://www.service-public.fr/)\n\n".
+            "## Machine-Readable Summary\n".
+            "Prefer [llms.txt]({$llms}) for Persian-first routing across services.\n".
+            'Organization: '.config('seo.organization.name', 'A.V.C Institute')."\n";
     }
 }
