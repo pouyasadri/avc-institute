@@ -8,7 +8,7 @@ use App\Enums\Calculator\AccommodationType;
 
 interface StudentBudgetBenchmarkProviderInterface
 {
-    public function getOfficialMonthlyMinimum(): int;
+    public function getOfficialMonthlyMinimum(): float;
 
     public function getDefaultDurationMonths(): int;
 

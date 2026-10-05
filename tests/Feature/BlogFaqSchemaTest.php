@@ -175,7 +175,7 @@ class BlogFaqSchemaTest extends TestCase
             <div class="faq-item mb-4">
                 <span class="faq-question fw-bold"> حداقل تمکن مالی فرانسه ۲۰۲۶ چقدر است؟ </span>
                 <div class="faq-answer text-muted">
-                    <p>حداقل ۶۱۵ یورو در ماه طبق نرخ حواله سنا.</p>
+                    <p>حداقل ۸۷۷٫۵۰ یورو در ماه طبق نرخ حواله سنا.</p>
                 </div>
             </div>
         </div>
@@ -201,7 +201,7 @@ class BlogFaqSchemaTest extends TestCase
         // Assert content and FAQs rendered
         $response->assertSee('مقدمه مقاله', false);
         $response->assertSee('حداقل تمکن مالی فرانسه ۲۰۲۶ چقدر است؟', false);
-        $response->assertSee('حداقل ۶۱۵ یورو در ماه طبق نرخ حواله سنا.', false);
+        $response->assertSee('حداقل ۸۷۷٫۵۰ یورو در ماه طبق نرخ حواله سنا.', false);
 
         // Assert Schema.org FAQPage emitted
         $response->assertSee('"@type": "FAQPage"', false);

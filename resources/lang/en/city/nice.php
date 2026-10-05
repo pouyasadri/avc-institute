@@ -25,7 +25,7 @@ return [
         ],
         [
             'label' => '2026 Visa Proof of Funds',
-            'value' => 'Min. €7,380/yr (€615/month)',
+            'value' => 'Min. €10,530/yr (€877.50/month)',
         ],
         [
             'label' => 'Housing Guarantor (Visale)',

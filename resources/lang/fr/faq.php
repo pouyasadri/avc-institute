@@ -10,7 +10,7 @@ return [
         ],
         [
             'question' => 'Quels documents sont nécessaires pour étudier en France ?',
-            'answer' => 'Vous aurez besoin d\'un passeport valide, d\'une lettre d\'acceptation universitaire, d\'une preuve de ressources financières (environ 615€/mois), d\'une assurance maladie, d\'un acte de naissance (traduit et légalisé), de relevés de notes académiques et d\'une lettre de motivation. Notre équipe vous aide à préparer et certifier tous les documents requis.',
+            'answer' => 'Vous aurez besoin d\'un passeport valide, d\'une lettre d\'acceptation universitaire, d\'une preuve de ressources financières (environ 877,50€/mois), d\'une assurance maladie, d\'un acte de naissance (traduit et légalisé), de relevés de notes académiques et d\'une lettre de motivation. Notre équipe vous aide à préparer et certifier tous les documents requis.',
         ],
         [
             'question' => 'Puis-je travailler pendant mes études en France en tant qu\'étudiant international ?',

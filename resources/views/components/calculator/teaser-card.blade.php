@@ -45,7 +45,7 @@
             <div class="d-flex flex-wrap gap-2 gap-md-3">
                 <span class="badge bg-white text-dark border rounded-pill py-2 px-3 fw-semibold small shadow-xs d-inline-flex align-items-center gap-1.5">
                     <i class="bx bxs-badge-check text-brand"></i>
-                    <span>{{ $currentLocale === 'fa' ? 'کف سفارت: ۶۱۵€ در ماه' : 'Embassy Min: 615€/mo' }}</span>
+                    <span>{{ $currentLocale === 'fa' ? 'کف سفارت: ۸۷۷٫۵۰€ در ماه' : 'Embassy Min: 877.50€/mo' }}</span>
                 </span>
                 <span class="badge bg-white text-dark border rounded-pill py-2 px-3 fw-semibold small shadow-xs d-inline-flex align-items-center gap-1.5">
                     <i class="bx bx-gift text-success"></i>

@@ -421,7 +421,7 @@ return [
         'faq' => [
             [
                 'q' => 'Quel est le montant minimum requis pour le visa étudiant en 2026 ?',
-                'a' => 'Les étudiants doivent justifier de ressources mensuelles d\'au moins 615 € (soit 7 380 € pour une année universitaire), par le biais de comptes bancaires personnels ou d\'un garant certifié.',
+                'a' => 'Les étudiants doivent justifier de ressources mensuelles d\'au moins 877,50 € (soit 10 530 € pour une année universitaire), par le biais de comptes bancaires personnels ou d\'un garant certifié.',
             ],
             [
                 'q' => 'Quelle est la durée de validité du VLS-TS, et comment le valider ?',

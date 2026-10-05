@@ -59,7 +59,7 @@ class CalculatorController extends Controller
             'fa' => [
                 [
                     'question' => 'حداقل تمکن مالی قانونی سفارت فرانسه برای ویزای دانشجویی در سال ۲۰۲۶ چقدر است؟',
-                    'answer' => 'بر اساس بخش‌نامه‌های رسمی وزارت کشور و کنسولگری فرانسه، حداقل تمکن مالی قانونی (Minimum de ressources) معادل ۶۱۵ یورو در ماه برای یک سال تحصیلی (حداقل ۷,۳۸۰ یورو در سال) است. با این حال برای شهرهای گران‌تر مانند پاریس، ارائه حداقل ۹۰۰ الی ۱,۰۰۰ یورو در ماه به شدت برای کاهش ریسک ریجکتی پیشنهاد می‌شود.',
+                    'answer' => 'بر اساس بخش‌نامه‌های رسمی وزارت کشور و کنسولگری فرانسه، حداقل تمکن مالی قانونی (Minimum de ressources) معادل ۸۷۷٫۵۰ یورو در ماه برای یک سال تحصیلی (حداقل ۱۰,۵۳۰ یورو در سال) است. با این حال برای شهرهای گران‌تر مانند پاریس، ارائه حداقل ۱,۱۰۰ الی ۱,۲۰۰ یورو در ماه به شدت برای کاهش ریسک ریجکتی پیشنهاد می‌شود.',
                 ],
                 [
                     'question' => 'آیا دانشجویان بین‌المللی و ایرانی می‌توانند از کمک‌هزینه مسکن CAF (APL) استفاده کنند؟',
@@ -81,7 +81,7 @@ class CalculatorController extends Controller
             'fr' => [
                 [
                     'question' => 'Quel est le montant minimum légal de ressources pour un visa étudiant France 2026 ?',
-                    'answer' => 'Le montant légal minimal exigé par le Ministère de l\'Intérieur français s\'élève à 615 € par mois, soit 7 380 € pour 12 mois. Pour des métropoles comme Paris, un montant de 850 € à 1 000 € par mois est fortement conseillé pour fiabiliser le dossier.',
+                    'answer' => 'Le montant légal minimal exigé par le Ministère de l\'Intérieur français s\'élève à 877,50 € par mois, soit 10 530 € pour 12 mois. Pour des métropoles comme Paris, un montant de 1 100 € à 1 200 € par mois est fortement conseillé pour fiabiliser le dossier.',
                 ],
                 [
                     'question' => 'Les étudiants étrangers ont-ils droit aux aides au logement de la CAF (APL) ?',
@@ -95,7 +95,7 @@ class CalculatorController extends Controller
             default => [
                 [
                     'question' => 'What is the official minimum proof of funds for a France student visa in 2026?',
-                    'answer' => 'According to French consular regulations, the official legal minimum is 615 € per month (7,380 € per academic year). For high-cost cities like Paris, demonstrating 850 € to 1,000 € monthly is strongly advised to minimize refusal risk.',
+                    'answer' => 'According to French consular regulations, the official legal minimum is 877.50 € per month (10,530 € per academic year). For high-cost cities like Paris, demonstrating 1,100 € to 1,200 € monthly is strongly advised to minimize refusal risk.',
                 ],
                 [
                     'question' => 'Can international students apply for CAF (APL) housing assistance in France?',

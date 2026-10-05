@@ -125,7 +125,7 @@
 
 ## Per-Service AI Digest / Summaries
 
-- **Student Visa (`student-visa`)**: Complete support for obtaining the France VLS-TS student visa in 2026, satisfying the minimum €615/month (€7,380/year) proof of funds, guarantor requirements, and VFS/Campus France interviews.
+- **Student Visa (`student-visa`)**: Complete support for obtaining the France VLS-TS student visa in 2026, satisfying the minimum €877.50/month (€10,530/year) proof of funds, guarantor requirements, and VFS/Campus France interviews.
 - **Investment & Visiteur Visa (`investment-visa`)**: Strategic assistance with financially independent visitor status (Visiteur, requiring approx €1,400-€1,800/mo passive income), French real estate acquisition support via Notaires, and Talent Passport investor programs.
 - **Residence Permit (`residence-permit`)**: Expert guidance for obtaining/renewing Titre de Séjour (student, talent passport, visitor) under strict Prefecture regulations.
 - **CV & Motivation Letter (`resume-lettre-motivation`)**: Cultural and structural adaptation of CV/motivation letters to French academic and professional standards.

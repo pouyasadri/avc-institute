@@ -24,7 +24,7 @@ return [
     'national_overview' => [
         [
             'label' => 'Garantie financière visa 2026',
-            'value' => 'Min. 7 380 €/an (615 €/mois exigé par l\'Ambassade)',
+            'value' => 'Min. 10 530 €/an (877,50 €/mois exigé par l\'Ambassade)',
         ],
         [
             'label' => 'Aide au logement CAF (APL)',

@@ -424,7 +424,7 @@ return [
         'faq' => [
             [
                 'q' => 'What is the required proof of funds for a French student visa in 2026?',
-                'a' => 'Students must prove they have at least €615 per month (€7,380 for one academic year) through personal bank statements or a certified guarantor (Garant) residing in France or abroad.',
+                'a' => 'Students must prove they have at least €877.50 per month (€10,530 for one academic year) through personal bank statements or a certified guarantor (Garant) residing in France or abroad.',
             ],
             [
                 'q' => 'How long is the VLS-TS visa valid, and does it need validation?',

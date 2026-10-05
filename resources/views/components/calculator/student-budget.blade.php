@@ -745,7 +745,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const grossMonthly = rent + food + transport + healthPhone + lifestyleBuffer;
             const netMonthly = Math.max(0, grossMonthly - caf);
 
-            const officialMonthlyMin = calcConfig.official_monthly_minimum || 615;
+            const officialMonthlyMin = calcConfig.official_monthly_minimum || 877.5;
             const officialAnnual = officialMonthlyMin * months;
 
             const recommendedMonthly = cityData.recommended_monthly_min || 700;

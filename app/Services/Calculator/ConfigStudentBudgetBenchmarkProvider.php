@@ -9,9 +9,9 @@ use App\Enums\Calculator\AccommodationType;
 
 final readonly class ConfigStudentBudgetBenchmarkProvider implements StudentBudgetBenchmarkProviderInterface
 {
-    public function getOfficialMonthlyMinimum(): int
+    public function getOfficialMonthlyMinimum(): float
     {
-        return (int) config('calculator.official_monthly_minimum', 615);
+        return (float) config('calculator.official_monthly_minimum', 877.5);
     }
 
     public function getDefaultDurationMonths(): int
@@ -32,7 +32,7 @@ final readonly class ConfigStudentBudgetBenchmarkProvider implements StudentBudg
             'food' => 210,
             'transport' => 30,
             'health_phone' => 40,
-            'recommended_monthly_min' => 650,
+            'recommended_monthly_min' => 950,
         ];
     }
 

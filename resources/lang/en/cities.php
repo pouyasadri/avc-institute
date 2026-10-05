@@ -28,7 +28,7 @@ return [
     'national_overview' => [
         [
             'label' => '2026 Visa Proof of Funds',
-            'value' => 'Min. €7,380/yr (€615/month required by French Embassy)',
+            'value' => 'Min. €10,530/yr (€877.50/month required by French Embassy)',
         ],
         [
             'label' => 'CAF Housing Subsidy (APL)',

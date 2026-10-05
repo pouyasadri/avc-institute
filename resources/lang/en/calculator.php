@@ -22,7 +22,7 @@ return [
 
     // Output Cards
     'results_heading' => 'Budget Summary & Visa Approval Assessment',
-    'official_proof_title' => 'Official Consular Minimum Proof (€615 / mo)',
+    'official_proof_title' => 'Official Consular Minimum Proof (€877.50 / mo)',
     'official_proof_desc' => 'Mandatory blocked account or bank certificate required by French consular authorities for VLS-TS issuance.',
     'recommended_proof_title' => 'A.V.C Recommended Safety Buffer',
     'recommended_proof_desc' => 'Recommended funds to prevent visa refusals in high-cost or high-demand metropolitan areas.',

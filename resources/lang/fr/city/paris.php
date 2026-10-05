@@ -25,7 +25,7 @@ return [
         ],
         [
             'label' => 'Garantie financière visa 2026',
-            'value' => 'Min. 7 380 €/an (615 €/mois)',
+            'value' => 'Min. 10 530 €/an (877,50 €/mois)',
         ],
         [
             'label' => 'Droit au travail étudiant',

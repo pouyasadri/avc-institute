@@ -10,7 +10,7 @@ return [
         ],
         [
             'question' => 'What documents do I need to study in France?',
-            'answer' => 'You\'ll need a valid passport, university acceptance letter, proof of financial resources (around €615/month), health insurance, birth certificate (translated and legalized), academic transcripts, and a motivation letter. Our team helps you prepare and certify all required documents.',
+            'answer' => 'You\'ll need a valid passport, university acceptance letter, proof of financial resources (around €877.50/month), health insurance, birth certificate (translated and legalized), academic transcripts, and a motivation letter. Our team helps you prepare and certify all required documents.',
         ],
         [
             'question' => 'Can I work while studying in France as an international student?',

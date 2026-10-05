@@ -10,7 +10,8 @@ return [
     | The legally established minimum resource threshold defined by the French
     | Ministry of the Interior for VLS-TS student visa approval.
     */
-    'official_monthly_minimum' => 615,
+    // 47% of gross monthly SMIC (Décret n° 2026-526); indexed — recheck annually
+    'official_monthly_minimum' => 877.5,
     'default_duration_months' => 12,
 
     /*
@@ -46,7 +47,7 @@ return [
             'food' => 280,
             'transport' => 42, // Pass Imagine R student monthly equivalent
             'health_phone' => 40,
-            'recommended_monthly_min' => 900,
+            'recommended_monthly_min' => 1000,
         ],
         'lyon' => [
             'name_fa' => 'لیون',
@@ -60,7 +61,7 @@ return [
             'food' => 240,
             'transport' => 35,
             'health_phone' => 40,
-            'recommended_monthly_min' => 750,
+            'recommended_monthly_min' => 1000,
         ],
         'marseille' => [
             'name_fa' => 'مارسی',
@@ -74,7 +75,7 @@ return [
             'food' => 230,
             'transport' => 35,
             'health_phone' => 40,
-            'recommended_monthly_min' => 720,
+            'recommended_monthly_min' => 980,
         ],
         'montpellier' => [
             'name_fa' => 'مونپلیه',
@@ -88,7 +89,7 @@ return [
             'food' => 230,
             'transport' => 30, // TAM network student
             'health_phone' => 40,
-            'recommended_monthly_min' => 720,
+            'recommended_monthly_min' => 980,
         ],
         'toulouse' => [
             'name_fa' => 'تولوز',
@@ -102,7 +103,7 @@ return [
             'food' => 220,
             'transport' => 30,
             'health_phone' => 40,
-            'recommended_monthly_min' => 700,
+            'recommended_monthly_min' => 950,
         ],
         'strasbourg' => [
             'name_fa' => 'استراسبورگ',
@@ -116,7 +117,7 @@ return [
             'food' => 220,
             'transport' => 30,
             'health_phone' => 40,
-            'recommended_monthly_min' => 700,
+            'recommended_monthly_min' => 950,
         ],
         'nice' => [
             'name_fa' => 'نیس',
@@ -130,7 +131,7 @@ return [
             'food' => 250,
             'transport' => 35,
             'health_phone' => 40,
-            'recommended_monthly_min' => 780,
+            'recommended_monthly_min' => 1000,
         ],
         'bordeaux' => [
             'name_fa' => 'بوردو',
@@ -144,7 +145,7 @@ return [
             'food' => 240,
             'transport' => 35,
             'health_phone' => 40,
-            'recommended_monthly_min' => 740,
+            'recommended_monthly_min' => 980,
         ],
         'grenoble' => [
             'name_fa' => 'گرنوبل',
@@ -158,7 +159,7 @@ return [
             'food' => 220,
             'transport' => 30,
             'health_phone' => 40,
-            'recommended_monthly_min' => 680,
+            'recommended_monthly_min' => 950,
         ],
         'other' => [
             'name_fa' => 'سایر شهرهای دانشگاهی',
@@ -172,7 +173,7 @@ return [
             'food' => 210,
             'transport' => 30,
             'health_phone' => 40,
-            'recommended_monthly_min' => 650,
+            'recommended_monthly_min' => 950,
         ],
     ],
 ];

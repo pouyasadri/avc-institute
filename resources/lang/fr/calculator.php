@@ -22,7 +22,7 @@ return [
 
     // Output Cards
     'results_heading' => 'Synthèse du budget & Évaluation de conformité visa',
-    'official_proof_title' => 'Minimum Légal Consulaire (615€ / mois)',
+    'official_proof_title' => 'Minimum Légal Consulaire (877,50€ / mois)',
     'official_proof_desc' => 'Montant plancher obligatoire fixé par les autorités françaises pour la délivrance du visa VLS-TS.',
     'recommended_proof_title' => 'Budget Recommandé A.V.C pour Sécuriser le Visa',
     'recommended_proof_desc' => 'Garantie financière conseillée pour éviter les refus de visa dans les grandes métropoles.',

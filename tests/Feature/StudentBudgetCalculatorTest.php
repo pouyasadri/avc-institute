@@ -42,13 +42,13 @@ class StudentBudgetCalculatorTest extends TestCase
         // Net monthly living cost = 1092 - 180 = 912
         $this->assertSame(912, $result->netMonthlyLivingCost);
 
-        // Official consular minimum is 615 / month -> 7,380 for 12 months
-        $this->assertSame(615, $result->officialMonthlyVisaProof);
-        $this->assertSame(7380, $result->officialAnnualVisaProof);
+        // Official consular minimum is 877.50 / month -> 10,530 for 12 months
+        $this->assertSame(877.5, $result->officialMonthlyVisaProof);
+        $this->assertSame(10530.0, $result->officialAnnualVisaProof);
 
-        // Recommended monthly safety proof for Paris is 900 -> 10,800 for 12 months
-        $this->assertSame(900, $result->recommendedMonthlySafetyProof);
-        $this->assertSame(10800, $result->recommendedAnnualSafetyProof);
+        // Recommended monthly safety proof for Paris is 1000 -> 12,000 for 12 months
+        $this->assertSame(1000, $result->recommendedMonthlySafetyProof);
+        $this->assertSame(12000, $result->recommendedAnnualSafetyProof);
 
         // Tuition for Bienvenue en France Master's rate is 3,879
         $this->assertSame(3879, $result->annualTuitionFee);
@@ -56,8 +56,8 @@ class StudentBudgetCalculatorTest extends TestCase
         // First year total net budget = (912 * 12) + 3879 = 10944 + 3879 = 14823
         $this->assertSame(14823, $result->firstYearTotalNetBudget);
 
-        // With gross monthly 1092 >= (900 + 100), risk level should be Optimal
-        $this->assertSame(VisaRiskLevel::Optimal, $result->visaRiskLevel);
+        // With gross monthly 1092 >= 1000 and < (1000 + 100), risk level should be Sufficient
+        $this->assertSame(VisaRiskLevel::Sufficient, $result->visaRiskLevel);
     }
 
     public function test_visa_risk_level_evaluates_borderline_and_high_risk(): void
@@ -67,9 +67,9 @@ class StudentBudgetCalculatorTest extends TestCase
         // Custom mock provider to test boundary thresholds
         $mockProvider = new class implements StudentBudgetBenchmarkProviderInterface
         {
-            public function getOfficialMonthlyMinimum(): int
+            public function getOfficialMonthlyMinimum(): float
             {
-                return 615;
+                return 877.5;
             }
 
             public function getDefaultDurationMonths(): int
@@ -79,7 +79,7 @@ class StudentBudgetCalculatorTest extends TestCase
 
             public function getCityBenchmarks(string $cityKey): array
             {
-                return ['food' => 100, 'transport' => 20, 'health_phone' => 20, 'recommended_monthly_min' => 700];
+                return ['food' => 100, 'transport' => 20, 'health_phone' => 20, 'recommended_monthly_min' => 950];
             }
 
             public function getCities(): array
@@ -89,7 +89,7 @@ class StudentBudgetCalculatorTest extends TestCase
 
             public function getAccommodationRent(string $cityKey, AccommodationType $accommodation): int
             {
-                return 480; // Gross = 480 + 100 + 20 + 20 = 620 (between 615 and 700 -> Borderline)
+                return 740; // Gross = 740 + 100 + 20 + 20 = 880 (between 877.5 and 950 -> Borderline)
             }
 
             public function getCafAllowance(AccommodationType $accommodation): int
@@ -99,7 +99,7 @@ class StudentBudgetCalculatorTest extends TestCase
 
             public function getRecommendedMonthlyMinimum(string $cityKey): int
             {
-                return 700;
+                return 950;
             }
         };
 
@@ -107,12 +107,12 @@ class StudentBudgetCalculatorTest extends TestCase
         $borderlineResult = $borderlineHandler->handle(new StudentBudgetCriteria('test', AccommodationType::Crous, TuitionType::Exonerated, 12, 0));
         $this->assertSame(VisaRiskLevel::Borderline, $borderlineResult->visaRiskLevel);
 
-        // High risk test (< 615)
+        // High risk test (< 877.5)
         $highRiskProvider = new class implements StudentBudgetBenchmarkProviderInterface
         {
-            public function getOfficialMonthlyMinimum(): int
+            public function getOfficialMonthlyMinimum(): float
             {
-                return 615;
+                return 877.5;
             }
 
             public function getDefaultDurationMonths(): int
@@ -122,7 +122,7 @@ class StudentBudgetCalculatorTest extends TestCase
 
             public function getCityBenchmarks(string $cityKey): array
             {
-                return ['food' => 50, 'transport' => 10, 'health_phone' => 10, 'recommended_monthly_min' => 700];
+                return ['food' => 50, 'transport' => 10, 'health_phone' => 10, 'recommended_monthly_min' => 950];
             }
 
             public function getCities(): array
@@ -132,7 +132,7 @@ class StudentBudgetCalculatorTest extends TestCase
 
             public function getAccommodationRent(string $cityKey, AccommodationType $accommodation): int
             {
-                return 200; // Gross = 200 + 50 + 10 + 10 = 270 (< 615 -> HighRisk)
+                return 200; // Gross = 200 + 50 + 10 + 10 = 270 (< 877.5 -> HighRisk)
             }
 
             public function getCafAllowance(AccommodationType $accommodation): int
@@ -142,7 +142,7 @@ class StudentBudgetCalculatorTest extends TestCase
 
             public function getRecommendedMonthlyMinimum(string $cityKey): int
             {
-                return 700;
+                return 950;
             }
         };
 
