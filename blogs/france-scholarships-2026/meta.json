@@ -1,0 +1,92 @@
+{
+  "topic": "Scholarships to study in France for the September 2027 intake",
+  "folder": "france-scholarships-2026",
+  "last_updated": "2026-10-02",
+  "last_updated_display": {
+    "en": "2 October 2026",
+    "fr": "2 octobre 2026",
+    "fa": "۱۰ مهر ۱۴۰۵ (۲ اکتبر ۲۰۲۶)"
+  },
+  "category": {
+    "id_expected": 2,
+    "fr": "Études et Formation",
+    "en": "Education & Study",
+    "fa": "تحصیل و آموزش"
+  },
+  "images": "none (no main image, no <img> in bodies)",
+  "translations": {
+    "en": {
+      "title": "Scholarships to Study in France 2026-2027: The Complete Guide for International Students",
+      "slug": "scholarships-study-france-2026-2027-international-students",
+      "excerpt": "Scholarships to study in France in 2026-2027: Eiffel 2027 (now open), university awards, Erasmus Mundus, funded PhDs, the €877.50 visa minimum and a timeline.",
+      "keywords": [
+        "scholarships to study in France",
+        "France scholarships 2026-2027",
+        "Eiffel scholarship 2027",
+        "Erasmus Mundus France",
+        "Paris-Saclay international master's scholarship",
+        "Émile Boutmy scholarship",
+        "CIFRE PhD",
+        "French student visa financial requirement 2026"
+      ],
+      "audience": "General international (non-EU) English-speaking students, any nationality; not framed around Iran",
+      "url": "https://applyvipconseil.com/en/blog/scholarships-study-france-2026-2027-international-students",
+      "word_count": 2112
+    },
+    "fr": {
+      "title": "Bourses pour étudier en France 2026-2027 : le guide complet pour les étudiants internationaux",
+      "slug": "bourses-etudier-en-france-2026-2027-etudiants-internationaux",
+      "excerpt": "Bourses pour étudier en France en 2026-2027 : Eiffel 2027 (ouvert), bourses d'universités, Erasmus Mundus, doctorat, minimum visa de 877,50 € et calendrier.",
+      "keywords": [
+        "bourses pour étudier en France",
+        "bourse Eiffel 2027",
+        "bourses étudiants internationaux 2026-2027",
+        "Erasmus Mundus",
+        "France Excellence Major AEFE",
+        "exonération frais différenciés",
+        "contrat doctoral CIFRE",
+        "ressources visa étudiant 877,50 €"
+      ],
+      "audience": "Francophone international students (sub-Saharan Africa, Maghreb, Middle East, Haiti...), any nationality; not framed around Iran",
+      "url": "https://applyvipconseil.com/fr/blog/bourses-etudier-en-france-2026-2027-etudiants-internationaux",
+      "word_count": 2490
+    },
+    "fa": {
+      "title": "بورسیه فرانسه برای ایرانیان ۲۰۲۶–۲۰۲۷: راهنمای کامل ورودی سپتامبر ۲۰۲۷",
+      "slug": "france-scholarships-iranians-2026-2027",
+      "excerpt": "بورسیه فرانسه برای ایرانیان در ورودی ۲۰۲۷: بورس ۹۰۰ یورویی سفارت، ایفل، بورس دانشگاه‌ها، مهلت ۱۰ دی کمپوس فرانسه، تحریم‌های بانکی، ZRR و محدودیت سنی.",
+      "keywords": [
+        "بورسیه فرانسه برای ایرانیان",
+        "بورسیه تحصیلی فرانسه",
+        "بورس مستر سفارت فرانسه",
+        "بورسیه ایفل ۲۰۲۷",
+        "کمپوس فرانسه ایران",
+        "اتودآن‌فرانس ۱۴۰۵",
+        "تحریم انتقال پول دانشجو فرانسه",
+        "ZRR دکتری فرانسه"
+      ],
+      "audience": "Iranian students applying from Iran (Persian speakers), September 2027 intake",
+      "url": "https://applyvipconseil.com/fa/blog/france-scholarships-iranians-2026-2027",
+      "word_count": 2163
+    }
+  },
+  "previous_draft": {
+    "path": "/workspace/avc-blog/france-scholarships-iranian-students-2026/",
+    "fa_slug_old": "france-scholarships-for-iranians-2026",
+    "note": "Oct 1 draft never published, so slug changes need no redirects",
+    "old_titles_slugs": {
+      "fa": {
+        "title": "بورسیه فرانسه برای ایرانیان ۲۰۲۶: لیست کامل، مبلغ و مهلت‌ها",
+        "slug": "france-scholarships-for-iranians-2026"
+      },
+      "fr": {
+        "title": "Bourses en France pour étudiants iraniens 2026 : liste complète",
+        "slug": "bourses-etudes-france-etudiants-iraniens-2026"
+      },
+      "en": {
+        "title": "France Scholarships for Iranian Students 2026: Complete List",
+        "slug": "france-scholarships-iranian-students-2026"
+      }
+    }
+  }
+}

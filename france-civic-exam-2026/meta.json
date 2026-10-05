@@ -1,0 +1,79 @@
+{
+  "topic": "The 2026 French civic exam and the A2/B1 French level for a first multi-year card (CSP) or first resident card (CR); renewals exempt",
+  "folder": "france-civic-exam-2026",
+  "last_updated": "2026-10-05",
+  "last_updated_display": {
+    "en": "5 October 2026",
+    "fr": "5 octobre 2026",
+    "fa": "۱۳ مهر ۱۴۰۵ (۵ اکتبر ۲۰۲۶)"
+  },
+  "category": {
+    "id_expected": null,
+    "fr": "Immigration et Visas",
+    "en": "Immigration & Visas",
+    "fa": "مهاجرت و ویزا",
+    "note": "Existing category seen on the live /fa/blog, /fr/blog and /en/blog lists on 2026-10-05 (used by the financial-proof and Campus France posts). Numeric id not visible from the public site; pick it in the admin dropdown."
+  },
+  "images": "none (no main image, no <img> in bodies)",
+  "translations": {
+    "en": {
+      "title": "France Civic Exam 2026: Who Needs It, A2 vs B1 French, and Why Renewals Are Exempt",
+      "slug": "france-civic-exam-2026-a2-b1-residence-permit",
+      "excerpt": "France civic exam 2026: who must pass it, A2 vs B1 French for a first multi-year or resident card, why renewals are exempt, exam format, centres and fees.",
+      "keywords": [
+        "France civic exam 2026",
+        "French civic integration exam residence permit",
+        "A2 French level multi-year residence permit",
+        "B1 French 10-year resident card France",
+        "France residence permit fees 2026",
+        "TCF IRN",
+        "renew residence permit France civic exam"
+      ],
+      "audience": "Expats and international graduates living in France (any nationality, non-EU); not framed around Iran",
+      "url": "https://applyvipconseil.com/en/blog/france-civic-exam-2026-a2-b1-residence-permit",
+      "word_count": 2479,
+      "word_count_raw_tokens": 2498,
+      "excerpt_chars": 154
+    },
+    "fr": {
+      "title": "Examen civique 2026 : qui doit le passer, niveau A2 ou B1 et cas du renouvellement",
+      "slug": "examen-civique-2026-niveau-a2-b1-titre-de-sejour",
+      "excerpt": "Examen civique 2026 : qui doit le passer, niveau A2 ou B1 selon la carte, pourquoi le renouvellement est exempté, déroulé, centres agréés et timbre fiscal.",
+      "keywords": [
+        "examen civique 2026",
+        "examen civique carte de résident",
+        "examen civique carte de séjour pluriannuelle",
+        "niveau A2 carte de séjour pluriannuelle",
+        "niveau B1 carte de résident",
+        "renouvellement titre de séjour 2026",
+        "timbre fiscal titre de séjour 2026",
+        "TCF IRN"
+      ],
+      "audience": "Francophone foreign residents in France, any nationality (sub-Saharan Africa, Maghreb, etc.); not framed around Iran",
+      "url": "https://applyvipconseil.com/fr/blog/examen-civique-2026-niveau-a2-b1-titre-de-sejour",
+      "word_count": 2340,
+      "word_count_raw_tokens": 2513,
+      "excerpt_chars": 155
+    },
+    "fa": {
+      "title": "آزمون مدنی فرانسه ۲۰۲۶: مدرک زبان A2 یا B1 برای کارت اقامت چندساله و ده‌ساله (راهنمای ایرانیان)",
+      "slug": "france-civic-exam-2026-iranians",
+      "excerpt": "آزمون مدنی فرانسه ۲۰۲۶ برای ایرانیان: چه کسی مشمول است، مدرک زبان A2 یا B1، چرا تمدید کارت اقامت معاف است، TCF IRN، ثبت‌نام در استراسبورگ و هزینه تمبر.",
+      "keywords": [
+        "آزمون مدنی فرانسه",
+        "امتحان مدنی فرانسه",
+        "مدرک زبان A2 B1 اقامت فرانسه",
+        "قوانین جدید اقامت فرانسه ۲۰۲۶",
+        "تمدید کارت اقامت فرانسه",
+        "کارت اقامت ده ساله فرانسه",
+        "هزینه تمبر کارت اقامت فرانسه ۲۰۲۶",
+        "TCF IRN استراسبورگ"
+      ],
+      "audience": "Iranians already living in France on student, salarié or family cards moving to a multi-year or 10-year card (Persian speakers)",
+      "url": "https://applyvipconseil.com/fa/blog/france-civic-exam-2026-iranians",
+      "word_count": 2478,
+      "word_count_raw_tokens": 2498,
+      "excerpt_chars": 151
+    }
+  }
+}

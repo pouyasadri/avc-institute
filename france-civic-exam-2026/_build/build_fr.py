@@ -1,0 +1,140 @@
+from faq_tpl import faq, cta
+def ext(url, text): return f'<a href="{url}" target="_blank" rel="noopener">{text}</a>'
+
+SP_EXAM = "https://www.service-public.gouv.fr/particuliers/vosdroits/F39530"
+SP_LANG = "https://www.service-public.gouv.fr/particuliers/vosdroits/F34501"
+SP_FEES = "https://www.service-public.gouv.fr/particuliers/actualites/A18881"
+SP_CSP = "https://www.service-public.gouv.fr/particuliers/vosdroits/F35799"
+FC = "https://formation-civique.interieur.gouv.fr/examen-civique/informations-g%C3%A9n%C3%A9rales-sur-lexamen-civique/"
+ARR = "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000052381620/2026-01-01"
+ARR_LANG = "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053164506"
+
+body = f'''<p class="text-muted small"><strong>Dernière mise à jour :</strong> 5 octobre 2026. Règles et tarifs vérifiés ce jour-là sur Service-Public, le site de la formation civique du ministère de l'Intérieur, Légifrance, France Éducation international et les sites des préfectures (Bas-Rhin, Haute-Vienne, Seine-Maritime, Oise).</p>
+
+<p><strong>En bref.</strong> <strong>Qui :</strong> depuis le 1er janvier 2026, la plupart des ressortissants non européens qui demandent une <em>première</em> carte de séjour pluriannuelle ou une <em>première</em> carte de résident doivent réussir l'<strong>examen civique</strong> avant de déposer leur dossier. <strong>Quel niveau de français :</strong> A2 pour une première carte pluriannuelle, B1 pour une première carte de résident. <strong>Renouvellement :</strong> renouveler une carte pluriannuelle ou une carte de résident déjà obtenue n'exige ni l'examen ni un nouveau justificatif de langue.</p>
+
+<p>Restent les questions concrètes : suis-je dispensé ? Mon diplôme obtenu au pays compte-t-il ? Où passer l'examen ? Combien coûte la carte depuis le 1er mai 2026 ? Chez A.V.C Institute (Apply VIP Conseil), à Schiltigheim, aux portes de Strasbourg, voici ce que nous vérifions avec nos clients avant toute inscription.</p>
+
+<h2 id="examen-civique-c-est-quoi">L'examen civique 2026, c'est quoi exactement ?</h2>
+<p>Créé par la loi du 26 janvier 2024, l'examen civique vérifie votre connaissance des valeurs de la République, des institutions et de la vie en société en France. Il existe en trois mentions : « carte de séjour pluriannuelle » (CSP), « carte de résident » (CR) et « naturalisation », de difficulté croissante et rédigées selon le niveau de langue exigé (A2 pour la CSP, B1 pour la CR).</p>
+<ul>
+<li><strong>Il se passe avant le dépôt</strong> : sans attestation, le dossier n'est pas recevable.</li>
+<li><strong>La mention CR vaut aussi pour la CSP</strong> lors du dépôt sur l'ANEF. L'inverse n'est pas vrai : pour une carte de résident, seule la mention CR est acceptée (préfecture de Seine-Maritime).</li>
+<li><strong>L'attestation n'a pas de durée de validité,</strong> et l'on peut repasser l'examen autant de fois que nécessaire.</li>
+</ul>
+<p>La préfecture de la Haute-Vienne précise que ces règles s'appliquent aux titres dont la validité commence à partir du 1er janvier 2026, quelle que soit la date de dépôt de la demande.</p>
+
+<h2 id="qui-est-concerne">Qui doit passer l'examen civique ?</h2>
+<p>D'après Service-Public et la préfecture du Bas-Rhin, sont notamment concernés, pour une première carte pluriannuelle ou une première carte de résident :</p>
+<ul>
+<li>les <strong>salariés</strong> et les <strong>entrepreneurs ou professions libérales</strong> qui passent d'une carte temporaire d'un an à une carte pluriannuelle ;</li>
+<li>la <strong>vie privée et familiale</strong> : conjoint de Français, parent d'enfant français, regroupement familial, liens personnels et familiaux forts en France ;</li>
+<li>les demandeurs d'une première <strong>carte de résident de longue durée-UE</strong> après cinq ans de séjour régulier, y compris passeports talent, cartes bleues européennes, réfugiés et protégés subsidiaires ;</li>
+<li>les demandeurs d'une première <strong>carte de résident permanent</strong>.</li>
+</ul>
+
+<h2 id="dispenses">Qui est dispensé ?</h2>
+<ul>
+<li><strong>Les personnes de plus de 65 ans.</strong></li>
+<li><strong>Les bénéficiaires de la protection internationale</strong> et les apatrides, ainsi que leur famille, pour les cartes délivrées à ce titre.</li>
+<li><strong>Certains ressortissants couverts par un accord bilatéral</strong> : la préfecture de la Haute-Vienne cite l'Algérie et la Tunisie. Faites confirmer votre cas par votre préfecture avant de payer une inscription.</li>
+<li><strong>Les titres hors contrat d'intégration républicaine (CIR)</strong>, listés à l'article L413-5 du CESEDA : étudiants, stagiaires, jeunes au pair, travailleurs temporaires et saisonniers, passeports talent et leur famille pour une carte pluriannuelle de moins de 10 ans, et certains motifs « vie privée et familiale ».</li>
+<li><strong>Les anciens élèves et étudiants en France</strong> : au moins trois années de scolarité dans un établissement secondaire français, ou au moins une année universitaire d'études supérieures en France. La préfecture du Bas-Rhin les cite parmi les personnes non soumises.</li>
+<li><strong>Santé ou handicap</strong> : aménagement d'épreuve ou dispense, sur certificat médical établi selon le modèle officiel.</li>
+</ul>
+<p>Attention : ces dispenses liées au CIR valent pour la carte pluriannuelle. Pour une première carte de résident, B1 et l'examen mention CR restent la règle, sauf pour les plus de 65 ans et les cas médicaux.</p>
+
+<h2 id="renouvellement">Faut-il l'examen civique pour un renouvellement de titre de séjour en 2026 ?</h2>
+<p>Non, si vous renouvelez une carte pluriannuelle ou une carte de résident déjà obtenue : Service-Public, le ministère de l'Intérieur et les préfectures sont unanimes. Exemple donné par la Haute-Vienne : avec une carte de deux ans, pas besoin de l'A2 pour la renouveler, mais il faudra le B1 pour une première carte de résident.</p>
+<p>Le piège est dans le vocabulaire. Passer d'une carte d'un an à une carte de quatre ans s'appelle couramment un « renouvellement », mais c'est juridiquement une première carte pluriannuelle : l'examen s'applique, sauf dispense. Idem pour le passage à la carte de résident. Le renouvellement d'une carte temporaire d'un an n'est pas concerné.</p>
+
+<h2 id="niveau-a2-b1">Niveau A2 ou B1 : quel niveau pour quelle carte ?</h2>
+<ul>
+<li><strong>Niveau A2 pour la carte de séjour pluriannuelle</strong> : échanges simples du quotidien, présenter sa formation et son environnement.</li>
+<li><strong>Niveau B1 pour la carte de résident</strong> (10 ans), la carte de résident longue durée-UE et la carte de résident permanent : comprendre l'essentiel d'une discussion claire, se débrouiller dans la plupart des situations, expliquer brièvement un projet.</li>
+<li><strong>Niveau B2 pour la naturalisation</strong>, avec l'examen mention « naturalisation ».</li>
+</ul>
+
+<h2 id="justificatifs-langue">Quels diplômes et tests de français sont acceptés ?</h2>
+<p>La liste figure dans {ext(ARR_LANG, "l'arrêté du 22 décembre 2025")} et sur {ext(SP_LANG, "la fiche Service-Public F34501")}. Trois possibilités :</p>
+<ol>
+<li><strong>Un test reconnu, valable deux ans</strong> : uniquement le TCF de France Éducation international et le TEF de la CCI Paris Île-de-France, avec les quatre épreuves (compréhension et expression, à l'oral et à l'écrit) le même jour, en présentiel, avec contrôle d'identité et photo. En pratique, on s'inscrit au <strong>TCF IRN</strong> (Intégration, Résidence et Nationalité) ou au TEF IRN.</li>
+<li><strong>Un diplôme de langue, sans limite de validité</strong> : DELF, DALF ou DELF Pro (France Éducation international), DUEF, DFP (CCI Paris) ou DCL, au niveau A2 au moins pour la CSP et B1 au moins pour la CR.</li>
+<li><strong>Un diplôme français</strong> : le diplôme national du brevet, tout diplôme délivré au nom de l'État de niveau 3 ou plus (CAP, BEP et au-delà : baccalauréat, licence, master) ou une certification professionnelle enregistrée au RNCP au niveau 3 au moins.</li>
+</ol>
+<h3>Le point qui surprend les francophones</h3>
+<p>Les diplômes délivrés par une autorité étrangère ne sont pas admis, même s'ils viennent d'un pays francophone et même si vos études se sont déroulées entièrement en français. Une licence obtenue à Dakar, Abidjan ou Kinshasa ne prouve donc pas le B1, aussi bon que soit votre français. En revanche, selon la préfecture de la Seine-Maritime, un diplôme français obtenu en France <em>ou à l'étranger</em> compte s'il est inscrit au RNCP au niveau 3 minimum, comme un baccalauréat français passé dans un lycée français à l'étranger. Un DELF ou un DALF passé dans votre pays reste valable, sans date d'expiration. Vérifiez le numéro RNCP de votre diplôme sur le site de France compétences.</p>
+<h3>TCF IRN : délais et nouveautés</h3>
+<p>Quatre épreuves obligatoires, environ 1 h 35 au total selon France Éducation international. Résultats sur l'espace TCF-Candidat, en principe 15 jours ouvrés après réception du matériel de session (le CIEL de Strasbourg annonce au moins quatre semaines), et 20 jours d'attente entre deux passages. Pour les sessions depuis le 1er septembre 2026, les recorrections de l'expression orale et écrite sont suspendues jusqu'à l'automne 2027 environ : visez une marge confortable.</p>
+
+<h2 id="deroulement">Déroulé de l'examen civique : questions, durée, score</h2>
+<p>{ext(ARR, "L'arrêté du 10 octobre 2025")} fixe le cadre, précisé par le ministère de l'Intérieur :</p>
+<ul>
+<li><strong>40 questions à choix multiples en français</strong>, sans traduction : 28 questions de connaissances et 12 mises en situation, quatre réponses proposées, une seule correcte ;</li>
+<li><strong>45 minutes au maximum</strong>, sur ordinateur ou tablette, sauf aménagement médical ;</li>
+<li><strong>32 bonnes réponses pour réussir</strong> (80 %). Une mauvaise réponse et une absence de réponse valent toutes deux 0 : répondez à tout.</li>
+</ul>
+<p>La répartition est identique pour tous : 11 questions sur les principes et valeurs de la République (devise, symboles, laïcité, dont 6 mises en situation), 6 sur le système institutionnel et politique (dont une sur l'Union européenne), 11 sur les droits et devoirs (dont 6 mises en situation), 8 sur l'histoire, la géographie et la culture, et 4 sur la vie en société (s'installer, se soigner, travailler, autorité parentale et école).</p>
+<p>La liste officielle des questions de connaissances (mentions CSP et CR) est gratuite sur {ext(FC, "le site de la formation civique")} ; pas les mises en situation. Inutile de payer pour s'entraîner : les sites payants ne sont pas officiels.</p>
+<h3>Le jour de l'examen</h3>
+<p>Pièce exigée pour les mentions CSP et CR : votre titre de séjour en cours de validité (avec un simple récépissé, interrogez votre centre par écrit). Une photo est prise pour l'attestation. Aucun retard n'est toléré, téléphones éteints, et une tentative de fraude vaut deux ans d'interdiction.</p>
+
+<h2 id="inscription">S'inscrire dans un centre agréé</h2>
+<p>Deux organismes sont agréés par le ministère de l'Intérieur :</p>
+<ul>
+<li><strong>la CCI Paris Île-de-France</strong> (réseau « Le français des affaires ») : munissez-vous de votre numéro AGDREF (numéro étranger) pour l'inscription ;</li>
+<li><strong>France Éducation international</strong> : préinscription sur la plateforme test-civique.fr, choix de la mention, puis paiement et confirmation auprès du centre.</li>
+</ul>
+<p>Les cartes des centres sont accessibles depuis {ext(SP_EXAM, "la fiche Service-Public F39530")}. Chaque centre fixe son tarif : 70 € à l'Institut Stralang de Strasbourg, sessions en semaine l'après-midi (vérifié le 5 octobre 2026). L'inscription est en général non remboursable : choisissez bien la mention. Si vous avez signé un CIR, la formation civique gratuite de quatre jours (24 heures) précède l'examen et son attestation rejoint votre dossier.</p>
+
+<h2 id="calendrier">Anticiper : le bon calendrier avant l'expiration de votre carte</h2>
+<p>Selon Service-Public, la demande de carte pluriannuelle « salarié » ou « entrepreneur/profession libérale » se dépose dans les deux mois qui précèdent la fin de validité de votre carte ; les autres motifs ont leurs propres délais. Comme l'attestation doit être prête au dépôt, partez de la date d'expiration :</p>
+<ol>
+<li><strong>J-6 mois</strong> : vérifier les dispenses, rassembler diplômes et numéros RNCP ;</li>
+<li><strong>J-5 mois</strong> : passer le TCF IRN si nécessaire (prévoir 3 à 4 semaines de résultats, et 20 jours avant un nouveau passage) ;</li>
+<li><strong>J-4 mois</strong> : passer l'examen civique (certains centres publient le résultat dès le lendemain) ;</li>
+<li><strong>Dans le délai de dépôt</strong> : déposer sur l'ANEF. Un renouvellement demandé hors délai coûte 180 € de plus, sauf force majeure ou visa en cours de validité.</li>
+</ol>
+
+<h2 id="timbre-fiscal-2026">Timbre fiscal titre de séjour 2026 : combien ça coûte ?</h2>
+<p>La loi de finances pour 2026 a relevé les montants au 1er mai 2026 ({ext(SP_FEES, "Service-Public")}). Le timbre fiscal s'achète une fois la demande acceptée ; le SMS de mise à disposition du titre indique la somme.</p>
+<ul>
+<li><strong>Première délivrance</strong> d'une carte temporaire, pluriannuelle ou de résident : <strong>350 €</strong> (taxe de 300 € + droit de timbre de 50 €), contre 225 € auparavant ;</li>
+<li><strong>tarif minoré de première délivrance</strong> (étudiants, stagiaires, jeunes au pair, recherche d'emploi ou création d'entreprise, regroupement familial, saisonniers) : 150 €, contre 75 € ;</li>
+<li><strong>renouvellement</strong> : <strong>250 €</strong> (200 € + 50 €), contre 225 € ;</li>
+<li><strong>renouvellement au tarif minoré</strong> : 100 €, contre 75 € ;</li>
+<li><strong>dépôt tardif</strong> : droit de visa de régularisation de 180 €, inchangé ;</li>
+<li><strong>examens</strong> : tarifs fixés par chaque centre, par exemple environ 70 € pour l'examen civique et 150 à 155 € pour le TCF IRN à Strasbourg.</li>
+</ul>
+<p>Subtilité relevée par la préfecture de l'Oise : passer d'une carte temporaire à une pluriannuelle, ou d'une pluriannuelle à une carte de résident, est taxé au tarif du renouvellement, bien qu'il s'agisse d'une « première » carte pour l'examen. Fiez-vous au montant demandé par l'ANEF.</p>
+
+<h2 id="situations">Trois situations fréquentes</h2>
+<h3>Conjoint de Français</h3>
+<p>Première carte pluriannuelle : A2 et mention CSP ; première carte de résident ensuite : B1 et mention CR. Proche du B1 ? Passez directement la mention CR, valable pour les deux.</p>
+<h3>Salarié arrivé directement avec un contrat de travail</h3>
+<p>Sans études supérieures en France, vous êtes en principe soumis à l'examen et à l'A2 pour votre première carte pluriannuelle « salarié » : inscrivez-vous tôt. Diplômé d'une université française ? Vous relevez probablement de la dispense liée aux études, et votre diplôme prouvera plus tard le B1.</p>
+<h3>Cinq ans de séjour régulier</h3>
+<p>Carte de résident de longue durée-UE : B1, mention CR et ressources stables et suffisantes. Pour un ancien étudiant, c'est souvent la première fois que l'examen s'impose. Encore étudiant ? Voyez nos repères sur les {'<a href="/fr/blog/combien-argent-compte-visa-etudiant-france-2026">ressources exigées des étudiants</a>'}.</p>
+
+<h2 id="checklist">Check-list avant de déposer</h2>
+<ul>
+<li>Identifier la démarche : première CSP, première carte de résident ou vrai renouvellement</li>
+<li>Vérifier les dispenses : âge, protection, accord bilatéral, titre hors CIR, études en France</li>
+<li>Justificatif de langue : diplôme français avec numéro RNCP, DELF, DALF ou DUEF, ou TCF IRN ou TEF IRN de moins de deux ans</li>
+<li>Examen civique : bonne mention, centre agréé, attestation téléchargée</li>
+<li>Attestation de formation civique (si CIR), délai de dépôt noté, timbre fiscal budgété</li>
+</ul>
+<p>Notre accompagnement <a href="/fr/services/residence-permit">titre de séjour</a> couvre l'audit du dossier avant l'ANEF, le calendrier et le suivi en préfecture. Personne ne peut garantir la décision du préfet, mais un dossier complet et déposé à temps évite bien des blocages.</p>
+
+<p class="small text-muted"><strong>Sources officielles :</strong> {ext(SP_EXAM, "Service-Public – examen civique (F39530)")}, {ext(SP_LANG, "Service-Public – niveau de français (F34501)")}, {ext(SP_CSP, "Service-Public – carte de séjour pluriannuelle (F35799)")}, {ext(SP_FEES, "Service-Public – taxes au 1er mai 2026")}, {ext(ARR, "arrêté du 10 octobre 2025")}, {ext(FC, "ministère de l'Intérieur – formation civique")}.</p>
+
+{cta("L'examen civique vous concerne-t-il ?", "Indiquez-nous votre titre actuel, sa date d'expiration et vos diplômes. Nos conseillers vérifient les dispenses, le justificatif de langue à utiliser et le bon moment pour déposer.", "Demander une consultation gratuite", "/fr/consult", "Voir tous nos services", "/fr/services")}
+
+{faq("FAQ : examen civique et niveau de français en 2026", [
+("Faut-il passer l'examen civique pour renouveler son titre de séjour ?", "Non, pour le renouvellement d'une carte pluriannuelle ou d'une carte de résident déjà obtenue. En revanche, le passage d'une carte temporaire d'un an à une première carte pluriannuelle, ou d'une pluriannuelle à une première carte de résident, est concerné."),
+("Mon diplôme obtenu dans un pays francophone prouve-t-il mon niveau de français ?", "Non. Les diplômes délivrés par une autorité étrangère ne sont pas admis, même en pays francophone. Un diplôme français (y compris obtenu à l'étranger et inscrit au RNCP), un DELF, un DALF ou un TCF IRN de moins de deux ans conviennent."),
+("Les Algériens doivent-ils passer l'examen civique ?", "La préfecture de la Haute-Vienne indique que les ressortissants de pays couverts par certains accords bilatéraux, dont l'Algérie et la Tunisie, ne sont pas soumis à cette obligation. Faites confirmer votre cas par votre préfecture."),
+("Combien de temps l'attestation de réussite est-elle valable ?", "Sans limite de durée. Une attestation TCF ou TEF est valable deux ans ; les DELF, DALF, DUEF, DFP, DCL et les diplômes français n'expirent pas."),
+("Combien coûte une carte de séjour depuis le 1er mai 2026 ?", "350 € en première délivrance (300 € de taxe + 50 € de timbre), 250 € en renouvellement, 100 € au tarif minoré de renouvellement, et 180 € de plus en cas de dépôt tardif."),
+])}'''
+open("fr.html","w",encoding="utf-8").write(body+"\n")
