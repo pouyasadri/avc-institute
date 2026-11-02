@@ -105,6 +105,23 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Admin Notification Recipients
+    |--------------------------------------------------------------------------
+    |
+    | Email addresses that receive notifications when users submit consultation
+    | requests, contact messages, or public questions.
+    |
+    */
+
+    'admin_primary' => env('MAIL_ADMIN_PRIMARY', 'info@applyvipconseil.com'),
+
+    'admin_cc' => array_values(array_filter(array_map(
+        'trim',
+        explode(',', (string) env('MAIL_ADMIN_CC', ''))
+    ))),
+
+    /*
+    |--------------------------------------------------------------------------
     | Markdown Mail Settings
     |--------------------------------------------------------------------------
     |

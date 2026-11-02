@@ -64,9 +64,13 @@ class ConsultController extends Controller
                 ]));
 
             // Send Notification Email to Admin
-            $adminEmail = 'info@applyvipconseil.com';
-            Mail::to($adminEmail)
-                ->locale('fa')
+            $adminMailer = Mail::to(config('mail.admin_primary', 'info@applyvipconseil.com'));
+            $adminCc = config('mail.admin_cc', []);
+            if (! empty($adminCc)) {
+                $adminMailer->cc($adminCc);
+            }
+
+            $adminMailer->locale('fa')
                 ->send(new ConsultationSubmitted([
                     'user_name' => $userName,
                     'user_email' => $userEmail, // Included in admin email for reply-to reference

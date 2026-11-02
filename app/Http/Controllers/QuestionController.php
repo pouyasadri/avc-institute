@@ -48,9 +48,13 @@ class QuestionController extends Controller
                 ->send(new QuestionConfirmation($submission));
 
             // Send Notification Email to Admin
-            $adminEmail = 'info@applyvipconseil.com';
-            Mail::to($adminEmail)
-                ->locale('fa')
+            $adminMailer = Mail::to(config('mail.admin_primary', 'info@applyvipconseil.com'));
+            $adminCc = config('mail.admin_cc', []);
+            if (! empty($adminCc)) {
+                $adminMailer->cc($adminCc);
+            }
+
+            $adminMailer->locale('fa')
                 ->send(new QuestionSubmitted($submission));
 
             return redirect()->back()->with('success', __('messages.question_success'));

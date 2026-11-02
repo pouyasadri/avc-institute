@@ -5,6 +5,7 @@ namespace Tests\Feature;
 use App\Mail\ConsultationConfirmation;
 use App\Mail\ConsultationSubmitted;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Mail;
 use Tests\TestCase;
 
@@ -97,5 +98,32 @@ class ConsultFormDuplicateTest extends TestCase
         $this->from('/fa/consult')->post(route('consult.submit', ['locale' => 'fa']), $secondPayload);
 
         $this->assertDatabaseCount('consulting_submissions', 2);
+    }
+
+    public function test_consultation_notification_is_sent_to_primary_admin_and_cc_admins(): void
+    {
+        Mail::fake();
+
+        Config::set('mail.admin_primary', 'primary@applyvipconseil.com');
+        Config::set('mail.admin_cc', ['secondary@applyvipconseil.com']);
+
+        $payload = [
+            'user_name' => 'Sara Mohammadi',
+            'user_email' => 'sara@example.com',
+            'user_phone_number' => '09123456780',
+            'user_service' => 'France Study Consultation',
+            'user_details' => 'Request details.',
+            'gdpr_consent' => '1',
+        ];
+
+        $response = $this->from('/fa/consult')->post(route('consult.submit', ['locale' => 'fa']), $payload);
+
+        $response->assertRedirect('/fa/consult');
+        $response->assertSessionHas('success');
+
+        Mail::assertQueued(ConsultationSubmitted::class, function (ConsultationSubmitted $mail) {
+            return $mail->hasTo('primary@applyvipconseil.com')
+                && $mail->hasCc('secondary@applyvipconseil.com');
+        });
     }
 }
