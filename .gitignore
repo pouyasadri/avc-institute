@@ -20,4 +20,5 @@ yarn-error.log
 **/.DS_Store
 /scratch/
 *.sql
-applyvipconseil.com-Performance-on-Search-Generative-AI-Features-2026-09-01/
+*.csv
+
