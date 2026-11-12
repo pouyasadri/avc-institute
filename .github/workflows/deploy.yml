@@ -214,7 +214,11 @@ jobs:
             php artisan optimize
             php artisan view:cache
 
+            # Refresh AI discovery surfaces from live published blogs
+            php artisan llms:generate
+
             # Restart queue workers so they load the new code
             php artisan queue:restart
 
             echo "Deployment complete!"
+            echo "Reminder: purge Cloudflare cache for /llms.txt /llms-full.txt /.well-known/* and homepage"

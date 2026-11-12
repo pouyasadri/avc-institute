@@ -153,6 +153,26 @@ class SiteUrlBuilder
             Log::warning('SiteUrlBuilder: could not load blog posts — '.$e->getMessage());
         }
 
+        foreach ($this->discoveryUrls() as $discoveryUrl) {
+            $urls[] = $discoveryUrl;
+        }
+
         return array_values(array_unique($urls));
+    }
+
+    /**
+     * Non-locale AI discovery surfaces (llms.txt, agent index, full catalog).
+     *
+     * @return array<int, string>
+     */
+    public function discoveryUrls(): array
+    {
+        $baseUrl = $this->baseUrl();
+
+        return [
+            "{$baseUrl}/llms.txt",
+            "{$baseUrl}/llms-full.txt",
+            "{$baseUrl}/.well-known/agents-index.json",
+        ];
     }
 }

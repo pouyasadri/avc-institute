@@ -126,6 +126,11 @@
     {{-- Canonical URL --}}
     <link rel="canonical" href="{{ $canonicalUrl }}" />
 
+    {{-- AI / LLM discovery (Persian-first intent map) --}}
+    <link rel="describedby" href="{{ url('/llms.txt') }}" type="text/plain" title="LLM site intent map" />
+    <link rel="help" href="{{ url('/llms.txt') }}" type="text/plain" title="LLM site intent map" />
+    <link rel="alternate" href="{{ url('/llms-full.txt') }}" type="text/plain" title="LLM full catalog" />
+
     {{-- Hreflang Tags for Multilingual SEO --}}
     @if(!empty($hreflangTags))
         <x-seo.hreflang :hreflang="$hreflangTags" :defaultLocale="config('seo.default_locale')" />

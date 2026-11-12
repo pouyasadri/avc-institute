@@ -15,9 +15,16 @@ class AgentDiscoveryCatalogTest extends TestCase
         $this->assertSame('APPLY VIP CONSEIL', $index['legalName']);
         $this->assertSame('fa', $index['primaryLocale']);
         $this->assertSame(url('/llms.txt'), $index['documentation']);
+        $this->assertSame(url('/llms-full.txt'), $index['documentationFull']);
+        $this->assertSame('text/markdown', $index['capabilities']['markdownDigests']['accept']);
         $this->assertNotEmpty($index['endpoints']);
         $this->assertTrue(collect($index['endpoints'])->contains(
             fn (array $endpoint) => ($endpoint['rel'] ?? null) === 'service-doc'
+                && str_ends_with((string) ($endpoint['href'] ?? ''), '/llms.txt')
+        ));
+        $this->assertTrue(collect($index['endpoints'])->contains(
+            fn (array $endpoint) => ($endpoint['rel'] ?? null) === 'service-doc'
+                && str_ends_with((string) ($endpoint['href'] ?? ''), '/llms-full.txt')
         ));
     }
 
@@ -27,6 +34,7 @@ class AgentDiscoveryCatalogTest extends TestCase
         $entry = $catalog['linkset'][0];
 
         $this->assertSame(url('/llms.txt'), $entry['service-doc'][0]['href']);
+        $this->assertSame(url('/llms-full.txt'), $entry['service-doc'][1]['href']);
         $this->assertSame(url('/.well-known/agents-index.json'), $entry['describedby'][0]['href']);
         $this->assertSame(url('/sitemap.xml'), $entry['sitemap'][0]['href']);
     }

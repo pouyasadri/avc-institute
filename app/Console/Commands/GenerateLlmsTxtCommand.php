@@ -6,7 +6,7 @@ use App\Services\Discovery\LlmsTxtGenerator;
 use Illuminate\Console\Command;
 
 /**
- * Regenerate public/llms.txt from the base template + latest published blogs.
+ * Regenerate public/llms.txt and public/llms-full.txt from base templates + latest blogs.
  *
  * Usage:
  *   php artisan llms:generate
@@ -16,10 +16,10 @@ use Illuminate\Console\Command;
 class GenerateLlmsTxtCommand extends Command
 {
     protected $signature = 'llms:generate
-                            {--limit=8 : Number of recent blog posts to include}
-                            {--dry-run : Print the generated content without writing the file}';
+                            {--limit=10 : Number of recent blog posts to include}
+                            {--dry-run : Print paths without writing files}';
 
-    protected $description = 'Regenerate public/llms.txt with brand card + recent blog updates for AI agents';
+    protected $description = 'Regenerate llms.txt + llms-full.txt with brand card + recent blog updates for AI agents';
 
     public function handle(LlmsTxtGenerator $generator): int
     {
@@ -31,11 +31,11 @@ class GenerateLlmsTxtCommand extends Command
         $this->newLine();
 
         if ($this->option('dry-run')) {
-            $base = file_get_contents($generator->basePath());
-            $this->line('  Base template: '.$generator->basePath());
-            $this->line('  Output path:   '.$generator->outputPath());
-            $this->line('  Base bytes:    '.strlen((string) $base));
-            $this->warn('  Dry-run only — file not written. Remove --dry-run to generate.');
+            $this->line('  Index base:  '.$generator->basePath());
+            $this->line('  Index out:   '.$generator->outputPath());
+            $this->line('  Full base:   '.$generator->fullBasePath());
+            $this->line('  Full out:    '.$generator->fullOutputPath());
+            $this->warn('  Dry-run only — files not written. Remove --dry-run to generate.');
 
             return self::SUCCESS;
         }
@@ -49,9 +49,10 @@ class GenerateLlmsTxtCommand extends Command
         }
 
         $this->info("  Wrote {$result['bytes']} bytes → {$result['path']}");
+        $this->info("  Wrote {$result['full_bytes']} bytes → {$result['full_path']}");
         $this->line("  Included <info>{$result['posts']}</info> published blog post(s).");
         $this->newLine();
-        $this->comment('  Tip: purge Cloudflare cache for /llms.txt after deploy.');
+        $this->comment('  Tip: purge Cloudflare cache for /llms.txt, /llms-full.txt, /.well-known/*, and homepage after deploy.');
 
         return self::SUCCESS;
     }

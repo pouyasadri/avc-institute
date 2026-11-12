@@ -2,6 +2,7 @@
 
 namespace Tests\Unit;
 
+use App\Services\Discovery\LlmsTxtGenerator;
 use App\Services\StructuredData\LocalBusinessSchema;
 use App\Services\StructuredData\OrganizationSchema;
 use Tests\TestCase;
@@ -51,11 +52,15 @@ class OrganizationBrandCardTest extends TestCase
 
     public function test_llms_txt_brand_card_matches_canonical_facts(): void
     {
+        app(LlmsTxtGenerator::class)->generateSafely();
+
         $content = file_get_contents(public_path('llms.txt'));
 
         $this->assertStringContainsString('Canonical name: A.V.C Institute', $content);
         $this->assertStringContainsString('Legal name: APPLY VIP CONSEIL', $content);
         $this->assertStringContainsString('+33 7 68 68 83 26', $content);
         $this->assertStringNotContainsString('+33 7 80 95 33 33', $content);
+        $this->assertFileExists(public_path('llms-full.txt'));
+        $this->assertStringContainsString('Canonical name: A.V.C Institute', file_get_contents(public_path('llms-full.txt')));
     }
 }

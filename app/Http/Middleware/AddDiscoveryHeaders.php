@@ -17,12 +17,12 @@ class AddDiscoveryHeaders
     {
         $response = $next($request);
 
-        // Add discovery headers to the homepage and its localized versions
-        if ($this->isHomepage($request)) {
+        if ($this->shouldAddDiscoveryHeaders($request)) {
             $links = [
                 '</llms.txt>; rel="help"',
                 '</llms.txt>; rel="describedby"',
                 '</llms.txt>; rel="service-doc"',
+                '</llms-full.txt>; rel="service-doc"',
                 '</.well-known/agents-index.json>; rel="index"',
                 '</.well-known/api-catalog>; rel="api-catalog"',
                 '</sitemap.xml>; rel="sitemap"',
@@ -36,10 +36,26 @@ class AddDiscoveryHeaders
     }
 
     /**
-     * Determine if the request is for the homepage.
+     * Homepage plus high-value public content surfaces for AI crawlers.
      */
-    protected function isHomepage(Request $request): bool
+    protected function shouldAddDiscoveryHeaders(Request $request): bool
     {
-        return in_array($request->route()?->getName(), ['index', 'root.redirect']);
+        $routeName = $request->route()?->getName();
+
+        if (! $routeName) {
+            return false;
+        }
+
+        if (in_array($routeName, ['index', 'root.redirect', 'calculator'], true)) {
+            return true;
+        }
+
+        foreach (['services.', 'cities.', 'universities.', 'blog.'] as $prefix) {
+            if (str_starts_with($routeName, $prefix)) {
+                return true;
+            }
+        }
+
+        return false;
     }
 }

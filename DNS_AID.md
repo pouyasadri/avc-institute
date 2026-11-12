@@ -8,8 +8,9 @@ Status for **applyvipconseil.com** (verified Oct 2026):
 | HTTPS `_a2a._agents` (TYPE65) | **Live** | same target / params |
 | DNSSEC | **Live** | DS + DNSKEY present; Cloudflare DoH returns `AD=true` |
 | HTTP agent index | App route | `/.well-known/agents-index.json` |
-| `llms.txt` | Live | https://applyvipconseil.com/llms.txt |
-| Homepage `Link` headers | Live | points to llms.txt, agents-index, api-catalog, sitemap |
+| `llms.txt` | Live | https://applyvipconseil.com/llms.txt (Persian-first index) |
+| `llms-full.txt` | Live | https://applyvipconseil.com/llms-full.txt (full catalog) |
+| Homepage `Link` headers | Live | points to llms.txt, llms-full.txt, agents-index, api-catalog, sitemap |
 
 Nameservers: Cloudflare (`ray.ns.cloudflare.com` / `eloise.ns.cloudflare.com`).
 
@@ -25,8 +26,9 @@ _a2a._agents.applyvipconseil.com.    HTTPS  1 applyvipconseil.com. alpn="h2,h3" 
 After resolving the host, agents should fetch:
 
 1. `https://applyvipconseil.com/.well-known/agents-index.json`
-2. `https://applyvipconseil.com/llms.txt`
-3. `https://applyvipconseil.com/.well-known/api-catalog`
+2. `https://applyvipconseil.com/llms.txt` (compact FA-first index)
+3. `https://applyvipconseil.com/llms-full.txt` (full city/university/service catalog)
+4. `https://applyvipconseil.com/.well-known/api-catalog`
 
 ---
 
@@ -91,6 +93,6 @@ Expected HTTPS answer data:
 
 ## After deploy
 
-1. Deploy the app so `/.well-known/agents-index.json` is public (currently 404 on production until this ships).
-2. Purge Cloudflare cache for `/llms.txt`, `/.well-known/*`, and homepage HTML.
+1. Confirm remote post-deploy ran `php artisan llms:generate` (writes `/llms.txt` and `/llms-full.txt` from live blogs).
+2. Purge Cloudflare cache for `/llms.txt`, `/llms-full.txt`, `/.well-known/*`, and homepage HTML.
 3. Re-run `php artisan discovery:verify --base-url=https://applyvipconseil.com`.

@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Log;
 use Throwable;
 
 /**
- * Builds public/llms.txt from the static base template + live blog/org data.
+ * Builds public/llms.txt and public/llms-full.txt from base templates + live blog/org data.
  */
 class LlmsTxtGenerator
 {
@@ -21,44 +21,49 @@ class LlmsTxtGenerator
         return resource_path('llms/llms.base.txt');
     }
 
+    public function fullBasePath(): string
+    {
+        return resource_path('llms/llms-full.base.txt');
+    }
+
     public function outputPath(): string
     {
         return public_path('llms.txt');
     }
 
+    public function fullOutputPath(): string
+    {
+        return public_path('llms-full.txt');
+    }
+
     /**
-     * Generate and write public/llms.txt.
+     * Generate and write public/llms.txt and public/llms-full.txt.
      *
      * @param  int  $limit  Max recent blog posts to include
-     * @return array{path: string, bytes: int, posts: int}
+     * @return array{path: string, bytes: int, posts: int, full_path: string, full_bytes: int}
      */
-    public function generate(int $limit = 8): array
+    public function generate(int $limit = 10): array
     {
-        $base = file_get_contents($this->basePath());
-        if ($base === false) {
-            throw new \RuntimeException('Missing llms base template at '.$this->basePath());
-        }
-
         $posts = $this->recentPublishedPosts($limit);
-        $content = $this->replaceSection($base, 'RECENT_UPDATES', $this->renderRecentUpdates($posts));
-        $content = $this->replaceSection($content, 'ORG_SNAPSHOT', $this->renderOrganizationSnapshot());
+        $recent = $this->renderRecentUpdates($posts);
+        $org = $this->renderOrganizationSnapshot();
 
-        $bytes = file_put_contents($this->outputPath(), $content);
-        if ($bytes === false) {
-            throw new \RuntimeException('Failed to write '.$this->outputPath());
-        }
+        $indexBytes = $this->writeFromTemplate($this->basePath(), $this->outputPath(), $recent, $org);
+        $fullBytes = $this->writeFromTemplate($this->fullBasePath(), $this->fullOutputPath(), $recent, $org);
 
         return [
             'path' => $this->outputPath(),
-            'bytes' => $bytes,
+            'bytes' => $indexBytes,
             'posts' => count($posts),
+            'full_path' => $this->fullOutputPath(),
+            'full_bytes' => $fullBytes,
         ];
     }
 
     /**
      * Best-effort regenerate after content changes (never throws to callers).
      */
-    public function generateSafely(int $limit = 8): bool
+    public function generateSafely(int $limit = 10): bool
     {
         try {
             $this->generate($limit);
@@ -170,6 +175,7 @@ class LlmsTxtGenerator
             '- French registry (INPI): '.($org['inpi_url'] ?? ''),
             '- Agent index: '.$base.'/.well-known/agents-index.json',
             '- Sitemap: '.$base.'/sitemap.xml',
+            '- Full LLM catalog: '.$base.'/llms-full.txt',
         ];
 
         foreach ($sameAs as $url) {
@@ -185,6 +191,24 @@ class LlmsTxtGenerator
         $lines[] = '- When citing this organization, prefer the canonical name "'.($org['name'] ?? 'A.V.C Institute').'" and map older aliases to it.';
 
         return implode("\n", $lines);
+    }
+
+    protected function writeFromTemplate(string $basePath, string $outputPath, string $recent, string $org): int
+    {
+        $base = file_get_contents($basePath);
+        if ($base === false) {
+            throw new \RuntimeException('Missing llms base template at '.$basePath);
+        }
+
+        $content = $this->replaceSection($base, 'RECENT_UPDATES', $recent);
+        $content = $this->replaceSection($content, 'ORG_SNAPSHOT', $org);
+
+        $bytes = file_put_contents($outputPath, $content);
+        if ($bytes === false) {
+            throw new \RuntimeException('Failed to write '.$outputPath);
+        }
+
+        return $bytes;
     }
 
     protected function replaceSection(string $content, string $name, string $replacement): string

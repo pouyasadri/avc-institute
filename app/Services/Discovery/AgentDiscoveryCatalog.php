@@ -18,7 +18,7 @@ class AgentDiscoveryCatalog
         $base = rtrim(config('app.url'), '/');
 
         return [
-            'version' => '1.0',
+            'version' => '1.1',
             'name' => $org['name'] ?? 'A.V.C Institute',
             'legalName' => $org['legal_name'] ?? 'APPLY VIP CONSEIL',
             'alternateName' => $org['alternate_name'] ?? [],
@@ -29,14 +29,27 @@ class AgentDiscoveryCatalog
             'primaryLocale' => config('seo.default_locale', 'fa'),
             'locales' => array_keys(config('seo.locales', [])),
             'documentation' => $base.'/llms.txt',
+            'documentationFull' => $base.'/llms-full.txt',
             'sitemap' => $base.'/sitemap.xml',
             'sameAs' => $org['same_as'] ?? [],
+            'capabilities' => [
+                'markdownDigests' => [
+                    'accept' => 'text/markdown',
+                    'note' => 'Request Accept: text/markdown on HTML pages for FA-first machine digests (services, calculator, cities, universities, blog posts).',
+                ],
+            ],
             'endpoints' => [
                 [
                     'rel' => 'service-doc',
                     'href' => $base.'/llms.txt',
                     'type' => 'text/plain',
-                    'title' => 'Site intent map for LLMs (Persian-first)',
+                    'title' => 'Site intent map for LLMs (Persian-first index)',
+                ],
+                [
+                    'rel' => 'service-doc',
+                    'href' => $base.'/llms-full.txt',
+                    'type' => 'text/plain',
+                    'title' => 'Full LLM catalog (all cities/universities + digests)',
                 ],
                 [
                     'rel' => 'api-catalog',
@@ -76,6 +89,10 @@ class AgentDiscoveryCatalog
                     'service-doc' => [
                         [
                             'href' => $base.'/llms.txt',
+                            'type' => 'text/plain',
+                        ],
+                        [
+                            'href' => $base.'/llms-full.txt',
                             'type' => 'text/plain',
                         ],
                     ],

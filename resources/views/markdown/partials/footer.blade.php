@@ -13,4 +13,4 @@
 
 ---
 **Organization**: {{ $markdownOrgName ?? config('seo.organization.name') }} ({{ config('seo.organization.legal_name') }})
-**Machine-Readable Summary**: [llms.txt]({{ url('/llms.txt') }}) | **Agent Index**: [agents-index.json]({{ url('/.well-known/agents-index.json') }})
+**Machine-Readable Summary**: [llms.txt]({{ url('/llms.txt') }}) | [llms-full.txt]({{ url('/llms-full.txt') }}) | **Agent Index**: [agents-index.json]({{ url('/.well-known/agents-index.json') }})

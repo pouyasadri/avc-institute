@@ -41,4 +41,9 @@ Crawl-delay: 10
 User-agent: Baiduspider
 Crawl-delay: 20
 
+# LLM / agent discovery surfaces
+# https://applyvipconseil.com/llms.txt
+# https://applyvipconseil.com/llms-full.txt
+# https://applyvipconseil.com/.well-known/agents-index.json
+
 Sitemap: https://applyvipconseil.com/sitemap.xml

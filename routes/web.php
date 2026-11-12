@@ -46,6 +46,13 @@ Route::get('/llms.txt', function () {
     ]);
 })->name('llms');
 
+Route::get('/llms-full.txt', function () {
+    return response(file_get_contents(public_path('llms-full.txt')), 200, [
+        'Content-Type' => 'text/plain; charset=utf-8',
+        'Cache-Control' => 'public, max-age=86400',
+    ]);
+})->name('llms.full');
+
 // Agent index — HTTP companion to DNS-AID _index._agents (see DNS_AID.md).
 Route::get('/.well-known/agents-index.json', function (AgentDiscoveryCatalog $catalog) {
     return response()

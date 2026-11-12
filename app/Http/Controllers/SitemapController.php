@@ -218,6 +218,21 @@ class SitemapController extends Controller
             }
         }
 
+        $discoveryLastmod = max(
+            file_exists(public_path('llms.txt')) ? filemtime(public_path('llms.txt')) : time(),
+            file_exists(public_path('llms-full.txt')) ? filemtime(public_path('llms-full.txt')) : time(),
+        );
+
+        foreach ($this->siteUrls->discoveryUrls() as $discoveryUrl) {
+            $urls[] = [
+                'loc' => $discoveryUrl,
+                'lastmod' => Carbon::createFromTimestamp($discoveryLastmod)->toAtomString(),
+                'changefreq' => 'daily',
+                'priority' => 0.7,
+                'alternates' => [],
+            ];
+        }
+
         $latestBlogDate = $blogs->max('updated_at');
         $lastModified = $latestBlogDate
             ? $latestBlogDate->format('D, d M Y H:i:s').' GMT'

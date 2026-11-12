@@ -2,6 +2,9 @@
 
 namespace Tests\Feature;
 
+use App\Models\Blog;
+use App\Models\BlogCategory;
+use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
@@ -105,5 +108,52 @@ class MarkdownDigestsTest extends TestCase
         $this->assertStringContainsString('llms.txt', $content);
         // Either extracted body or short stub with cite block — never blank.
         $this->assertGreaterThan(120, strlen($content));
+    }
+
+    public function test_blog_show_returns_dedicated_markdown_digest(): void
+    {
+        $author = User::factory()->create(['password' => 'password']);
+        $category = BlogCategory::create();
+        $blog = Blog::create([
+            'author_id' => $author->id,
+            'category_id' => $category->id,
+            'published_at' => now()->subDay(),
+        ]);
+        $blog->translations()->create([
+            'locale' => 'fa',
+            'slug' => 'llms-digest-test-fa',
+            'title' => 'آزمون خلاصه مارک‌داون وبلاگ',
+            'excerpt' => 'خلاصه فارسی برای عوامل هوش مصنوعی',
+            'body' => '<p>متن کامل مقاله برای تست.</p>',
+        ]);
+        $blog->translations()->create([
+            'locale' => 'en',
+            'slug' => 'llms-digest-test-en',
+            'title' => 'LLM digest test EN',
+            'body' => '<p>English body</p>',
+        ]);
+        $blog->translations()->create([
+            'locale' => 'fr',
+            'slug' => 'llms-digest-test-fr',
+            'title' => 'LLM digest test FR',
+            'body' => '<p>Corps FR</p>',
+        ]);
+
+        $response = $this->get('/fa/blog/llms-digest-test-fa', $this->markdownHeaders());
+
+        $response->assertOk();
+        $response->assertHeader('Content-Type', 'text/markdown; charset=UTF-8');
+        $content = $response->getContent();
+
+        $this->assertStringNotContainsString('optimized for HTML', $content);
+        $this->assertStringContainsString('type: blog', $content);
+        $this->assertStringContainsString('آزمون خلاصه مارک‌داون وبلاگ', $content);
+        $this->assertStringContainsString('خلاصه فارسی برای عوامل هوش مصنوعی', $content);
+        $this->assertStringContainsString('/fa/blog/llms-digest-test-fa', $content);
+        $this->assertStringContainsString('/en/blog/llms-digest-test-en', $content);
+        $this->assertStringContainsString('/fr/blog/llms-digest-test-fr', $content);
+        $this->assertStringContainsString('/fa/services', $content);
+        $this->assertStringContainsString('llms.txt', $content);
+        $this->assertStringContainsString('llms-full.txt', $content);
     }
 }

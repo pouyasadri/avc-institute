@@ -33,6 +33,7 @@ class DiscoveryVerifyCommand extends Command
 
         $failed += $this->checkHttpEndpoint("{$base}/llms.txt", 'text/plain', 'Primary Audience') ? 0 : 1;
         $this->warnIfMissing("{$base}/llms.txt", 'Canonical name: A.V.C Institute', 'llms.txt brand card (Phase 1)');
+        $failed += $this->checkHttpEndpoint("{$base}/llms-full.txt", 'text/plain', 'Full LLM Catalog') ? 0 : 1;
         $failed += $this->checkHttpEndpoint("{$base}/.well-known/agents-index.json", 'application/json', '"documentation"') ? 0 : 1;
         $failed += $this->checkHttpEndpoint("{$base}/.well-known/api-catalog", 'application/linkset+json', 'service-doc') ? 0 : 1;
         $failed += $this->checkHttpEndpoint("{$base}/sitemap.xml", 'xml', '<urlset') ? 0 : 1;
