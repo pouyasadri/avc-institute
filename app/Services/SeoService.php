@@ -335,12 +335,18 @@ class SeoService
     }
 
     /**
-     * Make URL absolute
+     * Make URL absolute.
+     * Static theme paths (assets/, build/) go through asset() so ASSET_URL / N0C applies.
      */
     protected function makeAbsoluteUrl(string $url): string
     {
         if (filter_var($url, FILTER_VALIDATE_URL)) {
             return $url;
+        }
+
+        $normalized = ltrim($url, '/');
+        if (str_starts_with($normalized, 'assets/') || str_starts_with($normalized, 'build/')) {
+            return asset($normalized);
         }
 
         return url($url);

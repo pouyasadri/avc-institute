@@ -72,10 +72,14 @@ abstract class SchemaBuilder
     }
 
     /**
-     * Get asset URL
+     * Get asset URL (respects ASSET_URL / N0C).
      */
     protected function asset(string $path): string
     {
-        return asset($path);
+        if (filter_var($path, FILTER_VALIDATE_URL)) {
+            return $path;
+        }
+
+        return asset(ltrim($path, '/'));
     }
 }

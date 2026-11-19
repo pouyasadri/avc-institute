@@ -17,7 +17,8 @@ return [
         'keywords' => 'immigration france, student visa france, real estate france, french residence permit, study in france, property france, A.V.C Institute, Apply VIP Conseil, '
             .'مهاجرت به فرانسه, ویزای تحصیلی فرانسه, تحصیل در فرانسه, اقامت فرانسه, دانشگاه فرانسه, مشاوره مهاجرت, سرمایه گذاری فرانسه, موسسه A.V.C',
         'author' => 'A.V.C Institute',
-        'image' => '/assets/img/logo/logo.webp',
+        // Resolved via asset() / ASSET_URL (N0C). Do not use a leading slash + url().
+        'image' => 'assets/img/logo/logo.webp',
         // Aligned with default_locale = 'fa' — was incorrectly set to 'en_US'
         'locale' => 'fa_IR',
         'type' => 'website',
@@ -45,7 +46,7 @@ return [
             'Institut A.V.C',
         ],
         'url' => env('APP_URL', 'https://applyvipconseil.com'),
-        'logo' => '/assets/img/logo/logo.png',
+        'logo' => 'assets/img/logo/logo.webp',
         'description' => 'A.V.C Institute (Apply VIP Conseil) provides expert immigration and education consulting in France, specializing in student visas, residence permits, and real estate acquisition for Persian-, French-, and English-speaking clients.',
         'email' => 'info@applyvipconseil.com',
         'telephone' => '+33768688326',
@@ -201,8 +202,8 @@ return [
     |--------------------------------------------------------------------------
     */
     'images' => [
-        'default_og_image' => '/assets/img/og-default.png',
-        'default_twitter_image' => '/assets/img/twitter-default.png',
+        'default_og_image' => 'assets/img/og-default.png',
+        'default_twitter_image' => 'assets/img/twitter-default.png',
         'sizes' => [
             'og' => ['width' => 1200, 'height' => 630],
             'twitter' => ['width' => 1200, 'height' => 600],

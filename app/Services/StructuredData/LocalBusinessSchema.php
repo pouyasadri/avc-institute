@@ -22,7 +22,7 @@ class LocalBusinessSchema extends SchemaBuilder
 
         $this->add('@id', $businessId)
             ->add('name', $org['name'])
-            ->add('image', $this->url($org['logo']))
+            ->add('image', $this->asset($org['logo']))
             ->add('url', $org['url'])
             ->add('telephone', $org['telephone'])
             ->add('email', $org['email'])

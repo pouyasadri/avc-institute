@@ -87,7 +87,7 @@ class OrganizationSchema extends SchemaBuilder
     {
         return [
             '@type' => 'ImageObject',
-            'url' => $this->url($logoPath),
+            'url' => $this->asset($logoPath),
         ];
     }
 

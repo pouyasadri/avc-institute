@@ -266,7 +266,7 @@
                 '@type' => 'ProfessionalService',
                 '@id' => rtrim(config('app.url'), '/') . '/#organization',
                 'name' => 'A.V.C Institute',
-                'image' => asset('assets/images/logo.png'),
+                'image' => asset('assets/img/logo/logo.webp'),
                 'priceRange' => '$$',
                 'telephone' => '+33-7-68-68-83-26',
                 'email' => 'info@applyvipconseil.com',

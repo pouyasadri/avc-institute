@@ -225,7 +225,7 @@ return [
         'name' => 'A.V.C Institute',
         'legalName' => 'APPLY VIP CONSEIL',
         'url' => 'https://applyvipconseil.com/',
-        'logo' => 'https://applyvipconseil.com/images/logo.png',
+        'logo' => 'https://applyvipconseil.com/n0c-storage/avc-institute/assets/img/logo/logo.webp',
         'description' => 'A.V.C Institute (Apply VIP Conseil) — leading immigration consulting firm for France. Services include student visas, residency permits, and real estate investment.',
         'address' => [
             'streetAddress' => '57 Route de Hausbergen',
