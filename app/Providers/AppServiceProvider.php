@@ -3,15 +3,19 @@
 namespace App\Providers;
 
 use App\Contracts\Calculator\StudentBudgetBenchmarkProviderInterface;
+use App\Filesystem\N0cAwsS3V3Adapter;
 use App\Services\Calculator\ConfigStudentBudgetBenchmarkProvider;
 use App\Services\SeoService;
 use Illuminate\Cache\RateLimiting\Limit;
+use Illuminate\Filesystem\FilesystemManager;
 use Illuminate\Http\Request;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\RateLimiter;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\Vite;
 use Illuminate\Support\ServiceProvider;
+use ReflectionMethod;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -45,7 +49,27 @@ class AppServiceProvider extends ServiceProvider
 
         Paginator::useBootstrapFive();
 
+        $this->configureN0cS3Urls();
         $this->configureRateLimiting();
+    }
+
+    /**
+     * Use a custom S3 adapter so /n0c-storage public URLs omit the bucket "public/" prefix.
+     */
+    protected function configureN0cS3Urls(): void
+    {
+        Storage::extend('s3', function ($app, array $config) {
+            /** @var FilesystemManager $manager */
+            $manager = $app->make('filesystem');
+            $original = (new ReflectionMethod($manager, 'createS3Driver'))->invoke($manager, $config);
+
+            return new N0cAwsS3V3Adapter(
+                $original->getDriver(),
+                $original->getAdapter(),
+                $original->getConfig(),
+                $original->getClient(),
+            );
+        });
     }
 
     /**
