@@ -62,7 +62,7 @@ class UploadAssetsToS3 extends Command
 
                 $files[] = [
                     'absolute_path' => $file->getPathname(),
-                    'relative_path' => 'public/'.$folderName.'/'.$file->getRelativePathname(),
+                    'relative_path' => $folderName.'/'.$file->getRelativePathname(),
                 ];
             }
         }
