@@ -194,7 +194,8 @@ return [
     | Custom Storage Paths
     |--------------------------------------------------------------------------
     */
-    'blog_image_path' => 'public/images/blogs/',
-    'property_image_path' => 'public/images/properties/',
-    'property_gallery_path' => 'public/images/properties/gallery/',
+    // Relative to AWS_ROOT (e.g. public/avc-institute). Do not prefix with "public/".
+    'blog_image_path' => 'images/blogs/',
+    'property_image_path' => 'images/properties/',
+    'property_gallery_path' => 'images/properties/gallery/',
 ];

@@ -53,12 +53,10 @@ class Blog extends Model
             return null;
         }
 
-        if (str_starts_with($path, 'public/')) {
-            $path = substr($path, 7);
-        }
-
-        if (! str_starts_with($path, 'images/blogs/')) {
-            $path = 'images/blogs/'.$path;
+        // Legacy rows may store only a filename.
+        $basename = basename($path);
+        if ($path === $basename) {
+            $path = 'images/blogs/'.$basename;
         }
 
         return Storage::disk('s3')->url($path);
